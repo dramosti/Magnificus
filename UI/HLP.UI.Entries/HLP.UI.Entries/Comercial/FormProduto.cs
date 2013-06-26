@@ -46,6 +46,9 @@ namespace HLP.UI.Entries.Comercial
         [Inject]
         public ITipo_produtoService tipoProdutoService { get; set; }
 
+        [Inject]
+        public IFuncionarioService funcionarioService { get; set; }
+
         ProdutoModel objProduto = new ProdutoModel();
         ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnImage = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
         Action verifBw = null;
@@ -68,12 +71,12 @@ namespace HLP.UI.Entries.Comercial
             btnImage.Click += new EventHandler(btn_Click);
             txtxFoto.txt.ButtonSpecs.Add(btnImage);
             cbxidUsuario.DataSource = idUsuario.DataSource = pesquisaPadraoService.GetData(
-                            usuarioService.GetQueryUserByEmpresaToComboBox(),
+                            funcionarioService.GetQueryUserByEmpresaToComboBox(),
                             false);
             idUsuario.DisplayMember = "xNome";
             idUsuario.ValueMember = "idUsuario";
             idUsuario.DataSource = pesquisaPadraoService.GetData(
-                       usuarioService.GetQueryUserByEmpresaToComboBox(),
+                       funcionarioService.GetQueryUserByEmpresaToComboBox(),
                        true
                        );
 
@@ -115,11 +118,15 @@ namespace HLP.UI.Entries.Comercial
             bsProduto_Revisao.DataSource = objProduto.lProduto_Revisao;
 
             EmpresaModel empresa = empresaService.GetEmpresa(CompanyData.idEmpresa);
-            if (empresa.lparametroEstoque.Count() > 0)
+            if (empresa.lparametroEstoque != null)
             {
-                cbxstCusto.SelectedIndex = empresa.lparametroEstoque.FirstOrDefault().stCusto;
-                cbxstCustoMedio.SelectedIndex = empresa.lparametroEstoque.FirstOrDefault().stCustoMedio;
+                if (empresa.lparametroEstoque.Count() > 0)
+                {
+                    cbxstCusto.SelectedIndex = empresa.lparametroEstoque.FirstOrDefault().stCusto;
+                    cbxstCustoMedio.SelectedIndex = empresa.lparametroEstoque.FirstOrDefault().stCustoMedio;
+                }
             }
+
             cbxAtivo.SelectedIndex = 1;
             cbxstInss.SelectedIndex = 0;
             cbxstFornecedorHomologado.SelectedIndex = 0;

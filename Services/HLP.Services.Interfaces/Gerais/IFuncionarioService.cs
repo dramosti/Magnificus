@@ -20,5 +20,6 @@ namespace HLP.Services.Interfaces.Entries.Gerais
         FuncionarioModel ValidaUsuario(string xID, string xSenha);
         int GetIdUserHLP();
         int GetIdUserDEFAULT();
+        string GetQueryUserByEmpresaToComboBox();
     }
 }

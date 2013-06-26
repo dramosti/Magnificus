@@ -356,5 +356,10 @@ namespace HLP.Services.Implementation.Entries.Gerais
         {
             return _FuncionarioRepository.GetIdUserDEFAULT();
         }
+
+        public string GetQueryUserByEmpresaToComboBox()
+        {
+            return _FuncionarioRepository.GetQueryUserByEmpresaToComboBox();
+        }
     }
 }

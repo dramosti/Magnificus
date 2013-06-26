@@ -23,5 +23,6 @@ namespace HLP.Repository.Interfaces.Entries.Gerais
         void CommitTransaction();
         void RollackTransaction();
         string GetQueryFuncionarios();
+        string GetQueryUserByEmpresaToComboBox();
     }
 }

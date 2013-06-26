@@ -67,7 +67,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>E1B6455BE3957856411CB1E64E486DF4602251F2</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>992821FD2B638E368E233A915FD50B5E8D9C8F28</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Magnificus_TemporaryKey.pfx</ManifestKeyFile>

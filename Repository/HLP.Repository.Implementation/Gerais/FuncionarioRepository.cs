@@ -138,5 +138,10 @@ namespace HLP.Repository.Implementation.Entries.Gerais
             DbCommand command = UndTrabalho.dbPrincipal.GetSqlStringCommand("select idFuncionario from Funcionario where stUsuario = 1");
             return UndTrabalho.dbPrincipal.ExecuteScalar(command).ToInt32();
         }
+
+        public string GetQueryUserByEmpresaToComboBox()
+        {
+            return "SELECT ID as idUsuario,(CAST(ID AS varchar)+' - '+ xNome)xNome  FROM vwFuncionario Where idEmpresa = " + CompanyData.idEmpresa.ToString();
+        }
     }
 }
