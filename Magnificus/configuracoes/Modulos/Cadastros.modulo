@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" default-lazy-init="true">
+
+  <!-- Modulo -->
+  <object id="ModuloCadastro" name="Cadastros" singleton= "true" scope="application"
+          type="HLP.UI.Entries.FormModuloCadastro, HLP.UI.Entries">
+  </object>
+  <object id="FormCfop" name="FormCfop" singleton="false" scope="request"
+   type="HLP.UI.Entries.Fiscal.FormCfop, HLP.UI.Entries">
+  </object>
+  <object id="FormStICMS" name="FormStICMS" singleton="false" scope="request"
+        type="HLP.UI.Entries.Fiscal.FormStICMS,  HLP.UI.Entries">
+  </object>
+  <object id="FormStIPI" name="FormStIPI" singleton="false" scope="request"
+        type="HLP.UI.Entries.Fiscal.FormStIPI,  HLP.UI.Entries">
+  </object>
+  <object id="FormStPIS" name="FormStPIS" singleton="false" scope="request"
+      type="HLP.UI.Entries.Fiscal.FormStPIS,  HLP.UI.Entries">
+  </object>
+  <object id="FormStCOFINS" name="FormStCOFINS" singleton="false" scope="request"
+     type="HLP.UI.Entries.Fiscal.FormStCOFINS, HLP.UI.Entries">
+  </object>
+  <object id="FormTipoDocumento" name="FormTipoDocumento" singleton="false" scope="request"
+  type="HLP.UI.Entries.Fiscal.FormTipoDocumento, HLP.UI.Entries">
+  </object>
+  <object id="FormCodigoIcms" name="FormCodigoIcms" singleton="false" scope="request"
+ type="HLP.UI.Entries.Fiscal.FormCodigoIcms, HLP.UI.Entries">
+  </object>
+  <object id="FormRamoAtividade" name="FormRamoAtividade" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormRamoAtividade, HLP.UI.Entries">
+  </object>
+  <object id="FormClassificacaoFiscal" name="FormClassificacaoFiscal" singleton="false" scope="request"
+type="HLP.UI.Entries.Fiscal.FormClassificacaoFiscal, HLP.UI.Entries">
+  </object>
+  <object id="FormTipoOperacao" name="FormTipoOperacao" singleton="false" scope="request"
+  type="HLP.UI.Entries.Fiscal.FormTipoOperacao, HLP.UI.Entries">
+  </object>
+  <object id="FormRota" name="FormRota" singleton="false" scope="request"
+  type="HLP.UI.Entries.Geral.Transportes.FormRota, HLP.UI.Entries">
+  </object>
+  <object id="FormListaPreco" name="FormListaPreco" singleton="false" scope="request"
+  type="HLP.UI.Entries.Comercial.FormListaPreco, HLP.UI.Entries">
+  </object>
+  <object id="FormCanalVenda" name="FormCanalVenda" singleton="false" scope="request"
+  type="HLP.UI.Entries.Comercial.FormCanalVenda, HLP.UI.Entries">
+  </object>
+  <object id="FormSite" name="FormSite" singleton="false" scope="request"
+  type="HLP.UI.Entries.Geral.Basico.FormSite, HLP.UI.Entries">
+  </object>
+  <object id="FormDeposito" name="FormDeposito" singleton="false" scope="request"
+ type="HLP.UI.Entries.Geral.FormDeposito, HLP.UI.Entries">
+  </object>
+  <object id="FormCondicaoEntrega" name="FormCondicaoEntrega" singleton="false" scope="request"
+  type="HLP.UI.Entries.Geral.FormCondicaoEntrega, HLP.UI.Entries">
+  </object>
+  <object id="FormCondicaoPagamento" name="FormCondicaoPagamento" singleton="false" scope="request"
+  type="HLP.UI.Entries.Geral.FormCondicaoPagamento, HLP.UI.Entries">
+  </object>
+  <object id="FormPlanoPagamento" name="FormPlanoPagamento" singleton="false" scope="request"
+  type="HLP.UI.Entries.Geral.FormPlanoPagamento, HLP.UI.Entries">
+  </object>
+  <object id="FormModoEntrega" name="FormModoEntrega" singleton="false" scope="request"
+ type="HLP.UI.Entries.Geral.Transportes.FormModoEntrega, HLP.UI.Entries">
+  </object>
+  <object id="FormDesconto" name="FormDesconto" singleton="false" scope="request"
+ type="HLP.UI.Entries.Financeiro.FormDesconto, HLP.UI.Entries">
+  </object>
+  <object id="FormJuros" name="FormJuros" singleton="false" scope="request"
+type="HLP.UI.Entries.Comercial.FormJuros, HLP.UI.Entries">
+  </object>
+  <object id="FormCliente" name="FormCliente" singleton="false" scope="request"
+type="HLP.UI.Entries.Comercial.FormCliente, HLP.UI.Entries">
+  </object>
+  <object id="FormMulta" name="FormMulta" singleton="false" scope="request"
+type="HLP.UI.Entries.Comercial.FormMulta, HLP.UI.Entries">
+  </object>
+  <object id="FormMoeda" name="FormMoeda" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormMoeda, HLP.UI.Entries">
+  </object>
+  <object id="FormTipoProduto" name="FormTipoProduto" singleton="false" scope="request"
+type="HLP.UI.Entries.Comercial.FormTipoProduto, HLP.UI.Entries">
+  </object>
+  <object id="FormProdutoLocalizacao" name="FormProdutoLocalizacao" singleton="false" scope="request"
+type="HLP.UI.Entries.Comercial.FormProdutoLocalizacao, HLP.UI.Entries">
+  </object>
+  <object id="FormCidade" name="FormCidade" singleton="false" scope="request"
+  type="HLP.UI.Entries.Geral.FormCidade, HLP.UI.Entries">
+  </object>
+  <object id="FormUF" name="FormUF" singleton="false" scope="request"
+ type="HLP.UI.Entries.Geral.FormUF, HLP.UI.Entries">
+  </object>
+  <object id="FormCargo" name="FormCargo" singleton="false" scope="request"
+ type="HLP.UI.Entries.RecursosHumanos.FormCargo, HLP.UI.Entries">
+  </object>
+  <object id="FormDepartamento" name="FormDepartamento" singleton="false" scope="request"
+ type="HLP.UI.Entries.RecursosHumanos.FormDepartamento, HLP.UI.Entries">
+  </object>
+  <object id="FormCalendario" name="FormCalendario" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormCalendario, HLP.UI.Entries">
+  </object>
+  <object id="FormSetor" name="FormSetor" singleton="false" scope="request"
+type="HLP.UI.Entries.RecursosHumanos.FormSetor, HLP.UI.Entries">
+  </object>
+  <object id="FormTipoServico" name="FormTipoServico" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormTipoServico, HLP.UI.Entries">
+  </object>
+  <object id="FormBanco" name="FormBanco" singleton="false" scope="request"
+type="HLP.UI.Entries.Financeiro.FormBanco, HLP.UI.Entries">
+  </object>
+  <object id="FormAgencia" name="FormAgencia" singleton="false" scope="request"
+type="HLP.UI.Entries.Financeiro.FormAgencia, HLP.UI.Entries">
+  </object>
+  <object id="FormContaBancaria" name="FormContaBancaria" singleton="false" scope="request"
+type="HLP.UI.Entries.Financeiro.FormContaBancaria, HLP.UI.Entries">
+  </object>
+  <object id="FormDecisao" name="FormDecisao" singleton="false" scope="request"
+type="HLP.UI.Entries.CRM.FormDecisao, HLP.UI.Entries">
+  </object>
+  <object id="FormPersonalidade" name="FormPersonalidade" singleton="false" scope="request"
+type="HLP.UI.Entries.CRM.FormPersonalidade, HLP.UI.Entries">
+  </object>
+  <object id="FormFidelidade" name="FormFidelidade" singleton="false" scope="request"
+type="HLP.UI.Entries.CRM.FormFidelidade, HLP.UI.Entries">
+  </object>
+  <object id="FormContato" name="FormContato" singleton="false" scope="request"
+ type="HLP.UI.Entries.Geral.FormContato, HLP.UI.Entries">
+  </object>
+  <object id="FormTransportadora" name="FormTransportadora" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.Transportes.FormTransportadora, HLP.UI.Entries">
+  </object>
+  <object id="FormFuncionario" name="FormFuncionario" singleton="false" scope="request"
+type="HLP.UI.Entries.RecursosHumanos.FormFuncionario, HLP.UI.Entries">
+  </object>
+  <object id="FormUnidadeMedida" name="FormUnidadeMedida" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormUnidadeMedida, HLP.UI.Entries">
+  </object>
+  <object id="FormFabricante" name="FormFabricante" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormFabricante, HLP.UI.Entries">
+  </object>
+  <object id="FormFamiliaProduto" name="FormFamiliaProduto" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormFamiliaProduto, HLP.UI.Entries">
+  </object>
+  <object id="FormConversao" name="FormConversao" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormConversao, HLP.UI.Entries">
+  </object>
+  <object id="FormProduto" name="FormProduto" singleton="false" scope="request"
+type="HLP.UI.Entries.Comercial.FormProduto, HLP.UI.Entries">
+  </object>
+  <object id="FormEmpresa" name="FormEmpresa" singleton="false" scope="request"
+type="HLP.UI.Entries.Geral.FormEmpresa, HLP.UI.Entries">
+  </object>
+  
+
+<object id="FormDiaPagamento" name="FormDiaPagamento" singleton="false" scope="request"
+  type="HLP.UI.Entries.Financeiro.FormDiaPagamento, HLP.UI.Entries">
+</object>
+  <object id="FormAcesso" name="FormAcesso" singleton="false" scope="request"
+  type="HLP.UI.Entries.Geral.FormAcesso, HLP.UI.Entries">
+  </object>
+  
+</objects>

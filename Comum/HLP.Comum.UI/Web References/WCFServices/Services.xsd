@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://hlpsistemas.no-ip.org:8081/WebServices/HLPServices/Services.svc?xsd=xsd2" namespace="http://hlp.com.br/WebServices/log" />
+  <xs:element name="SetLogError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://hlp.com.br/WebServices/log" minOccurs="0" name="log" nillable="true" type="q1:Log" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLogErrorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetLogErrorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

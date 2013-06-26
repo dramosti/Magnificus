@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HLP.Comum.Components.HLP_TextBox">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgEAACABBCAIAMAAAACEAAgGAAAAAABAgAwYmAAAAAA=</HashCode>
+      <FileName>HLP_TextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.UserControlBase">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="HLP.Comum.Components.UserControlBase.CampoObrigatorio" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UserControlBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAIAAgCgRAAEACAKQAQACgAAAIwAAgAACAgAEQAg=</HashCode>
+      <FileName>UserControlBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_CheckBox">
+    <Position X="6" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="HLP.Comum.Components.HLP_CheckBox.CampoObrigatorio" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HLP_CheckBox.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAQBACAAAICAAACAAAAGAgCAACBAgAAgAABAAAA=</HashCode>
+      <FileName>HLP_CheckBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_CheckListBox">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAIAIAAAACAAAACBACAAABAAAAAgAAAAAA=</HashCode>
+      <FileName>HLP_CheckListBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_ComboBox">
+    <Position X="17" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="HLP.Comum.Components.HLP_ComboBox.CsvConverter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HLP_ComboBox.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AhAAAAADACA4AoICAACFAQEGAAAAAgBAgICAyBAIAAA=</HashCode>
+      <FileName>HLP_ComboBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_DataGridView" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAQAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HLP_DataGridView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_DateTimePicker">
+    <Position X="8" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="HLP.Comum.Components.HLP_DateTimePicker.CampoObrigatorio" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HLP_DateTimePicker.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgBAAAIRECgAAIAAAICAAAAGAAgAAABAgAQgiABAAAA=</HashCode>
+      <FileName>HLP_DateTimePicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_LabelSeparator" Collapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAAAAAAAKAAAECAAAAAQBAAAAAAAAAAAg=</HashCode>
+      <FileName>HLP_LabelSeparator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_ListBox">
+    <Position X="19.25" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="HLP.Comum.Components.HLP_ListBox.CsvConverter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HLP_ListBox.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAqAoACAACAAAACBAAAACJAABKAwBgAAAA=</HashCode>
+      <FileName>HLP_ListBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_MaskedTextBox">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HLP_MaskedTextBox.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgAEAAABBCAIQIEAAACAAACGAABCBABAgASYnACAAgA=</HashCode>
+      <FileName>HLP_MaskedTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_NumericUpDown">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ggAAACCBECAIAIAAAACQAACOAAIBAABAgAAoiAAgAQA=</HashCode>
+      <FileName>HLP_NumericUpDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_Observacao">
+    <Position X="14.75" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAAIAAAAiAAAACBAAAAABAgAAACQAAAAA=</HashCode>
+      <FileName>HLP_Observacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.Comum.Components.HLP_Pesquisa">
+    <Position X="21.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="HLP.Comum.Components.HLP_Pesquisa.CsvConverter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HLP_Pesquisa.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgABAAAEICABAJACARCBAAgKAACCAAhAgBAoACgBAAA=</HashCode>
+      <FileName>HLP_Pesquisa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

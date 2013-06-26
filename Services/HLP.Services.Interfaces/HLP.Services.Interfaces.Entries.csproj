@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{997E026A-B1F2-45AB-AE1C-0EC6AD2E034D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.Services.Interfaces.Entries</RootNamespace>
+    <AssemblyName>HLP.Services.Interfaces.Entries</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit, Version=4.4.0.2, Culture=neutral, PublicKeyToken=2f7c2ef04fde3964, processorArchitecture=MSIL" />
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comercial\ICliente_fornecedor_fiscalService.cs" />
+    <Compile Include="Comercial\ICliente_fornecedor_contatoService.cs" />
+    <Compile Include="Comercial\ICliente_fornecedor_produtoService.cs" />
+    <Compile Include="Comercial\ICliente_Fornecedor_ObservacaoService.cs" />
+    <Compile Include="Comercial\ICliente_fornecedor_EnderecoService.cs" />
+    <Compile Include="Comercial\ICanal_vendaService.cs" />
+    <Compile Include="Comercial\ICliente_fornecedorService.cs" />
+    <Compile Include="Comercial\ICliente_fornecedor_arquivoService.cs" />
+    <Compile Include="Comercial\ICliente_fornecedor_representanteService.cs" />
+    <Compile Include="Comercial\IProduto_Fornecedor_HomologadoService.cs" />
+    <Compile Include="Comercial\IProduto_RevisaoService.cs" />
+    <Compile Include="Financeiro\IDia_PagamentoService.cs" />
+    <Compile Include="Financeiro\IDia_Pagamento_LinhasService.cs" />
+    <Compile Include="Gerais\IAcessoService.cs" />
+    <Compile Include="Gerais\ICondicao_pagamentoService.cs" />
+    <Compile Include="Gerais\ICondicoes_entregaService.cs" />
+    <Compile Include="Gerais\IContato_EnderecoService.cs" />
+    <Compile Include="Gerais\IDepositoService.cs" />
+    <Compile Include="Financeiro\IDescontos_AvistaService.cs" />
+    <Compile Include="Comercial\IJurosService.cs" />
+    <Compile Include="Comercial\ILista_precoService.cs" />
+    <Compile Include="Comercial\ILista_Preco_PaiService.cs" />
+    <Compile Include="Gerais\IEmpresa_EnderecoService.cs" />
+    <Compile Include="Gerais\IFamilia_Produto_ClassesService.cs" />
+    <Compile Include="Gerais\IFuncionario_ArquivoService.cs" />
+    <Compile Include="Gerais\IFuncionario_CertificacaoService.cs" />
+    <Compile Include="Gerais\IFuncionario_Comissao_ProdutoService.cs" />
+    <Compile Include="Gerais\IFuncionario_EnderecoService.cs" />
+    <Compile Include="Gerais\IFuncionario_Margem_Lucro_ComissaoService.cs" />
+    <Compile Include="Gerais\IModos_entregaService.cs" />
+    <Compile Include="Gerais\IMoedaService.cs" />
+    <Compile Include="Comercial\IMultasService.cs" />
+    <Compile Include="Gerais\IPlano_pagamentoService.cs" />
+    <Compile Include="Gerais\IPlano_pagamento_linhasService.cs" />
+    <Compile Include="Comercial\IProdutoService.cs" />
+    <Compile Include="Comercial\IProduto_localizacaoService.cs" />
+    <Compile Include="Comercial\ITipo_produtoService.cs" />
+    <Compile Include="CRM\IDecisaoService.cs" />
+    <Compile Include="CRM\IFidelidadeService.cs" />
+    <Compile Include="CRM\IPersonalidadeService.cs" />
+    <Compile Include="Gerais\IRamo_atividadeService.cs" />
+    <Compile Include="Gerais\IRota_pracaService.cs" />
+    <Compile Include="Gerais\ISiteService.cs" />
+    <Compile Include="Gerais\ISite_enderecoService.cs" />
+    <Compile Include="Financeiro\IAgencia_EnderecoService.cs" />
+    <Compile Include="Financeiro\IAgencia_ContatoService.cs" />
+    <Compile Include="Fiscal\IClassificacao_fiscalService.cs" />
+    <Compile Include="Fiscal\ICodigo_IcmsService.cs" />
+    <Compile Include="Fiscal\ICodigo_Icms_paiService.cs" />
+    <Compile Include="Fiscal\ISituacao_tributaria_pisService.cs" />
+    <Compile Include="Fiscal\ISituacao_tributaria_ipiService.cs" />
+    <Compile Include="Fiscal\ISituacao_tributaria_icmsService.cs" />
+    <Compile Include="Fiscal\IOperacao_importacaoService.cs" />
+    <Compile Include="Fiscal\IOperacao_reducao_baseService.cs" />
+    <Compile Include="Fiscal\ISituacao_tributaria_cofinsService.cs" />
+    <Compile Include="Fiscal\ITipo_documentoService.cs" />
+    <Compile Include="Financeiro\IAgenciaService.cs" />
+    <Compile Include="Financeiro\IBancoService.cs" />
+    <Compile Include="Financeiro\IConta_bancariaService.cs" />
+    <Compile Include="Fiscal\ICfopService.cs" />
+    <Compile Include="Gerais\IRotaService.cs" />
+    <Compile Include="Fiscal\ITipo_documento_oper_validaService.cs" />
+    <Compile Include="Fiscal\ITipo_operacaoService.cs" />
+    <Compile Include="Gerais\ICalendarioService.cs" />
+    <Compile Include="Gerais\ICalendario_DetalheService.cs" />
+    <Compile Include="Gerais\ITransportador_ContatoService.cs" />
+    <Compile Include="Gerais\ITransportador_EnderecoService.cs" />
+    <Compile Include="Gerais\ITransportador_MotoristaService.cs" />
+    <Compile Include="Gerais\ITransportador_VeiculosService.cs" />
+    <Compile Include="RecursosHumanos\ICargoService.cs" />
+    <Compile Include="Gerais\ICidadeService.cs" />
+    <Compile Include="Gerais\IContatoService.cs" />
+    <Compile Include="Gerais\IConversaoService.cs" />
+    <Compile Include="RecursosHumanos\IDepartamentoService.cs" />
+    <Compile Include="Gerais\IEmpresaService.cs" />
+    <Compile Include="Gerais\IFabricanteService.cs" />
+    <Compile Include="Gerais\IFamilia_ProdutoService.cs" />
+    <Compile Include="Gerais\IFuncionarioService.cs" />
+    <Compile Include="Gerais\IRegiaoService.cs" />
+    <Compile Include="RecursosHumanos\ISetorService.cs" />
+    <Compile Include="Gerais\ITipo_servicoService.cs" />
+    <Compile Include="Gerais\IUFService.cs" />
+    <Compile Include="Gerais\IUnidade_medidaService.cs" />
+    <Compile Include="Gerais\IUsuarioService.cs" />
+    <Compile Include="Gerais\ITransportadorService.cs" />
+    <Compile Include="Parametros\IParametro_financeiroService.cs" />
+    <Compile Include="Parametros\IParametro_GeralService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{CD60F2D5-6E51-417A-B50E-C4EB01EB7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Models\HLP.Models\HLP.Models.Entries.csproj">
+      <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
+      <Name>HLP.Models.Entries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

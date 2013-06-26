@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D8AA6EA-2E15-40FD-9766-031C436A71EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.Comum.Services.Implementation</RootNamespace>
+    <AssemblyName>HLP.Comum.Services.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit, Version=4.4.0.2, Culture=neutral, PublicKeyToken=2f7c2ef04fde3964, processorArchitecture=MSIL" />
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\..\HLP.Comum.Infrastructure\NInject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfiguraBaseService.cs" />
+    <Compile Include="Configuracao\ConfigColunasGridService.cs" />
+    <Compile Include="Configuracao\ConfigComponenteService.cs" />
+    <Compile Include="Configuracao\ConfigPesquisaService.cs" />
+    <Compile Include="Configuracao\ConfigTabPageService.cs" />
+    <Compile Include="Configuracao\RelatoriosServices.cs" />
+    <Compile Include="Configuracao\ConfigFormulariosService.cs" />
+    <Compile Include="InitializeConfigService.cs" />
+    <Compile Include="LogExceptionService.cs" />
+    <Compile Include="PesquisaPadraoService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Models\HLP.Models\HLP.Models.Entries.csproj">
+      <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
+      <Name>HLP.Models.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Services\HLP.Services.Implementation\HLP.Services.Implementation\HLP.Services.Implementation.Entries.csproj">
+      <Project>{9785A28A-EAC1-426F-B63F-F2E71CEE1465}</Project>
+      <Name>HLP.Services.Implementation.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997E026A-B1F2-45AB-AE1C-0EC6AD2E034D}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Comum.Componentes\HLP.Comum.Componentes\HLP.Comum.Components.csproj">
+      <Project>{E76CE7FE-7E9B-4AE4-9F43-07A64035DE7B}</Project>
+      <Name>HLP.Comum.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{CD60F2D5-6E51-417A-B50E-C4EB01EB7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Comum.Models\HLP.Comum.Models\HLP.Comum.Models.csproj">
+      <Project>{5BD4A7F2-4E89-43BA-8DE0-85E8C8A6C492}</Project>
+      <Name>HLP.Comum.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Comum.Repository.Interfaces\HLP.Comum.Repository.Interfaces\HLP.Comum.Repository.Interfaces.csproj">
+      <Project>{48D4A549-C283-42DB-AE78-79B49F4A70EC}</Project>
+      <Name>HLP.Comum.Repository.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface.csproj">
+      <Project>{C82A94BF-EEC8-483E-BAD1-BE729947B611}</Project>
+      <Name>HLP.Comum.Services.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

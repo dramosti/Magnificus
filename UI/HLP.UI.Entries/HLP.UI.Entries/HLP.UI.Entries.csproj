@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD2AA02E-C130-4165-BBA2-CCFE554991E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.UI.Entries</RootNamespace>
+    <AssemblyName>HLP.UI.Entries</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit, Version=4.4.0.2, Culture=neutral, PublicKeyToken=2f7c2ef04fde3964, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Comum\HLP.Comum.Infrastructure\KryptonLibrary\AC.ExtendedRenderer.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
+    <Reference Include="HLP.WebServices">
+      <HintPath>..\..\..\Comum\HLP.Comum.Infrastructure\WebServices\HLP.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.1.0.91, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Comum\HLP.Comum.Infrastructure\NInject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comercial\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormCanalVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormCanalVenda.Designer.cs">
+      <DependentUpon>FormCanalVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\FormDiaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\FormDiaPagamento.Designer.cs">
+      <DependentUpon>FormDiaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormAcesso.Designer.cs">
+      <DependentUpon>FormAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormCondicaoEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormCondicaoEntrega.Designer.cs">
+      <DependentUpon>FormCondicaoEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormCondicaoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormCondicaoPagamento.Designer.cs">
+      <DependentUpon>FormCondicaoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormDeposito.Designer.cs">
+      <DependentUpon>FormDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\FormDesconto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\FormDesconto.Designer.cs">
+      <DependentUpon>FormDesconto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormFornecedor.Designer.cs">
+      <DependentUpon>FormFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormJuros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormJuros.Designer.cs">
+      <DependentUpon>FormJuros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormListaPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormListaPreco.Designer.cs">
+      <DependentUpon>FormListaPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormListaPrecoAlteracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormListaPrecoAlteracoes.Designer.cs">
+      <DependentUpon>FormListaPrecoAlteracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormListaPrecoAtribuicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormListaPrecoAtribuicao.Designer.cs">
+      <DependentUpon>FormListaPrecoAtribuicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormListaPrecoAumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormListaPrecoAumento.Designer.cs">
+      <DependentUpon>FormListaPrecoAumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormListaPrecoFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormListaPrecoFiltro.Designer.cs">
+      <DependentUpon>FormListaPrecoFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormEmpresa.Designer.cs">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\Transportes\FormModoEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\Transportes\FormModoEntrega.Designer.cs">
+      <DependentUpon>FormModoEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormMoeda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormMoeda.Designer.cs">
+      <DependentUpon>FormMoeda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormMulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormMulta.Designer.cs">
+      <DependentUpon>FormMulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormPlanoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormPlanoPagamento.Designer.cs">
+      <DependentUpon>FormPlanoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormProduto.Designer.cs">
+      <DependentUpon>FormProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormProdutoLocalizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormProdutoLocalizacao.Designer.cs">
+      <DependentUpon>FormProdutoLocalizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\Transportes\FormRota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\Transportes\FormRota.Designer.cs">
+      <DependentUpon>FormRota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\Basico\FormSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\Basico\FormSite.Designer.cs">
+      <DependentUpon>FormSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\FormTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\FormTipoProduto.Designer.cs">
+      <DependentUpon>FormTipoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\FormDecisao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\FormDecisao.Designer.cs">
+      <DependentUpon>FormDecisao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\FormFidelidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\FormFidelidade.Designer.cs">
+      <DependentUpon>FormFidelidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\FormPersonalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\FormPersonalidade.Designer.cs">
+      <DependentUpon>FormPersonalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\FormAgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\FormAgencia.Designer.cs">
+      <DependentUpon>FormAgencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\FormBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\FormBanco.Designer.cs">
+      <DependentUpon>FormBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\FormContaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\FormContaBancaria.Designer.cs">
+      <DependentUpon>FormContaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormClassificacaoFiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormClassificacaoFiscal.Designer.cs">
+      <DependentUpon>FormClassificacaoFiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormCodigoIcms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormCodigoIcms.Designer.cs">
+      <DependentUpon>FormCodigoIcms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormConversao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormConversao.Designer.cs">
+      <DependentUpon>FormConversao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormFabricante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormFabricante.Designer.cs">
+      <DependentUpon>FormFabricante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormFamiliaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormFamiliaProduto.Designer.cs">
+      <DependentUpon>FormFamiliaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\FormFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\FormFuncionario.Designer.cs">
+      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormCalendario.Designer.cs">
+      <DependentUpon>FormCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormCalendarioDetalhe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormCalendarioDetalhe.Designer.cs">
+      <DependentUpon>FormCalendarioDetalhe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\FormDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\FormDepartamento.Designer.cs">
+      <DependentUpon>FormDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormRamoAtividade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormRamoAtividade.Designer.cs">
+      <DependentUpon>FormRamoAtividade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormStPIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormStPIS.Designer.cs">
+      <DependentUpon>FormStPIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormStIPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormStIPI.Designer.cs">
+      <DependentUpon>FormStIPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormStICMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormStICMS.Designer.cs">
+      <DependentUpon>FormStICMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormCfop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormCfop.designer.cs">
+      <DependentUpon>FormCfop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormStCOFINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormStCOFINS.Designer.cs">
+      <DependentUpon>FormStCOFINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormTipoDocumento.Designer.cs">
+      <DependentUpon>FormTipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiscal\FormTipoOperacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormTipoOperacao.Designer.cs">
+      <DependentUpon>FormTipoOperacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModuloCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModuloCadastro.Designer.cs">
+      <DependentUpon>FormModuloCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\FormCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\FormCargo.Designer.cs">
+      <DependentUpon>FormCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormCidade.Designer.cs">
+      <DependentUpon>FormCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormContato.Designer.cs">
+      <DependentUpon>FormContato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\FormSetor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\FormSetor.Designer.cs">
+      <DependentUpon>FormSetor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormTipoServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormTipoServico.Designer.cs">
+      <DependentUpon>FormTipoServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\Transportes\FormTransportadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\Transportes\FormTransportadora.Designer.cs">
+      <DependentUpon>FormTransportadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormUF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormUF.Designer.cs">
+      <DependentUpon>FormUF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\FormUnidadeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geral\FormUnidadeMedida.Designer.cs">
+      <DependentUpon>FormUnidadeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Comum\HLP.Comum.Componentes\HLP.Comum.Componentes\HLP.Comum.Components.csproj">
+      <Project>{E76CE7FE-7E9B-4AE4-9F43-07A64035DE7B}</Project>
+      <Name>HLP.Comum.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Comum\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{CD60F2D5-6E51-417A-B50E-C4EB01EB7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Comum\HLP.Comum.Mensagens\HLP.Comum.Mensagens\HLP.Comum.Messages.csproj">
+      <Project>{7D3A6EA4-758E-4348-A81A-00C5E5491877}</Project>
+      <Name>HLP.Comum.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Comum\HLP.Comum.Models\HLP.Comum.Models\HLP.Comum.Models.csproj">
+      <Project>{5BD4A7F2-4E89-43BA-8DE0-85E8C8A6C492}</Project>
+      <Name>HLP.Comum.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Comum\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface.csproj">
+      <Project>{C82A94BF-EEC8-483E-BAD1-BE729947B611}</Project>
+      <Name>HLP.Comum.Services.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Comum\HLP.Comum.UI\HLP.Comum.UI.csproj">
+      <Project>{39EAD670-55A5-4AAB-885C-A163BF21E04B}</Project>
+      <Name>HLP.Comum.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Dependencies\HLP.Dependencies\HLP.Dependencies.csproj">
+      <Project>{6C138179-2C79-4535-9C3C-E78C529D3598}</Project>
+      <Name>HLP.Dependencies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Models\HLP.Models\HLP.Models.Entries.csproj">
+      <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
+      <Name>HLP.Models.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modulo\HLP.Modulo\HLP.Modulo\HLP.Comum.Modules.csproj">
+      <Project>{73D51D8C-055E-404A-87BD-34AE12AF44EB}</Project>
+      <Name>HLP.Comum.Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997E026A-B1F2-45AB-AE1C-0EC6AD2E034D}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Comercial\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormCanalVenda.resx">
+      <DependentUpon>FormCanalVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\FormDiaPagamento.resx">
+      <DependentUpon>FormDiaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormAcesso.resx">
+      <DependentUpon>FormAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormCondicaoEntrega.resx">
+      <DependentUpon>FormCondicaoEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormCondicaoPagamento.resx">
+      <DependentUpon>FormCondicaoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormDeposito.resx">
+      <DependentUpon>FormDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\FormDesconto.resx">
+      <DependentUpon>FormDesconto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormFornecedor.resx">
+      <DependentUpon>FormFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormJuros.resx">
+      <DependentUpon>FormJuros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormListaPreco.resx">
+      <DependentUpon>FormListaPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormListaPrecoAlteracoes.resx">
+      <DependentUpon>FormListaPrecoAlteracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormListaPrecoAtribuicao.resx">
+      <DependentUpon>FormListaPrecoAtribuicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormListaPrecoAumento.resx">
+      <DependentUpon>FormListaPrecoAumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormListaPrecoFiltro.resx">
+      <DependentUpon>FormListaPrecoFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormEmpresa.resx">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\Transportes\FormModoEntrega.resx">
+      <DependentUpon>FormModoEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormMoeda.resx">
+      <DependentUpon>FormMoeda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormMulta.resx">
+      <DependentUpon>FormMulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormPlanoPagamento.resx">
+      <DependentUpon>FormPlanoPagamento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormProduto.resx">
+      <DependentUpon>FormProduto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormProdutoLocalizacao.resx">
+      <DependentUpon>FormProdutoLocalizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\Transportes\FormRota.resx">
+      <DependentUpon>FormRota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\Basico\FormSite.resx">
+      <DependentUpon>FormSite.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\FormTipoProduto.resx">
+      <DependentUpon>FormTipoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\FormDecisao.resx">
+      <DependentUpon>FormDecisao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\FormFidelidade.resx">
+      <DependentUpon>FormFidelidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\FormPersonalidade.resx">
+      <DependentUpon>FormPersonalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\FormAgencia.resx">
+      <DependentUpon>FormAgencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\FormBanco.resx">
+      <DependentUpon>FormBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\FormContaBancaria.resx">
+      <DependentUpon>FormContaBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormClassificacaoFiscal.resx">
+      <DependentUpon>FormClassificacaoFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormCodigoIcms.resx">
+      <DependentUpon>FormCodigoIcms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormConversao.resx">
+      <DependentUpon>FormConversao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormFabricante.resx">
+      <DependentUpon>FormFabricante.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormFamiliaProduto.resx">
+      <DependentUpon>FormFamiliaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosHumanos\FormFuncionario.resx">
+      <DependentUpon>FormFuncionario.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormCalendario.resx">
+      <DependentUpon>FormCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormCalendarioDetalhe.resx">
+      <DependentUpon>FormCalendarioDetalhe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosHumanos\FormDepartamento.resx">
+      <DependentUpon>FormDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormRamoAtividade.resx">
+      <DependentUpon>FormRamoAtividade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormStPIS.resx">
+      <DependentUpon>FormStPIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormStIPI.resx">
+      <DependentUpon>FormStIPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormStICMS.resx">
+      <DependentUpon>FormStICMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormCfop.resx">
+      <DependentUpon>FormCfop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormStCOFINS.resx">
+      <DependentUpon>FormStCOFINS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormTipoDocumento.resx">
+      <DependentUpon>FormTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormTipoOperacao.resx">
+      <DependentUpon>FormTipoOperacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModuloCadastro.resx">
+      <DependentUpon>FormModuloCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosHumanos\FormCargo.resx">
+      <DependentUpon>FormCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormCidade.resx">
+      <DependentUpon>FormCidade.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormContato.resx">
+      <DependentUpon>FormContato.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosHumanos\FormSetor.resx">
+      <DependentUpon>FormSetor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormTipoServico.resx">
+      <DependentUpon>FormTipoServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\Transportes\FormTransportadora.resx">
+      <DependentUpon>FormTransportadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormUF.resx">
+      <DependentUpon>FormUF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geral\FormUnidadeMedida.resx">
+      <DependentUpon>FormUnidadeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_fornecedor_arquivoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_fornecedor_contatoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_fornecedor_EnderecoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_Fornecedor_ObservacaoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_fornecedor_produtoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_fornecedor_representanteModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Lista_precoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Plano_pagamento_linhasModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.ProdutoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Produto_Fornecedor_HomologadoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Produto_RevisaoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Rota_pracaModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Site_enderecoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Financeiro.Agencia_ContatoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Financeiro.Agencia_EnderecoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Financeiro.Dia_Pagamento_LinhasModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Fiscal.Codigo_IcmsModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Fiscal.Codigo_tributarioModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Fiscal.Operacao_reducao_baseModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Calendario_DetalheModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.CidadeModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Contato_Endereco.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.ConversaoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Empresa_EnderecoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Familia_Produto_ClassesModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Funcionario_AcessoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Funcionario_ArquivoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Funcionario_CertificacaoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Funcionario_Comissao_ProdutoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Funcionario_EnderecoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Funcionario_Margem_Lucro_ComissaoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Plano_pagamento_linhasModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Rota_pracaModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Site_enderecoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Transportador_ContatoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Transportador_EnderecoModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Transportador_MotoristaModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Transportador_VeiculosModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.UFModel.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionario.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao calendar 22.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pasta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Geral\Estoque\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

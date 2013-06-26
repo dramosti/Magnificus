@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08CA6624-4F66-4B41-A17D-52DE37D3E38C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.Repository.Implementation.Entries</RootNamespace>
+    <AssemblyName>HLP.Repository.Implementation.Entries</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\Comum\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\..\Comum\HLP.Comum.Infrastructure\NInject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comercial\Canal_vendaRepository.cs" />
+    <Compile Include="Comercial\Cliente_fornecedorRepository.cs" />
+    <Compile Include="Comercial\Cliente_fornecedor_arquivoRepository.cs" />
+    <Compile Include="Comercial\Produto_Fornecedor_HomologadoRepository.cs" />
+    <Compile Include="Comercial\Produto_RevisaoRepository.cs" />
+    <Compile Include="Financeiro\Dia_PagamentoRepository.cs" />
+    <Compile Include="Financeiro\Dia_Pagamento_LinhaRepository.cs" />
+    <Compile Include="Gerais\AcessoRepository.cs" />
+    <Compile Include="Gerais\Condicao_pagamentoRepository.cs" />
+    <Compile Include="Gerais\Condicoes_entregaRepository.cs" />
+    <Compile Include="Comercial\Cliente_fornecedor_EnderecoRepository.cs" />
+    <Compile Include="Comercial\Cliente_fornecedor_representanteRepository.cs" />
+    <Compile Include="Comercial\Cliente_Fornecedor_ObservacaoRepository.cs" />
+    <Compile Include="Comercial\Cliente_fornecedor_produtoRepository.cs" />
+    <Compile Include="Comercial\Cliente_fornecedor_contatoRepository.cs" />
+    <Compile Include="Comercial\Cliente_fornecedor_fiscalRepository.cs" />
+    <Compile Include="Gerais\Contato_EnderecoRepository.cs" />
+    <Compile Include="Gerais\DepositoRepository.cs" />
+    <Compile Include="Financeiro\Descontos_AvistaRepository.cs" />
+    <Compile Include="Comercial\JurosRepository.cs" />
+    <Compile Include="Comercial\Lista_precoRepository.cs" />
+    <Compile Include="Comercial\Lista_Preco_PaiRepository.cs" />
+    <Compile Include="Gerais\Empresa_EnderecoRepository.cs" />
+    <Compile Include="Gerais\Familia_Produto_ClassesRepository.cs" />
+    <Compile Include="Gerais\Funcionario_ArquivoRepository.cs" />
+    <Compile Include="Gerais\Funcionario_CertificacaoRepository.cs" />
+    <Compile Include="Gerais\Funcionario_Comissao_ProdutoRepository.cs" />
+    <Compile Include="Gerais\Funcionario_EnderecoRepository.cs" />
+    <Compile Include="Gerais\Funcionario_Margem_LucroComissaoRepository.cs" />
+    <Compile Include="Gerais\Modos_entregaRepository.cs" />
+    <Compile Include="Gerais\MoedaRepository.cs" />
+    <Compile Include="Comercial\MultasRepository.cs" />
+    <Compile Include="Gerais\Plano_pagamentoRepository.cs" />
+    <Compile Include="Gerais\Plano_pagamento_linhasRepository.cs" />
+    <Compile Include="Comercial\ProdutoRepository.cs" />
+    <Compile Include="Comercial\Produto_localizacaoRepository.cs" />
+    <Compile Include="Comercial\Tipo_produtoRepository.cs" />
+    <Compile Include="CRM\DecisaoRepository.cs" />
+    <Compile Include="CRM\FidelidadeRepository.cs" />
+    <Compile Include="CRM\PersonalidadeRepository.cs" />
+    <Compile Include="Gerais\Ramo_atividadeRepository.cs" />
+    <Compile Include="Gerais\RotaRepository.cs" />
+    <Compile Include="Gerais\Rota_pracaRepository.cs" />
+    <Compile Include="Gerais\SiteRepository.cs" />
+    <Compile Include="Gerais\Site_enderecoRepository.cs" />
+    <Compile Include="Financeiro\Agencia_ContatoRepository.cs" />
+    <Compile Include="Financeiro\Agencia_EnderecoRepository.cs" />
+    <Compile Include="Fiscal\Classificacao_fiscalRepository.cs" />
+    <Compile Include="Fiscal\Codigo_IcmsRepository.cs" />
+    <Compile Include="Fiscal\Codigo_Icms_paiRepository.cs" />
+    <Compile Include="Fiscal\Situacao_tributaria_pisRepository.cs" />
+    <Compile Include="Fiscal\Situacao_tributaria_ipiRepository.cs" />
+    <Compile Include="Fiscal\Situacao_tributaria_icmsRepository.cs" />
+    <Compile Include="Fiscal\Operacao_importacaoRepository.cs" />
+    <Compile Include="Fiscal\Operacao_reducao_baseRepository.cs" />
+    <Compile Include="Fiscal\Situacao_tributaria_cofinsRepository.cs" />
+    <Compile Include="Fiscal\Tipo_documentoRepository.cs" />
+    <Compile Include="Financeiro\AgenciaRepository.cs" />
+    <Compile Include="Financeiro\BancoRepository.cs" />
+    <Compile Include="Financeiro\Conta_bancariaRepository.cs" />
+    <Compile Include="Fiscal\CfopRepository.cs" />
+    <Compile Include="Fiscal\Tipo_documento_oper_validaRepository.cs" />
+    <Compile Include="Fiscal\Tipo_operacaoRepository.cs" />
+    <Compile Include="Gerais\CalendarioRepository.cs" />
+    <Compile Include="Gerais\Calendario_DetalheRepository.cs" />
+    <Compile Include="Gerais\Transportador_ContatoRepository.cs" />
+    <Compile Include="Gerais\Transportador_EnderecoRepository.cs" />
+    <Compile Include="Gerais\Transportador_MotoristaRepository.cs" />
+    <Compile Include="Gerais\Transportador_VeiculosRepository.cs" />
+    <Compile Include="RecursosHumanos\CargoRepository.cs" />
+    <Compile Include="Gerais\CidadeRepository.cs" />
+    <Compile Include="Gerais\ContatoRepository.cs" />
+    <Compile Include="Gerais\ConversaoRepository.cs" />
+    <Compile Include="RecursosHumanos\DepartamentoRepository.cs" />
+    <Compile Include="Gerais\EmpresaRepository.cs" />
+    <Compile Include="Gerais\FabricanteRepository.cs" />
+    <Compile Include="Gerais\Familia_produtoRepository.cs" />
+    <Compile Include="Gerais\FuncionarioRepository.cs" />
+    <Compile Include="Gerais\RegiaoRepository.cs" />
+    <Compile Include="RecursosHumanos\SetorRepository.cs" />
+    <Compile Include="Gerais\Tipo_servicoRepository.cs" />
+    <Compile Include="Gerais\TransportadorRepository.cs" />
+    <Compile Include="Gerais\Unidade_medidaRepository.cs" />
+    <Compile Include="Gerais\UsuarioRepository.cs" />
+    <Compile Include="Gerais\UFRepository.cs" />
+    <Compile Include="Parametros\Parametro_financeiroRepository.cs" />
+    <Compile Include="Parametros\Parametro_GeralRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{CD60F2D5-6E51-417A-B50E-C4EB01EB7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Models\HLP.Comum.Models\HLP.Comum.Models.csproj">
+      <Project>{5BD4A7F2-4E89-43BA-8DE0-85E8C8A6C492}</Project>
+      <Name>HLP.Comum.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Models\HLP.Models\HLP.Models.Entries.csproj">
+      <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
+      <Name>HLP.Models.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997E026A-B1F2-45AB-AE1C-0EC6AD2E034D}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Repository.Interfaces\HLP.Repository.Interfaces.Entries.csproj">
+      <Project>{9ADBF8A1-3B87-4958-8F02-B5474407FC19}</Project>
+      <Name>HLP.Repository.Interfaces.Entries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

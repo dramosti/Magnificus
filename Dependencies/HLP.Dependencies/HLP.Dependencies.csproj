@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C138179-2C79-4535-9C3C-E78C529D3598}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.Dependencies</RootNamespace>
+    <AssemblyName>HLP.Dependencies</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\..\Comum\HLP.Comum.Infrastructure\NInject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MagnificusDependenciesModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{CD60F2D5-6E51-417A-B50E-C4EB01EB7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Repository.Implementation\HLP.Comum.Repository.Implementation\HLP.Comum.Repository.Implementation.csproj">
+      <Project>{9AF49485-3135-42F1-874F-7B7C077C51A1}</Project>
+      <Name>HLP.Comum.Repository.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Repository.Interfaces\HLP.Comum.Repository.Interfaces\HLP.Comum.Repository.Interfaces.csproj">
+      <Project>{48D4A549-C283-42DB-AE78-79B49F4A70EC}</Project>
+      <Name>HLP.Comum.Repository.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Services.Implementation\HLP.Comum.Services.Implementation\HLP.Comum.Services.Implementation.csproj">
+      <Project>{9D8AA6EA-2E15-40FD-9766-031C436A71EC}</Project>
+      <Name>HLP.Comum.Services.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface.csproj">
+      <Project>{C82A94BF-EEC8-483E-BAD1-BE729947B611}</Project>
+      <Name>HLP.Comum.Services.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Models\HLP.Models\HLP.Models.Entries.csproj">
+      <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
+      <Name>HLP.Models.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repository\HLP.Repository.Implementation\HLP.Repository.Implementation.Entries.csproj">
+      <Project>{08CA6624-4F66-4B41-A17D-52DE37D3E38C}</Project>
+      <Name>HLP.Repository.Implementation.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repository\HLP.Repository.Interfaces\HLP.Repository.Interfaces.Entries.csproj">
+      <Project>{9ADBF8A1-3B87-4958-8F02-B5474407FC19}</Project>
+      <Name>HLP.Repository.Interfaces.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\HLP.Services.Implementation\HLP.Services.Implementation\HLP.Services.Implementation.Entries.csproj">
+      <Project>{9785A28A-EAC1-426F-B63F-F2E71CEE1465}</Project>
+      <Name>HLP.Services.Implementation.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997E026A-B1F2-45AB-AE1C-0EC6AD2E034D}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

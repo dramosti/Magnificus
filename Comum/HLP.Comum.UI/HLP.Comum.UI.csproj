@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39EAD670-55A5-4AAB-885C-A163BF21E04B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.Comum.UI</RootNamespace>
+    <AssemblyName>HLP.Comum.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit, Version=4.4.0.2, Culture=neutral, PublicKeyToken=2f7c2ef04fde3964, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\HLP.Comum.Infrastructure\KryptonLibrary\AC.ExtendedRenderer.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\HLP.Comum.Infrastructure\EnterpriseLibrary\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Ninject, Version=2.1.0.91, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\HLP.Comum.Infrastructure\NInject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Eventos\EventosForm.cs" />
+    <Compile Include="Exception\HLPexception.cs" />
+    <Compile Include="FormConfigComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigComp.Designer.cs">
+      <DependentUpon>FormConfigComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfigFormulario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigFormulario.Designer.cs">
+      <DependentUpon>FormConfigFormulario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfigPesquisaPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigPesquisaPadrao.Designer.cs">
+      <DependentUpon>FormConfigPesquisaPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfigRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigRelatorio.Designer.cs">
+      <DependentUpon>FormConfigRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormException.Designer.cs">
+      <DependentUpon>FormException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPadraoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPadraoCadastro.Designer.cs">
+      <DependentUpon>FormPadraoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPesquisaCampo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisaCampo.Designer.cs">
+      <DependentUpon>FormPesquisaCampo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPesquisaPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisaPadrao.Designer.cs">
+      <DependentUpon>FormPesquisaPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPesquisaPadraoHeaderCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisaPadraoHeaderCell.Designer.cs">
+      <DependentUpon>FormPesquisaPadraoHeaderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPreviewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPreviewReport.Designer.cs">
+      <DependentUpon>FormPreviewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelecionaRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelecionaRelatorio.Designer.cs">
+      <DependentUpon>FormSelecionaRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos\MetodosForm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Validacao\ValidaCampos.cs" />
+    <Compile Include="Web References\WCFServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormConfigComp.resx">
+      <DependentUpon>FormConfigComp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigFormulario.resx">
+      <DependentUpon>FormConfigFormulario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigPesquisaPadrao.resx">
+      <DependentUpon>FormConfigPesquisaPadrao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigRelatorio.resx">
+      <DependentUpon>FormConfigRelatorio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormException.resx">
+      <DependentUpon>FormException.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPadraoCadastro.resx">
+      <DependentUpon>FormPadraoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPesquisaCampo.resx">
+      <DependentUpon>FormPesquisaCampo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPesquisaPadrao.resx">
+      <DependentUpon>FormPesquisaPadrao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPesquisaPadraoHeaderCell.resx">
+      <DependentUpon>FormPesquisaPadraoHeaderCell.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPreviewReport.resx">
+      <DependentUpon>FormPreviewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelecionaRelatorio.resx">
+      <DependentUpon>FormSelecionaRelatorio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dependencies\HLP.Dependencies\HLP.Dependencies.csproj">
+      <Project>{6C138179-2C79-4535-9C3C-E78C529D3598}</Project>
+      <Name>HLP.Dependencies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modulo\HLP.Modulo\HLP.Modulo\HLP.Comum.Modules.csproj">
+      <Project>{73D51D8C-055E-404A-87BD-34AE12AF44EB}</Project>
+      <Name>HLP.Comum.Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997E026A-B1F2-45AB-AE1C-0EC6AD2E034D}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Comum.Componentes\HLP.Comum.Componentes\HLP.Comum.Components.csproj">
+      <Project>{E76CE7FE-7E9B-4AE4-9F43-07A64035DE7B}</Project>
+      <Name>HLP.Comum.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{CD60F2D5-6E51-417A-B50E-C4EB01EB7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Comum.Mensagens\HLP.Comum.Mensagens\HLP.Comum.Messages.csproj">
+      <Project>{7D3A6EA4-758E-4348-A81A-00C5E5491877}</Project>
+      <Name>HLP.Comum.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Comum.Models\HLP.Comum.Models\HLP.Comum.Models.csproj">
+      <Project>{5BD4A7F2-4E89-43BA-8DE0-85E8C8A6C492}</Project>
+      <Name>HLP.Comum.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface.csproj">
+      <Project>{C82A94BF-EEC8-483E-BAD1-BE729947B611}</Project>
+      <Name>HLP.Comum.Services.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\HLP.Comum.Infrastructure.ModelRelatorios.datasource" />
+    <None Include="Properties\DataSources\HLP.Comum.Models.FieldView.datasource">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\direita - Cópia.png" />
+    <None Include="Web References\WCFServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WCFServices\Services.wsdl" />
+    <None Include="Web References\WCFServices\Services.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WCFServices\Services0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WCFServices\Services1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esquerda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\primeiro %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ultimo %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirmar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utilitarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filtro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_Message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_Message_tamanho2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_Message3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inclui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6239_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesquisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Impressora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Navegacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duplicar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://hlpsistemas.no-ip.org:8081/WebServices/HLPServices/Services.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WCFServices\</RelPath>
+      <UpdateFromURL>http://hlpsistemas.no-ip.org:8081/WebServices/HLPServices/Services.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_Comum_UI_WCFServices_Services</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WCFServices\Services.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

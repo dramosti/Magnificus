@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.Models.Entries</RootNamespace>
+    <AssemblyName>HLP.Models.Entries</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comercial\Canal_vendaModel.cs" />
+    <Compile Include="Comercial\Cliente_fornecedorModel.cs" />
+    <Compile Include="Financeiro\Dia_pagamentoModel.cs" />
+    <Compile Include="Gerais\Condicao_pagamentoModel.cs" />
+    <Compile Include="Gerais\Condicoes_entregaModel.cs" />
+    <Compile Include="Gerais\DepositoModel.cs" />
+    <Compile Include="Financeiro\Descontos_AvistaModel.cs" />
+    <Compile Include="Comercial\JurosModel.cs" />
+    <Compile Include="Comercial\Lista_precoModel.cs" />
+    <Compile Include="Comercial\Lista_Preco_PaiModel.cs" />
+    <Compile Include="Gerais\Familia_Produto_ClassesModel.cs" />
+    <Compile Include="Gerais\Modos_entregaModel.cs" />
+    <Compile Include="Gerais\MoedaModel.cs" />
+    <Compile Include="Comercial\MultasModel.cs" />
+    <Compile Include="Comercial\ParametroEstoqueModel.cs" />
+    <Compile Include="Gerais\Plano_pagamentoModel.cs" />
+    <Compile Include="Gerais\Plano_pagamento_linhasModel.cs" />
+    <Compile Include="Comercial\ProdutoModel.cs" />
+    <Compile Include="Comercial\Produto_localizacaoModel.cs" />
+    <Compile Include="Gerais\Ramo_atividadeModel.cs" />
+    <Compile Include="Gerais\RotaModel.cs" />
+    <Compile Include="Gerais\Rota_pracaModel.cs" />
+    <Compile Include="Gerais\SiteModel.cs" />
+    <Compile Include="Gerais\Site_enderecoModel.cs" />
+    <Compile Include="Comercial\Tipo_produtoModel.cs" />
+    <Compile Include="CRM\DecisaoModel.cs" />
+    <Compile Include="CRM\FidelidadeModel.cs" />
+    <Compile Include="CRM\PersonalidadeModel.cs" />
+    <Compile Include="Financeiro\Agencia_ContatoModel.cs" />
+    <Compile Include="Financeiro\Agencia_EnderecoModel.cs" />
+    <Compile Include="Fiscal\Classificacao_fiscalModel.cs" />
+    <Compile Include="Fiscal\Codigo_IcmsModel.cs" />
+    <Compile Include="Fiscal\Codigo_Icms_paiModel.cs" />
+    <Compile Include="Fiscal\Operacao_importacaoModel.cs" />
+    <Compile Include="Fiscal\Operacao_reducao_baseModel.cs" />
+    <Compile Include="Fiscal\Situacao_tributaria_cofinsModel.cs" />
+    <Compile Include="Fiscal\Situacao_tributaria_icmsModel.cs" />
+    <Compile Include="Fiscal\Situacao_tributaria_ipiModel.cs" />
+    <Compile Include="Fiscal\Situacao_tributaria_pisModel.cs" />
+    <Compile Include="Fiscal\Tipo_documentoModel.cs" />
+    <Compile Include="Financeiro\AgenciaModel.cs" />
+    <Compile Include="Financeiro\BancoModel.cs" />
+    <Compile Include="Financeiro\Conta_bancariaModel.cs" />
+    <Compile Include="Fiscal\CfopModel.cs" />
+    <Compile Include="Fiscal\Tipo_documento_oper_validaModel.cs" />
+    <Compile Include="Fiscal\Tipo_operacaoModel.cs" />
+    <Compile Include="Gerais\CalendarioModel.cs" />
+    <Compile Include="Gerais\Calendario_DetalheModel.cs" />
+    <Compile Include="RecursosHumanos\CargoModel.cs" />
+    <Compile Include="Gerais\CidadeModel.cs" />
+    <Compile Include="Gerais\ContatoModel.cs" />
+    <Compile Include="Gerais\ConversaoModel.cs" />
+    <Compile Include="RecursosHumanos\DepartamentoModel.cs" />
+    <Compile Include="Gerais\EmpresaModel.cs" />
+    <Compile Include="Gerais\FabricanteModel.cs" />
+    <Compile Include="Gerais\Familia_produtoModel.cs" />
+    <Compile Include="Gerais\FuncionarioModel.cs" />
+    <Compile Include="Gerais\RegiaoModel.cs" />
+    <Compile Include="RecursosHumanos\SetorModel.cs" />
+    <Compile Include="Gerais\Tipo_servicoModel.cs" />
+    <Compile Include="Gerais\TransportadorModel.cs" />
+    <Compile Include="Gerais\UFModel.cs" />
+    <Compile Include="Gerais\Unidade_medidaModel.cs" />
+    <Compile Include="Gerais\UsuarioModel.cs" />
+    <Compile Include="Parametros\Parametro_financeiroModel.cs" />
+    <Compile Include="Parametros\Parametro_GeralModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Comum\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{CD60F2D5-6E51-417A-B50E-C4EB01EB7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
