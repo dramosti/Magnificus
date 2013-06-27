@@ -81,7 +81,7 @@ namespace HLP.Models.Entries.Comercial
         [ParameterOrder(Order = 36)]
         public DateTime dCadastro { get; set; }
         [ParameterOrder(Order = 37)]
-        public int idUsuario { get; set; }
+        public int idFuncionario { get; set; }
         [ParameterOrder(Order = 38)]
         public byte stOrigemMercadoria { get; set; }
         [ParameterOrder(Order = 39)]

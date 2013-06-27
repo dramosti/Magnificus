@@ -134,7 +134,6 @@
     <Compile Include="Gerais\ITipo_servicoService.cs" />
     <Compile Include="Gerais\IUFService.cs" />
     <Compile Include="Gerais\IUnidade_medidaService.cs" />
-    <Compile Include="Gerais\IUsuarioService.cs" />
     <Compile Include="Gerais\ITransportadorService.cs" />
     <Compile Include="Parametros\IParametro_financeiroService.cs" />
     <Compile Include="Parametros\IParametro_GeralService.cs" />

@@ -118,8 +118,7 @@ namespace HLP.Dependencies
             Bind<ICondicoes_entregaRepository>().To<Condicoes_entregaRepository>();
             Bind<IRotaRepository>().To<RotaRepository>();
             Bind<IUFRepository>().To<UFRepository>();
-            Bind<ICidadeRepository>().To<CidadeRepository>();
-            Bind<IUsuarioRepository>().To<UsuarioRepository>();
+            Bind<ICidadeRepository>().To<CidadeRepository>();            
             Bind<IEmpresaRepository>().To<EmpresaRepository>();
             Bind<IRegiaoRepository>().To<RegiaoRepository>();
             Bind<ISetorRepository>().To<SetorRepository>();
@@ -250,8 +249,7 @@ namespace HLP.Dependencies
             Bind<ICondicoes_entregaService>().To<Condicoes_entregaService>();
             Bind<IRotaService>().To<RotaService>();
             Bind<ICidadeService>().To<CidadeService>();
-            Bind<IUFService>().To<UFService>();
-            Bind<IUsuarioService>().To<UsuarioService>();
+            Bind<IUFService>().To<UFService>();            
             Bind<IEmpresaService>().To<EmpresaService>();
             Bind<IRegiaoService>().To<RegiaoService>();
             Bind<ISetorService>().To<SetorService>();

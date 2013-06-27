@@ -265,11 +265,14 @@ namespace HLP.UI.Entries.Geral
         }
 
         void PopulaForm()
-        {     
+        {    
             
             txtIdFuncionario.Text = objFuncionarioModel.idFuncionario.Value.ToString();
             txtxCodigoAlternativo.Text = objFuncionarioModel.xCodigoAlternativo;
             txtxNome.Text = objFuncionarioModel.xNome;
+            txtxId.Text = objFuncionarioModel.xID;
+            txtxSenha.Text = objFuncionarioModel.xSenha;
+            cbxstUsuario.SelectedIndex = (int)objFuncionarioModel.stUsuario;
         }
 
         void CarregaAcesso()

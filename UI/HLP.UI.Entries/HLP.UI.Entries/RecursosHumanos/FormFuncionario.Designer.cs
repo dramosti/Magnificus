@@ -52,10 +52,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidDeposito = new HLP.Comum.Components.HLP_Pesquisa();
             this.txtxInformacaoAtencao = new HLP.Comum.Components.HLP_TextBox();
             this.hlP_LabelSeparatorLogin = new HLP.Comum.Components.HLP_LabelSeparator();
-            this.chkUsuario = new HLP.Comum.Components.HLP_CheckBox();
-            this.txtxId = new HLP.Comum.Components.HLP_TextBox();
-            this.txtxSenha = new HLP.Comum.Components.HLP_TextBox();
-            this.cbxstUsuario = new HLP.Comum.Components.HLP_ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvEndereco = new HLP.Comum.Components.HLP_DataGridView();
             this.stPrincipal = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -319,10 +315,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidDeposito);
             this.flowLayoutPanel1.Controls.Add(this.txtxInformacaoAtencao);
             this.flowLayoutPanel1.Controls.Add(this.hlP_LabelSeparatorLogin);
-            this.flowLayoutPanel1.Controls.Add(this.chkUsuario);
-            this.flowLayoutPanel1.Controls.Add(this.txtxId);
-            this.flowLayoutPanel1.Controls.Add(this.txtxSenha);
-            this.flowLayoutPanel1.Controls.Add(this.cbxstUsuario);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -489,7 +481,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidCargo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidCargo._Regex = null;
             this.hlP_PesquisaidCargo._Table = "Funcionario";
-            this.hlP_PesquisaidCargo._TamanhoComponente = 300;
+            this.hlP_PesquisaidCargo._TamanhoComponente = 210;
             this.hlP_PesquisaidCargo._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidCargo._Vinculado = false;
             this.hlP_PesquisaidCargo._Visible = false;
@@ -500,7 +492,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidCargo.Margin = new System.Windows.Forms.Padding(115, 3, 15, 3);
             this.hlP_PesquisaidCargo.Name = "hlP_PesquisaidCargo";
             this.hlP_PesquisaidCargo.ReadOnly = false;
-            this.hlP_PesquisaidCargo.Size = new System.Drawing.Size(428, 21);
+            this.hlP_PesquisaidCargo.Size = new System.Drawing.Size(338, 21);
             this.hlP_PesquisaidCargo.TabIndex = 32;
             this.hlP_PesquisaidCargo.Value = 0;
             // 
@@ -518,7 +510,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_Pesquisa_idDepartamento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_Pesquisa_idDepartamento._Regex = null;
             this.hlP_Pesquisa_idDepartamento._Table = "Funcionario";
-            this.hlP_Pesquisa_idDepartamento._TamanhoComponente = 300;
+            this.hlP_Pesquisa_idDepartamento._TamanhoComponente = 210;
             this.hlP_Pesquisa_idDepartamento._TamanhoMaiorLabel = 150;
             this.hlP_Pesquisa_idDepartamento._Vinculado = false;
             this.hlP_Pesquisa_idDepartamento._Visible = false;
@@ -529,7 +521,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_Pesquisa_idDepartamento.Margin = new System.Windows.Forms.Padding(72, 3, 15, 3);
             this.hlP_Pesquisa_idDepartamento.Name = "hlP_Pesquisa_idDepartamento";
             this.hlP_Pesquisa_idDepartamento.ReadOnly = false;
-            this.hlP_Pesquisa_idDepartamento.Size = new System.Drawing.Size(471, 21);
+            this.hlP_Pesquisa_idDepartamento.Size = new System.Drawing.Size(381, 21);
             this.hlP_Pesquisa_idDepartamento.TabIndex = 38;
             this.hlP_Pesquisa_idDepartamento.Value = 0;
             // 
@@ -556,7 +548,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxstPerfil._Regex = null;
             this.cbxstPerfil._situacao = false;
             this.cbxstPerfil._Table = "Funcionario";
-            this.cbxstPerfil._TamanhoComponente = 197;
+            this.cbxstPerfil._TamanhoComponente = 194;
             this.cbxstPerfil._TamanhoMaiorLabel = 150;
             this.cbxstPerfil._Visible = false;
             this.cbxstPerfil.BackColor = System.Drawing.Color.Transparent;
@@ -569,7 +561,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxstPerfil.Name = "cbxstPerfil";
             this.cbxstPerfil.SelectedIndex = -1;
             this.cbxstPerfil.SelectedValue = 0;
-            this.cbxstPerfil.Size = new System.Drawing.Size(289, 21);
+            this.cbxstPerfil.Size = new System.Drawing.Size(286, 21);
             this.cbxstPerfil.TabIndex = 19;
             this.cbxstPerfil.ValueMember = "ValueMember";
             // 
@@ -587,7 +579,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidCalendário._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidCalendário._Regex = null;
             this.hlP_PesquisaidCalendário._Table = "Funcionario";
-            this.hlP_PesquisaidCalendário._TamanhoComponente = 300;
+            this.hlP_PesquisaidCalendário._TamanhoComponente = 210;
             this.hlP_PesquisaidCalendário._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidCalendário._Vinculado = false;
             this.hlP_PesquisaidCalendário._Visible = false;
@@ -598,7 +590,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidCalendário.Margin = new System.Windows.Forms.Padding(90, 3, 15, 3);
             this.hlP_PesquisaidCalendário.Name = "hlP_PesquisaidCalendário";
             this.hlP_PesquisaidCalendário.ReadOnly = false;
-            this.hlP_PesquisaidCalendário.Size = new System.Drawing.Size(453, 21);
+            this.hlP_PesquisaidCalendário.Size = new System.Drawing.Size(363, 21);
             this.hlP_PesquisaidCalendário.TabIndex = 33;
             this.hlP_PesquisaidCalendário.Value = 0;
             // 
@@ -628,7 +620,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidSite._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidSite._Regex = null;
             this.hlP_PesquisaidSite._Table = "Funcionario";
-            this.hlP_PesquisaidSite._TamanhoComponente = 300;
+            this.hlP_PesquisaidSite._TamanhoComponente = 210;
             this.hlP_PesquisaidSite._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidSite._Vinculado = false;
             this.hlP_PesquisaidSite._Visible = false;
@@ -639,7 +631,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidSite.Margin = new System.Windows.Forms.Padding(87, 3, 15, 3);
             this.hlP_PesquisaidSite.Name = "hlP_PesquisaidSite";
             this.hlP_PesquisaidSite.ReadOnly = false;
-            this.hlP_PesquisaidSite.Size = new System.Drawing.Size(456, 21);
+            this.hlP_PesquisaidSite.Size = new System.Drawing.Size(366, 21);
             this.hlP_PesquisaidSite.TabIndex = 34;
             this.hlP_PesquisaidSite.Value = 0;
             // 
@@ -657,7 +649,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidDeposito._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidDeposito._Regex = null;
             this.hlP_PesquisaidDeposito._Table = "Funcionario";
-            this.hlP_PesquisaidDeposito._TamanhoComponente = 300;
+            this.hlP_PesquisaidDeposito._TamanhoComponente = 210;
             this.hlP_PesquisaidDeposito._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidDeposito._Vinculado = false;
             this.hlP_PesquisaidDeposito._Visible = false;
@@ -668,7 +660,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidDeposito.Margin = new System.Windows.Forms.Padding(99, 3, 15, 3);
             this.hlP_PesquisaidDeposito.Name = "hlP_PesquisaidDeposito";
             this.hlP_PesquisaidDeposito.ReadOnly = false;
-            this.hlP_PesquisaidDeposito.Size = new System.Drawing.Size(444, 21);
+            this.hlP_PesquisaidDeposito.Size = new System.Drawing.Size(354, 21);
             this.hlP_PesquisaidDeposito.TabIndex = 35;
             this.hlP_PesquisaidDeposito.Value = 0;
             // 
@@ -709,103 +701,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_LabelSeparatorLogin.Size = new System.Drawing.Size(562, 18);
             this.hlP_LabelSeparatorLogin.TabIndex = 39;
             this.hlP_LabelSeparatorLogin.TabStop = false;
-            // 
-            // chkUsuario
-            // 
-            this.chkUsuario._LabelGroup = this.hlP_LabelSeparatorLogin;
-            this.chkUsuario._LabelText = "Usuário do sistema";
-            this.chkUsuario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.chkUsuario._Regex = null;
-            this.chkUsuario._TamanhoComponente = 24;
-            this.chkUsuario._TamanhoMaiorLabel = 150;
-            this.chkUsuario._Visible = false;
-            this.chkUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.chkUsuario.Base = null;
-            this.chkUsuario.Checked = false;
-            this.chkUsuario.Location = new System.Drawing.Point(48, 438);
-            this.chkUsuario.Margin = new System.Windows.Forms.Padding(48, 3, 15, 3);
-            this.chkUsuario.Name = "chkUsuario";
-            this.chkUsuario.Size = new System.Drawing.Size(129, 21);
-            this.chkUsuario.TabIndex = 40;
-            this.chkUsuario.Value = false;
-            this.chkUsuario._CheckedChanged += new System.EventHandler(this.chkUsuario__CheckedChanged);
-            // 
-            // txtxId
-            // 
-            this.txtxId._Field = "xId";
-            this.txtxId._LabelGroup = this.hlP_LabelSeparatorLogin;
-            this.txtxId._LabelText = "Login";
-            this.txtxId._Multiline = false;
-            this.txtxId._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.txtxId._Password = false;
-            this.txtxId._Regex = null;
-            this.txtxId._Table = "Funcionario";
-            this.txtxId._TamanhoComponente = 174;
-            this.txtxId._TamanhoMaiorLabel = 150;
-            this.txtxId._Visible = false;
-            this.txtxId.BackColor = System.Drawing.Color.Transparent;
-            this.txtxId.Base = null;
-            this.txtxId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtxId.Color = System.Drawing.Color.White;
-            this.txtxId.Location = new System.Drawing.Point(697, 3);
-            this.txtxId.Margin = new System.Windows.Forms.Padding(117, 3, 15, 3);
-            this.txtxId.MaxLength = 32767;
-            this.txtxId.Name = "txtxId";
-            this.txtxId.ReadOnly = false;
-            this.txtxId.Size = new System.Drawing.Size(210, 21);
-            this.txtxId.TabIndex = 41;
-            // 
-            // txtxSenha
-            // 
-            this.txtxSenha._Field = "xSenha";
-            this.txtxSenha._LabelGroup = this.hlP_LabelSeparatorLogin;
-            this.txtxSenha._LabelText = "Senha";
-            this.txtxSenha._Multiline = false;
-            this.txtxSenha._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.txtxSenha._Password = true;
-            this.txtxSenha._Regex = null;
-            this.txtxSenha._Table = "Funcionario";
-            this.txtxSenha._TamanhoComponente = 174;
-            this.txtxSenha._TamanhoMaiorLabel = 150;
-            this.txtxSenha._Visible = false;
-            this.txtxSenha.BackColor = System.Drawing.Color.Transparent;
-            this.txtxSenha.Base = null;
-            this.txtxSenha.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtxSenha.Color = System.Drawing.Color.White;
-            this.txtxSenha.Location = new System.Drawing.Point(694, 30);
-            this.txtxSenha.Margin = new System.Windows.Forms.Padding(114, 3, 15, 3);
-            this.txtxSenha.MaxLength = 32767;
-            this.txtxSenha.Name = "txtxSenha";
-            this.txtxSenha.ReadOnly = false;
-            this.txtxSenha.Size = new System.Drawing.Size(213, 21);
-            this.txtxSenha.TabIndex = 42;
-            // 
-            // cbxstUsuario
-            // 
-            this.cbxstUsuario._Field = "stUsuario";
-            this.cbxstUsuario._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxstUsuario._Itens")));
-            this.cbxstUsuario._LabelGroup = this.hlP_LabelSeparatorLogin;
-            this.cbxstUsuario._LabelText = "Tipo usuário";
-            this.cbxstUsuario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.cbxstUsuario._Regex = null;
-            this.cbxstUsuario._situacao = false;
-            this.cbxstUsuario._Table = "Funcionario";
-            this.cbxstUsuario._TamanhoComponente = 110;
-            this.cbxstUsuario._TamanhoMaiorLabel = 150;
-            this.cbxstUsuario._Visible = false;
-            this.cbxstUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.cbxstUsuario.Base = null;
-            this.cbxstUsuario.Color = System.Drawing.Color.White;
-            this.cbxstUsuario.DataSource = null;
-            this.cbxstUsuario.DisplayMember = "DisplayMember";
-            this.cbxstUsuario.Location = new System.Drawing.Point(662, 57);
-            this.cbxstUsuario.Margin = new System.Windows.Forms.Padding(82, 3, 15, 3);
-            this.cbxstUsuario.Name = "cbxstUsuario";
-            this.cbxstUsuario.SelectedIndex = -1;
-            this.cbxstUsuario.SelectedValue = 0;
-            this.cbxstUsuario.Size = new System.Drawing.Size(181, 21);
-            this.cbxstUsuario.TabIndex = 43;
-            this.cbxstUsuario.ValueMember = "ValueMember";
             // 
             // tabPage2
             // 
@@ -1232,7 +1127,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidContaBancaria._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidContaBancaria._Regex = null;
             this.hlP_PesquisaidContaBancaria._Table = "Funcionario";
-            this.hlP_PesquisaidContaBancaria._TamanhoComponente = 300;
+            this.hlP_PesquisaidContaBancaria._TamanhoComponente = 210;
             this.hlP_PesquisaidContaBancaria._TamanhoMaiorLabel = 180;
             this.hlP_PesquisaidContaBancaria._Vinculado = false;
             this.hlP_PesquisaidContaBancaria._Visible = false;
@@ -1243,7 +1138,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidContaBancaria.Margin = new System.Windows.Forms.Padding(98, 3, 15, 3);
             this.hlP_PesquisaidContaBancaria.Name = "hlP_PesquisaidContaBancaria";
             this.hlP_PesquisaidContaBancaria.ReadOnly = false;
-            this.hlP_PesquisaidContaBancaria.Size = new System.Drawing.Size(475, 21);
+            this.hlP_PesquisaidContaBancaria.Size = new System.Drawing.Size(385, 21);
             this.hlP_PesquisaidContaBancaria.TabIndex = 14;
             this.hlP_PesquisaidContaBancaria.Value = 0;
             // 
@@ -3269,10 +3164,6 @@ namespace HLP.UI.Entries.RecursosHumanos
         private System.Windows.Forms.DataGridViewTextBoxColumn xLinkDataGridViewTextBoxColumn;
         private HLP_LabelSeparator spComissao;
         private HLP_LabelSeparator hlP_LabelSeparatorLogin;
-        private HLP_CheckBox chkUsuario;
-        private HLP_TextBox txtxId;
-        private HLP_TextBox txtxSenha;
-        private HLP_ComboBox cbxstUsuario;
     }
 }
 

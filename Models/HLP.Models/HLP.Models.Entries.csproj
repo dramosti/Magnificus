@@ -107,7 +107,6 @@
     <Compile Include="Gerais\TransportadorModel.cs" />
     <Compile Include="Gerais\UFModel.cs" />
     <Compile Include="Gerais\Unidade_medidaModel.cs" />
-    <Compile Include="Gerais\UsuarioModel.cs" />
     <Compile Include="Parametros\Parametro_financeiroModel.cs" />
     <Compile Include="Parametros\Parametro_GeralModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -147,7 +147,6 @@
     <Compile Include="Gerais\Tipo_servicoRepository.cs" />
     <Compile Include="Gerais\TransportadorRepository.cs" />
     <Compile Include="Gerais\Unidade_medidaRepository.cs" />
-    <Compile Include="Gerais\UsuarioRepository.cs" />
     <Compile Include="Gerais\UFRepository.cs" />
     <Compile Include="Parametros\Parametro_financeiroRepository.cs" />
     <Compile Include="Parametros\Parametro_GeralRepository.cs" />

@@ -91,10 +91,7 @@ namespace HLP.UI.Entries.RecursosHumanos
                 bsFuncionarioCertificacao.DataSource = objFuncionarioModel.lFuncionario_Certificacao;
                 bsFuncionarioComissaoProduto.DataSource = objFuncionarioModel.lFuncionario_Comissao_Produto;
                 bsFuncionarioEndereco.DataSource = objFuncionarioModel.lFuncionario_Endereco;
-                bsFuncionarioMargemLucroComissao.DataSource = objFuncionarioModel.lFuncionario_Margem_Lucro_Comissao;
-                if(cbxstUsuario.cbx.Items.IndexOf("0 - HLP") != -1)
-                    cbxstUsuario.cbx.Items.Remove("0 - HLP");
-                chkUsuario__CheckedChanged(this, null);
+                bsFuncionarioMargemLucroComissao.DataSource = objFuncionarioModel.lFuncionario_Margem_Lucro_Comissao;                
             }
             catch (Exception ex)
             {
@@ -105,18 +102,6 @@ namespace HLP.UI.Entries.RecursosHumanos
         {
             try
             {
-                if(chkUsuario.Checked)
-                {
-                    txtxId._Obrigatorio = Comum.Components.UserControlBase.CampoObrigatorio.SIM;
-                    txtxSenha._Obrigatorio = Comum.Components.UserControlBase.CampoObrigatorio.SIM;
-                    cbxstUsuario._Obrigatorio = Comum.Components.UserControlBase.CampoObrigatorio.SIM;
-                }
-                else
-                {
-                    txtxId._Obrigatorio = Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-                    txtxSenha._Obrigatorio = Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-                    cbxstUsuario._Obrigatorio = Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-                }
                 objValidaCampos.Validar();
                 PopulaTabela();
 
@@ -133,21 +118,7 @@ namespace HLP.UI.Entries.RecursosHumanos
         }
         public override void Atualizar()
         {
-            base.Atualizar();
-            if (cbxstUsuario.SelectedIndex == 0)
-            {
-                chkUsuario.Checked = true;
-                chkUsuario.Enabled = false;
-                cbxstUsuario.Enabled = false;
-                txtxId.Enabled = false;
-                txtxSenha.Enabled = false;
-            }
-            else
-            {
-                cbxstUsuario.cbx.Items.Remove("0 - HLP");
-                chkUsuario__CheckedChanged(this, null);
-            }
-            
+            base.Atualizar();            
         }
         public override void Cancelar()
         {
@@ -403,22 +374,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             nudpComissaoAprazo.Value = objFuncionarioModel.pComissaoAprazo;
             #endregion
 
-            #region Login
-            if (objFuncionarioModel.xID != null)
-            {
-                if (cbxstUsuario.cbx.Items.IndexOf("0 - HLP") == -1)
-                    cbxstUsuario.cbx.Items.Insert(0, "0 - HLP");
-                chkUsuario.Checked = (objFuncionarioModel.xID != "");
-                if (chkUsuario.Checked)
-                {
-                    txtxId.Text = objFuncionarioModel.xID;
-                    txtxSenha.Text = Criptografia.Decripta(objFuncionarioModel.xSenha);
-                    cbxstUsuario.SelectedIndex = (int)objFuncionarioModel.stUsuario;
-                }
-            }
-
-            #endregion
-
             CalcHorasTrab();
         }        
 
@@ -504,25 +459,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             objFuncionarioModel.pComissaoAprazo = nudpComissaoAprazo.Value;
             #endregion
 
-            #region Login
-
-            if (chkUsuario.Checked)
-            {
-                if (chkUsuario.Enabled)
-                {
-                    objFuncionarioModel.xID = txtxId.Text;
-                    objFuncionarioModel.xSenha = Criptografia.Encripta(txtxSenha.Text);
-                    objFuncionarioModel.stUsuario = Convert.ToByte(cbxstUsuario.SelectedIndex + 1);
-                }
-            }
-            else
-            {
-                objFuncionarioModel.xID = null;
-                objFuncionarioModel.xSenha = null;
-                objFuncionarioModel.stUsuario = null;
-            }
-
-            #endregion
         }
 
         private void btnCarregarProdutos_Click(object sender, EventArgs e)
@@ -744,24 +680,5 @@ namespace HLP.UI.Entries.RecursosHumanos
         {
 
         }
-
-        private void chkUsuario__CheckedChanged(object sender, EventArgs e)
-        {
-            if(btnSalvar.Enabled)
-            {
-                txtxId.Enabled = chkUsuario.Checked;
-                txtxSenha.Enabled = chkUsuario.Checked;
-                cbxstUsuario.Enabled = chkUsuario.Checked;
-                if(!chkUsuario.Checked)
-                {
-                    txtxId.Text = "";
-                    txtxSenha.Text = "";
-                    cbxstUsuario.SelectedIndex = -1;
-                    txtxId.CharacterCasing = CharacterCasing.Upper;
-                }
-            }
-        }
-
-
     }
 }

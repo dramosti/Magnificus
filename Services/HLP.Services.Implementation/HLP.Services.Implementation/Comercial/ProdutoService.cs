@@ -68,7 +68,7 @@ namespace HLP.Services.Implementation.Entries.Comercial
                 foreach (Produto_RevisaoModel prodRevisao in produto.lProduto_Revisao.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Incluido))
                 {
                     prodRevisao.idProduto = (int)produto.idProduto;
-                    prodRevisao.idUsuario = (int)produto.idUsuario;
+                    prodRevisao.idUsuario = (int)produto.idFuncionario;
                     produtoRevisaoRepository.Save(prodRevisao);
                 }
                 foreach (Produto_RevisaoModel prodRevisao in produto.lProduto_Revisao.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Alterado))

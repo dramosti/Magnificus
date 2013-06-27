@@ -30,10 +30,7 @@ namespace HLP.UI.Entries.Comercial
     {
         [Inject]
         public IPesquisaPadraoService pesquisaPadraoService { get; set; }
-
-        [Inject]
-        public IUsuarioService usuarioService { get; set; }
-
+        
         [Inject]
         public IProdutoService produtoService { get; set; }
 
@@ -378,7 +375,7 @@ namespace HLP.UI.Entries.Comercial
             if (objProduto.idTipoServico != null)
                 hlP_PesquisaidTipoServico.Value = (int)objProduto.idTipoServico;
             txtdCadastro.Text = objProduto.dCadastro.ToString("dd/MM/yyyy");
-            cbxidUsuario.SelectedValue = objProduto.idUsuario;
+            cbxidUsuario.SelectedValue = objProduto.idFuncionario;
             #endregion
 
             #region Dados de estoque
@@ -494,7 +491,7 @@ namespace HLP.UI.Entries.Comercial
             if (hlP_PesquisaidTipoServico.Value != 0)
                 objProduto.idTipoServico = hlP_PesquisaidTipoServico.Value;
             objProduto.dCadastro = Convert.ToDateTime(txtdCadastro.Text.ToString());
-            objProduto.idUsuario = (int)cbxidUsuario.SelectedValue;
+            objProduto.idFuncionario = (int)cbxidUsuario.SelectedValue;
             #endregion
 
             #region Dados de estoque

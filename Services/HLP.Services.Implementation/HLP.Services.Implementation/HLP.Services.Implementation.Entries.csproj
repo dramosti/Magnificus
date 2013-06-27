@@ -131,7 +131,6 @@
     <Compile Include="Gerais\TransportadorService.cs" />
     <Compile Include="Gerais\UFService.cs" />
     <Compile Include="Gerais\Unidade_medidaService.cs" />
-    <Compile Include="Gerais\UsuarioService.cs" />
     <Compile Include="Parametros\Parametro_financeiroService.cs" />
     <Compile Include="Parametros\Parametro_GeralService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
