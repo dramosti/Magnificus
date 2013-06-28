@@ -49,7 +49,7 @@ namespace Magnificus
                 if (objUsuario != null)
                 {
 
-                    if (objUsuario.Ativo)
+                    if (objUsuario.stUsuarioAtivo)
                     {
                         if (usuarioService.ValidaAcesso(Convert.ToInt32(cbxIdEmpresa.SelectedValue), (int)objUsuario.idFuncionario))
                         {
@@ -93,7 +93,7 @@ namespace Magnificus
                     }
                     else
                     {
-                        errorProvider1.SetError(txtxID, "Usuário não está ativo!!");
+                        errorProvider1.SetError(txtxID, "Usuário não está ativo para utilizar o sistema!!");
                     }
                 }
                 else

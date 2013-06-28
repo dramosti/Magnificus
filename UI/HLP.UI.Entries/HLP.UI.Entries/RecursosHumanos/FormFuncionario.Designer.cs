@@ -51,7 +51,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidSite = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_PesquisaidDeposito = new HLP.Comum.Components.HLP_Pesquisa();
             this.txtxInformacaoAtencao = new HLP.Comum.Components.HLP_TextBox();
-            this.hlP_LabelSeparatorLogin = new HLP.Comum.Components.HLP_LabelSeparator();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvEndereco = new HLP.Comum.Components.HLP_DataGridView();
             this.stPrincipal = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -314,7 +313,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidSite);
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidDeposito);
             this.flowLayoutPanel1.Controls.Add(this.txtxInformacaoAtencao);
-            this.flowLayoutPanel1.Controls.Add(this.hlP_LabelSeparatorLogin);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -690,17 +688,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxInformacaoAtencao.ReadOnly = false;
             this.txtxInformacaoAtencao.Size = new System.Drawing.Size(225, 24);
             this.txtxInformacaoAtencao.TabIndex = 7;
-            // 
-            // hlP_LabelSeparatorLogin
-            // 
-            this.hlP_LabelSeparatorLogin._LabelText = "Login";
-            this.hlP_LabelSeparatorLogin._TamanhoMaiorLabel = 0;
-            this.hlP_LabelSeparatorLogin.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorLogin.Location = new System.Drawing.Point(3, 414);
-            this.hlP_LabelSeparatorLogin.Name = "hlP_LabelSeparatorLogin";
-            this.hlP_LabelSeparatorLogin.Size = new System.Drawing.Size(562, 18);
-            this.hlP_LabelSeparatorLogin.TabIndex = 39;
-            this.hlP_LabelSeparatorLogin.TabStop = false;
             // 
             // tabPage2
             // 
@@ -3163,7 +3150,6 @@ namespace HLP.UI.Entries.RecursosHumanos
         private System.Windows.Forms.DataGridViewTextBoxColumn xArquivoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn xLinkDataGridViewTextBoxColumn;
         private HLP_LabelSeparator spComissao;
-        private HLP_LabelSeparator hlP_LabelSeparatorLogin;
     }
 }
 

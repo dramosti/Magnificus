@@ -1,4 +1,5 @@
-﻿using HLP.Comum.Messages;
+﻿using HLP.Comum.Infrastructure;
+using HLP.Comum.Messages;
 using HLP.Comum.Services.Interface;
 using HLP.Comum.UI;
 using HLP.Comum.UI.Exception;
@@ -95,6 +96,11 @@ namespace HLP.UI.Entries.Geral
                 funcionarioService.Save(objFuncionarioModel);
 
                 base.Salvar();
+                objMetodosForm.LimpaCampos();
+                int id = (int)objFuncionarioModel.idFuncionario;
+                objFuncionarioModel = new FuncionarioModel();
+                objFuncionarioModel = funcionarioService.GetFuncionario((int)id, true);
+                PopulaForm();
             }
             catch (Exception ex)
             {
@@ -106,6 +112,20 @@ namespace HLP.UI.Entries.Geral
         {
             base.Atualizar();
             txtIdFuncionario.Enabled = txtxCodigoAlternativo.Enabled = txtxNome.Enabled = false;
+            txtxId.Enabled = txtxSenha.Enabled = cbxstUsuario.Enabled = cbxstUsuario.Text != "0 - HLP";
+            dgvAcesso.Enabled = txtxId.Text != "" && txtxSenha.Text != "" && cbxstUsuario.Text != "";
+            txtxId.CharacterCasing = CharacterCasing.Upper;
+            chkstUsuarioAtivo__CheckedChanged(this, null);
+            if (cbxstUsuario.Text == "0 - HLP")
+            {
+                cbxstUsuario.Enabled = txtxId.Enabled = txtxSenha.Enabled = chkstUsuarioAtivo.Enabled 
+                    = false;
+            }
+            else
+            {
+                if (cbxstUsuario.cbx.Items.Contains("0 - HLP"))
+                    cbxstUsuario.cbx.Items.Remove("0 - HLP");
+            }
 
         }
         public override void Cancelar()
@@ -117,6 +137,11 @@ namespace HLP.UI.Entries.Geral
                     PopulaForm();
                     HabilitaBotoes(1);
                     base.Cancelar();
+                    objMetodosForm.LimpaCampos();
+                    int id = (int)objFuncionarioModel.idFuncionario;
+                    objFuncionarioModel = new FuncionarioModel();
+                    objFuncionarioModel = funcionarioService.GetFuncionario((int)id, true);
+                    PopulaForm();
                 }
             }
             catch (Exception ex)
@@ -132,7 +157,7 @@ namespace HLP.UI.Entries.Geral
                 base.Pesquisar();
                 if (iRetPesquisa != null)
                 {                    
-                    objFuncionarioModel = funcionarioService.GetFuncionario((int)iRetPesquisa, true);
+                    objFuncionarioModel = funcionarioService.GetFuncionario((int)iRetPesquisa, true);                    
                     PopulaForm();
                 }
                 else if (base.bNovoPesquisa)
@@ -265,14 +290,19 @@ namespace HLP.UI.Entries.Geral
         }
 
         void PopulaForm()
-        {    
-            
+        {
+            if (!cbxstUsuario.cbx.Items.Contains("0 - HLP"))
+                cbxstUsuario.cbx.Items.Insert(0, "0 - HLP");
             txtIdFuncionario.Text = objFuncionarioModel.idFuncionario.Value.ToString();
             txtxCodigoAlternativo.Text = objFuncionarioModel.xCodigoAlternativo;
             txtxNome.Text = objFuncionarioModel.xNome;
+            chkstUsuarioAtivo.Checked = objFuncionarioModel.stUsuarioAtivo;
             txtxId.Text = objFuncionarioModel.xID;
-            txtxSenha.Text = objFuncionarioModel.xSenha;
-            cbxstUsuario.SelectedIndex = (int)objFuncionarioModel.stUsuario;
+            txtxSenha.Text = objFuncionarioModel.xSenha != null ?
+                Criptografia.Decripta(objFuncionarioModel.xSenha) : "";
+            cbxstUsuario.SelectedIndex = objFuncionarioModel.stUsuario != null ?
+                (int)objFuncionarioModel.stUsuario : -1;
+            
         }
 
         void CarregaAcesso()
@@ -283,13 +313,88 @@ namespace HLP.UI.Entries.Geral
 
         void PopulaTabela()
         {
+            objFuncionarioModel.stUsuarioAtivo = chkstUsuarioAtivo.Checked;
+            objFuncionarioModel.xID = txtxId.Text;
+            objFuncionarioModel.xSenha = Criptografia.Encripta(txtxSenha.Text);
+            if (cbxstUsuario.Enabled)
+                objFuncionarioModel.stUsuario = Convert.ToByte(cbxstUsuario.SelectedIndex + 1);
         }
 
         private void txtIdFuncionario__TextChanged(object sender, EventArgs e)
         {
             if (txtIdFuncionario.Text != "")
-            {
+            {                
                 CarregaAcesso();
+            }
+        }
+
+        private void btnVerificar__btnHlpClick(object sender, EventArgs e)
+        {
+            bool contemErros = false;
+            txtxId.errorProvider1.Clear();
+            txtxSenha.errorProvider1.Clear();
+            cbxstUsuario.errorProvider1.Clear();
+            
+            if (txtxId.Text == "")
+            {
+                txtxId.errorProvider1.SetError(txtxId, "Campo não pode ser vazio");
+                contemErros = true;
+            }
+            if (txtxSenha.Text == "")
+            {
+                txtxSenha.errorProvider1.SetError(txtxSenha, "Campo não pode ser vazio");
+                contemErros = true;
+            }
+            if (cbxstUsuario.Text == "")
+            {
+                cbxstUsuario.errorProvider1.SetError(cbxstUsuario, "Campo não pode ser vazio");
+                contemErros = true;
+            }
+
+            if (!contemErros)
+            {
+                FuncionarioModel objValidFunc = new FuncionarioModel();
+                objValidFunc = funcionarioService.ValidaUsuario(txtxId.Text, txtxSenha.Text);
+                if (objValidFunc == null
+                    || objValidFunc.idFuncionario == objFuncionarioModel.idFuncionario)
+                {
+                    dgvAcesso.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Já existe um usuário com mesmo login e senha na base de dados",
+                        "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void txtxId__TextChanged(object sender, EventArgs e)
+        {
+            if (btnSalvar.Enabled)
+            {
+                dgvAcesso.Enabled = false;
+            }
+        }
+
+        private void chkstUsuarioAtivo__CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnSalvar.Enabled)
+            {
+                if (chkstUsuarioAtivo.Checked)
+                {
+                    txtxId.Enabled = txtxSenha.Enabled = cbxstUsuario.Enabled =
+                        btnVerificar.Enabled = true;
+                    txtxId._Obrigatorio = txtxSenha._Obrigatorio = cbxstUsuario._Obrigatorio =
+                        Comum.Components.UserControlBase.CampoObrigatorio.SIM;
+                }
+                else
+                {
+                    txtxId.Enabled = txtxSenha.Enabled = cbxstUsuario.Enabled =
+                        btnVerificar.Enabled = dgvAcesso.Enabled = false;
+                    txtxId._Obrigatorio = txtxSenha._Obrigatorio = cbxstUsuario._Obrigatorio =
+                        Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+                }
             }
         }
     }

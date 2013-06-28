@@ -140,6 +140,9 @@ namespace HLP.Models.Entries.Gerais
         public string xSenha { get; set; }
         [ParameterOrder(Order = 66)]
         public byte? stUsuario { get; set; }
+        [ParameterOrder(Order = 67)]
+        public bool stUsuarioAtivo { get; set; }
+
 
         public List<Funcionario_ArquivoModel> lFuncionario_Arquivo = new List<Funcionario_ArquivoModel>();
         public List<Funcionario_CertificacaoModel> lFuncionario_Certificacao = new List<Funcionario_CertificacaoModel>();
@@ -310,8 +313,6 @@ namespace HLP.Models.Entries.Gerais
         public int idFuncionario { get; set; }
         [ParameterOrder(Order = 5)]
         public decimal vCompraAprovaAuto { get; set; }
-
-
     }
 
 
