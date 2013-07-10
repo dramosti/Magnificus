@@ -13,27 +13,42 @@ using HLP.Comum.Components;
 using HLP.Comum.Infrastructure;
 using HLP.Comum.UI.Exception;
 using HLP.Comum.Models.Static;
+using Ninject;
+using HLP.Comum.Services.Interface;
+using HLP.Dependencies;
+using HLP.Comum.Models;
 
 namespace HLP.Comum.UI
 {
     public partial class FormConfigFormulario : KryptonForm
     {
+        [Inject]
+        public IPesquisaPadraoService pesquisaPadraoService { get; set; }
         ConfigFormulariosModel objConfigFormularioModel { get; set; }
         List<Control> lControl { get; set; }
         string sFormat = ("{0}  -  {1}");
-        List<string> lProperty = ("_LabelGroup-_TamanhoComponente-_TamanhoMaiorLabel-_Table-_Field-Name-"
-                                + "_LabelText-_Regex-_Help-_Obrigatorio-MaxLength-Enabled-ReadOnly-_Multiline-"
+        List<sTeste> lsTeste;
+        List<string> lProperty = ("_LabelGroup-_TamanhoComponente-_TamanhoMaiorLabel-_Table-_Field-Name-_NomeView-_ListaCamposDisplay-"
+                                + "_LabelText-_Regex-_Help-_Obrigatorio-MaxLength-Enabled-Visible-ReadOnly-_Multiline-"
                                 + "_Password-Text-CharacterCasing-Color-DataSource-ValueMember-DisplayMember-AllowDrop-Format-S"
                                 + "CustomFormat-Value-CampoObrigatorio-Checked-electedIndex-SelectedIndexByte-_situacao-DisplayMember-ValueMember-SelectedValue-_Itens-"
                                 + "_TpValidacao-MaskFormat-Mask-Maximum-Minimum-DecimalPlaces-ValueInt").Split('-').ToList();
 
+
+
         public FormConfigFormulario(ConfigFormulariosModel objConfigFormularioModel, List<Control> lControl)
         {
+            IKernel kernel = new StandardKernel(new MagnificusDependenciesModule());
+            kernel.Settings.ActivationCacheDisabled = false;
+            kernel.Inject(this);
+
             InitializeComponent();
+            this.lsTeste = GetListaGenerica();
             this.objConfigFormularioModel = objConfigFormularioModel;
             this.lControl = lControl;
             headerConfig.Values.Description = objConfigFormularioModel.objConfigFormUsu.xText;
             CarregaTreeViewFormulario();
+
         }
 
         void CarregaTreeViewFormulario()
@@ -48,9 +63,13 @@ namespace HLP.Comum.UI
 
             TreeFormulario.Nodes.Add(n);
 
-            TreeNode nTab = new TreeNode();
-            CriaNodesTabPage(objConfigFormularioModel.objConfigTabPage, nTab);
-            TreeFormulario.Nodes[0].Nodes.Add(nTab);
+            TreeNode nTab;
+            foreach (ConfigTabPageModel tab in objConfigFormularioModel.lConfigTabPage)
+            {
+                nTab = new TreeNode();
+                CriaNodesTabPage(tab, nTab);
+                TreeFormulario.Nodes[0].Nodes.Add(nTab);
+            }
 
 
             TreeFormulario.Nodes[0].ExpandAll();
@@ -74,7 +93,7 @@ namespace HLP.Comum.UI
                 nSeparador.SelectedImageIndex = 2;
                 nSeparador.Text = separador;
                 nSeparador.Tag = "SEPARADOR";
-                foreach (var comp in tab.lConfigComponente.Where(c => (c.xTypeComp != "HLP_DataGridView") && (c.xLabelGroup == separador)))
+                foreach (var comp in tab.lConfigComponente.Where(c => (c.xTypeComp != "HLP_DataGridView") && (c.xLabelGroup == separador)).OrderBy(C => C.objConfigCompUsu.nOrder))
                 {
                     nComponente = new TreeNode();
                     nComponente.ImageIndex = 3;
@@ -122,32 +141,6 @@ namespace HLP.Comum.UI
         }
 
 
-        void AddCompToContainer(string xNameComp)
-        {
-            Control ctr = null;
-            try
-            {
-                ctr = FindControl(xNameComp) as Control;
-                if (ctr != null)
-                {
-                    Control copy = CloneObject(ctr) as Control;
-                    if (copy.GetType() == typeof(HLP_DataGridView))
-                        copy.Dock = DockStyle.Fill;
-                    copy.Visible = true;
-                    panelDesign.Controls.Clear();
-                    int y = (panelDesign.Height / 2) - (copy.Height / 2);
-                    panelDesign.Controls.Add(copy);
-                    copy.Location = new Point(0, y);
-                    panelDesign.Refresh();
-                }
-            }
-            catch (System.Exception)
-            {
-                if (ctr != null)
-                    ctr.Location = new Point(0, 0);
-            }
-        }
-
         private object CloneObject(object o)
         {
             Type t = o.GetType();
@@ -174,32 +167,6 @@ namespace HLP.Comum.UI
                 return null;
         }
 
-        private void TreeFormulario_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            try
-            {
-                if (e.Node.Tag.GetType() == ("").GetType())
-                {
-
-                }
-                else if (e.Node.Tag.GetType() == typeof(ConfigTabPageModel))
-                {
-
-                }
-                else if (e.Node.Tag.GetType() == typeof(ConfigColunasGridModel))
-                {
-                    AfterSelectColumnModel(e.Node);
-                }
-                else if (e.Node.Tag.GetType() == typeof(ConfigComponenteModel))
-                {
-                    AfterSelectComponenteModel(e.Node);
-                }
-            }
-            catch (System.Exception ex)
-            {
-                new HLPexception(ex);
-            }
-        }
 
         void VisibleColumns(List<ConfigColunasGridModel> lcolunas, HLP_DataGridView dgv)
         {
@@ -248,15 +215,117 @@ namespace HLP.Comum.UI
             }
         }
 
+        Control AddCompToContainer(string xNameComp)
+        {
+            Control ctr = null;
+            try
+            {
+                ctr = FindControl(xNameComp) as Control;
+                if (ctr != null)
+                {
+                    ctr = CloneObject(ctr) as Control;
+                    if (ctr.GetType() == typeof(HLP_DataGridView))
+                        ctr.Dock = DockStyle.Fill;
+                    ctr.Visible = true;
+                    panelDesign.Controls.Clear();
+                    int y = (panelDesign.Height / 2) - (ctr.Height / 2);
+                    panelDesign.Controls.Add(ctr);
+                    ctr.Location = new Point(0, y);
+                    panelDesign.Refresh();
+
+                    if (ctr.GetType() == typeof(HLP_NumericUpDown))
+                    {
+                        (ctr as HLP_NumericUpDown)._ValueChanged += ComponenteVisual__TextChanged;
+                    }
+                    else if (ctr.GetType() == typeof(HLP_TextBox))
+                    {
+                        (ctr as HLP_TextBox)._TextChanged += ComponenteVisual__TextChanged;
+                    }
+                    else if (ctr.GetType() == typeof(HLP_ComboBox))
+                    {
+                        (ctr as HLP_ComboBox)._SelectedIndexChanged += ComponenteVisual__TextChanged;
+                    }
+
+                }
+                return ctr;
+            }
+            catch (System.Exception)
+            {
+                if (ctr != null)
+                    ctr.Location = new Point(0, 0);
+                return null;
+            }
+        }
+
+        void LimpaPanelConfig()
+        {
+            foreach (Control ctr in FlowConfig.Controls)
+            {
+                ctr.Visible = false;
+            }
+        }
+
+
         void AfterSelectComponenteModel(TreeNode node)
         {
             lstDados.Items.Clear();
             ConfigComponenteModel comp = node.Tag as ConfigComponenteModel;
-            AddCompToContainer(comp.xName);
+            Control ctr = AddCompToContainer(comp.xName);
+            LimpaPanelConfig();
+            nudComprimento.ReadOnly = false;
+
+            txtHelp.Text = comp.objConfigCompUsu.xHelp;  // ctr.GetPropertyValue("_Help").ToString();
+            txtHelp.Visible = true;
+            txtLabelText.Text = comp.objConfigCompUsu.xLabelText; // ctr.GetPropertyValue("_LabelText").ToString();
+            txtLabelText.Visible = true;
+            chkEnabled.Checked = comp.objConfigCompUsu.stEnabled.ToBoolean();
+            chkEnabled.Visible = true;
+            chkVisible.Checked = comp.objConfigCompUsu.stVisible.ToBoolean();
+            chkVisible.Visible = true;
+            nudComprimento.Value = comp.objConfigCompUsu.iTamanhoComponente;
+            nudComprimento.Visible = true;
+            if ((ctr.GetType() == typeof(HLP_ComboBox)) || (ctr.GetType() == typeof(HLP_MaskedTextBox)) || (ctr.GetType() == typeof(HLP_NumericUpDown)) || (ctr.GetType() == typeof(HLP_TextBox)))
+                nudComprimento.ReadOnly = true;
+
+            if ((ctr.GetType().GetProperties().Where(c => c.Name == "MaxLength").Count() > 0))
+            {
+                nudMaxLength.Value = comp.objConfigCompUsu.nMaxLength;
+                nudMaxLength.Visible = true;
+            }
+            if ((ctr.GetType().GetProperties().Where(c => c.Name == "Maximum").Count() > 0))
+            {
+                nudMaxLength.Value = comp.objConfigCompUsu.nMaxLength.ToString().Count();
+                nudMaxLength.Visible = true;
+            }
+
+
+            if (ctr.GetType().GetProperties().Where(c => c.Name == "DecimalPlaces").Count() > 0)
+            {
+                nudDecimalPlaces.Value = comp.objConfigCompUsu.nDecimalPlaces;
+                nudDecimalPlaces.Visible = true;
+            }
+            if (ctr.GetType().GetProperties().Where(c => c.Name == "Color").Count() > 0)
+            {
+                btnCor.Visible = true;
+            }
+            if ((ctr.GetType() != typeof(HLP_Pesquisa)))
+                btnValorPadrao.Visible = true;
+
+            if ((ctr.GetType() == typeof(HLP_Pesquisa)))
+            {
+                listDisplay.Visible = true;
+                foreach (PesquisaPadraoModel item in pesquisaPadraoService.GetTableInformation(ctr.GetPropertyValue("_NomeView").ToString()))
+                    listDisplay.ListBox1.Items.Add(item.COLUMN_NAME);
+                listDisplay.ListBox2.Items.Clear();
+                foreach (string item in (List<string>)ctr.GetPropertyValue("_ListaCamposDisplay"))
+                    listDisplay.ListBox2.Items.Add(item);
+                ctr.Enabled = false;
+            }
+
+
 
             if (panelDesign.Controls.Count > 0)
             {
-
                 if (panelDesign.Controls[0].GetType() != typeof(HLP_DataGridView))
                 {
                     if (comp.Base != null)
@@ -281,8 +350,69 @@ namespace HLP.Comum.UI
                     }
                 }
             }
-
         }
+
+        void SaveConfiguracaoComp(ConfigComponenteModel comp)
+        {
+            List<PropertyInfo> lProperties = panelDesign.Controls[0].GetType().GetProperties().ToList();
+            foreach (sTeste p in lsTeste)
+            {
+                if (lProperties.Where(c => c.Name == p.xPropertyComp).Count() > 0)
+                {
+                    comp.SetPropertyValue(p.xPropertyClass, panelDesign.Controls[0].GetPropertyValue(p.xPropertyComp));
+                }
+            }
+        }
+
+        List<sTeste> GetListaGenerica()
+        {
+            List<sTeste> lsTeste = new List<sTeste>();
+            lsTeste.Add(new sTeste { xPropertyClass = "SelectedIndex", xPropertyComp = "Text" });
+            lsTeste.Add(new sTeste { xPropertyClass = "Text", xPropertyComp = "Text" });
+            lsTeste.Add(new sTeste { xPropertyClass = "Width", xPropertyComp = "_TamanhoComponente" }); //criar
+            lsTeste.Add(new sTeste { xPropertyClass = "xLabeText", xPropertyComp = "_LabelText" });
+            lsTeste.Add(new sTeste { xPropertyClass = "stEnabled", xPropertyComp = "Enabled" });
+            lsTeste.Add(new sTeste { xPropertyClass = "stVisible", xPropertyComp = "Enabled" });
+            //lsTeste.Add(new sTeste { xPropertyClass = "", xPropertyComp = "" }); // Color
+            lsTeste.Add(new sTeste { xPropertyClass = "mMaxLength", xPropertyComp = "MaxLength" });
+            lsTeste.Add(new sTeste { xPropertyClass = "nDecimalPlaces", xPropertyComp = "DecimalPlaces" });
+            lsTeste.Add(new sTeste { xPropertyClass = "xHelp", xPropertyComp = "_Visible" });
+            return lsTeste;
+        }
+
+        struct sTeste
+        {
+            public string xPropertyComp { get; set; }
+            public string xPropertyClass { get; set; }
+        }
+
+        private void TreeFormulario_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            try
+            {
+                if (e.Node.Tag.GetType() == ("").GetType())
+                {
+
+                }
+                else if (e.Node.Tag.GetType() == typeof(ConfigTabPageModel))
+                {
+
+                }
+                else if (e.Node.Tag.GetType() == typeof(ConfigColunasGridModel))
+                {
+                    AfterSelectColumnModel(e.Node);
+                }
+                else if (e.Node.Tag.GetType() == typeof(ConfigComponenteModel))
+                {
+                    AfterSelectComponenteModel(e.Node);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                new HLPexception(ex);
+            }
+        }
+
 
         private void TreeFormulario_ItemDrag(object sender, ItemDragEventArgs e)
         {
@@ -341,5 +471,122 @@ namespace HLP.Comum.UI
                 }
             }
         }
+
+
+        private void btnCor__btnHlpClick(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if (cd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ConfigComponenteModel comp = TreeFormulario.SelectedNode.Tag as ConfigComponenteModel;
+                comp.objConfigCompUsu.xColor = cd.Color.ToArgb().ToString();
+                panelDesign.Controls[0].SetPropertyValue("Color", cd.Color);
+            }
+
+        }
+
+        private void btnValorPadrao__btnHlpClick(object sender, EventArgs e)
+        {
+            panelDesign.Controls[0].Focus();
+        }
+
+        private void ComponenteVisual__TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ConfigComponenteModel objComp = TreeFormulario.SelectedNode.Tag as ConfigComponenteModel;
+                List<PropertyInfo> lProperty = (sender as Control).GetType().GetProperties().ToList();
+                Control controlOriginal = FindControl(objComp.xName);
+                if (lProperty.Where(c => c.Name == "Text").Count() > 0)
+                {
+                    objComp.objConfigCompUsu.xText = (sender as Control).GetPropertyValue("Text").ToString();
+                    controlOriginal.SetPropertyValue("Text", objComp.objConfigCompUsu.xText);
+                }
+                else if (lProperty.Where(c => c.Name == "Text").Count() > 0)
+                {
+
+                }
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        private void Componentes__TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ConfigComponenteModel objComp = TreeFormulario.SelectedNode.Tag as ConfigComponenteModel;
+                Control objSender = (sender as Control).Parent;
+                Control controle = panelDesign.Controls[0];
+                if (objSender == txtHelp)
+                {
+                    objComp.objConfigCompUsu.xHelp = txtHelp.Text;
+                    controle.SetPropertyValue("_Help", txtHelp.Text);
+                }
+                else if (objSender == txtLabelText)
+                {
+                    objComp.objConfigCompUsu.xLabelText = txtLabelText.Text;
+                    controle.SetPropertyValue("_LabelText", txtLabelText.Text);
+                }
+                else if (objSender == nudDecimalPlaces)
+                {
+                    objComp.objConfigCompUsu.nDecimalPlaces = nudDecimalPlaces.Value.ToInt32();
+                    controle.SetPropertyValue("DecimalPlaces", nudDecimalPlaces.Value.ToInt32());
+                }
+                else if (objSender == nudMaxLength)
+                {
+                    if (controle.GetType().GetProperties().Where(c => c.Name == "Maximum").Count() > 0)
+                    {
+                        controle.SetPropertyValue("Maximum", ("").PadLeft(nudMaxLength.Value.ToInt32(), '9').ToDecimal());
+                        objComp.objConfigCompUsu.nMaxLength = ("").PadLeft(nudMaxLength.Value.ToInt32(), '9').ToDecimal();
+                    }
+                    else if (controle.GetType().GetProperties().Where(c => c.Name == "MaxLength").Count() > 0)
+                    {
+                        controle.SetPropertyValue("MaxLength", nudMaxLength.Value.ToInt32());
+                        objComp.objConfigCompUsu.nMaxLength = nudMaxLength.Value.ToInt32();
+                    }
+                }
+                else if (objSender == nudComprimento)
+                {
+                    objComp.objConfigCompUsu.iTamanhoComponente = nudComprimento.Value.ToInt32();
+                    controle.SetPropertyValue("_TamanhoComponente", nudComprimento.Value.ToInt32());
+                }
+                if (objSender == chkEnabled)
+                {
+                    objComp.objConfigCompUsu.stEnabled = chkEnabled.Checked.ToByte();
+                    controle.SetPropertyValue("Enabled", chkEnabled.Checked);
+                }
+                else if (objSender == chkVisible)
+                {
+                    objComp.objConfigCompUsu.stVisible = chkVisible.Checked.ToByte();
+                    controle.SetPropertyValue("Visible", chkVisible.Checked);
+                }
+
+                nudComprimento._ValueChanged -= Componentes__TextChanged;
+                nudComprimento.Value = controle.GetPropertyValue("_TamanhoComponente").ToInt32();
+                nudComprimento._ValueChanged += Componentes__TextChanged;
+                objComp.objConfigCompUsu.iTamanhoComponente = nudComprimento.Value.ToInt32();
+
+                Control controlOriginal = FindControl(objComp.xName);
+
+                foreach (PropertyInfo pi in controle.GetType().GetProperties())
+                {
+                    if (pi.CanWrite)
+                    {
+                        if (lProperty.Contains(pi.Name))
+                            pi.SetValue(controlOriginal, pi.GetValue(controle, null), null);
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

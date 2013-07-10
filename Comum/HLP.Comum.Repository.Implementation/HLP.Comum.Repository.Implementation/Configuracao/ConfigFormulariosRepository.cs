@@ -46,7 +46,12 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
                "[dbo].[Proc_save_CONFIG_Formulario_Usuario]",
               ParameterBase<ConfigFormularioUsuModel>.SetParameterValue(formulario.objConfigFormUsu));
 
-            itabPageRepository.Save(formulario.objConfigTabPage);
+            foreach (var tab in formulario.lConfigTabPage)
+            {
+                itabPageRepository.Save(tab);
+            }
+
+            
         }
         public int GetIdFormulario(string xNameFormulario, int idUsuario)
         {

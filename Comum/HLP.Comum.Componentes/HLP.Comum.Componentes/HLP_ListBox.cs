@@ -126,7 +126,9 @@ namespace HLP.Comum.Components
 
             }
         }
+
         private List<String> _attributes = new List<string>();
+
         public class CsvConverter : TypeConverter
         {
             // Overrides the ConvertTo method of TypeConverter. 
@@ -140,7 +142,6 @@ namespace HLP.Comum.Components
                 }
                 return base.ConvertTo(context, culture, value, destinationType);
             }
-
         }
 
 

@@ -13,6 +13,7 @@ using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Models;
 using HLP.Services.Interfaces.Entries.Parametros;
 using HLP.Models.Entries.Parametros;
+using System.Drawing;
 
 
 namespace HLP.Comum.Services.Implementation.Configuracao
@@ -134,15 +135,19 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                         if (controle.ToObject().GetPropertyValue("_LabelGroup") != null)
                             comp.xLabelGroup = (controle.ToObject().GetPropertyValue("_LabelGroup") as HLP_LabelSeparator).Name;
 
-                        try
-                        {// the property color is not common for all components.
-                            comp.objConfigCompUsu.xColor = controle.ToObject().GetPropertyValue("Color").ToString();
+                        // the property color is not common for all components.
+                        if (controle.GetType().GetProperties().Where(c => c.Name == "Color").Count() > 0)
+                        {
+                            Color cor = (Color)controle.ToObject().GetPropertyValue("Color");
+                            comp.objConfigCompUsu.xColor = cor.ToArgb().ToString();
                         }
-                        catch (Exception) { }
+
                         comp.objConfigCompUsu.xParent = controle.Parent.Parent.Parent != null ? controle.Parent.Parent.Parent.Name : "HLP_Verificar";
                         comp.objConfigCompUsu.xHelp = controle.ToObject().GetPropertyValue("_Help").ToString();
                         comp.objConfigCompUsu.stAtivo = true.ToByte();//Dafault
                         comp.objConfigCompUsu.stAcesso = true.ToByte(); //Dafault
+                        comp.objConfigCompUsu.iTamanhoComponente = controle.Width;
+
                         if (comp.xField != "" && comp.xTable == "")
                         {
                             throw new Exception(string.Format("Esta faltando preencher propriedades no componente {0} ", comp.xName));

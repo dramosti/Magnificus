@@ -97,7 +97,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                 pnPrincipal.FindForm().Text = objConfigFormularioModel.objConfigFormUsu.xText;
                 pnPrincipal.FindForm().Enabled = Convert.ToBoolean(objConfigFormularioModel.objConfigFormUsu.stAtivo);
 
-                itabPageService.SetConfigToTabPagesRecursivo(objConfigFormularioModel.objConfigTabPage, lControl);
+                itabPageService.SetConfigToTabPagesRecursivo(objConfigFormularioModel.lConfigTabPage, lControl);
                 objConfigFormularioModel.lobjConfigComponente = itabPageService.GetListaControlesConfigComponenteModel();
 
 
@@ -136,10 +136,10 @@ namespace HLP.Comum.Services.Implementation.Configuracao
         private void CarregaDadosFormulario(ComponentFactory.Krypton.Toolkit.KryptonPanel pnPrincipal, string sViewForm)
         {
             #region
-            ConfigTabPageModel objConfgTabPageDefault = objConfigFormularioModel.objConfigTabPage;
-            objConfgTabPageDefault.xNameTab = "HLP";
-            itabPageService.GetInfoTabPagesRecursiovo(pnPrincipal.Controls, objConfgTabPageDefault, lControl);
-            this.objConfigFormularioModel.objConfigTabPage = objConfgTabPageDefault;
+            List<ConfigTabPageModel> lConfgTabPage = this.objConfigFormularioModel.lConfigTabPage;
+            //lConfgTabPage.xNameTab = "HLP";
+            itabPageService.GetInfoTabPagesRecursiovo(pnPrincipal.Controls, lConfgTabPage, lControl);
+            //this.objConfigFormularioModel.lConfigTabPage = lConfgTabPage;
 
 
             objConfigFormularioModel.xNameFormulario = pnPrincipal.FindForm().Name;
@@ -323,7 +323,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             {
                 objFormularioRet = iConfigFormulariosRepository.GetFormulario(xNameFormulario, idUsuario);
 
-                objFormularioRet.objConfigTabPage = itabPageService.GetTabPageByForm(objFormularioRet.idFormularios.ToInt32(), idUsuario);
+                objFormularioRet.lConfigTabPage = itabPageService.GetTabPageByForm(objFormularioRet.idFormularios.ToInt32(), idUsuario);
             }
 
             return objFormularioRet;

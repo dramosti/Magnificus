@@ -864,6 +864,7 @@ namespace HLP.Comum.UI
             //CONFIGURAÇÃO DE COMPONENTE.
             try
             {
+                this.objMetodosForm.HabilitaCampos(true);
                 FormConfigFormulario fc = new FormConfigFormulario(iConfigFormularioService.objConfigFormularioModel, iConfigFormularioService.lControl);
                 fc.ShowDialog();
 
@@ -1038,7 +1039,7 @@ namespace HLP.Comum.UI
             catch (System.Exception ex)
             {
                 bwWorker.Dispose();
-                throw ex; 
+                throw ex;
             }
 
         }

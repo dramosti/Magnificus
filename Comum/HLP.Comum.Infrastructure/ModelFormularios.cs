@@ -22,7 +22,6 @@ namespace HLP.Comum.Infrastructure
         public string xNomeFisico { get; set; }
         [ParameterOrder(Order = 6)]
         public string xDetalhes { get; set; }
-
     }
 
     public class ConfigFormulariosModel
@@ -37,7 +36,7 @@ namespace HLP.Comum.Infrastructure
             {
                 _idFormularios = value;
                 objConfigFormUsu.idFormularios = value;
-                SetPropertyTabPageRecursivo(objConfigTabPage, "idFormularios", value);
+                SetPropertyTabPageRecursivo(lConfigTabPage, "idFormularios", value);
             }
         }
         [ParameterOrder(Order = 2)]
@@ -55,14 +54,14 @@ namespace HLP.Comum.Infrastructure
 
         public ConfigFormularioUsuModel objConfigFormUsu = new ConfigFormularioUsuModel();
         public List<RelatoriosModel> lRelatorios = new List<RelatoriosModel>();
-        public ConfigTabPageModel objConfigTabPage = new ConfigTabPageModel();
+        public List<ConfigTabPageModel> lConfigTabPage = new List<ConfigTabPageModel>();
 
 
         public void SetIdNullAllClasses()
         {
             //this.idFormularios = null;
             this.objConfigFormUsu.idFormularioUsuario = null;
-            SetIdNullTabPagRecursivo(this.objConfigTabPage);
+            SetIdNullTabPagRecursivo(this.lConfigTabPage);
         }
         public void SetIdUsuario(int idUsuario)
         {
@@ -71,65 +70,79 @@ namespace HLP.Comum.Infrastructure
             {
                 pesq.idUsuario = idUsuario;
             }
-            SetIdUserRecursivo(this.objConfigTabPage, idUsuario);
+            SetIdUserRecursivo(this.lConfigTabPage, idUsuario);
         }
 
 
-        private void SetIdNullTabPagRecursivo(ConfigTabPageModel objTabPage)
+        private void SetIdNullTabPagRecursivo(List<ConfigTabPageModel> lTabPage)
         {
             //objTabPage.idTabPage = null;
             //objTabPage.idTabPagePai = null;
-            objTabPage.objConfigTabPageUsu.idTabPageUsuario = null;
-            foreach (ConfigComponenteModel comp in objTabPage.lConfigComponente)
+            foreach (ConfigTabPageModel objTabPage in lTabPage)
             {
-                //comp.idComponente = null;
-
-                comp.objConfigCompUsu.idComponenteUsuario = null;
-                //comp.objConfigCompUsu.idComponente = null;
-
-                comp.objConfigCompGridUsu.idCompGridUsuario = null;
-                //comp.objConfigCompGridUsu.idComponente = null;
-
-                foreach (ConfigColunasGridModel coluna in comp.lConfigColunasGrid)
+                objTabPage.objConfigTabPageUsu.idTabPageUsuario = null;
+                foreach (ConfigComponenteModel comp in objTabPage.lConfigComponente)
                 {
-                    //coluna.idColunasGrid = null;
-                    coluna.objColunasGridUsu.idColunasGridUsuario = null;
-                }
-            }
+                    //comp.idComponente = null;
 
-            foreach (ConfigTabPageModel tab in objTabPage.lConfigTabPageModel)
-            {
-                SetIdNullTabPagRecursivo(tab);
+                    comp.objConfigCompUsu.idComponenteUsuario = null;
+                    //comp.objConfigCompUsu.idComponente = null;
+
+                    comp.objConfigCompGridUsu.idCompGridUsuario = null;
+                    //comp.objConfigCompGridUsu.idComponente = null;
+
+                    foreach (ConfigColunasGridModel coluna in comp.lConfigColunasGrid)
+                    {
+                        //coluna.idColunasGrid = null;
+                        coluna.objColunasGridUsu.idColunasGridUsuario = null;
+                    }
+                }
+
+                SetIdNullTabPagRecursivo(objTabPage.lConfigTabPageModel);
+                //foreach (ConfigTabPageModel tab in objTabPage.lConfigTabPageModel)
+                //{
+                //    SetIdNullTabPagRecursivo(tab);
+                //}
             }
         }
-        private void SetIdUserRecursivo(ConfigTabPageModel objTabPage, int idUsuario)
+        private void SetIdUserRecursivo(List<ConfigTabPageModel> lTabPage, int idUsuario)
         {
-
-            objTabPage.objConfigTabPageUsu.idUsuario = idUsuario;
-            foreach (ConfigComponenteModel comp in objTabPage.lConfigComponente)
+            foreach (ConfigTabPageModel objTabPage in lTabPage)
             {
-                comp.objConfigCompUsu.idUsuario = idUsuario;
-                comp.objConfigCompGridUsu.idUsuario = idUsuario;
-                comp.objConfigCompUsu.idUsuario = idUsuario;
-
-                foreach (ConfigColunasGridModel coluna in comp.lConfigColunasGrid)
+                objTabPage.objConfigTabPageUsu.idUsuario = idUsuario;
+                foreach (ConfigComponenteModel comp in objTabPage.lConfigComponente)
                 {
-                    coluna.objColunasGridUsu.idUsuario = idUsuario;
-                }
-            }
+                    comp.objConfigCompUsu.idUsuario = idUsuario;
+                    comp.objConfigCompGridUsu.idUsuario = idUsuario;
+                    comp.objConfigCompUsu.idUsuario = idUsuario;
 
-            foreach (ConfigTabPageModel tab in objTabPage.lConfigTabPageModel)
-            {
-                SetIdUserRecursivo(tab, idUsuario);
+                    foreach (ConfigColunasGridModel coluna in comp.lConfigColunasGrid)
+                    {
+                        coluna.objColunasGridUsu.idUsuario = idUsuario;
+                    }
+                }
+
+                SetIdUserRecursivo(objTabPage.lConfigTabPageModel, idUsuario);
+                //foreach (ConfigTabPageModel tab in objTabPage.lConfigTabPageModel)
+                //{
+                //    SetIdUserRecursivo(tab, idUsuario);
+                //}
             }
         }
-        private void SetPropertyTabPageRecursivo(ConfigTabPageModel objConfigTab, string sProperty, object value)
+        private void SetPropertyTabPageRecursivo(List<ConfigTabPageModel> lConfigTab, string sProperty, object value)
         {
-            (objConfigTab as object).SetPropertyValue(sProperty, value);
-
-            foreach (ConfigTabPageModel item in objConfigTab.lConfigTabPageModel)
+            foreach (ConfigTabPageModel objConfigTab in lConfigTab)
             {
-                SetPropertyTabPageRecursivo(item, sProperty, value);
+                (objConfigTab as object).SetPropertyValue(sProperty, value);
+
+                if (objConfigTab.lConfigTabPageModel != null)
+                {
+                    SetPropertyTabPageRecursivo(objConfigTab.lConfigTabPageModel, sProperty, value);
+                }
+                //foreach (ConfigTabPageModel item in objConfigTab.lConfigTabPageModel)
+                //{
+                //    SetPropertyTabPageRecursivo(item, sProperty, value);
+                //}
             }
         }
     }
@@ -156,7 +169,6 @@ namespace HLP.Comum.Infrastructure
         public byte stAcesso { get; set; }
 
     }
-
 
     public class CONFIG_PesquisaModel
     {
@@ -290,7 +302,6 @@ namespace HLP.Comum.Infrastructure
         public List<ConfigColunasGridModel> lConfigColunasGrid = new List<ConfigColunasGridModel>();
     }
 
-
     public class ConfigComponenteUsuModel
     {
         [ParameterOrder(Order = 1)]
@@ -323,6 +334,10 @@ namespace HLP.Comum.Infrastructure
         public int? idComponente { get; set; }
         [ParameterOrder(Order = 15)]
         public int? idUsuario { get; set; }
+        [ParameterOrder(Order = 16)]
+        public string xDisplayMember { get; set; }
+        [ParameterOrder(Order = 17)]
+        public int iTamanhoComponente { get; set; }
 
 
     }
@@ -381,9 +396,11 @@ namespace HLP.Comum.Infrastructure
         [ParameterOrder(Order = 3)]
         public byte? stVisible { get; set; }
         [ParameterOrder(Order = 4)]
-        public decimal? nMaxLength { 
-            get; 
-            set; }
+        public decimal? nMaxLength
+        {
+            get;
+            set;
+        }
         [ParameterOrder(Order = 5)]
         public int? nDecimalPlaces { get; set; }
         [ParameterOrder(Order = 6)]

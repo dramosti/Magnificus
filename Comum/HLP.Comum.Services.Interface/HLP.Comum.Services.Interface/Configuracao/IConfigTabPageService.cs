@@ -13,9 +13,15 @@ namespace HLP.Comum.Services.Interface.Configuracao
         List<TabPage> lTabPageControl { get; set; }
         List<ConfigTabPageModel> lTabPageModel { get; set; }
         void Save(ConfigTabPageModel tabPage);
-        void GetInfoTabPagesRecursiovo(Control.ControlCollection lControles, ConfigTabPageModel objConfigTabPagePai, List<Control> lControl);
-        ConfigTabPageModel GetTabPageByForm(int idFormulario, int idUsuario);
+        void GetInfoTabPagesRecursiovo(Control.ControlCollection lControles, List<ConfigTabPageModel> lConfigTabPage, List<Control> lControl);
+        /// <summary>
+        /// Busca informações da TabPage da Base de Dados
+        /// </summary>
+        /// <param name="idFormulario"></param>
+        /// <param name="idUsuario"></param>
+        /// <returns></returns>
+        List<ConfigTabPageModel> GetTabPageByForm(int idFormulario, int idUsuario);
         void GetTabPageRecursivo(ConfigTabPageModel objTabPage, int idUsuario);
-        void SetConfigToTabPagesRecursivo(ConfigTabPageModel objTabPage, List<Control> lControl);
+        void SetConfigToTabPagesRecursivo(List<ConfigTabPageModel> objTabPage, List<Control> lControl);
     }
 }

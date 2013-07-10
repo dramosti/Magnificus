@@ -32,9 +32,9 @@ namespace HLP.Comum.Components
         }
         [Category("HLP")]
         [Description("Tamanho do Componente.")]
-        public int _TamanhoComponente
+        public int _TamanhoComponente   
         {
-            get { return controleBase.Width; }
+            get { return this.Width - lblBase.Width; }
             set
             {
                 this.Width = lblBase.Width + value;
@@ -154,13 +154,7 @@ namespace HLP.Comum.Components
         {
             try
             {
-                // objEventosForm.ValidaTodosComponentesPesquisa();
-                //foreach (KryptonDataGridView dgv in layoutService.lKryptonDataGridView)
-                //{
-                //    dgv.EndEdit();
-                //}
-
-
+                
                 HLP_MaskedTextBox maskIE = null;
                 Regex reg = null;
                 Control firstControl = null;

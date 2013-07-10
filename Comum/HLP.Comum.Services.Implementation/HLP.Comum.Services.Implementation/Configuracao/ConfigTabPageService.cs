@@ -31,31 +31,60 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             iTabPageRepository.Save(tabPage);
         }
 
-        public void GetInfoTabPagesRecursiovo(Control.ControlCollection lControles, ConfigTabPageModel objConfigTabPagePai, List<Control> lControl)
+        //public void GetInfoTabPagesRecursiovo(Control.ControlCollection lControles, ConfigTabPageModel objConfigTabPagePai, List<Control> lControl)
+        //{
+        //    foreach (Control ctr in lControles)
+        //    {
+        //        if (ctr.GetType() == typeof(TabPage))
+        //        {
+        //            //Verificação para desconciderar o objteto inicial que é HLP, e carregar a primeira TAB .
+        //            if (objConfigTabPagePai.xNameTab.Equals("HLP"))
+        //            {
+        //                this.GetInfoTabPage(ctr, objConfigTabPagePai);
+        //                iComponenteService.GetInfoCompByTabePage(objConfigTabPagePai, lControl);
+        //                GetInfoTabPagesRecursiovo(ctr.Controls, objConfigTabPagePai, lControl);
+        //            }
+        //            else
+        //            {
+        //                ConfigTabPageModel tab = new ConfigTabPageModel();
+        //                this.GetInfoTabPage(ctr, tab);
+        //                iComponenteService.GetInfoCompByTabePage(tab, lControl);
+        //                objConfigTabPagePai.lConfigTabPageModel.Add(tab);
+        //                GetInfoTabPagesRecursiovo(ctr.Controls, tab, lControl);
+        //            }
+        //        }
+        //        else if (ctr.HasChildren)
+        //        {
+        //            GetInfoTabPagesRecursiovo(ctr.Controls, objConfigTabPagePai, lControl);
+        //        }
+        //    }
+        //}
+
+        public void GetInfoTabPagesRecursiovo(Control.ControlCollection lControles, List<ConfigTabPageModel> lConfigTab, List<Control> lControl)
         {
             foreach (Control ctr in lControles)
             {
                 if (ctr.GetType() == typeof(TabPage))
                 {
                     //Verificação para desconciderar o objteto inicial que é HLP, e carregar a primeira TAB .
-                    if (objConfigTabPagePai.xNameTab.Equals("HLP"))
+                    //if (lConfigTab.xNameTab.Equals("HLP"))
+                    //{
+                    //    this.GetInfoTabPage(ctr, lConfigTab);
+                    //    iComponenteService.GetInfoCompByTabePage(lConfigTab, lControl);
+                    //    GetInfoTabPagesRecursiovo(ctr.Controls, lConfigTab, lControl);
+                    //}
+                    //else
                     {
-                        this.GetInfoTabPage(ctr, objConfigTabPagePai);
-                        iComponenteService.GetInfoCompByTabePage(objConfigTabPagePai, lControl);
-                        GetInfoTabPagesRecursiovo(ctr.Controls, objConfigTabPagePai, lControl);
-                    }
-                    else
-                    {
-                        ConfigTabPageModel tab = new ConfigTabPageModel();
+                        ConfigTabPageModel tab = new ConfigTabPageModel();                        
                         this.GetInfoTabPage(ctr, tab);
                         iComponenteService.GetInfoCompByTabePage(tab, lControl);
-                        objConfigTabPagePai.lConfigTabPageModel.Add(tab);
-                        GetInfoTabPagesRecursiovo(ctr.Controls, tab, lControl);
+                        lConfigTab.Add(tab);
+                        GetInfoTabPagesRecursiovo(ctr.Controls, tab.lConfigTabPageModel, lControl);
                     }
                 }
                 else if (ctr.HasChildren)
                 {
-                    GetInfoTabPagesRecursiovo(ctr.Controls, objConfigTabPagePai, lControl);
+                    GetInfoTabPagesRecursiovo(ctr.Controls, lConfigTab, lControl);
                 }
             }
         }
@@ -79,14 +108,20 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             lTabPageControl.Add(ctr as TabPage);
         }
 
-        public ConfigTabPageModel GetTabPageByForm(int idFormulario, int idUsuario)
+        /// <summary>
+        /// Busca informações da TabPage da Base de Dados
+        /// </summary>
+        /// <param name="idFormulario"></param>
+        /// <param name="idUsuario"></param>
+        /// <returns></returns>
+        public List<ConfigTabPageModel> GetTabPageByForm(int idFormulario, int idUsuario)
         {
-            ConfigTabPageModel objConfigTabPage = iTabPageRepository.GetTabPageByForm(idFormulario, idUsuario);
+            List<ConfigTabPageModel> objConfigTabPage = iTabPageRepository.GetTabPagesByForm(idFormulario, idUsuario);
 
-            this.GetTabPageRecursivo(objConfigTabPage, idUsuario);
-
-
-
+            foreach (ConfigTabPageModel tab in objConfigTabPage)
+            {
+                this.GetTabPageRecursivo(tab, idUsuario);
+            }
             return objConfigTabPage;
         }
 
@@ -110,27 +145,30 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
         }
 
-        public void SetConfigToTabPagesRecursivo(ConfigTabPageModel objTabPage, List<Control> lControl)
+        public void SetConfigToTabPagesRecursivo(List<ConfigTabPageModel> lTabPage, List<Control> lControl)
         {
             try
             {
-                TabPage tab = lTabPageControl.FirstOrDefault(c => c.Name == objTabPage.xNameTab);
-                //Configura TabPage
-                tab.Text = Util.ToUpperFirstLetter(objTabPage.objConfigTabPageUsu.xTabPage);
-                tab.ToolTipText = Util.ToUpperFirstLetter(objTabPage.objConfigTabPageUsu.xHelp);
-
-                //Busca o maior label
-                TabPage Tab = lTabPageControl.FirstOrDefault(c => c.Name == objTabPage.xNameTab);
-                //Configura Componentes;
-                iComponenteService.SetConfigToComp(objTabPage.lConfigComponente, lControl);
-
-                iComponenteService.SetTamanhoComponentes(tab);
-
-                if (objTabPage.lConfigTabPageModel.Count() > 0)
+                foreach (ConfigTabPageModel objTabPage in lTabPage)
                 {
-                    foreach (ConfigTabPageModel objtab in objTabPage.lConfigTabPageModel)
+                    TabPage tab = lTabPageControl.FirstOrDefault(c => c.Name == objTabPage.xNameTab);
+                    //Configura TabPage
+                    tab.Text = Util.ToUpperFirstLetter(objTabPage.objConfigTabPageUsu.xTabPage);
+                    tab.ToolTipText = Util.ToUpperFirstLetter(objTabPage.objConfigTabPageUsu.xHelp);
+
+                    //Busca o maior label
+                    TabPage Tab = lTabPageControl.FirstOrDefault(c => c.Name == objTabPage.xNameTab);
+                    //Configura Componentes;
+                    iComponenteService.SetConfigToComp(objTabPage.lConfigComponente, lControl);
+
+                    iComponenteService.SetTamanhoComponentes(tab);
+
+                    if (objTabPage.lConfigTabPageModel.Count() > 0)
                     {
-                        SetConfigToTabPagesRecursivo(objtab, lControl);
+                        SetConfigToTabPagesRecursivo(objTabPage.lConfigTabPageModel, lControl);
+                        //foreach (ConfigTabPageModel objtab in objTabPage.lConfigTabPageModel)
+                        //{
+                        //}
                     }
                 }
             }

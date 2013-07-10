@@ -11,6 +11,6 @@ namespace HLP.Comum.Repository.Interfaces.Configuracao
         void Save(ConfigTabPageModel tabPage);
         List<ConfigTabPageModel> GetListTabPage(ConfigTabPageModel objTabPage, int idUsuario);
         ConfigTabPageUsuModel GetConfigTabPageUsu(int idTabPage, int idUsuario);
-        ConfigTabPageModel GetTabPageByForm(int idFormulario, int idUsuario);
+        List<ConfigTabPageModel> GetTabPagesByForm(int idFormulario, int idUsuario);
     }
 }

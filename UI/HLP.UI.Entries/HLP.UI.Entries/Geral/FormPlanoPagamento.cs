@@ -464,6 +464,8 @@ namespace HLP.UI.Entries.Geral
                 dgvLinhaPagamento.HLP_Refresh();
             });
 
+
+            
         }
 
         private void hlP_Button1__btnHlpClick(object sender, EventArgs e)

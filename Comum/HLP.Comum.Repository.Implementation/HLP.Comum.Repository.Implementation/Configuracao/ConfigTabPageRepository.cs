@@ -63,15 +63,15 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
             }
         }
 
-        public ConfigTabPageModel GetTabPageByForm(int idFormulario, int idUsuario)
+        public List<ConfigTabPageModel> GetTabPagesByForm(int idFormulario, int idUsuario)
         {
-            ConfigTabPageModel objTabPageRet = null;
+            List<ConfigTabPageModel> lTabPageRet = null;
 
             DataAccessor<ConfigTabPageModel> TabPageAcessor = UndTrabalho.dbPrincipal.CreateSprocAccessor("dbo.Proc_sel_CONFIG_TabPage_First",
                 new Parameters(UndTrabalho.dbPrincipal).AddParameter<int>("idFormulario"),
                 MapBuilder<ConfigTabPageModel>.MapAllProperties().Build());
-            objTabPageRet = TabPageAcessor.Execute(idFormulario).FirstOrDefault();
-            return objTabPageRet;
+            lTabPageRet = TabPageAcessor.Execute(idFormulario).ToList();
+            return lTabPageRet;
         }
 
         public List<ConfigTabPageModel> GetListTabPage(ConfigTabPageModel objTabPage, int idUsuario)

@@ -277,17 +277,8 @@ namespace HLP.Comum.UI.Metodos
                 {
                     sql.Add("Ativo = 1");
                 }
-
-                //if (sWhere != "")
-                //{
-                //    sql.Add(sWhere);
-                //}
-
                 List<ConfigComponenteModel> lobjConfigComp = iConfigFormulario.objConfigFormularioModel.lobjConfigComponente.Where(c => c.xTypeComp == typeof(HLP_DataGridView).Name).ToList();
-                //List<ConfigComponenteModel> lobjConfigComp = iConfigFormulario.objConfigFormularioModel.lobjConfigComponente.ToList();
-
                 ConfigColunasGridModel objGridColumn = lobjConfigComp.FirstOrDefault(c => c.xName == column.DataGridView.Name).lConfigColunasGrid.FirstOrDefault(col => col.xDataPropertyName == column.DataPropertyName);
-
                 if (objGridColumn != null)
                 {
                     if (!String.IsNullOrEmpty(objGridColumn.objColunasGridUsu.xDisplayMember))

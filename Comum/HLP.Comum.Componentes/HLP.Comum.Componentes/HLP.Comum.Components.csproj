@@ -102,6 +102,12 @@
     <Compile Include="HLP_ListBox.Designer.cs">
       <DependentUpon>HLP_ListBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="HLP_ListBox2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HLP_ListBox2.Designer.cs">
+      <DependentUpon>HLP_ListBox2.cs</DependentUpon>
+    </Compile>
     <Compile Include="HLP_MaskedTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HLP_ListBox.resx">
       <DependentUpon>HLP_ListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HLP_ListBox2.resx">
+      <DependentUpon>HLP_ListBox2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HLP_MaskedTextBox.resx">
       <DependentUpon>HLP_MaskedTextBox.cs</DependentUpon>
