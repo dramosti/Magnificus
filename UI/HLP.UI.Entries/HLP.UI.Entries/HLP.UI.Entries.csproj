@@ -67,6 +67,8 @@
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -453,6 +455,10 @@
       <Project>{6C138179-2C79-4535-9C3C-E78C529D3598}</Project>
       <Name>HLP.Dependencies</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\HLP.Comum.Ws\HLP.Comum.Ws.csproj">
+      <Project>{799b4d10-77a7-44dd-8cd8-20a36f7e393a}</Project>
+      <Name>HLP.Comum.Ws</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Models\HLP.Models\HLP.Models.Entries.csproj">
       <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
       <Name>HLP.Models.Entries</Name>
@@ -653,6 +659,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_fornecedor_arquivoModel.datasource" />
     <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_fornecedor_contatoModel.datasource" />
     <None Include="Properties\DataSources\HLP.Models.Entries.Comercial.Cliente_fornecedor_EnderecoModel.datasource" />
@@ -704,6 +711,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Geral\Estoque\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

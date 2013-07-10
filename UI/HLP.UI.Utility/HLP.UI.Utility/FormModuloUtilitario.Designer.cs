@@ -33,6 +33,7 @@
             this.FormConfigBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormConfigRelatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormSelecionaRelatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formAtualizacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,8 @@
             this.FormConfigAcessoToolStripMenuItem,
             this.FormConfigBaseToolStripMenuItem,
             this.FormConfigRelatorioToolStripMenuItem,
-            this.FormSelecionaRelatorioToolStripMenuItem});
+            this.FormSelecionaRelatorioToolStripMenuItem,
+            this.formAtualizacaoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(779, 24);
@@ -77,6 +79,12 @@
             this.FormSelecionaRelatorioToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.FormSelecionaRelatorioToolStripMenuItem.Text = "Relatórios";
             // 
+            // formAtualizacaoToolStripMenuItem
+            // 
+            this.formAtualizacaoToolStripMenuItem.Name = "formAtualizacaoToolStripMenuItem";
+            this.formAtualizacaoToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.formAtualizacaoToolStripMenuItem.Text = "Atualização";
+            // 
             // FormModuloUtilitario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -99,5 +107,6 @@
         private System.Windows.Forms.ToolStripMenuItem FormConfigBaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FormConfigRelatorioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FormSelecionaRelatorioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formAtualizacaoToolStripMenuItem;
     }
 }

@@ -221,7 +221,7 @@ namespace HLP.Comum.Modules
             foreach (Modulo m in lModulo)
             {
 
-                if (m.NomeModulo != "Utilitários" && m.NomeModulo != "Magnificus")
+                if (m.NomeModulo != "Utilitarios" && m.NomeModulo != "Magnificus")
                 {
                     //  lFormularios = m.MontaListFormularios();
                 }

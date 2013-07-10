@@ -80,6 +80,7 @@
     <Compile Include="Gerais\IFuncionario_Comissao_ProdutoService.cs" />
     <Compile Include="Gerais\IFuncionario_EnderecoService.cs" />
     <Compile Include="Gerais\IFuncionario_Margem_Lucro_ComissaoService.cs" />
+    <Compile Include="Gerais\ILog_ScriptsService.cs" />
     <Compile Include="Gerais\IModos_entregaService.cs" />
     <Compile Include="Gerais\IMoedaService.cs" />
     <Compile Include="Comercial\IMultasService.cs" />

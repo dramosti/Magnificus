@@ -60,6 +60,7 @@
     <Compile Include="ParameterOrder.cs" />
     <Compile Include="Parameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroWindows.cs" />
     <Compile Include="SerializeClassToXml.cs" />
     <Compile Include="UnitOfWorkBase.cs" />
   </ItemGroup>

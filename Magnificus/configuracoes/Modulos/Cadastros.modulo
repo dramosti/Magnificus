@@ -156,6 +156,7 @@ type="HLP.UI.Entries.Geral.FormEmpresa, HLP.UI.Entries">
 </object>
   <object id="FormAcesso" name="FormAcesso" singleton="false" scope="request"
   type="HLP.UI.Entries.Geral.FormAcesso, HLP.UI.Entries">
-  </object>
+  </object> 
+  
   
 </objects>

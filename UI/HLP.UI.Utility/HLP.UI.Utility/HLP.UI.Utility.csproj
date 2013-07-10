@@ -62,6 +62,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formAtualizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAtualizacao.Designer.cs">
+      <DependentUpon>formAtualizacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConfigBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +90,11 @@
       <DependentUpon>FormModuloUtilitario.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Comum\HLP.Comum.Componentes\HLP.Comum.Componentes\HLP.Comum.Components.csproj">
@@ -113,6 +125,10 @@
       <Project>{6C138179-2C79-4535-9C3C-E78C529D3598}</Project>
       <Name>HLP.Dependencies</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\HLP.Comum.Ws\HLP.Comum.Ws.csproj">
+      <Project>{799b4d10-77a7-44dd-8cd8-20a36f7e393a}</Project>
+      <Name>HLP.Comum.Ws</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Models\HLP.Models\HLP.Models.Entries.csproj">
       <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
       <Name>HLP.Models.Entries</Name>
@@ -125,8 +141,15 @@
       <Project>{997E026A-B1F2-45AB-AE1C-0EC6AD2E034D}</Project>
       <Name>HLP.Services.Interfaces.Entries</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\HLP.UI.Entries\HLP.UI.Entries\HLP.UI.Entries.csproj">
+      <Project>{dd2aa02e-c130-4165-bba2-ccfe554991e0}</Project>
+      <Name>HLP.UI.Entries</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="formAtualizacao.resx">
+      <DependentUpon>formAtualizacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConfigBase.resx">
       <DependentUpon>FormConfigBase.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -134,6 +157,13 @@
     <EmbeddedResource Include="FormModuloUtilitario.resx">
       <DependentUpon>FormModuloUtilitario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

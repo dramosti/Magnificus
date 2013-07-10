@@ -54,6 +54,7 @@
       <HintPath>..\..\Comum\HLP.Comum.Infrastructure\NInject\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
@@ -93,6 +94,7 @@
     <Compile Include="Gerais\Funcionario_Comissao_ProdutoRepository.cs" />
     <Compile Include="Gerais\Funcionario_EnderecoRepository.cs" />
     <Compile Include="Gerais\Funcionario_Margem_LucroComissaoRepository.cs" />
+    <Compile Include="Gerais\Log_ScriptsRepository.cs" />
     <Compile Include="Gerais\Modos_entregaRepository.cs" />
     <Compile Include="Gerais\MoedaRepository.cs" />
     <Compile Include="Comercial\MultasRepository.cs" />

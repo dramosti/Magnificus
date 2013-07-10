@@ -15,6 +15,11 @@ using HLP.Comum.Modules;
 using HLP.Comum.Modules.Infrastructure;
 using HLP.Comum.Modules.Interface;
 using HLP.Comum.UI.Exception;
+using HLP.Comum.Ws;
+using System.Reflection;
+using System.Diagnostics;
+using System.Drawing;
+using Microsoft.Win32;
 
 namespace Magnificus
 {
@@ -25,8 +30,12 @@ namespace Magnificus
         UserBasicConfig userBasicConfig = new UserBasicConfig();
         ApplicationDeployment ad;
         FormInformacao frm = null;
+        servicos objServicos = new servicos();
+        MethodInfo setStatusBar = null;
+        object[] mParam = null;
         bool bLoad = true;
         private int _cacheWidth;
+        
 
 
         #region Implementacao do IFormModulo
@@ -190,6 +199,26 @@ namespace Magnificus
                 {
                     lblVersao.Text = "Debug";
                 }
+
+                if (objServicos.ExisteAtualizacao())
+                {
+                    this.SetStatusBar("", Magnificus.Properties.Resources.download_2, "Atualização pronta para ser instalada, clique aqui para instalar.");
+                    IniciaTimer();
+                }
+
+
+                //#region Busca Atualizacao
+                //string sVersao = objServicos.GetUltimaVersao();
+                //if (Application.ProductVersion.ToString().CompareTo(sVersao) == -1)
+                //{
+                //    Type tipo = this.GetType();
+                //    setStatusBar = tipo.GetMethod("SetStatusBar");
+                //    mParam = new object[] { "Baixando versão " + sVersao + "..." };
+                //    setStatusBar.Invoke(this, mParam);
+                //    bw.RunWorkerAsync(sVersao);
+                //}
+
+                //#endregion
 
             }
             catch (Exception ex)
@@ -433,7 +462,7 @@ namespace Magnificus
                         item.Click += new EventHandler(BotaoModulo_Click);
                         ((KryptonButton)item).Values.Image = Magnificus.Properties.Resources.Cadastro;
                     }
-                    else if (item.Text == "Utilitários")
+                    else if (item.Text == "Utilitarios")
                     {
                         item.Click += new EventHandler(BotaoModulo_Click);
                         ((KryptonButton)item).Values.Image = Magnificus.Properties.Resources.Utilitario;
@@ -1172,6 +1201,100 @@ namespace Magnificus
         private void localDeInstalaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HLPMessageBox.ShowAviso(Application.StartupPath);
+        }
+
+        public void SetStatusBar(string vValor, Bitmap iBmp, string vDetalhe)
+        {
+            timer1.Stop();
+            tslblAtualizacao.Visible = true;
+            tslblAtualizacao.Text = vValor;
+            if (iBmp != null)
+                tslblAtualizacao.Image = iBmp;
+            else
+                tslblAtualizacao.Image = null;
+            tslblAtualizacao.ToolTipText = vDetalhe;
+        }
+
+        private void statusPrincipal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.ToolTipText == null)
+                return;
+
+            if (e.ClickedItem.ToolTipText.Contains("Atualização pronta para ser instalada, clique aqui para instalar."))
+            {
+                if (MessageBox.Show("Aviso: O sistema será fechado para inicio da atualização." + Environment.NewLine
+                    + "Clique Ok para iniciar a atualização ou cancelar para terminar as operações", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+                    == System.Windows.Forms.DialogResult.OK)
+                {
+                    Process p = new Process();
+                    ProcessStartInfo psi = new ProcessStartInfo();
+                    psi.FileName = Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString() +
+                        @"\exeAtualizacao\atualizadorMagnificus.exe";
+                    p.StartInfo = psi;
+                    p.Start();
+                    Application.Exit();
+                }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tslblAtualizacao.Visible = tslblAtualizacao.Visible ? false : true;
+        }
+
+        private void statusPrincipal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void IniciaTimer()
+        {
+            timer1.Interval = 500;
+            timer1.Start();
+        }
+
+        private void statusPrincipal_MouseHover(object sender, EventArgs e)
+        {
+            if(tslblAtualizacao.Image != null)
+            {
+                timer1.Stop();
+                tslblAtualizacao.Visible = true;
+            }
+        }
+
+        private void statusPrincipal_MouseLeave(object sender, EventArgs e)
+        {
+            if (tslblAtualizacao.Image != null)
+            {
+                timer1.Start();
+            }
+        }
+
+        public void IniciaAtualizacao(string vVersao)
+        {
+            if (!bwAtualizacao.IsBusy)
+            {
+                this.SetStatusBar("Baixando versão "+vVersao+"...", null, "");
+                bwAtualizacao.RunWorkerAsync(vVersao);
+            }
+            else
+            {
+                MessageBox.Show("Já está sendo feito download de uma atualização do sistema", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void bwAtualizacao_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            objServicos.downloadArquivo((string)e.Argument);
+        }
+
+        private void bwAtualizacao_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            if (objServicos.getStatus())
+            {
+                this.SetStatusBar("", Magnificus.Properties.Resources.download_2, "Atualização pronta para ser instalada, clique aqui para instalar.");
+                IniciaTimer();
+            }
         }
 
 

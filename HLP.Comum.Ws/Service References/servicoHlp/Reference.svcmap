@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c62e817-593a-4ebb-9b21-4ef9f638014a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Services.xsd" MetadataType="Schema" ID="916b1ad2-0a82-484a-a78e-3991d3de01c6" SourceId="1" SourceUrl="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc?xsd=xsd0" />
+    <MetadataFile FileName="Services.wsdl" MetadataType="Wsdl" ID="c2541342-6ef4-4070-8e76-92302b1d8f38" SourceId="1" SourceUrl="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc?wsdl" />
+    <MetadataFile FileName="Services1.xsd" MetadataType="Schema" ID="cb71033a-6db6-4dca-ba8d-923aeb7ad3dd" SourceId="1" SourceUrl="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc?xsd=xsd2" />
+    <MetadataFile FileName="Services.disco" MetadataType="Disco" ID="933974ee-a509-4f42-a240-9408a898f0fc" SourceId="1" SourceUrl="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc?disco" />
+    <MetadataFile FileName="Services2.xsd" MetadataType="Schema" ID="c1c417cb-081e-4116-8a08-87ced024dd0b" SourceId="1" SourceUrl="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc?xsd=xsd1" />
+    <MetadataFile FileName="Services3.xsd" MetadataType="Schema" ID="9593b30c-2d89-4160-abcb-4b2248ec7844" SourceId="1" SourceUrl="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
