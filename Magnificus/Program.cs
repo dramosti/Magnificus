@@ -9,12 +9,14 @@ using HLP.Comum.UI.Exception;
 using HLP.Comum.Models.Static;
 using System.Runtime.InteropServices;
 using HLP.UI.Utility;
+using System.ComponentModel;
+using HLP.Comum.Infrastructure;
+using Microsoft.Win32;
 
 namespace Magnificus
 {
     static class Program
-    {
-
+    {        
         [DllImport("user32.dll")]
         private static extern int ShowWindow(IntPtr hWnd, int nCmdShow);
         [DllImport("user32.dll")]
@@ -61,14 +63,33 @@ namespace Magnificus
                    
                     if (f.ConnectionActivated)
                     {
+                        FormScripts frmScripts = new FormScripts();
                         formLoginHlp login = new formLoginHlp();
                         login.ShowDialog();
                         if (UserData.bLogado)
                         {
+                            
                             splash = new FormSplash();
                             GerenciadorModulo.Instancia.InicializaSistema<FormModuloMagnificus>(splash.ExibeInformacao, splash.ValoresProgressBar);
                             splash.Close();
                             ServerData.Refresh();
+                            if(frmScripts.ScriptNaoExec())
+                                frmScripts.ShowDialog();
+
+                            if(!RegistroWindows.VerificaRegistro(Registry.CurrentConfig, "magnificus"))
+                            {
+                                try 
+	                            {
+                                    RegistroWindows.CriaRegistro(Registry.CurrentConfig, "magnificus");
+                                    RegistroWindows.SetaValueRegistro(Registry.CurrentConfig, "magnificus", "caminhoPadrao",
+                                            Environment.CurrentDirectory);
+	                            }
+	                            catch (Exception)
+	                            {
+		
+		                            throw;
+	                            }
+                            }
                             Application.Run(GerenciadorModulo.Instancia.FormPrincipal as Form);
                         }
                     }

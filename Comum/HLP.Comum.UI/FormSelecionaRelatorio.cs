@@ -57,7 +57,7 @@ namespace HLP.Comum.UI
                 foreach (Modulo m in lModulo)
                 {
                     //m.bCarregaComponentes = false;
-                    if (m.NomeModulo != "Utilitários" && m.NomeModulo != "Magnificus")
+                    if (m.NomeModulo != "Utilitarios" && m.NomeModulo != "Magnificus")
                     {
                         nodeModulo = new TreeNode();
                         nodeModulo.Text = m.NomeModulo;

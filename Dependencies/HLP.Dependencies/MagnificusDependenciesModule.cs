@@ -147,7 +147,8 @@ namespace HLP.Dependencies
             Bind<ITransportador_ContatoRepository>().To<Transportador_ContatoRepository>();
             Bind<ITransportador_EnderecoRepository>().To<Transportador_EnderecoRepository>();
             Bind<IEmpresa_EnderecoRepository>().To<Empresa_EnderecoRepository>();
-            Bind<IAcessoRepository>().To<AcessoRepository>();            
+            Bind<IAcessoRepository>().To<AcessoRepository>();
+            Bind<ILog_ScriptsRepository>().To<Log_ScriptsRepository>();
 
             #endregion
 
@@ -275,6 +276,7 @@ namespace HLP.Dependencies
             Bind<IFuncionario_ArquivoService>().To<Funcionario_ArquivoService>();
             Bind<IFuncionario_CertificacaoService>().To<Funcionario_CertificacaoService>();
             Bind<IAcessoService>().To<AcessoService>();
+            Bind<ILog_ScriptsService>().To<Log_ScriptsService>();
 
             Bind<ITransportador_VeiculosService>().To<Transportador_VeiculosService>();
             Bind<ITransportador_MotoristaService>().To<Transportador_MotoristaService>();

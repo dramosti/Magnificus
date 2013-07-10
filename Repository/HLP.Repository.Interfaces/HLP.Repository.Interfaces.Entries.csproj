@@ -73,6 +73,7 @@
     <Compile Include="Gerais\IFuncionario_Comissao_ProdutoRepository.cs" />
     <Compile Include="Gerais\IFuncionario_EnderecoRepository.cs" />
     <Compile Include="Gerais\IFuncionario_Margem_Lucro_ComissaoRepository.cs" />
+    <Compile Include="Gerais\ILog_ScriptsRepository.cs" />
     <Compile Include="Gerais\IModos_entregaRepository.cs" />
     <Compile Include="Gerais\IMoedaRepository.cs" />
     <Compile Include="Comercial\IMultasRepository.cs" />

@@ -76,6 +76,7 @@
     <Compile Include="Gerais\Funcionario_Comissao_ProdutoService.cs" />
     <Compile Include="Gerais\Funcionario_EnderecoService.cs" />
     <Compile Include="Gerais\Funcionario_Margem_Lucro_ComissaoService.cs" />
+    <Compile Include="Gerais\Log_ScriptsService.cs" />
     <Compile Include="Gerais\Modos_entregaService.cs" />
     <Compile Include="Gerais\MoedaService.cs" />
     <Compile Include="Comercial\MultasService.cs" />

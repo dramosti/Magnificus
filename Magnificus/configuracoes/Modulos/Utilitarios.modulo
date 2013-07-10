@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
 
-  <object id="ModuloUtilitario" singleton="true" scope="application" name="Utilitários"
+  <object id="ModuloUtilitario" singleton="true" scope="application" name="Utilitarios"
           type="HLP.UI.Utility.FormModuloUtilitario, HLP.UI.Utility">
   </object>
   <object id="FormConfigAcesso" name="FormConfigAcesso" singleton="false" scope="request"
@@ -17,5 +17,8 @@
   </object>
   <object id="FormSelecionaRelatorio" name="FormSelecionaRelatorio" singleton="false" scope="request"
        type="HLP.Comum.UI.FormSelecionaRelatorio, HLP.Comum.UI">
+  </object>
+  <object id="formAtualizacao" name="formAtualizacao" singleton="false" scope="request"
+  type="HLP.UI.Utility.formAtualizacao, HLP.UI.Utility">
   </object>
 </objects>

@@ -76,6 +76,7 @@
             this.FormRamoAtividadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormMoedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FormAcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recursosHumanosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormCargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormSetorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,7 +86,6 @@
             this.FormTransportadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormRotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormModoEntregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FormAcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@
             this.TransportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(572, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(683, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -474,6 +474,12 @@
             this.FormSiteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.FormSiteToolStripMenuItem.Text = "Sites";
             // 
+            // FormAcessoToolStripMenuItem
+            // 
+            this.FormAcessoToolStripMenuItem.Name = "FormAcessoToolStripMenuItem";
+            this.FormAcessoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormAcessoToolStripMenuItem.Text = "Acesso";
+            // 
             // recursosHumanosToolStripMenuItem
             // 
             this.recursosHumanosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -537,17 +543,11 @@
             this.FormModoEntregaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.FormModoEntregaToolStripMenuItem.Text = "Modos de entrega";
             // 
-            // FormAcessoToolStripMenuItem
-            // 
-            this.FormAcessoToolStripMenuItem.Name = "FormAcessoToolStripMenuItem";
-            this.FormAcessoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.FormAcessoToolStripMenuItem.Text = "Acesso";
-            // 
             // FormModuloCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 262);
+            this.ClientSize = new System.Drawing.Size(683, 262);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;

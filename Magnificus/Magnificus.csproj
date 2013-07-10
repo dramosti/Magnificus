@@ -139,6 +139,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -161,11 +162,11 @@
     <Compile Include="FormModuloMagnificus.Designer.cs">
       <DependentUpon>FormModuloMagnificus.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="FormScripts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="FormScripts.Designer.cs">
+      <DependentUpon>FormScripts.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSplash.cs">
       <SubType>Form</SubType>
@@ -193,7 +194,7 @@
       <DependentUpon>HLP_Cadastro_de_Banco.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Content Include="configuracoes\Modulos\Utilitários.modulo">
+    <Content Include="configuracoes\Modulos\Utilitarios.modulo">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Relatorios\HLP_Cadastro_de_Banco.rpt">
@@ -206,6 +207,8 @@
       <LastGenOutput>HLP_Lista_de_Banco.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Log_ScriptsModel.datasource" />
+    <None Include="Resources\download_2.png" />
     <None Include="Magnificus_TemporaryKey.pfx" />
     <None Include="Resources\hlp_bg_2.jpg" />
     <None Include="Resources\hlp_bg.jpg" />
@@ -240,9 +243,8 @@
     <EmbeddedResource Include="FormModuloMagnificus.resx">
       <DependentUpon>FormModuloMagnificus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="FormScripts.resx">
+      <DependentUpon>FormScripts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSplash.resx">
       <DependentUpon>FormSplash.cs</DependentUpon>
@@ -325,6 +327,10 @@
     <ProjectReference Include="..\Dependencies\HLP.Dependencies\HLP.Dependencies.csproj">
       <Project>{6C138179-2C79-4535-9C3C-E78C529D3598}</Project>
       <Name>HLP.Dependencies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Comum.Ws\HLP.Comum.Ws.csproj">
+      <Project>{799b4d10-77a7-44dd-8cd8-20a36f7e393a}</Project>
+      <Name>HLP.Comum.Ws</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\HLP.Models\HLP.Models.Entries.csproj">
       <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>

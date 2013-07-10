@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://hlp.com.br/WebServices/log" elementFormDefault="qualified" targetNamespace="http://hlp.com.br/WebServices/log" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Log">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xFormulario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xAcao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xInner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xDetalhes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Log" nillable="true" type="tns:Log" />
+</xs:schema>

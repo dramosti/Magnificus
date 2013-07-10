@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc?xsd=xsd2" namespace="http://hlp.com.br/WebServices/log" />
+  <xs:import schemaLocation="http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc?xsd=xsd3" namespace="http://hlp.com.br/WebServices/VersoesModel" />
+  <xs:element name="SetLogError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://hlp.com.br/WebServices/log" minOccurs="0" name="log" nillable="true" type="q1:Log" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLogErrorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetLogErrorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersoesMagnificus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersoesMagnificusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://hlp.com.br/WebServices/VersoesModel" minOccurs="0" name="GetVersoesMagnificusResult" nillable="true" type="q2:ArrayOfVersoesModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xVersao" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DownloadFileResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUltimaVersao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUltimaVersaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUltimaVersaoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUltimosScripts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xVersao" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUltimosScriptsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://hlp.com.br/WebServices/VersoesModel" minOccurs="0" name="GetUltimosScriptsResult" nillable="true" type="q3:ArrayOfVersoesModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScripts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xVersao" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScriptsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://hlp.com.br/WebServices/VersoesModel" minOccurs="0" name="GetScriptsResult" nillable="true" type="q4:ArrayOfVersoesModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadScript">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xVersao" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadScriptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DownloadScriptResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScriptVersaoExe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xVersao" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScriptVersaoExeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://hlp.com.br/WebServices/VersoesModel" minOccurs="0" name="GetScriptVersaoExeResult" nillable="true" type="q5:ArrayOfVersoesModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
