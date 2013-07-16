@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormScripts));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.lblStatusScripts = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btnOk = new System.Windows.Forms.Button();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.hlP_DataGridView1 = new HLP.Comum.Components.HLP_DataGridView();
@@ -40,8 +42,7 @@
             this.script = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsAtualizacoes = new System.Windows.Forms.BindingSource(this.components);
             this.bwAtualizacoes = new System.ComponentModel.BackgroundWorker();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.lblStatusScripts = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.bwExecScripts = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -60,6 +61,21 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(540, 51);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // lblStatusScripts
+            // 
+            this.lblStatusScripts.Location = new System.Drawing.Point(12, 28);
+            this.lblStatusScripts.Name = "lblStatusScripts";
+            this.lblStatusScripts.Size = new System.Drawing.Size(88, 20);
+            this.lblStatusScripts.TabIndex = 2;
+            this.lblStatusScripts.Values.Text = "kryptonLabel1";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 6);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(169, 18);
+            this.progressBar1.TabIndex = 1;
             // 
             // btnOk
             // 
@@ -101,8 +117,8 @@
             this.hlP_DataGridView1.Name = "hlP_DataGridView1";
             this.hlP_DataGridView1.ReadOnly = true;
             this.hlP_DataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.hlP_DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.hlP_DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.hlP_DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.hlP_DataGridView1.Size = new System.Drawing.Size(540, 281);
             this.hlP_DataGridView1.TabIndex = 0;
@@ -142,20 +158,10 @@
             this.bwAtualizacoes.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAtualizacoes_DoWork);
             this.bwAtualizacoes.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAtualizacoes_RunWorkerCompleted);
             // 
-            // progressBar1
+            // bwExecScripts
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 6);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(169, 18);
-            this.progressBar1.TabIndex = 1;
-            // 
-            // lblStatusScripts
-            // 
-            this.lblStatusScripts.Location = new System.Drawing.Point(12, 28);
-            this.lblStatusScripts.Name = "lblStatusScripts";
-            this.lblStatusScripts.Size = new System.Drawing.Size(88, 20);
-            this.lblStatusScripts.TabIndex = 2;
-            this.lblStatusScripts.Values.Text = "kryptonLabel1";
+            this.bwExecScripts.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwPorcBackup_DoWork);
+            this.bwExecScripts.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwExecScripts_RunWorkerCompleted);
             // 
             // FormScripts
             // 
@@ -195,5 +201,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn script;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblStatusScripts;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.ComponentModel.BackgroundWorker bwExecScripts;
     }
 }

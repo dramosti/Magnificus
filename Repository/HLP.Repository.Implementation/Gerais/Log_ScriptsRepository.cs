@@ -76,9 +76,25 @@ namespace HLP.Repository.Implementation.Entries.Gerais
             catch (System.Exception ex)
             {
                 return false;
+            }           
+        }
+
+        public void BackupDataBase(string xPath, string xNameBackup)
+        {
+            try
+            {
+                UndTrabalho.BackupDatabase(xPath: xPath, xNameBackup: xNameBackup);
             }
-            
-            
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+        }
+
+        public int RetornaPorcBkp()
+        {
+            return UndTrabalho.pPorcentagem;
         }
     }
 }

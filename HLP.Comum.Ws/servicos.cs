@@ -179,5 +179,10 @@ namespace HLP.Comum.Ws
 
             return false;
         }
+
+        public void BackupBaseSql(string xPath, string xNameBackup)
+        {
+            log_scriptService.Backup(xPath: xPath, xNameBackup: xNameBackup);
+        }
     }
 }

@@ -4,7 +4,6 @@ using System.Configuration;
 using System.Deployment.Application;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Infrastructure;
@@ -24,7 +23,7 @@ using Microsoft.Win32;
 namespace Magnificus
 {
     public partial class FormModuloMagnificus : FormBaseModulo, IFormPrincipal
-    {
+    {        
         List<KryptonButton> listBotoesLaterais = new List<KryptonButton>();
         Modulo modulo = new Modulo();
         UserBasicConfig userBasicConfig = new UserBasicConfig();
@@ -1226,13 +1225,7 @@ namespace Magnificus
                     + "Clique Ok para iniciar a atualização ou cancelar para terminar as operações", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
                     == System.Windows.Forms.DialogResult.OK)
                 {
-                    Process p = new Process();
-                    ProcessStartInfo psi = new ProcessStartInfo();
-                    psi.FileName = Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString() +
-                        @"\exeAtualizacao\atualizadorMagnificus.exe";
-                    p.StartInfo = psi;
-                    p.Start();
-                    Application.Exit();
+                    bwBackup.RunWorkerAsync();                
                 }
             }
         }
@@ -1295,6 +1288,47 @@ namespace Magnificus
                 this.SetStatusBar("", Magnificus.Properties.Resources.download_2, "Atualização pronta para ser instalada, clique aqui para instalar.");
                 IniciaTimer();
             }
+        }
+
+        private void bwBackup_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            Invoke(new MethodInvoker(delegate
+            {
+                this.SetStatusBar("Fazendo backup da base de dados...", null, "");
+            }));
+
+            try
+            {
+                objServicos.BackupBaseSql(xPath: Registry.CurrentConfig.OpenSubKey("magnificus").GetValue("caminhoPadrao").ToString()
+                + @"\backupsbases\bkpExe",
+                xNameBackup: Application.ProductVersion.ToString() + "_" +
+                DateTime.Now.Day + "_" +
+                DateTime.Now.Month + "_" +
+                DateTime.Now.Year + "_" +
+                DateTime.Now.Hour + "_" +
+                DateTime.Now.Minute + "_" +
+                DateTime.Now.Second + ".bak");
+                Invoke(new MethodInvoker(delegate
+                {
+                    this.SetStatusBar("Backup finalizado com sucesso .", null, "");
+                }));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void bwBackup_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            Process p = new Process();
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.FileName = Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString() +
+                @"\exeAtualizacao\atualizadorMagnificus.exe";
+            p.StartInfo = psi;
+            p.Start();
+            Application.Exit();
         }
 
 

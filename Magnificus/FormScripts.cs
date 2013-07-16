@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using HLP.Comum.Ws;
 using System.Threading;
 using HLP.Comum.Models.Static;
+using Microsoft.Win32;
 
 namespace Magnificus
 {
@@ -24,6 +25,7 @@ namespace Magnificus
         servicos objServico = new servicos();
         List<Log_ScriptsModel> lLogScriptsWs = new List<Log_ScriptsModel>();
         List<Log_ScriptsModel> lLogScriptsBd = new List<Log_ScriptsModel>();
+        private int iPorcentagem = 0;
 
 
         public FormScripts()
@@ -106,11 +108,49 @@ namespace Magnificus
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            bwExecScripts.RunWorkerAsync();
+        }
+
+        public bool ScriptNaoExec()
+        {
+            return lLogScriptsBd.Where(l => l.dtExec == null).Count() > 0;
+        }
+
+        private void bwPorcBackup_DoWork(object sender, DoWorkEventArgs e)
+        {
             Log_ScriptsModel objLogScript;
-            progressBar1.Visible = lblStatusScripts.Visible = true;
-            progressBar1.Maximum = lLogScriptsBd.Where(l => l.dtExec == null).Count();
+            Invoke(new MethodInvoker(delegate
+                {
+                    progressBar1.Visible = lblStatusScripts.Visible = true; 
+                    progressBar1.Maximum = lLogScriptsBd.Where(l => l.dtExec == null).Count() + 1;
+                    progressBar1.Value = 0;
+                }));
 
+            Invoke(new MethodInvoker(delegate
+            {
+                lblStatusScripts.Text = "Executando Backup...";
+            }));
+            
+            //bwPorcBackup.RunWorkerAsync(log_scriptService);
 
+            try
+            {
+
+                log_scriptService.Backup(Registry.CurrentConfig.OpenSubKey("magnificus").GetValue("caminhoPadrao").ToString()
+                + @"\backupsbases\bkpScript", "bkp_" + DateTime.Now.Day.ToString() + "_" +
+                DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString() + "_" +
+                DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" +
+                DateTime.Now.Second.ToString() + ".bak");
+                Invoke(new MethodInvoker(delegate
+                {
+                    progressBar1.Value++;
+                }));                
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
             foreach (DataGridViewRow item in hlP_DataGridView1.Rows)
             {
                 if (item.DefaultCellStyle.BackColor == ColorTranslator.FromHtml("#FF6A6A"))
@@ -118,8 +158,12 @@ namespace Magnificus
                     objLogScript = lLogScriptsBd.Where(i => i.xVersao ==
                             hlP_DataGridView1[versao.Name,
                             item.Index].Value.ToString()).FirstOrDefault();
-                    lblStatusScripts.Text = "Executando script " +
+                    Invoke(new MethodInvoker(delegate
+                    {
+                        lblStatusScripts.Text = "Executando script " +
                         hlP_DataGridView1[versao.Name, item.Index].Value.ToString();
+                    }));
+                    
 
                     if (hlP_DataGridView1[script.Name, item.Index].Value == null)
                     {
@@ -127,29 +171,52 @@ namespace Magnificus
                         objServico.getScript(hlP_DataGridView1[versao.Name, item.Index].Value.ToString());
                     }
                     else
-                    {                        
+                    {
                         objLogScript.SetStatusRegistro(HLP.Comum.Infrastructure.BaseModelFilhos.statusRegistroFilho.Alterado);
                     }
 
-
-                    if (log_scriptService.ExecScript(hlP_DataGridView1[script.Name, item.Index].Value.ToString()
-                        ))
+                    try
                     {
-                        item.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C1FFC1"); //cor do tom verde;
-                        objLogScript.idUsuario = UserData.idUser.ToString();
-                        objLogScript.dtExec = DateTime.Now.ToString();
+                        if (log_scriptService.ExecScript(hlP_DataGridView1[script.Name, item.Index].Value.ToString()
+                        ))
+                        {
+                            item.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C1FFC1"); //cor do tom verde;
+                            objLogScript.idUsuario = UserData.idUser.ToString();
+                            objLogScript.dtExec = DateTime.Now.ToString();
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
                     }
                     Thread.Sleep(100);
-                    progressBar1.Value++;
+                    Invoke(new MethodInvoker(delegate
+                    {
+                        progressBar1.Value++;
+                    }));
+                    
                 }
             }
             log_scriptService.Save(lLogScriptsBd);
-            this.Close();
         }
 
-        public bool ScriptNaoExec()
+        private void ControlaPorcBkp(ILog_ScriptsService objLog_ScriptService)
         {
-            return lLogScriptsBd.Where(l => l.dtExec == null).Count() > 0;
+            while (iPorcentagem < 100)
+            {
+                iPorcentagem = objLog_ScriptService.RetornaPorcBkp();
+
+                Invoke( new MethodInvoker(delegate
+                {
+                    progressBar1.Value = iPorcentagem;
+                }));
+            }
+        }
+
+        private void bwExecScripts_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
