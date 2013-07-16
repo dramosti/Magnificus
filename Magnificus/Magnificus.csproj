@@ -67,10 +67,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>03312C19BA3723DB87A9144F3189EB73F48C6D50</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>F864C2B00E7E4BC1D95242E4EB0A04C9BB084996</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Magnificus_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Magnificus_6_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -207,6 +207,7 @@
       <LastGenOutput>HLP_Lista_de_Banco.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Magnificus_6_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Log_ScriptsModel.datasource" />
     <None Include="Resources\download_2.png" />
     <None Include="Magnificus_TemporaryKey.pfx" />

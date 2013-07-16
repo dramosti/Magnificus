@@ -15,5 +15,7 @@ namespace HLP.Repository.Interfaces.Entries.Gerais
         List<Log_ScriptsModel> GetAllLog_Scripts();
         int GetLog_ScriptCount(string xNome);
         bool ExecutaScritp(string sScript);
+        void BackupDataBase(string xPath, string xNameBackup);
+        int RetornaPorcBkp();
     }
 }

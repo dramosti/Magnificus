@@ -5,6 +5,7 @@ using HLP.Services.Interfaces.Entries.Gerais;
 using Ninject;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,5 +56,19 @@ namespace HLP.Services.Implementation.Entries.Gerais
         {
             return _Log_ScriptsRepository.GetLog_ScriptCount(xName);
         }
+
+        public void Backup(string xPath, string xNameBackup)
+        {
+            if (!Directory.Exists(xPath))
+                Directory.CreateDirectory(xPath);
+
+            _Log_ScriptsRepository.BackupDataBase(xPath: xPath, xNameBackup: xNameBackup);
+        }
+
+        public int RetornaPorcBkp()
+        {
+            return _Log_ScriptsRepository.RetornaPorcBkp();
+        }
+
     }
 }

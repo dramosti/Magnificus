@@ -82,7 +82,8 @@ namespace Magnificus
 	                            {
                                     RegistroWindows.CriaRegistro(Registry.CurrentConfig, "magnificus");
                                     RegistroWindows.SetaValueRegistro(Registry.CurrentConfig, "magnificus", "caminhoPadrao",
-                                            Environment.CurrentDirectory);
+                                            Application.StartupPath.Replace(Application.StartupPath.Substring(Application.StartupPath.LastIndexOf('\\')),
+                                            ""));
 	                            }
 	                            catch (Exception)
 	                            {

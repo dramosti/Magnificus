@@ -15,5 +15,7 @@ namespace HLP.Services.Interfaces.Entries.Gerais
         void Update(Log_ScriptsModel objLog_Scripts);
         bool ExecScript(string sScript);
         int GetLog_ScriptCount(string xName);
+        void Backup(string xPath, string xNameBackup);
+        int RetornaPorcBkp();
     }
 }

@@ -10,8 +10,7 @@ using System.Reflection;
 namespace HLP.UI.Utility
 {
     public partial class formAtualizacao : KryptonForm
-    {       
-
+    {
         servicos objServicos = new servicos();
         List<VersoesModel> lVersoes = new List<VersoesModel>();
         MethodInfo iniciaAtualizacao = null;

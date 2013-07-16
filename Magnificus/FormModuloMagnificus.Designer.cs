@@ -85,6 +85,7 @@ namespace Magnificus
             this.cachedHLP_Lista_de_Banco1 = new Magnificus.Relatorios.CachedHLP_Lista_de_Banco();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bwAtualizacao = new System.ComponentModel.BackgroundWorker();
+            this.bwBackup = new System.ComponentModel.BackgroundWorker();
             this.cmRemover.SuspendLayout();
             this.menuPrincipal.SuspendLayout();
             this.statusPrincipal.SuspendLayout();
@@ -698,6 +699,11 @@ namespace Magnificus
             this.bwAtualizacao.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwAtualizacao_DoWork);
             this.bwAtualizacao.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwAtualizacao_RunWorkerCompleted);
             // 
+            // bwBackup
+            // 
+            this.bwBackup.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwBackup_DoWork);
+            this.bwBackup.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwBackup_RunWorkerCompleted);
+            // 
             // FormModuloMagnificus
             // 
             this.AllowFormChrome = false;
@@ -807,6 +813,7 @@ namespace Magnificus
         private System.Windows.Forms.ToolStripStatusLabel tslblAtualizacao;
         private System.Windows.Forms.Timer timer1;
         private BackgroundWorker bwAtualizacao;
+        private BackgroundWorker bwBackup;
 
     }
 }
