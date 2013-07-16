@@ -340,10 +340,10 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                                 {
 
                                     if (objCompModel.xTypeComp == typeof(HLP_NumericUpDown).Name)
-                                    {
-                                        controle.SetPropertyValue("Text", objCompModel.objConfigCompUsu.xText);
+                                    {                                        
                                         controle.SetPropertyValue("Maximum", objCompModel.objConfigCompUsu.nMaxLength);
                                         controle.SetPropertyValue("DecimalPlaces", objCompModel.objConfigCompUsu.nDecimalPlaces);
+                                        controle.SetPropertyValue("Text", objCompModel.objConfigCompUsu.xText);
                                     }
                                     else
                                     {

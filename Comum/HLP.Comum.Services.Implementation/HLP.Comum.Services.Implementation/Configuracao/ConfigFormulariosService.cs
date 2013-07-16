@@ -62,6 +62,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                 // Se estiver sendo debugado, ira salvar a configuração da Tela na Base de Dados com o usuario HLP
                 if (System.Diagnostics.Debugger.IsAttached)
                 {                   
+                        
                     if (iConfigFormulariosRepository.FormularioExistInDataBase(objConfigFormularioModel.xNameFormulario))
                     {
                         iConfigFormulariosRepository.DeleteFormularioUsuario(objConfigFormularioModel.xNameFormulario, UserData.idUserHLP);

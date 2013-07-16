@@ -149,15 +149,40 @@ namespace HLP.Comum.Components
                 _ValueChanged(sender, e);
             }
 
-            if (nud.Value >= nud.Maximum)
+            if (nud.Value > nud.Maximum)
             {
-                (sender as KryptonNumericUpDown).Value = this.old_value;
+                if (nud.Maximum > 0)
+                {
+                    string sValor = "0";
+                    if (this.old_value >= nud.Maximum)
+                    {
+                        this.old_value.ToString().Substring(0, nud.Maximum.ToString().Length);
+                    }
+                    (sender as KryptonNumericUpDown).Value = Convert.ToDecimal(sValor);
+                }
+                else
+                {
+                    (sender as KryptonNumericUpDown).Value = 0;
+                }
             }
             else
             {
                 this.old_value = nud.Value;
+
+
             }
         }
+
+        public event EventHandler _Validated;
+        private void nud_Validated(object sender, EventArgs e)
+        {
+            if (_Validated != null)
+            {
+                _Validated(sender, e);
+            }
+        }
+
+
 
         public event EventHandler _Enter;
         private void nud_Enter(object sender, EventArgs e)

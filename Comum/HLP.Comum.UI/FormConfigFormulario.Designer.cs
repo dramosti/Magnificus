@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node3", new System.Windows.Forms.TreeNode[] {
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node6");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node5", new System.Windows.Forms.TreeNode[] {
-            treeNode13});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node3", new System.Windows.Forms.TreeNode[] {
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node6");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node5", new System.Windows.Forms.TreeNode[] {
+            treeNode6});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConfigFormulario));
             this.headerConfig = new ComponentFactory.Krypton.Toolkit.KryptonHeader();
             this.TreeFormulario = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
@@ -53,6 +53,9 @@
             this.kryptonHeader3 = new ComponentFactory.Krypton.Toolkit.KryptonHeader();
             this.panel1 = new System.Windows.Forms.Panel();
             this.FlowConfig = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonHeader2 = new ComponentFactory.Krypton.Toolkit.KryptonHeader();
+            this.panelDesign = new System.Windows.Forms.Panel();
+            this.infoFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtHelp = new HLP.Comum.Components.HLP_TextBox();
             this.txtLabelText = new HLP.Comum.Components.HLP_TextBox();
             this.nudDecimalPlaces = new HLP.Comum.Components.HLP_NumericUpDown();
@@ -63,9 +66,6 @@
             this.btnValorPadrao = new HLP.Comum.Components.HLP_Button();
             this.btnCor = new HLP.Comum.Components.HLP_Button();
             this.listDisplay = new HLP.Comum.Components.HLP_ListBox2();
-            this.kryptonHeader2 = new ComponentFactory.Krypton.Toolkit.KryptonHeader();
-            this.panelDesign = new System.Windows.Forms.Panel();
-            this.infoFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2)).BeginInit();
@@ -116,24 +116,24 @@
             this.TreeFormulario.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorOverflow;
             this.TreeFormulario.Location = new System.Drawing.Point(0, 0);
             this.TreeFormulario.Name = "TreeFormulario";
-            treeNode8.Name = "Node0";
-            treeNode8.Text = "Node0";
-            treeNode9.Name = "Node2";
-            treeNode9.Text = "Node2";
-            treeNode10.Name = "Node4";
-            treeNode10.Text = "Node4";
-            treeNode11.Name = "Node3";
-            treeNode11.Text = "Node3";
-            treeNode12.Name = "Node1";
-            treeNode12.Text = "Node1";
-            treeNode13.Name = "Node6";
-            treeNode13.Text = "Node6";
-            treeNode14.Name = "Node5";
-            treeNode14.Text = "Node5";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Node0";
+            treeNode2.Name = "Node2";
+            treeNode2.Text = "Node2";
+            treeNode3.Name = "Node4";
+            treeNode3.Text = "Node4";
+            treeNode4.Name = "Node3";
+            treeNode4.Text = "Node3";
+            treeNode5.Name = "Node1";
+            treeNode5.Text = "Node1";
+            treeNode6.Name = "Node6";
+            treeNode6.Text = "Node6";
+            treeNode7.Name = "Node5";
+            treeNode7.Text = "Node5";
             this.TreeFormulario.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode12,
-            treeNode14});
+            treeNode1,
+            treeNode5,
+            treeNode7});
             this.TreeFormulario.SelectedImageIndex = 0;
             this.TreeFormulario.ShowNodeToolTips = true;
             this.TreeFormulario.Size = new System.Drawing.Size(315, 478);
@@ -289,6 +289,30 @@
             this.FlowConfig.Size = new System.Drawing.Size(609, 365);
             this.FlowConfig.TabIndex = 3;
             // 
+            // kryptonHeader2
+            // 
+            this.kryptonHeader2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonHeader2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonHeader2.Name = "kryptonHeader2";
+            this.kryptonHeader2.Size = new System.Drawing.Size(609, 31);
+            this.kryptonHeader2.TabIndex = 2;
+            this.kryptonHeader2.Values.Description = "";
+            this.kryptonHeader2.Values.Heading = "Propriedades";
+            // 
+            // panelDesign
+            // 
+            this.panelDesign.BackColor = System.Drawing.Color.Transparent;
+            this.panelDesign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDesign.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesign.Location = new System.Drawing.Point(0, 0);
+            this.panelDesign.Name = "panelDesign";
+            this.panelDesign.Size = new System.Drawing.Size(894, 77);
+            this.panelDesign.TabIndex = 12;
+            // 
+            // infoFieldBindingSource
+            // 
+            this.infoFieldBindingSource.DataSource = typeof(HLP.Comum.Models.InfoField);
+            // 
             // txtHelp
             // 
             this.txtHelp._LabelGroup = null;
@@ -297,7 +321,7 @@
             this.txtHelp._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.txtHelp._Password = false;
             this.txtHelp._Regex = null;
-            this.txtHelp._TamanhoComponente = 418;
+            this.txtHelp._TamanhoComponente = 600;
             this.txtHelp._TamanhoMaiorLabel = 142;
             this.txtHelp._Visible = false;
             this.txtHelp.BackColor = System.Drawing.Color.Transparent;
@@ -306,10 +330,10 @@
             this.txtHelp.Color = System.Drawing.Color.White;
             this.txtHelp.Location = new System.Drawing.Point(114, 3);
             this.txtHelp.Margin = new System.Windows.Forms.Padding(114, 3, 15, 3);
-            this.txtHelp.MaxLength = 32767;
+            this.txtHelp.MaxLength = 5000;
             this.txtHelp.Name = "txtHelp";
             this.txtHelp.ReadOnly = false;
-            this.txtHelp.Size = new System.Drawing.Size(449, 19);
+            this.txtHelp.Size = new System.Drawing.Size(631, 19);
             this.txtHelp.TabIndex = 0;
             this.txtHelp.Tag = "_Help";
             this.txtHelp._TextChanged += new System.EventHandler(this.Componentes__TextChanged);
@@ -322,7 +346,7 @@
             this.txtLabelText._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.txtLabelText._Password = false;
             this.txtLabelText._Regex = null;
-            this.txtLabelText._TamanhoComponente = 418;
+            this.txtLabelText._TamanhoComponente = 600;
             this.txtLabelText._TamanhoMaiorLabel = 142;
             this.txtLabelText._Visible = false;
             this.txtLabelText.BackColor = System.Drawing.Color.Transparent;
@@ -331,10 +355,10 @@
             this.txtLabelText.Color = System.Drawing.Color.White;
             this.txtLabelText.Location = new System.Drawing.Point(66, 28);
             this.txtLabelText.Margin = new System.Windows.Forms.Padding(66, 3, 15, 3);
-            this.txtLabelText.MaxLength = 32767;
+            this.txtLabelText.MaxLength = 500;
             this.txtLabelText.Name = "txtLabelText";
             this.txtLabelText.ReadOnly = false;
-            this.txtLabelText.Size = new System.Drawing.Size(497, 19);
+            this.txtLabelText.Size = new System.Drawing.Size(679, 19);
             this.txtLabelText.TabIndex = 1;
             this.txtLabelText.Tag = "_LabelText";
             this.txtLabelText._TextChanged += new System.EventHandler(this.Componentes__TextChanged);
@@ -542,35 +566,11 @@
             this.listDisplay.Base = null;
             this.listDisplay.HeaderGroup1 = "Possibilidades";
             this.listDisplay.HeaderGroup2 = "Itens selecionados";
-            this.listDisplay.Location = new System.Drawing.Point(101, 248);
+            this.listDisplay.Location = new System.Drawing.Point(861, 3);
             this.listDisplay.Margin = new System.Windows.Forms.Padding(101, 3, 15, 3);
             this.listDisplay.Name = "listDisplay";
             this.listDisplay.Size = new System.Drawing.Size(351, 108);
             this.listDisplay.TabIndex = 9;
-            // 
-            // kryptonHeader2
-            // 
-            this.kryptonHeader2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonHeader2.Location = new System.Drawing.Point(0, 0);
-            this.kryptonHeader2.Name = "kryptonHeader2";
-            this.kryptonHeader2.Size = new System.Drawing.Size(609, 31);
-            this.kryptonHeader2.TabIndex = 2;
-            this.kryptonHeader2.Values.Description = "";
-            this.kryptonHeader2.Values.Heading = "Propriedades";
-            // 
-            // panelDesign
-            // 
-            this.panelDesign.BackColor = System.Drawing.Color.Transparent;
-            this.panelDesign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDesign.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesign.Location = new System.Drawing.Point(0, 0);
-            this.panelDesign.Name = "panelDesign";
-            this.panelDesign.Size = new System.Drawing.Size(894, 77);
-            this.panelDesign.TabIndex = 12;
-            // 
-            // infoFieldBindingSource
-            // 
-            this.infoFieldBindingSource.DataSource = typeof(HLP.Comum.Models.InfoField);
             // 
             // FormConfigFormulario
             // 

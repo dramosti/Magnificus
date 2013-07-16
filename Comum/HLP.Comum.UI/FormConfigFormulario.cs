@@ -27,12 +27,11 @@ namespace HLP.Comum.UI
         ConfigFormulariosModel objConfigFormularioModel { get; set; }
         List<Control> lControl { get; set; }
         string sFormat = ("{0}  -  {1}");
-        List<sTeste> lsTeste;
         List<string> lProperty = ("_LabelGroup-_TamanhoComponente-_TamanhoMaiorLabel-_Table-_Field-Name-_NomeView-_ListaCamposDisplay-"
                                 + "_LabelText-_Regex-_Help-_Obrigatorio-MaxLength-Enabled-Visible-ReadOnly-_Multiline-"
-                                + "_Password-Text-CharacterCasing-Color-DataSource-ValueMember-DisplayMember-AllowDrop-Format-S"
-                                + "CustomFormat-Value-CampoObrigatorio-Checked-electedIndex-SelectedIndexByte-_situacao-DisplayMember-ValueMember-SelectedValue-_Itens-"
-                                + "_TpValidacao-MaskFormat-Mask-Maximum-Minimum-DecimalPlaces-ValueInt").Split('-').ToList();
+                                + "_Password-CharacterCasing-Color-DataSource-DisplayMember-AllowDrop-Format-S"
+                                + "CustomFormat-CampoObrigatorio-Checked-electedIndex-SelectedIndexByte-_situacao-DisplayMember-_Itens-"
+                                + "_TpValidacao-MaskFormat-Mask-Maximum-Minimum-DecimalPlaces-ValueInt-Value-Text-ValueMember-SelectedValue").Split('-').ToList();
 
 
 
@@ -43,11 +42,12 @@ namespace HLP.Comum.UI
             kernel.Inject(this);
 
             InitializeComponent();
-            this.lsTeste = GetListaGenerica();
             this.objConfigFormularioModel = objConfigFormularioModel;
             this.lControl = lControl;
             headerConfig.Values.Description = objConfigFormularioModel.objConfigFormUsu.xText;
             CarregaTreeViewFormulario();
+
+
 
         }
 
@@ -148,12 +148,16 @@ namespace HLP.Comum.UI
 
             object p = t.InvokeMember("", System.Reflection.BindingFlags.CreateInstance, null, o, null);
 
-            foreach (PropertyInfo pi in properties)
+
+            foreach (string proper in lProperty)
             {
-                if (pi.CanWrite)
+                if (properties.Where(c => c.Name == proper).Count() > 0)
                 {
-                    if (lProperty.Contains(pi.Name))
+                    PropertyInfo pi = properties.FirstOrDefault(c => c.Name == proper);
+                    if (pi.CanWrite)
+                    {
                         pi.SetValue(p, pi.GetValue(o, null), null);
+                    }
                 }
             }
             return p;
@@ -226,7 +230,6 @@ namespace HLP.Comum.UI
                     ctr = CloneObject(ctr) as Control;
                     if (ctr.GetType() == typeof(HLP_DataGridView))
                         ctr.Dock = DockStyle.Fill;
-                    ctr.Visible = true;
                     panelDesign.Controls.Clear();
                     int y = (panelDesign.Height / 2) - (ctr.Height / 2);
                     panelDesign.Controls.Add(ctr);
@@ -244,6 +247,15 @@ namespace HLP.Comum.UI
                     else if (ctr.GetType() == typeof(HLP_ComboBox))
                     {
                         (ctr as HLP_ComboBox)._SelectedIndexChanged += ComponenteVisual__TextChanged;
+                    }
+                    else if (ctr.GetType() == typeof(HLP_CheckBox))
+                    {
+                        (ctr as HLP_CheckBox)._CheckedChanged += ComponenteVisual__TextChanged;
+                    }
+                    else if (ctr.GetType() == typeof(HLP_ListBox2))
+                    {
+                        (ctr as HLP_ListBox2).ListBox2.MouseDown += ComponenteVisual__TextChanged;
+                        (ctr as HLP_ListBox2).ListBox2.DragDrop += ComponenteVisual__TextChanged;
                     }
 
                 }
@@ -282,10 +294,47 @@ namespace HLP.Comum.UI
             chkEnabled.Visible = true;
             chkVisible.Checked = comp.objConfigCompUsu.stVisible.ToBoolean();
             chkVisible.Visible = true;
-            nudComprimento.Value = comp.objConfigCompUsu.iTamanhoComponente;
-            nudComprimento.Visible = true;
             if ((ctr.GetType() == typeof(HLP_ComboBox)) || (ctr.GetType() == typeof(HLP_MaskedTextBox)) || (ctr.GetType() == typeof(HLP_NumericUpDown)) || (ctr.GetType() == typeof(HLP_TextBox)))
                 nudComprimento.ReadOnly = true;
+
+            if (panelDesign.Controls.Count > 0)
+            {
+                if (panelDesign.Controls[0].GetType() != typeof(HLP_DataGridView))
+                {
+                    if (comp.Base != null)
+                    {
+                        lstDados.Items.Add(string.Format(sFormat, "TABELA", comp.xTable.ToUpper()));
+                        lstDados.Items.Add(string.Format(sFormat, "CAMPO", comp.xField.ToUpper()));
+                        lstDados.Items.Add(string.Format(sFormat, "OBRIGATÓRIO ?", comp.Base.GetObrigatoriedade()));
+                        lstDados.Items.Add(string.Format(sFormat, "TAMANHO", comp.Base.PRECISION));
+                        lstDados.Items.Add(string.Format(sFormat, "DECIMAIS", comp.Base.SCALE));
+                        lstDados.Items.Add(string.Format(sFormat, "TIPO DO CAMPO", comp.Base.TYPE_NAME.ToUpper()));
+
+                        if (comp.Base.SCALE.ToDecimal() > 0)
+                        {
+                            nudDecimalPlaces.Maximum = comp.Base.SCALE.ToDecimal();
+                            //nudDecimalPlaces.Minimum = 1;
+                        }
+                        if (comp.Base.PRECISION.ToDecimal() > 0)
+                        {
+                            nudMaxLength.Maximum = (comp.Base.PRECISION.ToDecimal() - comp.Base.SCALE.ToDecimal());
+                            //nudMaxLength.Minimum = 1;
+                        }
+                    }
+                }
+                else
+                {
+
+                    if (panelDesign.Controls[0].Tag != null)
+                    {
+                        VisibleColumns(comp.lConfigColunasGrid, (panelDesign.Controls[0] as HLP_DataGridView));
+                        lstDados.Items.Add(string.Format(sFormat, "TABELA", panelDesign.Controls[0].Tag.ToString().ToUpper()));
+                        (panelDesign.Controls[0] as HLP_DataGridView).AllowUserToDeleteRows = true;
+                        (panelDesign.Controls[0] as HLP_DataGridView).AllowUserToAddRows = true;
+                    }
+                }
+            }
+
 
             if ((ctr.GetType().GetProperties().Where(c => c.Name == "MaxLength").Count() > 0))
             {
@@ -321,70 +370,12 @@ namespace HLP.Comum.UI
                     listDisplay.ListBox2.Items.Add(item);
                 ctr.Enabled = false;
             }
+            nudComprimento.Value = comp.objConfigCompUsu.iTamanhoComponente;
+            nudComprimento.Visible = true;
 
 
-
-            if (panelDesign.Controls.Count > 0)
-            {
-                if (panelDesign.Controls[0].GetType() != typeof(HLP_DataGridView))
-                {
-                    if (comp.Base != null)
-                    {
-                        lstDados.Items.Add(string.Format(sFormat, "TABELA", comp.xTable.ToUpper()));
-                        lstDados.Items.Add(string.Format(sFormat, "CAMPO", comp.xField.ToUpper()));
-                        lstDados.Items.Add(string.Format(sFormat, "OBRIGATÓRIO ?", comp.Base.GetObrigatoriedade()));
-                        lstDados.Items.Add(string.Format(sFormat, "TAMANHO", comp.Base.PRECISION));
-                        lstDados.Items.Add(string.Format(sFormat, "DECIMAIS", comp.Base.SCALE));
-                        lstDados.Items.Add(string.Format(sFormat, "TIPO DO CAMPO", comp.Base.TYPE_NAME.ToUpper()));
-                    }
-                }
-                else
-                {
-
-                    if (panelDesign.Controls[0].Tag != null)
-                    {
-                        VisibleColumns(comp.lConfigColunasGrid, (panelDesign.Controls[0] as HLP_DataGridView));
-                        lstDados.Items.Add(string.Format(sFormat, "TABELA", panelDesign.Controls[0].Tag.ToString().ToUpper()));
-                        (panelDesign.Controls[0] as HLP_DataGridView).AllowUserToDeleteRows = true;
-                        (panelDesign.Controls[0] as HLP_DataGridView).AllowUserToAddRows = true;
-                    }
-                }
-            }
         }
 
-        void SaveConfiguracaoComp(ConfigComponenteModel comp)
-        {
-            List<PropertyInfo> lProperties = panelDesign.Controls[0].GetType().GetProperties().ToList();
-            foreach (sTeste p in lsTeste)
-            {
-                if (lProperties.Where(c => c.Name == p.xPropertyComp).Count() > 0)
-                {
-                    comp.SetPropertyValue(p.xPropertyClass, panelDesign.Controls[0].GetPropertyValue(p.xPropertyComp));
-                }
-            }
-        }
-
-        List<sTeste> GetListaGenerica()
-        {
-            List<sTeste> lsTeste = new List<sTeste>();
-            lsTeste.Add(new sTeste { xPropertyClass = "SelectedIndex", xPropertyComp = "Text" });
-            lsTeste.Add(new sTeste { xPropertyClass = "Text", xPropertyComp = "Text" });
-            lsTeste.Add(new sTeste { xPropertyClass = "Width", xPropertyComp = "_TamanhoComponente" }); //criar
-            lsTeste.Add(new sTeste { xPropertyClass = "xLabeText", xPropertyComp = "_LabelText" });
-            lsTeste.Add(new sTeste { xPropertyClass = "stEnabled", xPropertyComp = "Enabled" });
-            lsTeste.Add(new sTeste { xPropertyClass = "stVisible", xPropertyComp = "Enabled" });
-            //lsTeste.Add(new sTeste { xPropertyClass = "", xPropertyComp = "" }); // Color
-            lsTeste.Add(new sTeste { xPropertyClass = "mMaxLength", xPropertyComp = "MaxLength" });
-            lsTeste.Add(new sTeste { xPropertyClass = "nDecimalPlaces", xPropertyComp = "DecimalPlaces" });
-            lsTeste.Add(new sTeste { xPropertyClass = "xHelp", xPropertyComp = "_Visible" });
-            return lsTeste;
-        }
-
-        struct sTeste
-        {
-            public string xPropertyComp { get; set; }
-            public string xPropertyClass { get; set; }
-        }
 
         private void TreeFormulario_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -488,7 +479,10 @@ namespace HLP.Comum.UI
         private void btnValorPadrao__btnHlpClick(object sender, EventArgs e)
         {
             panelDesign.Controls[0].Focus();
+
         }
+
+
 
         private void ComponenteVisual__TextChanged(object sender, EventArgs e)
         {
@@ -497,14 +491,26 @@ namespace HLP.Comum.UI
                 ConfigComponenteModel objComp = TreeFormulario.SelectedNode.Tag as ConfigComponenteModel;
                 List<PropertyInfo> lProperty = (sender as Control).GetType().GetProperties().ToList();
                 Control controlOriginal = FindControl(objComp.xName);
-                if (lProperty.Where(c => c.Name == "Text").Count() > 0)
+                if (lProperty.Where(c => c.Name == "SelectedIndex").Count() > 0)
+                {
+                    objComp.objConfigCompUsu.xText = (sender as Control).GetPropertyValue("SelectedIndex").ToString();
+                    if (objComp.objConfigCompUsu.xText != "")
+                        controlOriginal.SetPropertyValue("SelectedIndex", Convert.ToInt32(objComp.objConfigCompUsu.xText));
+                }
+                else if (lProperty.Where(c => c.Name == "Value").Count() > 0)
+                {
+                    objComp.objConfigCompUsu.xText = (sender as Control).GetPropertyValue("Value").ToString();
+                    controlOriginal.SetPropertyValue("Value", objComp.objConfigCompUsu.xText.ToDecimal());
+                }
+                else if (lProperty.Where(c => c.Name == "Text").Count() > 0)
                 {
                     objComp.objConfigCompUsu.xText = (sender as Control).GetPropertyValue("Text").ToString();
                     controlOriginal.SetPropertyValue("Text", objComp.objConfigCompUsu.xText);
                 }
-                else if (lProperty.Where(c => c.Name == "Text").Count() > 0)
+                else if (lProperty.Where(c => c.Name == "Checked").Count() > 0)
                 {
-
+                    objComp.objConfigCompUsu.xText = (sender as Control).GetPropertyValue("Checked").ToString();
+                    controlOriginal.SetPropertyValue("Checked", Convert.ToBoolean(objComp.objConfigCompUsu.xText));
                 }
             }
             catch (System.Exception ex)
@@ -531,30 +537,41 @@ namespace HLP.Comum.UI
                     objComp.objConfigCompUsu.xLabelText = txtLabelText.Text;
                     controle.SetPropertyValue("_LabelText", txtLabelText.Text);
                 }
-                else if (objSender == nudDecimalPlaces)
+                else if (objSender.GetType() == typeof(HLP_NumericUpDown))
                 {
-                    objComp.objConfigCompUsu.nDecimalPlaces = nudDecimalPlaces.Value.ToInt32();
-                    controle.SetPropertyValue("DecimalPlaces", nudDecimalPlaces.Value.ToInt32());
-                }
-                else if (objSender == nudMaxLength)
-                {
-                    if (controle.GetType().GetProperties().Where(c => c.Name == "Maximum").Count() > 0)
+                    KryptonNumericUpDown nud = sender as KryptonNumericUpDown;
+                    if (nud.Parent == nudDecimalPlaces)
                     {
-                        controle.SetPropertyValue("Maximum", ("").PadLeft(nudMaxLength.Value.ToInt32(), '9').ToDecimal());
-                        objComp.objConfigCompUsu.nMaxLength = ("").PadLeft(nudMaxLength.Value.ToInt32(), '9').ToDecimal();
+
+                        if (objComp.Base != null)
+                        {
+                            if (nud.Text.ToInt32() <= objComp.Base.SCALE.ToInt32())
+                            {
+                                objComp.objConfigCompUsu.nDecimalPlaces = nud.Value.ToInt32();
+                                controle.SetPropertyValue("DecimalPlaces", nud.Value.ToInt32());
+                            }
+                        }
                     }
-                    else if (controle.GetType().GetProperties().Where(c => c.Name == "MaxLength").Count() > 0)
+                    else if (nud.Parent == nudMaxLength)
                     {
-                        controle.SetPropertyValue("MaxLength", nudMaxLength.Value.ToInt32());
-                        objComp.objConfigCompUsu.nMaxLength = nudMaxLength.Value.ToInt32();
+                        if (controle.GetType().GetProperties().Where(c => c.Name == "Maximum").Count() > 0)
+                        {
+                            controle.SetPropertyValue("Maximum", ("").PadLeft(nud.Value.ToInt32(), '9').ToDecimal());
+                            objComp.objConfigCompUsu.nMaxLength = ("").PadLeft(nud.Value.ToInt32(), '9').ToDecimal();
+                        }
+                        else if (controle.GetType().GetProperties().Where(c => c.Name == "MaxLength").Count() > 0)
+                        {
+                            controle.SetPropertyValue("MaxLength", nud.Value.ToInt32());
+                            objComp.objConfigCompUsu.nMaxLength = nud.Value.ToInt32();
+                        }
+                    }
+                    else if (nud.Parent == nudComprimento)
+                    {
+                        objComp.objConfigCompUsu.iTamanhoComponente = nud.Value.ToInt32();
+                        controle.SetPropertyValue("_TamanhoComponente", nud.Value.ToInt32());
                     }
                 }
-                else if (objSender == nudComprimento)
-                {
-                    objComp.objConfigCompUsu.iTamanhoComponente = nudComprimento.Value.ToInt32();
-                    controle.SetPropertyValue("_TamanhoComponente", nudComprimento.Value.ToInt32());
-                }
-                if (objSender == chkEnabled)
+                else if (objSender == chkEnabled)
                 {
                     objComp.objConfigCompUsu.stEnabled = chkEnabled.Checked.ToByte();
                     controle.SetPropertyValue("Enabled", chkEnabled.Checked);
@@ -563,6 +580,10 @@ namespace HLP.Comum.UI
                 {
                     objComp.objConfigCompUsu.stVisible = chkVisible.Checked.ToByte();
                     controle.SetPropertyValue("Visible", chkVisible.Checked);
+                }
+                else if (objSender == listDisplay)
+                {
+                    
                 }
 
                 nudComprimento._ValueChanged -= Componentes__TextChanged;
