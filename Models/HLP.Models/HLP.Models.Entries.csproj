@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArquivosModel.cs" />
     <Compile Include="Comercial\Canal_vendaModel.cs" />
     <Compile Include="Comercial\Cliente_fornecedorModel.cs" />
     <Compile Include="Financeiro\Dia_pagamentoModel.cs" />
@@ -54,6 +55,8 @@
     <Compile Include="Comercial\JurosModel.cs" />
     <Compile Include="Comercial\Lista_precoModel.cs" />
     <Compile Include="Comercial\Lista_Preco_PaiModel.cs" />
+    <Compile Include="Gerais\EstruturaModel.cs" />
+    <Compile Include="Gerais\EstruturaModelXml.cs" />
     <Compile Include="Gerais\Familia_Produto_ClassesModel.cs" />
     <Compile Include="Gerais\Log_ScriptsModel.cs" />
     <Compile Include="Gerais\Modos_entregaModel.cs" />

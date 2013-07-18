@@ -40,6 +40,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +57,7 @@
     <Compile Include="Financeiro\Dia_PagamentoService.cs" />
     <Compile Include="Financeiro\Dia_Pagamento_LinhasService.cs" />
     <Compile Include="Gerais\AcessoService.cs" />
+    <Compile Include="Gerais\ArquivoService.cs" />
     <Compile Include="Gerais\Condicao_pagamentoService.cs" />
     <Compile Include="Gerais\Condicoes_entregaService.cs" />
     <Compile Include="Comercial\Cliente_fornecedor_EnderecoService.cs" />
@@ -64,12 +67,14 @@
     <Compile Include="Comercial\Cliente_fornecedor_contatoService.cs" />
     <Compile Include="Comercial\Cliente_fornecedor_fiscalService.cs" />
     <Compile Include="Gerais\Contato_EnderecoService.cs" />
+    <Compile Include="Gerais\ControleAcessoService.cs" />
     <Compile Include="Gerais\DepositoService.cs" />
     <Compile Include="Financeiro\Descontos_AvistaService.cs" />
     <Compile Include="Comercial\JurosService.cs" />
     <Compile Include="Comercial\Lista_precoService.cs" />
     <Compile Include="Comercial\Lista_Preco_PaiService.cs" />
     <Compile Include="Gerais\Empresa_enderecoService.cs" />
+    <Compile Include="Gerais\EstruturaService.cs" />
     <Compile Include="Gerais\Familia_Produto_ClassesService.cs" />
     <Compile Include="Gerais\Funcionario_ArquivoService.cs" />
     <Compile Include="Gerais\Funcionario_CertificacaoService.cs" />

@@ -12,6 +12,10 @@ using HLP.UI.Utility;
 using System.ComponentModel;
 using HLP.Comum.Infrastructure;
 using Microsoft.Win32;
+using System.IO;
+using HLP.Models.Entries.Gerais;
+using System.Net;
+using HLP.Services.Implementation.Entries.Gerais;
 
 namespace Magnificus
 {
@@ -68,7 +72,7 @@ namespace Magnificus
                         login.ShowDialog();
                         if (UserData.bLogado)
                         {
-                            
+                            ControleAcessoService.InsereControleAcesso(true);
                             splash = new FormSplash();
                             GerenciadorModulo.Instancia.InicializaSistema<FormModuloMagnificus>(splash.ExibeInformacao, splash.ValoresProgressBar);
                             splash.Close();

@@ -12,6 +12,8 @@ using HLP.Models.Entries.Gerais;
 using HLP.Services.Interfaces.Entries.Gerais;
 using Ninject;
 using HLP.Dependencies;
+using HLP.Comum.Infrastructure;
+using System.Net;
 
 namespace HLP.Comum.Ws
 {
@@ -24,6 +26,7 @@ namespace HLP.Comum.Ws
         FileStream fs1 = null;
         long tamanhoDownload = 0;
         private bool statusDownload = false;
+        const string enderecoWs = "http://hlpsistemas.no-ip.org:8081/Servicos/Services.svc";
 
         public servicos()
         {
@@ -31,9 +34,34 @@ namespace HLP.Comum.Ws
             kernel.Settings.ActivationCacheDisabled = false;
             kernel.Inject(this);
         }
+
+        public bool RespostaWS()
+        {
+            try
+            {
+                WebRequest wR = WebRequest.Create(enderecoWs);
+                WebResponse wResponse = wR.GetResponse();
+                wResponse.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }       
+
+        }
+
         public List<VersoesModel> GetVersoes()
         {
-            return objServicos.GetVersoesMagnificus().ToList();
+            try
+            {
+                return objServicos.GetVersoesMagnificus().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro: " + ex.Message);
+            }
+
         }
 
         public void downloadArquivo(string fName)
@@ -45,7 +73,7 @@ namespace HLP.Comum.Ws
                 b1 = objServicos.DownloadFile(fName);
                 string sCaminho = null;
                 sCaminho = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString());
-                if(!Directory.Exists(sCaminho + @"\atualizacoes\"))
+                if (!Directory.Exists(sCaminho + @"\atualizacoes\"))
                     Directory.CreateDirectory(sCaminho + @"\atualizacoes\");
 
                 DirectoryInfo di = new DirectoryInfo(sCaminho + @"\atualizacoes");
@@ -104,7 +132,7 @@ namespace HLP.Comum.Ws
                 b1 = objServicos.DownloadScript(sName);
                 statusDownload = true;
                 return System.Text.Encoding.UTF8.GetString(b1);
-                
+
             }
             catch (Exception ex)
             {
@@ -129,17 +157,36 @@ namespace HLP.Comum.Ws
 
         public string GetUltimaVersao()
         {
-            return objServicos.GetUltimaVersao();
+            try
+            {
+                return objServicos.GetUltimaVersao();
+            }
+            catch (Exception ex)
+            {
+                
+                throw new Exception("Erro: "+ex.Message);
+            }
+            
         }
 
         public List<VersoesModel> GetUltimosScripts(string xVersao)
         {
-            return objServicos.GetUltimosScripts(xVersao).ToList();
+            try
+            {
+                return objServicos.GetUltimosScripts(xVersao).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro: " + ex.Message);
+            }            
         }
 
         private void BaixarScriptsVersaoExe(string xVersao)
         {
-            List<Log_ScriptsModel> lScripts =
+            try
+            {
+                List<Log_ScriptsModel> lScripts =
                 objServicos.GetScriptVersaoExe(xVersao.Replace(".zip", "")).ToList().AsEnumerable().Select(
                 i => new Log_ScriptsModel
                 {
@@ -147,37 +194,50 @@ namespace HLP.Comum.Ws
                     script = getScript(i.xVersao)
                 }).ToList();
 
-            foreach (Log_ScriptsModel item in lScripts)
-            {
-                if(log_scriptService.GetLog_ScriptCount(item.xVersao) == 0)
+                foreach (Log_ScriptsModel item in lScripts)
                 {
-                    item.SetStatusRegistro(Infrastructure.BaseModelFilhos.statusRegistroFilho.Incluido);
-                }
-                
-            }
+                    if (log_scriptService.GetLog_ScriptCount(item.xVersao) == 0)
+                    {
+                        item.SetStatusRegistro(Infrastructure.BaseModelFilhos.statusRegistroFilho.Incluido);
+                    }
 
-            log_scriptService.Save(lScripts);
+                }
+                log_scriptService.Save(lScripts);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro: " + ex.Message);
+            }         
+            
         }
 
         public bool ExisteAtualizacao()
         {
-            string sCaminho = null;
-
-            sCaminho = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString());
-
-            if (!Directory.Exists(sCaminho + @"\atualizacoes"))
+            try
             {
-                Directory.CreateDirectory(sCaminho + @"\atualizacoes");
+                string sCaminho = null;
+
+                sCaminho = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString());
+
+                if (!Directory.Exists(sCaminho + @"\atualizacoes"))
+                {
+                    Directory.CreateDirectory(sCaminho + @"\atualizacoes");
+                    return false;
+                }
+
+                DirectoryInfo di = new DirectoryInfo(sCaminho + @"\atualizacoes");
+                if (di.GetFiles().Count() > 0)
+                {
+                    return true;
+                }
                 return false;
             }
-
-            DirectoryInfo di = new DirectoryInfo(sCaminho + @"\atualizacoes");
-            if (di.GetFiles().Count() > 0)
+            catch (Exception ex)
             {
-                return true;
-            }
 
-            return false;
+                throw new Exception("Erro: " + ex.Message);
+            }           
         }
 
         public void BackupBaseSql(string xPath, string xNameBackup)

@@ -11,28 +11,46 @@ namespace HLP.Comum.Infrastructure
     {
         public static void SerializeClasse<T>(T classe, string sPathSave) where T : class
         {
+            TextWriter textWriter = null;
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(T));
-                TextWriter textWriter = new StreamWriter(sPathSave);
+                textWriter = new StreamWriter(sPathSave);
                 serializer.Serialize(textWriter, classe);
-                textWriter.Close();
-                textWriter.Dispose();
+                
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+            finally
+            {
+                textWriter.Close();
+                textWriter.Dispose();
+            }
         }
         public static T DeserializeClasse<T>(string PathSave) where T : class
         {
-            XmlSerializer deserializer = new XmlSerializer(typeof(T));
-            TextReader textReader = new StreamReader(PathSave);
-            T config;
-            config = (T)deserializer.Deserialize(textReader);
-            textReader.Close();
-            textReader.Dispose();
-            return config;
+            TextReader textReader = null;
+            try
+            {
+                XmlSerializer deserializer = new XmlSerializer(typeof(T));
+                textReader = new StreamReader(PathSave);
+                T config;
+                config = (T)deserializer.Deserialize(textReader);
+                return config;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                textReader.Close();
+                textReader.Dispose();
+            }    
+            
         }
 
     }

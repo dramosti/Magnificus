@@ -18,7 +18,4 @@
   <object id="FormSelecionaRelatorio" name="FormSelecionaRelatorio" singleton="false" scope="request"
        type="HLP.Comum.UI.FormSelecionaRelatorio, HLP.Comum.UI">
   </object>
-  <object id="formAtualizacao" name="formAtualizacao" singleton="false" scope="request"
-  type="HLP.UI.Utility.formAtualizacao, HLP.UI.Utility">
-  </object>
 </objects>

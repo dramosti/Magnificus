@@ -69,6 +69,7 @@
     <Compile Include="IoC\DIContollersModuleBase.cs" />
     <Compile Include="IsolatedStoreComum.cs" />
     <Compile Include="LogException.cs" />
+    <Compile Include="MetodosDllWindows.cs" />
     <Compile Include="ModelDefinition.cs" />
     <Compile Include="ModelFormularios.cs" />
     <Compile Include="ModelProperty.cs" />

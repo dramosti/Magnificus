@@ -71,12 +71,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formAtualizacao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formAtualizacao.Designer.cs">
-      <DependentUpon>formAtualizacao.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormConfigBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,9 +141,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="formAtualizacao.resx">
-      <DependentUpon>formAtualizacao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormConfigBase.resx">
       <DependentUpon>FormConfigBase.cs</DependentUpon>
       <SubType>Designer</SubType>
