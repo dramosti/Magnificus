@@ -120,7 +120,7 @@
             this.nudcCodCfop._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudcCodCfop._Regex = null;
             this.nudcCodCfop._Table = "Cfop";
-            this.nudcCodCfop._TamanhoComponente = 117;
+            this.nudcCodCfop._TamanhoComponente = 107;
             this.nudcCodCfop._TamanhoMaiorLabel = 150;
             this.nudcCodCfop._Visible = false;
             this.nudcCodCfop.BackColor = System.Drawing.Color.Transparent;
@@ -141,7 +141,7 @@
             0});
             this.nudcCodCfop.Name = "nudcCodCfop";
             this.nudcCodCfop.ReadOnly = false;
-            this.nudcCodCfop.Size = new System.Drawing.Size(149, 22);
+            this.nudcCodCfop.Size = new System.Drawing.Size(139, 22);
             this.nudcCodCfop.TabIndex = 4;
             this.nudcCodCfop.Value = new decimal(new int[] {
             0,
