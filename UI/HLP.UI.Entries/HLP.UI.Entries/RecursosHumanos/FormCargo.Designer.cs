@@ -148,7 +148,7 @@
             this.txtCodigo._Table = "Cargo";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -174,7 +174,7 @@
             this.txtxCargo._Table = "Cargo";
             this.txtxCargo._TamanhoComponente = 223;
             this.txtxCargo._TamanhoMaiorLabel = 150;
-            this.txtxCargo._Visible = false;
+            this.txtxCargo._Visible = true;
             this.txtxCargo.BackColor = System.Drawing.Color.Transparent;
             this.txtxCargo.Base = null;
             this.txtxCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -200,7 +200,7 @@
             this.txtxDescricao._Table = "Cargo";
             this.txtxDescricao._TamanhoComponente = 223;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

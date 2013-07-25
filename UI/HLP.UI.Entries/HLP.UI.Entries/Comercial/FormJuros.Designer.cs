@@ -106,7 +106,7 @@
             this.txtCodigo._Table = "Juros";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -132,7 +132,7 @@
             this.txtxNome._Table = "Juros";
             this.txtxNome._TamanhoComponente = 107;
             this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -158,7 +158,7 @@
             this.txtxDescricao._Table = "Juros";
             this.txtxDescricao._TamanhoComponente = 263;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -182,7 +182,7 @@
             this.nudpJuros._Table = "Juros";
             this.nudpJuros._TamanhoComponente = 107;
             this.nudpJuros._TamanhoMaiorLabel = 150;
-            this.nudpJuros._Visible = false;
+            this.nudpJuros._Visible = true;
             this.nudpJuros.BackColor = System.Drawing.Color.Transparent;
             this.nudpJuros.Base = null;
             this.nudpJuros.Color = System.Drawing.Color.White;
@@ -221,7 +221,7 @@
             this.nudnQuantidadeDiasMes._Table = "Juros";
             this.nudnQuantidadeDiasMes._TamanhoComponente = 107;
             this.nudnQuantidadeDiasMes._TamanhoMaiorLabel = 150;
-            this.nudnQuantidadeDiasMes._Visible = false;
+            this.nudnQuantidadeDiasMes._Visible = true;
             this.nudnQuantidadeDiasMes.BackColor = System.Drawing.Color.Transparent;
             this.nudnQuantidadeDiasMes.Base = null;
             this.nudnQuantidadeDiasMes.Color = System.Drawing.Color.White;
@@ -263,7 +263,7 @@
             this.cbostDiaMes._Table = "Juros";
             this.cbostDiaMes._TamanhoComponente = 107;
             this.cbostDiaMes._TamanhoMaiorLabel = 150;
-            this.cbostDiaMes._Visible = false;
+            this.cbostDiaMes._Visible = true;
             this.cbostDiaMes.BackColor = System.Drawing.Color.Transparent;
             this.cbostDiaMes.Base = null;
             this.cbostDiaMes.Color = System.Drawing.Color.White;
@@ -289,7 +289,7 @@
             this.nudnCarencia._Table = "Juros";
             this.nudnCarencia._TamanhoComponente = 107;
             this.nudnCarencia._TamanhoMaiorLabel = 150;
-            this.nudnCarencia._Visible = false;
+            this.nudnCarencia._Visible = true;
             this.nudnCarencia.BackColor = System.Drawing.Color.Transparent;
             this.nudnCarencia.Base = null;
             this.nudnCarencia.Color = System.Drawing.Color.White;

@@ -107,7 +107,7 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo._Table = "Cidade";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -133,7 +133,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxCidade._Table = "Cidade";
             this.txtxCidade._TamanhoComponente = 234;
             this.txtxCidade._TamanhoMaiorLabel = 150;
-            this.txtxCidade._Visible = false;
+            this.txtxCidade._Visible = true;
             this.txtxCidade.BackColor = System.Drawing.Color.Transparent;
             this.txtxCidade.Base = null;
             this.txtxCidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -157,7 +157,7 @@ namespace HLP.UI.Entries.Geral
             this.nudcIbge._Table = "Cidade";
             this.nudcIbge._TamanhoComponente = 122;
             this.nudcIbge._TamanhoMaiorLabel = 150;
-            this.nudcIbge._Visible = false;
+            this.nudcIbge._Visible = true;
             this.nudcIbge.BackColor = System.Drawing.Color.Transparent;
             this.nudcIbge.Base = null;
             this.nudcIbge.Color = System.Drawing.Color.White;
@@ -198,7 +198,7 @@ namespace HLP.UI.Entries.Geral
             this.cboidUf._Table = "Cidade";
             this.cboidUf._TamanhoComponente = 83;
             this.cboidUf._TamanhoMaiorLabel = 150;
-            this.cboidUf._Visible = false;
+            this.cboidUf._Visible = true;
             this.cboidUf.BackColor = System.Drawing.Color.Transparent;
             this.cboidUf.Base = null;
             this.cboidUf.Color = System.Drawing.Color.White;

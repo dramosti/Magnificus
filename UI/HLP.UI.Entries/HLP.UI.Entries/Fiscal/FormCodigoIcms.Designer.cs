@@ -107,7 +107,7 @@ namespace HLP.UI.Entries.Fiscal
             this.txtCodigo._Table = "Codigo_Icms_pai";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 120;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -131,7 +131,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudcIcms._Table = "Codigo_Icms_pai";
             this.nudcIcms._TamanhoComponente = 124;
             this.nudcIcms._TamanhoMaiorLabel = 120;
-            this.nudcIcms._Visible = false;
+            this.nudcIcms._Visible = true;
             this.nudcIcms.BackColor = System.Drawing.Color.Transparent;
             this.nudcIcms.Base = null;
             this.nudcIcms.Color = System.Drawing.Color.White;

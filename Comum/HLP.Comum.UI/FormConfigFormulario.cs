@@ -282,7 +282,7 @@ namespace HLP.Comum.UI
             chkVisible.Checked = comp.objConfigCompUsu.stVisible.ToBoolean();
             chkVisible.Visible = true;
             nudComprimento.ReadOnly = false;
-            int iTamanhoComp = comp.objConfigCompUsu.iTamanhoComponente;
+            int iTamanhoComp = comp.objConfigCompUsu.iTamanhoComponente.ToInt32();
             txtHelp.Text = comp.objConfigCompUsu.xHelp;  // ctr.GetPropertyValue("_Help").ToString();
             txtHelp.Visible = true;
             txtLabelText.Text = comp.objConfigCompUsu.xLabelText; // ctr.GetPropertyValue("_LabelText").ToString();

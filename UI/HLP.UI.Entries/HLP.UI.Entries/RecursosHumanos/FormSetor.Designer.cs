@@ -104,7 +104,7 @@
             this.txtCodigo._Table = "Setor";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 100;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -130,7 +130,7 @@
             this.txtxSetor._Table = "Setor";
             this.txtxSetor._TamanhoComponente = 134;
             this.txtxSetor._TamanhoMaiorLabel = 100;
-            this.txtxSetor._Visible = false;
+            this.txtxSetor._Visible = true;
             this.txtxSetor.BackColor = System.Drawing.Color.Transparent;
             this.txtxSetor.Base = null;
             this.txtxSetor.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -156,7 +156,7 @@
             this.txtxDescricao._Table = "Setor";
             this.txtxDescricao._TamanhoComponente = 344;
             this.txtxDescricao._TamanhoMaiorLabel = 100;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -182,7 +182,7 @@
             this.txtxEmail._Table = "Setor";
             this.txtxEmail._TamanhoComponente = 131;
             this.txtxEmail._TamanhoMaiorLabel = 100;
-            this.txtxEmail._Visible = false;
+            this.txtxEmail._Visible = true;
             this.txtxEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmail.Base = null;
             this.txtxEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

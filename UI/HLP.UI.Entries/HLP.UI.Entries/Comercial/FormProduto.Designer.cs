@@ -303,7 +303,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtCodigo._Table = "Produto";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -329,7 +329,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxcAlternativo._Table = "Produto";
             this.txtxcAlternativo._TamanhoComponente = 159;
             this.txtxcAlternativo._TamanhoMaiorLabel = 150;
-            this.txtxcAlternativo._Visible = false;
+            this.txtxcAlternativo._Visible = true;
             this.txtxcAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtxcAlternativo.Base = null;
             this.txtxcAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -355,7 +355,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtcEan._Table = "Produto";
             this.txtcEan._TamanhoComponente = 159;
             this.txtcEan._TamanhoMaiorLabel = 150;
-            this.txtcEan._Visible = false;
+            this.txtcEan._Visible = true;
             this.txtcEan.BackColor = System.Drawing.Color.Transparent;
             this.txtcEan.Base = null;
             this.txtcEan.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -393,7 +393,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxPesquisa._Table = "Produto";
             this.txtxPesquisa._TamanhoComponente = 341;
             this.txtxPesquisa._TamanhoMaiorLabel = 150;
-            this.txtxPesquisa._Visible = false;
+            this.txtxPesquisa._Visible = true;
             this.txtxPesquisa.BackColor = System.Drawing.Color.Transparent;
             this.txtxPesquisa.Base = null;
             this.txtxPesquisa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -419,7 +419,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxComercial._Table = "Produto";
             this.txtxComercial._TamanhoComponente = 341;
             this.txtxComercial._TamanhoMaiorLabel = 150;
-            this.txtxComercial._Visible = false;
+            this.txtxComercial._Visible = true;
             this.txtxComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxComercial.Base = null;
             this.txtxComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -445,7 +445,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxFiscal._Table = "Produto";
             this.txtxFiscal._TamanhoComponente = 341;
             this.txtxFiscal._TamanhoMaiorLabel = 150;
-            this.txtxFiscal._Visible = false;
+            this.txtxFiscal._Visible = true;
             this.txtxFiscal.BackColor = System.Drawing.Color.Transparent;
             this.txtxFiscal.Base = null;
             this.txtxFiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -471,7 +471,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxIngles._Table = "Produto";
             this.txtxIngles._TamanhoComponente = 341;
             this.txtxIngles._TamanhoMaiorLabel = 150;
-            this.txtxIngles._Visible = false;
+            this.txtxIngles._Visible = true;
             this.txtxIngles.BackColor = System.Drawing.Color.Transparent;
             this.txtxIngles.Base = null;
             this.txtxIngles.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -501,7 +501,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidTipoProduto._TamanhoComponente = 251;
             this.hlP_PesquisaidTipoProduto._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidTipoProduto._Vinculado = false;
-            this.hlP_PesquisaidTipoProduto._Visible = false;
+            this.hlP_PesquisaidTipoProduto._Visible = true;
             this.hlP_PesquisaidTipoProduto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoProduto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoProduto.Base = null;
@@ -527,7 +527,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxFoto._Table = "Produto";
             this.txtxFoto._TamanhoComponente = 341;
             this.txtxFoto._TamanhoMaiorLabel = 150;
-            this.txtxFoto._Visible = false;
+            this.txtxFoto._Visible = true;
             this.txtxFoto.BackColor = System.Drawing.Color.Transparent;
             this.txtxFoto.Base = null;
             this.txtxFoto.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -550,7 +550,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_Observacao1._Table = "Produto";
             this.hlP_Observacao1._TamanhoComponente = 88;
             this.hlP_Observacao1._TamanhoMaiorLabel = 0;
-            this.hlP_Observacao1._Visible = false;
+            this.hlP_Observacao1._Visible = true;
             this.hlP_Observacao1.BackColor = System.Drawing.Color.Transparent;
             this.hlP_Observacao1.Base = null;
             this.hlP_Observacao1.Location = new System.Drawing.Point(0, 280);
@@ -577,7 +577,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidTipoServico._TamanhoComponente = 230;
             this.hlP_PesquisaidTipoServico._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidTipoServico._Vinculado = false;
-            this.hlP_PesquisaidTipoServico._Visible = false;
+            this.hlP_PesquisaidTipoServico._Visible = true;
             this.hlP_PesquisaidTipoServico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoServico.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoServico.Base = null;
@@ -603,7 +603,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtdCadastro._Table = "Produto";
             this.txtdCadastro._TamanhoComponente = 102;
             this.txtdCadastro._TamanhoMaiorLabel = 150;
-            this.txtdCadastro._Visible = false;
+            this.txtdCadastro._Visible = true;
             this.txtdCadastro.BackColor = System.Drawing.Color.Transparent;
             this.txtdCadastro.Base = null;
             this.txtdCadastro.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -630,7 +630,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbxidUsuario._Table = "Produto";
             this.cbxidUsuario._TamanhoComponente = 320;
             this.cbxidUsuario._TamanhoMaiorLabel = 150;
-            this.cbxidUsuario._Visible = false;
+            this.cbxidUsuario._Visible = true;
             this.cbxidUsuario.BackColor = System.Drawing.Color.Transparent;
             this.cbxidUsuario.Base = null;
             this.cbxidUsuario.Color = System.Drawing.Color.White;
@@ -675,7 +675,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidFamiliaProduto._TamanhoComponente = 227;
             this.hlP_PesquisaidFamiliaProduto._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidFamiliaProduto._Vinculado = false;
-            this.hlP_PesquisaidFamiliaProduto._Visible = false;
+            this.hlP_PesquisaidFamiliaProduto._Visible = true;
             this.hlP_PesquisaidFamiliaProduto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidFamiliaProduto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidFamiliaProduto.Base = null;
@@ -768,7 +768,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaEstoque._TamanhoComponente = 243;
             this.hlP_PesquisaidUnidadeMedidaEstoque._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidUnidadeMedidaEstoque._Vinculado = false;
-            this.hlP_PesquisaidUnidadeMedidaEstoque._Visible = false;
+            this.hlP_PesquisaidUnidadeMedidaEstoque._Visible = true;
             this.hlP_PesquisaidUnidadeMedidaEstoque.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaEstoque.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaEstoque.Base = null;
@@ -792,7 +792,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnPesoBruto._Table = "Produto";
             this.nudnPesoBruto._TamanhoComponente = 112;
             this.nudnPesoBruto._TamanhoMaiorLabel = 150;
-            this.nudnPesoBruto._Visible = false;
+            this.nudnPesoBruto._Visible = true;
             this.nudnPesoBruto.BackColor = System.Drawing.Color.Transparent;
             this.nudnPesoBruto.Base = null;
             this.nudnPesoBruto.Color = System.Drawing.Color.White;
@@ -832,7 +832,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnPesoLiquido._Table = "Produto";
             this.nudnPesoLiquido._TamanhoComponente = 112;
             this.nudnPesoLiquido._TamanhoMaiorLabel = 150;
-            this.nudnPesoLiquido._Visible = false;
+            this.nudnPesoLiquido._Visible = true;
             this.nudnPesoLiquido.BackColor = System.Drawing.Color.Transparent;
             this.nudnPesoLiquido.Base = null;
             this.nudnPesoLiquido.Color = System.Drawing.Color.White;
@@ -871,7 +871,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnPrazoValidade._Table = "Produto";
             this.nudnPrazoValidade._TamanhoComponente = 112;
             this.nudnPrazoValidade._TamanhoMaiorLabel = 150;
-            this.nudnPrazoValidade._Visible = false;
+            this.nudnPrazoValidade._Visible = true;
             this.nudnPrazoValidade.BackColor = System.Drawing.Color.Transparent;
             this.nudnPrazoValidade.Base = null;
             this.nudnPrazoValidade.Color = System.Drawing.Color.White;
@@ -914,7 +914,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbxAtivo._Table = "Produto";
             this.cbxAtivo._TamanhoComponente = 112;
             this.cbxAtivo._TamanhoMaiorLabel = 150;
-            this.cbxAtivo._Visible = false;
+            this.cbxAtivo._Visible = true;
             this.cbxAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cbxAtivo.Base = null;
             this.cbxAtivo.Color = System.Drawing.Color.White;
@@ -942,7 +942,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtdBloqueio._Table = "Produto";
             this.txtdBloqueio._TamanhoComponente = 112;
             this.txtdBloqueio._TamanhoMaiorLabel = 150;
-            this.txtdBloqueio._Visible = false;
+            this.txtdBloqueio._Visible = true;
             this.txtdBloqueio.BackColor = System.Drawing.Color.Transparent;
             this.txtdBloqueio.Base = null;
             this.txtdBloqueio.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -969,7 +969,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnEstoqueMinimo._Table = "Produto";
             this.nudnEstoqueMinimo._TamanhoComponente = 112;
             this.nudnEstoqueMinimo._TamanhoMaiorLabel = 150;
-            this.nudnEstoqueMinimo._Visible = false;
+            this.nudnEstoqueMinimo._Visible = true;
             this.nudnEstoqueMinimo.BackColor = System.Drawing.Color.Transparent;
             this.nudnEstoqueMinimo.Base = null;
             this.nudnEstoqueMinimo.Color = System.Drawing.Color.White;
@@ -1009,7 +1009,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnEstoqueMaximo._Table = "Produto";
             this.nudnEstoqueMaximo._TamanhoComponente = 111;
             this.nudnEstoqueMaximo._TamanhoMaiorLabel = 150;
-            this.nudnEstoqueMaximo._Visible = false;
+            this.nudnEstoqueMaximo._Visible = true;
             this.nudnEstoqueMaximo.BackColor = System.Drawing.Color.Transparent;
             this.nudnEstoqueMaximo.Base = null;
             this.nudnEstoqueMaximo.Color = System.Drawing.Color.White;
@@ -1066,7 +1066,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidProdutoLocalizacao._TamanhoComponente = 210;
             this.hlP_PesquisaidProdutoLocalizacao._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidProdutoLocalizacao._Vinculado = false;
-            this.hlP_PesquisaidProdutoLocalizacao._Visible = false;
+            this.hlP_PesquisaidProdutoLocalizacao._Visible = true;
             this.hlP_PesquisaidProdutoLocalizacao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidProdutoLocalizacao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidProdutoLocalizacao.Base = null;
@@ -1095,7 +1095,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidDeposito._TamanhoComponente = 210;
             this.hlP_PesquisaidDeposito._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidDeposito._Vinculado = false;
-            this.hlP_PesquisaidDeposito._Visible = false;
+            this.hlP_PesquisaidDeposito._Visible = true;
             this.hlP_PesquisaidDeposito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDeposito.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDeposito.Base = null;
@@ -1124,7 +1124,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidFabricante._TamanhoComponente = 210;
             this.hlP_PesquisaidFabricante._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidFabricante._Vinculado = false;
-            this.hlP_PesquisaidFabricante._Visible = false;
+            this.hlP_PesquisaidFabricante._Visible = true;
             this.hlP_PesquisaidFabricante.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidFabricante.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidFabricante.Base = null;
@@ -1159,7 +1159,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnProfundidadeBruta._Table = "Produto";
             this.nudnProfundidadeBruta._TamanhoComponente = 188;
             this.nudnProfundidadeBruta._TamanhoMaiorLabel = 150;
-            this.nudnProfundidadeBruta._Visible = false;
+            this.nudnProfundidadeBruta._Visible = true;
             this.nudnProfundidadeBruta.BackColor = System.Drawing.Color.Transparent;
             this.nudnProfundidadeBruta.Base = null;
             this.nudnProfundidadeBruta.Color = System.Drawing.Color.White;
@@ -1198,7 +1198,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnLarguraBruta._Table = "Produto";
             this.nudnLarguraBruta._TamanhoComponente = 188;
             this.nudnLarguraBruta._TamanhoMaiorLabel = 150;
-            this.nudnLarguraBruta._Visible = false;
+            this.nudnLarguraBruta._Visible = true;
             this.nudnLarguraBruta.BackColor = System.Drawing.Color.Transparent;
             this.nudnLarguraBruta.Base = null;
             this.nudnLarguraBruta.Color = System.Drawing.Color.White;
@@ -1237,7 +1237,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnAlturaBruta._Table = "Produto";
             this.nudnAlturaBruta._TamanhoComponente = 188;
             this.nudnAlturaBruta._TamanhoMaiorLabel = 150;
-            this.nudnAlturaBruta._Visible = false;
+            this.nudnAlturaBruta._Visible = true;
             this.nudnAlturaBruta.BackColor = System.Drawing.Color.Transparent;
             this.nudnAlturaBruta.Base = null;
             this.nudnAlturaBruta.Color = System.Drawing.Color.White;
@@ -1291,7 +1291,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstCusto._Table = "Produto";
             this.cbxstCusto._TamanhoComponente = 186;
             this.cbxstCusto._TamanhoMaiorLabel = 150;
-            this.cbxstCusto._Visible = false;
+            this.cbxstCusto._Visible = true;
             this.cbxstCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCusto.Base = null;
             this.cbxstCusto.Color = System.Drawing.Color.White;
@@ -1321,7 +1321,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstCustoMedio._Table = "Produto";
             this.cbxstCustoMedio._TamanhoComponente = 186;
             this.cbxstCustoMedio._TamanhoMaiorLabel = 150;
-            this.cbxstCustoMedio._Visible = false;
+            this.cbxstCustoMedio._Visible = true;
             this.cbxstCustoMedio.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCustoMedio.Base = null;
             this.cbxstCustoMedio.Color = System.Drawing.Color.White;
@@ -1409,7 +1409,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstOrigemMercadoria._Table = "Produto";
             this.cbxstOrigemMercadoria._TamanhoComponente = 300;
             this.cbxstOrigemMercadoria._TamanhoMaiorLabel = 200;
-            this.cbxstOrigemMercadoria._Visible = false;
+            this.cbxstOrigemMercadoria._Visible = true;
             this.cbxstOrigemMercadoria.BackColor = System.Drawing.Color.Transparent;
             this.cbxstOrigemMercadoria.Base = null;
             this.cbxstOrigemMercadoria.Color = System.Drawing.Color.White;
@@ -1442,7 +1442,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTIcms._TamanhoComponente = 210;
             this.hlP_PesquisaidCSTIcms._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCSTIcms._Vinculado = false;
-            this.hlP_PesquisaidCSTIcms._Visible = false;
+            this.hlP_PesquisaidCSTIcms._Visible = true;
             this.hlP_PesquisaidCSTIcms.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTIcms.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTIcms.Base = null;
@@ -1468,7 +1468,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstInss._Table = "Produto";
             this.cbxstInss._TamanhoComponente = 92;
             this.cbxstInss._TamanhoMaiorLabel = 200;
-            this.cbxstInss._Visible = false;
+            this.cbxstInss._Visible = true;
             this.cbxstInss.BackColor = System.Drawing.Color.Transparent;
             this.cbxstInss.Base = null;
             this.cbxstInss.Color = System.Drawing.Color.White;
@@ -1494,7 +1494,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpInss._Table = "Produto";
             this.nudpInss._TamanhoComponente = 127;
             this.nudpInss._TamanhoMaiorLabel = 200;
-            this.nudpInss._Visible = false;
+            this.nudpInss._Visible = true;
             this.nudpInss.BackColor = System.Drawing.Color.Transparent;
             this.nudpInss.Base = null;
             this.nudpInss.Color = System.Drawing.Color.White;
@@ -1533,7 +1533,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpImportacao._Table = "Produto";
             this.nudpImportacao._TamanhoComponente = 127;
             this.nudpImportacao._TamanhoMaiorLabel = 200;
-            this.nudpImportacao._Visible = false;
+            this.nudpImportacao._Visible = true;
             this.nudpImportacao.BackColor = System.Drawing.Color.Transparent;
             this.nudpImportacao.Base = null;
             this.nudpImportacao.Color = System.Drawing.Color.White;
@@ -1591,7 +1591,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCodigoIcmsPaiVenda._TamanhoComponente = 210;
             this.hlP_PesquisaidCodigoIcmsPaiVenda._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCodigoIcmsPaiVenda._Vinculado = false;
-            this.hlP_PesquisaidCodigoIcmsPaiVenda._Visible = false;
+            this.hlP_PesquisaidCodigoIcmsPaiVenda._Visible = true;
             this.hlP_PesquisaidCodigoIcmsPaiVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCodigoIcmsPaiVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCodigoIcmsPaiVenda.Base = null;
@@ -1621,7 +1621,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTIpiVenda._TamanhoComponente = 210;
             this.hlP_PesquisaidCSTIpiVenda._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCSTIpiVenda._Vinculado = false;
-            this.hlP_PesquisaidCSTIpiVenda._Visible = false;
+            this.hlP_PesquisaidCSTIpiVenda._Visible = true;
             this.hlP_PesquisaidCSTIpiVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTIpiVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTIpiVenda.Base = null;
@@ -1651,7 +1651,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTPisVenda._TamanhoComponente = 210;
             this.hlP_PesquisaidCSTPisVenda._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCSTPisVenda._Vinculado = false;
-            this.hlP_PesquisaidCSTPisVenda._Visible = false;
+            this.hlP_PesquisaidCSTPisVenda._Visible = true;
             this.hlP_PesquisaidCSTPisVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTPisVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTPisVenda.Base = null;
@@ -1681,7 +1681,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTCofinsVenda._TamanhoComponente = 210;
             this.hlP_PesquisaidCSTCofinsVenda._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCSTCofinsVenda._Vinculado = false;
-            this.hlP_PesquisaidCSTCofinsVenda._Visible = false;
+            this.hlP_PesquisaidCSTCofinsVenda._Visible = true;
             this.hlP_PesquisaidCSTCofinsVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTCofinsVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTCofinsVenda.Base = null;
@@ -1710,7 +1710,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidClassificacaoFiscalVenda._TamanhoComponente = 210;
             this.hlP_PesquisaidClassificacaoFiscalVenda._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidClassificacaoFiscalVenda._Vinculado = false;
-            this.hlP_PesquisaidClassificacaoFiscalVenda._Visible = false;
+            this.hlP_PesquisaidClassificacaoFiscalVenda._Visible = true;
             this.hlP_PesquisaidClassificacaoFiscalVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidClassificacaoFiscalVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidClassificacaoFiscalVenda.Base = null;
@@ -1752,7 +1752,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCodigoIcmsPaiCompra._TamanhoComponente = 210;
             this.hlP_PesquisaidCodigoIcmsPaiCompra._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCodigoIcmsPaiCompra._Vinculado = false;
-            this.hlP_PesquisaidCodigoIcmsPaiCompra._Visible = false;
+            this.hlP_PesquisaidCodigoIcmsPaiCompra._Visible = true;
             this.hlP_PesquisaidCodigoIcmsPaiCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCodigoIcmsPaiCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCodigoIcmsPaiCompra.Base = null;
@@ -1782,7 +1782,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTIpiCompra._TamanhoComponente = 210;
             this.hlP_PesquisaidCSTIpiCompra._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCSTIpiCompra._Vinculado = false;
-            this.hlP_PesquisaidCSTIpiCompra._Visible = false;
+            this.hlP_PesquisaidCSTIpiCompra._Visible = true;
             this.hlP_PesquisaidCSTIpiCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTIpiCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTIpiCompra.Base = null;
@@ -1812,7 +1812,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTPisCompra._TamanhoComponente = 210;
             this.hlP_PesquisaidCSTPisCompra._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCSTPisCompra._Vinculado = false;
-            this.hlP_PesquisaidCSTPisCompra._Visible = false;
+            this.hlP_PesquisaidCSTPisCompra._Visible = true;
             this.hlP_PesquisaidCSTPisCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTPisCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTPisCompra.Base = null;
@@ -1842,7 +1842,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTCofinsCompra._TamanhoComponente = 210;
             this.hlP_PesquisaidCSTCofinsCompra._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidCSTCofinsCompra._Vinculado = false;
-            this.hlP_PesquisaidCSTCofinsCompra._Visible = false;
+            this.hlP_PesquisaidCSTCofinsCompra._Visible = true;
             this.hlP_PesquisaidCSTCofinsCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTCofinsCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTCofinsCompra.Base = null;
@@ -1871,7 +1871,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidClassificacaoFiscalCompra._TamanhoComponente = 210;
             this.hlP_PesquisaidClassificacaoFiscalCompra._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidClassificacaoFiscalCompra._Vinculado = false;
-            this.hlP_PesquisaidClassificacaoFiscalCompra._Visible = false;
+            this.hlP_PesquisaidClassificacaoFiscalCompra._Visible = true;
             this.hlP_PesquisaidClassificacaoFiscalCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidClassificacaoFiscalCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidClassificacaoFiscalCompra.Base = null;
@@ -1943,7 +1943,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudvVenda._Table = "Produto";
             this.nudvVenda._TamanhoComponente = 122;
             this.nudvVenda._TamanhoMaiorLabel = 200;
-            this.nudvVenda._Visible = false;
+            this.nudvVenda._Visible = true;
             this.nudvVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudvVenda.Base = null;
             this.nudvVenda.Color = System.Drawing.Color.White;
@@ -1989,7 +1989,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaVendas._TamanhoComponente = 297;
             this.hlP_PesquisaidUnidadeMedidaVendas._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidUnidadeMedidaVendas._Vinculado = false;
-            this.hlP_PesquisaidUnidadeMedidaVendas._Visible = false;
+            this.hlP_PesquisaidUnidadeMedidaVendas._Visible = true;
             this.hlP_PesquisaidUnidadeMedidaVendas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaVendas.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaVendas.Base = null;
@@ -2012,7 +2012,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaExcedenteVenda._Table = "Produto";
             this.nudpEntregaExcedenteVenda._TamanhoComponente = 122;
             this.nudpEntregaExcedenteVenda._TamanhoMaiorLabel = 200;
-            this.nudpEntregaExcedenteVenda._Visible = false;
+            this.nudpEntregaExcedenteVenda._Visible = true;
             this.nudpEntregaExcedenteVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaExcedenteVenda.Base = null;
             this.nudpEntregaExcedenteVenda.Color = System.Drawing.Color.White;
@@ -2051,7 +2051,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaInsuficienteVenda._Table = "Produto";
             this.nudpEntregaInsuficienteVenda._TamanhoComponente = 122;
             this.nudpEntregaInsuficienteVenda._TamanhoMaiorLabel = 200;
-            this.nudpEntregaInsuficienteVenda._Visible = false;
+            this.nudpEntregaInsuficienteVenda._Visible = true;
             this.nudpEntregaInsuficienteVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaInsuficienteVenda.Base = null;
             this.nudpEntregaInsuficienteVenda.Color = System.Drawing.Color.White;
@@ -2092,7 +2092,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtdValorVenda._Table = "Produto";
             this.txtdValorVenda._TamanhoComponente = 122;
             this.txtdValorVenda._TamanhoMaiorLabel = 200;
-            this.txtdValorVenda._Visible = false;
+            this.txtdValorVenda._Visible = true;
             this.txtdValorVenda.BackColor = System.Drawing.Color.Transparent;
             this.txtdValorVenda.Base = null;
             this.txtdValorVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2171,7 +2171,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudvCompra._Table = "Produto";
             this.nudvCompra._TamanhoComponente = 124;
             this.nudvCompra._TamanhoMaiorLabel = 200;
-            this.nudvCompra._Visible = false;
+            this.nudvCompra._Visible = true;
             this.nudvCompra.BackColor = System.Drawing.Color.Transparent;
             this.nudvCompra.Base = null;
             this.nudvCompra.Color = System.Drawing.Color.White;
@@ -2217,7 +2217,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaCompras._TamanhoComponente = 278;
             this.hlP_PesquisaidUnidadeMedidaCompras._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidUnidadeMedidaCompras._Vinculado = false;
-            this.hlP_PesquisaidUnidadeMedidaCompras._Visible = false;
+            this.hlP_PesquisaidUnidadeMedidaCompras._Visible = true;
             this.hlP_PesquisaidUnidadeMedidaCompras.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaCompras.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaCompras.Base = null;
@@ -2243,7 +2243,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstFornecedorHomologado._Table = "Produto";
             this.cbxstFornecedorHomologado._TamanhoComponente = 124;
             this.cbxstFornecedorHomologado._TamanhoMaiorLabel = 200;
-            this.cbxstFornecedorHomologado._Visible = false;
+            this.cbxstFornecedorHomologado._Visible = true;
             this.cbxstFornecedorHomologado.BackColor = System.Drawing.Color.Transparent;
             this.cbxstFornecedorHomologado.Base = null;
             this.cbxstFornecedorHomologado.Color = System.Drawing.Color.White;
@@ -2271,7 +2271,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnLoteMinimoCompras._Table = "Produto";
             this.nudnLoteMinimoCompras._TamanhoComponente = 124;
             this.nudnLoteMinimoCompras._TamanhoMaiorLabel = 200;
-            this.nudnLoteMinimoCompras._Visible = false;
+            this.nudnLoteMinimoCompras._Visible = true;
             this.nudnLoteMinimoCompras.BackColor = System.Drawing.Color.Transparent;
             this.nudnLoteMinimoCompras.Base = null;
             this.nudnLoteMinimoCompras.Color = System.Drawing.Color.White;
@@ -2310,7 +2310,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaExcedenteCompra._Table = "Produto";
             this.nudpEntregaExcedenteCompra._TamanhoComponente = 124;
             this.nudpEntregaExcedenteCompra._TamanhoMaiorLabel = 200;
-            this.nudpEntregaExcedenteCompra._Visible = false;
+            this.nudpEntregaExcedenteCompra._Visible = true;
             this.nudpEntregaExcedenteCompra.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaExcedenteCompra.Base = null;
             this.nudpEntregaExcedenteCompra.Color = System.Drawing.Color.White;
@@ -2349,7 +2349,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaInsuficienteCompra._Table = "Produto";
             this.nudpEntregaInsuficienteCompra._TamanhoComponente = 124;
             this.nudpEntregaInsuficienteCompra._TamanhoMaiorLabel = 200;
-            this.nudpEntregaInsuficienteCompra._Visible = false;
+            this.nudpEntregaInsuficienteCompra._Visible = true;
             this.nudpEntregaInsuficienteCompra.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaInsuficienteCompra.Base = null;
             this.nudpEntregaInsuficienteCompra.Color = System.Drawing.Color.White;
@@ -2400,7 +2400,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimeCotacao._Table = "Produto";
             this.dtdleadTimeCotacao._TamanhoComponente = 72;
             this.dtdleadTimeCotacao._TamanhoMaiorLabel = 200;
-            this.dtdleadTimeCotacao._Visible = false;
+            this.dtdleadTimeCotacao._Visible = true;
             this.dtdleadTimeCotacao.BackColor = System.Drawing.Color.Transparent;
             this.dtdleadTimeCotacao.Base = null;
             this.dtdleadTimeCotacao.Color = System.Drawing.Color.Empty;
@@ -2424,7 +2424,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimePedido._Table = "Produto";
             this.dtdleadTimePedido._TamanhoComponente = 72;
             this.dtdleadTimePedido._TamanhoMaiorLabel = 200;
-            this.dtdleadTimePedido._Visible = false;
+            this.dtdleadTimePedido._Visible = true;
             this.dtdleadTimePedido.BackColor = System.Drawing.Color.Transparent;
             this.dtdleadTimePedido.Base = null;
             this.dtdleadTimePedido.Color = System.Drawing.Color.Empty;
@@ -2448,7 +2448,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimeRecebimento._Table = "Produto";
             this.dtdleadTimeRecebimento._TamanhoComponente = 72;
             this.dtdleadTimeRecebimento._TamanhoMaiorLabel = 200;
-            this.dtdleadTimeRecebimento._Visible = false;
+            this.dtdleadTimeRecebimento._Visible = true;
             this.dtdleadTimeRecebimento.BackColor = System.Drawing.Color.Transparent;
             this.dtdleadTimeRecebimento.Base = null;
             this.dtdleadTimeRecebimento.Color = System.Drawing.Color.Empty;
@@ -2519,7 +2519,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudvProducao._Table = "Produto";
             this.nudvProducao._TamanhoComponente = 97;
             this.nudvProducao._TamanhoMaiorLabel = 200;
-            this.nudvProducao._Visible = false;
+            this.nudvProducao._Visible = true;
             this.nudvProducao.BackColor = System.Drawing.Color.Transparent;
             this.nudvProducao.Base = null;
             this.nudvProducao.Color = System.Drawing.Color.White;
@@ -2565,7 +2565,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaProducao._TamanhoComponente = 257;
             this.hlP_PesquisaidUnidadeMedidaProducao._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidUnidadeMedidaProducao._Vinculado = false;
-            this.hlP_PesquisaidUnidadeMedidaProducao._Visible = false;
+            this.hlP_PesquisaidUnidadeMedidaProducao._Visible = true;
             this.hlP_PesquisaidUnidadeMedidaProducao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaProducao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaProducao.Base = null;
@@ -2588,7 +2588,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpPerdaConstante._Table = "Produto";
             this.nudpPerdaConstante._TamanhoComponente = 97;
             this.nudpPerdaConstante._TamanhoMaiorLabel = 200;
-            this.nudpPerdaConstante._Visible = false;
+            this.nudpPerdaConstante._Visible = true;
             this.nudpPerdaConstante.BackColor = System.Drawing.Color.Transparent;
             this.nudpPerdaConstante.Base = null;
             this.nudpPerdaConstante.Color = System.Drawing.Color.White;
@@ -2628,7 +2628,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpPerdaVariavel._Table = "Produto";
             this.nudpPerdaVariavel._TamanhoComponente = 97;
             this.nudpPerdaVariavel._TamanhoMaiorLabel = 200;
-            this.nudpPerdaVariavel._Visible = false;
+            this.nudpPerdaVariavel._Visible = true;
             this.nudpPerdaVariavel.BackColor = System.Drawing.Color.Transparent;
             this.nudpPerdaVariavel.Base = null;
             this.nudpPerdaVariavel.Color = System.Drawing.Color.White;

@@ -147,7 +147,7 @@
             this.txtCodigo._Table = "Decisao";
             this.txtCodigo._TamanhoComponente = 81;
             this.txtCodigo._TamanhoMaiorLabel = 60;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -174,7 +174,7 @@
             this.txtxDecisao._Table = "Decisao";
             this.txtxDecisao._TamanhoComponente = 222;
             this.txtxDecisao._TamanhoMaiorLabel = 60;
-            this.txtxDecisao._Visible = false;
+            this.txtxDecisao._Visible = true;
             this.txtxDecisao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDecisao.Base = null;
             this.txtxDecisao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -200,7 +200,7 @@
             this.txtxDescricao._Table = "Decisao";
             this.txtxDescricao._TamanhoComponente = 222;
             this.txtxDescricao._TamanhoMaiorLabel = 60;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

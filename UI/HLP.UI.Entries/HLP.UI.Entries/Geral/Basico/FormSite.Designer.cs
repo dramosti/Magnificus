@@ -182,7 +182,7 @@ namespace HLP.UI.Entries.Geral.Basico
             this.txtCodigo._Table = "Site";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 120;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -208,7 +208,7 @@ namespace HLP.UI.Entries.Geral.Basico
             this.txtxSite._Table = "Site";
             this.txtxSite._TamanhoComponente = 159;
             this.txtxSite._TamanhoMaiorLabel = 120;
-            this.txtxSite._Visible = false;
+            this.txtxSite._Visible = true;
             this.txtxSite.BackColor = System.Drawing.Color.Transparent;
             this.txtxSite.Base = null;
             this.txtxSite.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -234,7 +234,7 @@ namespace HLP.UI.Entries.Geral.Basico
             this.txtxDescricao._Table = "Site";
             this.txtxDescricao._TamanhoComponente = 199;
             this.txtxDescricao._TamanhoMaiorLabel = 120;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

@@ -156,7 +156,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtCodigo._Table = "Dia_pagamento";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -182,7 +182,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxDiaPagamento._Table = "Dia_pagamento";
             this.txtxDiaPagamento._TamanhoComponente = 134;
             this.txtxDiaPagamento._TamanhoMaiorLabel = 150;
-            this.txtxDiaPagamento._Visible = false;
+            this.txtxDiaPagamento._Visible = true;
             this.txtxDiaPagamento.BackColor = System.Drawing.Color.Transparent;
             this.txtxDiaPagamento.Base = null;
             this.txtxDiaPagamento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -208,7 +208,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxDescricao._Table = "Dia_pagamento";
             this.txtxDescricao._TamanhoComponente = 351;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

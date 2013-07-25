@@ -97,7 +97,7 @@
             this.txtCodigo._Table = "Situacao_tributaria_cofins";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -123,7 +123,7 @@
             this.txtcCSTCofins._Table = "Situacao_tributaria_cofins";
             this.txtcCSTCofins._TamanhoComponente = 107;
             this.txtcCSTCofins._TamanhoMaiorLabel = 200;
-            this.txtcCSTCofins._Visible = false;
+            this.txtcCSTCofins._Visible = true;
             this.txtcCSTCofins.BackColor = System.Drawing.Color.Transparent;
             this.txtcCSTCofins.Base = null;
             this.txtcCSTCofins.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -149,7 +149,7 @@
             this.txtxCSTCofins._Table = "Situacao_tributaria_cofins";
             this.txtxCSTCofins._TamanhoComponente = 280;
             this.txtxCSTCofins._TamanhoMaiorLabel = 200;
-            this.txtxCSTCofins._Visible = false;
+            this.txtxCSTCofins._Visible = true;
             this.txtxCSTCofins.BackColor = System.Drawing.Color.Transparent;
             this.txtxCSTCofins.Base = null;
             this.txtxCSTCofins.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -175,7 +175,7 @@
             this.cbostSimplesNacional._Table = "Situacao_tributaria_cofins";
             this.cbostSimplesNacional._TamanhoComponente = 80;
             this.cbostSimplesNacional._TamanhoMaiorLabel = 200;
-            this.cbostSimplesNacional._Visible = false;
+            this.cbostSimplesNacional._Visible = true;
             this.cbostSimplesNacional.BackColor = System.Drawing.Color.Transparent;
             this.cbostSimplesNacional.Base = null;
             this.cbostSimplesNacional.Color = System.Drawing.Color.White;

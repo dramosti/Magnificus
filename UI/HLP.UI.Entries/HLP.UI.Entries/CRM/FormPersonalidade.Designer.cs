@@ -142,7 +142,7 @@
             this.txtCodigo._Table = "Personalidade";
             this.txtCodigo._TamanhoComponente = 81;
             this.txtCodigo._TamanhoMaiorLabel = 90;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -168,7 +168,7 @@
             this.txtxPersonalidade._Table = "Personalidade";
             this.txtxPersonalidade._TamanhoComponente = 218;
             this.txtxPersonalidade._TamanhoMaiorLabel = 90;
-            this.txtxPersonalidade._Visible = false;
+            this.txtxPersonalidade._Visible = true;
             this.txtxPersonalidade.BackColor = System.Drawing.Color.Transparent;
             this.txtxPersonalidade.Base = null;
             this.txtxPersonalidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -194,7 +194,7 @@
             this.txtxDescricao._Table = "Personalidade";
             this.txtxDescricao._TamanhoComponente = 218;
             this.txtxDescricao._TamanhoMaiorLabel = 90;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

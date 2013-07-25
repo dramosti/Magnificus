@@ -38,11 +38,20 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
                 {
                     if ((componente.xTypeComp == typeof(HLP.Comum.Components.HLP_NumericUpDown).Name) && (componente.Base != null))
                         componente.objConfigCompUsu.nMaxLength = Convert.ToDecimal(componente.Base.PRECISION);
+                    if (componente.objConfigCompUsu.idComponenteUsuario == null)
+                    {
+                        componente.objConfigCompUsu.idComponenteUsuario = (int)UndTrabalho.dbPrincipal.ExecuteScalar(
+                       UndTrabalho.dbTransaction,
+                       "dbo.Proc_save_CONFIG_Componente_Usuario",
+                       ParameterBase<ConfigComponenteUsuModel>.SetParameterValue(componente.objConfigCompUsu));
+                    }
+                    else
+                    {
+                        componente.objConfigCompUsu.idComponenteUsuario = (int)UndTrabalho.dbPrincipal.ExecuteScalar(
+                      "dbo.Proc_save_CONFIG_Componente_Usuario",
+                      ParameterBase<ConfigComponenteUsuModel>.SetParameterValue(componente.objConfigCompUsu));
+                    }
 
-                    componente.objConfigCompUsu.idComponenteUsuario = (int)UndTrabalho.dbPrincipal.ExecuteScalar(
-                        UndTrabalho.dbTransaction,
-                        "dbo.Proc_save_CONFIG_Componente_Usuario",
-                        ParameterBase<ConfigComponenteUsuModel>.SetParameterValue(componente.objConfigCompUsu));
 
                     if ((componente.xTypeComp == typeof(HLP.Comum.Components.HLP_NumericUpDown).Name) && (componente.Base != null))
                         componente.objConfigCompUsu.nMaxLength = componente.Base.GetMaxLeghtToNumericUpDown();
@@ -51,8 +60,6 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
                 {
                     if (componente.objConfigCompGridUsu.idCompGridUsuario == null)
                     {
-
-
                         componente.objConfigCompGridUsu.idCompGridUsuario = (int)UndTrabalho.dbPrincipal.ExecuteScalar(
                             UndTrabalho.dbTransaction,
                             "dbo.Proc_save_CONFIG_CompGridView_Usuario",
@@ -64,7 +71,6 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
                         colunasGridRepository.Save(coluna);
                     }
                 }
-
             }
             catch (Exception ex)
             {

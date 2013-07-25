@@ -191,7 +191,7 @@
             this.txtCodigo._Table = "Site";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -216,7 +216,7 @@
             this.txtdCadastro._Table = "Site";
             this.txtdCadastro._TamanhoComponente = 132;
             this.txtdCadastro._TamanhoMaiorLabel = 200;
-            this.txtdCadastro._Visible = false;
+            this.txtdCadastro._Visible = true;
             this.txtdCadastro.BackColor = System.Drawing.Color.Transparent;
             this.txtdCadastro.Base = null;
             this.txtdCadastro.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -241,7 +241,7 @@
             this.txtxNome._Table = "Site";
             this.txtxNome._TamanhoComponente = 289;
             this.txtxNome._TamanhoMaiorLabel = 200;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -266,7 +266,7 @@
             this.txtxFantasia._Table = "Site";
             this.txtxFantasia._TamanhoComponente = 289;
             this.txtxFantasia._TamanhoMaiorLabel = 200;
-            this.txtxFantasia._Visible = false;
+            this.txtxFantasia._Visible = true;
             this.txtxFantasia.BackColor = System.Drawing.Color.Transparent;
             this.txtxFantasia.Base = null;
             this.txtxFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -294,7 +294,7 @@
             this.hlP_PesquisaidRamoAtividade._TamanhoComponente = 201;
             this.hlP_PesquisaidRamoAtividade._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidRamoAtividade._Vinculado = false;
-            this.hlP_PesquisaidRamoAtividade._Visible = false;
+            this.hlP_PesquisaidRamoAtividade._Visible = true;
             this.hlP_PesquisaidRamoAtividade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidRamoAtividade.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidRamoAtividade.Base = null;
@@ -321,7 +321,7 @@
             this.hlP_PesquisaidMoeda._TamanhoComponente = 202;
             this.hlP_PesquisaidMoeda._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidMoeda._Vinculado = false;
-            this.hlP_PesquisaidMoeda._Visible = false;
+            this.hlP_PesquisaidMoeda._Visible = true;
             this.hlP_PesquisaidMoeda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidMoeda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidMoeda.Base = null;
@@ -348,7 +348,7 @@
             this.hlP_PesquisaidFuncionario._TamanhoComponente = 202;
             this.hlP_PesquisaidFuncionario._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidFuncionario._Vinculado = false;
-            this.hlP_PesquisaidFuncionario._Visible = false;
+            this.hlP_PesquisaidFuncionario._Visible = true;
             this.hlP_PesquisaidFuncionario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidFuncionario.Base = null;
@@ -369,7 +369,7 @@
             this.nudnFuncionarios._Regex = null;
             this.nudnFuncionarios._TamanhoComponente = 116;
             this.nudnFuncionarios._TamanhoMaiorLabel = 200;
-            this.nudnFuncionarios._Visible = false;
+            this.nudnFuncionarios._Visible = true;
             this.nudnFuncionarios.BackColor = System.Drawing.Color.Transparent;
             this.nudnFuncionarios.Base = null;
             this.nudnFuncionarios.Color = System.Drawing.Color.White;
@@ -408,7 +408,7 @@
             this.cbostPessoa._situacao = true;
             this.cbostPessoa._TamanhoComponente = 69;
             this.cbostPessoa._TamanhoMaiorLabel = 200;
-            this.cbostPessoa._Visible = false;
+            this.cbostPessoa._Visible = true;
             this.cbostPessoa.BackColor = System.Drawing.Color.Transparent;
             this.cbostPessoa.Base = null;
             this.cbostPessoa.Color = System.Drawing.Color.White;
@@ -434,7 +434,7 @@
             this.mskxCpf._TamanhoMaiorLabel = 200;
             this.mskxCpf._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCpf._UF = null;
-            this.mskxCpf._Visible = false;
+            this.mskxCpf._Visible = true;
             this.mskxCpf.BackColor = System.Drawing.Color.Transparent;
             this.mskxCpf.Base = null;
             this.mskxCpf.Color = System.Drawing.Color.White;
@@ -460,7 +460,7 @@
             this.txtxRg._Table = "Site";
             this.txtxRg._TamanhoComponente = 125;
             this.txtxRg._TamanhoMaiorLabel = 200;
-            this.txtxRg._Visible = false;
+            this.txtxRg._Visible = true;
             this.txtxRg.BackColor = System.Drawing.Color.Transparent;
             this.txtxRg.Base = null;
             this.txtxRg.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -485,7 +485,7 @@
             this.txtxMemorando._Table = "Site";
             this.txtxMemorando._TamanhoComponente = 283;
             this.txtxMemorando._TamanhoMaiorLabel = 150;
-            this.txtxMemorando._Visible = false;
+            this.txtxMemorando._Visible = true;
             this.txtxMemorando.BackColor = System.Drawing.Color.Transparent;
             this.txtxMemorando.Base = null;
             this.txtxMemorando.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -510,7 +510,7 @@
             this.txtxFusoHorario._Table = "Site";
             this.txtxFusoHorario._TamanhoComponente = 156;
             this.txtxFusoHorario._TamanhoMaiorLabel = 150;
-            this.txtxFusoHorario._Visible = false;
+            this.txtxFusoHorario._Visible = true;
             this.txtxFusoHorario.BackColor = System.Drawing.Color.Transparent;
             this.txtxFusoHorario.Base = null;
             this.txtxFusoHorario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -534,7 +534,7 @@
             this.mskxTelefone1._TamanhoMaiorLabel = 150;
             this.mskxTelefone1._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxTelefone1._UF = null;
-            this.mskxTelefone1._Visible = false;
+            this.mskxTelefone1._Visible = true;
             this.mskxTelefone1.BackColor = System.Drawing.Color.Transparent;
             this.mskxTelefone1.Base = null;
             this.mskxTelefone1.Color = System.Drawing.Color.White;
@@ -559,7 +559,7 @@
             this.mskxTelefone2._TamanhoMaiorLabel = 150;
             this.mskxTelefone2._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxTelefone2._UF = null;
-            this.mskxTelefone2._Visible = false;
+            this.mskxTelefone2._Visible = true;
             this.mskxTelefone2.BackColor = System.Drawing.Color.Transparent;
             this.mskxTelefone2.Base = null;
             this.mskxTelefone2.Color = System.Drawing.Color.White;
@@ -585,7 +585,7 @@
             this.txtxFax._Table = "Site";
             this.txtxFax._TamanhoComponente = 159;
             this.txtxFax._TamanhoMaiorLabel = 150;
-            this.txtxFax._Visible = false;
+            this.txtxFax._Visible = true;
             this.txtxFax.BackColor = System.Drawing.Color.Transparent;
             this.txtxFax.Base = null;
             this.txtxFax.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -610,7 +610,7 @@
             this.txtxEmail._Table = "Site";
             this.txtxEmail._TamanhoComponente = 159;
             this.txtxEmail._TamanhoMaiorLabel = 150;
-            this.txtxEmail._Visible = false;
+            this.txtxEmail._Visible = true;
             this.txtxEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmail.Base = null;
             this.txtxEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -635,7 +635,7 @@
             this.txtxHttp._Table = "Site";
             this.txtxHttp._TamanhoComponente = 155;
             this.txtxHttp._TamanhoMaiorLabel = 150;
-            this.txtxHttp._Visible = false;
+            this.txtxHttp._Visible = true;
             this.txtxHttp.BackColor = System.Drawing.Color.Transparent;
             this.txtxHttp.Base = null;
             this.txtxHttp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -659,7 +659,7 @@
             this.cboAtivo._situacao = true;
             this.cboAtivo._TamanhoComponente = 71;
             this.cboAtivo._TamanhoMaiorLabel = 150;
-            this.cboAtivo._Visible = false;
+            this.cboAtivo._Visible = true;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.Color = System.Drawing.Color.White;
@@ -732,7 +732,7 @@
             this.txtxEndereco._Table = "Site";
             this.txtxEndereco._TamanhoComponente = 201;
             this.txtxEndereco._TamanhoMaiorLabel = 150;
-            this.txtxEndereco._Visible = false;
+            this.txtxEndereco._Visible = true;
             this.txtxEndereco.BackColor = System.Drawing.Color.Transparent;
             this.txtxEndereco.Base = null;
             this.txtxEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -757,7 +757,7 @@
             this.txtnNumero._Table = "Site";
             this.txtnNumero._TamanhoComponente = 158;
             this.txtnNumero._TamanhoMaiorLabel = 150;
-            this.txtnNumero._Visible = false;
+            this.txtnNumero._Visible = true;
             this.txtnNumero.BackColor = System.Drawing.Color.Transparent;
             this.txtnNumero.Base = null;
             this.txtnNumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -782,7 +782,7 @@
             this.txtxComplemento._Table = "Site";
             this.txtxComplemento._TamanhoComponente = 158;
             this.txtxComplemento._TamanhoMaiorLabel = 150;
-            this.txtxComplemento._Visible = false;
+            this.txtxComplemento._Visible = true;
             this.txtxComplemento.BackColor = System.Drawing.Color.Transparent;
             this.txtxComplemento.Base = null;
             this.txtxComplemento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -807,7 +807,7 @@
             this.txtxBairro._Table = "Site";
             this.txtxBairro._TamanhoComponente = 158;
             this.txtxBairro._TamanhoMaiorLabel = 150;
-            this.txtxBairro._Visible = false;
+            this.txtxBairro._Visible = true;
             this.txtxBairro.BackColor = System.Drawing.Color.Transparent;
             this.txtxBairro.Base = null;
             this.txtxBairro.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -831,7 +831,7 @@
             this.mskxCEP._TamanhoMaiorLabel = 150;
             this.mskxCEP._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCEP._UF = null;
-            this.mskxCEP._Visible = false;
+            this.mskxCEP._Visible = true;
             this.mskxCEP.BackColor = System.Drawing.Color.Transparent;
             this.mskxCEP.Base = null;
             this.mskxCEP.Color = System.Drawing.Color.White;
@@ -857,7 +857,7 @@
             this.txtxCaixaPostal._Table = "Site";
             this.txtxCaixaPostal._TamanhoComponente = 157;
             this.txtxCaixaPostal._TamanhoMaiorLabel = 150;
-            this.txtxCaixaPostal._Visible = false;
+            this.txtxCaixaPostal._Visible = true;
             this.txtxCaixaPostal.BackColor = System.Drawing.Color.Transparent;
             this.txtxCaixaPostal.Base = null;
             this.txtxCaixaPostal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -882,7 +882,7 @@
             this.txtxLatitude._Table = "Site";
             this.txtxLatitude._TamanhoComponente = 158;
             this.txtxLatitude._TamanhoMaiorLabel = 150;
-            this.txtxLatitude._Visible = false;
+            this.txtxLatitude._Visible = true;
             this.txtxLatitude.BackColor = System.Drawing.Color.Transparent;
             this.txtxLatitude.Base = null;
             this.txtxLatitude.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -907,7 +907,7 @@
             this.txtxLongitude._Table = "Site";
             this.txtxLongitude._TamanhoComponente = 157;
             this.txtxLongitude._TamanhoMaiorLabel = 150;
-            this.txtxLongitude._Visible = false;
+            this.txtxLongitude._Visible = true;
             this.txtxLongitude.BackColor = System.Drawing.Color.Transparent;
             this.txtxLongitude.Base = null;
             this.txtxLongitude.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -982,7 +982,7 @@
             this.cbostCreditoAprovado._situacao = true;
             this.cbostCreditoAprovado._TamanhoComponente = 69;
             this.cbostCreditoAprovado._TamanhoMaiorLabel = 180;
-            this.cbostCreditoAprovado._Visible = false;
+            this.cbostCreditoAprovado._Visible = true;
             this.cbostCreditoAprovado.BackColor = System.Drawing.Color.Transparent;
             this.cbostCreditoAprovado.Base = null;
             this.cbostCreditoAprovado.Color = System.Drawing.Color.White;
@@ -1008,7 +1008,7 @@
             this.hlP_ComboBox2._situacao = true;
             this.hlP_ComboBox2._TamanhoComponente = 68;
             this.hlP_ComboBox2._TamanhoMaiorLabel = 180;
-            this.hlP_ComboBox2._Visible = false;
+            this.hlP_ComboBox2._Visible = true;
             this.hlP_ComboBox2.BackColor = System.Drawing.Color.Transparent;
             this.hlP_ComboBox2.Base = null;
             this.hlP_ComboBox2.Color = System.Drawing.Color.White;

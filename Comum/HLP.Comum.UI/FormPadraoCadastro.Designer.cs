@@ -37,12 +37,6 @@
             this.lblError = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblProgresso = new System.Windows.Forms.ToolStripStatusLabel();
             this.pbProgresso = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.tsConfigComp = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsConsistForm = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsRestaurarPadrao = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsArquivoSys = new System.Windows.Forms.ToolStripMenuItem();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.sepNovo = new System.Windows.Forms.ToolStripSeparator();
             this.sepExcluir = new System.Windows.Forms.ToolStripSeparator();
@@ -50,8 +44,22 @@
             this.sepSalvar = new System.Windows.Forms.ToolStripSeparator();
             this.sepCancelar = new System.Windows.Forms.ToolStripSeparator();
             this.sepPesquisar = new System.Windows.Forms.ToolStripSeparator();
-            this.sepDuplicar = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sepImprimir = new System.Windows.Forms.ToolStripSeparator();
+            this.lblCount = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelPadrao = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.cmsOpcoesGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exportarConteudoPExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvarTamanhoDasColunasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bwWorkerInicializa = new System.ComponentModel.BackgroundWorker();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.tsConfigComp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsConsistForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsRestaurarPadrao = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsArquivoSys = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNovo = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.btnAtualizar = new System.Windows.Forms.ToolStripButton();
@@ -59,24 +67,24 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnPesquisar = new System.Windows.Forms.ToolStripButton();
             this.btnImprimir = new System.Windows.Forms.ToolStripButton();
-            this.sepImprimir = new System.Windows.Forms.ToolStripSeparator();
             this.btnDuplicar = new System.Windows.Forms.ToolStripButton();
             this.btnPrimeiro = new System.Windows.Forms.ToolStripButton();
             this.btnAnterior = new System.Windows.Forms.ToolStripButton();
-            this.lblCount = new System.Windows.Forms.ToolStripButton();
             this.btnProximo = new System.Windows.Forms.ToolStripButton();
             this.btnUltimo = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelPadrao = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.cmsOpcoesGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.exportarConteudoPExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salvarTamanhoDasColunasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bwWorker = new System.ComponentModel.BackgroundWorker();
+            this.bwWorkerRecarregaForm = new System.ComponentModel.BackgroundWorker();
+            this.tsConfigurar = new System.Windows.Forms.ToolStripMenuItem();
+            this.sepDuplicar = new System.Windows.Forms.ToolStripSeparator();
+            this.ctxConfiguracao = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsHabilitar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsDesabilitar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsCamposVisiveis = new System.Windows.Forms.ToolStripMenuItem();
             this.stripPadrao.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.cmsOpcoesGrid.SuspendLayout();
+            this.ctxConfiguracao.SuspendLayout();
             this.SuspendLayout();
             // 
             // stripPadrao
@@ -95,7 +103,7 @@
             this.stripPadrao.Name = "stripPadrao";
             this.stripPadrao.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
             this.stripPadrao.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.stripPadrao.Size = new System.Drawing.Size(818, 22);
+            this.stripPadrao.Size = new System.Drawing.Size(1158, 22);
             this.stripPadrao.SizingGrip = false;
             this.stripPadrao.TabIndex = 113;
             // 
@@ -107,7 +115,7 @@
             this.lblHelp.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.lblHelp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelp.Name = "lblHelp";
-            this.lblHelp.Size = new System.Drawing.Size(490, 17);
+            this.lblHelp.Size = new System.Drawing.Size(1034, 17);
             this.lblHelp.Spring = true;
             this.lblHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -145,6 +153,147 @@
             this.pbProgresso.Size = new System.Drawing.Size(100, 16);
             this.pbProgresso.Step = 1;
             this.pbProgresso.Visible = false;
+            // 
+            // miniToolStrip
+            // 
+            this.miniToolStrip.AutoSize = false;
+            this.miniToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.miniToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.miniToolStrip.Location = new System.Drawing.Point(515, 4);
+            this.miniToolStrip.Name = "miniToolStrip";
+            this.miniToolStrip.Size = new System.Drawing.Size(623, 27);
+            this.miniToolStrip.TabIndex = 104;
+            // 
+            // sepNovo
+            // 
+            this.sepNovo.Name = "sepNovo";
+            this.sepNovo.Size = new System.Drawing.Size(6, 23);
+            // 
+            // sepExcluir
+            // 
+            this.sepExcluir.Name = "sepExcluir";
+            this.sepExcluir.Size = new System.Drawing.Size(6, 23);
+            // 
+            // sepAtualizar
+            // 
+            this.sepAtualizar.Name = "sepAtualizar";
+            this.sepAtualizar.Size = new System.Drawing.Size(6, 23);
+            // 
+            // sepSalvar
+            // 
+            this.sepSalvar.Name = "sepSalvar";
+            this.sepSalvar.Size = new System.Drawing.Size(6, 23);
+            // 
+            // sepCancelar
+            // 
+            this.sepCancelar.Name = "sepCancelar";
+            this.sepCancelar.Size = new System.Drawing.Size(6, 23);
+            // 
+            // sepPesquisar
+            // 
+            this.sepPesquisar.Name = "sepPesquisar";
+            this.sepPesquisar.Size = new System.Drawing.Size(6, 23);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNovo,
+            this.sepNovo,
+            this.btnExcluir,
+            this.sepExcluir,
+            this.btnAtualizar,
+            this.sepAtualizar,
+            this.btnSalvar,
+            this.sepSalvar,
+            this.btnCancelar,
+            this.sepCancelar,
+            this.btnPesquisar,
+            this.sepPesquisar,
+            this.btnImprimir,
+            this.sepImprimir,
+            this.btnDuplicar,
+            this.toolStripSeparator1,
+            this.tsConfigurar,
+            this.sepDuplicar,
+            this.btnPrimeiro,
+            this.btnAnterior,
+            this.lblCount,
+            this.btnProximo,
+            this.btnUltimo});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1160, 27);
+            this.menuStrip1.TabIndex = 104;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // sepImprimir
+            // 
+            this.sepImprimir.Name = "sepImprimir";
+            this.sepImprimir.Size = new System.Drawing.Size(6, 23);
+            // 
+            // lblCount
+            // 
+            this.lblCount.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(42, 20);
+            this.lblCount.Text = "0 de 0";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panelPadrao);
+            this.panel1.Controls.Add(this.stripPadrao);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1160, 284);
+            this.panel1.TabIndex = 117;
+            // 
+            // panelPadrao
+            // 
+            this.panelPadrao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPadrao.Location = new System.Drawing.Point(0, 0);
+            this.panelPadrao.Name = "panelPadrao";
+            this.panelPadrao.Padding = new System.Windows.Forms.Padding(3);
+            this.panelPadrao.Size = new System.Drawing.Size(1158, 260);
+            this.panelPadrao.TabIndex = 117;
+            // 
+            // cmsOpcoesGrid
+            // 
+            this.cmsOpcoesGrid.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmsOpcoesGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarConteudoPExcelToolStripMenuItem,
+            this.salvarTamanhoDasColunasToolStripMenuItem});
+            this.cmsOpcoesGrid.Name = "cmsOpcoesGrid";
+            this.cmsOpcoesGrid.Size = new System.Drawing.Size(244, 48);
+            // 
+            // exportarConteudoPExcelToolStripMenuItem
+            // 
+            this.exportarConteudoPExcelToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportarConteudoPExcelToolStripMenuItem.Name = "exportarConteudoPExcelToolStripMenuItem";
+            this.exportarConteudoPExcelToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.exportarConteudoPExcelToolStripMenuItem.Text = "Exportar Conteúdo p/ Excel";
+            this.exportarConteudoPExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarConteudoPExcelToolStripMenuItem_Click);
+            // 
+            // salvarTamanhoDasColunasToolStripMenuItem
+            // 
+            this.salvarTamanhoDasColunasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salvarTamanhoDasColunasToolStripMenuItem.Name = "salvarTamanhoDasColunasToolStripMenuItem";
+            this.salvarTamanhoDasColunasToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.salvarTamanhoDasColunasToolStripMenuItem.Text = "Salvar Configuração das Colunas";
+            this.salvarTamanhoDasColunasToolStripMenuItem.Click += new System.EventHandler(this.salvarTamanhoDasColunasToolStripMenuItem_Click);
+            // 
+            // bwWorkerInicializa
+            // 
+            this.bwWorkerInicializa.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwWorker_DoWork);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 23);
             // 
             // toolStripSplitButton1
             // 
@@ -199,82 +348,6 @@
             this.tsArquivoSys.Size = new System.Drawing.Size(198, 22);
             this.tsArquivoSys.Text = "Criar Arquivo Sys.Form";
             this.tsArquivoSys.Click += new System.EventHandler(this.TsUtility_Click);
-            // 
-            // miniToolStrip
-            // 
-            this.miniToolStrip.AutoSize = false;
-            this.miniToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.miniToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.miniToolStrip.Location = new System.Drawing.Point(515, 4);
-            this.miniToolStrip.Name = "miniToolStrip";
-            this.miniToolStrip.Size = new System.Drawing.Size(623, 27);
-            this.miniToolStrip.TabIndex = 104;
-            // 
-            // sepNovo
-            // 
-            this.sepNovo.Name = "sepNovo";
-            this.sepNovo.Size = new System.Drawing.Size(6, 23);
-            // 
-            // sepExcluir
-            // 
-            this.sepExcluir.Name = "sepExcluir";
-            this.sepExcluir.Size = new System.Drawing.Size(6, 23);
-            // 
-            // sepAtualizar
-            // 
-            this.sepAtualizar.Name = "sepAtualizar";
-            this.sepAtualizar.Size = new System.Drawing.Size(6, 23);
-            // 
-            // sepSalvar
-            // 
-            this.sepSalvar.Name = "sepSalvar";
-            this.sepSalvar.Size = new System.Drawing.Size(6, 23);
-            // 
-            // sepCancelar
-            // 
-            this.sepCancelar.Name = "sepCancelar";
-            this.sepCancelar.Size = new System.Drawing.Size(6, 23);
-            // 
-            // sepPesquisar
-            // 
-            this.sepPesquisar.Name = "sepPesquisar";
-            this.sepPesquisar.Size = new System.Drawing.Size(6, 23);
-            // 
-            // sepDuplicar
-            // 
-            this.sepDuplicar.Name = "sepDuplicar";
-            this.sepDuplicar.Size = new System.Drawing.Size(6, 23);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNovo,
-            this.sepNovo,
-            this.btnExcluir,
-            this.sepExcluir,
-            this.btnAtualizar,
-            this.sepAtualizar,
-            this.btnSalvar,
-            this.sepSalvar,
-            this.btnCancelar,
-            this.sepCancelar,
-            this.btnPesquisar,
-            this.sepPesquisar,
-            this.btnImprimir,
-            this.sepImprimir,
-            this.btnDuplicar,
-            this.sepDuplicar,
-            this.btnPrimeiro,
-            this.btnAnterior,
-            this.lblCount,
-            this.btnProximo,
-            this.btnUltimo});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(820, 27);
-            this.menuStrip1.TabIndex = 104;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // btnNovo
             // 
@@ -350,11 +423,6 @@
             this.btnImprimir.Text = "&Imprimir";
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // sepImprimir
-            // 
-            this.sepImprimir.Name = "sepImprimir";
-            this.sepImprimir.Size = new System.Drawing.Size(6, 23);
-            // 
             // btnDuplicar
             // 
             this.btnDuplicar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -385,14 +453,6 @@
             this.btnAnterior.ToolTipText = "Próximo";
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
-            // lblCount
-            // 
-            this.lblCount.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(42, 20);
-            this.lblCount.Text = "0 de 0";
-            // 
             // btnProximo
             // 
             this.btnProximo.Image = global::HLP.Comum.UI.Properties.Resources.direita___Cópia;
@@ -413,61 +473,66 @@
             this.btnUltimo.ToolTipText = "Próximo";
             this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
-            // panel1
+            // bwWorkerRecarregaForm
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panelPadrao);
-            this.panel1.Controls.Add(this.stripPadrao);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 284);
-            this.panel1.TabIndex = 117;
+            this.bwWorkerRecarregaForm.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwWorkerRecarregaForm_DoWork);
             // 
-            // panelPadrao
+            // tsConfigurar
             // 
-            this.panelPadrao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPadrao.Location = new System.Drawing.Point(0, 0);
-            this.panelPadrao.Name = "panelPadrao";
-            this.panelPadrao.Padding = new System.Windows.Forms.Padding(3);
-            this.panelPadrao.Size = new System.Drawing.Size(818, 260);
-            this.panelPadrao.TabIndex = 117;
+            this.tsConfigurar.BackColor = System.Drawing.Color.Transparent;
+            this.tsConfigurar.DropDown = this.ctxConfiguracao;
+            this.tsConfigurar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.tsConfigurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsConfigurar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsConfigurar.Name = "tsConfigurar";
+            this.tsConfigurar.Size = new System.Drawing.Size(75, 23);
+            this.tsConfigurar.Text = "Con&figurar";
             // 
-            // cmsOpcoesGrid
+            // sepDuplicar
             // 
-            this.cmsOpcoesGrid.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmsOpcoesGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportarConteudoPExcelToolStripMenuItem,
-            this.salvarTamanhoDasColunasToolStripMenuItem});
-            this.cmsOpcoesGrid.Name = "cmsOpcoesGrid";
-            this.cmsOpcoesGrid.Size = new System.Drawing.Size(244, 48);
+            this.sepDuplicar.Name = "sepDuplicar";
+            this.sepDuplicar.Size = new System.Drawing.Size(6, 23);
             // 
-            // exportarConteudoPExcelToolStripMenuItem
+            // ctxConfiguracao
             // 
-            this.exportarConteudoPExcelToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportarConteudoPExcelToolStripMenuItem.Name = "exportarConteudoPExcelToolStripMenuItem";
-            this.exportarConteudoPExcelToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.exportarConteudoPExcelToolStripMenuItem.Text = "Exportar Conteúdo p/ Excel";
-            this.exportarConteudoPExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarConteudoPExcelToolStripMenuItem_Click);
+            this.ctxConfiguracao.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxConfiguracao.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsHabilitar,
+            this.tsDesabilitar,
+            this.tsCamposVisiveis});
+            this.ctxConfiguracao.Name = "cmsOpcoesGrid";
+            this.ctxConfiguracao.Size = new System.Drawing.Size(211, 70);
             // 
-            // salvarTamanhoDasColunasToolStripMenuItem
+            // tsHabilitar
             // 
-            this.salvarTamanhoDasColunasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salvarTamanhoDasColunasToolStripMenuItem.Name = "salvarTamanhoDasColunasToolStripMenuItem";
-            this.salvarTamanhoDasColunasToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.salvarTamanhoDasColunasToolStripMenuItem.Text = "Salvar Configuração das Colunas";
-            this.salvarTamanhoDasColunasToolStripMenuItem.Click += new System.EventHandler(this.salvarTamanhoDasColunasToolStripMenuItem_Click);
+            this.tsHabilitar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsHabilitar.Name = "tsHabilitar";
+            this.tsHabilitar.Size = new System.Drawing.Size(210, 22);
+            this.tsHabilitar.Text = "Habilitar";
+            this.tsHabilitar.Click += new System.EventHandler(this.tsHab_Click);
             // 
-            // bwWorker
+            // tsDesabilitar
             // 
-            this.bwWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwWorker_DoWork);
+            this.tsDesabilitar.Enabled = false;
+            this.tsDesabilitar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsDesabilitar.Name = "tsDesabilitar";
+            this.tsDesabilitar.Size = new System.Drawing.Size(210, 22);
+            this.tsDesabilitar.Text = "Desabilitar";
+            this.tsDesabilitar.Click += new System.EventHandler(this.tsHab_Click);
+            // 
+            // tsCamposVisiveis
+            // 
+            this.tsCamposVisiveis.Enabled = false;
+            this.tsCamposVisiveis.Name = "tsCamposVisiveis";
+            this.tsCamposVisiveis.Size = new System.Drawing.Size(210, 22);
+            this.tsCamposVisiveis.Text = "Mostrar campos invisíveis";
+            this.tsCamposVisiveis.Click += new System.EventHandler(this.tsHab_Click);
             // 
             // FormPadraoCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 311);
+            this.ClientSize = new System.Drawing.Size(1160, 311);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -492,6 +557,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).EndInit();
             this.cmsOpcoesGrid.ResumeLayout(false);
+            this.ctxConfiguracao.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,7 +605,14 @@
         public System.Windows.Forms.ToolStripProgressBar pbProgresso;
         public System.Windows.Forms.ToolStripStatusLabel lblProgresso;
         public System.Windows.Forms.ToolStripSeparator sepNovo;
+        private System.ComponentModel.BackgroundWorker bwWorkerInicializa;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.ComponentModel.BackgroundWorker bwWorkerRecarregaForm;
+        private System.Windows.Forms.ToolStripMenuItem tsConfigurar;
         public System.Windows.Forms.ToolStripSeparator sepDuplicar;
-        private System.ComponentModel.BackgroundWorker bwWorker;
+        private System.Windows.Forms.ContextMenuStrip ctxConfiguracao;
+        private System.Windows.Forms.ToolStripMenuItem tsHabilitar;
+        private System.Windows.Forms.ToolStripMenuItem tsDesabilitar;
+        private System.Windows.Forms.ToolStripMenuItem tsCamposVisiveis;
     }
 }

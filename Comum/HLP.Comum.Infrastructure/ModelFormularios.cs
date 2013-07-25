@@ -338,8 +338,6 @@ namespace HLP.Comum.Infrastructure
         public string xDisplayMember { get; set; }
         [ParameterOrder(Order = 17)]
         public int iTamanhoComponente { get; set; }
-
-
     }
 
     public class ConfigCompGridViewUsuModel

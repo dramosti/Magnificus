@@ -191,7 +191,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtCodigo._Table = "Lista_Preco_Pai";
             this.txtCodigo._TamanhoComponente = 111;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -217,7 +217,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxCodigoListaPreco._Table = "Lista_Preco_Pai";
             this.txtxCodigoListaPreco._TamanhoComponente = 111;
             this.txtxCodigoListaPreco._TamanhoMaiorLabel = 200;
-            this.txtxCodigoListaPreco._Visible = false;
+            this.txtxCodigoListaPreco._Visible = true;
             this.txtxCodigoListaPreco.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoListaPreco.Base = null;
             this.txtxCodigoListaPreco.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -243,7 +243,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxLista._Table = "Lista_Preco_Pai";
             this.txtxLista._TamanhoComponente = 317;
             this.txtxLista._TamanhoMaiorLabel = 200;
-            this.txtxLista._Visible = false;
+            this.txtxLista._Visible = true;
             this.txtxLista.BackColor = System.Drawing.Color.Transparent;
             this.txtxLista.Base = null;
             this.txtxLista.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -269,7 +269,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtdListaPreco._Table = "Lista_Preco_Pai";
             this.txtdListaPreco._TamanhoComponente = 111;
             this.txtdListaPreco._TamanhoMaiorLabel = 200;
-            this.txtdListaPreco._Visible = false;
+            this.txtdListaPreco._Visible = true;
             this.txtdListaPreco.BackColor = System.Drawing.Color.Transparent;
             this.txtdListaPreco.Base = null;
             this.txtdListaPreco.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -296,7 +296,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostAtualizacao._Table = "Lista_Preco_Pai";
             this.cbostAtualizacao._TamanhoComponente = 111;
             this.cbostAtualizacao._TamanhoMaiorLabel = 200;
-            this.cbostAtualizacao._Visible = false;
+            this.cbostAtualizacao._Visible = true;
             this.cbostAtualizacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostAtualizacao.Base = null;
             this.cbostAtualizacao.Color = System.Drawing.Color.White;
@@ -331,7 +331,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidListaPrecoOrigem._TamanhoComponente = 227;
             this.hlP_PesquisaidListaPrecoOrigem._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidListaPrecoOrigem._Vinculado = false;
-            this.hlP_PesquisaidListaPrecoOrigem._Visible = false;
+            this.hlP_PesquisaidListaPrecoOrigem._Visible = true;
             this.hlP_PesquisaidListaPrecoOrigem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidListaPrecoOrigem.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidListaPrecoOrigem.Base = null;
@@ -358,7 +358,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtpPercentual._Table = "Lista_Preco_Pai";
             this.txtpPercentual._TamanhoComponente = 111;
             this.txtpPercentual._TamanhoMaiorLabel = 200;
-            this.txtpPercentual._Visible = false;
+            this.txtpPercentual._Visible = true;
             this.txtpPercentual.BackColor = System.Drawing.Color.Transparent;
             this.txtpPercentual.Base = null;
             this.txtpPercentual.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -379,7 +379,7 @@ namespace HLP.UI.Entries.Comercial
             this.btnGerar._Regex = null;
             this.btnGerar._TamanhoComponente = 80;
             this.btnGerar._TamanhoMaiorLabel = 200;
-            this.btnGerar._Visible = false;
+            this.btnGerar._Visible = true;
             this.btnGerar.Base = null;
             this.btnGerar.Location = new System.Drawing.Point(203, 224);
             this.btnGerar.Margin = new System.Windows.Forms.Padding(203, 3, 15, 3);
@@ -400,7 +400,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnDiasSemAtualicao._Table = "Lista_Preco_Pai";
             this.nudnDiasSemAtualicao._TamanhoComponente = 80;
             this.nudnDiasSemAtualicao._TamanhoMaiorLabel = 200;
-            this.nudnDiasSemAtualicao._Visible = false;
+            this.nudnDiasSemAtualicao._Visible = true;
             this.nudnDiasSemAtualicao.BackColor = System.Drawing.Color.Transparent;
             this.nudnDiasSemAtualicao.Base = null;
             this.nudnDiasSemAtualicao.Color = System.Drawing.Color.White;
@@ -440,7 +440,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostContrato._Table = "Lista_Preco_Pai";
             this.cbostContrato._TamanhoComponente = 80;
             this.cbostContrato._TamanhoMaiorLabel = 200;
-            this.cbostContrato._Visible = false;
+            this.cbostContrato._Visible = true;
             this.cbostContrato.BackColor = System.Drawing.Color.Transparent;
             this.cbostContrato.Base = null;
             this.cbostContrato.Color = System.Drawing.Color.White;
@@ -467,7 +467,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxNrContrato._Table = "Lista_Preco_Pai";
             this.txtxNrContrato._TamanhoComponente = 146;
             this.txtxNrContrato._TamanhoMaiorLabel = 200;
-            this.txtxNrContrato._Visible = false;
+            this.txtxNrContrato._Visible = true;
             this.txtxNrContrato.BackColor = System.Drawing.Color.Transparent;
             this.txtxNrContrato.Base = null;
             this.txtxNrContrato.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -490,7 +490,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtpdValidadeContrato._Table = "Lista_Preco_Pai";
             this.dtpdValidadeContrato._TamanhoComponente = 80;
             this.dtpdValidadeContrato._TamanhoMaiorLabel = 200;
-            this.dtpdValidadeContrato._Visible = false;
+            this.dtpdValidadeContrato._Visible = true;
             this.dtpdValidadeContrato.BackColor = System.Drawing.Color.Transparent;
             this.dtpdValidadeContrato.Base = null;
             this.dtpdValidadeContrato.Color = System.Drawing.Color.Empty;
@@ -513,7 +513,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpDescontoMaximo._Table = "Lista_Preco_Pai";
             this.nudpDescontoMaximo._TamanhoComponente = 80;
             this.nudpDescontoMaximo._TamanhoMaiorLabel = 200;
-            this.nudpDescontoMaximo._Visible = false;
+            this.nudpDescontoMaximo._Visible = true;
             this.nudpDescontoMaximo.BackColor = System.Drawing.Color.Transparent;
             this.nudpDescontoMaximo.Base = null;
             this.nudpDescontoMaximo.Color = System.Drawing.Color.White;
@@ -551,7 +551,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpAcressimoMaximo._Table = "Lista_Preco_Pai";
             this.nudpAcressimoMaximo._TamanhoComponente = 80;
             this.nudpAcressimoMaximo._TamanhoMaiorLabel = 200;
-            this.nudpAcressimoMaximo._Visible = false;
+            this.nudpAcressimoMaximo._Visible = true;
             this.nudpAcressimoMaximo.BackColor = System.Drawing.Color.Transparent;
             this.nudpAcressimoMaximo.Base = null;
             this.nudpAcressimoMaximo.Color = System.Drawing.Color.White;
@@ -591,7 +591,7 @@ namespace HLP.UI.Entries.Comercial
             this.cboAtivo._Table = "Lista_Preco_Pai";
             this.cboAtivo._TamanhoComponente = 80;
             this.cboAtivo._TamanhoMaiorLabel = 200;
-            this.cboAtivo._Visible = false;
+            this.cboAtivo._Visible = true;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.Color = System.Drawing.Color.White;
@@ -648,7 +648,7 @@ namespace HLP.UI.Entries.Comercial
             this.btnAtribuicao._Regex = null;
             this.btnAtribuicao._TamanhoComponente = 164;
             this.btnAtribuicao._TamanhoMaiorLabel = 0;
-            this.btnAtribuicao._Visible = false;
+            this.btnAtribuicao._Visible = true;
             this.btnAtribuicao.Base = null;
             this.btnAtribuicao.Location = new System.Drawing.Point(445, 1);
             this.btnAtribuicao.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
@@ -665,7 +665,7 @@ namespace HLP.UI.Entries.Comercial
             this.btnAumentoPreco._Regex = null;
             this.btnAumentoPreco._TamanhoComponente = 267;
             this.btnAumentoPreco._TamanhoMaiorLabel = 0;
-            this.btnAumentoPreco._Visible = false;
+            this.btnAumentoPreco._Visible = true;
             this.btnAumentoPreco.Base = null;
             this.btnAumentoPreco.Location = new System.Drawing.Point(172, 1);
             this.btnAumentoPreco.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
@@ -682,7 +682,7 @@ namespace HLP.UI.Entries.Comercial
             this.btnInserir._Regex = null;
             this.btnInserir._TamanhoComponente = 164;
             this.btnInserir._TamanhoMaiorLabel = 0;
-            this.btnInserir._Visible = false;
+            this.btnInserir._Visible = true;
             this.btnInserir.Base = null;
             this.btnInserir.Location = new System.Drawing.Point(2, 1);
             this.btnInserir.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);

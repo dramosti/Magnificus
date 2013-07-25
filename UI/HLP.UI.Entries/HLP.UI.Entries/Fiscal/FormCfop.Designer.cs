@@ -98,7 +98,7 @@
             this.txtCodigo._Table = "Cfop";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -122,7 +122,7 @@
             this.nudcCodCfop._Table = "Cfop";
             this.nudcCodCfop._TamanhoComponente = 107;
             this.nudcCodCfop._TamanhoMaiorLabel = 150;
-            this.nudcCodCfop._Visible = false;
+            this.nudcCodCfop._Visible = true;
             this.nudcCodCfop.BackColor = System.Drawing.Color.Transparent;
             this.nudcCodCfop.Base = null;
             this.nudcCodCfop.Color = System.Drawing.Color.White;
@@ -164,7 +164,7 @@
             this.txtxCfopResumida._Table = "Cfop";
             this.txtxCfopResumida._TamanhoComponente = 222;
             this.txtxCfopResumida._TamanhoMaiorLabel = 150;
-            this.txtxCfopResumida._Visible = false;
+            this.txtxCfopResumida._Visible = true;
             this.txtxCfopResumida.BackColor = System.Drawing.Color.Transparent;
             this.txtxCfopResumida.Base = null;
             this.txtxCfopResumida.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -190,7 +190,7 @@
             this.txtxCfop._Table = "Cfop";
             this.txtxCfop._TamanhoComponente = 222;
             this.txtxCfop._TamanhoMaiorLabel = 150;
-            this.txtxCfop._Visible = false;
+            this.txtxCfop._Visible = true;
             this.txtxCfop.BackColor = System.Drawing.Color.Transparent;
             this.txtxCfop.Base = null;
             this.txtxCfop.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

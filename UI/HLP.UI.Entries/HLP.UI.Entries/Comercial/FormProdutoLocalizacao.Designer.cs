@@ -140,7 +140,7 @@
             this.txtCodigo._Table = "Produto_localizacao";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -166,7 +166,7 @@
             this.txtxNome._Table = "Produto_localizacao";
             this.txtxNome._TamanhoComponente = 219;
             this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -192,7 +192,7 @@
             this.txtxDescricao._Table = "Produto_localizacao";
             this.txtxDescricao._TamanhoComponente = 356;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -222,7 +222,7 @@
             this.hlP_PesquisaidDeposito._TamanhoComponente = 300;
             this.hlP_PesquisaidDeposito._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidDeposito._Vinculado = false;
-            this.hlP_PesquisaidDeposito._Visible = false;
+            this.hlP_PesquisaidDeposito._Visible = true;
             this.hlP_PesquisaidDeposito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDeposito.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDeposito.Base = null;

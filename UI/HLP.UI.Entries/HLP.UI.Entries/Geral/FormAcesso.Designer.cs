@@ -239,7 +239,7 @@
             this.txtIdFuncionario._Table = "Funcionario";
             this.txtIdFuncionario._TamanhoComponente = 98;
             this.txtIdFuncionario._TamanhoMaiorLabel = 100;
-            this.txtIdFuncionario._Visible = false;
+            this.txtIdFuncionario._Visible = true;
             this.txtIdFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.txtIdFuncionario.Base = null;
             this.txtIdFuncionario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -265,7 +265,7 @@
             this.txtxCodigoAlternativo._Table = "Funcionario";
             this.txtxCodigoAlternativo._TamanhoComponente = 159;
             this.txtxCodigoAlternativo._TamanhoMaiorLabel = 100;
-            this.txtxCodigoAlternativo._Visible = false;
+            this.txtxCodigoAlternativo._Visible = true;
             this.txtxCodigoAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoAlternativo.Base = null;
             this.txtxCodigoAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -290,7 +290,7 @@
             this.txtxNome._Table = "Funcionario";
             this.txtxNome._TamanhoComponente = 405;
             this.txtxNome._TamanhoMaiorLabel = 100;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -324,7 +324,7 @@
             this.chkstUsuarioAtivo._Table = "Funcionario";
             this.chkstUsuarioAtivo._TamanhoComponente = 43;
             this.chkstUsuarioAtivo._TamanhoMaiorLabel = 100;
-            this.chkstUsuarioAtivo._Visible = false;
+            this.chkstUsuarioAtivo._Visible = true;
             this.chkstUsuarioAtivo.BackColor = System.Drawing.Color.Transparent;
             this.chkstUsuarioAtivo.Base = null;
             this.chkstUsuarioAtivo.Checked = false;
@@ -348,7 +348,7 @@
             this.txtxId._Table = "Funcionario";
             this.txtxId._TamanhoComponente = 174;
             this.txtxId._TamanhoMaiorLabel = 100;
-            this.txtxId._Visible = false;
+            this.txtxId._Visible = true;
             this.txtxId.BackColor = System.Drawing.Color.Transparent;
             this.txtxId.Base = null;
             this.txtxId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -374,7 +374,7 @@
             this.txtxSenha._Table = "Funcionario";
             this.txtxSenha._TamanhoComponente = 174;
             this.txtxSenha._TamanhoMaiorLabel = 100;
-            this.txtxSenha._Visible = false;
+            this.txtxSenha._Visible = true;
             this.txtxSenha.BackColor = System.Drawing.Color.Transparent;
             this.txtxSenha.Base = null;
             this.txtxSenha.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -400,7 +400,7 @@
             this.cbxstUsuario._Table = "Funcionario";
             this.cbxstUsuario._TamanhoComponente = 199;
             this.cbxstUsuario._TamanhoMaiorLabel = 100;
-            this.cbxstUsuario._Visible = false;
+            this.cbxstUsuario._Visible = true;
             this.cbxstUsuario.BackColor = System.Drawing.Color.Transparent;
             this.cbxstUsuario.Base = null;
             this.cbxstUsuario.Color = System.Drawing.Color.White;
@@ -424,7 +424,7 @@
             this.btnVerificar._Regex = null;
             this.btnVerificar._TamanhoComponente = 164;
             this.btnVerificar._TamanhoMaiorLabel = 0;
-            this.btnVerificar._Visible = false;
+            this.btnVerificar._Visible = true;
             this.btnVerificar.Base = null;
             this.btnVerificar.Location = new System.Drawing.Point(3, 242);
             this.btnVerificar.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);

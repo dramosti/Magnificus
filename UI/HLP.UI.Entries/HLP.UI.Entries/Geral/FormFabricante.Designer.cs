@@ -148,7 +148,7 @@
             this.txtCodigo._Table = "Fabricante";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -174,7 +174,7 @@
             this.txtxxRazao._Table = "Fabricante";
             this.txtxxRazao._TamanhoComponente = 310;
             this.txtxxRazao._TamanhoMaiorLabel = 150;
-            this.txtxxRazao._Visible = false;
+            this.txtxxRazao._Visible = true;
             this.txtxxRazao.BackColor = System.Drawing.Color.Transparent;
             this.txtxxRazao.Base = null;
             this.txtxxRazao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -201,7 +201,7 @@
             this.txtxFantasia._Table = "Fabricante";
             this.txtxFantasia._TamanhoComponente = 310;
             this.txtxFantasia._TamanhoMaiorLabel = 150;
-            this.txtxFantasia._Visible = false;
+            this.txtxFantasia._Visible = true;
             this.txtxFantasia.BackColor = System.Drawing.Color.Transparent;
             this.txtxFantasia.Base = null;
             this.txtxFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

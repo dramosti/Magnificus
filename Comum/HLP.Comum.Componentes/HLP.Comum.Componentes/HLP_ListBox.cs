@@ -95,9 +95,7 @@ namespace HLP.Comum.Components
                 lst.StateNormal.Back.Color1 = value;
             }
         }
-
-    
-
+              
 
         [Editor(@"System.Windows.Forms.Design.StringCollectionEditor," +
      "System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",

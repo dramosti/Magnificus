@@ -35,9 +35,6 @@ namespace HLP.Comum.UI.Metodos
             this.lControles = iConfigFormulario.lControl;
         }
 
-
-
-
         public void HabilitaCampos(bool bHabilita)
         {
             try
@@ -113,12 +110,20 @@ namespace HLP.Comum.UI.Metodos
             }
 
         }
-        public void HabilitaButtonSpec(bool bHabilita)
+        public void HabilitaButtonSpecPesquisa(bool bHabilita)
         {
             var txt = lControles.OfType<HLP_TextBox>().ToList();
             foreach (HLP_TextBox t in txt)
             {
                 t.btnPesquisaCampo.Visible = bHabilita;
+            }
+        }
+        public void HabilitaButtonSpecConfig(bool bHabilita)
+        {
+            var txt = lControles.OfType<HLP_TextBox>().ToList();
+            foreach (HLP_TextBox t in txt)
+            {
+                t.btnConfig.Visible = bHabilita;
             }
         }
         public void LimpaCampos()
@@ -129,53 +134,59 @@ namespace HLP.Comum.UI.Metodos
                 if (ctr.GetType().BaseType == typeof(UserControlBase))
                 {
                     #region Controles Componentes
+                    if ((ctr.GetType() == typeof(HLP_TextBox)))
+                    {
+                        (ctr as UserControlBase).CarregaComponente();
+                    }
+                    else
+                    {
+                        if ((ctr.GetType() == typeof(HLP_TextBox)) || (ctr.GetType() == typeof(HLP_NumericUpDown)) || (ctr.GetType() == typeof(HLP_MaskedTextBox)))
+                        {
+                            ConfigComponenteModel comp = iConfigFormulario.objConfigFormularioModel.lobjConfigComponente.FirstOrDefault(C => C.xName == ctr.Name);
+                            if (comp.objConfigCompGridUsu != null)
+                            {
+                                ctr.SetPropertyValue("Text", iConfigFormulario.objConfigFormularioModel.lobjConfigComponente.FirstOrDefault(C => C.xName == ctr.Name).objConfigCompUsu.xText);
+                            }
 
-                    if ((ctr.GetType() == typeof(HLP_TextBox)) || (ctr.GetType() == typeof(HLP_NumericUpDown)) || (ctr.GetType() == typeof(HLP_MaskedTextBox)))
-                    {
-                        ConfigComponenteModel comp = iConfigFormulario.objConfigFormularioModel.lobjConfigComponente.FirstOrDefault(C => C.xName == ctr.Name);
-                        if (comp.objConfigCompGridUsu != null)
-                        {
-                            ctr.SetPropertyValue("Text", iConfigFormulario.objConfigFormularioModel.lobjConfigComponente.FirstOrDefault(C => C.xName == ctr.Name).objConfigCompUsu.xText);
-                        }
+                            if (comp.xTable == "" && comp.xField == "" && (ctr.GetType() == typeof(HLP_NumericUpDown)))
+                            {
+                                ctr.SetPropertyValue("Text", "0");
+                            }
 
-                        if (comp.xTable == "" && comp.xField == "" && (ctr.GetType() == typeof(HLP_NumericUpDown)))
-                        {
-                            ctr.SetPropertyValue("Text", "0");
                         }
-
-                    }
-                    else if (ctr.GetType() == typeof(HLP_ComboBox))
-                    {
-                        (ctr as HLP_ComboBox).SelectedIndex = -1;
-                    }
-                    else if (ctr.GetType() == typeof(HLP_DateTimePicker))
-                    {
-                        if ((ctr as HLP_DateTimePicker).dtp.Format == DateTimePickerFormat.Time)
+                        else if (ctr.GetType() == typeof(HLP_ComboBox))
                         {
-                            (ctr as HLP_DateTimePicker).Value = DateTime.Today;
+                            (ctr as HLP_ComboBox).SelectedIndex = -1;
                         }
-                        else
+                        else if (ctr.GetType() == typeof(HLP_DateTimePicker))
                         {
-                            (ctr as HLP_DateTimePicker).Value = DateTime.Now;
+                            if ((ctr as HLP_DateTimePicker).dtp.Format == DateTimePickerFormat.Time)
+                            {
+                                (ctr as HLP_DateTimePicker).Value = DateTime.Today;
+                            }
+                            else
+                            {
+                                (ctr as HLP_DateTimePicker).Value = DateTime.Now;
+                            }
                         }
-                    }
-                    else if (ctr.GetType() == typeof(HLP_CheckBox))
-                    {
-                        (ctr as HLP_CheckBox).Value = false;
-                    }
-                    else if (ctr.GetType() == typeof(HLP_Pesquisa))
-                    {
-                        ((HLP_Pesquisa)ctr).Value = 0;
-                        ((HLP_Pesquisa)ctr).txtPesquisa.Text = "";
-                        ((HLP_Pesquisa)ctr).txtDisplay.Text = "";
-                        ((HLP_Pesquisa)ctr)._ListaValoresDisplay = new List<string>();
-                    }
-                    else if (ctr is HLP_ListBox)
-                    {
-                        (ctr as HLP_ListBox).lst.Items.Clear();
-                    }
+                        else if (ctr.GetType() == typeof(HLP_CheckBox))
+                        {
+                            (ctr as HLP_CheckBox).Value = false;
+                        }
+                        else if (ctr.GetType() == typeof(HLP_Pesquisa))
+                        {
+                            ((HLP_Pesquisa)ctr).Value = 0;
+                            ((HLP_Pesquisa)ctr).txtPesquisa.Text = "";
+                            ((HLP_Pesquisa)ctr).txtDisplay.Text = "";
+                            ((HLP_Pesquisa)ctr)._ListaValoresDisplay = new List<string>();
+                        }
+                        else if (ctr is HLP_ListBox)
+                        {
+                            (ctr as HLP_ListBox).lst.Items.Clear();
+                        }
 
                     #endregion
+                    }
                 }
                 else
                 {

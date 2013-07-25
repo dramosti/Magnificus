@@ -97,7 +97,7 @@
             this.txtCodigo._Table = "Situacao_tributaria_icms";
             this.txtCodigo._TamanhoComponente = 88;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -123,7 +123,7 @@
             this.txtcCSTIcms._Table = "Situacao_tributaria_icms";
             this.txtcCSTIcms._TamanhoComponente = 130;
             this.txtcCSTIcms._TamanhoMaiorLabel = 200;
-            this.txtcCSTIcms._Visible = false;
+            this.txtcCSTIcms._Visible = true;
             this.txtcCSTIcms.BackColor = System.Drawing.Color.Transparent;
             this.txtcCSTIcms.Base = null;
             this.txtcCSTIcms.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -149,7 +149,7 @@
             this.txtxCSTIcms._Table = "Situacao_tributaria_icms";
             this.txtxCSTIcms._TamanhoComponente = 280;
             this.txtxCSTIcms._TamanhoMaiorLabel = 200;
-            this.txtxCSTIcms._Visible = false;
+            this.txtxCSTIcms._Visible = true;
             this.txtxCSTIcms.BackColor = System.Drawing.Color.Transparent;
             this.txtxCSTIcms.Base = null;
             this.txtxCSTIcms.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -175,7 +175,7 @@
             this.cbostSimplesNacional._Table = "Situacao_tributaria_icms";
             this.cbostSimplesNacional._TamanhoComponente = 80;
             this.cbostSimplesNacional._TamanhoMaiorLabel = 200;
-            this.cbostSimplesNacional._Visible = false;
+            this.cbostSimplesNacional._Visible = true;
             this.cbostSimplesNacional.BackColor = System.Drawing.Color.Transparent;
             this.cbostSimplesNacional.Base = null;
             this.cbostSimplesNacional.Color = System.Drawing.Color.White;

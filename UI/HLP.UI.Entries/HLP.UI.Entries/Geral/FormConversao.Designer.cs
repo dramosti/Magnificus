@@ -333,7 +333,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidProduto._TamanhoComponente = 429;
             this.hlP_PesquisaidProduto._TamanhoMaiorLabel = 0;
             this.hlP_PesquisaidProduto._Vinculado = false;
-            this.hlP_PesquisaidProduto._Visible = false;
+            this.hlP_PesquisaidProduto._Visible = true;
             this.hlP_PesquisaidProduto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidProduto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidProduto.Base = null;

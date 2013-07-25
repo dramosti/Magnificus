@@ -16,19 +16,19 @@ using HLP.Dependencies;
 using Ninject;
 using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Infrastructure;
+using HLP.Comum.Components.Configuracao;
 
 namespace HLP.Comum.UI.Eventos
 {
     public class EventosForm
     {
         [Inject]
-        public IPesquisaPadraoService pesquisaPadraoService { get; set; }
+        public IPesquisaPadraoService ipesquisaPadraoService { get; set; }
 
-        //public  IParametro_GeralService MyProperty { get; set; }
+        [Inject]
+        public IConfigComponenteService iConfigComponenteService { get; set; }
 
         public IConfigFormulariosService iConfigFormulario { get; set; }
-
-        //public ILayoutService layoutService { get; set; }
 
         public EventosForm(IConfigFormulariosService iConfigFormulario)
         {
@@ -73,6 +73,11 @@ namespace HLP.Comum.UI.Eventos
 
                     ((HLP_Pesquisa)ctr).txtPesquisa.KeyDown -= new KeyEventHandler(txtPesquisa_KeyDown);
                     ((HLP_Pesquisa)ctr).txtPesquisa.KeyDown += new KeyEventHandler(txtPesquisa_KeyDown);
+                }
+                else if (ctr.GetType() == typeof(HLP_TextBox))
+                {
+                    ((HLP_TextBox)ctr).btnConfig.Click -= btnConfig_Click;
+                    ((HLP_TextBox)ctr).btnConfig.Click += btnConfig_Click;
                 }
             }
             List<Control> lgrids = iConfigFormulario.lControl.Where(c => c.GetType() == typeof(HLP_DataGridView)).ToList();
@@ -253,7 +258,7 @@ namespace HLP.Comum.UI.Eventos
 
                             MetodosForm objMetodosForm = new MetodosForm(iConfigFormulario);
 
-                            col.DataSource = pesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember(col), true);
+                            col.DataSource = ipesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember(col), true);
                             try
                             {
                                 if (grid.CurrentCell.FormattedValue == null)
@@ -288,6 +293,19 @@ namespace HLP.Comum.UI.Eventos
         {
             this.objSenderComponentePesquisa = sender;
             PesquisaComponente();
+        }
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            ComponentFactory.Krypton.Toolkit.ButtonSpecAny ctr = sender as ComponentFactory.Krypton.Toolkit.ButtonSpecAny;
+            FormPopupConfig objFrm = new FormPopupConfig(ctr.Tag as Control);
+            objFrm.ShowDialog();
+
+            if (objFrm.bAlterou)
+            {
+                iConfigComponenteService.Save((ctr.Tag as Control).GetPropertyValue("objConfigComponenteModel") as ConfigComponenteModel);
+            }
+
+
         }
         public void txtPesquisa_Leave(object sender, EventArgs e)
         {
@@ -390,7 +408,7 @@ namespace HLP.Comum.UI.Eventos
                 HLP_Pesquisa campo = ((HLP_Pesquisa)txt.Parent);
                 if (campo._NomeView != "")
                 {
-                    listInformation = pesquisaPadraoService.GetTableInformation(campo._NomeView);
+                    listInformation = ipesquisaPadraoService.GetTableInformation(campo._NomeView);
 
 
                     StringBuilder sql = new StringBuilder();
@@ -406,7 +424,7 @@ namespace HLP.Comum.UI.Eventos
                     }
 
                     bool bTemRegistro = false;
-                    DataTable dt = pesquisaPadraoService.GetData(sql.ToString());
+                    DataTable dt = ipesquisaPadraoService.GetData(sql.ToString());
 
                     if (dt != null)
                     {
@@ -467,14 +485,14 @@ namespace HLP.Comum.UI.Eventos
                     sCampo = ((HLP_MaskedTextBox)((KryptonMaskedTextBox)btn.Owner).Parent)._Field;
                     sLabel = ((HLP_MaskedTextBox)((KryptonMaskedTextBox)btn.Owner).Parent)._LabelText;
                 }
-                string sIdentityName = pesquisaPadraoService.GetIdentityColumnName(sTabela);
-                List<PesquisaPadraoModel> listInformation = pesquisaPadraoService.GetTableInformation(sTabela);
+                string sIdentityName = ipesquisaPadraoService.GetIdentityColumnName(sTabela);
+                List<PesquisaPadraoModel> listInformation = ipesquisaPadraoService.GetTableInformation(sTabela);
 
                 FormPesquisaCampo frm = new FormPesquisaCampo(sTabela, sCampo, sLabel, sIdentityName, listInformation);
                 frm.ShowDialog();
                 if (!String.IsNullOrEmpty(frm.sql))
                 {
-                    listRet = pesquisaPadraoService.GetIdentityColumnValue(frm.sql);
+                    listRet = ipesquisaPadraoService.GetIdentityColumnValue(frm.sql);
                 }
             }
             catch (System.Exception ex)

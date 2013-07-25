@@ -147,7 +147,7 @@
             this.txtCodigo._Table = "Fidelidade";
             this.txtCodigo._TamanhoComponente = 81;
             this.txtCodigo._TamanhoMaiorLabel = 60;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -173,7 +173,7 @@
             this.txtxFidelidade._Table = "Fidelidade";
             this.txtxFidelidade._TamanhoComponente = 221;
             this.txtxFidelidade._TamanhoMaiorLabel = 60;
-            this.txtxFidelidade._Visible = false;
+            this.txtxFidelidade._Visible = true;
             this.txtxFidelidade.BackColor = System.Drawing.Color.Transparent;
             this.txtxFidelidade.Base = null;
             this.txtxFidelidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -199,7 +199,7 @@
             this.txtxDescricao._Table = "Fidelidade";
             this.txtxDescricao._TamanhoComponente = 221;
             this.txtxDescricao._TamanhoMaiorLabel = 60;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

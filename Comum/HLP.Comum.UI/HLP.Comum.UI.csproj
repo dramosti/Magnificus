@@ -371,6 +371,15 @@
   <ItemGroup>
     <None Include="Resources\megaphone.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1374622624_14065.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_config_boot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1374624237_23740.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

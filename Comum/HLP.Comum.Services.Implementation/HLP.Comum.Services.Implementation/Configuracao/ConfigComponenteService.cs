@@ -58,14 +58,14 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
                         if (componente.Base != null)
                         {
-                            if (componente.xTypeComp.Equals("HLP_NumericUpDown"))
+                            if (componente.xTypeComp.Equals("HLP_NumericUpDown")) // analisar lógica
                             {
                                 componente.objConfigCompUsu.nMaxLength = componente.Base.GetMaxLeghtToNumericUpDown();
                                 componente.objConfigCompUsu.nDecimalPlaces = componente.Base.SCALE.ToInt32();
                             }
                             else
                             {
-                                componente.objConfigCompUsu.nMaxLength = componente.Base.GetMaxLenghtNormal();
+                                //componente.objConfigCompUsu.nMaxLength = componente.Base.GetMaxLenghtNormal();
                             }
                         }
 
@@ -282,91 +282,100 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                         {
                             try
                             {
-                                #region Component Info
-
-                                controle.SetPropertyValue("_Field", objCompModel.xField);
-                                controle.SetPropertyValue("_Table", objCompModel.xTable);
-                                // achar o flowlayoutPanel do componente;
-                                //flp.Controls.SetChildIndex(control, control.Parent.Controls.IndexOf(control));
-                                controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;
-
-                                controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;
-                                controle.SetPropertyValue("_LabelText", objCompModel.objConfigCompUsu.xLabelText);
-                                // Valor Padrão não tratado TEXT
-                                controle.SetPropertyValue("_Visible", Convert.ToBoolean(objCompModel.objConfigCompUsu.stVisible));
-                                controle.SetPropertyValue("Enabled", Convert.ToBoolean(objCompModel.objConfigCompUsu.stEnabled));
-
-                                if (!objCompModel.xName.Equals("txtCodigo"))
+                                if (controle.GetType() == typeof(HLP_TextBox))
                                 {
-                                    if (!(objCompModel.Base == null))
+                                    //controle.SetPropertyValue("objConfigComponenteModel", objCompModel);
+                                    (controle as UserControlBase).objConfigComponenteModel = objCompModel;
+                                    (controle as UserControlBase).CarregaComponente();
+                                }
+                                else
+                                {
+                                    #region Component Info
+
+                                    controle.SetPropertyValue("_Field", objCompModel.xField);
+                                    controle.SetPropertyValue("_Table", objCompModel.xTable);
+                                    // achar o flowlayoutPanel do componente;
+                                    //flp.Controls.SetChildIndex(control, control.Parent.Controls.IndexOf(control));
+                                    controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;
+
+                                    controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;
+                                    controle.SetPropertyValue("_LabelText", objCompModel.objConfigCompUsu.xLabelText);
+                                    // Valor Padrão não tratado TEXT
+                                    controle.SetPropertyValue("_Visible", Convert.ToBoolean(objCompModel.objConfigCompUsu.stVisible));
+                                    controle.SetPropertyValue("Enabled", Convert.ToBoolean(objCompModel.objConfigCompUsu.stEnabled));
+
+                                    if (!objCompModel.xName.Equals("txtCodigo"))
                                     {
-                                        if (objCompModel.Base.NULLABLE.Equals("0"))
+                                        if (!(objCompModel.Base == null))
                                         {
-                                            controle.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.SIM);
+                                            if (objCompModel.Base.NULLABLE.Equals("0"))
+                                            {
+                                                controle.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.SIM);
+                                            }
+
                                         }
-
-                                    }
-                                    else
-                                        controle.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.NÃO);
-                                }
-                                else
-                                {
-                                    controle.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.NÃO);
-                                }
-
-
-                                // controle.SetPropertyValue("_Obrigatorio", objCompModel.Base == null ? HLP_TextBox.CampoObrigatorio.NÃO : (objCompModel.Base.NULLABLE == "1" && !objCompModel.xName.Equals("txtCodigo") ? HLP_TextBox.CampoObrigatorio.SIM : HLP_TextBox.CampoObrigatorio.NÃO));
-
-                                //  controle.SetPropertyValue("_Obrigatorio",              controle.ToObject().GetPropertyValue("_Obrigatorio").ToString());
-
-
-                                try
-                                { controle.SetPropertyValue("CharacterCasing", (Upper ? CharacterCasing.Upper : CharacterCasing.Normal)); }
-                                catch (Exception) { }
-
-                                try
-                                {//controle.BackColor= onjCompModel.ToObject().GetPropertyValue("Color").ToString();
-                                }
-                                catch (Exception) { }
-                                controle.SetPropertyValue("_Help", objCompModel.objConfigCompUsu.xHelp);
-
-                                if (objCompModel.objConfigCompUsu.stAtivo == 0)
-                                    controle.Visible = false;
-
-                                if (objCompModel.objConfigCompUsu.stAtivo == 0)
-                                    controle.Enabled = false;
-
-                                if (objCompModel.xField != "" && objCompModel.xTable != "")
-                                {
-
-                                    if (objCompModel.xTypeComp == typeof(HLP_NumericUpDown).Name)
-                                    {                                        
-                                        controle.SetPropertyValue("Maximum", objCompModel.objConfigCompUsu.nMaxLength);
-                                        controle.SetPropertyValue("DecimalPlaces", objCompModel.objConfigCompUsu.nDecimalPlaces);
-                                        controle.SetPropertyValue("Text", objCompModel.objConfigCompUsu.xText);
+                                        else
+                                            controle.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.NÃO);
                                     }
                                     else
                                     {
-                                        try
-                                        { controle.SetPropertyValue("MaxLength", objCompModel.objConfigCompUsu.nMaxLength.ToInt32()); }
-                                        catch (Exception) { }
+                                        controle.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.NÃO);
                                     }
+
+
+                                    // controle.SetPropertyValue("_Obrigatorio", objCompModel.Base == null ? HLP_TextBox.CampoObrigatorio.NÃO : (objCompModel.Base.NULLABLE == "1" && !objCompModel.xName.Equals("txtCodigo") ? HLP_TextBox.CampoObrigatorio.SIM : HLP_TextBox.CampoObrigatorio.NÃO));
+
+                                    //  controle.SetPropertyValue("_Obrigatorio",              controle.ToObject().GetPropertyValue("_Obrigatorio").ToString());
+
+
+                                    try
+                                    { controle.SetPropertyValue("CharacterCasing", (Upper ? CharacterCasing.Upper : CharacterCasing.Normal)); }
+                                    catch (Exception) { }
+
+                                    try
+                                    {//controle.BackColor= onjCompModel.ToObject().GetPropertyValue("Color").ToString();
+                                    }
+                                    catch (Exception) { }
+                                    controle.SetPropertyValue("_Help", objCompModel.objConfigCompUsu.xHelp);
+
+                                    if (objCompModel.objConfigCompUsu.stAtivo == 0)
+                                        controle.Visible = false;
+
+                                    if (objCompModel.objConfigCompUsu.stAtivo == 0)
+                                        controle.Enabled = false;
+
+                                    if (objCompModel.xField != "" && objCompModel.xTable != "")
+                                    {
+
+                                        if (objCompModel.xTypeComp == typeof(HLP_NumericUpDown).Name)
+                                        {
+                                            controle.SetPropertyValue("Maximum", objCompModel.objConfigCompUsu.nMaxLength);
+                                            controle.SetPropertyValue("DecimalPlaces", objCompModel.objConfigCompUsu.nDecimalPlaces);
+                                            controle.SetPropertyValue("Text", objCompModel.objConfigCompUsu.xText);
+                                        }
+                                        else
+                                        {
+                                            try
+                                            { controle.SetPropertyValue("MaxLength", objCompModel.objConfigCompUsu.nMaxLength.ToInt32()); }
+                                            catch (Exception) { }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (objCompModel.xTypeComp == typeof(HLP_NumericUpDown).Name)
+                                            controle.SetPropertyValue("Text", "0");
+
+                                    }
+
+
+
+                                    #endregion
                                 }
-                                else
-                                {
-                                    if (objCompModel.xTypeComp == typeof(HLP_NumericUpDown).Name)
-                                        controle.SetPropertyValue("Text", "0");
-
-                                }
-
-
-
-                                #endregion
                             }
                             catch (Exception ex)
                             {
                                 throw new Exception(string.Format("Erro ao Configurar componente:{0} - tipo:{1}, {2}Erro: ", objCompModel.xName, objCompModel.xTypeComp, Environment.NewLine) + ex.Message);
-                            }
+                            }                            
                         }
                         else if (controle.GetType() == typeof(HLP_DataGridView))
                         {
@@ -531,5 +540,11 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
 
 
+
+
+        public void Save(ConfigComponenteModel componente)
+        {
+            icomponenteRepository.Save(componente);
+        }
     }
 }

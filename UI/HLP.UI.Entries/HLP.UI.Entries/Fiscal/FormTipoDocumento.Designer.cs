@@ -146,7 +146,7 @@
             this.txtCodigo._Table = "Tipo_documento";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -171,7 +171,7 @@
             this.txtxTpdoc._Table = "Tipo_documento";
             this.txtxTpdoc._TamanhoComponente = 312;
             this.txtxTpdoc._TamanhoMaiorLabel = 200;
-            this.txtxTpdoc._Visible = false;
+            this.txtxTpdoc._Visible = true;
             this.txtxTpdoc.BackColor = System.Drawing.Color.Transparent;
             this.txtxTpdoc.Base = null;
             this.txtxTpdoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -196,7 +196,7 @@
             this.cbotpDocumento._Table = "Tipo_documento";
             this.cbotpDocumento._TamanhoComponente = 197;
             this.cbotpDocumento._TamanhoMaiorLabel = 200;
-            this.cbotpDocumento._Visible = false;
+            this.cbotpDocumento._Visible = true;
             this.cbotpDocumento.BackColor = System.Drawing.Color.Transparent;
             this.cbotpDocumento.Base = null;
             this.cbotpDocumento.Color = System.Drawing.Color.White;
@@ -220,7 +220,7 @@
             this.lsOperacoesValidas._Regex = null;
             this.lsOperacoesValidas._TamanhoComponente = 291;
             this.lsOperacoesValidas._TamanhoMaiorLabel = 200;
-            this.lsOperacoesValidas._Visible = false;
+            this.lsOperacoesValidas._Visible = true;
             this.lsOperacoesValidas.BackColor = System.Drawing.Color.Transparent;
             this.lsOperacoesValidas.Base = null;
             this.lsOperacoesValidas.Color = System.Drawing.Color.White;
@@ -245,7 +245,7 @@
             this.cbostRelacaoPedidoxorcamento._Table = "Tipo_documento";
             this.cbostRelacaoPedidoxorcamento._TamanhoComponente = 240;
             this.cbostRelacaoPedidoxorcamento._TamanhoMaiorLabel = 200;
-            this.cbostRelacaoPedidoxorcamento._Visible = false;
+            this.cbostRelacaoPedidoxorcamento._Visible = true;
             this.cbostRelacaoPedidoxorcamento.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoPedidoxorcamento.Base = null;
             this.cbostRelacaoPedidoxorcamento.Color = System.Drawing.Color.White;
@@ -272,7 +272,7 @@
             this.cbostRelacaoPedidoxnf._Table = "Tipo_documento";
             this.cbostRelacaoPedidoxnf._TamanhoComponente = 312;
             this.cbostRelacaoPedidoxnf._TamanhoMaiorLabel = 200;
-            this.cbostRelacaoPedidoxnf._Visible = false;
+            this.cbostRelacaoPedidoxnf._Visible = true;
             this.cbostRelacaoPedidoxnf.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoPedidoxnf.Base = null;
             this.cbostRelacaoPedidoxnf.Color = System.Drawing.Color.White;
@@ -299,7 +299,7 @@
             this.cbostRelacaoPedidoxproducao._Table = "Tipo_documento";
             this.cbostRelacaoPedidoxproducao._TamanhoComponente = 254;
             this.cbostRelacaoPedidoxproducao._TamanhoMaiorLabel = 200;
-            this.cbostRelacaoPedidoxproducao._Visible = false;
+            this.cbostRelacaoPedidoxproducao._Visible = true;
             this.cbostRelacaoPedidoxproducao.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoPedidoxproducao.Base = null;
             this.cbostRelacaoPedidoxproducao.Color = System.Drawing.Color.White;
@@ -326,7 +326,7 @@
             this.cbostGrupoFaturamento._Table = "Tipo_documento";
             this.cbostGrupoFaturamento._TamanhoComponente = 39;
             this.cbostGrupoFaturamento._TamanhoMaiorLabel = 200;
-            this.cbostGrupoFaturamento._Visible = false;
+            this.cbostGrupoFaturamento._Visible = true;
             this.cbostGrupoFaturamento.BackColor = System.Drawing.Color.Transparent;
             this.cbostGrupoFaturamento.Base = null;
             this.cbostGrupoFaturamento.Color = System.Drawing.Color.White;
@@ -353,7 +353,7 @@
             this.txtxSerieNf._Table = "Tipo_documento";
             this.txtxSerieNf._TamanhoComponente = 137;
             this.txtxSerieNf._TamanhoMaiorLabel = 200;
-            this.txtxSerieNf._Visible = false;
+            this.txtxSerieNf._Visible = true;
             this.txtxSerieNf.BackColor = System.Drawing.Color.Transparent;
             this.txtxSerieNf.Base = null;
             this.txtxSerieNf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -378,7 +378,7 @@
             this.txtxEspecieVolNf._Table = "Tipo_documento";
             this.txtxEspecieVolNf._TamanhoComponente = 146;
             this.txtxEspecieVolNf._TamanhoMaiorLabel = 200;
-            this.txtxEspecieVolNf._Visible = false;
+            this.txtxEspecieVolNf._Visible = true;
             this.txtxEspecieVolNf.BackColor = System.Drawing.Color.Transparent;
             this.txtxEspecieVolNf.Base = null;
             this.txtxEspecieVolNf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -403,7 +403,7 @@
             this.txtxMarcaVolNf._Table = "Tipo_documento";
             this.txtxMarcaVolNf._TamanhoComponente = 146;
             this.txtxMarcaVolNf._TamanhoMaiorLabel = 300;
-            this.txtxMarcaVolNf._Visible = false;
+            this.txtxMarcaVolNf._Visible = true;
             this.txtxMarcaVolNf.BackColor = System.Drawing.Color.Transparent;
             this.txtxMarcaVolNf.Base = null;
             this.txtxMarcaVolNf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -428,7 +428,7 @@
             this.cbostSomaIpi1Dup._Table = "Tipo_documento";
             this.cbostSomaIpi1Dup._TamanhoComponente = 79;
             this.cbostSomaIpi1Dup._TamanhoMaiorLabel = 300;
-            this.cbostSomaIpi1Dup._Visible = false;
+            this.cbostSomaIpi1Dup._Visible = true;
             this.cbostSomaIpi1Dup.BackColor = System.Drawing.Color.Transparent;
             this.cbostSomaIpi1Dup.Base = null;
             this.cbostSomaIpi1Dup.Color = System.Drawing.Color.White;
@@ -455,7 +455,7 @@
             this.cbostSomaSt1Dup._Table = "Tipo_documento";
             this.cbostSomaSt1Dup._TamanhoComponente = 80;
             this.cbostSomaSt1Dup._TamanhoMaiorLabel = 300;
-            this.cbostSomaSt1Dup._Visible = false;
+            this.cbostSomaSt1Dup._Visible = true;
             this.cbostSomaSt1Dup.BackColor = System.Drawing.Color.Transparent;
             this.cbostSomaSt1Dup.Base = null;
             this.cbostSomaSt1Dup.Color = System.Drawing.Color.White;
@@ -482,7 +482,7 @@
             this.cbostNfComplementar._Table = "Tipo_documento";
             this.cbostNfComplementar._TamanhoComponente = 83;
             this.cbostNfComplementar._TamanhoMaiorLabel = 300;
-            this.cbostNfComplementar._Visible = false;
+            this.cbostNfComplementar._Visible = true;
             this.cbostNfComplementar.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfComplementar.Base = null;
             this.cbostNfComplementar.Color = System.Drawing.Color.White;
@@ -509,7 +509,7 @@
             this.cbostNfImportacao._Table = "Tipo_documento";
             this.cbostNfImportacao._TamanhoComponente = 83;
             this.cbostNfImportacao._TamanhoMaiorLabel = 300;
-            this.cbostNfImportacao._Visible = false;
+            this.cbostNfImportacao._Visible = true;
             this.cbostNfImportacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfImportacao.Base = null;
             this.cbostNfImportacao.Color = System.Drawing.Color.White;
@@ -536,7 +536,7 @@
             this.cbostNfExportacao._Table = "Tipo_documento";
             this.cbostNfExportacao._TamanhoComponente = 181;
             this.cbostNfExportacao._TamanhoMaiorLabel = 300;
-            this.cbostNfExportacao._Visible = false;
+            this.cbostNfExportacao._Visible = true;
             this.cbostNfExportacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfExportacao.Base = null;
             this.cbostNfExportacao.Color = System.Drawing.Color.White;
@@ -563,7 +563,7 @@
             this.cbostNfIndustrializacao._Table = "Tipo_documento";
             this.cbostNfIndustrializacao._TamanhoComponente = 83;
             this.cbostNfIndustrializacao._TamanhoMaiorLabel = 300;
-            this.cbostNfIndustrializacao._Visible = false;
+            this.cbostNfIndustrializacao._Visible = true;
             this.cbostNfIndustrializacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfIndustrializacao.Base = null;
             this.cbostNfIndustrializacao.Color = System.Drawing.Color.White;
@@ -590,7 +590,7 @@
             this.cbostNfSuframa._Table = "Tipo_documento";
             this.cbostNfSuframa._TamanhoComponente = 83;
             this.cbostNfSuframa._TamanhoMaiorLabel = 300;
-            this.cbostNfSuframa._Visible = false;
+            this.cbostNfSuframa._Visible = true;
             this.cbostNfSuframa.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfSuframa.Base = null;
             this.cbostNfSuframa.Color = System.Drawing.Color.White;
@@ -617,7 +617,7 @@
             this.cbostNfAtivo._Table = "Tipo_documento";
             this.cbostNfAtivo._TamanhoComponente = 83;
             this.cbostNfAtivo._TamanhoMaiorLabel = 300;
-            this.cbostNfAtivo._Visible = false;
+            this.cbostNfAtivo._Visible = true;
             this.cbostNfAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfAtivo.Base = null;
             this.cbostNfAtivo.Color = System.Drawing.Color.White;
@@ -644,7 +644,7 @@
             this.cbostNFdevolucao._Table = "Tipo_documento";
             this.cbostNFdevolucao._TamanhoComponente = 83;
             this.cbostNFdevolucao._TamanhoMaiorLabel = 300;
-            this.cbostNFdevolucao._Visible = false;
+            this.cbostNFdevolucao._Visible = true;
             this.cbostNFdevolucao.BackColor = System.Drawing.Color.Transparent;
             this.cbostNFdevolucao.Base = null;
             this.cbostNFdevolucao.Color = System.Drawing.Color.White;
@@ -671,7 +671,7 @@
             this.cbostCompoeVlTotalProdutos._Table = "Tipo_documento";
             this.cbostCompoeVlTotalProdutos._TamanhoComponente = 134;
             this.cbostCompoeVlTotalProdutos._TamanhoMaiorLabel = 300;
-            this.cbostCompoeVlTotalProdutos._Visible = false;
+            this.cbostCompoeVlTotalProdutos._Visible = true;
             this.cbostCompoeVlTotalProdutos.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeVlTotalProdutos.Base = null;
             this.cbostCompoeVlTotalProdutos.Color = System.Drawing.Color.White;
@@ -698,7 +698,7 @@
             this.cbostSomaDevolucaoVlTotalNf._Table = "Tipo_documento";
             this.cbostSomaDevolucaoVlTotalNf._TamanhoComponente = 83;
             this.cbostSomaDevolucaoVlTotalNf._TamanhoMaiorLabel = 300;
-            this.cbostSomaDevolucaoVlTotalNf._Visible = false;
+            this.cbostSomaDevolucaoVlTotalNf._Visible = true;
             this.cbostSomaDevolucaoVlTotalNf.BackColor = System.Drawing.Color.Transparent;
             this.cbostSomaDevolucaoVlTotalNf.Base = null;
             this.cbostSomaDevolucaoVlTotalNf.Color = System.Drawing.Color.White;
@@ -725,7 +725,7 @@
             this.cbostImprimeIcmsProprioComNormal._Table = "Tipo_documento";
             this.cbostImprimeIcmsProprioComNormal._TamanhoComponente = 87;
             this.cbostImprimeIcmsProprioComNormal._TamanhoMaiorLabel = 300;
-            this.cbostImprimeIcmsProprioComNormal._Visible = false;
+            this.cbostImprimeIcmsProprioComNormal._Visible = true;
             this.cbostImprimeIcmsProprioComNormal.BackColor = System.Drawing.Color.Transparent;
             this.cbostImprimeIcmsProprioComNormal.Base = null;
             this.cbostImprimeIcmsProprioComNormal.Color = System.Drawing.Color.White;
@@ -752,7 +752,7 @@
             this.cbostRelacaoRecebimentoPedidocpa._Table = "Tipo_documento";
             this.cbostRelacaoRecebimentoPedidocpa._TamanhoComponente = 80;
             this.cbostRelacaoRecebimentoPedidocpa._TamanhoMaiorLabel = 300;
-            this.cbostRelacaoRecebimentoPedidocpa._Visible = false;
+            this.cbostRelacaoRecebimentoPedidocpa._Visible = true;
             this.cbostRelacaoRecebimentoPedidocpa.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoRecebimentoPedidocpa.Base = null;
             this.cbostRelacaoRecebimentoPedidocpa.Color = System.Drawing.Color.White;
@@ -779,7 +779,7 @@
             this.cbostRelacaoPedidocpaCotacao._Table = "Tipo_documento";
             this.cbostRelacaoPedidocpaCotacao._TamanhoComponente = 80;
             this.cbostRelacaoPedidocpaCotacao._TamanhoMaiorLabel = 300;
-            this.cbostRelacaoPedidocpaCotacao._Visible = false;
+            this.cbostRelacaoPedidocpaCotacao._Visible = true;
             this.cbostRelacaoPedidocpaCotacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoPedidocpaCotacao.Base = null;
             this.cbostRelacaoPedidocpaCotacao.Color = System.Drawing.Color.White;
@@ -810,7 +810,7 @@
             this.campoPesquisaidModeloDocFiscal._TamanhoComponente = 200;
             this.campoPesquisaidModeloDocFiscal._TamanhoMaiorLabel = 300;
             this.campoPesquisaidModeloDocFiscal._Vinculado = false;
-            this.campoPesquisaidModeloDocFiscal._Visible = false;
+            this.campoPesquisaidModeloDocFiscal._Visible = true;
             this.campoPesquisaidModeloDocFiscal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.campoPesquisaidModeloDocFiscal.BackColor = System.Drawing.Color.Transparent;
             this.campoPesquisaidModeloDocFiscal.Base = null;
@@ -832,7 +832,7 @@
             this.campoxObs._Table = "Tipo_documento";
             this.campoxObs._TamanhoComponente = 109;
             this.campoxObs._TamanhoMaiorLabel = 300;
-            this.campoxObs._Visible = false;
+            this.campoxObs._Visible = true;
             this.campoxObs.BackColor = System.Drawing.Color.Transparent;
             this.campoxObs.Base = null;
             this.campoxObs.Location = new System.Drawing.Point(1269, 57);
@@ -853,7 +853,7 @@
             this.cboAtivo._Table = "Tipo_documento";
             this.cboAtivo._TamanhoComponente = 80;
             this.cboAtivo._TamanhoMaiorLabel = 300;
-            this.cboAtivo._Visible = false;
+            this.cboAtivo._Visible = true;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.Color = System.Drawing.Color.White;

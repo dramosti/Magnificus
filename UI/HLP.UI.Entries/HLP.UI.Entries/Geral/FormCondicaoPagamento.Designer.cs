@@ -116,7 +116,7 @@
             this.txtCodigo._Table = "Condicao_pagamento";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -142,7 +142,7 @@
             this.txtxCondicaoPagamento._Table = "Condicao_pagamento";
             this.txtxCondicaoPagamento._TamanhoComponente = 150;
             this.txtxCondicaoPagamento._TamanhoMaiorLabel = 200;
-            this.txtxCondicaoPagamento._Visible = false;
+            this.txtxCondicaoPagamento._Visible = true;
             this.txtxCondicaoPagamento.BackColor = System.Drawing.Color.Transparent;
             this.txtxCondicaoPagamento.Base = null;
             this.txtxCondicaoPagamento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -168,7 +168,7 @@
             this.txtxDescricao._Table = "Condicao_pagamento";
             this.txtxDescricao._TamanhoComponente = 390;
             this.txtxDescricao._TamanhoMaiorLabel = 200;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -194,7 +194,7 @@
             this.cbostMetodo._Table = "Condicao_pagamento";
             this.cbostMetodo._TamanhoComponente = 150;
             this.cbostMetodo._TamanhoMaiorLabel = 200;
-            this.cbostMetodo._Visible = false;
+            this.cbostMetodo._Visible = true;
             this.cbostMetodo.BackColor = System.Drawing.Color.Transparent;
             this.cbostMetodo.Base = null;
             this.cbostMetodo.Color = System.Drawing.Color.White;
@@ -221,7 +221,7 @@
             this.nudnMeses._Table = "Condicao_pagamento";
             this.nudnMeses._TamanhoComponente = 119;
             this.nudnMeses._TamanhoMaiorLabel = 200;
-            this.nudnMeses._Visible = false;
+            this.nudnMeses._Visible = true;
             this.nudnMeses.BackColor = System.Drawing.Color.Transparent;
             this.nudnMeses.Base = null;
             this.nudnMeses.Color = System.Drawing.Color.White;
@@ -261,7 +261,7 @@
             this.nudnSemanas._Table = "Condicao_pagamento";
             this.nudnSemanas._TamanhoComponente = 120;
             this.nudnSemanas._TamanhoMaiorLabel = 200;
-            this.nudnSemanas._Visible = false;
+            this.nudnSemanas._Visible = true;
             this.nudnSemanas.BackColor = System.Drawing.Color.Transparent;
             this.nudnSemanas.Base = null;
             this.nudnSemanas.Color = System.Drawing.Color.White;
@@ -301,7 +301,7 @@
             this.nudnDias._Table = "Condicao_pagamento";
             this.nudnDias._TamanhoComponente = 118;
             this.nudnDias._TamanhoMaiorLabel = 160;
-            this.nudnDias._Visible = false;
+            this.nudnDias._Visible = true;
             this.nudnDias.BackColor = System.Drawing.Color.Transparent;
             this.nudnDias.Base = null;
             this.nudnDias.Color = System.Drawing.Color.White;
@@ -348,7 +348,7 @@
             this.hlP_PesquisaidPlanoPagamento._TamanhoComponente = 300;
             this.hlP_PesquisaidPlanoPagamento._TamanhoMaiorLabel = 160;
             this.hlP_PesquisaidPlanoPagamento._Vinculado = false;
-            this.hlP_PesquisaidPlanoPagamento._Visible = false;
+            this.hlP_PesquisaidPlanoPagamento._Visible = true;
             this.hlP_PesquisaidPlanoPagamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidPlanoPagamento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidPlanoPagamento.Base = null;
@@ -377,7 +377,7 @@
             this.hlP_PesquisaidDiaPagamento._TamanhoComponente = 300;
             this.hlP_PesquisaidDiaPagamento._TamanhoMaiorLabel = 160;
             this.hlP_PesquisaidDiaPagamento._Vinculado = false;
-            this.hlP_PesquisaidDiaPagamento._Visible = false;
+            this.hlP_PesquisaidDiaPagamento._Visible = true;
             this.hlP_PesquisaidDiaPagamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDiaPagamento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDiaPagamento.Base = null;
@@ -403,7 +403,7 @@
             this.cbostDataVencimento._Table = "Condicao_pagamento";
             this.cbostDataVencimento._TamanhoComponente = 157;
             this.cbostDataVencimento._TamanhoMaiorLabel = 160;
-            this.cbostDataVencimento._Visible = false;
+            this.cbostDataVencimento._Visible = true;
             this.cbostDataVencimento.BackColor = System.Drawing.Color.Transparent;
             this.cbostDataVencimento.Base = null;
             this.cbostDataVencimento.Color = System.Drawing.Color.White;
@@ -482,7 +482,7 @@
             this.cbostCondicao._Table = "Condicao_pagamento";
             this.cbostCondicao._TamanhoComponente = 125;
             this.cbostCondicao._TamanhoMaiorLabel = 200;
-            this.cbostCondicao._Visible = false;
+            this.cbostCondicao._Visible = true;
             this.cbostCondicao.BackColor = System.Drawing.Color.Transparent;
             this.cbostCondicao.Base = null;
             this.cbostCondicao.Color = System.Drawing.Color.White;

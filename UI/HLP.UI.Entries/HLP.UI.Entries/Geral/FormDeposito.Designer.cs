@@ -112,7 +112,7 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo._Table = "Deposito";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -142,7 +142,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidSite._TamanhoComponente = 300;
             this.hlP_PesquisaidSite._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidSite._Vinculado = false;
-            this.hlP_PesquisaidSite._Visible = false;
+            this.hlP_PesquisaidSite._Visible = true;
             this.hlP_PesquisaidSite.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidSite.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidSite.Base = null;
@@ -167,7 +167,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxDeposito._Table = "Deposito";
             this.txtxDeposito._TamanhoComponente = 253;
             this.txtxDeposito._TamanhoMaiorLabel = 150;
-            this.txtxDeposito._Visible = false;
+            this.txtxDeposito._Visible = true;
             this.txtxDeposito.BackColor = System.Drawing.Color.Transparent;
             this.txtxDeposito.Base = null;
             this.txtxDeposito.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -193,7 +193,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxDescricao._Table = "Deposito";
             this.txtxDescricao._TamanhoComponente = 324;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -219,7 +219,7 @@ namespace HLP.UI.Entries.Geral
             this.cbostTipo._Table = "Deposito";
             this.cbostTipo._TamanhoComponente = 128;
             this.cbostTipo._TamanhoMaiorLabel = 150;
-            this.cbostTipo._Visible = false;
+            this.cbostTipo._Visible = true;
             this.cbostTipo.BackColor = System.Drawing.Color.Transparent;
             this.cbostTipo.Base = null;
             this.cbostTipo.Color = System.Drawing.Color.White;
@@ -247,7 +247,7 @@ namespace HLP.UI.Entries.Geral
             this.cbostGrupoIdentificacao._Table = "Deposito";
             this.cbostGrupoIdentificacao._TamanhoComponente = 370;
             this.cbostGrupoIdentificacao._TamanhoMaiorLabel = 150;
-            this.cbostGrupoIdentificacao._Visible = false;
+            this.cbostGrupoIdentificacao._Visible = true;
             this.cbostGrupoIdentificacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostGrupoIdentificacao.Base = null;
             this.cbostGrupoIdentificacao.Color = System.Drawing.Color.White;

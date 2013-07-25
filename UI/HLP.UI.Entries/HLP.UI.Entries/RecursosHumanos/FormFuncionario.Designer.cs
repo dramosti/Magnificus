@@ -346,7 +346,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtCodigo._Table = "Funcionario";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -372,7 +372,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxCodigoAlternativo._Table = "Funcionario";
             this.txtxCodigoAlternativo._TamanhoComponente = 157;
             this.txtxCodigoAlternativo._TamanhoMaiorLabel = 150;
-            this.txtxCodigoAlternativo._Visible = false;
+            this.txtxCodigoAlternativo._Visible = true;
             this.txtxCodigoAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoAlternativo.Base = null;
             this.txtxCodigoAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -398,7 +398,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxAtivo._Table = "Funcionario";
             this.cbxAtivo._TamanhoComponente = 80;
             this.cbxAtivo._TamanhoMaiorLabel = 150;
-            this.cbxAtivo._Visible = false;
+            this.cbxAtivo._Visible = true;
             this.cbxAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cbxAtivo.Base = null;
             this.cbxAtivo.Color = System.Drawing.Color.White;
@@ -426,7 +426,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxSaudacao._Table = "Funcionario";
             this.txtxSaudacao._TamanhoComponente = 412;
             this.txtxSaudacao._TamanhoMaiorLabel = 150;
-            this.txtxSaudacao._Visible = false;
+            this.txtxSaudacao._Visible = true;
             this.txtxSaudacao.BackColor = System.Drawing.Color.Transparent;
             this.txtxSaudacao.Base = null;
             this.txtxSaudacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -452,7 +452,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxNome._Table = "Funcionario";
             this.txtxNome._TamanhoComponente = 390;
             this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -482,7 +482,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidCargo._TamanhoComponente = 210;
             this.hlP_PesquisaidCargo._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidCargo._Vinculado = false;
-            this.hlP_PesquisaidCargo._Visible = false;
+            this.hlP_PesquisaidCargo._Visible = true;
             this.hlP_PesquisaidCargo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCargo.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCargo.Base = null;
@@ -511,7 +511,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_Pesquisa_idDepartamento._TamanhoComponente = 210;
             this.hlP_Pesquisa_idDepartamento._TamanhoMaiorLabel = 150;
             this.hlP_Pesquisa_idDepartamento._Vinculado = false;
-            this.hlP_Pesquisa_idDepartamento._Visible = false;
+            this.hlP_Pesquisa_idDepartamento._Visible = true;
             this.hlP_Pesquisa_idDepartamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_Pesquisa_idDepartamento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_Pesquisa_idDepartamento.Base = null;
@@ -548,7 +548,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxstPerfil._Table = "Funcionario";
             this.cbxstPerfil._TamanhoComponente = 194;
             this.cbxstPerfil._TamanhoMaiorLabel = 150;
-            this.cbxstPerfil._Visible = false;
+            this.cbxstPerfil._Visible = true;
             this.cbxstPerfil.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPerfil.Base = null;
             this.cbxstPerfil.Color = System.Drawing.Color.White;
@@ -580,7 +580,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidCalendário._TamanhoComponente = 210;
             this.hlP_PesquisaidCalendário._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidCalendário._Vinculado = false;
-            this.hlP_PesquisaidCalendário._Visible = false;
+            this.hlP_PesquisaidCalendário._Visible = true;
             this.hlP_PesquisaidCalendário.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCalendário.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCalendário.Base = null;
@@ -621,7 +621,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidSite._TamanhoComponente = 210;
             this.hlP_PesquisaidSite._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidSite._Vinculado = false;
-            this.hlP_PesquisaidSite._Visible = false;
+            this.hlP_PesquisaidSite._Visible = true;
             this.hlP_PesquisaidSite.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidSite.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidSite.Base = null;
@@ -650,7 +650,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidDeposito._TamanhoComponente = 210;
             this.hlP_PesquisaidDeposito._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidDeposito._Vinculado = false;
-            this.hlP_PesquisaidDeposito._Visible = false;
+            this.hlP_PesquisaidDeposito._Visible = true;
             this.hlP_PesquisaidDeposito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDeposito.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDeposito.Base = null;
@@ -676,7 +676,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxInformacaoAtencao._Table = "Funcionario";
             this.txtxInformacaoAtencao._TamanhoComponente = 100;
             this.txtxInformacaoAtencao._TamanhoMaiorLabel = 150;
-            this.txtxInformacaoAtencao._Visible = false;
+            this.txtxInformacaoAtencao._Visible = true;
             this.txtxInformacaoAtencao.BackColor = System.Drawing.Color.Transparent;
             this.txtxInformacaoAtencao.Base = null;
             this.txtxInformacaoAtencao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -930,7 +930,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdAniversario._Table = "Funcionario";
             this.dtdAniversario._TamanhoComponente = 114;
             this.dtdAniversario._TamanhoMaiorLabel = 180;
-            this.dtdAniversario._Visible = false;
+            this.dtdAniversario._Visible = true;
             this.dtdAniversario.BackColor = System.Drawing.Color.Transparent;
             this.dtdAniversario.Base = null;
             this.dtdAniversario.Color = System.Drawing.Color.Empty;
@@ -956,7 +956,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxstSexo._Table = "Funcionario";
             this.cbxstSexo._TamanhoComponente = 111;
             this.cbxstSexo._TamanhoMaiorLabel = 180;
-            this.cbxstSexo._Visible = false;
+            this.cbxstSexo._Visible = true;
             this.cbxstSexo.BackColor = System.Drawing.Color.Transparent;
             this.cbxstSexo.Base = null;
             this.cbxstSexo.Color = System.Drawing.Color.White;
@@ -982,7 +982,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdFalecimento._Table = "Funcionario";
             this.dtdFalecimento._TamanhoComponente = 117;
             this.dtdFalecimento._TamanhoMaiorLabel = 180;
-            this.dtdFalecimento._Visible = false;
+            this.dtdFalecimento._Visible = true;
             this.dtdFalecimento.BackColor = System.Drawing.Color.Transparent;
             this.dtdFalecimento.Base = null;
             this.dtdFalecimento.Color = System.Drawing.Color.Empty;
@@ -1008,7 +1008,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.mskxCpf._TamanhoMaiorLabel = 180;
             this.mskxCpf._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCpf._UF = null;
-            this.mskxCpf._Visible = false;
+            this.mskxCpf._Visible = true;
             this.mskxCpf.BackColor = System.Drawing.Color.Transparent;
             this.mskxCpf.Base = null;
             this.mskxCpf.Color = System.Drawing.Color.White;
@@ -1035,7 +1035,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxRg._Table = "Funcionario";
             this.txtxRg._TamanhoComponente = 135;
             this.txtxRg._TamanhoMaiorLabel = 180;
-            this.txtxRg._Visible = false;
+            this.txtxRg._Visible = true;
             this.txtxRg.BackColor = System.Drawing.Color.Transparent;
             this.txtxRg.Base = null;
             this.txtxRg.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1061,7 +1061,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxConjugue._Table = "Funcionario";
             this.txtxConjugue._TamanhoComponente = 131;
             this.txtxConjugue._TamanhoMaiorLabel = 180;
-            this.txtxConjugue._Visible = false;
+            this.txtxConjugue._Visible = true;
             this.txtxConjugue.BackColor = System.Drawing.Color.Transparent;
             this.txtxConjugue.Base = null;
             this.txtxConjugue.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1087,7 +1087,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxFilhos._Table = "Funcionario";
             this.txtxFilhos._TamanhoComponente = 132;
             this.txtxFilhos._TamanhoMaiorLabel = 180;
-            this.txtxFilhos._Visible = false;
+            this.txtxFilhos._Visible = true;
             this.txtxFilhos.BackColor = System.Drawing.Color.Transparent;
             this.txtxFilhos.Base = null;
             this.txtxFilhos.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1117,7 +1117,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidContaBancaria._TamanhoComponente = 210;
             this.hlP_PesquisaidContaBancaria._TamanhoMaiorLabel = 180;
             this.hlP_PesquisaidContaBancaria._Vinculado = false;
-            this.hlP_PesquisaidContaBancaria._Visible = false;
+            this.hlP_PesquisaidContaBancaria._Visible = true;
             this.hlP_PesquisaidContaBancaria.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidContaBancaria.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidContaBancaria.Base = null;
@@ -1154,7 +1154,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxVisto._Table = "Funcionario";
             this.txtxVisto._TamanhoComponente = 133;
             this.txtxVisto._TamanhoMaiorLabel = 180;
-            this.txtxVisto._Visible = false;
+            this.txtxVisto._Visible = true;
             this.txtxVisto.BackColor = System.Drawing.Color.Transparent;
             this.txtxVisto.Base = null;
             this.txtxVisto.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1178,7 +1178,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdFinalVisto._Table = "Funcionario";
             this.dtdFinalVisto._TamanhoComponente = 114;
             this.dtdFinalVisto._TamanhoMaiorLabel = 180;
-            this.dtdFinalVisto._Visible = false;
+            this.dtdFinalVisto._Visible = true;
             this.dtdFinalVisto.BackColor = System.Drawing.Color.Transparent;
             this.dtdFinalVisto.Base = null;
             this.dtdFinalVisto.Color = System.Drawing.Color.Empty;
@@ -1204,7 +1204,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxVistoTrabalho._Table = "Funcionario";
             this.txtxVistoTrabalho._TamanhoComponente = 131;
             this.txtxVistoTrabalho._TamanhoMaiorLabel = 180;
-            this.txtxVistoTrabalho._Visible = false;
+            this.txtxVistoTrabalho._Visible = true;
             this.txtxVistoTrabalho.BackColor = System.Drawing.Color.Transparent;
             this.txtxVistoTrabalho.Base = null;
             this.txtxVistoTrabalho.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1228,7 +1228,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdFinalVistoTrabalho._Table = "Funcionario";
             this.dtdFinalVistoTrabalho._TamanhoComponente = 111;
             this.dtdFinalVistoTrabalho._TamanhoMaiorLabel = 180;
-            this.dtdFinalVistoTrabalho._Visible = false;
+            this.dtdFinalVistoTrabalho._Visible = true;
             this.dtdFinalVistoTrabalho.BackColor = System.Drawing.Color.Transparent;
             this.dtdFinalVistoTrabalho.Base = null;
             this.dtdFinalVistoTrabalho.Color = System.Drawing.Color.Empty;
@@ -1264,7 +1264,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdAdmissao._Table = "Funcionario";
             this.dtdAdmissao._TamanhoComponente = 115;
             this.dtdAdmissao._TamanhoMaiorLabel = 180;
-            this.dtdAdmissao._Visible = false;
+            this.dtdAdmissao._Visible = true;
             this.dtdAdmissao.BackColor = System.Drawing.Color.Transparent;
             this.dtdAdmissao.Base = null;
             this.dtdAdmissao.Color = System.Drawing.Color.Empty;
@@ -1289,7 +1289,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudvDiaria._Table = "Funcionario";
             this.nudvDiaria._TamanhoComponente = 119;
             this.nudvDiaria._TamanhoMaiorLabel = 180;
-            this.nudvDiaria._Visible = false;
+            this.nudvDiaria._Visible = true;
             this.nudvDiaria.BackColor = System.Drawing.Color.Transparent;
             this.nudvDiaria.Base = null;
             this.nudvDiaria.Color = System.Drawing.Color.White;
@@ -1330,7 +1330,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxstSalario._Table = "Funcionario";
             this.cbxstSalario._TamanhoComponente = 115;
             this.cbxstSalario._TamanhoMaiorLabel = 150;
-            this.cbxstSalario._Visible = false;
+            this.cbxstSalario._Visible = true;
             this.cbxstSalario.BackColor = System.Drawing.Color.Transparent;
             this.cbxstSalario.Base = null;
             this.cbxstSalario.Color = System.Drawing.Color.White;
@@ -1357,7 +1357,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudvSalario._Table = "Funcionario";
             this.nudvSalario._TamanhoComponente = 119;
             this.nudvSalario._TamanhoMaiorLabel = 150;
-            this.nudvSalario._Visible = false;
+            this.nudvSalario._Visible = true;
             this.nudvSalario.BackColor = System.Drawing.Color.Transparent;
             this.nudvSalario.Base = null;
             this.nudvSalario.Color = System.Drawing.Color.White;
@@ -1396,7 +1396,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudvSalarioHora._Table = "Funcionario";
             this.nudvSalarioHora._TamanhoComponente = 118;
             this.nudvSalarioHora._TamanhoMaiorLabel = 150;
-            this.nudvSalarioHora._Visible = false;
+            this.nudvSalarioHora._Visible = true;
             this.nudvSalarioHora.BackColor = System.Drawing.Color.Transparent;
             this.nudvSalarioHora.Base = null;
             this.nudvSalarioHora.Color = System.Drawing.Color.White;
@@ -1441,7 +1441,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidResponsavel._TamanhoComponente = 210;
             this.hlP_PesquisaidResponsavel._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidResponsavel._Vinculado = false;
-            this.hlP_PesquisaidResponsavel._Visible = false;
+            this.hlP_PesquisaidResponsavel._Visible = true;
             this.hlP_PesquisaidResponsavel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidResponsavel.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidResponsavel.Base = null;
@@ -1476,7 +1476,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasSegunda._Table = "Funcionario";
             this.dtdQtdHorasSegunda._TamanhoComponente = 90;
             this.dtdQtdHorasSegunda._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasSegunda._Visible = false;
+            this.dtdQtdHorasSegunda._Visible = true;
             this.dtdQtdHorasSegunda.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasSegunda.Base = null;
             this.dtdQtdHorasSegunda.Color = System.Drawing.Color.Empty;
@@ -1500,7 +1500,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasTerca._Table = "Funcionario";
             this.dtdQtdHorasTerca._TamanhoComponente = 90;
             this.dtdQtdHorasTerca._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasTerca._Visible = false;
+            this.dtdQtdHorasTerca._Visible = true;
             this.dtdQtdHorasTerca.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasTerca.Base = null;
             this.dtdQtdHorasTerca.Color = System.Drawing.Color.Empty;
@@ -1524,7 +1524,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasQuarta._Table = "Funcionario";
             this.dtdQtdHorasQuarta._TamanhoComponente = 91;
             this.dtdQtdHorasQuarta._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasQuarta._Visible = false;
+            this.dtdQtdHorasQuarta._Visible = true;
             this.dtdQtdHorasQuarta.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasQuarta.Base = null;
             this.dtdQtdHorasQuarta.Color = System.Drawing.Color.Empty;
@@ -1548,7 +1548,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasQuinta._Table = "Funcionario";
             this.dtdQtdHorasQuinta._TamanhoComponente = 91;
             this.dtdQtdHorasQuinta._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasQuinta._Visible = false;
+            this.dtdQtdHorasQuinta._Visible = true;
             this.dtdQtdHorasQuinta.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasQuinta.Base = null;
             this.dtdQtdHorasQuinta.Color = System.Drawing.Color.Empty;
@@ -1572,7 +1572,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasSexta._Table = "Funcionario";
             this.dtdQtdHorasSexta._TamanhoComponente = 90;
             this.dtdQtdHorasSexta._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasSexta._Visible = false;
+            this.dtdQtdHorasSexta._Visible = true;
             this.dtdQtdHorasSexta.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasSexta.Base = null;
             this.dtdQtdHorasSexta.Color = System.Drawing.Color.Empty;
@@ -1596,7 +1596,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasSabado._Table = "Funcionario";
             this.dtdQtdHorasSabado._TamanhoComponente = 90;
             this.dtdQtdHorasSabado._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasSabado._Visible = false;
+            this.dtdQtdHorasSabado._Visible = true;
             this.dtdQtdHorasSabado.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasSabado.Base = null;
             this.dtdQtdHorasSabado.Color = System.Drawing.Color.Empty;
@@ -1621,7 +1621,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasDomingo._Table = "Funcionario";
             this.dtdQtdHorasDomingo._TamanhoComponente = 90;
             this.dtdQtdHorasDomingo._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasDomingo._Visible = false;
+            this.dtdQtdHorasDomingo._Visible = true;
             this.dtdQtdHorasDomingo.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasDomingo.Base = null;
             this.dtdQtdHorasDomingo.Color = System.Drawing.Color.Empty;
@@ -1644,7 +1644,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtTotalHorasTab._Regex = null;
             this.txtTotalHorasTab._TamanhoComponente = 84;
             this.txtTotalHorasTab._TamanhoMaiorLabel = 150;
-            this.txtTotalHorasTab._Visible = false;
+            this.txtTotalHorasTab._Visible = true;
             this.txtTotalHorasTab.BackColor = System.Drawing.Color.Transparent;
             this.txtTotalHorasTab.Base = null;
             this.txtTotalHorasTab.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1731,7 +1731,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxTelefoneComercial._Table = "Funcionario";
             this.txtxTelefoneComercial._TamanhoComponente = 133;
             this.txtxTelefoneComercial._TamanhoMaiorLabel = 150;
-            this.txtxTelefoneComercial._Visible = false;
+            this.txtxTelefoneComercial._Visible = true;
             this.txtxTelefoneComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefoneComercial.Base = null;
             this.txtxTelefoneComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1757,7 +1757,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxRamalComercial._Table = "Funcionario";
             this.txtxRamalComercial._TamanhoComponente = 134;
             this.txtxRamalComercial._TamanhoMaiorLabel = 150;
-            this.txtxRamalComercial._Visible = false;
+            this.txtxRamalComercial._Visible = true;
             this.txtxRamalComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRamalComercial.Base = null;
             this.txtxRamalComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1783,7 +1783,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxCelularComercial._Table = "Funcionario";
             this.txtxCelularComercial._TamanhoComponente = 133;
             this.txtxCelularComercial._TamanhoMaiorLabel = 150;
-            this.txtxCelularComercial._Visible = false;
+            this.txtxCelularComercial._Visible = true;
             this.txtxCelularComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxCelularComercial.Base = null;
             this.txtxCelularComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1809,7 +1809,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxRadioFoneComercial._Table = "Funcionario";
             this.txtxRadioFoneComercial._TamanhoComponente = 133;
             this.txtxRadioFoneComercial._TamanhoMaiorLabel = 150;
-            this.txtxRadioFoneComercial._Visible = false;
+            this.txtxRadioFoneComercial._Visible = true;
             this.txtxRadioFoneComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRadioFoneComercial.Base = null;
             this.txtxRadioFoneComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1835,7 +1835,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxPagerComercial._Table = "Funcionario";
             this.txtxPagerComercial._TamanhoComponente = 134;
             this.txtxPagerComercial._TamanhoMaiorLabel = 150;
-            this.txtxPagerComercial._Visible = false;
+            this.txtxPagerComercial._Visible = true;
             this.txtxPagerComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxPagerComercial.Base = null;
             this.txtxPagerComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1861,7 +1861,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxFaxComercial._Table = "Funcionario";
             this.txtxFaxComercial._TamanhoComponente = 134;
             this.txtxFaxComercial._TamanhoMaiorLabel = 150;
-            this.txtxFaxComercial._Visible = false;
+            this.txtxFaxComercial._Visible = true;
             this.txtxFaxComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxFaxComercial.Base = null;
             this.txtxFaxComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1887,7 +1887,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxEmailComercial._Table = "Funcionario";
             this.txtxEmailComercial._TamanhoComponente = 269;
             this.txtxEmailComercial._TamanhoMaiorLabel = 150;
-            this.txtxEmailComercial._Visible = false;
+            this.txtxEmailComercial._Visible = true;
             this.txtxEmailComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmailComercial.Base = null;
             this.txtxEmailComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1913,7 +1913,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxSkypeComercial._Table = "Funcionario";
             this.txtxSkypeComercial._TamanhoComponente = 269;
             this.txtxSkypeComercial._TamanhoMaiorLabel = 150;
-            this.txtxSkypeComercial._Visible = false;
+            this.txtxSkypeComercial._Visible = true;
             this.txtxSkypeComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxSkypeComercial.Base = null;
             this.txtxSkypeComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1939,7 +1939,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxMSNComercial._Table = "Funcionario";
             this.txtxMSNComercial._TamanhoComponente = 272;
             this.txtxMSNComercial._TamanhoMaiorLabel = 150;
-            this.txtxMSNComercial._Visible = false;
+            this.txtxMSNComercial._Visible = true;
             this.txtxMSNComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxMSNComercial.Base = null;
             this.txtxMSNComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1965,7 +1965,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxhttpComercial._Table = "Funcionario";
             this.txtxhttpComercial._TamanhoComponente = 265;
             this.txtxhttpComercial._TamanhoMaiorLabel = 150;
-            this.txtxhttpComercial._Visible = false;
+            this.txtxhttpComercial._Visible = true;
             this.txtxhttpComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxhttpComercial.Base = null;
             this.txtxhttpComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2003,7 +2003,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxTelefoneResidencial._Table = "Funcionario";
             this.txtxTelefoneResidencial._TamanhoComponente = 133;
             this.txtxTelefoneResidencial._TamanhoMaiorLabel = 150;
-            this.txtxTelefoneResidencial._Visible = false;
+            this.txtxTelefoneResidencial._Visible = true;
             this.txtxTelefoneResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefoneResidencial.Base = null;
             this.txtxTelefoneResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2029,7 +2029,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxCelularResidencial._Table = "Funcionario";
             this.txtxCelularResidencial._TamanhoComponente = 133;
             this.txtxCelularResidencial._TamanhoMaiorLabel = 150;
-            this.txtxCelularResidencial._Visible = false;
+            this.txtxCelularResidencial._Visible = true;
             this.txtxCelularResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxCelularResidencial.Base = null;
             this.txtxCelularResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2055,7 +2055,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxRadioFoneResidencial._Table = "Funcionario";
             this.txtxRadioFoneResidencial._TamanhoComponente = 131;
             this.txtxRadioFoneResidencial._TamanhoMaiorLabel = 150;
-            this.txtxRadioFoneResidencial._Visible = false;
+            this.txtxRadioFoneResidencial._Visible = true;
             this.txtxRadioFoneResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRadioFoneResidencial.Base = null;
             this.txtxRadioFoneResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2081,7 +2081,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxEmailResidencial._Table = "Funcionario";
             this.txtxEmailResidencial._TamanhoComponente = 268;
             this.txtxEmailResidencial._TamanhoMaiorLabel = 150;
-            this.txtxEmailResidencial._Visible = false;
+            this.txtxEmailResidencial._Visible = true;
             this.txtxEmailResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmailResidencial.Base = null;
             this.txtxEmailResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2107,7 +2107,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxSkypeResidencial._Table = "Funcionario";
             this.txtxSkypeResidencial._TamanhoComponente = 268;
             this.txtxSkypeResidencial._TamanhoMaiorLabel = 150;
-            this.txtxSkypeResidencial._Visible = false;
+            this.txtxSkypeResidencial._Visible = true;
             this.txtxSkypeResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxSkypeResidencial.Base = null;
             this.txtxSkypeResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2133,7 +2133,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxMsnResidencial._Table = "Funcionario";
             this.txtxMsnResidencial._TamanhoComponente = 270;
             this.txtxMsnResidencial._TamanhoMaiorLabel = 160;
-            this.txtxMsnResidencial._Visible = false;
+            this.txtxMsnResidencial._Visible = true;
             this.txtxMsnResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxMsnResidencial.Base = null;
             this.txtxMsnResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2159,7 +2159,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtXhttpPessoal._Table = "Funcionario";
             this.txtXhttpPessoal._TamanhoComponente = 264;
             this.txtXhttpPessoal._TamanhoMaiorLabel = 160;
-            this.txtXhttpPessoal._Visible = false;
+            this.txtXhttpPessoal._Visible = true;
             this.txtXhttpPessoal.BackColor = System.Drawing.Color.Transparent;
             this.txtXhttpPessoal.Base = null;
             this.txtXhttpPessoal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2543,7 +2543,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxstComissao._Table = "Funcionario";
             this.cbxstComissao._TamanhoComponente = 218;
             this.cbxstComissao._TamanhoMaiorLabel = 160;
-            this.cbxstComissao._Visible = false;
+            this.cbxstComissao._Visible = true;
             this.cbxstComissao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstComissao.Base = null;
             this.cbxstComissao.Color = System.Drawing.Color.White;
@@ -2570,7 +2570,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudpComissaoAvista._Table = "Funcionario";
             this.nudpComissaoAvista._TamanhoComponente = 90;
             this.nudpComissaoAvista._TamanhoMaiorLabel = 160;
-            this.nudpComissaoAvista._Visible = false;
+            this.nudpComissaoAvista._Visible = true;
             this.nudpComissaoAvista.BackColor = System.Drawing.Color.Transparent;
             this.nudpComissaoAvista.Base = null;
             this.nudpComissaoAvista.Color = System.Drawing.Color.White;
@@ -2609,7 +2609,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudpComissaoAprazo._Table = "Funcionario";
             this.nudpComissaoAprazo._TamanhoComponente = 74;
             this.nudpComissaoAprazo._TamanhoMaiorLabel = 160;
-            this.nudpComissaoAprazo._Visible = false;
+            this.nudpComissaoAprazo._Visible = true;
             this.nudpComissaoAprazo.BackColor = System.Drawing.Color.Transparent;
             this.nudpComissaoAprazo.Base = null;
             this.nudpComissaoAprazo.Color = System.Drawing.Color.White;

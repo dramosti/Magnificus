@@ -306,7 +306,7 @@ namespace HLP.UI.Entries.Fiscal
             this.txtCodigo._Table = "Tipo_operacao";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -331,7 +331,7 @@ namespace HLP.UI.Entries.Fiscal
             this.txtxOperacao._Table = "Tipo_operacao";
             this.txtxOperacao._TamanhoComponente = 338;
             this.txtxOperacao._TamanhoMaiorLabel = 200;
-            this.txtxOperacao._Visible = false;
+            this.txtxOperacao._Visible = true;
             this.txtxOperacao.BackColor = System.Drawing.Color.Transparent;
             this.txtxOperacao.Base = null;
             this.txtxOperacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -356,7 +356,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbotpOperacao._Table = "Tipo_operacao";
             this.cbotpOperacao._TamanhoComponente = 236;
             this.cbotpOperacao._TamanhoMaiorLabel = 200;
-            this.cbotpOperacao._Visible = false;
+            this.cbotpOperacao._Visible = true;
             this.cbotpOperacao.BackColor = System.Drawing.Color.Transparent;
             this.cbotpOperacao.Base = null;
             this.cbotpOperacao.Color = System.Drawing.Color.White;
@@ -383,7 +383,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostRepresentaFaturamento._Table = "Tipo_operacao";
             this.cbostRepresentaFaturamento._TamanhoComponente = 80;
             this.cbostRepresentaFaturamento._TamanhoMaiorLabel = 200;
-            this.cbostRepresentaFaturamento._Visible = false;
+            this.cbostRepresentaFaturamento._Visible = true;
             this.cbostRepresentaFaturamento.BackColor = System.Drawing.Color.Transparent;
             this.cbostRepresentaFaturamento.Base = null;
             this.cbostRepresentaFaturamento.Color = System.Drawing.Color.White;
@@ -410,7 +410,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostGeraFinanceiro._Table = "Tipo_operacao";
             this.cbostGeraFinanceiro._TamanhoComponente = 80;
             this.cbostGeraFinanceiro._TamanhoMaiorLabel = 200;
-            this.cbostGeraFinanceiro._Visible = false;
+            this.cbostGeraFinanceiro._Visible = true;
             this.cbostGeraFinanceiro.BackColor = System.Drawing.Color.Transparent;
             this.cbostGeraFinanceiro.Base = null;
             this.cbostGeraFinanceiro.Color = System.Drawing.Color.White;
@@ -437,7 +437,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostGeraComissao._Table = "Tipo_operacao";
             this.cbostGeraComissao._TamanhoComponente = 80;
             this.cbostGeraComissao._TamanhoMaiorLabel = 200;
-            this.cbostGeraComissao._Visible = false;
+            this.cbostGeraComissao._Visible = true;
             this.cbostGeraComissao.BackColor = System.Drawing.Color.Transparent;
             this.cbostGeraComissao.Base = null;
             this.cbostGeraComissao.Color = System.Drawing.Color.White;
@@ -464,7 +464,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostServico._Table = "Tipo_operacao";
             this.cbostServico._TamanhoComponente = 80;
             this.cbostServico._TamanhoMaiorLabel = 200;
-            this.cbostServico._Visible = false;
+            this.cbostServico._Visible = true;
             this.cbostServico.BackColor = System.Drawing.Color.Transparent;
             this.cbostServico.Base = null;
             this.cbostServico.Color = System.Drawing.Color.White;
@@ -491,7 +491,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostOrigemMercadoria._Table = "Tipo_operacao";
             this.cbostOrigemMercadoria._TamanhoComponente = 338;
             this.cbostOrigemMercadoria._TamanhoMaiorLabel = 200;
-            this.cbostOrigemMercadoria._Visible = false;
+            this.cbostOrigemMercadoria._Visible = true;
             this.cbostOrigemMercadoria.BackColor = System.Drawing.Color.Transparent;
             this.cbostOrigemMercadoria.Base = null;
             this.cbostOrigemMercadoria.Color = System.Drawing.Color.White;
@@ -518,7 +518,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostEstoque._Table = "Tipo_operacao";
             this.cbostEstoque._TamanhoComponente = 139;
             this.cbostEstoque._TamanhoMaiorLabel = 200;
-            this.cbostEstoque._Visible = false;
+            this.cbostEstoque._Visible = true;
             this.cbostEstoque.BackColor = System.Drawing.Color.Transparent;
             this.cbostEstoque.Base = null;
             this.cbostEstoque.Color = System.Drawing.Color.White;
@@ -545,7 +545,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostEstoqueClientes._Table = "Tipo_operacao";
             this.cbostEstoqueClientes._TamanhoComponente = 139;
             this.cbostEstoqueClientes._TamanhoMaiorLabel = 200;
-            this.cbostEstoqueClientes._Visible = false;
+            this.cbostEstoqueClientes._Visible = true;
             this.cbostEstoqueClientes.BackColor = System.Drawing.Color.Transparent;
             this.cbostEstoqueClientes.Base = null;
             this.cbostEstoqueClientes.Color = System.Drawing.Color.White;
@@ -572,7 +572,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostEstoqueFornecedores._Table = "Tipo_operacao";
             this.cbostEstoqueFornecedores._TamanhoComponente = 139;
             this.cbostEstoqueFornecedores._TamanhoMaiorLabel = 200;
-            this.cbostEstoqueFornecedores._Visible = false;
+            this.cbostEstoqueFornecedores._Visible = true;
             this.cbostEstoqueFornecedores.BackColor = System.Drawing.Color.Transparent;
             this.cbostEstoqueFornecedores.Base = null;
             this.cbostEstoqueFornecedores.Color = System.Drawing.Color.White;
@@ -599,7 +599,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostEntregaFutura._Table = "Tipo_operacao";
             this.cbostEntregaFutura._TamanhoComponente = 80;
             this.cbostEntregaFutura._TamanhoMaiorLabel = 200;
-            this.cbostEntregaFutura._Visible = false;
+            this.cbostEntregaFutura._Visible = true;
             this.cbostEntregaFutura.BackColor = System.Drawing.Color.Transparent;
             this.cbostEntregaFutura.Base = null;
             this.cbostEntregaFutura.Color = System.Drawing.Color.White;
@@ -626,7 +626,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostTpIndustrializacao._Table = "Tipo_operacao";
             this.cbostTpIndustrializacao._TamanhoComponente = 101;
             this.cbostTpIndustrializacao._TamanhoMaiorLabel = 200;
-            this.cbostTpIndustrializacao._Visible = false;
+            this.cbostTpIndustrializacao._Visible = true;
             this.cbostTpIndustrializacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostTpIndustrializacao.Base = null;
             this.cbostTpIndustrializacao.Color = System.Drawing.Color.White;
@@ -657,7 +657,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisacCfopNaUf._TamanhoComponente = 300;
             this.hlP_PesquisacCfopNaUf._TamanhoMaiorLabel = 200;
             this.hlP_PesquisacCfopNaUf._Vinculado = false;
-            this.hlP_PesquisacCfopNaUf._Visible = false;
+            this.hlP_PesquisacCfopNaUf._Visible = true;
             this.hlP_PesquisacCfopNaUf.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisacCfopNaUf.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisacCfopNaUf.Base = null;
@@ -685,7 +685,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisacCfopOutraUf._TamanhoComponente = 300;
             this.hlP_PesquisacCfopOutraUf._TamanhoMaiorLabel = 200;
             this.hlP_PesquisacCfopOutraUf._Vinculado = false;
-            this.hlP_PesquisacCfopOutraUf._Visible = false;
+            this.hlP_PesquisacCfopOutraUf._Visible = true;
             this.hlP_PesquisacCfopOutraUf.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisacCfopOutraUf.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisacCfopOutraUf.Base = null;
@@ -713,7 +713,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisacCfopNcontribuinte._TamanhoComponente = 300;
             this.hlP_PesquisacCfopNcontribuinte._TamanhoMaiorLabel = 200;
             this.hlP_PesquisacCfopNcontribuinte._Vinculado = false;
-            this.hlP_PesquisacCfopNcontribuinte._Visible = false;
+            this.hlP_PesquisacCfopNcontribuinte._Visible = true;
             this.hlP_PesquisacCfopNcontribuinte.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisacCfopNcontribuinte.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisacCfopNcontribuinte.Base = null;
@@ -737,7 +737,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cboAtivo._Table = "Tipo_operacao";
             this.cboAtivo._TamanhoComponente = 80;
             this.cboAtivo._TamanhoMaiorLabel = 200;
-            this.cboAtivo._Visible = false;
+            this.cboAtivo._Visible = true;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.Color = System.Drawing.Color.White;
@@ -823,7 +823,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostRelacaoRecebimentoInspecao._Table = "Tipo_operacao";
             this.cbostRelacaoRecebimentoInspecao._TamanhoComponente = 137;
             this.cbostRelacaoRecebimentoInspecao._TamanhoMaiorLabel = 400;
-            this.cbostRelacaoRecebimentoInspecao._Visible = false;
+            this.cbostRelacaoRecebimentoInspecao._Visible = true;
             this.cbostRelacaoRecebimentoInspecao.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoRecebimentoInspecao.Base = null;
             this.cbostRelacaoRecebimentoInspecao.Color = System.Drawing.Color.White;
@@ -850,7 +850,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcCustoEntrada._Table = "Tipo_operacao";
             this.cbostCalcCustoEntrada._TamanhoComponente = 80;
             this.cbostCalcCustoEntrada._TamanhoMaiorLabel = 400;
-            this.cbostCalcCustoEntrada._Visible = false;
+            this.cbostCalcCustoEntrada._Visible = true;
             this.cbostCalcCustoEntrada.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcCustoEntrada.Base = null;
             this.cbostCalcCustoEntrada.Color = System.Drawing.Color.White;
@@ -877,7 +877,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostDescontaCredicmsCusto._Table = "Tipo_operacao";
             this.cbostDescontaCredicmsCusto._TamanhoComponente = 80;
             this.cbostDescontaCredicmsCusto._TamanhoMaiorLabel = 400;
-            this.cbostDescontaCredicmsCusto._Visible = false;
+            this.cbostDescontaCredicmsCusto._Visible = true;
             this.cbostDescontaCredicmsCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbostDescontaCredicmsCusto.Base = null;
             this.cbostDescontaCredicmsCusto.Color = System.Drawing.Color.White;
@@ -904,7 +904,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostDescontaCredsubstCusto._Table = "Tipo_operacao";
             this.cbostDescontaCredsubstCusto._TamanhoComponente = 80;
             this.cbostDescontaCredsubstCusto._TamanhoMaiorLabel = 400;
-            this.cbostDescontaCredsubstCusto._Visible = false;
+            this.cbostDescontaCredsubstCusto._Visible = true;
             this.cbostDescontaCredsubstCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbostDescontaCredsubstCusto.Base = null;
             this.cbostDescontaCredsubstCusto.Color = System.Drawing.Color.White;
@@ -931,7 +931,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostDescontaCredipiCusto._Table = "Tipo_operacao";
             this.cbostDescontaCredipiCusto._TamanhoComponente = 80;
             this.cbostDescontaCredipiCusto._TamanhoMaiorLabel = 400;
-            this.cbostDescontaCredipiCusto._Visible = false;
+            this.cbostDescontaCredipiCusto._Visible = true;
             this.cbostDescontaCredipiCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbostDescontaCredipiCusto.Base = null;
             this.cbostDescontaCredipiCusto.Color = System.Drawing.Color.White;
@@ -958,7 +958,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostDescontaCredpiscofinsCusto._Table = "Tipo_operacao";
             this.cbostDescontaCredpiscofinsCusto._TamanhoComponente = 80;
             this.cbostDescontaCredpiscofinsCusto._TamanhoMaiorLabel = 400;
-            this.cbostDescontaCredpiscofinsCusto._Visible = false;
+            this.cbostDescontaCredpiscofinsCusto._Visible = true;
             this.cbostDescontaCredpiscofinsCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbostDescontaCredpiscofinsCusto.Base = null;
             this.cbostDescontaCredpiscofinsCusto.Color = System.Drawing.Color.White;
@@ -985,7 +985,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostDescontaDifIcmsCusto._Table = "Tipo_operacao";
             this.cbostDescontaDifIcmsCusto._TamanhoComponente = 80;
             this.cbostDescontaDifIcmsCusto._TamanhoMaiorLabel = 400;
-            this.cbostDescontaDifIcmsCusto._Visible = false;
+            this.cbostDescontaDifIcmsCusto._Visible = true;
             this.cbostDescontaDifIcmsCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbostDescontaDifIcmsCusto.Base = null;
             this.cbostDescontaDifIcmsCusto.Color = System.Drawing.Color.White;
@@ -1012,7 +1012,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostObrigaOpNaCompra._Table = "Tipo_operacao";
             this.cbostObrigaOpNaCompra._TamanhoComponente = 80;
             this.cbostObrigaOpNaCompra._TamanhoMaiorLabel = 400;
-            this.cbostObrigaOpNaCompra._Visible = false;
+            this.cbostObrigaOpNaCompra._Visible = true;
             this.cbostObrigaOpNaCompra.BackColor = System.Drawing.Color.Transparent;
             this.cbostObrigaOpNaCompra.Base = null;
             this.cbostObrigaOpNaCompra.Color = System.Drawing.Color.White;
@@ -1093,7 +1093,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpInsumoIndustrializacao._Table = "Tipo_operacao";
             this.nudpInsumoIndustrializacao._TamanhoComponente = 149;
             this.nudpInsumoIndustrializacao._TamanhoMaiorLabel = 350;
-            this.nudpInsumoIndustrializacao._Visible = false;
+            this.nudpInsumoIndustrializacao._Visible = true;
             this.nudpInsumoIndustrializacao.BackColor = System.Drawing.Color.Transparent;
             this.nudpInsumoIndustrializacao.Base = null;
             this.nudpInsumoIndustrializacao.Color = System.Drawing.Color.White;
@@ -1131,7 +1131,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpMoIndustrializacao._Table = "Tipo_operacao";
             this.nudpMoIndustrializacao._TamanhoComponente = 153;
             this.nudpMoIndustrializacao._TamanhoMaiorLabel = 350;
-            this.nudpMoIndustrializacao._Visible = false;
+            this.nudpMoIndustrializacao._Visible = true;
             this.nudpMoIndustrializacao.BackColor = System.Drawing.Color.Transparent;
             this.nudpMoIndustrializacao.Base = null;
             this.nudpMoIndustrializacao.Color = System.Drawing.Color.White;
@@ -1171,7 +1171,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcImportacao._Table = "Tipo_operacao";
             this.cbostCalcImportacao._TamanhoComponente = 80;
             this.cbostCalcImportacao._TamanhoMaiorLabel = 350;
-            this.cbostCalcImportacao._Visible = false;
+            this.cbostCalcImportacao._Visible = true;
             this.cbostCalcImportacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcImportacao.Base = null;
             this.cbostCalcImportacao.Color = System.Drawing.Color.White;
@@ -1198,7 +1198,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcCredicmsSs._Table = "Tipo_operacao";
             this.cbostCalcCredicmsSs._TamanhoComponente = 80;
             this.cbostCalcCredicmsSs._TamanhoMaiorLabel = 350;
-            this.cbostCalcCredicmsSs._Visible = false;
+            this.cbostCalcCredicmsSs._Visible = true;
             this.cbostCalcCredicmsSs.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcCredicmsSs.Base = null;
             this.cbostCalcCredicmsSs.Color = System.Drawing.Color.White;
@@ -1225,7 +1225,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcCredicmsSsSt._Table = "Tipo_operacao";
             this.cbostCalcCredicmsSsSt._TamanhoComponente = 80;
             this.cbostCalcCredicmsSsSt._TamanhoMaiorLabel = 350;
-            this.cbostCalcCredicmsSsSt._Visible = false;
+            this.cbostCalcCredicmsSsSt._Visible = true;
             this.cbostCalcCredicmsSsSt.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcCredicmsSsSt.Base = null;
             this.cbostCalcCredicmsSsSt.Color = System.Drawing.Color.White;
@@ -1342,7 +1342,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostReduzBase._Table = "Tipo_operacao";
             this.cbostReduzBase._TamanhoComponente = 178;
             this.cbostReduzBase._TamanhoMaiorLabel = 300;
-            this.cbostReduzBase._Visible = false;
+            this.cbostReduzBase._Visible = true;
             this.cbostReduzBase.BackColor = System.Drawing.Color.Transparent;
             this.cbostReduzBase.Base = null;
             this.cbostReduzBase.Color = System.Drawing.Color.White;
@@ -1369,7 +1369,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostNaoReduzBase._Table = "Tipo_operacao";
             this.cbostNaoReduzBase._TamanhoComponente = 152;
             this.cbostNaoReduzBase._TamanhoMaiorLabel = 300;
-            this.cbostNaoReduzBase._Visible = false;
+            this.cbostNaoReduzBase._Visible = true;
             this.cbostNaoReduzBase.BackColor = System.Drawing.Color.Transparent;
             this.cbostNaoReduzBase.Base = null;
             this.cbostNaoReduzBase.Color = System.Drawing.Color.White;
@@ -1396,7 +1396,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcIcms._Table = "Tipo_operacao";
             this.cbostCalcIcms._TamanhoComponente = 80;
             this.cbostCalcIcms._TamanhoMaiorLabel = 300;
-            this.cbostCalcIcms._Visible = false;
+            this.cbostCalcIcms._Visible = true;
             this.cbostCalcIcms.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcIcms.Base = null;
             this.cbostCalcIcms.Color = System.Drawing.Color.White;
@@ -1427,7 +1427,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisaidCodigoIcmsPai._TamanhoComponente = 300;
             this.hlP_PesquisaidCodigoIcmsPai._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidCodigoIcmsPai._Vinculado = false;
-            this.hlP_PesquisaidCodigoIcmsPai._Visible = false;
+            this.hlP_PesquisaidCodigoIcmsPai._Visible = true;
             this.hlP_PesquisaidCodigoIcmsPai.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCodigoIcmsPai.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCodigoIcmsPai.Base = null;
@@ -1455,7 +1455,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisaidCSTIcms._TamanhoComponente = 300;
             this.hlP_PesquisaidCSTIcms._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidCSTIcms._Vinculado = false;
-            this.hlP_PesquisaidCSTIcms._Visible = false;
+            this.hlP_PesquisaidCSTIcms._Visible = true;
             this.hlP_PesquisaidCSTIcms.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTIcms.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTIcms.Base = null;
@@ -1479,7 +1479,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseIcms._Table = "Tipo_operacao";
             this.cbostCompoeBaseIcms._TamanhoComponente = 314;
             this.cbostCompoeBaseIcms._TamanhoMaiorLabel = 300;
-            this.cbostCompoeBaseIcms._Visible = false;
+            this.cbostCompoeBaseIcms._Visible = true;
             this.cbostCompoeBaseIcms.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseIcms.Base = null;
             this.cbostCompoeBaseIcms.Color = System.Drawing.Color.White;
@@ -1506,7 +1506,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcIpi._Table = "Tipo_operacao";
             this.cbostCalcIpi._TamanhoComponente = 80;
             this.cbostCalcIpi._TamanhoMaiorLabel = 300;
-            this.cbostCalcIpi._Visible = false;
+            this.cbostCalcIpi._Visible = true;
             this.cbostCalcIpi.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcIpi.Base = null;
             this.cbostCalcIpi.Color = System.Drawing.Color.White;
@@ -1537,7 +1537,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisaidClassificacaoFiscal._TamanhoComponente = 300;
             this.hlP_PesquisaidClassificacaoFiscal._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidClassificacaoFiscal._Vinculado = false;
-            this.hlP_PesquisaidClassificacaoFiscal._Visible = false;
+            this.hlP_PesquisaidClassificacaoFiscal._Visible = true;
             this.hlP_PesquisaidClassificacaoFiscal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidClassificacaoFiscal.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidClassificacaoFiscal.Base = null;
@@ -1570,7 +1570,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpIpi._Table = "Tipo_operacao";
             this.nudpIpi._TamanhoComponente = 124;
             this.nudpIpi._TamanhoMaiorLabel = 300;
-            this.nudpIpi._Visible = false;
+            this.nudpIpi._Visible = true;
             this.nudpIpi.BackColor = System.Drawing.Color.Transparent;
             this.nudpIpi.Base = null;
             this.nudpIpi.Color = System.Drawing.Color.White;
@@ -1614,7 +1614,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisaidCSTIpi._TamanhoComponente = 300;
             this.hlP_PesquisaidCSTIpi._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidCSTIpi._Vinculado = false;
-            this.hlP_PesquisaidCSTIpi._Visible = false;
+            this.hlP_PesquisaidCSTIpi._Visible = true;
             this.hlP_PesquisaidCSTIpi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTIpi.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTIpi.Base = null;
@@ -1638,7 +1638,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseIpi._Table = "Tipo_operacao";
             this.cbostCompoeBaseIpi._TamanhoComponente = 294;
             this.cbostCompoeBaseIpi._TamanhoMaiorLabel = 300;
-            this.cbostCompoeBaseIpi._Visible = false;
+            this.cbostCompoeBaseIpi._Visible = true;
             this.cbostCompoeBaseIpi.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseIpi.Base = null;
             this.cbostCompoeBaseIpi.Color = System.Drawing.Color.White;
@@ -1676,7 +1676,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcIcmsSubstTributaria._Table = "Tipo_operacao";
             this.cbostCalcIcmsSubstTributaria._TamanhoComponente = 80;
             this.cbostCalcIcmsSubstTributaria._TamanhoMaiorLabel = 300;
-            this.cbostCalcIcmsSubstTributaria._Visible = false;
+            this.cbostCalcIcmsSubstTributaria._Visible = true;
             this.cbostCalcIcmsSubstTributaria.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcIcmsSubstTributaria.Base = null;
             this.cbostCalcIcmsSubstTributaria.Color = System.Drawing.Color.White;
@@ -1703,7 +1703,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseIcmsSubstTributaria._Table = "Tipo_operacao";
             this.cbostCompoeBaseIcmsSubstTributaria._TamanhoComponente = 314;
             this.cbostCompoeBaseIcmsSubstTributaria._TamanhoMaiorLabel = 300;
-            this.cbostCompoeBaseIcmsSubstTributaria._Visible = false;
+            this.cbostCompoeBaseIcmsSubstTributaria._Visible = true;
             this.cbostCompoeBaseIcmsSubstTributaria.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseIcmsSubstTributaria.Base = null;
             this.cbostCompoeBaseIcmsSubstTributaria.Color = System.Drawing.Color.White;
@@ -1741,7 +1741,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcPisCofins._Table = "Tipo_operacao";
             this.cbostCalcPisCofins._TamanhoComponente = 140;
             this.cbostCalcPisCofins._TamanhoMaiorLabel = 300;
-            this.cbostCalcPisCofins._Visible = false;
+            this.cbostCalcPisCofins._Visible = true;
             this.cbostCalcPisCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcPisCofins.Base = null;
             this.cbostCalcPisCofins.Color = System.Drawing.Color.White;
@@ -1768,7 +1768,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostRegimeTributacaoPisCofins._Table = "Tipo_operacao";
             this.cbostRegimeTributacaoPisCofins._TamanhoComponente = 141;
             this.cbostRegimeTributacaoPisCofins._TamanhoMaiorLabel = 300;
-            this.cbostRegimeTributacaoPisCofins._Visible = false;
+            this.cbostRegimeTributacaoPisCofins._Visible = true;
             this.cbostRegimeTributacaoPisCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostRegimeTributacaoPisCofins.Base = null;
             this.cbostRegimeTributacaoPisCofins.Color = System.Drawing.Color.White;
@@ -1793,7 +1793,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudnCoeficienteSubstTributariaPis._Table = "Tipo_operacao";
             this.nudnCoeficienteSubstTributariaPis._TamanhoComponente = 137;
             this.nudnCoeficienteSubstTributariaPis._TamanhoMaiorLabel = 300;
-            this.nudnCoeficienteSubstTributariaPis._Visible = false;
+            this.nudnCoeficienteSubstTributariaPis._Visible = true;
             this.nudnCoeficienteSubstTributariaPis.BackColor = System.Drawing.Color.Transparent;
             this.nudnCoeficienteSubstTributariaPis.Base = null;
             this.nudnCoeficienteSubstTributariaPis.Color = System.Drawing.Color.White;
@@ -1831,7 +1831,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudnCoeficienteSubstTributariaCofins._Table = "Tipo_operacao";
             this.nudnCoeficienteSubstTributariaCofins._TamanhoComponente = 141;
             this.nudnCoeficienteSubstTributariaCofins._TamanhoMaiorLabel = 300;
-            this.nudnCoeficienteSubstTributariaCofins._Visible = false;
+            this.nudnCoeficienteSubstTributariaCofins._Visible = true;
             this.nudnCoeficienteSubstTributariaCofins.BackColor = System.Drawing.Color.Transparent;
             this.nudnCoeficienteSubstTributariaCofins.Base = null;
             this.nudnCoeficienteSubstTributariaCofins.Color = System.Drawing.Color.White;
@@ -1869,7 +1869,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpPis._Table = "Tipo_operacao";
             this.nudpPis._TamanhoComponente = 159;
             this.nudpPis._TamanhoMaiorLabel = 300;
-            this.nudpPis._Visible = false;
+            this.nudpPis._Visible = true;
             this.nudpPis.BackColor = System.Drawing.Color.Transparent;
             this.nudpPis.Base = null;
             this.nudpPis.Color = System.Drawing.Color.White;
@@ -1907,7 +1907,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpCofins._Table = "Tipo_operacao";
             this.nudpCofins._TamanhoComponente = 204;
             this.nudpCofins._TamanhoMaiorLabel = 300;
-            this.nudpCofins._Visible = false;
+            this.nudpCofins._Visible = true;
             this.nudpCofins.BackColor = System.Drawing.Color.Transparent;
             this.nudpCofins.Base = null;
             this.nudpCofins.Color = System.Drawing.Color.White;
@@ -1951,7 +1951,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisaidCSTPis._TamanhoComponente = 300;
             this.hlP_PesquisaidCSTPis._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidCSTPis._Vinculado = false;
-            this.hlP_PesquisaidCSTPis._Visible = false;
+            this.hlP_PesquisaidCSTPis._Visible = true;
             this.hlP_PesquisaidCSTPis.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTPis.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTPis.Base = null;
@@ -1979,7 +1979,7 @@ namespace HLP.UI.Entries.Fiscal
             this.hlP_PesquisaidCSTCofins._TamanhoComponente = 300;
             this.hlP_PesquisaidCSTCofins._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidCSTCofins._Vinculado = false;
-            this.hlP_PesquisaidCSTCofins._Visible = false;
+            this.hlP_PesquisaidCSTCofins._Visible = true;
             this.hlP_PesquisaidCSTCofins.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTCofins.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTCofins.Base = null;
@@ -2003,7 +2003,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseNormalPiscofins._Table = "Tipo_operacao";
             this.cbostCompoeBaseNormalPiscofins._TamanhoComponente = 314;
             this.cbostCompoeBaseNormalPiscofins._TamanhoMaiorLabel = 300;
-            this.cbostCompoeBaseNormalPiscofins._Visible = false;
+            this.cbostCompoeBaseNormalPiscofins._Visible = true;
             this.cbostCompoeBaseNormalPiscofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseNormalPiscofins.Base = null;
             this.cbostCompoeBaseNormalPiscofins.Color = System.Drawing.Color.White;
@@ -2030,7 +2030,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseSubtTribPis._Table = "Tipo_operacao";
             this.cbostCompoeBaseSubtTribPis._TamanhoComponente = 396;
             this.cbostCompoeBaseSubtTribPis._TamanhoMaiorLabel = 300;
-            this.cbostCompoeBaseSubtTribPis._Visible = false;
+            this.cbostCompoeBaseSubtTribPis._Visible = true;
             this.cbostCompoeBaseSubtTribPis.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseSubtTribPis.Base = null;
             this.cbostCompoeBaseSubtTribPis.Color = System.Drawing.Color.White;
@@ -2057,7 +2057,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseSubtTribCofins._Table = "Tipo_operacao";
             this.cbostCompoeBaseSubtTribCofins._TamanhoComponente = 396;
             this.cbostCompoeBaseSubtTribCofins._TamanhoMaiorLabel = 300;
-            this.cbostCompoeBaseSubtTribCofins._Visible = false;
+            this.cbostCompoeBaseSubtTribCofins._Visible = true;
             this.cbostCompoeBaseSubtTribCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseSubtTribCofins.Base = null;
             this.cbostCompoeBaseSubtTribCofins.Color = System.Drawing.Color.White;
@@ -2095,7 +2095,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcIss._Table = "Tipo_operacao";
             this.cbostCalcIss._TamanhoComponente = 80;
             this.cbostCalcIss._TamanhoMaiorLabel = 300;
-            this.cbostCalcIss._Visible = false;
+            this.cbostCalcIss._Visible = true;
             this.cbostCalcIss.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcIss.Base = null;
             this.cbostCalcIss.Color = System.Drawing.Color.White;
@@ -2120,7 +2120,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpIss._Table = "Tipo_operacao";
             this.nudpIss._TamanhoComponente = 157;
             this.nudpIss._TamanhoMaiorLabel = 300;
-            this.nudpIss._Visible = false;
+            this.nudpIss._Visible = true;
             this.nudpIss.BackColor = System.Drawing.Color.Transparent;
             this.nudpIss.Base = null;
             this.nudpIss.Color = System.Drawing.Color.White;
@@ -2160,7 +2160,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcIrrf._Table = "Tipo_operacao";
             this.cbostCalcIrrf._TamanhoComponente = 80;
             this.cbostCalcIrrf._TamanhoMaiorLabel = 300;
-            this.cbostCalcIrrf._Visible = false;
+            this.cbostCalcIrrf._Visible = true;
             this.cbostCalcIrrf.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcIrrf.Base = null;
             this.cbostCalcIrrf.Color = System.Drawing.Color.White;
@@ -2185,7 +2185,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpReducaoBaseIrrf._Table = "Tipo_operacao";
             this.nudpReducaoBaseIrrf._TamanhoComponente = 207;
             this.nudpReducaoBaseIrrf._TamanhoMaiorLabel = 300;
-            this.nudpReducaoBaseIrrf._Visible = false;
+            this.nudpReducaoBaseIrrf._Visible = true;
             this.nudpReducaoBaseIrrf.BackColor = System.Drawing.Color.Transparent;
             this.nudpReducaoBaseIrrf.Base = null;
             this.nudpReducaoBaseIrrf.Color = System.Drawing.Color.White;
@@ -2223,7 +2223,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpIrrf._Table = "Tipo_operacao";
             this.nudpIrrf._TamanhoComponente = 160;
             this.nudpIrrf._TamanhoMaiorLabel = 300;
-            this.nudpIrrf._Visible = false;
+            this.nudpIrrf._Visible = true;
             this.nudpIrrf.BackColor = System.Drawing.Color.Transparent;
             this.nudpIrrf.Base = null;
             this.nudpIrrf.Color = System.Drawing.Color.White;
@@ -2263,7 +2263,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcCsll._Table = "Tipo_operacao";
             this.cbostCalcCsll._TamanhoComponente = 80;
             this.cbostCalcCsll._TamanhoMaiorLabel = 300;
-            this.cbostCalcCsll._Visible = false;
+            this.cbostCalcCsll._Visible = true;
             this.cbostCalcCsll.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcCsll.Base = null;
             this.cbostCalcCsll.Color = System.Drawing.Color.White;
@@ -2290,7 +2290,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCalcInss._Table = "Tipo_operacao";
             this.cbostCalcInss._TamanhoComponente = 80;
             this.cbostCalcInss._TamanhoMaiorLabel = 300;
-            this.cbostCalcInss._Visible = false;
+            this.cbostCalcInss._Visible = true;
             this.cbostCalcInss.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalcInss.Base = null;
             this.cbostCalcInss.Color = System.Drawing.Color.White;
@@ -2315,7 +2315,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpReducaoBaseInss._Table = "Tipo_operacao";
             this.nudpReducaoBaseInss._TamanhoComponente = 207;
             this.nudpReducaoBaseInss._TamanhoMaiorLabel = 300;
-            this.nudpReducaoBaseInss._Visible = false;
+            this.nudpReducaoBaseInss._Visible = true;
             this.nudpReducaoBaseInss.BackColor = System.Drawing.Color.Transparent;
             this.nudpReducaoBaseInss.Base = null;
             this.nudpReducaoBaseInss.Color = System.Drawing.Color.White;
@@ -2353,7 +2353,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudpInss._Table = "Tipo_operacao";
             this.nudpInss._TamanhoComponente = 160;
             this.nudpInss._TamanhoMaiorLabel = 300;
-            this.nudpInss._Visible = false;
+            this.nudpInss._Visible = true;
             this.nudpInss.BackColor = System.Drawing.Color.Transparent;
             this.nudpInss.Base = null;
             this.nudpInss.Color = System.Drawing.Color.White;
@@ -2545,7 +2545,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostBaixaMaterialOp._Table = "Tipo_operacao";
             this.cbostBaixaMaterialOp._TamanhoComponente = 196;
             this.cbostBaixaMaterialOp._TamanhoMaiorLabel = 280;
-            this.cbostBaixaMaterialOp._Visible = false;
+            this.cbostBaixaMaterialOp._Visible = true;
             this.cbostBaixaMaterialOp.BackColor = System.Drawing.Color.Transparent;
             this.cbostBaixaMaterialOp.Base = null;
             this.cbostBaixaMaterialOp.Color = System.Drawing.Color.White;
@@ -2572,7 +2572,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostExplosaoMatOp._Table = "Tipo_operacao";
             this.cbostExplosaoMatOp._TamanhoComponente = 143;
             this.cbostExplosaoMatOp._TamanhoMaiorLabel = 280;
-            this.cbostExplosaoMatOp._Visible = false;
+            this.cbostExplosaoMatOp._Visible = true;
             this.cbostExplosaoMatOp.BackColor = System.Drawing.Color.Transparent;
             this.cbostExplosaoMatOp.Base = null;
             this.cbostExplosaoMatOp.Color = System.Drawing.Color.White;
@@ -2599,7 +2599,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostEstoqueProdFimOP._Table = "Tipo_operacao";
             this.cbostEstoqueProdFimOP._TamanhoComponente = 80;
             this.cbostEstoqueProdFimOP._TamanhoMaiorLabel = 280;
-            this.cbostEstoqueProdFimOP._Visible = false;
+            this.cbostEstoqueProdFimOP._Visible = true;
             this.cbostEstoqueProdFimOP.BackColor = System.Drawing.Color.Transparent;
             this.cbostEstoqueProdFimOP.Base = null;
             this.cbostEstoqueProdFimOP.Color = System.Drawing.Color.White;
@@ -2626,7 +2626,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostVinculaPedVenda._Table = "Tipo_operacao";
             this.cbostVinculaPedVenda._TamanhoComponente = 80;
             this.cbostVinculaPedVenda._TamanhoMaiorLabel = 280;
-            this.cbostVinculaPedVenda._Visible = false;
+            this.cbostVinculaPedVenda._Visible = true;
             this.cbostVinculaPedVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbostVinculaPedVenda.Base = null;
             this.cbostVinculaPedVenda.Color = System.Drawing.Color.White;
@@ -2715,7 +2715,7 @@ namespace HLP.UI.Entries.Fiscal
             this.nudImppII._Table = "Operacao_importacao";
             this.nudImppII._TamanhoComponente = 102;
             this.nudImppII._TamanhoMaiorLabel = 250;
-            this.nudImppII._Visible = false;
+            this.nudImppII._Visible = true;
             this.nudImppII.BackColor = System.Drawing.Color.Transparent;
             this.nudImppII.Base = null;
             this.nudImppII.Color = System.Drawing.Color.White;
@@ -2755,7 +2755,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cboImpstCompoeBaseIpi._Table = "Operacao_importacao";
             this.cboImpstCompoeBaseIpi._TamanhoComponente = 407;
             this.cboImpstCompoeBaseIpi._TamanhoMaiorLabel = 250;
-            this.cboImpstCompoeBaseIpi._Visible = false;
+            this.cboImpstCompoeBaseIpi._Visible = true;
             this.cboImpstCompoeBaseIpi.BackColor = System.Drawing.Color.Transparent;
             this.cboImpstCompoeBaseIpi.Base = null;
             this.cboImpstCompoeBaseIpi.Color = System.Drawing.Color.White;
@@ -2782,7 +2782,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cboImpstCompoeFatorIcms._Table = "Operacao_importacao";
             this.cboImpstCompoeFatorIcms._TamanhoComponente = 153;
             this.cboImpstCompoeFatorIcms._TamanhoMaiorLabel = 250;
-            this.cboImpstCompoeFatorIcms._Visible = false;
+            this.cboImpstCompoeFatorIcms._Visible = true;
             this.cboImpstCompoeFatorIcms.BackColor = System.Drawing.Color.Transparent;
             this.cboImpstCompoeFatorIcms.Base = null;
             this.cboImpstCompoeFatorIcms.Color = System.Drawing.Color.White;
@@ -2809,7 +2809,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseIcmsOculto._Table = "Operacao_importacao";
             this.cbostCompoeBaseIcmsOculto._TamanhoComponente = 407;
             this.cbostCompoeBaseIcmsOculto._TamanhoMaiorLabel = 250;
-            this.cbostCompoeBaseIcmsOculto._Visible = false;
+            this.cbostCompoeBaseIcmsOculto._Visible = true;
             this.cbostCompoeBaseIcmsOculto.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseIcmsOculto.Base = null;
             this.cbostCompoeBaseIcmsOculto.Color = System.Drawing.Color.White;
@@ -2836,7 +2836,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeIcmsOculto._Table = "Operacao_importacao";
             this.cbostCompoeIcmsOculto._TamanhoComponente = 205;
             this.cbostCompoeIcmsOculto._TamanhoMaiorLabel = 250;
-            this.cbostCompoeIcmsOculto._Visible = false;
+            this.cbostCompoeIcmsOculto._Visible = true;
             this.cbostCompoeIcmsOculto.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeIcmsOculto.Base = null;
             this.cbostCompoeIcmsOculto.Color = System.Drawing.Color.White;
@@ -2863,7 +2863,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeFatorPisCofins._Table = "Operacao_importacao";
             this.cbostCompoeFatorPisCofins._TamanhoComponente = 209;
             this.cbostCompoeFatorPisCofins._TamanhoMaiorLabel = 250;
-            this.cbostCompoeFatorPisCofins._Visible = false;
+            this.cbostCompoeFatorPisCofins._Visible = true;
             this.cbostCompoeFatorPisCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeFatorPisCofins.Base = null;
             this.cbostCompoeFatorPisCofins.Color = System.Drawing.Color.White;
@@ -2890,7 +2890,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBasePis._Table = "Operacao_importacao";
             this.cbostCompoeBasePis._TamanhoComponente = 283;
             this.cbostCompoeBasePis._TamanhoMaiorLabel = 250;
-            this.cbostCompoeBasePis._Visible = false;
+            this.cbostCompoeBasePis._Visible = true;
             this.cbostCompoeBasePis.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBasePis.Base = null;
             this.cbostCompoeBasePis.Color = System.Drawing.Color.White;
@@ -2917,7 +2917,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoePis._Table = "Operacao_importacao";
             this.cbostCompoePis._TamanhoComponente = 155;
             this.cbostCompoePis._TamanhoMaiorLabel = 250;
-            this.cbostCompoePis._Visible = false;
+            this.cbostCompoePis._Visible = true;
             this.cbostCompoePis.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoePis.Base = null;
             this.cbostCompoePis.Color = System.Drawing.Color.White;
@@ -2944,7 +2944,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseCofins._Table = "Operacao_importacao";
             this.cbostCompoeBaseCofins._TamanhoComponente = 283;
             this.cbostCompoeBaseCofins._TamanhoMaiorLabel = 250;
-            this.cbostCompoeBaseCofins._Visible = false;
+            this.cbostCompoeBaseCofins._Visible = true;
             this.cbostCompoeBaseCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseCofins.Base = null;
             this.cbostCompoeBaseCofins.Color = System.Drawing.Color.White;
@@ -2971,7 +2971,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeCofins._Table = "Operacao_importacao";
             this.cbostCompoeCofins._TamanhoComponente = 283;
             this.cbostCompoeCofins._TamanhoMaiorLabel = 250;
-            this.cbostCompoeCofins._Visible = false;
+            this.cbostCompoeCofins._Visible = true;
             this.cbostCompoeCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeCofins.Base = null;
             this.cbostCompoeCofins.Color = System.Drawing.Color.White;
@@ -2998,7 +2998,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeBaseIcmsNormal._Table = "Operacao_importacao";
             this.cbostCompoeBaseIcmsNormal._TamanhoComponente = 211;
             this.cbostCompoeBaseIcmsNormal._TamanhoMaiorLabel = 250;
-            this.cbostCompoeBaseIcmsNormal._Visible = false;
+            this.cbostCompoeBaseIcmsNormal._Visible = true;
             this.cbostCompoeBaseIcmsNormal.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseIcmsNormal.Base = null;
             this.cbostCompoeBaseIcmsNormal.Color = System.Drawing.Color.White;
@@ -3025,7 +3025,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeIcmsNormal._Table = "Operacao_importacao";
             this.cbostCompoeIcmsNormal._TamanhoComponente = 206;
             this.cbostCompoeIcmsNormal._TamanhoMaiorLabel = 250;
-            this.cbostCompoeIcmsNormal._Visible = false;
+            this.cbostCompoeIcmsNormal._Visible = true;
             this.cbostCompoeIcmsNormal.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeIcmsNormal.Base = null;
             this.cbostCompoeIcmsNormal.Color = System.Drawing.Color.White;
@@ -3052,7 +3052,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeValorProdutos._Table = "Operacao_importacao";
             this.cbostCompoeValorProdutos._TamanhoComponente = 183;
             this.cbostCompoeValorProdutos._TamanhoMaiorLabel = 250;
-            this.cbostCompoeValorProdutos._Visible = false;
+            this.cbostCompoeValorProdutos._Visible = true;
             this.cbostCompoeValorProdutos.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeValorProdutos.Base = null;
             this.cbostCompoeValorProdutos.Color = System.Drawing.Color.White;
@@ -3079,7 +3079,7 @@ namespace HLP.UI.Entries.Fiscal
             this.cbostCompoeValorNf._Table = "Operacao_importacao";
             this.cbostCompoeValorNf._TamanhoComponente = 193;
             this.cbostCompoeValorNf._TamanhoMaiorLabel = 250;
-            this.cbostCompoeValorNf._Visible = false;
+            this.cbostCompoeValorNf._Visible = true;
             this.cbostCompoeValorNf.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeValorNf.Base = null;
             this.cbostCompoeValorNf.Color = System.Drawing.Color.White;

@@ -112,7 +112,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtCodigo._Table = "Banco";
             this.txtCodigo._TamanhoComponente = 72;
             this.txtCodigo._TamanhoMaiorLabel = 120;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -137,7 +137,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtcBanco._Table = "Banco";
             this.txtcBanco._TamanhoComponente = 121;
             this.txtcBanco._TamanhoMaiorLabel = 120;
-            this.txtcBanco._Visible = false;
+            this.txtcBanco._Visible = true;
             this.txtcBanco.BackColor = System.Drawing.Color.Transparent;
             this.txtcBanco.Base = null;
             this.txtcBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -162,7 +162,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxBanco._Table = "Banco";
             this.txtxBanco._TamanhoComponente = 256;
             this.txtxBanco._TamanhoMaiorLabel = 120;
-            this.txtxBanco._Visible = false;
+            this.txtxBanco._Visible = true;
             this.txtxBanco.BackColor = System.Drawing.Color.Transparent;
             this.txtxBanco.Base = null;
             this.txtxBanco.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -187,7 +187,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxBancoResumido._Table = "Banco";
             this.txtxBancoResumido._TamanhoComponente = 256;
             this.txtxBancoResumido._TamanhoMaiorLabel = 120;
-            this.txtxBancoResumido._Visible = false;
+            this.txtxBancoResumido._Visible = true;
             this.txtxBancoResumido.BackColor = System.Drawing.Color.Transparent;
             this.txtxBancoResumido.Base = null;
             this.txtxBancoResumido.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -212,7 +212,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxLinkLogo._Table = "Banco";
             this.txtxLinkLogo._TamanhoComponente = 256;
             this.txtxLinkLogo._TamanhoMaiorLabel = 120;
-            this.txtxLinkLogo._Visible = false;
+            this.txtxLinkLogo._Visible = true;
             this.txtxLinkLogo.BackColor = System.Drawing.Color.Transparent;
             this.txtxLinkLogo.Base = null;
             this.txtxLinkLogo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -235,7 +235,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudvDxMais._Table = "Banco";
             this.nudvDxMais._TamanhoComponente = 121;
             this.nudvDxMais._TamanhoMaiorLabel = 120;
-            this.nudvDxMais._Visible = false;
+            this.nudvDxMais._Visible = true;
             this.nudvDxMais.BackColor = System.Drawing.Color.Transparent;
             this.nudvDxMais.Base = null;
             this.nudvDxMais.Color = System.Drawing.Color.White;
@@ -273,7 +273,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudvDxMenos._Table = "Banco";
             this.nudvDxMenos._TamanhoComponente = 121;
             this.nudvDxMenos._TamanhoMaiorLabel = 120;
-            this.nudvDxMenos._Visible = false;
+            this.nudvDxMenos._Visible = true;
             this.nudvDxMenos.BackColor = System.Drawing.Color.Transparent;
             this.nudvDxMenos.Base = null;
             this.nudvDxMenos.Color = System.Drawing.Color.White;

@@ -250,7 +250,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtCodigo._Table = "Transportador";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -277,7 +277,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxCodigoAlternativo._Table = "Transportador";
             this.txtxCodigoAlternativo._TamanhoComponente = 107;
             this.txtxCodigoAlternativo._TamanhoMaiorLabel = 200;
-            this.txtxCodigoAlternativo._Visible = false;
+            this.txtxCodigoAlternativo._Visible = true;
             this.txtxCodigoAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoAlternativo.Base = null;
             this.txtxCodigoAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -303,7 +303,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxNome._Table = "Transportador";
             this.txtxNome._TamanhoComponente = 154;
             this.txtxNome._TamanhoMaiorLabel = 200;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -330,7 +330,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxFantasia._Table = "Transportador";
             this.txtxFantasia._TamanhoComponente = 156;
             this.txtxFantasia._TamanhoMaiorLabel = 200;
-            this.txtxFantasia._Visible = false;
+            this.txtxFantasia._Visible = true;
             this.txtxFantasia.BackColor = System.Drawing.Color.Transparent;
             this.txtxFantasia.Base = null;
             this.txtxFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -356,7 +356,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.cbxstPessoa._Table = "Transportador";
             this.cbxstPessoa._TamanhoComponente = 80;
             this.cbxstPessoa._TamanhoMaiorLabel = 200;
-            this.cbxstPessoa._Visible = false;
+            this.cbxstPessoa._Visible = true;
             this.cbxstPessoa.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPessoa.Base = null;
             this.cbxstPessoa.Color = System.Drawing.Color.White;
@@ -398,7 +398,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.mskxCnpj._TamanhoMaiorLabel = 200;
             this.mskxCnpj._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.CNPJ;
             this.mskxCnpj._UF = null;
-            this.mskxCnpj._Visible = false;
+            this.mskxCnpj._Visible = true;
             this.mskxCnpj.BackColor = System.Drawing.Color.Transparent;
             this.mskxCnpj.Base = null;
             this.mskxCnpj.Color = System.Drawing.Color.White;
@@ -426,7 +426,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.mskxIe._TamanhoMaiorLabel = 200;
             this.mskxIe._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.IE;
             this.mskxIe._UF = null;
-            this.mskxIe._Visible = false;
+            this.mskxIe._Visible = true;
             this.mskxIe.BackColor = System.Drawing.Color.Transparent;
             this.mskxIe.Base = null;
             this.mskxIe.Color = System.Drawing.Color.White;
@@ -454,7 +454,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxIm._Table = "Transportador";
             this.txtxIm._TamanhoComponente = 132;
             this.txtxIm._TamanhoMaiorLabel = 200;
-            this.txtxIm._Visible = false;
+            this.txtxIm._Visible = true;
             this.txtxIm.BackColor = System.Drawing.Color.Transparent;
             this.txtxIm.Base = null;
             this.txtxIm.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -481,7 +481,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.mskxCpf._TamanhoMaiorLabel = 200;
             this.mskxCpf._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.CPF;
             this.mskxCpf._UF = null;
-            this.mskxCpf._Visible = false;
+            this.mskxCpf._Visible = true;
             this.mskxCpf.BackColor = System.Drawing.Color.Transparent;
             this.mskxCpf.Base = null;
             this.mskxCpf.Color = System.Drawing.Color.White;
@@ -509,7 +509,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxRg._Table = "Transportador";
             this.txtxRg._TamanhoComponente = 135;
             this.txtxRg._TamanhoMaiorLabel = 200;
-            this.txtxRg._Visible = false;
+            this.txtxRg._Visible = true;
             this.txtxRg.BackColor = System.Drawing.Color.Transparent;
             this.txtxRg.Base = null;
             this.txtxRg.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -535,7 +535,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxRntrc._Table = "Transportador";
             this.txtxRntrc._TamanhoComponente = 142;
             this.txtxRntrc._TamanhoMaiorLabel = 200;
-            this.txtxRntrc._Visible = false;
+            this.txtxRntrc._Visible = true;
             this.txtxRntrc.BackColor = System.Drawing.Color.Transparent;
             this.txtxRntrc.Base = null;
             this.txtxRntrc.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -573,7 +573,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxTelefone1._Table = "Transportador";
             this.txtxTelefone1._TamanhoComponente = 134;
             this.txtxTelefone1._TamanhoMaiorLabel = 200;
-            this.txtxTelefone1._Visible = false;
+            this.txtxTelefone1._Visible = true;
             this.txtxTelefone1.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefone1.Base = null;
             this.txtxTelefone1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -599,7 +599,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxTelefone2._Table = "Transportador";
             this.txtxTelefone2._TamanhoComponente = 134;
             this.txtxTelefone2._TamanhoMaiorLabel = 200;
-            this.txtxTelefone2._Visible = false;
+            this.txtxTelefone2._Visible = true;
             this.txtxTelefone2.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefone2.Base = null;
             this.txtxTelefone2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -625,7 +625,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxFax._Table = "Transportador";
             this.txtxFax._TamanhoComponente = 134;
             this.txtxFax._TamanhoMaiorLabel = 200;
-            this.txtxFax._Visible = false;
+            this.txtxFax._Visible = true;
             this.txtxFax.BackColor = System.Drawing.Color.Transparent;
             this.txtxFax.Base = null;
             this.txtxFax.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -663,7 +663,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxEmail._Table = "Transportador";
             this.txtxEmail._TamanhoComponente = 209;
             this.txtxEmail._TamanhoMaiorLabel = 200;
-            this.txtxEmail._Visible = false;
+            this.txtxEmail._Visible = true;
             this.txtxEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmail.Base = null;
             this.txtxEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -689,7 +689,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxHttp._Table = "Transportador";
             this.txtxHttp._TamanhoComponente = 209;
             this.txtxHttp._TamanhoMaiorLabel = 200;
-            this.txtxHttp._Visible = false;
+            this.txtxHttp._Visible = true;
             this.txtxHttp.BackColor = System.Drawing.Color.Transparent;
             this.txtxHttp.Base = null;
             this.txtxHttp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -714,7 +714,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.cboAtivo._Table = "Transportador";
             this.cboAtivo._TamanhoComponente = 80;
             this.cboAtivo._TamanhoMaiorLabel = 200;
-            this.cboAtivo._Visible = false;
+            this.cboAtivo._Visible = true;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.Color = System.Drawing.Color.White;

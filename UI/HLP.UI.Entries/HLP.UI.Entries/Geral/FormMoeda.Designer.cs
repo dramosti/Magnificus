@@ -99,7 +99,7 @@
             this.txtCodigo._Table = "Moeda";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 130;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -125,7 +125,7 @@
             this.txtxSiglaMoeda._Table = "Moeda";
             this.txtxSiglaMoeda._TamanhoComponente = 107;
             this.txtxSiglaMoeda._TamanhoMaiorLabel = 130;
-            this.txtxSiglaMoeda._Visible = false;
+            this.txtxSiglaMoeda._Visible = true;
             this.txtxSiglaMoeda.BackColor = System.Drawing.Color.Transparent;
             this.txtxSiglaMoeda.Base = null;
             this.txtxSiglaMoeda.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -152,7 +152,7 @@
             this.txtxMoeda._Table = "Moeda";
             this.txtxMoeda._TamanhoComponente = 215;
             this.txtxMoeda._TamanhoMaiorLabel = 130;
-            this.txtxMoeda._Visible = false;
+            this.txtxMoeda._Visible = true;
             this.txtxMoeda.BackColor = System.Drawing.Color.Transparent;
             this.txtxMoeda.Base = null;
             this.txtxMoeda.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -179,7 +179,7 @@
             this.txtxSimbolo._Table = "Moeda";
             this.txtxSimbolo._TamanhoComponente = 107;
             this.txtxSimbolo._TamanhoMaiorLabel = 130;
-            this.txtxSimbolo._Visible = false;
+            this.txtxSimbolo._Visible = true;
             this.txtxSimbolo.BackColor = System.Drawing.Color.Transparent;
             this.txtxSimbolo.Base = null;
             this.txtxSimbolo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

@@ -46,11 +46,11 @@
             this.txtxFax = new HLP.Comum.Components.HLP_MaskedTextBox();
             this.txtxEmail = new HLP.Comum.Components.HLP_TextBox();
             this.txtxHttp = new HLP.Comum.Components.HLP_TextBox();
+            this.txtxLinkLogoEmpresa = new HLP.Comum.Components.HLP_TextBox();
+            this.txtxLinkPastas = new HLP.Comum.Components.HLP_TextBox();
             this.cboAtivo = new HLP.Comum.Components.HLP_ComboBox();
             this.hlP_PesquisaidRamoAtividade = new HLP.Comum.Components.HLP_Pesquisa();
             this.cbostCodigoRegimeTributario = new HLP.Comum.Components.HLP_ComboBox();
-            this.txtxLinkLogoEmpresa = new HLP.Comum.Components.HLP_TextBox();
-            this.txtxLinkPastas = new HLP.Comum.Components.HLP_TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dgvEnderecoEmpresa = new HLP.Comum.Components.HLP_DataGridView();
@@ -147,17 +147,18 @@
             this.flowLayoutPanel1.Controls.Add(this.txtxFax);
             this.flowLayoutPanel1.Controls.Add(this.txtxEmail);
             this.flowLayoutPanel1.Controls.Add(this.txtxHttp);
+            this.flowLayoutPanel1.Controls.Add(this.txtxLinkLogoEmpresa);
+            this.flowLayoutPanel1.Controls.Add(this.txtxLinkPastas);
             this.flowLayoutPanel1.Controls.Add(this.cboAtivo);
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidRamoAtividade);
             this.flowLayoutPanel1.Controls.Add(this.cbostCodigoRegimeTributario);
-            this.flowLayoutPanel1.Controls.Add(this.txtxLinkLogoEmpresa);
-            this.flowLayoutPanel1.Controls.Add(this.txtxLinkPastas);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(988, 348);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // hlP_LabelSeparatorGeral
             // 
@@ -174,7 +175,7 @@
             // 
             this.txtCodigo._Field = "IdEmpresa";
             this.txtCodigo._LabelGroup = this.hlP_LabelSeparatorGeral;
-            this.txtCodigo._LabelText = "Id empresa";
+            this.txtCodigo._LabelText = "Código";
             this.txtCodigo._Multiline = false;
             this.txtCodigo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.txtCodigo._Password = false;
@@ -182,17 +183,17 @@
             this.txtCodigo._Table = "Empresa";
             this.txtCodigo._TamanhoComponente = 72;
             this.txtCodigo._TamanhoMaiorLabel = 140;
-            this.txtCodigo._Visible = false;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(80, 27);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(80, 3, 15, 3);
+            this.txtCodigo.Location = new System.Drawing.Point(98, 27);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(98, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = false;
-            this.txtCodigo.Size = new System.Drawing.Size(135, 21);
+            this.txtCodigo.Size = new System.Drawing.Size(117, 21);
             this.txtCodigo.TabIndex = 1;
             // 
             // txtxNome
@@ -207,7 +208,6 @@
             this.txtxNome._Table = "Empresa";
             this.txtxNome._TamanhoComponente = 263;
             this.txtxNome._TamanhoMaiorLabel = 140;
-            this.txtxNome._Visible = false;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -216,6 +216,7 @@
             this.txtxNome.Margin = new System.Windows.Forms.Padding(106, 3, 15, 3);
             this.txtxNome.MaxLength = 32767;
             this.txtxNome.Name = "txtxNome";
+            this.txtxNome.objConfigComponenteModel = null;
             this.txtxNome.ReadOnly = false;
             this.txtxNome.Size = new System.Drawing.Size(300, 21);
             this.txtxNome.TabIndex = 2;
@@ -232,7 +233,6 @@
             this.txtxFantasia._Table = "Empresa";
             this.txtxFantasia._TamanhoComponente = 263;
             this.txtxFantasia._TamanhoMaiorLabel = 140;
-            this.txtxFantasia._Visible = false;
             this.txtxFantasia.BackColor = System.Drawing.Color.Transparent;
             this.txtxFantasia.Base = null;
             this.txtxFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -241,6 +241,7 @@
             this.txtxFantasia.Margin = new System.Windows.Forms.Padding(93, 3, 15, 3);
             this.txtxFantasia.MaxLength = 32767;
             this.txtxFantasia.Name = "txtxFantasia";
+            this.txtxFantasia.objConfigComponenteModel = null;
             this.txtxFantasia.ReadOnly = false;
             this.txtxFantasia.Size = new System.Drawing.Size(313, 21);
             this.txtxFantasia.TabIndex = 3;
@@ -257,7 +258,6 @@
             this.masktxtxCnpj._TamanhoMaiorLabel = 140;
             this.masktxtxCnpj._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.masktxtxCnpj._UF = null;
-            this.masktxtxCnpj._Visible = false;
             this.masktxtxCnpj.BackColor = System.Drawing.Color.Transparent;
             this.masktxtxCnpj.Base = null;
             this.masktxtxCnpj.Color = System.Drawing.Color.White;
@@ -267,6 +267,7 @@
             this.masktxtxCnpj.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.masktxtxCnpj.MaxLength = 32767;
             this.masktxtxCnpj.Name = "masktxtxCnpj";
+            this.masktxtxCnpj.objConfigComponenteModel = null;
             this.masktxtxCnpj.ReadOnly = false;
             this.masktxtxCnpj.Size = new System.Drawing.Size(177, 21);
             this.masktxtxCnpj.TabIndex = 4;
@@ -283,7 +284,6 @@
             this.txtxIe._Table = "Empresa";
             this.txtxIe._TamanhoComponente = 146;
             this.txtxIe._TamanhoMaiorLabel = 140;
-            this.txtxIe._Visible = false;
             this.txtxIe.BackColor = System.Drawing.Color.Transparent;
             this.txtxIe.Base = null;
             this.txtxIe.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -292,6 +292,7 @@
             this.txtxIe.Margin = new System.Windows.Forms.Padding(118, 3, 15, 3);
             this.txtxIe.MaxLength = 32767;
             this.txtxIe.Name = "txtxIe";
+            this.txtxIe.objConfigComponenteModel = null;
             this.txtxIe.ReadOnly = false;
             this.txtxIe.Size = new System.Drawing.Size(171, 21);
             this.txtxIe.TabIndex = 5;
@@ -308,7 +309,6 @@
             this.txtxIm._Table = "Empresa";
             this.txtxIm._TamanhoComponente = 146;
             this.txtxIm._TamanhoMaiorLabel = 140;
-            this.txtxIm._Visible = false;
             this.txtxIm.BackColor = System.Drawing.Color.Transparent;
             this.txtxIm.Base = null;
             this.txtxIm.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -317,6 +317,7 @@
             this.txtxIm.Margin = new System.Windows.Forms.Padding(115, 3, 15, 3);
             this.txtxIm.MaxLength = 32767;
             this.txtxIm.Name = "txtxIm";
+            this.txtxIm.objConfigComponenteModel = null;
             this.txtxIm.ReadOnly = false;
             this.txtxIm.Size = new System.Drawing.Size(174, 21);
             this.txtxIm.TabIndex = 6;
@@ -333,7 +334,6 @@
             this.txtxSuframa._Table = "Empresa";
             this.txtxSuframa._TamanhoComponente = 146;
             this.txtxSuframa._TamanhoMaiorLabel = 140;
-            this.txtxSuframa._Visible = false;
             this.txtxSuframa.BackColor = System.Drawing.Color.Transparent;
             this.txtxSuframa.Base = null;
             this.txtxSuframa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -342,6 +342,7 @@
             this.txtxSuframa.Margin = new System.Windows.Forms.Padding(94, 3, 15, 3);
             this.txtxSuframa.MaxLength = 32767;
             this.txtxSuframa.Name = "txtxSuframa";
+            this.txtxSuframa.objConfigComponenteModel = null;
             this.txtxSuframa.ReadOnly = false;
             this.txtxSuframa.Size = new System.Drawing.Size(195, 21);
             this.txtxSuframa.TabIndex = 7;
@@ -358,7 +359,6 @@
             this.txtxTelefone._TamanhoMaiorLabel = 140;
             this.txtxTelefone._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.txtxTelefone._UF = null;
-            this.txtxTelefone._Visible = false;
             this.txtxTelefone.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefone.Base = null;
             this.txtxTelefone.Color = System.Drawing.Color.White;
@@ -368,6 +368,7 @@
             this.txtxTelefone.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtxTelefone.MaxLength = 32767;
             this.txtxTelefone.Name = "txtxTelefone";
+            this.txtxTelefone.objConfigComponenteModel = null;
             this.txtxTelefone.ReadOnly = false;
             this.txtxTelefone.Size = new System.Drawing.Size(197, 21);
             this.txtxTelefone.TabIndex = 8;
@@ -384,7 +385,6 @@
             this.txtxFax._TamanhoMaiorLabel = 140;
             this.txtxFax._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.txtxFax._UF = null;
-            this.txtxFax._Visible = false;
             this.txtxFax.BackColor = System.Drawing.Color.Transparent;
             this.txtxFax.Base = null;
             this.txtxFax.Color = System.Drawing.Color.White;
@@ -394,6 +394,7 @@
             this.txtxFax.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtxFax.MaxLength = 32767;
             this.txtxFax.Name = "txtxFax";
+            this.txtxFax.objConfigComponenteModel = null;
             this.txtxFax.ReadOnly = false;
             this.txtxFax.Size = new System.Drawing.Size(170, 21);
             this.txtxFax.TabIndex = 9;
@@ -410,7 +411,6 @@
             this.txtxEmail._Table = "Empresa";
             this.txtxEmail._TamanhoComponente = 263;
             this.txtxEmail._TamanhoMaiorLabel = 140;
-            this.txtxEmail._Visible = false;
             this.txtxEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmail.Base = null;
             this.txtxEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -419,6 +419,7 @@
             this.txtxEmail.Margin = new System.Windows.Forms.Padding(109, 3, 15, 3);
             this.txtxEmail.MaxLength = 32767;
             this.txtxEmail.Name = "txtxEmail";
+            this.txtxEmail.objConfigComponenteModel = null;
             this.txtxEmail.ReadOnly = false;
             this.txtxEmail.Size = new System.Drawing.Size(297, 21);
             this.txtxEmail.TabIndex = 10;
@@ -435,7 +436,6 @@
             this.txtxHttp._Table = "Empresa";
             this.txtxHttp._TamanhoComponente = 263;
             this.txtxHttp._TamanhoMaiorLabel = 140;
-            this.txtxHttp._Visible = false;
             this.txtxHttp.BackColor = System.Drawing.Color.Transparent;
             this.txtxHttp.Base = null;
             this.txtxHttp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -444,91 +444,10 @@
             this.txtxHttp.Margin = new System.Windows.Forms.Padding(113, 3, 15, 3);
             this.txtxHttp.MaxLength = 32767;
             this.txtxHttp.Name = "txtxHttp";
+            this.txtxHttp.objConfigComponenteModel = null;
             this.txtxHttp.ReadOnly = false;
             this.txtxHttp.Size = new System.Drawing.Size(293, 21);
             this.txtxHttp.TabIndex = 11;
-            // 
-            // cboAtivo
-            // 
-            this.cboAtivo._Field = "Ativo";
-            this.cboAtivo._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cboAtivo._Itens")));
-            this.cboAtivo._LabelGroup = this.hlP_LabelSeparatorGeral;
-            this.cboAtivo._LabelText = "Ativo";
-            this.cboAtivo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.cboAtivo._Regex = null;
-            this.cboAtivo._situacao = true;
-            this.cboAtivo._Table = "Empresa";
-            this.cboAtivo._TamanhoComponente = 87;
-            this.cboAtivo._TamanhoMaiorLabel = 140;
-            this.cboAtivo._Visible = false;
-            this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
-            this.cboAtivo.Base = null;
-            this.cboAtivo.Color = System.Drawing.Color.White;
-            this.cboAtivo.DataSource = null;
-            this.cboAtivo.DisplayMember = "DisplayMember";
-            this.cboAtivo.Location = new System.Drawing.Point(110, 324);
-            this.cboAtivo.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
-            this.cboAtivo.Name = "cboAtivo";
-            this.cboAtivo.SelectedIndex = -1;
-            this.cboAtivo.SelectedValue = 0;
-            this.cboAtivo.Size = new System.Drawing.Size(120, 21);
-            this.cboAtivo.TabIndex = 12;
-            this.cboAtivo.ValueMember = "ValueMember";
-            // 
-            // hlP_PesquisaidRamoAtividade
-            // 
-            this.hlP_PesquisaidRamoAtividade._Field = "idRamoAtividade";
-            this.hlP_PesquisaidRamoAtividade._LabelGroup = this.hlP_LabelSeparatorGeral;
-            this.hlP_PesquisaidRamoAtividade._LabelText = "Ramo atividade";
-            this.hlP_PesquisaidRamoAtividade._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidRamoAtividade._ListaCamposDisplay")));
-            this.hlP_PesquisaidRamoAtividade._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidRamoAtividade._ListaValoresDisplay")));
-            this.hlP_PesquisaidRamoAtividade._NomeCampoPK = "ID";
-            this.hlP_PesquisaidRamoAtividade._NomeFormCadastroOriginal = "FormRamoAtividade";
-            this.hlP_PesquisaidRamoAtividade._NomeView = "vwRamoAtividade";
-            this.hlP_PesquisaidRamoAtividade._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.hlP_PesquisaidRamoAtividade._Regex = null;
-            this.hlP_PesquisaidRamoAtividade._Table = "Empresa";
-            this.hlP_PesquisaidRamoAtividade._TamanhoComponente = 326;
-            this.hlP_PesquisaidRamoAtividade._TamanhoMaiorLabel = 140;
-            this.hlP_PesquisaidRamoAtividade._Vinculado = false;
-            this.hlP_PesquisaidRamoAtividade._Visible = false;
-            this.hlP_PesquisaidRamoAtividade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hlP_PesquisaidRamoAtividade.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_PesquisaidRamoAtividade.Base = null;
-            this.hlP_PesquisaidRamoAtividade.Location = new System.Drawing.Point(478, 3);
-            this.hlP_PesquisaidRamoAtividade.Margin = new System.Windows.Forms.Padding(57, 3, 15, 3);
-            this.hlP_PesquisaidRamoAtividade.Name = "hlP_PesquisaidRamoAtividade";
-            this.hlP_PesquisaidRamoAtividade.ReadOnly = false;
-            this.hlP_PesquisaidRamoAtividade.Size = new System.Drawing.Size(502, 21);
-            this.hlP_PesquisaidRamoAtividade.TabIndex = 13;
-            this.hlP_PesquisaidRamoAtividade.Value = 0;
-            // 
-            // cbostCodigoRegimeTributario
-            // 
-            this.cbostCodigoRegimeTributario._Field = "stCodigoRegimeTributario";
-            this.cbostCodigoRegimeTributario._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostCodigoRegimeTributario._Itens")));
-            this.cbostCodigoRegimeTributario._LabelGroup = this.hlP_LabelSeparatorGeral;
-            this.cbostCodigoRegimeTributario._LabelText = "Regime tributário";
-            this.cbostCodigoRegimeTributario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.cbostCodigoRegimeTributario._Regex = null;
-            this.cbostCodigoRegimeTributario._situacao = true;
-            this.cbostCodigoRegimeTributario._Table = "Empresa";
-            this.cbostCodigoRegimeTributario._TamanhoComponente = 88;
-            this.cbostCodigoRegimeTributario._TamanhoMaiorLabel = 140;
-            this.cbostCodigoRegimeTributario._Visible = false;
-            this.cbostCodigoRegimeTributario.BackColor = System.Drawing.Color.Transparent;
-            this.cbostCodigoRegimeTributario.Base = null;
-            this.cbostCodigoRegimeTributario.Color = System.Drawing.Color.White;
-            this.cbostCodigoRegimeTributario.DataSource = null;
-            this.cbostCodigoRegimeTributario.DisplayMember = "DisplayMember";
-            this.cbostCodigoRegimeTributario.Location = new System.Drawing.Point(467, 30);
-            this.cbostCodigoRegimeTributario.Margin = new System.Windows.Forms.Padding(46, 3, 15, 3);
-            this.cbostCodigoRegimeTributario.Name = "cbostCodigoRegimeTributario";
-            this.cbostCodigoRegimeTributario.SelectedIndex = -1;
-            this.cbostCodigoRegimeTributario.SelectedValue = 0;
-            this.cbostCodigoRegimeTributario.Size = new System.Drawing.Size(185, 21);
-            this.cbostCodigoRegimeTributario.TabIndex = 14;
-            this.cbostCodigoRegimeTributario.ValueMember = "ValueMember";
             // 
             // txtxLinkLogoEmpresa
             // 
@@ -542,15 +461,15 @@
             this.txtxLinkLogoEmpresa._Table = "Empresa";
             this.txtxLinkLogoEmpresa._TamanhoComponente = 347;
             this.txtxLinkLogoEmpresa._TamanhoMaiorLabel = 140;
-            this.txtxLinkLogoEmpresa._Visible = false;
             this.txtxLinkLogoEmpresa.BackColor = System.Drawing.Color.Transparent;
             this.txtxLinkLogoEmpresa.Base = null;
             this.txtxLinkLogoEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxLinkLogoEmpresa.Color = System.Drawing.Color.White;
-            this.txtxLinkLogoEmpresa.Location = new System.Drawing.Point(485, 57);
+            this.txtxLinkLogoEmpresa.Location = new System.Drawing.Point(64, 324);
             this.txtxLinkLogoEmpresa.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.txtxLinkLogoEmpresa.MaxLength = 32767;
             this.txtxLinkLogoEmpresa.Name = "txtxLinkLogoEmpresa";
+            this.txtxLinkLogoEmpresa.objConfigComponenteModel = null;
             this.txtxLinkLogoEmpresa.ReadOnly = false;
             this.txtxLinkLogoEmpresa.Size = new System.Drawing.Size(426, 21);
             this.txtxLinkLogoEmpresa.TabIndex = 15;
@@ -567,18 +486,100 @@
             this.txtxLinkPastas._Table = "Empresa";
             this.txtxLinkPastas._TamanhoComponente = 347;
             this.txtxLinkPastas._TamanhoMaiorLabel = 140;
-            this.txtxLinkPastas._Visible = false;
             this.txtxLinkPastas.BackColor = System.Drawing.Color.Transparent;
             this.txtxLinkPastas.Base = null;
             this.txtxLinkPastas.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxLinkPastas.Color = System.Drawing.Color.White;
-            this.txtxLinkPastas.Location = new System.Drawing.Point(499, 84);
+            this.txtxLinkPastas.Location = new System.Drawing.Point(583, 3);
             this.txtxLinkPastas.Margin = new System.Windows.Forms.Padding(78, 3, 15, 3);
             this.txtxLinkPastas.MaxLength = 32767;
             this.txtxLinkPastas.Name = "txtxLinkPastas";
+            this.txtxLinkPastas.objConfigComponenteModel = null;
             this.txtxLinkPastas.ReadOnly = false;
             this.txtxLinkPastas.Size = new System.Drawing.Size(412, 21);
             this.txtxLinkPastas.TabIndex = 16;
+            // 
+            // cboAtivo
+            // 
+            this.cboAtivo._Field = "Ativo";
+            this.cboAtivo._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cboAtivo._Itens")));
+            this.cboAtivo._LabelGroup = this.hlP_LabelSeparatorGeral;
+            this.cboAtivo._LabelText = "Ativo";
+            this.cboAtivo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.cboAtivo._Regex = null;
+            this.cboAtivo._situacao = true;
+            this.cboAtivo._Table = "Empresa";
+            this.cboAtivo._TamanhoComponente = 80;
+            this.cboAtivo._TamanhoMaiorLabel = 140;
+            this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
+            this.cboAtivo.Base = null;
+            this.cboAtivo.Color = System.Drawing.Color.White;
+            this.cboAtivo.DataSource = null;
+            this.cboAtivo.DisplayMember = "DisplayMember";
+            this.cboAtivo.Location = new System.Drawing.Point(615, 30);
+            this.cboAtivo.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
+            this.cboAtivo.Name = "cboAtivo";
+            this.cboAtivo.objConfigComponenteModel = null;
+            this.cboAtivo.SelectedIndex = -1;
+            this.cboAtivo.SelectedValue = 0;
+            this.cboAtivo.Size = new System.Drawing.Size(113, 21);
+            this.cboAtivo.TabIndex = 12;
+            this.cboAtivo.ValueMember = "ValueMember";
+            // 
+            // hlP_PesquisaidRamoAtividade
+            // 
+            this.hlP_PesquisaidRamoAtividade._Field = "idRamoAtividade";
+            this.hlP_PesquisaidRamoAtividade._LabelGroup = this.hlP_LabelSeparatorGeral;
+            this.hlP_PesquisaidRamoAtividade._LabelText = "Ramo atividade";
+            this.hlP_PesquisaidRamoAtividade._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidRamoAtividade._ListaCamposDisplay")));
+            this.hlP_PesquisaidRamoAtividade._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidRamoAtividade._ListaValoresDisplay")));
+            this.hlP_PesquisaidRamoAtividade._NomeCampoPK = "ID";
+            this.hlP_PesquisaidRamoAtividade._NomeFormCadastroOriginal = "FormRamoAtividade";
+            this.hlP_PesquisaidRamoAtividade._NomeView = "vwRamoAtividade";
+            this.hlP_PesquisaidRamoAtividade._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.hlP_PesquisaidRamoAtividade._Regex = null;
+            this.hlP_PesquisaidRamoAtividade._Table = "Empresa";
+            this.hlP_PesquisaidRamoAtividade._TamanhoComponente = 300;
+            this.hlP_PesquisaidRamoAtividade._TamanhoMaiorLabel = 140;
+            this.hlP_PesquisaidRamoAtividade._Vinculado = false;
+            this.hlP_PesquisaidRamoAtividade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hlP_PesquisaidRamoAtividade.BackColor = System.Drawing.Color.Transparent;
+            this.hlP_PesquisaidRamoAtividade.Base = null;
+            this.hlP_PesquisaidRamoAtividade.Location = new System.Drawing.Point(562, 57);
+            this.hlP_PesquisaidRamoAtividade.Margin = new System.Windows.Forms.Padding(57, 3, 15, 3);
+            this.hlP_PesquisaidRamoAtividade.Name = "hlP_PesquisaidRamoAtividade";
+            this.hlP_PesquisaidRamoAtividade.objConfigComponenteModel = null;
+            this.hlP_PesquisaidRamoAtividade.ReadOnly = false;
+            this.hlP_PesquisaidRamoAtividade.Size = new System.Drawing.Size(386, 21);
+            this.hlP_PesquisaidRamoAtividade.TabIndex = 13;
+            this.hlP_PesquisaidRamoAtividade.Value = 0;
+            // 
+            // cbostCodigoRegimeTributario
+            // 
+            this.cbostCodigoRegimeTributario._Field = "stCodigoRegimeTributario";
+            this.cbostCodigoRegimeTributario._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostCodigoRegimeTributario._Itens")));
+            this.cbostCodigoRegimeTributario._LabelGroup = this.hlP_LabelSeparatorGeral;
+            this.cbostCodigoRegimeTributario._LabelText = "Regime tributário";
+            this.cbostCodigoRegimeTributario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.cbostCodigoRegimeTributario._Regex = null;
+            this.cbostCodigoRegimeTributario._situacao = true;
+            this.cbostCodigoRegimeTributario._Table = "Empresa";
+            this.cbostCodigoRegimeTributario._TamanhoComponente = 80;
+            this.cbostCodigoRegimeTributario._TamanhoMaiorLabel = 140;
+            this.cbostCodigoRegimeTributario.BackColor = System.Drawing.Color.Transparent;
+            this.cbostCodigoRegimeTributario.Base = null;
+            this.cbostCodigoRegimeTributario.Color = System.Drawing.Color.White;
+            this.cbostCodigoRegimeTributario.DataSource = null;
+            this.cbostCodigoRegimeTributario.DisplayMember = "DisplayMember";
+            this.cbostCodigoRegimeTributario.Location = new System.Drawing.Point(551, 84);
+            this.cbostCodigoRegimeTributario.Margin = new System.Windows.Forms.Padding(46, 3, 15, 3);
+            this.cbostCodigoRegimeTributario.Name = "cbostCodigoRegimeTributario";
+            this.cbostCodigoRegimeTributario.objConfigComponenteModel = null;
+            this.cbostCodigoRegimeTributario.SelectedIndex = -1;
+            this.cbostCodigoRegimeTributario.SelectedValue = 0;
+            this.cbostCodigoRegimeTributario.Size = new System.Drawing.Size(177, 21);
+            this.cbostCodigoRegimeTributario.TabIndex = 14;
+            this.cbostCodigoRegimeTributario.ValueMember = "ValueMember";
             // 
             // tabPage2
             // 
@@ -586,7 +587,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(804, 225);
+            this.tabPage2.Size = new System.Drawing.Size(1144, 225);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Tag = false;
             this.tabPage2.Text = "Endereço";
@@ -598,7 +599,7 @@
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(804, 225);
+            this.kryptonPanel2.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel2.TabIndex = 0;
             // 
             // dgvEnderecoEmpresa
@@ -623,7 +624,7 @@
             this.dgvEnderecoEmpresa.Inclui = false;
             this.dgvEnderecoEmpresa.Location = new System.Drawing.Point(0, 0);
             this.dgvEnderecoEmpresa.Name = "dgvEnderecoEmpresa";
-            this.dgvEnderecoEmpresa.Size = new System.Drawing.Size(804, 225);
+            this.dgvEnderecoEmpresa.Size = new System.Drawing.Size(1144, 225);
             this.dgvEnderecoEmpresa.TabIndex = 0;
             this.dgvEnderecoEmpresa.Tag = "Empresa_endereco";
             // 

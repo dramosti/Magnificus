@@ -60,7 +60,7 @@ namespace HLP.Comum.UI
         {
             try
             {
-                bwWorker.RunWorkerAsync();
+                bwWorkerInicializa.RunWorkerAsync();
                 this.sView = sView;
                 this.BringToFront();
             }
@@ -100,7 +100,7 @@ namespace HLP.Comum.UI
             bsRetPesquisa.DataSource = null;
             lblCount.Text = "0 de 0";
             iRetPesquisa = null;
-            objMetodosForm.HabilitaButtonSpec(false);
+            objMetodosForm.HabilitaButtonSpecPesquisa(false);
             iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
             objMetodosForm.JogarFocoSegundoComponente();
         }
@@ -114,7 +114,7 @@ namespace HLP.Comum.UI
             objMetodosForm.LimpaCampos();
             HabilitaBotoes(2);
             objMetodosForm.HabilitaCampos(false);
-            objMetodosForm.HabilitaButtonSpec(true);
+            objMetodosForm.HabilitaButtonSpecPesquisa(true);
             if ((bsRetPesquisa.DataSource as List<int>) != null)
             {
                 if ((bsRetPesquisa.DataSource as List<int>).Count > 0)
@@ -206,7 +206,7 @@ namespace HLP.Comum.UI
         {
             HabilitaBotoes(3);
             objMetodosForm.HabilitaCampos(true);
-            objMetodosForm.HabilitaButtonSpec(false);
+            objMetodosForm.HabilitaButtonSpecPesquisa(false);
             iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
             objMetodosForm.JogarFocoSegundoComponente();
         }
@@ -221,7 +221,7 @@ namespace HLP.Comum.UI
             HabilitaBotoes(1);
             iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
             objMetodosForm.HabilitaCampos(false);
-            objMetodosForm.HabilitaButtonSpec(true);
+            objMetodosForm.HabilitaButtonSpecPesquisa(true);
             objMetodosForm.JogarFocoPrimeiroComponente();
         }
 
@@ -233,7 +233,7 @@ namespace HLP.Comum.UI
         {
             objValidaCampos.LimpaErros();
             objMetodosForm.HabilitaCampos(false);
-            objMetodosForm.HabilitaButtonSpec(true);
+            objMetodosForm.HabilitaButtonSpecPesquisa(true);
             iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
             objMetodosForm.JogarFocoPrimeiroComponente();
         }
@@ -262,7 +262,7 @@ namespace HLP.Comum.UI
                         iRetPesquisa = (int)bsRetPesquisa.Current;
                         if (objfrmPesquisaPadrao.ListIdSelecionados.Count() > 1) { bVisualizaBotoesNavegacao = true; } else { bVisualizaBotoesNavegacao = false; }
                         HabilitaBotoes(1);
-                        objMetodosForm.HabilitaButtonSpec(true);
+                        objMetodosForm.HabilitaButtonSpecPesquisa(true);
                         lblCount.Text = "1 de " + objfrmPesquisaPadrao.ListIdSelecionados.Count().ToString();
                     }
                     else
@@ -322,7 +322,7 @@ namespace HLP.Comum.UI
                 iRetPesquisa = (int)bsRetPesquisa.Current;
                 if (ListIdSelecionados.Count() > 1) { bVisualizaBotoesNavegacao = true; } else { bVisualizaBotoesNavegacao = false; }
                 HabilitaBotoes(1);
-                objMetodosForm.HabilitaButtonSpec(true);
+                objMetodosForm.HabilitaButtonSpecPesquisa(true);
                 lblCount.Text = "1 de " + ListIdSelecionados.Count().ToString();
             }
             else
@@ -777,11 +777,13 @@ namespace HLP.Comum.UI
         #endregion
 
         #region Metodos Publicos
-
+     
         /// <summary>
-        // 1 -> Após pesquisar e Salvar
-        // 2 -> Após Cancelar e Excluir e Iniciar
-        // 3 -> Após Novo e Atualizar
+        /// 1 -> Após pesquisar e Salvar
+        /// 2 -> Após Cancelar e Excluir e Iniciar
+        /// 3 -> Após Novo e Atualizar
+        /// 4 -> 
+        /// 5 -> Desabilita todos os botões
         /// </summary>
         /// <param name="intTipo"></param>
         public void HabilitaBotoes(int intTipo)
@@ -833,6 +835,15 @@ namespace HLP.Comum.UI
                     this.btnNovo.Enabled = false;
                     this.btnAtualizar.Enabled = true;
                     this.btnDuplicar.Enabled = true;
+                    break;
+                case 5: this.btnSalvar.Enabled = false;
+                    this.btnCancelar.Enabled = false;
+                    this.btnExcluir.Enabled = false;
+                    this.btnPesquisar.Enabled = false;
+                    this.btnImprimir.Enabled = false;
+                    this.btnNovo.Enabled = false;
+                    this.btnAtualizar.Enabled = false;
+                    this.btnDuplicar.Enabled = false;
                     break;
             }
 
@@ -1010,7 +1021,34 @@ namespace HLP.Comum.UI
                 }
             }
         }
+        private void bwWorkerRecarregaForm_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            try
+            {
+                if (this.InvokeRequired)
+                    this.BeginInvoke((MethodInvoker)delegate
+                    {
 
+                        iConfigFormularioService.InitializeFormulario(this.panelPadrao, sView);
+                        ConfiguraAcoesPermitidas();
+                        HabilitaBotoes(2);
+                        HabilitaBotoesNavegacao(false);
+                        objMetodosForm.HabilitaCampos(false);
+                        objMetodosForm.HabilitaButtonSpecPesquisa(true);
+                        objMetodosForm.JogarFocoPrimeiroComponente();
+                        SetaEventos();          
+
+                       
+                    });
+
+            }
+            catch (System.Exception ex)
+            {
+                bwWorkerRecarregaForm.Dispose();
+                throw ex;
+            }
+
+        }
         private void bwWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             try
@@ -1026,19 +1064,19 @@ namespace HLP.Comum.UI
                         HabilitaBotoes(2);
                         HabilitaBotoesNavegacao(false);
                         objMetodosForm.HabilitaCampos(false);
-                        objMetodosForm.HabilitaButtonSpec(true);
+                        objMetodosForm.HabilitaButtonSpecPesquisa(true);
                         objMetodosForm.JogarFocoPrimeiroComponente();
                         SetaEventos();
                         if (this.Modal == true)  // executa os métodos novo ao iniciar form modal 
                         {
                             //ExecutaEventoNovo();
-                        }
+                        }       
                     });
 
             }
             catch (System.Exception ex)
             {
-                bwWorker.Dispose();
+                bwWorkerInicializa.Dispose();
                 throw ex;
             }
 
@@ -1046,8 +1084,36 @@ namespace HLP.Comum.UI
 
         protected bool GetStatusBw()
         {
-            return bwWorker.IsBusy;
+            return bwWorkerInicializa.IsBusy;
         }
 
+        private void tsHab_Click(object sender, EventArgs e)
+        {
+            if (sender == tsHabilitar)
+            {
+                this.ExecutaEventoNovo();
+                HabilitaBotoes(5);
+                objMetodosForm.HabilitaButtonSpecConfig(true);
+                tsCamposVisiveis.Enabled = true;
+                tsDesabilitar.Enabled = true;
+                tsHabilitar.Enabled = false;
+            }
+            else if(sender == tsDesabilitar)
+            {
+                bwWorkerRecarregaForm.RunWorkerAsync();
+                objMetodosForm.HabilitaButtonSpecConfig(false);
+                tsCamposVisiveis.Enabled = false; 
+                tsDesabilitar.Enabled = false;
+                tsHabilitar.Enabled = true;
+            }
+            else if (sender == tsCamposVisiveis)
+            {
+                
+            }
+        }
+
+       
+
+      
     }
 }

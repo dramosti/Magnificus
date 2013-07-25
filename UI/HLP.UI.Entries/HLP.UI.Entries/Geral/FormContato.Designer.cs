@@ -264,7 +264,7 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo._Table = "Contato";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -290,7 +290,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxTitulo._Table = "Contato";
             this.txtxTitulo._TamanhoComponente = 159;
             this.txtxTitulo._TamanhoMaiorLabel = 150;
-            this.txtxTitulo._Visible = false;
+            this.txtxTitulo._Visible = true;
             this.txtxTitulo.BackColor = System.Drawing.Color.Transparent;
             this.txtxTitulo.Base = null;
             this.txtxTitulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -316,7 +316,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxNome._Table = "Contato";
             this.txtxNome._TamanhoComponente = 415;
             this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -342,7 +342,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxFuncao._Table = "Contato";
             this.txtxFuncao._TamanhoComponente = 276;
             this.txtxFuncao._TamanhoMaiorLabel = 150;
-            this.txtxFuncao._Visible = false;
+            this.txtxFuncao._Visible = true;
             this.txtxFuncao.BackColor = System.Drawing.Color.Transparent;
             this.txtxFuncao.Base = null;
             this.txtxFuncao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -368,7 +368,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxDepartamento._Table = "Contato";
             this.txtxDepartamento._TamanhoComponente = 102;
             this.txtxDepartamento._TamanhoMaiorLabel = 150;
-            this.txtxDepartamento._Visible = false;
+            this.txtxDepartamento._Visible = true;
             this.txtxDepartamento.BackColor = System.Drawing.Color.Transparent;
             this.txtxDepartamento.Base = null;
             this.txtxDepartamento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -394,7 +394,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxApelido._Table = "Contato";
             this.txtxApelido._TamanhoComponente = 102;
             this.txtxApelido._TamanhoMaiorLabel = 150;
-            this.txtxApelido._Visible = false;
+            this.txtxApelido._Visible = true;
             this.txtxApelido.BackColor = System.Drawing.Color.Transparent;
             this.txtxApelido.Base = null;
             this.txtxApelido.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -420,7 +420,7 @@ namespace HLP.UI.Entries.Geral
             this.cbxAtivo._Table = "Contato";
             this.cbxAtivo._TamanhoComponente = 80;
             this.cbxAtivo._TamanhoMaiorLabel = 150;
-            this.cbxAtivo._Visible = false;
+            this.cbxAtivo._Visible = true;
             this.cbxAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cbxAtivo.Base = null;
             this.cbxAtivo.Color = System.Drawing.Color.White;
@@ -448,7 +448,7 @@ namespace HLP.UI.Entries.Geral
             this.mskxCPF._TamanhoMaiorLabel = 150;
             this.mskxCPF._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCPF._UF = null;
-            this.mskxCPF._Visible = false;
+            this.mskxCPF._Visible = true;
             this.mskxCPF.BackColor = System.Drawing.Color.Transparent;
             this.mskxCPF.Base = null;
             this.mskxCPF.Color = System.Drawing.Color.White;
@@ -475,7 +475,7 @@ namespace HLP.UI.Entries.Geral
             this.cbxstSexo._Table = "Contato";
             this.cbxstSexo._TamanhoComponente = 111;
             this.cbxstSexo._TamanhoMaiorLabel = 150;
-            this.cbxstSexo._Visible = false;
+            this.cbxstSexo._Visible = true;
             this.cbxstSexo.BackColor = System.Drawing.Color.Transparent;
             this.cbxstSexo.Base = null;
             this.cbxstSexo.Color = System.Drawing.Color.White;
@@ -503,7 +503,7 @@ namespace HLP.UI.Entries.Geral
             this.cbxstSensibilidade._Table = "Contato";
             this.cbxstSensibilidade._TamanhoComponente = 128;
             this.cbxstSensibilidade._TamanhoMaiorLabel = 150;
-            this.cbxstSensibilidade._Visible = false;
+            this.cbxstSensibilidade._Visible = true;
             this.cbxstSensibilidade.BackColor = System.Drawing.Color.Transparent;
             this.cbxstSensibilidade.Base = null;
             this.cbxstSensibilidade.Color = System.Drawing.Color.White;
@@ -543,7 +543,7 @@ namespace HLP.UI.Entries.Geral
             this.cbxidContatoGerente._Table = "Contato";
             this.cbxidContatoGerente._TamanhoComponente = 239;
             this.cbxidContatoGerente._TamanhoMaiorLabel = 150;
-            this.cbxidContatoGerente._Visible = false;
+            this.cbxidContatoGerente._Visible = true;
             this.cbxidContatoGerente.BackColor = System.Drawing.Color.Transparent;
             this.cbxidContatoGerente.Base = null;
             this.cbxidContatoGerente.Color = System.Drawing.Color.White;
@@ -583,7 +583,7 @@ namespace HLP.UI.Entries.Geral
             this.cbxidFuncionario._Table = "Contato";
             this.cbxidFuncionario._TamanhoComponente = 237;
             this.cbxidFuncionario._TamanhoMaiorLabel = 150;
-            this.cbxidFuncionario._Visible = false;
+            this.cbxidFuncionario._Visible = true;
             this.cbxidFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.cbxidFuncionario.Base = null;
             this.cbxidFuncionario.Color = System.Drawing.Color.White;
@@ -621,7 +621,7 @@ namespace HLP.UI.Entries.Geral
             this.dtdDisponivelaPartir._Table = "Contato";
             this.dtdDisponivelaPartir._TamanhoComponente = 69;
             this.dtdDisponivelaPartir._TamanhoMaiorLabel = 150;
-            this.dtdDisponivelaPartir._Visible = false;
+            this.dtdDisponivelaPartir._Visible = true;
             this.dtdDisponivelaPartir.BackColor = System.Drawing.Color.Transparent;
             this.dtdDisponivelaPartir.Base = null;
             this.dtdDisponivelaPartir.Color = System.Drawing.Color.Empty;
@@ -645,7 +645,7 @@ namespace HLP.UI.Entries.Geral
             this.dtdDisponivelAte._Table = "Contato";
             this.dtdDisponivelAte._TamanhoComponente = 71;
             this.dtdDisponivelAte._TamanhoMaiorLabel = 0;
-            this.dtdDisponivelAte._Visible = false;
+            this.dtdDisponivelAte._Visible = true;
             this.dtdDisponivelAte.BackColor = System.Drawing.Color.Transparent;
             this.dtdDisponivelAte.Base = null;
             this.dtdDisponivelAte.Color = System.Drawing.Color.Empty;
@@ -727,7 +727,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidFidelidade._TamanhoComponente = 300;
             this.hlP_PesquisaidFidelidade._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidFidelidade._Vinculado = false;
-            this.hlP_PesquisaidFidelidade._Visible = false;
+            this.hlP_PesquisaidFidelidade._Visible = true;
             this.hlP_PesquisaidFidelidade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidFidelidade.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidFidelidade.Base = null;
@@ -756,7 +756,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidDecisao._TamanhoComponente = 300;
             this.hlP_PesquisaidDecisao._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidDecisao._Vinculado = false;
-            this.hlP_PesquisaidDecisao._Visible = false;
+            this.hlP_PesquisaidDecisao._Visible = true;
             this.hlP_PesquisaidDecisao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDecisao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDecisao.Base = null;
@@ -785,7 +785,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidPersonalidade._TamanhoComponente = 300;
             this.hlP_PesquisaidPersonalidade._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidPersonalidade._Vinculado = false;
-            this.hlP_PesquisaidPersonalidade._Visible = false;
+            this.hlP_PesquisaidPersonalidade._Visible = true;
             this.hlP_PesquisaidPersonalidade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidPersonalidade.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidPersonalidade.Base = null;
@@ -822,7 +822,7 @@ namespace HLP.UI.Entries.Geral
             this.cbxstVip._Table = "Contato";
             this.cbxstVip._TamanhoComponente = 80;
             this.cbxstVip._TamanhoMaiorLabel = 150;
-            this.cbxstVip._Visible = false;
+            this.cbxstVip._Visible = true;
             this.cbxstVip.BackColor = System.Drawing.Color.Transparent;
             this.cbxstVip.Base = null;
             this.cbxstVip.Color = System.Drawing.Color.White;
@@ -850,7 +850,7 @@ namespace HLP.UI.Entries.Geral
             this.cbxstMalaDireta._Table = "Contato";
             this.cbxstMalaDireta._TamanhoComponente = 80;
             this.cbxstMalaDireta._TamanhoMaiorLabel = 150;
-            this.cbxstMalaDireta._Visible = false;
+            this.cbxstMalaDireta._Visible = true;
             this.cbxstMalaDireta.BackColor = System.Drawing.Color.Transparent;
             this.cbxstMalaDireta.Base = null;
             this.cbxstMalaDireta.Color = System.Drawing.Color.White;
@@ -890,7 +890,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxMemorando._Table = "Contato";
             this.txtxMemorando._TamanhoComponente = 133;
             this.txtxMemorando._TamanhoMaiorLabel = 150;
-            this.txtxMemorando._Visible = false;
+            this.txtxMemorando._Visible = true;
             this.txtxMemorando.BackColor = System.Drawing.Color.Transparent;
             this.txtxMemorando.Base = null;
             this.txtxMemorando.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1189,7 +1189,7 @@ namespace HLP.UI.Entries.Geral
             this.mskxTelefoneComercial._TamanhoMaiorLabel = 150;
             this.mskxTelefoneComercial._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxTelefoneComercial._UF = null;
-            this.mskxTelefoneComercial._Visible = false;
+            this.mskxTelefoneComercial._Visible = true;
             this.mskxTelefoneComercial.BackColor = System.Drawing.Color.Transparent;
             this.mskxTelefoneComercial.Base = null;
             this.mskxTelefoneComercial.Color = System.Drawing.Color.White;
@@ -1216,7 +1216,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxRamalComercial._Table = "Contato";
             this.txtxRamalComercial._TamanhoComponente = 134;
             this.txtxRamalComercial._TamanhoMaiorLabel = 150;
-            this.txtxRamalComercial._Visible = false;
+            this.txtxRamalComercial._Visible = true;
             this.txtxRamalComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRamalComercial.Base = null;
             this.txtxRamalComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1242,7 +1242,7 @@ namespace HLP.UI.Entries.Geral
             this.mskxCelularComercial._TamanhoMaiorLabel = 150;
             this.mskxCelularComercial._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCelularComercial._UF = null;
-            this.mskxCelularComercial._Visible = false;
+            this.mskxCelularComercial._Visible = true;
             this.mskxCelularComercial.BackColor = System.Drawing.Color.Transparent;
             this.mskxCelularComercial.Base = null;
             this.mskxCelularComercial.Color = System.Drawing.Color.White;
@@ -1269,7 +1269,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxRadioFoneComercial._Table = "Contato";
             this.txtxRadioFoneComercial._TamanhoComponente = 133;
             this.txtxRadioFoneComercial._TamanhoMaiorLabel = 150;
-            this.txtxRadioFoneComercial._Visible = false;
+            this.txtxRadioFoneComercial._Visible = true;
             this.txtxRadioFoneComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRadioFoneComercial.Base = null;
             this.txtxRadioFoneComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1295,7 +1295,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxPagerComercial._Table = "Contato";
             this.txtxPagerComercial._TamanhoComponente = 134;
             this.txtxPagerComercial._TamanhoMaiorLabel = 150;
-            this.txtxPagerComercial._Visible = false;
+            this.txtxPagerComercial._Visible = true;
             this.txtxPagerComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxPagerComercial.Base = null;
             this.txtxPagerComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1321,7 +1321,7 @@ namespace HLP.UI.Entries.Geral
             this.mskxFaxComercial._TamanhoMaiorLabel = 150;
             this.mskxFaxComercial._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxFaxComercial._UF = null;
-            this.mskxFaxComercial._Visible = false;
+            this.mskxFaxComercial._Visible = true;
             this.mskxFaxComercial.BackColor = System.Drawing.Color.Transparent;
             this.mskxFaxComercial.Base = null;
             this.mskxFaxComercial.Color = System.Drawing.Color.White;
@@ -1348,7 +1348,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxEmailComercial._Table = "Contato";
             this.txtxEmailComercial._TamanhoComponente = 269;
             this.txtxEmailComercial._TamanhoMaiorLabel = 150;
-            this.txtxEmailComercial._Visible = false;
+            this.txtxEmailComercial._Visible = true;
             this.txtxEmailComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmailComercial.Base = null;
             this.txtxEmailComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1374,7 +1374,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxSkypeComercial._Table = "Contato";
             this.txtxSkypeComercial._TamanhoComponente = 269;
             this.txtxSkypeComercial._TamanhoMaiorLabel = 150;
-            this.txtxSkypeComercial._Visible = false;
+            this.txtxSkypeComercial._Visible = true;
             this.txtxSkypeComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxSkypeComercial.Base = null;
             this.txtxSkypeComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1400,7 +1400,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxMSNComercial._Table = "Contato";
             this.txtxMSNComercial._TamanhoComponente = 272;
             this.txtxMSNComercial._TamanhoMaiorLabel = 150;
-            this.txtxMSNComercial._Visible = false;
+            this.txtxMSNComercial._Visible = true;
             this.txtxMSNComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxMSNComercial.Base = null;
             this.txtxMSNComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1426,7 +1426,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxhttpComercial._Table = "Contato";
             this.txtxhttpComercial._TamanhoComponente = 265;
             this.txtxhttpComercial._TamanhoMaiorLabel = 150;
-            this.txtxhttpComercial._Visible = false;
+            this.txtxhttpComercial._Visible = true;
             this.txtxhttpComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxhttpComercial.Base = null;
             this.txtxhttpComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1464,7 +1464,7 @@ namespace HLP.UI.Entries.Geral
             this.mskxTelefoneResidencial._TamanhoMaiorLabel = 150;
             this.mskxTelefoneResidencial._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxTelefoneResidencial._UF = null;
-            this.mskxTelefoneResidencial._Visible = false;
+            this.mskxTelefoneResidencial._Visible = true;
             this.mskxTelefoneResidencial.BackColor = System.Drawing.Color.Transparent;
             this.mskxTelefoneResidencial.Base = null;
             this.mskxTelefoneResidencial.Color = System.Drawing.Color.White;
@@ -1491,7 +1491,7 @@ namespace HLP.UI.Entries.Geral
             this.mskxCelularResidencial._TamanhoMaiorLabel = 150;
             this.mskxCelularResidencial._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCelularResidencial._UF = null;
-            this.mskxCelularResidencial._Visible = false;
+            this.mskxCelularResidencial._Visible = true;
             this.mskxCelularResidencial.BackColor = System.Drawing.Color.Transparent;
             this.mskxCelularResidencial.Base = null;
             this.mskxCelularResidencial.Color = System.Drawing.Color.White;
@@ -1518,7 +1518,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxRadioFoneResidencial._Table = "Contato";
             this.txtxRadioFoneResidencial._TamanhoComponente = 131;
             this.txtxRadioFoneResidencial._TamanhoMaiorLabel = 150;
-            this.txtxRadioFoneResidencial._Visible = false;
+            this.txtxRadioFoneResidencial._Visible = true;
             this.txtxRadioFoneResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRadioFoneResidencial.Base = null;
             this.txtxRadioFoneResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1544,7 +1544,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxEmailResidencial._Table = "Contato";
             this.txtxEmailResidencial._TamanhoComponente = 268;
             this.txtxEmailResidencial._TamanhoMaiorLabel = 150;
-            this.txtxEmailResidencial._Visible = false;
+            this.txtxEmailResidencial._Visible = true;
             this.txtxEmailResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmailResidencial.Base = null;
             this.txtxEmailResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1570,7 +1570,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxSkypeResidencial._Table = "Contato";
             this.txtxSkypeResidencial._TamanhoComponente = 268;
             this.txtxSkypeResidencial._TamanhoMaiorLabel = 150;
-            this.txtxSkypeResidencial._Visible = false;
+            this.txtxSkypeResidencial._Visible = true;
             this.txtxSkypeResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxSkypeResidencial.Base = null;
             this.txtxSkypeResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1596,7 +1596,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxMsnResidencial._Table = "Contato";
             this.txtxMsnResidencial._TamanhoComponente = 270;
             this.txtxMsnResidencial._TamanhoMaiorLabel = 150;
-            this.txtxMsnResidencial._Visible = false;
+            this.txtxMsnResidencial._Visible = true;
             this.txtxMsnResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxMsnResidencial.Base = null;
             this.txtxMsnResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1622,7 +1622,7 @@ namespace HLP.UI.Entries.Geral
             this.txtXhttpPessoal._Table = "Contato";
             this.txtXhttpPessoal._TamanhoComponente = 264;
             this.txtXhttpPessoal._TamanhoMaiorLabel = 150;
-            this.txtXhttpPessoal._Visible = false;
+            this.txtXhttpPessoal._Visible = true;
             this.txtXhttpPessoal.BackColor = System.Drawing.Color.Transparent;
             this.txtXhttpPessoal.Base = null;
             this.txtXhttpPessoal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1699,7 +1699,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxFilhos._Table = "Contato";
             this.txtxFilhos._TamanhoComponente = 346;
             this.txtxFilhos._TamanhoMaiorLabel = 0;
-            this.txtxFilhos._Visible = false;
+            this.txtxFilhos._Visible = true;
             this.txtxFilhos.BackColor = System.Drawing.Color.Transparent;
             this.txtxFilhos.Base = null;
             this.txtxFilhos.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1723,7 +1723,7 @@ namespace HLP.UI.Entries.Geral
             this.dtdDataAniversario._Table = "Contato";
             this.dtdDataAniversario._TamanhoComponente = 114;
             this.dtdDataAniversario._TamanhoMaiorLabel = 0;
-            this.dtdDataAniversario._Visible = false;
+            this.dtdDataAniversario._Visible = true;
             this.dtdDataAniversario.BackColor = System.Drawing.Color.Transparent;
             this.dtdDataAniversario.Base = null;
             this.dtdDataAniversario.Color = System.Drawing.Color.Empty;
@@ -1749,7 +1749,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxConjuge._Table = "Contato";
             this.txtxConjuge._TamanhoComponente = 125;
             this.txtxConjuge._TamanhoMaiorLabel = 0;
-            this.txtxConjuge._Visible = false;
+            this.txtxConjuge._Visible = true;
             this.txtxConjuge.BackColor = System.Drawing.Color.Transparent;
             this.txtxConjuge.Base = null;
             this.txtxConjuge.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1775,7 +1775,7 @@ namespace HLP.UI.Entries.Geral
             this.cbxstEstadoCivil._Table = "Contato";
             this.cbxstEstadoCivil._TamanhoComponente = 115;
             this.cbxstEstadoCivil._TamanhoMaiorLabel = 0;
-            this.cbxstEstadoCivil._Visible = false;
+            this.cbxstEstadoCivil._Visible = true;
             this.cbxstEstadoCivil.BackColor = System.Drawing.Color.Transparent;
             this.cbxstEstadoCivil.Base = null;
             this.cbxstEstadoCivil.Color = System.Drawing.Color.White;
@@ -1815,7 +1815,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxHobbies._Table = "Contato";
             this.txtxHobbies._TamanhoComponente = 133;
             this.txtxHobbies._TamanhoMaiorLabel = 0;
-            this.txtxHobbies._Visible = false;
+            this.txtxHobbies._Visible = true;
             this.txtxHobbies.BackColor = System.Drawing.Color.Transparent;
             this.txtxHobbies.Base = null;
             this.txtxHobbies.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1851,7 +1851,7 @@ namespace HLP.UI.Entries.Geral
             this.dtdAniversarioTempoServico._Table = "Contato";
             this.dtdAniversarioTempoServico._TamanhoComponente = 113;
             this.dtdAniversarioTempoServico._TamanhoMaiorLabel = 0;
-            this.dtdAniversarioTempoServico._Visible = false;
+            this.dtdAniversarioTempoServico._Visible = true;
             this.dtdAniversarioTempoServico.BackColor = System.Drawing.Color.Transparent;
             this.dtdAniversarioTempoServico.Base = null;
             this.dtdAniversarioTempoServico.Color = System.Drawing.Color.Empty;

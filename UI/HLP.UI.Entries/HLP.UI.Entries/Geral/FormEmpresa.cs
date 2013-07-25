@@ -333,6 +333,11 @@ namespace HLP.UI.Entries.Geral
             objEmpresaModel.xLinkLogoEmpresa = txtxLinkLogoEmpresa.Text;
             objEmpresaModel.xLinkPastas = txtxLinkPastas.Text;
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 

@@ -143,7 +143,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtCodigo._Table = "Agencia";
             this.txtCodigo._TamanhoComponente = 84;
             this.txtCodigo._TamanhoMaiorLabel = 120;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -168,7 +168,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtcAgencia._Table = "Agencia";
             this.txtcAgencia._TamanhoComponente = 148;
             this.txtcAgencia._TamanhoMaiorLabel = 120;
-            this.txtcAgencia._Visible = false;
+            this.txtcAgencia._Visible = true;
             this.txtcAgencia.BackColor = System.Drawing.Color.Transparent;
             this.txtcAgencia.Base = null;
             this.txtcAgencia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -193,7 +193,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxAgencia._Table = "Agencia";
             this.txtxAgencia._TamanhoComponente = 305;
             this.txtxAgencia._TamanhoMaiorLabel = 120;
-            this.txtxAgencia._Visible = false;
+            this.txtxAgencia._Visible = true;
             this.txtxAgencia.BackColor = System.Drawing.Color.Transparent;
             this.txtxAgencia.Base = null;
             this.txtxAgencia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -222,7 +222,7 @@ namespace HLP.UI.Entries.Financeiro
             this.campoPesquisaidBanco._TamanhoComponente = 300;
             this.campoPesquisaidBanco._TamanhoMaiorLabel = 120;
             this.campoPesquisaidBanco._Vinculado = false;
-            this.campoPesquisaidBanco._Visible = false;
+            this.campoPesquisaidBanco._Visible = true;
             this.campoPesquisaidBanco.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.campoPesquisaidBanco.BackColor = System.Drawing.Color.Transparent;
             this.campoPesquisaidBanco.Base = null;
@@ -246,7 +246,7 @@ namespace HLP.UI.Entries.Financeiro
             this.mskxTelefone._TamanhoMaiorLabel = 120;
             this.mskxTelefone._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxTelefone._UF = null;
-            this.mskxTelefone._Visible = false;
+            this.mskxTelefone._Visible = true;
             this.mskxTelefone.BackColor = System.Drawing.Color.Transparent;
             this.mskxTelefone.Base = null;
             this.mskxTelefone.Color = System.Drawing.Color.White;
@@ -272,7 +272,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxFax._TamanhoMaiorLabel = 120;
             this.txtxFax._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.txtxFax._UF = null;
-            this.txtxFax._Visible = false;
+            this.txtxFax._Visible = true;
             this.txtxFax.BackColor = System.Drawing.Color.Transparent;
             this.txtxFax.Base = null;
             this.txtxFax.Color = System.Drawing.Color.White;

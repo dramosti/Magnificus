@@ -131,7 +131,7 @@
             this.txtCodigo._Table = "Descontos_Avista";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -157,7 +157,7 @@
             this.txtxDescontos._Table = "Descontos_Avista";
             this.txtxDescontos._TamanhoComponente = 132;
             this.txtxDescontos._TamanhoMaiorLabel = 150;
-            this.txtxDescontos._Visible = false;
+            this.txtxDescontos._Visible = true;
             this.txtxDescontos.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescontos.Base = null;
             this.txtxDescontos.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -183,7 +183,7 @@
             this.txtxDescricao._Table = "Descontos_Avista";
             this.txtxDescricao._TamanhoComponente = 272;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -209,7 +209,7 @@
             this.cbostLiquidoAtual._Table = "Descontos_Avista";
             this.cbostLiquidoAtual._TamanhoComponente = 132;
             this.cbostLiquidoAtual._TamanhoMaiorLabel = 150;
-            this.cbostLiquidoAtual._Visible = false;
+            this.cbostLiquidoAtual._Visible = true;
             this.cbostLiquidoAtual.BackColor = System.Drawing.Color.Transparent;
             this.cbostLiquidoAtual.Base = null;
             this.cbostLiquidoAtual.Color = System.Drawing.Color.White;
@@ -235,7 +235,7 @@
             this.nudnMeses._Table = "Descontos_Avista";
             this.nudnMeses._TamanhoComponente = 118;
             this.nudnMeses._TamanhoMaiorLabel = 150;
-            this.nudnMeses._Visible = false;
+            this.nudnMeses._Visible = true;
             this.nudnMeses.BackColor = System.Drawing.Color.Transparent;
             this.nudnMeses.Base = null;
             this.nudnMeses.Color = System.Drawing.Color.White;
@@ -274,7 +274,7 @@
             this.nudnDias._Table = "Descontos_Avista";
             this.nudnDias._TamanhoComponente = 118;
             this.nudnDias._TamanhoMaiorLabel = 150;
-            this.nudnDias._Visible = false;
+            this.nudnDias._Visible = true;
             this.nudnDias.BackColor = System.Drawing.Color.Transparent;
             this.nudnDias.Base = null;
             this.nudnDias.Color = System.Drawing.Color.White;
@@ -313,7 +313,7 @@
             this.nudpDesconto._Table = "Descontos_Avista";
             this.nudpDesconto._TamanhoComponente = 121;
             this.nudpDesconto._TamanhoMaiorLabel = 150;
-            this.nudpDesconto._Visible = false;
+            this.nudpDesconto._Visible = true;
             this.nudpDesconto.BackColor = System.Drawing.Color.Transparent;
             this.nudpDesconto.Base = null;
             this.nudpDesconto.Color = System.Drawing.Color.White;

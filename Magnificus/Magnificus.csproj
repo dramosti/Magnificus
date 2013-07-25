@@ -67,10 +67,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>59D47C860BCFCDB28E0D32D367E5EF99D8078E01</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>069618F61382813D2024BCB25B3C27B0E5E1856A</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Magnificus_9_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Magnificus_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -207,13 +207,10 @@
       <LastGenOutput>HLP_Lista_de_Banco.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Magnificus_TemporaryKey.pfx" />
     <None Include="Resources\1374535171_Warning.png" />
-    <None Include="Magnificus_6_TemporaryKey.pfx" />
-    <None Include="Magnificus_7_TemporaryKey.pfx" />
-    <None Include="Magnificus_9_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Log_ScriptsModel.datasource" />
     <None Include="Resources\download_2.png" />
-    <None Include="Magnificus_TemporaryKey.pfx" />
     <None Include="Resources\hlp_bg_2.jpg" />
     <None Include="Resources\hlp_bg.jpg" />
     <None Include="Resources\Plano_Fundo.png" />

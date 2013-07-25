@@ -188,7 +188,7 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo._Table = "Plano_pagamento";
             this.txtCodigo._TamanhoComponente = 97;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -214,7 +214,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxPlanoPagamento._Table = "Plano_pagamento";
             this.txtxPlanoPagamento._TamanhoComponente = 194;
             this.txtxPlanoPagamento._TamanhoMaiorLabel = 200;
-            this.txtxPlanoPagamento._Visible = false;
+            this.txtxPlanoPagamento._Visible = true;
             this.txtxPlanoPagamento.BackColor = System.Drawing.Color.Transparent;
             this.txtxPlanoPagamento.Base = null;
             this.txtxPlanoPagamento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -240,7 +240,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxDescricao._Table = "Plano_pagamento";
             this.txtxDescricao._TamanhoComponente = 194;
             this.txtxDescricao._TamanhoMaiorLabel = 200;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -266,7 +266,7 @@ namespace HLP.UI.Entries.Geral
             this.cbostAlocacao._Table = "Plano_pagamento";
             this.cbostAlocacao._TamanhoComponente = 194;
             this.cbostAlocacao._TamanhoMaiorLabel = 200;
-            this.cbostAlocacao._Visible = false;
+            this.cbostAlocacao._Visible = true;
             this.cbostAlocacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostAlocacao.Base = null;
             this.cbostAlocacao.Color = System.Drawing.Color.White;
@@ -296,7 +296,7 @@ namespace HLP.UI.Entries.Geral
             this.cbostFormaPagamento._Table = "Plano_pagamento";
             this.cbostFormaPagamento._TamanhoComponente = 194;
             this.cbostFormaPagamento._TamanhoMaiorLabel = 200;
-            this.cbostFormaPagamento._Visible = false;
+            this.cbostFormaPagamento._Visible = true;
             this.cbostFormaPagamento.BackColor = System.Drawing.Color.Transparent;
             this.cbostFormaPagamento.Base = null;
             this.cbostFormaPagamento.Color = System.Drawing.Color.White;
@@ -323,7 +323,7 @@ namespace HLP.UI.Entries.Geral
             this.nudnAlterar._Table = "Plano_pagamento";
             this.nudnAlterar._TamanhoComponente = 119;
             this.nudnAlterar._TamanhoMaiorLabel = 200;
-            this.nudnAlterar._Visible = false;
+            this.nudnAlterar._Visible = true;
             this.nudnAlterar.BackColor = System.Drawing.Color.Transparent;
             this.nudnAlterar.Base = null;
             this.nudnAlterar.Color = System.Drawing.Color.White;
@@ -363,7 +363,7 @@ namespace HLP.UI.Entries.Geral
             this.nudnNumerosPagamentos._Table = "Plano_pagamento";
             this.nudnNumerosPagamentos._TamanhoComponente = 119;
             this.nudnNumerosPagamentos._TamanhoMaiorLabel = 200;
-            this.nudnNumerosPagamentos._Visible = false;
+            this.nudnNumerosPagamentos._Visible = true;
             this.nudnNumerosPagamentos.BackColor = System.Drawing.Color.Transparent;
             this.nudnNumerosPagamentos.Base = null;
             this.nudnNumerosPagamentos.Color = System.Drawing.Color.White;
@@ -403,7 +403,7 @@ namespace HLP.UI.Entries.Geral
             this.nudnValorMoeda._Table = "Plano_pagamento";
             this.nudnValorMoeda._TamanhoComponente = 119;
             this.nudnValorMoeda._TamanhoMaiorLabel = 200;
-            this.nudnValorMoeda._Visible = false;
+            this.nudnValorMoeda._Visible = true;
             this.nudnValorMoeda.BackColor = System.Drawing.Color.Transparent;
             this.nudnValorMoeda.Base = null;
             this.nudnValorMoeda.Color = System.Drawing.Color.White;
@@ -442,7 +442,7 @@ namespace HLP.UI.Entries.Geral
             this.nudnValorMinimo._Table = "Plano_pagamento";
             this.nudnValorMinimo._TamanhoComponente = 119;
             this.nudnValorMinimo._TamanhoMaiorLabel = 200;
-            this.nudnValorMinimo._Visible = false;
+            this.nudnValorMinimo._Visible = true;
             this.nudnValorMinimo.BackColor = System.Drawing.Color.Transparent;
             this.nudnValorMinimo.Base = null;
             this.nudnValorMinimo.Color = System.Drawing.Color.White;
@@ -484,7 +484,7 @@ namespace HLP.UI.Entries.Geral
             this.cbostAlocacaoImpostos._Table = "Plano_pagamento";
             this.cbostAlocacaoImpostos._TamanhoComponente = 195;
             this.cbostAlocacaoImpostos._TamanhoMaiorLabel = 200;
-            this.cbostAlocacaoImpostos._Visible = false;
+            this.cbostAlocacaoImpostos._Visible = true;
             this.cbostAlocacaoImpostos.BackColor = System.Drawing.Color.Transparent;
             this.cbostAlocacaoImpostos.Base = null;
             this.cbostAlocacaoImpostos.Color = System.Drawing.Color.White;
@@ -512,7 +512,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxNota._Table = "Plano_pagamento";
             this.txtxNota._TamanhoComponente = 195;
             this.txtxNota._TamanhoMaiorLabel = 200;
-            this.txtxNota._Visible = false;
+            this.txtxNota._Visible = true;
             this.txtxNota.BackColor = System.Drawing.Color.Transparent;
             this.txtxNota.Base = null;
             this.txtxNota.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -727,7 +727,7 @@ namespace HLP.UI.Entries.Geral
             this.nudNumParcelas._Regex = null;
             this.nudNumParcelas._TamanhoComponente = 56;
             this.nudNumParcelas._TamanhoMaiorLabel = 0;
-            this.nudNumParcelas._Visible = false;
+            this.nudNumParcelas._Visible = true;
             this.nudNumParcelas.BackColor = System.Drawing.Color.Transparent;
             this.nudNumParcelas.Base = null;
             this.nudNumParcelas.Color = System.Drawing.Color.White;
@@ -763,7 +763,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_Button1._Regex = null;
             this.hlP_Button1._TamanhoComponente = 111;
             this.hlP_Button1._TamanhoMaiorLabel = 0;
-            this.hlP_Button1._Visible = false;
+            this.hlP_Button1._Visible = true;
             this.hlP_Button1.Base = null;
             this.hlP_Button1.Location = new System.Drawing.Point(0, 55);
             this.hlP_Button1.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);

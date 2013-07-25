@@ -168,7 +168,7 @@ namespace HLP.UI.Entries.Geral
             this.txtDiasSemProgramacao._Regex = null;
             this.txtDiasSemProgramacao._TamanhoComponente = 278;
             this.txtDiasSemProgramacao._TamanhoMaiorLabel = 0;
-            this.txtDiasSemProgramacao._Visible = false;
+            this.txtDiasSemProgramacao._Visible = true;
             this.txtDiasSemProgramacao.BackColor = System.Drawing.Color.Transparent;
             this.txtDiasSemProgramacao.Base = null;
             this.txtDiasSemProgramacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -209,7 +209,7 @@ namespace HLP.UI.Entries.Geral
             this.dtpDataInicial._Regex = null;
             this.dtpDataInicial._TamanhoComponente = 91;
             this.dtpDataInicial._TamanhoMaiorLabel = 126;
-            this.dtpDataInicial._Visible = false;
+            this.dtpDataInicial._Visible = true;
             this.dtpDataInicial.BackColor = System.Drawing.Color.Transparent;
             this.dtpDataInicial.Base = null;
             this.dtpDataInicial.Color = System.Drawing.Color.Empty;
@@ -230,7 +230,7 @@ namespace HLP.UI.Entries.Geral
             this.dtpDataFinal._Regex = null;
             this.dtpDataFinal._TamanhoComponente = 91;
             this.dtpDataFinal._TamanhoMaiorLabel = 126;
-            this.dtpDataFinal._Visible = false;
+            this.dtpDataFinal._Visible = true;
             this.dtpDataFinal.BackColor = System.Drawing.Color.Transparent;
             this.dtpDataFinal.Base = null;
             this.dtpDataFinal.Color = System.Drawing.Color.Empty;
@@ -253,7 +253,7 @@ namespace HLP.UI.Entries.Geral
             this.cboConsiderarSabado._situacao = true;
             this.cboConsiderarSabado._TamanhoComponente = 68;
             this.cboConsiderarSabado._TamanhoMaiorLabel = 126;
-            this.cboConsiderarSabado._Visible = false;
+            this.cboConsiderarSabado._Visible = true;
             this.cboConsiderarSabado.BackColor = System.Drawing.Color.Transparent;
             this.cboConsiderarSabado.Base = null;
             this.cboConsiderarSabado.Color = System.Drawing.Color.White;
@@ -278,7 +278,7 @@ namespace HLP.UI.Entries.Geral
             this.cboConsiderarDomingo._situacao = true;
             this.cboConsiderarDomingo._TamanhoComponente = 68;
             this.cboConsiderarDomingo._TamanhoMaiorLabel = 126;
-            this.cboConsiderarDomingo._Visible = false;
+            this.cboConsiderarDomingo._Visible = true;
             this.cboConsiderarDomingo.BackColor = System.Drawing.Color.Transparent;
             this.cboConsiderarDomingo.Base = null;
             this.cboConsiderarDomingo.Color = System.Drawing.Color.White;
@@ -301,7 +301,7 @@ namespace HLP.UI.Entries.Geral
             this.dtpSegSexInicial._Regex = null;
             this.dtpSegSexInicial._TamanhoComponente = 93;
             this.dtpSegSexInicial._TamanhoMaiorLabel = 126;
-            this.dtpSegSexInicial._Visible = false;
+            this.dtpSegSexInicial._Visible = true;
             this.dtpSegSexInicial.BackColor = System.Drawing.Color.Transparent;
             this.dtpSegSexInicial.Base = null;
             this.dtpSegSexInicial.Color = System.Drawing.Color.Empty;
@@ -322,7 +322,7 @@ namespace HLP.UI.Entries.Geral
             this.dtpSegSexFinal._Regex = null;
             this.dtpSegSexFinal._TamanhoComponente = 92;
             this.dtpSegSexFinal._TamanhoMaiorLabel = 126;
-            this.dtpSegSexFinal._Visible = false;
+            this.dtpSegSexFinal._Visible = true;
             this.dtpSegSexFinal.BackColor = System.Drawing.Color.Transparent;
             this.dtpSegSexFinal.Base = null;
             this.dtpSegSexFinal.Color = System.Drawing.Color.Empty;
@@ -343,7 +343,7 @@ namespace HLP.UI.Entries.Geral
             this.dtpSabadoInicial._Regex = null;
             this.dtpSabadoInicial._TamanhoComponente = 90;
             this.dtpSabadoInicial._TamanhoMaiorLabel = 126;
-            this.dtpSabadoInicial._Visible = false;
+            this.dtpSabadoInicial._Visible = true;
             this.dtpSabadoInicial.BackColor = System.Drawing.Color.Transparent;
             this.dtpSabadoInicial.Base = null;
             this.dtpSabadoInicial.Color = System.Drawing.Color.Empty;
@@ -364,7 +364,7 @@ namespace HLP.UI.Entries.Geral
             this.dtpSabadoFinal._Regex = null;
             this.dtpSabadoFinal._TamanhoComponente = 90;
             this.dtpSabadoFinal._TamanhoMaiorLabel = 126;
-            this.dtpSabadoFinal._Visible = false;
+            this.dtpSabadoFinal._Visible = true;
             this.dtpSabadoFinal.BackColor = System.Drawing.Color.Transparent;
             this.dtpSabadoFinal.Base = null;
             this.dtpSabadoFinal.Color = System.Drawing.Color.Empty;
@@ -385,7 +385,7 @@ namespace HLP.UI.Entries.Geral
             this.dtpDomingoInicial._Regex = null;
             this.dtpDomingoInicial._TamanhoComponente = 91;
             this.dtpDomingoInicial._TamanhoMaiorLabel = 126;
-            this.dtpDomingoInicial._Visible = false;
+            this.dtpDomingoInicial._Visible = true;
             this.dtpDomingoInicial.BackColor = System.Drawing.Color.Transparent;
             this.dtpDomingoInicial.Base = null;
             this.dtpDomingoInicial.Color = System.Drawing.Color.Empty;
@@ -406,7 +406,7 @@ namespace HLP.UI.Entries.Geral
             this.dtpDomingoFinal._Regex = null;
             this.dtpDomingoFinal._TamanhoComponente = 91;
             this.dtpDomingoFinal._TamanhoMaiorLabel = 126;
-            this.dtpDomingoFinal._Visible = false;
+            this.dtpDomingoFinal._Visible = true;
             this.dtpDomingoFinal.BackColor = System.Drawing.Color.Transparent;
             this.dtpDomingoFinal.Base = null;
             this.dtpDomingoFinal.Color = System.Drawing.Color.Empty;

@@ -105,7 +105,7 @@
             this.txtCodigo._Table = "Condicoes_entrega";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -131,7 +131,7 @@
             this.txtxCondicaoEntrega._Table = "Condicoes_entrega";
             this.txtxCondicaoEntrega._TamanhoComponente = 107;
             this.txtxCondicaoEntrega._TamanhoMaiorLabel = 200;
-            this.txtxCondicaoEntrega._Visible = false;
+            this.txtxCondicaoEntrega._Visible = true;
             this.txtxCondicaoEntrega.BackColor = System.Drawing.Color.Transparent;
             this.txtxCondicaoEntrega.Base = null;
             this.txtxCondicaoEntrega.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -157,7 +157,7 @@
             this.txtxDescricao._Table = "Condicoes_entrega";
             this.txtxDescricao._TamanhoComponente = 215;
             this.txtxDescricao._TamanhoMaiorLabel = 200;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -183,7 +183,7 @@
             this.cbostEnderecoImpostoSobreVendas._Table = "Condicoes_entrega";
             this.cbostEnderecoImpostoSobreVendas._TamanhoComponente = 193;
             this.cbostEnderecoImpostoSobreVendas._TamanhoMaiorLabel = 200;
-            this.cbostEnderecoImpostoSobreVendas._Visible = false;
+            this.cbostEnderecoImpostoSobreVendas._Visible = true;
             this.cbostEnderecoImpostoSobreVendas.BackColor = System.Drawing.Color.Transparent;
             this.cbostEnderecoImpostoSobreVendas.Base = null;
             this.cbostEnderecoImpostoSobreVendas.Color = System.Drawing.Color.White;
@@ -212,7 +212,7 @@
             this.txtnIntrastat._Table = "Condicoes_entrega";
             this.txtnIntrastat._TamanhoComponente = 86;
             this.txtnIntrastat._TamanhoMaiorLabel = 200;
-            this.txtnIntrastat._Visible = false;
+            this.txtnIntrastat._Visible = true;
             this.txtnIntrastat.BackColor = System.Drawing.Color.Transparent;
             this.txtnIntrastat.Base = null;
             this.txtnIntrastat.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -239,7 +239,7 @@
             this.cbostAplicarMinGratis._Table = "Condicoes_entrega";
             this.cbostAplicarMinGratis._TamanhoComponente = 80;
             this.cbostAplicarMinGratis._TamanhoMaiorLabel = 200;
-            this.cbostAplicarMinGratis._Visible = false;
+            this.cbostAplicarMinGratis._Visible = true;
             this.cbostAplicarMinGratis.BackColor = System.Drawing.Color.Transparent;
             this.cbostAplicarMinGratis.Base = null;
             this.cbostAplicarMinGratis.Color = System.Drawing.Color.White;
@@ -268,7 +268,7 @@
             this.nudvMinimoGratis._Table = "Condicoes_entrega";
             this.nudvMinimoGratis._TamanhoComponente = 125;
             this.nudvMinimoGratis._TamanhoMaiorLabel = 200;
-            this.nudvMinimoGratis._Visible = false;
+            this.nudvMinimoGratis._Visible = true;
             this.nudvMinimoGratis.BackColor = System.Drawing.Color.Transparent;
             this.nudvMinimoGratis.Base = null;
             this.nudvMinimoGratis.Color = System.Drawing.Color.White;

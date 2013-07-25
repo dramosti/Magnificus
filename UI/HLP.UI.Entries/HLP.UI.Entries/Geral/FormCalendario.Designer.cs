@@ -175,7 +175,7 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo._Table = "Calendario";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -201,7 +201,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxNome._Table = "Calendario";
             this.txtxNome._TamanhoComponente = 197;
             this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -227,7 +227,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxDescricao._Table = "Calendario";
             this.txtxDescricao._TamanhoComponente = 271;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -257,7 +257,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_Pesquisa1idCalendarioBase._TamanhoComponente = 300;
             this.hlP_Pesquisa1idCalendarioBase._TamanhoMaiorLabel = 150;
             this.hlP_Pesquisa1idCalendarioBase._Vinculado = false;
-            this.hlP_Pesquisa1idCalendarioBase._Visible = false;
+            this.hlP_Pesquisa1idCalendarioBase._Visible = true;
             this.hlP_Pesquisa1idCalendarioBase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_Pesquisa1idCalendarioBase.BackColor = System.Drawing.Color.Transparent;
             this.hlP_Pesquisa1idCalendarioBase.Base = null;
@@ -277,7 +277,7 @@ namespace HLP.UI.Entries.Geral
             this.btnCalendarioBase._Regex = null;
             this.btnCalendarioBase._TamanhoComponente = 76;
             this.btnCalendarioBase._TamanhoMaiorLabel = 150;
-            this.btnCalendarioBase._Visible = false;
+            this.btnCalendarioBase._Visible = true;
             this.btnCalendarioBase.Base = null;
             this.btnCalendarioBase.Location = new System.Drawing.Point(153, 142);
             this.btnCalendarioBase.Margin = new System.Windows.Forms.Padding(153, 3, 15, 3);
@@ -423,7 +423,7 @@ namespace HLP.UI.Entries.Geral
             this.btnDetalhamento._Regex = null;
             this.btnDetalhamento._TamanhoComponente = 164;
             this.btnDetalhamento._TamanhoMaiorLabel = 5;
-            this.btnDetalhamento._Visible = false;
+            this.btnDetalhamento._Visible = true;
             this.btnDetalhamento.Base = null;
             this.btnDetalhamento.Location = new System.Drawing.Point(4, 1);
             this.btnDetalhamento.Margin = new System.Windows.Forms.Padding(8, 3, 15, 3);

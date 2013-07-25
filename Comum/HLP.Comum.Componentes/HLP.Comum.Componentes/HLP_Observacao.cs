@@ -56,5 +56,17 @@ namespace HLP.Comum.Components
                 _Enter(sender, e);
             }
         }
+
+        private bool _ReadOnly = false;
+        [Category("HLP")]
+        public bool ReadOnly
+        {
+            get { return _ReadOnly; }
+            set
+            {
+                _ReadOnly = value;
+                btnVisualizar.Enabled = !value;
+            }
+        }
     }
 }

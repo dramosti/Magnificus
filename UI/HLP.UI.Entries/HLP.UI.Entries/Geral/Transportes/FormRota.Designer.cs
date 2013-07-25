@@ -110,7 +110,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtCodigo._Table = "Rota";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 140;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -136,7 +136,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.txtxRota._Table = "Rota";
             this.txtxRota._TamanhoComponente = 284;
             this.txtxRota._TamanhoMaiorLabel = 140;
-            this.txtxRota._Visible = false;
+            this.txtxRota._Visible = true;
             this.txtxRota.BackColor = System.Drawing.Color.Transparent;
             this.txtxRota.Base = null;
             this.txtxRota.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -166,7 +166,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.campoPesquisaListaPreco._TamanhoComponente = 300;
             this.campoPesquisaListaPreco._TamanhoMaiorLabel = 140;
             this.campoPesquisaListaPreco._Vinculado = false;
-            this.campoPesquisaListaPreco._Visible = false;
+            this.campoPesquisaListaPreco._Visible = true;
             this.campoPesquisaListaPreco.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.campoPesquisaListaPreco.BackColor = System.Drawing.Color.Transparent;
             this.campoPesquisaListaPreco.Base = null;
@@ -191,7 +191,7 @@ namespace HLP.UI.Entries.Geral.Transportes
             this.cboAtivo._Table = "Rota";
             this.cboAtivo._TamanhoComponente = 80;
             this.cboAtivo._TamanhoMaiorLabel = 140;
-            this.cboAtivo._Visible = false;
+            this.cboAtivo._Visible = true;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.Color = System.Drawing.Color.White;

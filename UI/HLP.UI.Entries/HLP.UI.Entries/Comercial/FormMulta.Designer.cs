@@ -100,7 +100,7 @@
             this.txtCodigo._Table = "Multas";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -126,7 +126,7 @@
             this.txtxNome._Table = "Multas";
             this.txtxNome._TamanhoComponente = 217;
             this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = false;
+            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -152,7 +152,7 @@
             this.txtxDescricao._Table = "Multas";
             this.txtxDescricao._TamanhoComponente = 245;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -176,7 +176,7 @@
             this.nudpPercentual._Table = "Multas";
             this.nudpPercentual._TamanhoComponente = 118;
             this.nudpPercentual._TamanhoMaiorLabel = 150;
-            this.nudpPercentual._Visible = false;
+            this.nudpPercentual._Visible = true;
             this.nudpPercentual.BackColor = System.Drawing.Color.Transparent;
             this.nudpPercentual.Base = null;
             this.nudpPercentual.Color = System.Drawing.Color.White;
@@ -216,7 +216,7 @@
             this.nudnDias._Table = "Multas";
             this.nudnDias._TamanhoComponente = 117;
             this.nudnDias._TamanhoMaiorLabel = 150;
-            this.nudnDias._Visible = false;
+            this.nudnDias._Visible = true;
             this.nudnDias.BackColor = System.Drawing.Color.Transparent;
             this.nudnDias.Base = null;
             this.nudnDias.Color = System.Drawing.Color.White;

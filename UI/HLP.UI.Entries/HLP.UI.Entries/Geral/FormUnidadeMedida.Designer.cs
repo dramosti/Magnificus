@@ -150,7 +150,7 @@
             this.txtCodigo._Table = "Unidade_medida";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -176,7 +176,7 @@
             this.txtxSiglaPadrao._Table = "Unidade_medida";
             this.txtxSiglaPadrao._TamanhoComponente = 223;
             this.txtxSiglaPadrao._TamanhoMaiorLabel = 150;
-            this.txtxSiglaPadrao._Visible = false;
+            this.txtxSiglaPadrao._Visible = true;
             this.txtxSiglaPadrao.BackColor = System.Drawing.Color.Transparent;
             this.txtxSiglaPadrao.Base = null;
             this.txtxSiglaPadrao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -202,7 +202,7 @@
             this.txtxUnidadeMedida._Table = "Unidade_medida";
             this.txtxUnidadeMedida._TamanhoComponente = 223;
             this.txtxUnidadeMedida._TamanhoMaiorLabel = 150;
-            this.txtxUnidadeMedida._Visible = false;
+            this.txtxUnidadeMedida._Visible = true;
             this.txtxUnidadeMedida.BackColor = System.Drawing.Color.Transparent;
             this.txtxUnidadeMedida.Base = null;
             this.txtxUnidadeMedida.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -226,7 +226,7 @@
             this.nudnCasasDecimais._Table = "Unidade_medida";
             this.nudnCasasDecimais._TamanhoComponente = 121;
             this.nudnCasasDecimais._TamanhoMaiorLabel = 150;
-            this.nudnCasasDecimais._Visible = false;
+            this.nudnCasasDecimais._Visible = true;
             this.nudnCasasDecimais.BackColor = System.Drawing.Color.Transparent;
             this.nudnCasasDecimais.Base = null;
             this.nudnCasasDecimais.Color = System.Drawing.Color.White;

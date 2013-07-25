@@ -97,7 +97,7 @@
             this.txtCodigo._Table = "Ramo_atividade";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -121,7 +121,7 @@
             this.nudxRamo._Table = "Ramo_atividade";
             this.nudxRamo._TamanhoComponente = 115;
             this.nudxRamo._TamanhoMaiorLabel = 150;
-            this.nudxRamo._Visible = false;
+            this.nudxRamo._Visible = true;
             this.nudxRamo.BackColor = System.Drawing.Color.Transparent;
             this.nudxRamo.Base = null;
             this.nudxRamo.Color = System.Drawing.Color.White;
@@ -163,7 +163,7 @@
             this.txtxDescricao._Table = "Ramo_atividade";
             this.txtxDescricao._TamanhoComponente = 222;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -189,7 +189,7 @@
             this.txtxCnae._Table = "Ramo_atividade";
             this.txtxCnae._TamanhoComponente = 88;
             this.txtxCnae._TamanhoMaiorLabel = 150;
-            this.txtxCnae._Visible = false;
+            this.txtxCnae._Visible = true;
             this.txtxCnae.BackColor = System.Drawing.Color.Transparent;
             this.txtxCnae.Base = null;
             this.txtxCnae.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

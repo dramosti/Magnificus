@@ -102,7 +102,7 @@
             this.txtCodigo._Table = "Modos_entrega";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -128,7 +128,7 @@
             this.txtxModosEntrega._Table = "Modos_entrega";
             this.txtxModosEntrega._TamanhoComponente = 251;
             this.txtxModosEntrega._TamanhoMaiorLabel = 150;
-            this.txtxModosEntrega._Visible = false;
+            this.txtxModosEntrega._Visible = true;
             this.txtxModosEntrega.BackColor = System.Drawing.Color.Transparent;
             this.txtxModosEntrega.Base = null;
             this.txtxModosEntrega.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -154,7 +154,7 @@
             this.txtxDescricao._Table = "Modos_entrega";
             this.txtxDescricao._TamanhoComponente = 251;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -180,7 +180,7 @@
             this.cbostServico._Table = "Modos_entrega";
             this.cbostServico._TamanhoComponente = 118;
             this.cbostServico._TamanhoMaiorLabel = 150;
-            this.cbostServico._Visible = false;
+            this.cbostServico._Visible = true;
             this.cbostServico.BackColor = System.Drawing.Color.Transparent;
             this.cbostServico.Base = null;
             this.cbostServico.Color = System.Drawing.Color.White;
@@ -214,7 +214,7 @@
             this.hlP_PesquisaidTransportador._TamanhoComponente = 300;
             this.hlP_PesquisaidTransportador._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidTransportador._Vinculado = false;
-            this.hlP_PesquisaidTransportador._Visible = false;
+            this.hlP_PesquisaidTransportador._Visible = true;
             this.hlP_PesquisaidTransportador.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTransportador.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTransportador.Base = null;

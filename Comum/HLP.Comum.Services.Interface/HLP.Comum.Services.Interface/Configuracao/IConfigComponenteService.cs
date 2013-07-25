@@ -17,5 +17,6 @@ namespace HLP.Comum.Services.Interface.Configuracao
         void GetInfoCompByTabePage(ConfigTabPageModel tab, List<Control> lControl);
         void SetConfigToComp(List<ConfigComponenteModel> lCompModel, List<Control> lControl);
         void SetTamanhoComponentes(TabPage tab);
+        void Save(ConfigComponenteModel componente);
     }
 }

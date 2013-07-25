@@ -148,7 +148,7 @@
             this.txtCodigo._Table = "Tipo_servico";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -172,7 +172,7 @@
             this.nudcTipoServico._Table = "Tipo_servico";
             this.nudcTipoServico._TamanhoComponente = 121;
             this.nudcTipoServico._TamanhoMaiorLabel = 150;
-            this.nudcTipoServico._Visible = false;
+            this.nudcTipoServico._Visible = true;
             this.nudcTipoServico.BackColor = System.Drawing.Color.Transparent;
             this.nudcTipoServico.Base = null;
             this.nudcTipoServico.Color = System.Drawing.Color.White;
@@ -213,7 +213,7 @@
             this.txtxTipoServico._Table = "Tipo_servico";
             this.txtxTipoServico._TamanhoComponente = 278;
             this.txtxTipoServico._TamanhoMaiorLabel = 150;
-            this.txtxTipoServico._Visible = false;
+            this.txtxTipoServico._Visible = true;
             this.txtxTipoServico.BackColor = System.Drawing.Color.Transparent;
             this.txtxTipoServico.Base = null;
             this.txtxTipoServico.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

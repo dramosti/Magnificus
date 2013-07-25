@@ -97,7 +97,7 @@
             this.txtCodigo._Table = "Canal_venda";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -123,7 +123,7 @@
             this.txtcCanalVenda._Table = "Canal_venda";
             this.txtcCanalVenda._TamanhoComponente = 107;
             this.txtcCanalVenda._TamanhoMaiorLabel = 150;
-            this.txtcCanalVenda._Visible = false;
+            this.txtcCanalVenda._Visible = true;
             this.txtcCanalVenda.BackColor = System.Drawing.Color.Transparent;
             this.txtcCanalVenda.Base = null;
             this.txtcCanalVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -149,7 +149,7 @@
             this.txtxCanalVenda._Table = "Canal_venda";
             this.txtxCanalVenda._TamanhoComponente = 278;
             this.txtxCanalVenda._TamanhoMaiorLabel = 150;
-            this.txtxCanalVenda._Visible = false;
+            this.txtxCanalVenda._Visible = true;
             this.txtxCanalVenda.BackColor = System.Drawing.Color.Transparent;
             this.txtxCanalVenda.Base = null;
             this.txtxCanalVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

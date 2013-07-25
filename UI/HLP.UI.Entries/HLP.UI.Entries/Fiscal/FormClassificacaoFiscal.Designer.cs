@@ -123,7 +123,7 @@
             this.txtCodigo._Table = "Classificacao_fiscal";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 225;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -148,7 +148,7 @@
             this.txtxCassificacaoFiscal._Table = "Classificacao_fiscal";
             this.txtxCassificacaoFiscal._TamanhoComponente = 209;
             this.txtxCassificacaoFiscal._TamanhoMaiorLabel = 225;
-            this.txtxCassificacaoFiscal._Visible = false;
+            this.txtxCassificacaoFiscal._Visible = true;
             this.txtxCassificacaoFiscal.BackColor = System.Drawing.Color.Transparent;
             this.txtxCassificacaoFiscal.Base = null;
             this.txtxCassificacaoFiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -173,7 +173,7 @@
             this.txtcNCM._Table = "Classificacao_fiscal";
             this.txtcNCM._TamanhoComponente = 209;
             this.txtcNCM._TamanhoMaiorLabel = 225;
-            this.txtcNCM._Visible = false;
+            this.txtcNCM._Visible = true;
             this.txtcNCM.BackColor = System.Drawing.Color.Transparent;
             this.txtcNCM.Base = null;
             this.txtcNCM.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -198,7 +198,7 @@
             this.txtcClassifcacaoFiscal._Table = "Classificacao_fiscal";
             this.txtcClassifcacaoFiscal._TamanhoComponente = 87;
             this.txtcClassifcacaoFiscal._TamanhoMaiorLabel = 225;
-            this.txtcClassifcacaoFiscal._Visible = false;
+            this.txtcClassifcacaoFiscal._Visible = true;
             this.txtcClassifcacaoFiscal.BackColor = System.Drawing.Color.Transparent;
             this.txtcClassifcacaoFiscal.Base = null;
             this.txtcClassifcacaoFiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -223,7 +223,7 @@
             this.txtxFundamentoLegal._Table = "Classificacao_fiscal";
             this.txtxFundamentoLegal._TamanhoComponente = 214;
             this.txtxFundamentoLegal._TamanhoMaiorLabel = 225;
-            this.txtxFundamentoLegal._Visible = false;
+            this.txtxFundamentoLegal._Visible = true;
             this.txtxFundamentoLegal.BackColor = System.Drawing.Color.Transparent;
             this.txtxFundamentoLegal.Base = null;
             this.txtxFundamentoLegal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -246,7 +246,7 @@
             this.nudpIPI._Table = "Classificacao_fiscal";
             this.nudpIPI._TamanhoComponente = 124;
             this.nudpIPI._TamanhoMaiorLabel = 225;
-            this.nudpIPI._Visible = false;
+            this.nudpIPI._Visible = true;
             this.nudpIPI.BackColor = System.Drawing.Color.Transparent;
             this.nudpIPI.Base = null;
             this.nudpIPI.Color = System.Drawing.Color.White;
@@ -284,7 +284,7 @@
             this.nudpPis._Table = "Classificacao_fiscal";
             this.nudpPis._TamanhoComponente = 123;
             this.nudpPis._TamanhoMaiorLabel = 225;
-            this.nudpPis._Visible = false;
+            this.nudpPis._Visible = true;
             this.nudpPis.BackColor = System.Drawing.Color.Transparent;
             this.nudpPis.Base = null;
             this.nudpPis.Color = System.Drawing.Color.White;
@@ -322,7 +322,7 @@
             this.nudpII._Table = "Classificacao_fiscal";
             this.nudpII._TamanhoComponente = 123;
             this.nudpII._TamanhoMaiorLabel = 225;
-            this.nudpII._Visible = false;
+            this.nudpII._Visible = true;
             this.nudpII.BackColor = System.Drawing.Color.Transparent;
             this.nudpII.Base = null;
             this.nudpII.Color = System.Drawing.Color.White;
@@ -360,7 +360,7 @@
             this.nudpCofins._Table = "Classificacao_fiscal";
             this.nudpCofins._TamanhoComponente = 127;
             this.nudpCofins._TamanhoMaiorLabel = 225;
-            this.nudpCofins._Visible = false;
+            this.nudpCofins._Visible = true;
             this.nudpCofins.BackColor = System.Drawing.Color.Transparent;
             this.nudpCofins.Base = null;
             this.nudpCofins.Color = System.Drawing.Color.White;
@@ -400,7 +400,7 @@
             this.cbostCalculaPisCofins._Table = "Classificacao_fiscal";
             this.cbostCalculaPisCofins._TamanhoComponente = 197;
             this.cbostCalculaPisCofins._TamanhoMaiorLabel = 225;
-            this.cbostCalculaPisCofins._Visible = false;
+            this.cbostCalculaPisCofins._Visible = true;
             this.cbostCalculaPisCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalculaPisCofins.Base = null;
             this.cbostCalculaPisCofins.Color = System.Drawing.Color.White;
@@ -427,7 +427,7 @@
             this.cbostRegimeTributacaoPisCofins._Table = "Classificacao_fiscal";
             this.cbostRegimeTributacaoPisCofins._TamanhoComponente = 145;
             this.cbostRegimeTributacaoPisCofins._TamanhoMaiorLabel = 225;
-            this.cbostRegimeTributacaoPisCofins._Visible = false;
+            this.cbostRegimeTributacaoPisCofins._Visible = true;
             this.cbostRegimeTributacaoPisCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostRegimeTributacaoPisCofins.Base = null;
             this.cbostRegimeTributacaoPisCofins.Color = System.Drawing.Color.White;
@@ -452,7 +452,7 @@
             this.nudvCoeficienteSubstituicaoPis._Table = "Classificacao_fiscal";
             this.nudvCoeficienteSubstituicaoPis._TamanhoComponente = 139;
             this.nudvCoeficienteSubstituicaoPis._TamanhoMaiorLabel = 225;
-            this.nudvCoeficienteSubstituicaoPis._Visible = false;
+            this.nudvCoeficienteSubstituicaoPis._Visible = true;
             this.nudvCoeficienteSubstituicaoPis.BackColor = System.Drawing.Color.Transparent;
             this.nudvCoeficienteSubstituicaoPis.Base = null;
             this.nudvCoeficienteSubstituicaoPis.Color = System.Drawing.Color.White;
@@ -490,7 +490,7 @@
             this.nudvCoeficienteSubstituicaoCofins._Table = "Classificacao_fiscal";
             this.nudvCoeficienteSubstituicaoCofins._TamanhoComponente = 143;
             this.nudvCoeficienteSubstituicaoCofins._TamanhoMaiorLabel = 280;
-            this.nudvCoeficienteSubstituicaoCofins._Visible = false;
+            this.nudvCoeficienteSubstituicaoCofins._Visible = true;
             this.nudvCoeficienteSubstituicaoCofins.BackColor = System.Drawing.Color.Transparent;
             this.nudvCoeficienteSubstituicaoCofins.Base = null;
             this.nudvCoeficienteSubstituicaoCofins.Color = System.Drawing.Color.White;
@@ -530,7 +530,7 @@
             this.cbostCompoeBaseNormalPisCofins._Table = "Classificacao_fiscal";
             this.cbostCompoeBaseNormalPisCofins._TamanhoComponente = 197;
             this.cbostCompoeBaseNormalPisCofins._TamanhoMaiorLabel = 280;
-            this.cbostCompoeBaseNormalPisCofins._Visible = false;
+            this.cbostCompoeBaseNormalPisCofins._Visible = true;
             this.cbostCompoeBaseNormalPisCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseNormalPisCofins.Base = null;
             this.cbostCompoeBaseNormalPisCofins.Color = System.Drawing.Color.White;
@@ -557,7 +557,7 @@
             this.cbostCompoeBaseSubstPis._Table = "Classificacao_fiscal";
             this.cbostCompoeBaseSubstPis._TamanhoComponente = 438;
             this.cbostCompoeBaseSubstPis._TamanhoMaiorLabel = 280;
-            this.cbostCompoeBaseSubstPis._Visible = false;
+            this.cbostCompoeBaseSubstPis._Visible = true;
             this.cbostCompoeBaseSubstPis.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseSubstPis.Base = null;
             this.cbostCompoeBaseSubstPis.Color = System.Drawing.Color.White;
@@ -584,7 +584,7 @@
             this.cbostCompoeBaseSubstCofins._Table = "Classificacao_fiscal";
             this.cbostCompoeBaseSubstCofins._TamanhoComponente = 438;
             this.cbostCompoeBaseSubstCofins._TamanhoMaiorLabel = 280;
-            this.cbostCompoeBaseSubstCofins._Visible = false;
+            this.cbostCompoeBaseSubstCofins._Visible = true;
             this.cbostCompoeBaseSubstCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeBaseSubstCofins.Base = null;
             this.cbostCompoeBaseSubstCofins.Color = System.Drawing.Color.White;
@@ -611,7 +611,7 @@
             this.cboAtivo._Table = "Classificacao_fiscal";
             this.cboAtivo._TamanhoComponente = 80;
             this.cboAtivo._TamanhoMaiorLabel = 280;
-            this.cboAtivo._Visible = false;
+            this.cboAtivo._Visible = true;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.Color = System.Drawing.Color.White;

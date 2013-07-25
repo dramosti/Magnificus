@@ -97,7 +97,7 @@
             this.txtCodigo._Table = "Situacao_tributaria_pis";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 160;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -123,7 +123,7 @@
             this.txtcCSTPis._Table = "Situacao_tributaria_pis";
             this.txtcCSTPis._TamanhoComponente = 177;
             this.txtcCSTPis._TamanhoMaiorLabel = 160;
-            this.txtcCSTPis._Visible = false;
+            this.txtcCSTPis._Visible = true;
             this.txtcCSTPis.BackColor = System.Drawing.Color.Transparent;
             this.txtcCSTPis.Base = null;
             this.txtcCSTPis.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -149,7 +149,7 @@
             this.txtxCSTPis._Table = "Situacao_tributaria_pis";
             this.txtxCSTPis._TamanhoComponente = 330;
             this.txtxCSTPis._TamanhoMaiorLabel = 160;
-            this.txtxCSTPis._Visible = false;
+            this.txtxCSTPis._Visible = true;
             this.txtxCSTPis.BackColor = System.Drawing.Color.Transparent;
             this.txtxCSTPis.Base = null;
             this.txtxCSTPis.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -176,7 +176,7 @@
             this.cbostSimplesNacional._Table = "Situacao_tributaria_pis";
             this.cbostSimplesNacional._TamanhoComponente = 80;
             this.cbostSimplesNacional._TamanhoMaiorLabel = 160;
-            this.cbostSimplesNacional._Visible = false;
+            this.cbostSimplesNacional._Visible = true;
             this.cbostSimplesNacional.BackColor = System.Drawing.Color.Transparent;
             this.cbostSimplesNacional.Base = null;
             this.cbostSimplesNacional.Color = System.Drawing.Color.White;

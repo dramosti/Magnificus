@@ -36,6 +36,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit, Version=4.4.0.2, Culture=neutral, PublicKeyToken=2f7c2ef04fde3964, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\HLP.Comum.Infrastructure\KryptonLibrary\AC.ExtendedRenderer.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\HLP.Comum.Infrastructure\Zip\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -53,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuracao\FormPopupConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracao\FormPopupConfig.Designer.cs">
+      <DependentUpon>FormPopupConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormObservacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +163,9 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Configuracao\FormPopupConfig.resx">
+      <DependentUpon>FormPopupConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormObservacao.resx">
       <DependentUpon>FormObservacao.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -220,6 +233,10 @@
       <Project>{CD60F2D5-6E51-417A-B50E-C4EB01EB7565}</Project>
       <Name>HLP.Comum.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Comum.Mensagens\HLP.Comum.Mensagens\HLP.Comum.Messages.csproj">
+      <Project>{7d3a6ea4-758e-4348-a81a-00c5e5491877}</Project>
+      <Name>HLP.Comum.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\HLP.Comum.Models\HLP.Comum.Models\HLP.Comum.Models.csproj">
       <Project>{5BD4A7F2-4E89-43BA-8DE0-85E8C8A6C492}</Project>
       <Name>HLP.Comum.Models</Name>
@@ -230,6 +247,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\filtro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utilitarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expandido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrrow_frente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_config_boot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system_preferences.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1374622624_14065.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1374622719_70556.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

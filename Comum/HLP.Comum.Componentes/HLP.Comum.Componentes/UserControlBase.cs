@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Models;
 using System.Text.RegularExpressions;
+using HLP.Comum.Infrastructure;
+using HLP.Comum.Models.Static;
 
 namespace HLP.Comum.Components
 {
@@ -17,10 +19,14 @@ namespace HLP.Comum.Components
         const string CAMPO_OBRIGATORIO = "Campo Obrigatório";
         const string CAMPO_INVALIDO = "Valor do Campo Inválido";
 
+
+        [Browsable(false)]
+        public ConfigComponenteModel objConfigComponenteModel { get; set; }
         [Browsable(false)]
         public Label lblBase = new Label();
         [Browsable(false)]
         public Control controleBase = new Control();
+
 
         [Category("HLP")]
         [Description("Separador de Componentes")]
@@ -32,7 +38,7 @@ namespace HLP.Comum.Components
         }
         [Category("HLP")]
         [Description("Tamanho do Componente.")]
-        public int _TamanhoComponente   
+        public int _TamanhoComponente
         {
             get { return this.Width - lblBase.Width; }
             set
@@ -56,10 +62,31 @@ namespace HLP.Comum.Components
             }
         }
 
+        
         [Category("HLP")]
         [Description("Indica se o componente estará visível para o Usuário")]
         [DefaultValue(true)]
-        public virtual bool _Visible { get; set; }
+        public virtual bool _Visible
+        {
+            get { return this.Visible; }
+            set
+            {
+                
+                if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
+                {
+                    if (objConfigComponenteModel.Base.NULLABLE == "0")
+                    {
+                        this.Visible = true;
+                    }
+                    else
+                        this.Visible = value;
+                }
+                else
+                    this.Visible = value;
+
+                //MessageBox.Show(value.ToString());
+            }
+        }
 
         private string _table = "";
         [Category("HLP")]
@@ -154,7 +181,6 @@ namespace HLP.Comum.Components
         {
             try
             {
-                
                 HLP_MaskedTextBox maskIE = null;
                 Regex reg = null;
                 Control firstControl = null;
@@ -405,7 +431,6 @@ namespace HLP.Comum.Components
                         bValida = false;
                         maskIE.errorProvider1.SetError(maskIE, CAMPO_INVALIDO);
                     }
-
                 }
 
                 //if (iErros > 0)
@@ -424,5 +449,44 @@ namespace HLP.Comum.Components
                 throw ex;
             }
         }
+
+        public virtual void CarregaobjConfigComponenteModelByControle()
+        {
+            try
+            {
+                if (objConfigComponenteModel != null)
+                {
+                    objConfigComponenteModel.objConfigCompUsu.xLabelText = this._LabelText;
+                    objConfigComponenteModel.objConfigCompUsu.xHelp = this._help;
+                    objConfigComponenteModel.objConfigCompUsu.stVisible = this.Visible.ToByte();
+                    objConfigComponenteModel.objConfigCompUsu.iTamanhoComponente = this._TamanhoComponente;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public virtual void CarregaComponente()
+        {
+            try
+            {
+                if (objConfigComponenteModel != null)
+                {
+                    this._LabelText = objConfigComponenteModel.objConfigCompUsu.xLabelText;
+                    this._help = objConfigComponenteModel.objConfigCompUsu.xHelp;
+                    this._Visible = objConfigComponenteModel.objConfigCompUsu.stVisible.ToBoolean();
+                    this._TamanhoComponente = objConfigComponenteModel.objConfigCompUsu.iTamanhoComponente.ToInt32();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

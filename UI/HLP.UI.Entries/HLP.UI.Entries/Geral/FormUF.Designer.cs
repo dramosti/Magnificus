@@ -101,7 +101,7 @@
             this.txtCodigo._Table = "Fabricante";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -127,7 +127,7 @@
             this.txtxSiglaUf._Table = "UF";
             this.txtxSiglaUf._TamanhoComponente = 192;
             this.txtxSiglaUf._TamanhoMaiorLabel = 150;
-            this.txtxSiglaUf._Visible = false;
+            this.txtxSiglaUf._Visible = true;
             this.txtxSiglaUf.BackColor = System.Drawing.Color.Transparent;
             this.txtxSiglaUf.Base = null;
             this.txtxSiglaUf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -153,7 +153,7 @@
             this.txtxUf._Table = "UF";
             this.txtxUf._TamanhoComponente = 192;
             this.txtxUf._TamanhoMaiorLabel = 150;
-            this.txtxUf._Visible = false;
+            this.txtxUf._Visible = true;
             this.txtxUf.BackColor = System.Drawing.Color.Transparent;
             this.txtxUf.Base = null;
             this.txtxUf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -177,7 +177,7 @@
             this.nudcIbgeUf._Table = "UF";
             this.nudcIbgeUf._TamanhoComponente = 111;
             this.nudcIbgeUf._TamanhoMaiorLabel = 150;
-            this.nudcIbgeUf._Visible = false;
+            this.nudcIbgeUf._Visible = true;
             this.nudcIbgeUf.BackColor = System.Drawing.Color.Transparent;
             this.nudcIbgeUf.Base = null;
             this.nudcIbgeUf.Color = System.Drawing.Color.White;
@@ -223,7 +223,7 @@
             this.hlP_PesquisaRegiao._TamanhoComponente = 287;
             this.hlP_PesquisaRegiao._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaRegiao._Vinculado = false;
-            this.hlP_PesquisaRegiao._Visible = false;
+            this.hlP_PesquisaRegiao._Visible = true;
             this.hlP_PesquisaRegiao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaRegiao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaRegiao.Base = null;

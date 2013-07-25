@@ -217,7 +217,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtCodigo._Table = "Conta_bancaria";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -242,7 +242,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxNumeroConta._Table = "Conta_bancaria";
             this.txtxNumeroConta._TamanhoComponente = 210;
             this.txtxNumeroConta._TamanhoMaiorLabel = 150;
-            this.txtxNumeroConta._Visible = false;
+            this.txtxNumeroConta._Visible = true;
             this.txtxNumeroConta.BackColor = System.Drawing.Color.Transparent;
             this.txtxNumeroConta.Base = null;
             this.txtxNumeroConta.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -267,7 +267,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxDescricao._Table = "Conta_bancaria";
             this.txtxDescricao._TamanhoComponente = 312;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -292,7 +292,7 @@ namespace HLP.UI.Entries.Financeiro
             this.cbostConta._Table = "Conta_bancaria";
             this.cbostConta._TamanhoComponente = 149;
             this.cbostConta._TamanhoMaiorLabel = 150;
-            this.cbostConta._Visible = false;
+            this.cbostConta._Visible = true;
             this.cbostConta.BackColor = System.Drawing.Color.Transparent;
             this.cbostConta.Base = null;
             this.cbostConta.Color = System.Drawing.Color.White;
@@ -324,7 +324,7 @@ namespace HLP.UI.Entries.Financeiro
             this.campoPesquisaidAgencia._TamanhoComponente = 300;
             this.campoPesquisaidAgencia._TamanhoMaiorLabel = 150;
             this.campoPesquisaidAgencia._Vinculado = false;
-            this.campoPesquisaidAgencia._Visible = false;
+            this.campoPesquisaidAgencia._Visible = true;
             this.campoPesquisaidAgencia.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.campoPesquisaidAgencia.BackColor = System.Drawing.Color.Transparent;
             this.campoPesquisaidAgencia.Base = null;
@@ -348,7 +348,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxTitular._Table = "Conta_bancaria";
             this.txtxTitular._TamanhoComponente = 210;
             this.txtxTitular._TamanhoMaiorLabel = 150;
-            this.txtxTitular._Visible = false;
+            this.txtxTitular._Visible = true;
             this.txtxTitular.BackColor = System.Drawing.Color.Transparent;
             this.txtxTitular.Base = null;
             this.txtxTitular.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -372,7 +372,7 @@ namespace HLP.UI.Entries.Financeiro
             this.cbxstPessoa._situacao = true;
             this.cbxstPessoa._TamanhoComponente = 80;
             this.cbxstPessoa._TamanhoMaiorLabel = 150;
-            this.cbxstPessoa._Visible = false;
+            this.cbxstPessoa._Visible = true;
             this.cbxstPessoa.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPessoa.Base = null;
             this.cbxstPessoa.Color = System.Drawing.Color.White;
@@ -401,7 +401,7 @@ namespace HLP.UI.Entries.Financeiro
             this.mskxCNPJouCPFTitular._TamanhoMaiorLabel = 150;
             this.mskxCNPJouCPFTitular._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCNPJouCPFTitular._UF = null;
-            this.mskxCNPJouCPFTitular._Visible = false;
+            this.mskxCNPJouCPFTitular._Visible = true;
             this.mskxCNPJouCPFTitular.BackColor = System.Drawing.Color.Transparent;
             this.mskxCNPJouCPFTitular.Base = null;
             this.mskxCNPJouCPFTitular.Color = System.Drawing.Color.White;
@@ -427,7 +427,7 @@ namespace HLP.UI.Entries.Financeiro
             this.cbostBloquete._Table = "Conta_bancaria";
             this.cbostBloquete._TamanhoComponente = 80;
             this.cbostBloquete._TamanhoMaiorLabel = 150;
-            this.cbostBloquete._Visible = false;
+            this.cbostBloquete._Visible = true;
             this.cbostBloquete.BackColor = System.Drawing.Color.Transparent;
             this.cbostBloquete.Base = null;
             this.cbostBloquete.Color = System.Drawing.Color.White;
@@ -452,7 +452,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudnDigitosConvenio._Table = "Conta_bancaria";
             this.nudnDigitosConvenio._TamanhoComponente = 121;
             this.nudnDigitosConvenio._TamanhoMaiorLabel = 150;
-            this.nudnDigitosConvenio._Visible = false;
+            this.nudnDigitosConvenio._Visible = true;
             this.nudnDigitosConvenio.BackColor = System.Drawing.Color.Transparent;
             this.nudnDigitosConvenio.Base = null;
             this.nudnDigitosConvenio.Color = System.Drawing.Color.White;
@@ -572,7 +572,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxNumeroContaHomeBanking._Table = "Conta_bancaria";
             this.txtxNumeroContaHomeBanking._TamanhoComponente = 216;
             this.txtxNumeroContaHomeBanking._TamanhoMaiorLabel = 250;
-            this.txtxNumeroContaHomeBanking._Visible = false;
+            this.txtxNumeroContaHomeBanking._Visible = true;
             this.txtxNumeroContaHomeBanking.BackColor = System.Drawing.Color.Transparent;
             this.txtxNumeroContaHomeBanking.Base = null;
             this.txtxNumeroContaHomeBanking.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -597,7 +597,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxCodigoEmpresaHomeBanking._Table = "Conta_bancaria";
             this.txtxCodigoEmpresaHomeBanking._TamanhoComponente = 220;
             this.txtxCodigoEmpresaHomeBanking._TamanhoMaiorLabel = 250;
-            this.txtxCodigoEmpresaHomeBanking._Visible = false;
+            this.txtxCodigoEmpresaHomeBanking._Visible = true;
             this.txtxCodigoEmpresaHomeBanking.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoEmpresaHomeBanking.Base = null;
             this.txtxCodigoEmpresaHomeBanking.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -620,7 +620,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudnConvenio._Table = "Conta_bancaria";
             this.nudnConvenio._TamanhoComponente = 123;
             this.nudnConvenio._TamanhoMaiorLabel = 250;
-            this.nudnConvenio._Visible = false;
+            this.nudnConvenio._Visible = true;
             this.nudnConvenio.BackColor = System.Drawing.Color.Transparent;
             this.nudnConvenio.Base = null;
             this.nudnConvenio.Color = System.Drawing.Color.White;
@@ -658,7 +658,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudnDiasProtesto._Table = "Conta_bancaria";
             this.nudnDiasProtesto._TamanhoComponente = 122;
             this.nudnDiasProtesto._TamanhoMaiorLabel = 250;
-            this.nudnDiasProtesto._Visible = false;
+            this.nudnDiasProtesto._Visible = true;
             this.nudnDiasProtesto.BackColor = System.Drawing.Color.Transparent;
             this.nudnDiasProtesto.Base = null;
             this.nudnDiasProtesto.Color = System.Drawing.Color.White;
@@ -696,7 +696,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudnSequenciaNossoNumero._Table = "Conta_bancaria";
             this.nudnSequenciaNossoNumero._TamanhoComponente = 125;
             this.nudnSequenciaNossoNumero._TamanhoMaiorLabel = 250;
-            this.nudnSequenciaNossoNumero._Visible = false;
+            this.nudnSequenciaNossoNumero._Visible = true;
             this.nudnSequenciaNossoNumero.BackColor = System.Drawing.Color.Transparent;
             this.nudnSequenciaNossoNumero.Base = null;
             this.nudnSequenciaNossoNumero.Color = System.Drawing.Color.White;
@@ -736,7 +736,7 @@ namespace HLP.UI.Entries.Financeiro
             this.cbostZeraNossoNumero._Table = "Conta_bancaria";
             this.cbostZeraNossoNumero._TamanhoComponente = 80;
             this.cbostZeraNossoNumero._TamanhoMaiorLabel = 250;
-            this.cbostZeraNossoNumero._Visible = false;
+            this.cbostZeraNossoNumero._Visible = true;
             this.cbostZeraNossoNumero.BackColor = System.Drawing.Color.Transparent;
             this.cbostZeraNossoNumero.Base = null;
             this.cbostZeraNossoNumero.Color = System.Drawing.Color.White;
@@ -761,7 +761,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudnCarteira._Table = "Conta_bancaria";
             this.nudnCarteira._TamanhoComponente = 119;
             this.nudnCarteira._TamanhoMaiorLabel = 250;
-            this.nudnCarteira._Visible = false;
+            this.nudnCarteira._Visible = true;
             this.nudnCarteira.BackColor = System.Drawing.Color.Transparent;
             this.nudnCarteira.Base = null;
             this.nudnCarteira.Color = System.Drawing.Color.White;
@@ -799,7 +799,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudnVariacaoCarteira._Table = "Conta_bancaria";
             this.nudnVariacaoCarteira._TamanhoComponente = 123;
             this.nudnVariacaoCarteira._TamanhoMaiorLabel = 250;
-            this.nudnVariacaoCarteira._Visible = false;
+            this.nudnVariacaoCarteira._Visible = true;
             this.nudnVariacaoCarteira.BackColor = System.Drawing.Color.Transparent;
             this.nudnVariacaoCarteira.Base = null;
             this.nudnVariacaoCarteira.Color = System.Drawing.Color.White;
@@ -839,7 +839,7 @@ namespace HLP.UI.Entries.Financeiro
             this.txtxEspecie._Table = "Conta_bancaria";
             this.txtxEspecie._TamanhoComponente = 210;
             this.txtxEspecie._TamanhoMaiorLabel = 250;
-            this.txtxEspecie._Visible = false;
+            this.txtxEspecie._Visible = true;
             this.txtxEspecie.BackColor = System.Drawing.Color.Transparent;
             this.txtxEspecie.Base = null;
             this.txtxEspecie.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -862,7 +862,7 @@ namespace HLP.UI.Entries.Financeiro
             this.nudnRemessaHomeBanking._Table = "Conta_bancaria";
             this.nudnRemessaHomeBanking._TamanhoComponente = 125;
             this.nudnRemessaHomeBanking._TamanhoMaiorLabel = 250;
-            this.nudnRemessaHomeBanking._Visible = false;
+            this.nudnRemessaHomeBanking._Visible = true;
             this.nudnRemessaHomeBanking.BackColor = System.Drawing.Color.Transparent;
             this.nudnRemessaHomeBanking.Base = null;
             this.nudnRemessaHomeBanking.Color = System.Drawing.Color.White;
@@ -902,7 +902,7 @@ namespace HLP.UI.Entries.Financeiro
             this.cbostAceite._Table = "Conta_bancaria";
             this.cbostAceite._TamanhoComponente = 80;
             this.cbostAceite._TamanhoMaiorLabel = 250;
-            this.cbostAceite._Visible = false;
+            this.cbostAceite._Visible = true;
             this.cbostAceite.BackColor = System.Drawing.Color.Transparent;
             this.cbostAceite.Base = null;
             this.cbostAceite.Color = System.Drawing.Color.White;

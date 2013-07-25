@@ -56,7 +56,7 @@ namespace HLP.Comum.Models
 
         public int GetMaxLenghtNormal()
         {
-            return this.PRECISION.ToInt32();
+            return  (this.PRECISION.ToDecimal() - this.SCALE.ToDecimal()).ToInt32();
         }
     }
 }

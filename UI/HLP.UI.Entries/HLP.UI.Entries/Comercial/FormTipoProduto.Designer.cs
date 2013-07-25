@@ -173,7 +173,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtCodigo._Table = "Tipo_produto";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 350;
-            this.txtCodigo._Visible = false;
+            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -199,7 +199,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxTipo._Table = "Tipo_produto";
             this.txtxTipo._TamanhoComponente = 219;
             this.txtxTipo._TamanhoMaiorLabel = 350;
-            this.txtxTipo._Visible = false;
+            this.txtxTipo._Visible = true;
             this.txtxTipo.BackColor = System.Drawing.Color.Transparent;
             this.txtxTipo.Base = null;
             this.txtxTipo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -225,7 +225,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxDescricao._Table = "Tipo_produto";
             this.txtxDescricao._TamanhoComponente = 268;
             this.txtxDescricao._TamanhoMaiorLabel = 350;
-            this.txtxDescricao._Visible = false;
+            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -251,7 +251,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostTerceiros._Table = "Tipo_produto";
             this.cbostTerceiros._TamanhoComponente = 80;
             this.cbostTerceiros._TamanhoMaiorLabel = 350;
-            this.cbostTerceiros._Visible = false;
+            this.cbostTerceiros._Visible = true;
             this.cbostTerceiros.BackColor = System.Drawing.Color.Transparent;
             this.cbostTerceiros.Base = null;
             this.cbostTerceiros.Color = System.Drawing.Color.White;
@@ -279,7 +279,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostServicos._Table = "Tipo_produto";
             this.cbostServicos._TamanhoComponente = 80;
             this.cbostServicos._TamanhoMaiorLabel = 350;
-            this.cbostServicos._Visible = false;
+            this.cbostServicos._Visible = true;
             this.cbostServicos.BackColor = System.Drawing.Color.Transparent;
             this.cbostServicos.Base = null;
             this.cbostServicos.Color = System.Drawing.Color.White;
@@ -307,7 +307,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostPatrimonio._Table = "Tipo_produto";
             this.cbostPatrimonio._TamanhoComponente = 80;
             this.cbostPatrimonio._TamanhoMaiorLabel = 350;
-            this.cbostPatrimonio._Visible = false;
+            this.cbostPatrimonio._Visible = true;
             this.cbostPatrimonio.BackColor = System.Drawing.Color.Transparent;
             this.cbostPatrimonio.Base = null;
             this.cbostPatrimonio.Color = System.Drawing.Color.White;
@@ -336,7 +336,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostProducao._Table = "Tipo_produto";
             this.cbostProducao._TamanhoComponente = 80;
             this.cbostProducao._TamanhoMaiorLabel = 350;
-            this.cbostProducao._Visible = false;
+            this.cbostProducao._Visible = true;
             this.cbostProducao.BackColor = System.Drawing.Color.Transparent;
             this.cbostProducao.Base = null;
             this.cbostProducao.Color = System.Drawing.Color.White;
@@ -365,7 +365,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostEstoque._Table = "Tipo_produto";
             this.cbostEstoque._TamanhoComponente = 80;
             this.cbostEstoque._TamanhoMaiorLabel = 350;
-            this.cbostEstoque._Visible = false;
+            this.cbostEstoque._Visible = true;
             this.cbostEstoque.BackColor = System.Drawing.Color.Transparent;
             this.cbostEstoque.Base = null;
             this.cbostEstoque.Color = System.Drawing.Color.White;
@@ -394,7 +394,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostCompras._Table = "Tipo_produto";
             this.cbostCompras._TamanhoComponente = 80;
             this.cbostCompras._TamanhoMaiorLabel = 350;
-            this.cbostCompras._Visible = false;
+            this.cbostCompras._Visible = true;
             this.cbostCompras.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompras.Base = null;
             this.cbostCompras.Color = System.Drawing.Color.White;
@@ -423,7 +423,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostComercial._Table = "Tipo_produto";
             this.cbostComercial._TamanhoComponente = 80;
             this.cbostComercial._TamanhoMaiorLabel = 350;
-            this.cbostComercial._Visible = false;
+            this.cbostComercial._Visible = true;
             this.cbostComercial.BackColor = System.Drawing.Color.Transparent;
             this.cbostComercial.Base = null;
             this.cbostComercial.Color = System.Drawing.Color.White;
