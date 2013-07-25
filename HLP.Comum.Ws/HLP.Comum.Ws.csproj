@@ -100,6 +100,10 @@
       <Project>{cd60f2d5-6e51-417a-b50e-c4eb01eb7565}</Project>
       <Name>HLP.Comum.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Comum\HLP.Comum.Models\HLP.Comum.Models\HLP.Comum.Models.csproj">
+      <Project>{5bd4a7f2-4e89-43ba-8de0-85e8c8a6c492}</Project>
+      <Name>HLP.Comum.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dependencies\HLP.Dependencies\HLP.Dependencies.csproj">
       <Project>{6c138179-2c79-4535-9c3c-e78c529d3598}</Project>
       <Name>HLP.Dependencies</Name>

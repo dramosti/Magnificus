@@ -9,6 +9,9 @@ using System.Windows.Forms;
 using HLP.Comum.Modules;
 using HLP.Comum.Modules.Interface;
 using ComponentFactory.Krypton.Toolkit;
+using HLP.Comum.Models.Static;
+using System.Diagnostics;
+using Microsoft.Win32;
 
 namespace HLP.UI.Utility
 {
@@ -65,6 +68,11 @@ namespace HLP.UI.Utility
             {
                 throw new NotImplementedException();
             }
+        }
+
+        private void atualizaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -12,13 +12,14 @@ using System.Threading.Tasks;
 
 namespace HLP.Services.Implementation.Entries.Gerais
 {
-    public class ControleAcessoService
+    public static class ControleAcessoService
     {
         private static EstruturaModelXml objEstruturaModelXml = new EstruturaModelXml();
+        private static Guid numTemp;
 
-        public static void InsereControleAcesso(bool Login)
+        public static void InsereControleAcesso(bool Login, string xNomeFunc = null, string xNomeMaquina = null)
         {
-            string dir = Registry.CurrentConfig.OpenSubKey("magnificus").GetValue("caminhoPadrao").ToString() + @"\arquivos";
+            string dir = Pastas.CaminhoPadraoRegWindows + @"\arquivos";
             DirectoryInfo di = new DirectoryInfo(dir);
 
             if (!di.Exists)
@@ -30,8 +31,8 @@ namespace HLP.Services.Implementation.Entries.Gerais
             EstruturaModelXmlPai objEstrutModelXmlPai = null;
             if (!fi.Exists)
                 File.Create(xFile).Close();
-            
-            
+
+
             try
             {
                 objEstrutModelXmlPai = SerializeClassToXml.DeserializeClasse<EstruturaModelXmlPai>(xFile);
@@ -41,20 +42,38 @@ namespace HLP.Services.Implementation.Entries.Gerais
                 objEstrutModelXmlPai = new EstruturaModelXmlPai();
                 objEstrutModelXmlPai.lEstruturaModelXml = new List<EstruturaModelXml>();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("Erro: " + ex.Message);
             }
 
             if (Login)
             {
+                if (UserData.idUser == 0)
+                {
+                    numTemp = Guid.NewGuid();
+                }
+                else
+                {
+                    objEstrutModelXmlPai.lEstruturaModelXml.Remove(objEstrutModelXmlPai.lEstruturaModelXml.Where(
+                        i => i.numSessao == numTemp).FirstOrDefault());
+                    numTemp = Guid.NewGuid();
+                }
+
+                objEstruturaModelXml.numSessao = numTemp;
                 objEstruturaModelXml.dDataAcesso = DateTime.Now;
-                objEstruturaModelXml.idFuncionario = UserData.idUser.ToString();
-                objEstruturaModelXml.xNomeFuncionario = UserData.xNome;
+                objEstruturaModelXml.idFuncionario = UserData.idUser != 0 ? UserData.idUser.ToString() : null;
+                objEstruturaModelXml.xNomeFuncionario = UserData.xNome != null ? UserData.xNome : "Login";
                 objEstruturaModelXml.xNomeMaquina = Environment.MachineName;
                 objEstruturaModelXml.xIpMaquina = Dns.GetHostAddresses(objEstruturaModelXml.xNomeMaquina)[1].ToString();
                 objEstruturaModelXml.xUsuarioWindows = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             }
+
+            if (xNomeFunc != null)
+                objEstruturaModelXml.xNomeFuncionario = xNomeFunc;
+
+            if (xNomeMaquina != null)
+                objEstruturaModelXml.xNomeMaquina = xNomeMaquina;
             RemoveObjetoEstruturaModelXml(objEstrutModelXmlPai: objEstrutModelXmlPai);
 
             if (Login)

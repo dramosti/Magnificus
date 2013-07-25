@@ -24,7 +24,7 @@ using HLP.Services.Implementation.Entries.Gerais;
 namespace Magnificus
 {
     public partial class FormModuloMagnificus : FormBaseModulo, IFormPrincipal
-    {        
+    {
         List<KryptonButton> listBotoesLaterais = new List<KryptonButton>();
         Modulo modulo = new Modulo();
         UserBasicConfig userBasicConfig = new UserBasicConfig();
@@ -34,7 +34,7 @@ namespace Magnificus
         object[] mParam = null;
         bool bLoad = true;
         private int _cacheWidth;
-        
+
 
 
         #region Implementacao do IFormModulo
@@ -172,7 +172,6 @@ namespace Magnificus
                 CarregaContextMenu();
                 ConfiguraMenu();
 
-
                 this.headerMenuLateral.Panel.Controls.Remove(kryptonHeader1);
                 this.headerMenuLateral.Panel.Controls.Add(kryptonHeader1);
                 PopulaToolstrip();
@@ -181,24 +180,12 @@ namespace Magnificus
                 lblBase.Text = conSettings.ConnectionString.Split(';')[1].Replace("Initial Catalog=", "").Trim();
                 tslblEmpresa.Text = CompanyData.idEmpresa + "-" + CompanyData.xFantasia;
                 tslblUsuario.Text = UserData.xNome;
-              
-                //if (ApplicationDeployment.IsNetworkDeployed)
-                //{
-                //    ad = ApplicationDeployment.CurrentDeployment;
-                //    lblVersao.Text = ad.CurrentVersion.ToString();
-                //    lblVersao.Visible = true;
-                //    Atualizacao();
-                //}
-                //else
-                //{
-                //    lblVersao.Text = "Debug";
-                //}
-
+                tslblAtualizacao.Image = Properties.Resources.AtualizacaoImg;
+                tslblAtualizacao.Visible = UserData.idUser == UserData.idUserHLP;
                 if (System.Diagnostics.Debugger.IsAttached)
                 {
                     lblVersao.Text = "Debug";
                 }
-
             }
             catch (Exception ex)
             {
@@ -1187,8 +1174,31 @@ namespace Magnificus
             ControleAcessoService.InsereControleAcesso(false);
         }
 
+        private void tslblAtualizacao_Click(object sender, EventArgs e)
+        {
+            if (Process.GetProcessesByName("SystemTray").Count() == 0)
+            {
+                Process p = new Process();
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.FileName = HLP.Comum.Models.Static.Pastas.CaminhoPadraoRegWindows +
+                    @"\magnificus\hlptray\SystemTray.exe";
+                psi.Arguments = UserData.xNome;
+                p.StartInfo = psi;
+                try
+                {
+                    p.Start();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Aplicativo de atualização Magnificus já está aberto.", "Atenção",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
-
-
+        }
     }
 }

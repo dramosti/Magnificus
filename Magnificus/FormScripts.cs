@@ -132,7 +132,7 @@ namespace Magnificus
                 try
                 {
 
-                    log_scriptService.Backup(Registry.CurrentConfig.OpenSubKey("magnificus").GetValue("caminhoPadrao").ToString()
+                    log_scriptService.Backup(Pastas.CaminhoPadraoRegWindows
                     + @"\backupsbases\bkpScript", "bkp_" + DateTime.Now.Day.ToString() + "_" +
                     DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString() + "_" +
                     DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" +

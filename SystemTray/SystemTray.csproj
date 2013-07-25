@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\hlptray\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -36,6 +36,10 @@
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Windows\assembly\GAC_MSIL\ComponentFactory.Krypton.Toolkit\4.4.0.0__a87e673e9ecb6e8e\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.1.0.91, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Comum\HLP.Comum.Infrastructure\NInject\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -100,6 +104,14 @@
       <Project>{cd60f2d5-6e51-417a-b50e-c4eb01eb7565}</Project>
       <Name>HLP.Comum.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Comum\HLP.Comum.Models\HLP.Comum.Models\HLP.Comum.Models.csproj">
+      <Project>{5bd4a7f2-4e89-43ba-8de0-85e8c8a6c492}</Project>
+      <Name>HLP.Comum.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dependencies\HLP.Dependencies\HLP.Dependencies.csproj">
+      <Project>{6c138179-2c79-4535-9c3c-e78c529d3598}</Project>
+      <Name>HLP.Dependencies</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HLP.Comum.Ws\HLP.Comum.Ws.csproj">
       <Project>{799b4d10-77a7-44dd-8cd8-20a36f7e393a}</Project>
       <Name>HLP.Comum.Ws</Name>
@@ -111,6 +123,10 @@
     <ProjectReference Include="..\Services\HLP.Services.Implementation\HLP.Services.Implementation\HLP.Services.Implementation.Entries.csproj">
       <Project>{9785a28a-eac1-426f-b63f-f2e71cee1465}</Project>
       <Name>HLP.Services.Implementation.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997e026a-b1f2-45ab-ae1c-0ec6ad2e034d}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +141,13 @@
   <ItemGroup>
     <None Include="Resources\magnificus_finished.png" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\mt.exe" -manifest "$(ProjectDir)$(TargetName).exe.manifest"  –outputresource:"$(TargetDir)$(TargetFileName)";#1</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

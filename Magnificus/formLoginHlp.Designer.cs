@@ -192,6 +192,7 @@
             this.MinimizeBox = false;
             this.Name = "formLoginHlp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formLoginHlp_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.formLoginHlp_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel2.ResumeLayout(false);

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using Microsoft.Win32;
@@ -14,6 +10,7 @@ using System.Diagnostics;
 using HLP.Services.Implementation.Entries.Gerais;
 using HLP.Models.Entries;
 using HLP.Comum.Ws;
+using HLP.Comum.Models.Static;
 
 namespace Atualizador
 {
@@ -23,27 +20,35 @@ namespace Atualizador
         ArquivosService objServico = new ArquivosService();
         ArquivosModel objArquivo = null;
         string sCaminhoExtracao = null;
+        string xLogErro = null;
         private bool validaAtualizacao = true;
         public frmAtualizador()
         {
             InitializeComponent();
             //FileInfo fi = new FileInfo(@"G:\CSharp\Desenvolvimento\Projetos\Magnificus\teste_atualizacao\magnificus\Magnificus.exe");            
             objArquivo = objServico.GetUltimoArquivo();
-            this.Text = "Atualizando versão " + objArquivo.xNome;
-            sCaminhoExtracao = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString()) + @"\atualizacoes\temp";
-            progressBar1.Maximum = 4;
-            bwAtualizacao.RunWorkerAsync();
+            if (objArquivo != null)
+            {
+                this.Text = "Atualizando versão " + objArquivo.xNome;
+                sCaminhoExtracao = (Pastas.CaminhoPadraoRegWindows) + @"\atualizacoes\temp";
+                progressBar1.Maximum = 4;
+                bwAtualizacao.RunWorkerAsync();
+            }
+            else
+            {
+                label1.Text = "Não há atualizações disponíveis.";
+            }
         }
 
         private void bwAtualizacao_DoWork(object sender, DoWorkEventArgs e)
-        {            
+        {
             try
             {
                 label1.Invoke((MethodInvoker)delegate
                 {
-                    label1.Text = "Fazendo backup da base de dados";                    
+                    label1.Text = "Fazendo backup da base de dados";
                 });
-                objServicos.BackupBaseSql(xPath: Registry.CurrentConfig.OpenSubKey("magnificus").GetValue("caminhoPadrao").ToString()
+                objServicos.BackupBaseSql(xPath: Pastas.CaminhoPadraoRegWindows
                 + @"\backupsbases\bkpExe",
                 xNameBackup: Application.ProductVersion.ToString() + "_" +
                 DateTime.Now.Day + "_" +
@@ -57,36 +62,43 @@ namespace Atualizador
                     progressBar1.Value++;
                 });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                validaAtualizacao = false;
-                return;
+                if (MessageBox.Show(this, "Falha no Backup da base de dados." +
+                    Environment.NewLine + "Deseja continuar?", "Continua?",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.No)
+                {
+                    validaAtualizacao = false;
+                    xLogErro = ex.Message;
+                    return;
+                }
             }
-            
-            
+
+
             try
             {
-                if (Directory.Exists(Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString()
+                if (Directory.Exists(Pastas.CaminhoPadraoRegWindows
                 + @"\bkpAtualizacao"))
                 {
                     label1.Invoke((MethodInvoker)delegate
                     {
                         label1.Text = "Removendo backups anteriores";
                     });
-                    objServico.ApagarDiretorio(Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString()
+                    objServico.ApagarDiretorio(Pastas.CaminhoPadraoRegWindows
                     + @"\bkpAtualizacao");
-                }                
+                }
                 progressBar1.Invoke((MethodInvoker)delegate
                 {
                     progressBar1.Value++;
                 });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 validaAtualizacao = false;
+                xLogErro = ex.Message;
                 return;
             }
-            
+
             try
             {
                 label1.Invoke((MethodInvoker)delegate
@@ -98,13 +110,14 @@ namespace Atualizador
                 progressBar1.Invoke((MethodInvoker)delegate
                 {
                     progressBar1.Value++;
-                });                
+                });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 validaAtualizacao = false;
+                xLogErro = ex.Message;
                 return;
-            }           
+            }
 
             try
             {
@@ -117,16 +130,17 @@ namespace Atualizador
                 progressBar1.Invoke((MethodInvoker)delegate
                 {
                     progressBar1.Value++;
-                });                
+                });
             }
             catch (Exception ex)
             {
                 validaAtualizacao = false;
+                xLogErro = ex.Message;
                 return;
             }
 
 
-            DirectoryInfo di = new DirectoryInfo(Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString()
+            DirectoryInfo di = new DirectoryInfo(Pastas.CaminhoPadraoRegWindows
                 + @"\atualizacoes");
 
             foreach (FileInfo item in di.GetFiles())
@@ -135,9 +149,10 @@ namespace Atualizador
                 {
                     File.Delete(item.FullName);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     validaAtualizacao = false;
+                    xLogErro = ex.Message;
                     return;
                 }
             }
@@ -159,7 +174,7 @@ namespace Atualizador
                 }
                 Process p = new Process();
                 ProcessStartInfo psi = new ProcessStartInfo();
-                psi.FileName = Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString() + @"\magnificus\Magnificus.exe";
+                psi.FileName = Pastas.CaminhoPadraoRegWindows + @"\magnificus\Magnificus.exe";
                 //-q[n|b|r|f]   Sets user interface (UI) level:
                 //n = no UI
                 //b = basic UI (progress only, no prompts)
@@ -173,8 +188,14 @@ namespace Atualizador
             else
             {
                 progressBar1.Value = 0;
-                label1.Text = "Falha ao atualizar o sistema.";
+                label1.Text = "Falha ao atualizar o sistema. Clique aqui para visualizar o erro";
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (!validaAtualizacao)
+                MessageBox.Show("Erro: " + xLogErro);
         }
     }
 }

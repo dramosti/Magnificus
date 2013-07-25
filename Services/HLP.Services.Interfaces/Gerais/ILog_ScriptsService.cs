@@ -17,5 +17,6 @@ namespace HLP.Services.Interfaces.Entries.Gerais
         int GetLog_ScriptCount(string xName);
         void Backup(string xPath, string xNameBackup);
         int RetornaPorcBkp();
+        int GetLog_ScriptCountTotal(string xNome);
     }
 }

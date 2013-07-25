@@ -1,28 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using HLP.Comum.Ws;
 using System.Reflection;
+using Microsoft.Win32;
+using System.Diagnostics;
+using HLP.Models.Entries.Gerais;
+using Ninject;
+using HLP.Services.Interfaces.Entries.Gerais;
+using HLP.Dependencies;
+using HLP.Comum.Models.Static;
 
 namespace SystemTray
 {
     public partial class formAtualizacoes : Form
     {
+        [Inject]
+        public ILog_ScriptsService _Log_ScriptsService { get; set; }
+
         servicos objServicos = new servicos();
+        VersaoService objService = null;
         List<HLP.Comum.Ws.servicoHlp.VersoesModel> lVersoesModel = new List<HLP.Comum.Ws.servicoHlp.VersoesModel>();
         MethodInfo iniciaAtualizacao = null;
         private object Sender = null;
         object[] mParam = null;
         const int Seed = 5;
+        string sVersao = null;
         public formAtualizacoes(object oSender)
         {
             InitializeComponent();
+            sVersao = FileVersionInfo.GetVersionInfo((Pastas.CaminhoPadraoRegWindows
+                    + @"\magnificus\Magnificus.exe")).FileVersion;
+            this.Text = "Versão atual: "+sVersao;
+            objService = new VersaoService();
+            IKernel kernel = new StandardKernel(new MagnificusDependenciesModule());
+            kernel.Settings.ActivationCacheDisabled = false;
+            kernel.Inject(this);
             this.Sender = oSender;
             CarregarVersoes();
             PopularListView(Seed);
@@ -31,7 +45,10 @@ namespace SystemTray
         private void CarregarVersoes()
         {
             if (objServicos.RespostaWS())
-                lVersoesModel = objServicos.GetVersoes().OrderBy(i => Convert.ToDateTime(i.dtArquivo)).ToList();
+            {
+
+                lVersoesModel = objServicos.GetVersoes().OrderBy(i => i.xVersao).ToList();
+            }
             else
                 MessageBox.Show("Não foi possível conectar ao WebService de atualização, tente novamente em instantes.", "Aviso",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -56,11 +73,31 @@ namespace SystemTray
             }
             else
             {
+                if (sVersao == listBox1.Items[listBox1.SelectedIndex].ToString().Replace(".zip", ""))
+                {
+                    MessageBox.Show("Versão já instalada neste computador.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                if (objService.RetornaVersaoMaior(sVersao, listBox1.Items[listBox1.SelectedIndex].ToString())
+                    != listBox1.Items[listBox1.SelectedIndex].ToString())
+                {
+                    if (_Log_ScriptsService.GetLog_ScriptCountTotal(listBox1.Items[listBox1.SelectedIndex]
+                     .ToString().Replace(".zip", "")) > 0)
+                    {
+                        MessageBox.Show("Não é possível retorno de versão. " + Environment.NewLine +
+                            "Motivo: Versão que você está tentando baixar é menor que versão atual e foram executados scripts na base de dados.",
+                            "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                }
+
                 Type tipo = Sender.GetType();
                 mParam = new object[] {listBox1.Items[listBox1.SelectedIndex]
                         .ToString().Split('-')[0].Trim()};
                 iniciaAtualizacao = tipo.GetMethod("IniciaAtualizacao");
                 iniciaAtualizacao.Invoke(Sender, mParam);
+                this.Close();
             }
         }
 

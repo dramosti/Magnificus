@@ -65,6 +65,14 @@ namespace HLP.Repository.Implementation.Entries.Gerais
             return regAllLog_ScriptsAccessor.Execute().Count();
         }
 
+        public int GetLog_ScriptCountTotal(string xNome)
+        {
+            regAllLog_ScriptsAccessor = UndTrabalho.dbPrincipal.CreateSqlStringAccessor("SELECT * FROM Log_Scripts where "
+                + "xVersao like '" + xNome + "%'",
+                                MapBuilder<Log_ScriptsModel>.MapAllProperties().Build());
+            return regAllLog_ScriptsAccessor.Execute().Count();
+        }
+
         public bool ExecutaScritp(string sScript)
         {
             try

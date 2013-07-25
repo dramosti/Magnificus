@@ -4,6 +4,7 @@ using HLP.Comum.UI;
 using HLP.Comum.UI.Exception;
 using HLP.Dependencies;
 using HLP.Models.Entries.Gerais;
+using HLP.Services.Implementation.Entries.Gerais;
 using HLP.Services.Interfaces.Entries.Gerais;
 using Ninject;
 using System;
@@ -163,6 +164,11 @@ namespace Magnificus
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void formLoginHlp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ControleAcessoService.InsereControleAcesso(false);
         }
     }
 }

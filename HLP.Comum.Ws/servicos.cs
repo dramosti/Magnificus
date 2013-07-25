@@ -14,6 +14,7 @@ using Ninject;
 using HLP.Dependencies;
 using HLP.Comum.Infrastructure;
 using System.Net;
+using HLP.Comum.Models.Static;
 
 namespace HLP.Comum.Ws
 {
@@ -72,7 +73,7 @@ namespace HLP.Comum.Ws
                 Byte[] b1 = null;
                 b1 = objServicos.DownloadFile(fName);
                 string sCaminho = null;
-                sCaminho = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString());
+                sCaminho = (Pastas.CaminhoPadraoRegWindows);
                 if (!Directory.Exists(sCaminho + @"\atualizacoes\"))
                     Directory.CreateDirectory(sCaminho + @"\atualizacoes\");
 
@@ -106,7 +107,7 @@ namespace HLP.Comum.Ws
                 Byte[] b1 = null;
                 b1 = objServicos.DownloadScript(sName);
                 string sCaminho = null;
-                sCaminho = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString());
+                sCaminho = (Pastas.CaminhoPadraoRegWindows);
                 if (!Directory.Exists(sCaminho + @"\atualizacoes\versoes"))
                     Directory.CreateDirectory(sCaminho + @"\atualizacoes\versoes");
 
@@ -218,7 +219,7 @@ namespace HLP.Comum.Ws
             {
                 string sCaminho = null;
 
-                sCaminho = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString());
+                sCaminho = (Pastas.CaminhoPadraoRegWindows);
 
                 if (!Directory.Exists(sCaminho + @"\atualizacoes"))
                 {

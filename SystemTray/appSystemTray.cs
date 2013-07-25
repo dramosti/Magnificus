@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Diagnostics;
 using Microsoft.Win32;
+using HLP.Comum.Models.Static;
+using System.IO;
+using System.Net;
+using System.Threading;
 
 namespace SystemTray
 {
@@ -18,11 +22,16 @@ namespace SystemTray
         servicos objServicos = new servicos();
         List<EstruturaModel> lEstruturaModel = new List<EstruturaModel>();
         private System.ComponentModel.BackgroundWorker bwAtualizacao;
+        private static string xIpInstalacao = null;
+        private static string xUsuario = null;
+        private static bool bAguardandoAtual = false;
         EstruturaService objEstruturaService = new EstruturaService();
-        object FormAberto = null;
         [STAThread]
-        public static void Main()
+        public static void Main(string[] args)
         {
+            if (args.Count() > 0)
+                xUsuario = args[0];
+
             Application.Run(new SystemTray.SysTrayApp());
         }
 
@@ -42,7 +51,7 @@ namespace SystemTray
             // standard system icon for simplicity, but you
             // can of course use your own custom icon too.
             trayIcon = new NotifyIcon();
-            trayIcon.Text = "MyTrayApp";
+            trayIcon.Text = "Aplicação de Atualização Magnificus";
             IntPtr ptIcon = SystemTray.Properties.Resources.iconehlp.GetHicon();
             trayIcon.Icon = Icon.FromHandle(ptIcon);
 
@@ -58,6 +67,11 @@ namespace SystemTray
             {
                 trayMenu.MenuItems[3].Visible = false;
             }
+            FileInfo fi = new FileInfo(Pastas.CaminhoPadraoRegWindows +
+                        @"\magnificus\Magnificus.exe");
+
+            xIpInstalacao = Directory.GetDirectoryRoot(fi.FullName).Split('\\')[2].ToString();
+            bwAtualizacao.WorkerSupportsCancellation = true;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -70,6 +84,26 @@ namespace SystemTray
 
         private void OnExit(object sender, EventArgs e)
         {
+            if (bwAtualizacao.IsBusy)
+            {
+                if (MessageBox.Show(this, "Download de atualização do sistema em andamento, caso feche o aplicativo download será interrompido. "
+                    + Environment.NewLine + "Deseja continuar?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    try
+                    {
+                        bwAtualizacao.CancelAsync();
+                        foreach (string item in Directory.GetFiles(Pastas.CaminhoPadraoRegWindows + "\\atualizacoes"))
+                        {
+                            File.Delete(item);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(this, "Falha ao interromper donwload. "
+                    + Environment.NewLine + "Motivo: " + ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
             Application.Exit();
         }
 
@@ -86,12 +120,12 @@ namespace SystemTray
 
         private void VisualizarExecAbertos(object sender, EventArgs e)
         {
-
             if (!VerifFormAberto(typeof(formExecAbertos)))
             {
-                formExecAbertos frmExecAbertos = new formExecAbertos();
-                FormAberto = new object();
-                FormAberto = frmExecAbertos;
+                SystemTray.formExecAbertos.TipoAcesso tpAcesso =
+                    xIpInstalacao == Dns.GetHostAddresses(Environment.MachineName)[1].ToString()
+                    ? SystemTray.formExecAbertos.TipoAcesso.servidor : formExecAbertos.TipoAcesso.local;
+                formExecAbertos frmExecAbertos = new formExecAbertos(tTpAcesso: tpAcesso);
                 frmExecAbertos.Show();
                 frmExecAbertos.Focus();
             }
@@ -102,8 +136,6 @@ namespace SystemTray
             if (!VerifFormAberto(typeof(formAtualizacoes)))
             {
                 formAtualizacoes frmAtualizacoes = new formAtualizacoes(this);
-                FormAberto = new object();
-                FormAberto = frmAtualizacoes;
                 frmAtualizacoes.Show();
                 frmAtualizacoes.Focus();
             }
@@ -111,21 +143,75 @@ namespace SystemTray
 
         private void InstalarAtualizacao(object sender, EventArgs e)
         {
-            if (objEstruturaService.GetListEstrutura().Count > 0)
+            if (!bAguardandoAtual)
             {
-                MessageBox.Show("O sistema está sendo utilizado em um dos terminais, feche o magnificus nos terminais e tente novamente.", "Falha", MessageBoxButtons.OK,
-                    MessageBoxIcon.Asterisk);
-                VisualizarExecAbertos(sender, e);
-            }
-            else
-            {
-                trayMenu.MenuItems[3].Visible = false;
-                Process p = new Process();
-                ProcessStartInfo psi = new ProcessStartInfo();
-                psi.FileName = Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString() +
-                    @"\exeAtualizacao\Atualizador.exe";
-                p.StartInfo = psi;
-                p.Start();
+                bAguardandoAtual = true;
+                if (MessageBox.Show("O sistema será fechado para atualização. Deseja continuar?", "?", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    Process[] processos = Process.GetProcessesByName("Magnificus");
+
+                    foreach (Process iProc in processos)
+                    {
+                        try
+                        {
+                            ControleAcessoService.InsereControleAcesso(false, xNomeFunc: xUsuario, xNomeMaquina: Environment.MachineName);
+                            iProc.Kill();
+                            Thread.Sleep(500);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Não foi possível fechar a aplicação. " +
+                                Environment.NewLine + "Erro: " + ex.Message);
+                        }
+                    }
+                    bool bIniciaAtualizacao = true;
+
+                    try
+                    {
+                        if (!Directory.Exists(Pastas.CaminhoPadraoRegWindows + @"\magnificus\temp"))
+                            Directory.CreateDirectory(Pastas.CaminhoPadraoRegWindows + @"\magnificus\temp");
+
+                        File.Move(Pastas.CaminhoPadraoRegWindows + @"\magnificus\Magnificus.exe",
+                            Pastas.CaminhoPadraoRegWindows + @"\magnificus\temp\Magnificus.exe");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Não é possível iniciar atualização do sistema. " +
+                            Environment.NewLine + "Existem terminais utilizando o sistema.");
+                        VisualizarExecAbertos(this, null);
+                        bIniciaAtualizacao = false;
+                    }
+                    finally
+                    {
+                        if (Directory.Exists(Pastas.CaminhoPadraoRegWindows + @"\magnificus\temp"))
+                        {
+                            foreach (string file in Directory.GetFiles(Pastas.CaminhoPadraoRegWindows + @"\magnificus\temp"))
+                            {
+                                if (file.Contains("Magnificus.exe"))
+                                    File.Move(file, Pastas.CaminhoPadraoRegWindows + @"\magnificus\Magnificus.exe");
+                            }
+                            Directory.Delete(Pastas.CaminhoPadraoRegWindows + @"\magnificus\temp");
+                        }
+                    }
+
+                    if (bIniciaAtualizacao)
+                    {
+                        foreach (Form f in Application.OpenForms)
+                        {
+                            if (f.Name != "SysTrayApp")
+                                FecharForms(f);
+                        }
+                        trayMenu.MenuItems[3].Visible = false;
+                        Process p = new Process();
+                        ProcessStartInfo psi = new ProcessStartInfo();
+                        psi.FileName = Pastas.CaminhoPadraoRegWindows +
+                            @"\magnificus\exeAtualizacao\Atualizador.exe";
+                        p.StartInfo = psi;
+                        p.Start();
+                    }
+                }
+                bAguardandoAtual = false;
             }
         }
 
@@ -135,9 +221,6 @@ namespace SystemTray
             {
                 IntPtr ptIcon = SystemTray.Properties.Resources.magnificus_baixar.GetHicon();
                 trayIcon.Icon = Icon.FromHandle(ptIcon);
-                ((Form)FormAberto).Close();
-                ((Form)FormAberto).Dispose();
-                FormAberto = null;
                 bwAtualizacao.RunWorkerAsync(vVersao);
             }
             else
@@ -192,26 +275,72 @@ namespace SystemTray
 
         private bool VerifFormAberto(Type tTipo)
         {
+            #region Old
+            //try
+            //{
+            //    List<Form> forms = new List<Form>();
+
+            //    foreach (Form f in Application.OpenForms)
+            //    {
+            //        forms.Add(f);
+            //    }
+
+            //    if (FormAberto != null)
+            //    {
+            //        if (FormAberto.GetType() == tTipo)
+            //        {
+            //            ((Form)FormAberto).Focus();
+            //            return true;
+            //        }
+            //        else
+            //        {
+            //            ((Form)FormAberto).Close();
+            //            ((Form)FormAberto).Dispose();
+            //        }
+            //    }
+            //    return false;
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new Exception("Erro: " + ex.Message);
+            //}
+            #endregion
+
             try
             {
-                if (FormAberto != null)
+                List<Form> forms = new List<Form>();
+
+                foreach (Form f in Application.OpenForms)
                 {
-                    if (FormAberto.GetType() == tTipo)
+                    if (f.Name != "SysTrayApp")
+                        forms.Add(f);
+                }
+
+                foreach (Form f in forms)
+                {
+                    if (f.GetType() == tTipo)
                     {
-                        ((Form)FormAberto).Focus();
+                        f.Focus();
                         return true;
                     }
                     else
                     {
-                        ((Form)FormAberto).Close();
-                        ((Form)FormAberto).Dispose();
+                        FecharForms(f);
                     }
                 }
                 return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw new Exception("Erro: " + ex.Message);
+                throw;
+            }
+        }
+
+        private void FecharForms(params Form[] forms)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
             }
         }
     }

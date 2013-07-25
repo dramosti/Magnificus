@@ -1,4 +1,5 @@
-﻿using HLP.Models.Entries;
+﻿using HLP.Comum.Models.Static;
+using HLP.Models.Entries;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace HLP.Services.Implementation.Entries.Gerais
             List<ArquivosModel> lArquivos = new List<ArquivosModel>();
             try
             {
-                sPathFiles = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString()) + @"\atualizacoes";
+                sPathFiles = (Pastas.CaminhoPadraoRegWindows) + @"\atualizacoes";
                 DirectoryInfo dinfo = new DirectoryInfo(sPathFiles);
                 ArquivosModel objArq = null;
                 if (Directory.Exists(sPathFiles))
@@ -61,7 +62,7 @@ namespace HLP.Services.Implementation.Entries.Gerais
         {
             lArquivosAtualizacao = new List<ArquivosModel>();
             ObterArquivosAtualizacao(lArquivosAtualizacao, sDir);
-            string sCaminhoPadrao = (Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString());
+            string sCaminhoPadrao = (Pastas.CaminhoPadraoRegWindows);
             string sPathFiles = sCaminhoPadrao + "\\magnificus";
             string caminhoArquivo = null;
             string caminhoDestino = null;
@@ -92,7 +93,7 @@ namespace HLP.Services.Implementation.Entries.Gerais
             }
             finally
             {
-                ApagarDiretorio(Registry.CurrentConfig.OpenSubKey(@"magnificus").GetValue("caminhoPadrao").ToString()
+                ApagarDiretorio(Pastas.CaminhoPadraoRegWindows
                     + @"\atualizacoes\temp");
             }
 

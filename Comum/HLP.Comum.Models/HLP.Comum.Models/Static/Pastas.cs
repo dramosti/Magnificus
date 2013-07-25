@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace HLP.Comum.Models.Static
 {
@@ -66,6 +67,14 @@ namespace HLP.Comum.Models.Static
             get
             {
                 return Util.ValidaCaminho(Pastas.Path_SettingsEmpresa + "\\SYS_FORM\\");
+            }
+        }
+
+        public static string CaminhoPadraoRegWindows
+        {
+            get
+            {
+                return Registry.CurrentConfig.OpenSubKey("magnificus").GetValue("caminhoPadrao").ToString();
             }
         }
       

@@ -96,6 +96,8 @@
     <Compile Include="Fiscal\Tipo_operacaoModel.cs" />
     <Compile Include="Gerais\CalendarioModel.cs" />
     <Compile Include="Gerais\Calendario_DetalheModel.cs" />
+    <Compile Include="Gerais\VersaoModel.cs" />
+    <Compile Include="Gerais\VersaoService.cs" />
     <Compile Include="RecursosHumanos\CargoModel.cs" />
     <Compile Include="Gerais\CidadeModel.cs" />
     <Compile Include="Gerais\ContatoModel.cs" />

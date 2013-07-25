@@ -67,34 +67,35 @@ namespace Magnificus
                    
                     if (f.ConnectionActivated)
                     {
+                        if (!RegistroWindows.VerificaRegistro(Registry.CurrentConfig, "magnificus"))
+                        {
+                            try
+                            {
+                                RegistroWindows.CriaRegistro(Registry.CurrentConfig, "magnificus");
+                                RegistroWindows.SetaValueRegistro(Registry.CurrentConfig, "magnificus", "caminhoPadrao",
+                                        Application.StartupPath.Replace(Application.StartupPath.Substring(Application.StartupPath.LastIndexOf('\\')),
+                                        ""));
+                            }
+                            catch (Exception)
+                            {
+
+                                throw;
+                            }
+                        }
                         FormScripts frmScripts = new FormScripts();
                         formLoginHlp login = new formLoginHlp();
+                        UserData.xNome = "Login";
+                        ControleAcessoService.InsereControleAcesso(true);
                         login.ShowDialog();
                         if (UserData.bLogado)
-                        {
+                        {                            
                             ControleAcessoService.InsereControleAcesso(true);
                             splash = new FormSplash();
                             GerenciadorModulo.Instancia.InicializaSistema<FormModuloMagnificus>(splash.ExibeInformacao, splash.ValoresProgressBar);
                             splash.Close();
                             ServerData.Refresh();
                             if(frmScripts.ScriptNaoExec())
-                                frmScripts.ShowDialog();
-
-                            if(!RegistroWindows.VerificaRegistro(Registry.CurrentConfig, "magnificus"))
-                            {
-                                try 
-	                            {
-                                    RegistroWindows.CriaRegistro(Registry.CurrentConfig, "magnificus");
-                                    RegistroWindows.SetaValueRegistro(Registry.CurrentConfig, "magnificus", "caminhoPadrao",
-                                            Application.StartupPath.Replace(Application.StartupPath.Substring(Application.StartupPath.LastIndexOf('\\')),
-                                            ""));
-	                            }
-	                            catch (Exception)
-	                            {
-		
-		                            throw;
-	                            }
-                            }
+                                frmScripts.ShowDialog();                            
                             Application.Run(GerenciadorModulo.Instancia.FormPrincipal as Form);
                         }
                     }

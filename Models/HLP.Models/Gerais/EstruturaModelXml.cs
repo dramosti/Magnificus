@@ -20,6 +20,7 @@ namespace HLP.Models.Entries.Gerais
     [XmlRoot("object")]
     public class EstruturaModelXml
     {
+        public Guid numSessao { get; set; }
         public string idFuncionario { get; set; }
         public string xNomeFuncionario { get; set; }
         public string xNomeMaquina { get; set; }

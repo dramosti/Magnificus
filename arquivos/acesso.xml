@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <object>
+    <numSessao>fd59855e-68c6-4a52-99c5-79a4781b0c45</numSessao>
+    <xNomeFuncionario>Login</xNomeFuncionario>
+    <xNomeMaquina>HLP065</xNomeMaquina>
+    <xIpMaquina>192.168.9.34</xIpMaquina>
+    <xUsuarioWindows>HLP\Carlost</xUsuarioWindows>
+    <dDataAcesso>2013-07-23T14:54:48.9612853-03:00</dDataAcesso>
+  </object>
+</objects>

@@ -148,7 +148,7 @@ namespace HLP.Comum.Infrastructure
 
             sqlBackup.Database = con.Database;
 
-            BackupDeviceItem deviceItem = new BackupDeviceItem(xPath+"//"+xNameBackup, DeviceType.File);
+            BackupDeviceItem deviceItem = new BackupDeviceItem(xPath+"\\"+xNameBackup, DeviceType.File);
 
             //ServerConnection connection = new ServerConnection(con.DataSource, con.Credential.UserId, con.Credential.Password);
             ServerConnection connection = new ServerConnection(con);
@@ -180,7 +180,16 @@ namespace HLP.Comum.Infrastructure
 
             sqlBackup.PercentComplete += new PercentCompleteEventHandler(sqlRestore_PercentComplete);
 
-            sqlBackup.SqlBackup(sqlServer);
+            try
+            {
+                sqlBackup.SqlBackup(sqlServer);
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+            
 
             #region Backup Método 2
             //Podia ser feito desta forma, porém foi optado pela classe de Backup do .NET

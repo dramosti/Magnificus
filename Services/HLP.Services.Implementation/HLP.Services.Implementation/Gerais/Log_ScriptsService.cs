@@ -57,6 +57,11 @@ namespace HLP.Services.Implementation.Entries.Gerais
             return _Log_ScriptsRepository.GetLog_ScriptCount(xName);
         }
 
+        public int GetLog_ScriptCountTotal(string xNome)
+        {
+            return _Log_ScriptsRepository.GetLog_ScriptCountTotal(xNome: xNome);
+        }
+
         public void Backup(string xPath, string xNameBackup)
         {
             if (!Directory.Exists(xPath))
