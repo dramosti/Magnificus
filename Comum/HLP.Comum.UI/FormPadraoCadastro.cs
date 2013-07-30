@@ -31,10 +31,6 @@ namespace HLP.Comum.UI
         [Inject]
         public IConfiguraBaseService testeconn { get; set; }
 
-        [Inject]
-        public HLP.Services.Interfaces.Entries.Parametros.IParametro_GeralService iparametroGeral { get; set; }
-
-
         public BindingSource bsRetPesquisa = new BindingSource();
         public int? iRetPesquisa;
         public bool bNovoPesquisa = false;
@@ -722,7 +718,7 @@ namespace HLP.Comum.UI
         }
         private void SetaEventoGrid()
         {
-            bool Upper = iparametroGeral.isToUpper();
+            bool Upper = CompanyData.stMaiusculo;
 
             ContextMenuStrip cms = new ContextMenuStrip();
             ToolStripMenuItem ti = new ToolStripMenuItem();

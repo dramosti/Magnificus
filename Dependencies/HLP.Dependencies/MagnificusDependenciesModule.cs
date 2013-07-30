@@ -169,7 +169,6 @@ namespace HLP.Dependencies
             #region Parametros
 
             Bind<IParametro_financeiroRepository>().To<Parametro_financeiroRepository>();
-            Bind<IParametro_GeralRepository>().To<Parametro_GeralRepository>();
 
             #endregion
 
@@ -303,7 +302,6 @@ namespace HLP.Dependencies
             #region Parametros
 
             Bind<IParametro_financeiroService>().To<Parametro_financeiroService>();
-            Bind<IParametro_GeralService>().To<Parametro_GeralService>();
 
             #endregion
 

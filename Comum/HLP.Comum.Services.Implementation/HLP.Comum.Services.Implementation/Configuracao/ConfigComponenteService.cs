@@ -26,10 +26,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
         [Inject]
         public IConfigColunasGridService colunasGridService { get; set; }
 
-        [Inject]
-        public IParametro_GeralService parametroGeralService { get; set; }
-
-
         private List<ConfigComponenteModel> lobjConfigComponente { get; set; }
 
         /// <summary>
@@ -251,21 +247,9 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             }
         }
 
-
-        private bool isToUpper()
-        {
-            bool Upper = false;
-            Parametro_GeralModel param = parametroGeralService.GetGeralByEmpresa();
-            if (param != null)
-            {
-                Upper = param.stMaiusculo == 0 ? false : true;
-            }
-            return Upper;
-        }
-
         public void SetConfigToComp(List<ConfigComponenteModel> lCompModel, List<Control> lControl)
         {
-            bool Upper = isToUpper();
+            bool Upper = CompanyData.stMaiusculo;
 
             foreach (ConfigComponenteModel objCompModel in lCompModel)
             {
@@ -370,7 +354,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                             catch (Exception ex)
                             {
                                 throw new Exception(string.Format("Erro ao Configurar componente:{0} - tipo:{1}, {2}Erro: ", objCompModel.xName, objCompModel.xTypeComp, Environment.NewLine) + ex.Message);
-                            }                            
+                            }
                         }
                         else if (controle.GetType() == typeof(HLP_DataGridView))
                         {

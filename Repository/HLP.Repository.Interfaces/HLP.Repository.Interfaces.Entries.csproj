@@ -130,7 +130,6 @@
     <Compile Include="Gerais\IUFRepository.cs" />
     <Compile Include="Gerais\IUnidade_medidaRepository.cs" />
     <Compile Include="Parametros\IParametro_financeiroRepository.cs" />
-    <Compile Include="Parametros\IParametro_GeralRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

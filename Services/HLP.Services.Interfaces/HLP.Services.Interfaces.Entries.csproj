@@ -137,7 +137,6 @@
     <Compile Include="Gerais\IUnidade_medidaService.cs" />
     <Compile Include="Gerais\ITransportadorService.cs" />
     <Compile Include="Parametros\IParametro_financeiroService.cs" />
-    <Compile Include="Parametros\IParametro_GeralService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

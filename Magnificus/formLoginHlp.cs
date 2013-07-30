@@ -29,9 +29,6 @@ namespace Magnificus
         [Inject]
         public IEmpresaService iempresaService { get; set; }
 
-        [Inject]
-        public IParametro_GeralService iparametro_geralService { get; set; }
-
         public formLoginHlp()
         {
             InitializeComponent();
