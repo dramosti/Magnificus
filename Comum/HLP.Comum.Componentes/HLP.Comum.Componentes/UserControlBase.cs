@@ -481,7 +481,8 @@ namespace HLP.Comum.Components
                     this._TamanhoComponente = objConfigComponenteModel.objConfigCompUsu.iTamanhoComponente.ToInt32();
                     this.TabIndex = objConfigComponenteModel.objConfigCompUsu.nOrder;
 
-                    if (!objConfigComponenteModel.xName.Equals("txtCodigo"))
+
+                    if (!objConfigComponenteModel.xName.Equals("txtCodigo") && (objConfigComponenteModel.Base != null))
                     {
                         if (objConfigComponenteModel.Base.NULLABLE.Equals("0"))
                         {
