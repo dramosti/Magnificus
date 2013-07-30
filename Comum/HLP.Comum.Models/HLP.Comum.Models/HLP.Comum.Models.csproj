@@ -68,7 +68,6 @@
     <Compile Include="LogExceptionModel.cs" />
     <Compile Include="FormulariosModel.cs" />
     <Compile Include="ParameterOrderModel.cs" />
-    <Compile Include="Parametro_GeralModel.cs" />
     <Compile Include="PesquisaPadraoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FieldViewModel.cs" />

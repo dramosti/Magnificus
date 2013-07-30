@@ -16,6 +16,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HLP.Services.Interfaces.Entries.Parametros;
+using HLP.Models.Entries.Parametros;
 
 namespace Magnificus
 {
@@ -25,7 +27,10 @@ namespace Magnificus
         public IFuncionarioService usuarioService { get; set; }
 
         [Inject]
-        public IEmpresaService empresaService { get; set; }
+        public IEmpresaService iempresaService { get; set; }
+
+        [Inject]
+        public IParametro_GeralService iparametro_geralService { get; set; }
 
         public formLoginHlp()
         {
@@ -35,7 +40,7 @@ namespace Magnificus
             kernel.Inject(this);
             cbxIdEmpresa.DisplayMember = "xFantasia";
             cbxIdEmpresa.ValueMember = "idEmpresa";
-            cbxIdEmpresa.DataSource = empresaService.GetAllEmpresa(true);
+            cbxIdEmpresa.DataSource = iempresaService.GetAllEmpresa(true);
             lTimer.Text = DateTime.Now.TimeOfDay.ToString().Remove(8);
             timer1.Start();
         }
@@ -58,6 +63,10 @@ namespace Magnificus
                             CompanyData.xNome = (cbxIdEmpresa.SelectedItem as EmpresaModel).xNome.Split('-')[1].Trim();
                             CompanyData.xFantasia = (cbxIdEmpresa.SelectedItem as EmpresaModel).xFantasia.Split('-')[1].Trim();
                             CompanyData.xLinqLogoEmpresa = (cbxIdEmpresa.SelectedItem as EmpresaModel).xLinkLogoEmpresa;
+
+                            Parametro_GeralModel param_geral = iparametro_geralService.GetGeralByEmpresa();
+                            if (param_geral != null)
+                                CompanyData.stMaiusculo = param_geral.stMaiusculo.ToBoolean();
 
                             Pastas.Path_SettingsEmpresa = (cbxIdEmpresa.SelectedItem as EmpresaModel).xLinkPastas;
 
@@ -169,6 +178,11 @@ namespace Magnificus
         private void formLoginHlp_FormClosed(object sender, FormClosedEventArgs e)
         {
             ControleAcessoService.InsereControleAcesso(false);
+        }
+
+        private void formLoginHlp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

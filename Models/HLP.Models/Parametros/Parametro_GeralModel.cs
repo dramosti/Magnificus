@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HLP.Comum.Models
+namespace HLP.Models.Entries.Parametros
 {
     public class Parametro_GeralModel
     {

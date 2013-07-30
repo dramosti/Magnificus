@@ -98,6 +98,7 @@
     <Compile Include="Gerais\Calendario_DetalheModel.cs" />
     <Compile Include="Gerais\VersaoModel.cs" />
     <Compile Include="Gerais\VersaoService.cs" />
+    <Compile Include="Parametros\Parametro_GeralModel.cs" />
     <Compile Include="RecursosHumanos\CargoModel.cs" />
     <Compile Include="Gerais\CidadeModel.cs" />
     <Compile Include="Gerais\ContatoModel.cs" />
