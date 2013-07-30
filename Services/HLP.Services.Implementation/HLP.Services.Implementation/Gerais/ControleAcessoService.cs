@@ -1,5 +1,5 @@
 ﻿using HLP.Comum.Infrastructure;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Models.Entries.Gerais;
 using Microsoft.Win32;
 using System;

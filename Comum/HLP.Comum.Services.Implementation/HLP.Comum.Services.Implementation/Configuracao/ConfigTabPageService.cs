@@ -7,7 +7,7 @@ using HLP.Comum.Infrastructure;
 using Ninject;
 using HLP.Comum.Repository.Interfaces.Configuracao;
 using System.Windows.Forms;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Comum.Models;
 using HLP.Comum.Components;
 
@@ -75,6 +75,8 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                     //}
                     //else
                     {
+                        AC.ExtendedRenderer.Navigator.KryptonTabControl tabControl = (ctr as TabPage).Parent as AC.ExtendedRenderer.Navigator.KryptonTabControl;
+                        tabControl.SelectedTab = (ctr as TabPage);
                         ConfigTabPageModel tab = new ConfigTabPageModel();                        
                         this.GetInfoTabPage(ctr, tab);
                         iComponenteService.GetInfoCompByTabePage(tab, lControl);

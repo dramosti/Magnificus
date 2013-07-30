@@ -14,10 +14,11 @@ using HLP.Comum.Services.Interface;
 using HLP.Models.Entries.Comercial;
 using HLP.Comum.Messages;
 using HLP.Comum.UI.Exception;
-using HLP.Comum.Models.Static;
+
 using ComponentFactory.Krypton.Toolkit;
 using System.Threading;
 using HLP.Comum.Infrastructure;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.Comercial
 {

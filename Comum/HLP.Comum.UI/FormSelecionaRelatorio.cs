@@ -14,9 +14,10 @@ using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Services.Interface;
 using HLP.Dependencies;
 using CrystalDecisions.CrystalReports.Engine;
-using HLP.Comum.Models.Static;
+
 using System.Configuration;
 using HLP.Comum.Models;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.UI
 {

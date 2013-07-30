@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Messages;
 using HLP.Comum.Models;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Comum.Modules;
 using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Dependencies;
@@ -17,6 +17,7 @@ using Ninject;
 using HLP.Comum.UI.Exception;
 using HLP.Comum.Infrastructure;
 using HLP.Comum.Services.Interface;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.UI
 {

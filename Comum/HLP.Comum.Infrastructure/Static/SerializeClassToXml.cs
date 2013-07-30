@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml.Serialization;
 using System.IO;
 
-namespace HLP.Comum.Infrastructure
+namespace HLP.Comum.Infrastructure.Static
 {
     public class SerializeClassToXml
     {

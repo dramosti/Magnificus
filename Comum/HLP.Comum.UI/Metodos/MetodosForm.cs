@@ -9,7 +9,7 @@ using Ninject;
 using HLP.Comum.Services.Interface;
 using HLP.Comum.Models;
 using HLP.Dependencies;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Infrastructure;
 

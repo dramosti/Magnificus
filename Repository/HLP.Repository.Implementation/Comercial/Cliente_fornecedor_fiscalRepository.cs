@@ -7,7 +7,7 @@ using HLP.Models.Entries.Comercial;
 using Ninject;
 using HLP.Comum.Infrastructure;
 using Microsoft.Practices.EnterpriseLibrary.Data;
-using HLP.Comum.Models.Static;
+
 
 namespace HLP.Repository.Implementation.Entries.Comercial
 {

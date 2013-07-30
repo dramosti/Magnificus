@@ -11,13 +11,14 @@ using Ninject;
 using HLP.Comum.Services.Interface;
 using HLP.Dependencies;
 using HLP.Services.Interfaces.Entries.Comercial;
-using HLP.Comum.Models.Static;
+
 using HLP.Models.Entries.Comercial;
 using HLP.Comum.UI.Exception;
 using HLP.Comum.Messages;
 using System.Threading;
 using HLP.Services.Interfaces.Entries.Gerais;
 using HLP.Models.Entries.Gerais;
+using HLP.Comum.Infrastructure.Static;
 
 /* DIEGO_RAMOS - Criado uma Trigger (Tr_Produto_Data_Alter_Valor_Venda.sql) para alterar o campo dValorVenda com a data atual quando o valor de venda (vVenda) do produto for alterado. 
  * 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HLP.Comum.Models
 {
-    public class ComboBoxColumn
+    public class ComboBoxColumnModel
     {
         public string DisplayMember { get; set; }
         public int ValueMember { get; set; }

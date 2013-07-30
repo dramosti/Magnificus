@@ -6,7 +6,7 @@ using Ninject;
 using HLP.Comum.Infrastructure;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using HLP.Comum.Infrastructure;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.Repository.Interfaces.Configuracao;
 using HLP.Comum.Models;
 
@@ -69,11 +69,11 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
 
             }
 
-            List<CONFIG_PesquisaModel> lReturn = new List<Infrastructure.CONFIG_PesquisaModel>();
+            List<CONFIG_PesquisaModel> lReturn = new List<CONFIG_PesquisaModel>();
             int iCount = 1;
             foreach (PesquisaPadraoModel item in regCONFIG_PesquisaByViewAccessor.Execute(sViewName).ToList())
             {
-                lReturn.Add(new Infrastructure.CONFIG_PesquisaModel { iOrderData = iCount, iOrderFilter = iCount, stData = true, stFilter = true, xField = item.COLUMN_NAME });
+                lReturn.Add(new CONFIG_PesquisaModel { iOrderData = iCount, iOrderFilter = iCount, stData = true, stFilter = true, xField = item.COLUMN_NAME });
                 iCount++;
             }
             return lReturn;

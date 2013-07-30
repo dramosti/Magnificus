@@ -6,8 +6,7 @@ using HLP.Services.Interfaces.Entries.Gerais;
 using Ninject;
 using HLP.Repository.Interfaces.Entries.Gerais;
 using HLP.Models.Entries.Gerais;
-using HLP.Comum.Models.Static;
-
+using HLP.Comum.Infrastructure.Static;
 namespace HLP.Services.Implementation.Entries.Gerais
 {
     public class Familia_produtoService : IFamilia_ProdutoService

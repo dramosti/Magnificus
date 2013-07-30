@@ -16,9 +16,10 @@ using HLP.Models.Entries.Fiscal;
 using HLP.Comum.Messages;
 using HLP.Comum.UI.Exception;
 using System.Linq;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.Models;
 using System.Threading;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.Fiscal
 {

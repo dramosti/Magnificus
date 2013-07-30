@@ -14,8 +14,9 @@ using HLP.Dependencies;
 using HLP.Comum.Services.Interface;
 using HLP.Comum.UI.Exception;
 using HLP.Comum.Messages;
-using HLP.Comum.Models.Static;
+
 using System.Threading;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.Geral
 {

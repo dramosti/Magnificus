@@ -7,7 +7,8 @@ using HLP.Comum.Infrastructure;
 using Ninject;
 using HLP.Models.Entries.CRM;
 using Microsoft.Practices.EnterpriseLibrary.Data;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 namespace HLP.Repository.Implementation.Entries.CRM
 {
     public class FidelidadeRepository : IFidelidadeRepository

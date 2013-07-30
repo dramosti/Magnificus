@@ -7,7 +7,9 @@ using HLP.Comum.Infrastructure;
 using System.Data.Common;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using System.Data;
-using HLP.Comum.Models.Static;
+
+using HLP.Comum.Models;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.Repository.Implementation.Configuracao
 {

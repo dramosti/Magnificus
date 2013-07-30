@@ -7,7 +7,8 @@ using HLP.Models.Entries.Fiscal;
 using Ninject;
 using HLP.Comum.Infrastructure;
 using Microsoft.Practices.EnterpriseLibrary.Data;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace HLP.Repository.Implementation.Entries.Fiscal
 {

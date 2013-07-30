@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using HLP.Comum.Models;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.Components
 {

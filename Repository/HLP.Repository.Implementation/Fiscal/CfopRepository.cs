@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using HLP.Comum.Infrastructure;
-using HLP.Comum.Models.Static;
 using HLP.Models.Entries.Fiscal;
 using HLP.Repository.Interfaces.Entries.Fiscal;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Ninject;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Repository.Implementation.Entries.Fiscal
 {

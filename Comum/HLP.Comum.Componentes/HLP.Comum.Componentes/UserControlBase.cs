@@ -10,7 +10,8 @@ using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Models;
 using System.Text.RegularExpressions;
 using HLP.Comum.Infrastructure;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace HLP.Comum.Components
 {
@@ -62,7 +63,7 @@ namespace HLP.Comum.Components
             }
         }
 
-        
+
         [Category("HLP")]
         [Description("Indica se o componente estará visível para o Usuário")]
         [DefaultValue(true)]
@@ -71,7 +72,7 @@ namespace HLP.Comum.Components
             get { return this.Visible; }
             set
             {
-                
+
                 if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
                 {
                     if (objConfigComponenteModel.Base.NULLABLE == "0")
@@ -164,7 +165,7 @@ namespace HLP.Comum.Components
             }
         }
 
-        public InfoField Base { get; set; }
+        public InfoFieldModel Base { get; set; }
 
         public enum CampoObrigatorio
         {
@@ -478,7 +479,23 @@ namespace HLP.Comum.Components
                     this._help = objConfigComponenteModel.objConfigCompUsu.xHelp;
                     this._Visible = objConfigComponenteModel.objConfigCompUsu.stVisible.ToBoolean();
                     this._TamanhoComponente = objConfigComponenteModel.objConfigCompUsu.iTamanhoComponente.ToInt32();
+                    this.TabIndex = objConfigComponenteModel.objConfigCompUsu.nOrder;
 
+                    if (!objConfigComponenteModel.xName.Equals("txtCodigo"))
+                    {
+                        if (objConfigComponenteModel.Base.NULLABLE.Equals("0"))
+                        {
+                            this.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.SIM);
+                        }
+                    }
+                    else
+                    {
+                        this.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.NÃO);
+                    }
+                }
+                else
+                {
+                    this.SetPropertyValue("_Obrigatorio", HLP_TextBox.CampoObrigatorio.NÃO);
                 }
             }
             catch (Exception ex)

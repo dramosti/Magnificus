@@ -1,10 +1,11 @@
-﻿using System;
+﻿using HLP.Comum.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HLP.Comum.Infrastructure;
+using System.Threading.Tasks;
 
-namespace HLP.Models.Entries.Parametros
+namespace HLP.Comum.Models
 {
     public class Parametro_GeralModel
     {
@@ -14,6 +15,5 @@ namespace HLP.Models.Entries.Parametros
         public int idEmpresa { get; set; }
         [ParameterOrder(Order = 3)]
         public byte stMaiusculo { get; set; }
-
     }
 }

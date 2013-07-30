@@ -6,10 +6,12 @@ using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Components;
 using System.Linq;
 using HLP.Comum.Infrastructure;
-using HLP.Comum.Models.Static;
+
 using ComponentFactory.Krypton.Toolkit;
 using System.Reflection;
 using HLP.Comum.Infrastructure.Extension;
+using HLP.Comum.Models;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.Services.Implementation
 {

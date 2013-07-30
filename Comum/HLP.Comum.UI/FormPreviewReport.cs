@@ -8,9 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 using HLP.Comum.Infrastructure;
 using CrystalDecisions.CrystalReports.Engine;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.UI.Exception;
 using System.Configuration;
+using HLP.Comum.Models;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.UI
 {

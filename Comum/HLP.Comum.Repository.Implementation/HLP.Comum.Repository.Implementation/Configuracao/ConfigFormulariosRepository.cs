@@ -8,10 +8,11 @@ using System.Data;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using HLP.Comum.Repository.Interfaces.Configuracao;
 using System.Data.Common;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Models.Entries.Parametros;
 using HLP.Services.Interfaces.Entries.Parametros;
 using HLP.Repository.Interfaces.Entries.Parametros;
+using HLP.Comum.Models;
 
 namespace HLP.Comum.Repository.Implementation.Configuracao
 {

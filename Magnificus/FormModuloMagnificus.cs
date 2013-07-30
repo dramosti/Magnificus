@@ -9,7 +9,7 @@ using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Infrastructure;
 using HLP.Comum.Messages;
 using HLP.Comum.Models;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.Modules;
 using HLP.Comum.Modules.Infrastructure;
 using HLP.Comum.Modules.Interface;
@@ -20,6 +20,7 @@ using System.Diagnostics;
 using System.Drawing;
 using Microsoft.Win32;
 using HLP.Services.Implementation.Entries.Gerais;
+using HLP.Comum.Infrastructure.Static;
 
 namespace Magnificus
 {
@@ -27,7 +28,7 @@ namespace Magnificus
     {
         List<KryptonButton> listBotoesLaterais = new List<KryptonButton>();
         Modulo modulo = new Modulo();
-        UserBasicConfig userBasicConfig = new UserBasicConfig();
+        UserBasicConfigModel userBasicConfig = new UserBasicConfigModel();
         ApplicationDeployment ad;
         FormInformacao frm = null;
         MethodInfo setStatusBar = null;
@@ -125,7 +126,7 @@ namespace Magnificus
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             if (File.Exists(UserData.xPathBasicConfig))
             {
-                userBasicConfig = SerializeClassToXml.DeserializeClasse<UserBasicConfig>(UserData.xPathBasicConfig);
+                userBasicConfig = SerializeClassToXml.DeserializeClasse<UserBasicConfigModel>(UserData.xPathBasicConfig);
             }
             BuscaVisual();
         }
@@ -149,7 +150,7 @@ namespace Magnificus
                 CarregaListaBotoesModulos();
                 if (File.Exists(UserData.xPathBasicConfig))
                 {
-                    userBasicConfig = SerializeClassToXml.DeserializeClasse<UserBasicConfig>(UserData.xPathBasicConfig);
+                    userBasicConfig = SerializeClassToXml.DeserializeClasse<UserBasicConfigModel>(UserData.xPathBasicConfig);
                 }
                 else
                 {
@@ -347,13 +348,13 @@ namespace Magnificus
         #region ConfigMenus
         private void mnSuperior_Click(object sender, EventArgs e)
         {
-            userBasicConfig.tpMenu = UserBasicConfig.TipoMenu.Top;
+            userBasicConfig.tpMenu = UserBasicConfigModel.TipoMenu.Top;
             SaveConfigUser();
             ConfiguraMenu();
         }
         private void msLateral_Click(object sender, EventArgs e)
         {
-            userBasicConfig.tpMenu = UserBasicConfig.TipoMenu.Lateral;
+            userBasicConfig.tpMenu = UserBasicConfigModel.TipoMenu.Lateral;
             SaveConfigUser();
             ConfiguraMenu();
         }
@@ -366,7 +367,7 @@ namespace Magnificus
         {
             try
             {
-                if (userBasicConfig.tpMenu == UserBasicConfig.TipoMenu.Lateral)
+                if (userBasicConfig.tpMenu == UserBasicConfigModel.TipoMenu.Lateral)
                 {
                     mnLateral.Checked = true;
                     mnSuperior.Checked = false;
@@ -1180,7 +1181,7 @@ namespace Magnificus
             {
                 Process p = new Process();
                 ProcessStartInfo psi = new ProcessStartInfo();
-                psi.FileName = HLP.Comum.Models.Static.Pastas.CaminhoPadraoRegWindows +
+                psi.FileName = Pastas.CaminhoPadraoRegWindows +
                     @"\magnificus\hlptray\SystemTray.exe";
                 psi.Arguments = UserData.xNome;
                 p.StartInfo = psi;

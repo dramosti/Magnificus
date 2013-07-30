@@ -8,7 +8,8 @@ using HLP.Comum.Infrastructure;
 using HLP.Models.Entries.Gerais;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using HLP.Models.Entries.Comercial;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace HLP.Repository.Implementation.Entries.Gerais
 {

@@ -13,8 +13,9 @@ using HLP.Models.Entries.RecursosHumanos;
 using HLP.Dependencies;
 using HLP.Comum.Messages;
 using HLP.Comum.UI.Exception;
-using HLP.Comum.Models.Static;
+
 using System.Threading;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.RecursosHumanos
 {

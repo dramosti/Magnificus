@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace HLP.Comum.Infrastructure
+namespace HLP.Comum.Infrastructure.Static
 {
-    public class Criptografia
+  public  class Criptografia
     {
         public static string Encripta(string strTexto)
         {

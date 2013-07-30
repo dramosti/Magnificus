@@ -1,5 +1,4 @@
-﻿using HLP.Comum.Models.Static;
-using HLP.Models.Entries.Gerais;
+﻿using HLP.Models.Entries.Gerais;
 using HLP.Repository.Interfaces.Entries.Gerais;
 using HLP.Services.Interfaces.Entries.Gerais;
 using Ninject;

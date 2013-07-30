@@ -13,7 +13,7 @@ namespace HLP.Comum.Services.Interface.Configuracao
 
         List<ConfigComponenteModel> GetListaControlesConfigComponenteModel();
         List<ConfigComponenteModel> GetAllCompByTabPage(int idTabPage, int idUsuario);
-        InfoField GetInfoField(string table_name, string column_name);
+        InfoFieldModel GetInfoField(string table_name, string column_name);
         void GetInfoCompByTabePage(ConfigTabPageModel tab, List<Control> lControl);
         void SetConfigToComp(List<ConfigComponenteModel> lCompModel, List<Control> lControl);
         void SetTamanhoComponentes(TabPage tab);

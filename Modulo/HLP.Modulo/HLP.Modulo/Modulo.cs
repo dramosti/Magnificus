@@ -7,7 +7,6 @@ using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Modules.Interface;
 using HLP.Comum.Modules.Infrastructure;
 using HLP.Comum.Models;
-using HLP.Comum.Models.Static;
 using HLP.Comum.Infrastructure;
 using System.IO;
 using System.Xml.Serialization;

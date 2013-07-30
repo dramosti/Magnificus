@@ -5,8 +5,9 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Messages;
 using HLP.Comum.Models;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.UI.Exception;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.UI
 {

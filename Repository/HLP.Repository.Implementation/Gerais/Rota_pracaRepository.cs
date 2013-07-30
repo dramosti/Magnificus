@@ -5,11 +5,12 @@ using HLP.Repository.Interfaces.Entries.Comercial;
 using Ninject;
 using HLP.Comum.Infrastructure;
 using Microsoft.Practices.EnterpriseLibrary.Data;
-using HLP.Comum.Models.Static;
+
 using System.Data.Common;
 using System.Data;
 using HLP.Models.Entries.Gerais;
 using HLP.Repository.Interfaces.Entries.Gerais;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Repository.Implementation.Entries.Gerais
 {

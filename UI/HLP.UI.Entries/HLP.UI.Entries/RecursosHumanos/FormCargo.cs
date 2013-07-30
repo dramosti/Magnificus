@@ -13,9 +13,10 @@ using HLP.Services.Interfaces.Entries.RecursosHumanos;
 using HLP.Models.Entries.RecursosHumanos;
 using HLP.Dependencies;
 using HLP.Comum.Messages;
-using HLP.Comum.Models.Static;
+
 using System.Threading;
 using ComponentFactory.Krypton.Toolkit;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.RecursosHumanos
 {

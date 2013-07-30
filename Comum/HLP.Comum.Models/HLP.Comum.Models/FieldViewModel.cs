@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 namespace HLP.Comum.Models
 {
     [Serializable]
-    public class FieldView
+    public class FieldViewModel
     {
         [XmlAttribute]
         public string Field { get; set; }

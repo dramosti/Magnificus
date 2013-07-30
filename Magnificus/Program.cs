@@ -6,7 +6,6 @@ using HLP.Comum.Modules;
 using HLP.Comum.UI;
 using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.UI.Exception;
-using HLP.Comum.Models.Static;
 using System.Runtime.InteropServices;
 using HLP.UI.Utility;
 using System.ComponentModel;
@@ -16,6 +15,7 @@ using System.IO;
 using HLP.Models.Entries.Gerais;
 using System.Net;
 using HLP.Services.Implementation.Entries.Gerais;
+using HLP.Comum.Infrastructure.Static;
 
 namespace Magnificus
 {

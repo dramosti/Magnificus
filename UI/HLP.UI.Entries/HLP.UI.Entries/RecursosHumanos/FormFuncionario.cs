@@ -14,11 +14,12 @@ using HLP.Dependencies;
 using HLP.Comum.Services.Interface;
 using HLP.Comum.UI.Exception;
 using HLP.Comum.Messages;
-using HLP.Comum.Models.Static;
+
 using System.Linq;
 using System.IO;
 using System.Threading;
 using HLP.Comum.Infrastructure;
+using HLP.Comum.Infrastructure.Static;
 namespace HLP.UI.Entries.RecursosHumanos
 {
     public partial class FormFuncionario : FormPadraoCadastro

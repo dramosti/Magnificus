@@ -13,6 +13,6 @@ namespace HLP.Comum.Repository.Interfaces.Configuracao
         List<ConfigComponenteModel> GetAllCompByTabPage(int idTabPage);
         ConfigComponenteUsuModel GetConfigCompUsu(int idComponente, int idUsuario);
         ConfigCompGridViewUsuModel GetConfigCompGridUsu(int idComponente, int idUsuario);
-        InfoField GetInfoField(string table_name, string column_name);
+        InfoFieldModel GetInfoField(string table_name, string column_name);
     }
 }

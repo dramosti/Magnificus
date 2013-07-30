@@ -7,9 +7,9 @@ namespace HLP.Comum.Models
 {
     [Serializable]
     [System.Xml.Serialization.XmlRoot("objects")]
-    public class belModulos
+    public class ModulosModel
     {
-        public belModulos()
+        public ModulosModel()
         {
             lFormularios = new List<belFormularios>();
         }

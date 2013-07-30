@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Reflection;
-using HLP.Comum.Models.Static;
 
 namespace HLP.Comum.Infrastructure
 {
@@ -14,7 +13,7 @@ namespace HLP.Comum.Infrastructure
             try
             {
                 List<object> list = new List<object>();
-                list.Add(UserData.idUser);
+                list.Add(HLP.Comum.Infrastructure.Static.UserData.idUser); // IDUSUARIO
 
                 Type type = classe.GetType();
                 ModelDefinition modelDefinition =

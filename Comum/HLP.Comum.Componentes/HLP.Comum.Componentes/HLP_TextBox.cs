@@ -11,8 +11,8 @@ using System.Xml.Linq;
 using HLP.Comum.Models;
 using System.Reflection;
 using HLP.Comum.Components.Configuracao;
-using HLP.Comum.Models.Static;
 using HLP.Comum.Messages;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.Components
 {
@@ -259,6 +259,8 @@ namespace HLP.Comum.Components
                     this.Text = objConfigComponenteModel.objConfigCompUsu.xText;
                     this.Enabled = objConfigComponenteModel.objConfigCompUsu.stEnabled.ToBoolean();
                     this.MaxLength = objConfigComponenteModel.objConfigCompUsu.nMaxLength.ToInt32();
+                    //this.CharacterCasing = 
+                    //controle.SetPropertyValue("CharacterCasing", (Upper ? CharacterCasing.Upper : CharacterCasing.Normal));
                 }
 
             }

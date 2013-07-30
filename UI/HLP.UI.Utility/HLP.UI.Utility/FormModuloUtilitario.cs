@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using HLP.Comum.Modules;
 using HLP.Comum.Modules.Interface;
 using ComponentFactory.Krypton.Toolkit;
-using HLP.Comum.Models.Static;
+
 using System.Diagnostics;
 using Microsoft.Win32;
 

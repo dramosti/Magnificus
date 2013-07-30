@@ -7,9 +7,10 @@ using System.Xml;
 using HLP.Comum.Modules.Interface;
 using HLP.Comum.Modules.Infrastructure;
 using HLP.Comum.Models;
-using HLP.Comum.Models.Static;
+
 using ComponentFactory.Krypton.Toolkit;
 using System.Xml.Serialization;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.Modules
 {

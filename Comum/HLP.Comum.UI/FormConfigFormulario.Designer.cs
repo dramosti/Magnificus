@@ -311,7 +311,7 @@
             // 
             // infoFieldBindingSource
             // 
-            this.infoFieldBindingSource.DataSource = typeof(HLP.Comum.Models.InfoField);
+            this.infoFieldBindingSource.DataSource = typeof(HLP.Comum.Models.InfoFieldModel);
             // 
             // txtHelp
             // 

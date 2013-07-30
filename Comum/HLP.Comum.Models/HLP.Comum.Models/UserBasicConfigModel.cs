@@ -6,7 +6,7 @@ using System.Text;
 namespace HLP.Comum.Models
 {
     [Serializable]
-    public class UserBasicConfig
+    public class UserBasicConfigModel
     {
         private string _xSkin = "Silver";
 

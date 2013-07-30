@@ -1,5 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Comum.UI;
 using HLP.Comum.UI.Exception;
 using HLP.Dependencies;
@@ -172,3 +172,4 @@ namespace Magnificus
         }
     }
 }
+

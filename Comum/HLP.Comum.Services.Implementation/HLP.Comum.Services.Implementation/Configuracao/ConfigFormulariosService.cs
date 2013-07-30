@@ -4,15 +4,17 @@ using System.Collections.Generic;
 using Ninject;
 using HLP.Comum.Repository.Interfaces.Configuracao;
 using HLP.Comum.Infrastructure;
-using HLP.Comum.Models.Static;
+
 using System.IO;
 using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
 using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Components;
 using ComponentFactory.Krypton.Toolkit;
-using HLP.Comum.Models.Static;
+
 using HLP.Services.Interfaces.Entries.Gerais;
+using HLP.Comum.Models;
+using HLP.Comum.Infrastructure.Static;
 
 
 

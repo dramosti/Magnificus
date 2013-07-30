@@ -13,8 +13,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HLP.Comum.Ws;
 using System.Threading;
-using HLP.Comum.Models.Static;
+
 using Microsoft.Win32;
+using HLP.Comum.Infrastructure.Static;
 
 namespace Magnificus
 {

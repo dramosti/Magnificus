@@ -1,5 +1,5 @@
 ﻿using HLP.Comum.Messages;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.Services.Interface;
 using HLP.Comum.UI;
 using HLP.Comum.UI.Exception;

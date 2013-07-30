@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Diagnostics;
 using Microsoft.Win32;
-using HLP.Comum.Models.Static;
+
 using System.IO;
 using System.Net;
 using System.Threading;
+using HLP.Comum.Infrastructure.Static;
 
 namespace SystemTray
 {

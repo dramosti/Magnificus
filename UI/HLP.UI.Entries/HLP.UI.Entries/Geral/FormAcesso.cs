@@ -1,5 +1,6 @@
 ﻿using HLP.Comum.Infrastructure;
 using HLP.Comum.Messages;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Comum.Services.Interface;
 using HLP.Comum.UI;
 using HLP.Comum.UI.Exception;

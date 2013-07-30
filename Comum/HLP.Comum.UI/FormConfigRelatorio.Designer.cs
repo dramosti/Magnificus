@@ -361,7 +361,7 @@ namespace HLP.Comum.UI
             // 
             // bsReports
             // 
-            this.bsReports.DataSource = typeof(HLP.Comum.Infrastructure.RelatoriosModel);
+            this.bsReports.DataSource = typeof(HLP.Comum.Models.RelatoriosModel);
             // 
             // FormConfigRelatorio
             // 

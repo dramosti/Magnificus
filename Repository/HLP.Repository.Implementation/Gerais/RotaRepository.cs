@@ -3,10 +3,10 @@ using System.Linq;
 using Ninject;
 using HLP.Comum.Infrastructure;
 using Microsoft.Practices.EnterpriseLibrary.Data;
-using HLP.Comum.Models.Static;
 using HLP.Models.Entries.Gerais;
 using HLP.Repository.Interfaces.Entries.Gerais;
 using System.Collections.Generic;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Repository.Implementation.Entries.Gerais
 {

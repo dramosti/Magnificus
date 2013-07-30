@@ -35,6 +35,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\ComponentFactory.Krypton.Toolkit\4.4.0.0__a87e673e9ecb6e8e\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\14.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -54,7 +63,9 @@
     </Reference>
     <Reference Include="Ninject, Version=2.1.0.91, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,11 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModelFilhos.cs" />
-    <Compile Include="Criptografia.cs" />
     <Compile Include="Extension\AttributeExt.cs" />
     <Compile Include="IoC\DIContollersModuleBase.cs" />
     <Compile Include="IsolatedStoreComum.cs" />
-    <Compile Include="LogException.cs" />
     <Compile Include="MetodosDllWindows.cs" />
     <Compile Include="ModelDefinition.cs" />
     <Compile Include="ModelFormularios.cs" />
@@ -77,15 +86,18 @@
     <Compile Include="ParameterOrder.cs" />
     <Compile Include="Parameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistroWindows.cs" />
-    <Compile Include="SerializeClassToXml.cs" />
+    <Compile Include="Static\Collection.cs" />
+    <Compile Include="Static\CompanyData.cs" />
+    <Compile Include="Static\Criptografia.cs" />
+    <Compile Include="Static\Extensions.cs" />
+    <Compile Include="Static\Pastas.cs" />
+    <Compile Include="Static\RegistroWindows.cs" />
+    <Compile Include="Static\SerializeClassToXml.cs" />
+    <Compile Include="Static\ServerData.cs" />
+    <Compile Include="Static\Sistema.cs" />
+    <Compile Include="Static\UserData.cs" />
+    <Compile Include="Static\Util.cs" />
     <Compile Include="UnitOfWorkBase.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HLP.Comum.Models\HLP.Comum.Models\HLP.Comum.Models.csproj">
-      <Project>{5BD4A7F2-4E89-43BA-8DE0-85E8C8A6C492}</Project>
-      <Name>HLP.Comum.Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
@@ -97,13 +109,7 @@
     <Content Include="KryptonLibrary\ComponentFactory.Krypton.Toolkit.dll" />
     <Content Include="NInject\Ninject.dll" />
     <Content Include="Spring\Spring.Core.dll" />
-    <Content Include="WebServices\HLP.WebServices.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Zip\ICSharpCode.SharpZipLib.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

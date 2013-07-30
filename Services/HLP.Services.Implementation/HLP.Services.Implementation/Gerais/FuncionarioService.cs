@@ -7,6 +7,7 @@ using HLP.Models.Entries.Gerais;
 using HLP.Repository.Interfaces.Entries.Gerais;
 using Ninject;
 using HLP.Comum.Infrastructure;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Services.Implementation.Entries.Gerais
 {

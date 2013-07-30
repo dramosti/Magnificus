@@ -15,7 +15,8 @@ using HLP.Comum.UI.Exception;
 using HLP.Comum.Messages;
 using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Infrastructure;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace HLP.Comum.UI
 {

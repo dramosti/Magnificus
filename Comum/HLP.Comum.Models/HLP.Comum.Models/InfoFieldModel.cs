@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HLP.Comum.Models.Static;
 
 namespace HLP.Comum.Models
 {
-    public class InfoField
+    public class InfoFieldModel
     {
         public string TABLE_QUALIFIER { get; set; }
         public string TABLE_OWNER { get; set; }
@@ -51,12 +50,12 @@ namespace HLP.Comum.Models
 
         public decimal GetMaxLeghtToNumericUpDown()
         {
-            return ("").PadLeft((this.PRECISION.ToInt32() - this.SCALE.ToInt32()), '9').ToDecimal();
+            return Convert.ToDecimal(("").PadLeft((Convert.ToInt32(this.PRECISION) - Convert.ToInt32(this.SCALE)), '9'));
         }
 
         public int GetMaxLenghtNormal()
         {
-            return  (this.PRECISION.ToDecimal() - this.SCALE.ToDecimal()).ToInt32();
+            return Convert.ToInt32((Convert.ToDecimal(this.PRECISION) - Convert.ToDecimal(this.SCALE)));
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using HLP.Comum.Infrastructure;
 using System.Windows.Forms;
+using HLP.Comum.Models;
 
 namespace HLP.Comum.Services.Interface.Configuracao
 {

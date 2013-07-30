@@ -13,10 +13,11 @@ using HLP.Services.Interfaces.Entries;
 using HLP.Comum.Services.Interface;
 using HLP.Models.Entries.Gerais;
 using HLP.Dependencies;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.UI.Exception;
 using HLP.Comum.Messages;
 using System.Threading;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.Geral.Transportes
 {

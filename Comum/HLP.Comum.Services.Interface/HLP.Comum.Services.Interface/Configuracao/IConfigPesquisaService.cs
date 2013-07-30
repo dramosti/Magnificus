@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HLP.Comum.Infrastructure;
+using HLP.Comum.Models;
 
 namespace HLP.Comum.Services.Interface.Configuracao
 {

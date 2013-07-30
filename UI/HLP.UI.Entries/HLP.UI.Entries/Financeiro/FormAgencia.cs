@@ -15,11 +15,12 @@ using HLP.Comum.UI.Exception;
 using HLP.Services.Interfaces.Entries.Gerais;
 using HLP.Dependencies;
 using HLP.Comum.Services.Interface;
-using HLP.Comum.Models.Static;
+
 using System.Threading;
 using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Models;
 using HLP.Models.Entries.Gerais;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.Financeiro
 {
@@ -422,7 +423,7 @@ namespace HLP.UI.Entries.Financeiro
             {
                 if ((sender as KryptonDataGridView).Columns[e.ColumnIndex] == clxCEP)
                 {
-                    HLP.WebServices.Endereco end = Util.BuscaEnderecoByCep((sender as KryptonDataGridView)[e.ColumnIndex, e.RowIndex].Value.ToString());
+                    HLP.Comum.Ws.Endereco end = HLP.Comum.Ws.ServiceCep.BuscaEndereco((sender as KryptonDataGridView)[e.ColumnIndex, e.RowIndex].Value.ToString());
                     if (end != null)
                     {
                         (sender as KryptonDataGridView)["clxEndereco", e.RowIndex].Value = end.Logradouro;

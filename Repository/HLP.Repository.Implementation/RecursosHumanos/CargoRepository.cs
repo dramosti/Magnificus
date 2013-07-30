@@ -7,7 +7,8 @@ using HLP.Comum.Infrastructure;
 using Ninject;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using HLP.Models.Entries.RecursosHumanos;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace HLP.Repository.Implementation.Entries.RecursosHumanos
 {

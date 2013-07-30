@@ -6,6 +6,7 @@ using HLP.Services.Interfaces.Entries.Parametros;
 using HLP.Models.Entries.Parametros;
 using Ninject;
 using HLP.Repository.Interfaces.Entries.Parametros;
+using HLP.Comum.Models;
 
 namespace HLP.Services.Implementation.Entries.Parametros
 {

@@ -6,8 +6,9 @@ using HLP.Repository.Interfaces.Entries.Gerais;
 using Ninject;
 using HLP.Comum.Infrastructure;
 using Microsoft.Practices.EnterpriseLibrary.Data;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Models.Entries.Gerais;
-using HLP.Comum.Models.Static;
+
 using System.Data;
 
 namespace HLP.Repository.Implementation.Entries.Gerais

@@ -9,8 +9,10 @@ using ComponentFactory.Krypton.Toolkit;
 using Ninject;
 using HLP.Comum.Services.Interface;
 using HLP.Dependencies;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.Infrastructure;
+using HLP.Comum.Models;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.UI
 {
@@ -18,7 +20,7 @@ namespace HLP.Comum.UI
     {
         [Inject]
         public ILogExceptionService logService { get; set; }
-        private LogException objLog = new LogException();
+        private LogExceptionModel objLog = new LogExceptionModel();
         private LogDados objLogDados;
 
 

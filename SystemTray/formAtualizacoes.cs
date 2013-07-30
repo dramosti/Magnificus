@@ -10,7 +10,8 @@ using HLP.Models.Entries.Gerais;
 using Ninject;
 using HLP.Services.Interfaces.Entries.Gerais;
 using HLP.Dependencies;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace SystemTray
 {

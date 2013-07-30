@@ -7,7 +7,7 @@ using Ninject;
 using HLP.Comum.Repository.Interfaces.Configuracao;
 using HLP.Comum.Infrastructure;
 using HLP.Comum.Components;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Models;
@@ -82,7 +82,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
         }
 
-        public Models.InfoField GetInfoField(string table_name, string column_name)
+        public Models.InfoFieldModel GetInfoField(string table_name, string column_name)
         {
             return icomponenteRepository.GetInfoField(table_name, column_name);
         }
@@ -122,9 +122,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                     try
                     {
                         #region Component Info
-                        // Dafault Info                    
-                        comp.xField = controle.ToObject().GetPropertyValue("_Field").ToString();
-                        comp.xTable = controle.ToObject().GetPropertyValue("_Table").ToString();
 
                         // User Info                        
                         comp.objConfigCompUsu.nOrder = controle.Parent.Controls.IndexOf(controle);
@@ -292,8 +289,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                                 {
                                     #region Component Info
 
-                                    controle.SetPropertyValue("_Field", objCompModel.xField);
-                                    controle.SetPropertyValue("_Table", objCompModel.xTable);
                                     // achar o flowlayoutPanel do componente;
                                     //flp.Controls.SetChildIndex(control, control.Parent.Controls.IndexOf(control));
                                     controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;
@@ -455,11 +450,11 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                                             ((DataGridViewComboBoxColumn)dgvCol).ValueMember = "ValueMemberTiny";
                                             ((DataGridViewComboBoxColumn)dgvCol).DisplayMember = "DisplayMember";
 
-                                            List<ComboBoxColumn> objboCombo = new List<ComboBoxColumn>();
+                                            List<ComboBoxColumnModel> objboCombo = new List<ComboBoxColumnModel>();
                                             int icount = 0;
                                             foreach (object item in ((DataGridViewComboBoxColumn)dgvCol).Items)
                                             {
-                                                objboCombo.Add(new ComboBoxColumn { DisplayMember = (item.GetType() == typeof(System.String) ? item.ToString() : ((ComboBoxColumn)item).DisplayMember), ValueMember = icount, ValueMemberTiny = Convert.ToByte(icount) });
+                                                objboCombo.Add(new ComboBoxColumnModel { DisplayMember = (item.GetType() == typeof(System.String) ? item.ToString() : ((ComboBoxColumnModel)item).DisplayMember), ValueMember = icount, ValueMemberTiny = Convert.ToByte(icount) });
                                                 icount++;
                                             }
                                             ((DataGridViewComboBoxColumn)dgvCol).DataSource = objboCombo;

@@ -17,8 +17,9 @@ using HLP.Comum.UI.Exception;
 using HLP.Services.Interfaces.Entries.Comercial;
 using HLP.Models.Entries.Comercial;
 using HLP.Services.Interfaces.Entries.Parametros;
-using HLP.Comum.Models.Static;
+
 using System.Threading;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.Comercial
 {

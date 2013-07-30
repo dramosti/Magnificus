@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 namespace HLP.Comum.Models
 {
     [Serializable]
-    public class Grid
+    public class GridModel
     {
         [XmlAttribute]
         public string Name { get; set; }
@@ -36,6 +36,6 @@ namespace HLP.Comum.Models
             set { _exclusaoItem = value; }
         }
 
-        public List<GridColumn> DataGridColumn { get; set; }
+        public List<GridColumnModel> DataGridColumn { get; set; }
     }
 }

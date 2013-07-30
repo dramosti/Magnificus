@@ -6,7 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace HLP.Comum.Models.Static
+namespace HLP.Comum.Infrastructure.Static
 {
     public static class Pastas
     {

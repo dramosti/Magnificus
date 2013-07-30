@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 namespace HLP.Comum.Models
 {
     [Serializable]
-    public class GridColumn
+    public class GridColumnModel
     {
         [XmlAttribute]
         public string DataPropertyName { get; set; }

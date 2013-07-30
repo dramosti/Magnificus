@@ -12,7 +12,7 @@ using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Components;
 using HLP.Comum.Infrastructure;
 using HLP.Comum.UI.Exception;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using Ninject;
 using HLP.Comum.Services.Interface;
 using HLP.Dependencies;

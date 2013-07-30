@@ -11,7 +11,7 @@ using Microsoft.Office.Interop.Excel;
 using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
 
-namespace HLP.Comum.Models
+namespace HLP.Comum.Infrastructure.Static
 {
     public static class Util
     {
@@ -2063,24 +2063,7 @@ namespace HLP.Comum.Models
             return retorno;
         }
 
-        public static HLP.WebServices.Endereco BuscaEnderecoByCep(string sCep)
-        {
-            HLP.WebServices.Endereco end = null;
-            try
-            {
-                HLP.WebServices.Cep ws = new WebServices.Cep();
-                end = ws.BuscaEndereco(sCep);
-                return end;
-            }
-            catch (Exception ex)
-            {
-                return end;
-                throw ex;
-            }
-
-        }
-
-        public static List<PadraoComboBox> MontaListPadraoComboBox(List<string> lItens)
+               public static List<PadraoComboBox> MontaListPadraoComboBox(List<string> lItens)
         {
             List<PadraoComboBox> lRetorno = new List<PadraoComboBox>();
             int icount = 0;

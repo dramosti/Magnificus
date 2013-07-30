@@ -12,7 +12,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace HLP.Comum.Models.Static
+namespace HLP.Comum.Infrastructure.Static
 {
     public static class Extensions
     {

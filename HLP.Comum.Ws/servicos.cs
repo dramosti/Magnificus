@@ -14,7 +14,8 @@ using Ninject;
 using HLP.Dependencies;
 using HLP.Comum.Infrastructure;
 using System.Net;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace HLP.Comum.Ws
 {

@@ -6,7 +6,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HLP.Comum.Infrastructure
+namespace HLP.Comum.Infrastructure.Static
 {
     public static class RegistroWindows
     {

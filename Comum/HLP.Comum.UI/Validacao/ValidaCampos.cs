@@ -13,7 +13,8 @@ using HLP.Comum.UI.Eventos;
 using System.Reflection;
 using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Infrastructure;
-using HLP.Comum.Models.Static;
+
+using HLP.Comum.Models;
 
 namespace HLP.Comum.UI.Validacao
 {

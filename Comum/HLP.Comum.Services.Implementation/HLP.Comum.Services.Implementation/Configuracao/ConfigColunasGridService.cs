@@ -5,7 +5,8 @@ using System.Text;
 using HLP.Comum.Repository.Interfaces.Configuracao;
 using HLP.Comum.Infrastructure;
 using Ninject;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+using HLP.Comum.Models;
 
 namespace HLP.Comum.Services.Implementation.Configuracao
 {

@@ -6,8 +6,9 @@ using HLP.Comum.Repository.Interfaces.Configuracao;
 using HLP.Comum.Infrastructure;
 using Ninject;
 using System.Data;
-using HLP.Comum.Models.Static;
+
 using Microsoft.Practices.EnterpriseLibrary.Data;
+using HLP.Comum.Models;
 
 namespace HLP.Comum.Repository.Implementation.Configuracao
 {

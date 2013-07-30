@@ -6,7 +6,7 @@ using HLP.Comum.Repository.Interfaces.Configuracao;
 using HLP.Comum.Infrastructure;
 using Ninject;
 using System.Data;
-using HLP.Comum.Models.Static;
+
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using HLP.Comum.Models;
 
@@ -130,18 +130,18 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
             }
         }
 
-        public InfoField GetInfoField(string table_name, string column_name)
+        public InfoFieldModel GetInfoField(string table_name, string column_name)
         {
             try
             {
-                DataAccessor<InfoField> regInfoFieldAccessor = null;
+                DataAccessor<InfoFieldModel> regInfoFieldAccessor = null;
                 regInfoFieldAccessor = UndTrabalho.dbPrincipal
                   .CreateSprocAccessor("sp_columns",
                                   new Parameters(UndTrabalho.dbPrincipal)
                                   .AddParameter<string>("table_name")
                                   .AddParameter<string>("column_name"),
-                                  MapBuilder<InfoField>.MapAllProperties().Build());
-                InfoField objInfoField = null;
+                                  MapBuilder<InfoFieldModel>.MapAllProperties().Build());
+                InfoFieldModel objInfoField = null;
 
                 try
                 {

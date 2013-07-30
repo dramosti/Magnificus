@@ -12,13 +12,14 @@ using Ninject;
 using HLP.Comum.Services.Interface;
 using HLP.Comum.Infrastructure;
 using HLP.Dependencies;
-using HLP.Comum.Models.Static;
+
 using System.Threading;
 using System.Linq;
 using System.IO;
 using Microsoft.Win32;
 using HLP.Comum.Models;
 using HLP.Comum.Services.Interface.Configuracao;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.UI
 {

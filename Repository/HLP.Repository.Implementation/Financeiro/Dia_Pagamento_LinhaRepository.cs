@@ -7,7 +7,8 @@ using Ninject;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using HLP.Comum.Infrastructure;
 using HLP.Repository.Interfaces.Entries.Financeiro;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace HLP.Repository.Implementation.Entries.Financeiro
 {

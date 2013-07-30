@@ -12,11 +12,12 @@ using HLP.Services.Interfaces.Entries.Gerais;
 using HLP.Models.Entries.Gerais;
 using HLP.Dependencies;
 using HLP.Comum.Services.Interface;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.Messages;
 using HLP.Comum.UI.Exception;
 using ComponentFactory.Krypton.Toolkit;
 using System.Threading;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.Geral
 {

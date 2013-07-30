@@ -1,4 +1,4 @@
-﻿using HLP.Comum.Models.Static;
+﻿using HLP.Comum.Infrastructure.Static;
 using HLP.Models.Entries;
 using Microsoft.Win32;
 using System;

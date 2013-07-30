@@ -10,7 +10,8 @@ using System.Diagnostics;
 using HLP.Services.Implementation.Entries.Gerais;
 using HLP.Models.Entries;
 using HLP.Comum.Ws;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
+
 
 namespace Atualizador
 {

@@ -7,7 +7,9 @@ using HLP.Models.Entries.Parametros;
 using HLP.Comum.Infrastructure;
 using Ninject;
 using Microsoft.Practices.EnterpriseLibrary.Data;
-using HLP.Comum.Models.Static;
+
+using HLP.Comum.Models;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Repository.Implementation.Entries.Parametros
 {

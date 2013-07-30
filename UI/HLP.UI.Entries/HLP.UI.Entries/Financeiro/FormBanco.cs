@@ -15,7 +15,7 @@ using HLP.Comum.Messages;
 using HLP.Comum.UI.Exception;
 using System.Threading;
 using ComponentFactory.Krypton.Toolkit;
-using HLP.Comum.Models.Static;
+
 
 namespace HLP.UI.Entries.Financeiro
 {

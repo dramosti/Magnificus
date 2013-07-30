@@ -5,6 +5,7 @@ using System.Text;
 using HLP.Comum.Services.Interface.Configuracao;
 using Ninject;
 using HLP.Comum.Repository.Interfaces.Configuracao;
+using HLP.Comum.Models;
 
 namespace HLP.Comum.Services.Implementation.Configuracao
 {
@@ -14,11 +15,11 @@ namespace HLP.Comum.Services.Implementation.Configuracao
         [Inject]
         public IRelatoriosRepository relatorioRepository { get; set; }
 
-        public List<Infrastructure.RelatoriosModel> GetRelatorioByFormulario(int idFormulario)
+        public List<RelatoriosModel> GetRelatorioByFormulario(int idFormulario)
         {
             return GetRelatorioByFormulario(idFormulario);
         }
-        public void Save(Infrastructure.RelatoriosModel relatorio)
+        public void Save(RelatoriosModel relatorio)
         {
             relatorioRepository.Save(relatorio);
         }

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using HLP.Comum.Components;
 using HLP.Comum.Models;
-using HLP.Comum.Models.Static;
+
 using HLP.Comum.Modules;
 using HLP.Comum.Services.Interface;
 using HLP.Comum.UI.Exception;
@@ -17,6 +17,7 @@ using Ninject;
 using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Infrastructure;
 using HLP.Comum.Components.Configuracao;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Comum.UI.Eventos
 {

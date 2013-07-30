@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace HLP.Comum.Infrastructure
+namespace HLP.Comum.Models
 {
     [Serializable]
-    public class LogException
+    public class LogExceptionModel
     {
         public List<LogDados> lLogException = new List<LogDados>();
     }
 
-    public class LogDados 
+    public class LogDados
     {
         public int? idLogErro { get; set; }
         public string xEmpresa { get; set; }

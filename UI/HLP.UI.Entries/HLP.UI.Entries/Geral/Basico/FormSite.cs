@@ -20,6 +20,7 @@ using HLP.Comum.Models;
 using HLP.Models.Entries.Gerais;
 using HLP.Services.Interfaces.Entries.Comercial;
 
+
 namespace HLP.UI.Entries.Geral.Basico
 {
     public partial class FormSite : FormPadraoCadastro
@@ -405,7 +406,7 @@ namespace HLP.UI.Entries.Geral.Basico
             {
                 if ((sender as KryptonDataGridView).Columns[e.ColumnIndex] == clxCEP)
                 {
-                    HLP.WebServices.Endereco end = Util.BuscaEnderecoByCep((sender as KryptonDataGridView)[e.ColumnIndex, e.RowIndex].Value.ToString());
+                    HLP.Comum.Ws.Endereco end = HLP.Comum.Ws.ServiceCep.BuscaEndereco((sender as KryptonDataGridView)[e.ColumnIndex, e.RowIndex].Value.ToString());
                     if (end != null)
                     {
                         (sender as KryptonDataGridView)["clxEndereco", e.RowIndex].Value = end.Logradouro;

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using HLP.Repository.Interfaces.Entries.Gerais;
 using HLP.Models.Entries.Gerais;
-using HLP.Comum.Models.Static;
 using Ninject;
 using HLP.Comum.Infrastructure;
 using Microsoft.Practices.EnterpriseLibrary.Data;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Repository.Implementation.Entries.Gerais
 {

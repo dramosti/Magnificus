@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using HLP.Comum.Messages;
-using HLP.Comum.Models.Static;
+using HLP.Comum.Infrastructure.Static;
 using HLP.Comum.Services.Interface;
 using HLP.Comum.UI;
 using HLP.Comum.UI.Exception;
@@ -13,6 +13,7 @@ using HLP.Models.Entries.Gerais;
 using HLP.Services.Interfaces.Entries.Comercial;
 using HLP.Services.Interfaces.Entries.Gerais;
 using Ninject;
+using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.UI.Entries.Geral
 {
