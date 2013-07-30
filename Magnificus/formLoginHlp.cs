@@ -64,9 +64,9 @@ namespace Magnificus
                             CompanyData.xFantasia = (cbxIdEmpresa.SelectedItem as EmpresaModel).xFantasia.Split('-')[1].Trim();
                             CompanyData.xLinqLogoEmpresa = (cbxIdEmpresa.SelectedItem as EmpresaModel).xLinkLogoEmpresa;
 
-                            Parametro_GeralModel param_geral = iparametro_geralService.GetGeralByEmpresa();
-                            if (param_geral != null)
-                                CompanyData.stMaiusculo = param_geral.stMaiusculo.ToBoolean();
+                            //Parametro_GeralModel param_geral = iparametro_geralService.GetGeralByEmpresa();
+                            //if (param_geral != null)
+                            //    CompanyData.stMaiusculo = param_geral.stMaiusculo.ToBoolean();
 
                             Pastas.Path_SettingsEmpresa = (cbxIdEmpresa.SelectedItem as EmpresaModel).xLinkPastas;
 
