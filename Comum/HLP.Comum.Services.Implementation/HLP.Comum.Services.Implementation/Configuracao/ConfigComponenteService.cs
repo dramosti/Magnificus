@@ -107,144 +107,154 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             ConfigComponenteModel comp;
             foreach (Control controle in lControlsContainer.Where(c => c.GetType() != typeof(HLP_LabelSeparator)))
             {
-
-                comp = new ConfigComponenteModel();
-                //Default Info
-                comp.xName = controle.Name;
-                comp.xTypeComp = controle.GetType().Name;
-
-                if (controle.GetType().BaseType == typeof(UserControlBase))
+                try
                 {
-                    try
+                    comp = new ConfigComponenteModel();
+                    //Default Info
+                    comp.xName = controle.Name;
+                    comp.xTypeComp = controle.GetType().Name;
+
+                    if (controle.GetType().BaseType == typeof(UserControlBase))
                     {
-                        #region Component Info
-
-                        // User Info                        
-                        comp.objConfigCompUsu.nOrder = controle.Parent.Controls.IndexOf(controle);
-                        comp.objConfigCompUsu.xLabelText = controle.ToObject().GetPropertyValue("_LabelText").ToString();
-                        comp.objConfigCompUsu.xText = "";// controle.ToObject().GetPropertyValue("_LabelText").ToString(); --Verificar
-                        comp.objConfigCompUsu.stVisible = Convert.ToBoolean(controle.ToObject().GetPropertyValue("Visible")).ToByte();
-                        comp.objConfigCompUsu.stEnabled = controle.Enabled.ToByte();
-                        if (controle.ToObject().GetPropertyValue("_LabelGroup") != null)
-                            comp.xLabelGroup = (controle.ToObject().GetPropertyValue("_LabelGroup") as HLP_LabelSeparator).Name;
-
-                        // the property color is not common for all components.
-                        if (controle.GetType().GetProperties().Where(c => c.Name == "Color").Count() > 0)
+                        try
                         {
-                            Color cor = (Color)controle.ToObject().GetPropertyValue("Color");
-                            comp.objConfigCompUsu.xColor = cor.ToArgb().ToString();
-                        }
+                            #region Component Info
+                            //Base Info
+                            comp.xField = controle.ToObject().GetPropertyValue("_Field").ToString();
+                            comp.xTable = controle.ToObject().GetPropertyValue("_Table").ToString();
 
-                        comp.objConfigCompUsu.xParent = controle.Parent.Parent.Parent != null ? controle.Parent.Parent.Parent.Name : "HLP_Verificar";
-                        comp.objConfigCompUsu.xHelp = controle.ToObject().GetPropertyValue("_Help").ToString();
-                        comp.objConfigCompUsu.stAtivo = true.ToByte();//Dafault
-                        comp.objConfigCompUsu.stAcesso = true.ToByte(); //Dafault
-                        comp.objConfigCompUsu.iTamanhoComponente = controle.Width;
 
-                        if (comp.xField != "" && comp.xTable == "")
-                        {
-                            throw new Exception(string.Format("Esta faltando preencher propriedades no componente {0} ", comp.xName));
-                        }
-                        if (comp.xTable != "" && comp.xField == "")
-                        {
-                            throw new Exception(string.Format("Esta faltando preencher propriedades no componente {0} ", comp.xName));
-                        }
+                            // User Info                        
+                            comp.objConfigCompUsu.nOrder = controle.Parent.Controls.IndexOf(controle);
+                            comp.objConfigCompUsu.xLabelText = controle.ToObject().GetPropertyValue("_LabelText").ToString();
+                            comp.objConfigCompUsu.xText = "";// controle.ToObject().GetPropertyValue("_LabelText").ToString(); --Verificar
+                            comp.objConfigCompUsu.stVisible = Convert.ToBoolean(controle.ToObject().GetPropertyValue("Visible")).ToByte();
+                            comp.objConfigCompUsu.stEnabled = controle.Enabled.ToByte();
+                            if (controle.ToObject().GetPropertyValue("_LabelGroup") != null)
+                                comp.xLabelGroup = (controle.ToObject().GetPropertyValue("_LabelGroup") as HLP_LabelSeparator).Name;
 
-                        if (comp.xField != "" && comp.xTable != "")
-                        {
-                            comp.Base = this.GetInfoField(comp.xTable, comp.xField);
-
-                            if (comp.xTypeComp.Equals("HLP_NumericUpDown"))
+                            // the property color is not common for all components.
+                            if (controle.GetType().GetProperties().Where(c => c.Name == "Color").Count() > 0)
                             {
-                                comp.objConfigCompUsu.xText = "0";
-                                comp.objConfigCompUsu.nMaxLength = comp.Base.GetMaxLeghtToNumericUpDown();
-                                comp.objConfigCompUsu.nDecimalPlaces = comp.Base.SCALE.ToInt32();
+                                Color cor = (Color)controle.ToObject().GetPropertyValue("Color");
+                                comp.objConfigCompUsu.xColor = cor.ToArgb().ToString();
                             }
-                            else
+
+                            comp.objConfigCompUsu.xParent = controle.Parent.Parent.Parent != null ? controle.Parent.Parent.Parent.Name : "HLP_Verificar";
+                            comp.objConfigCompUsu.xHelp = controle.ToObject().GetPropertyValue("_Help").ToString();
+                            comp.objConfigCompUsu.stAtivo = true.ToByte();//Dafault
+                            comp.objConfigCompUsu.stAcesso = true.ToByte(); //Dafault
+                            comp.objConfigCompUsu.iTamanhoComponente = controle.Width;
+
+                            if (comp.xField != "" && comp.xTable == "")
                             {
-                                comp.objConfigCompUsu.nMaxLength = comp.Base.GetMaxLenghtNormal();
+                                throw new Exception(string.Format("Esta faltando preencher propriedades no componente {0} ", comp.xName));
                             }
-                        }
-                        #endregion
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception(string.Format("Erro ao buscar informações do componente:{0} - tipo:{1}, que se encontra na TabPage:{2}{3}Erro: ", comp.xName, comp.xTypeComp, tab.xNameTab, Environment.NewLine) + ex.Message);
-                    }
-                }
-                else if (controle.GetType() == typeof(HLP_DataGridView))
-                {
-                    try
-                    {
-                        #region DataGridView Info
-                        HLP_DataGridView grid = controle as HLP_DataGridView;
-                        comp.xTable = grid.Tag != null ? grid.Tag.ToString() : "";
-
-                        //comp.objConfigCompGridUsu.idUsuario = UserData.idUserHLP;
-                        comp.objConfigCompGridUsu.stInclusao = true.ToByte();
-                        comp.objConfigCompGridUsu.stExclusao = true.ToByte();
-                        comp.objConfigCompGridUsu.stAlteracao = true.ToByte();
-
-                        ConfigColunasGridModel col = null;
-                        foreach (DataGridViewColumn dgvCol in grid.Columns)
-                        {
-                            col = new ConfigColunasGridModel();
-                            col.xNameColuna = dgvCol.Name;
-                            col.xDataPropertyName = dgvCol.DataPropertyName;
-
-                            // User Config
-                            col.objColunasGridUsu.xHeaderText = dgvCol.HeaderText;
-                            col.objColunasGridUsu.stVisible = dgvCol.Visible.ToByte();
-                            col.objColunasGridUsu.stAtivo = true.ToByte();
-                            col.objColunasGridUsu.stAcesso = true.ToByte();
-                            //col.objColunasGridUsu.idUsuario = UserData.idUserHLP;
-                            col.objColunasGridUsu.nWidth = dgvCol.Width;
-
-                            col.Base = this.GetInfoField(comp.xTable, col.xDataPropertyName);
-                            if (col.Base != null)
+                            if (comp.xTable != "" && comp.xField == "")
                             {
-                                col.xType = col.Base.TYPE_NAME;
-                                if (dgvCol.GetType() == typeof(KryptonDataGridViewNumericUpDownColumn))
+                                throw new Exception(string.Format("Esta faltando preencher propriedades no componente {0} ", comp.xName));
+                            }
+
+                            if (comp.xField != "" && comp.xTable != "")
+                            {
+                                comp.Base = this.GetInfoField(comp.xTable, comp.xField);
+
+                                if (comp.xTypeComp.Equals("HLP_NumericUpDown"))
                                 {
-                                    col.objColunasGridUsu.nMaxLength = col.Base.GetMaxLeghtToNumericUpDown();
-                                    col.objColunasGridUsu.nDecimalPlaces = col.Base.SCALE.ToInt32();
+                                    comp.objConfigCompUsu.xText = "0";
+                                    comp.objConfigCompUsu.nMaxLength = comp.Base.GetMaxLeghtToNumericUpDown();
+                                    comp.objConfigCompUsu.nDecimalPlaces = comp.Base.SCALE.ToInt32();
                                 }
                                 else
                                 {
-                                    col.objColunasGridUsu.nMaxLength = col.Base.GetMaxLenghtNormal();
+                                    comp.objConfigCompUsu.nMaxLength = comp.Base.GetMaxLenghtNormal();
                                 }
                             }
-                            else
-                            {
-                                throw new Exception(string.Format("Erro ao buscar informações do campo {0}. da Tabelda {1}", col.xDataPropertyName, comp.xTable));
-                            }
-
-                            col.objColunasGridUsu.nDisplayIndex = dgvCol.Index;
-                            col.objColunasGridUsu.xHelp = dgvCol.ToolTipText;
-
-
-                            if (dgvCol.GetType() == typeof(DataGridViewComboBoxColumn))
-                            {
-                                col.objColunasGridUsu.xDisplayMember = ((DataGridViewComboBoxColumn)dgvCol).DisplayMember;
-                            }
-                            comp.lConfigColunasGrid.Add(col);
+                            #endregion
                         }
-                        #endregion
+                        catch (Exception ex)
+                        {
+                            throw new Exception(string.Format("Erro ao buscar informações do componente:{0} - tipo:{1}, que se encontra na TabPage:{2}{3}Erro: ", comp.xName, comp.xTypeComp, tab.xNameTab, Environment.NewLine) + ex.Message);
+                        }
                     }
-                    catch (Exception ex)
+                    else if (controle.GetType() == typeof(HLP_DataGridView))
                     {
-                        throw new Exception(string.Format("Erro ao buscar informações do componente:{0} - tipo:{1}, que se encontra na TabPage:{2}{3} Erro:", comp.xName, comp.xTypeComp, tab.xNameTab, Environment.NewLine) + ex.Message);
+                        try
+                        {
+                            #region DataGridView Info
+                            HLP_DataGridView grid = controle as HLP_DataGridView;
+                            comp.xTable = grid.Tag != null ? grid.Tag.ToString() : "";
+
+                            //comp.objConfigCompGridUsu.idUsuario = UserData.idUserHLP;
+                            comp.objConfigCompGridUsu.stInclusao = true.ToByte();
+                            comp.objConfigCompGridUsu.stExclusao = true.ToByte();
+                            comp.objConfigCompGridUsu.stAlteracao = true.ToByte();
+
+                            ConfigColunasGridModel col = null;
+                            foreach (DataGridViewColumn dgvCol in grid.Columns)
+                            {
+                                col = new ConfigColunasGridModel();
+                                col.xNameColuna = dgvCol.Name;
+                                col.xDataPropertyName = dgvCol.DataPropertyName;
+
+                                // User Config
+                                col.objColunasGridUsu.xHeaderText = dgvCol.HeaderText;
+                                col.objColunasGridUsu.stVisible = dgvCol.Visible.ToByte();
+                                col.objColunasGridUsu.stAtivo = true.ToByte();
+                                col.objColunasGridUsu.stAcesso = true.ToByte();
+                                //col.objColunasGridUsu.idUsuario = UserData.idUserHLP;
+                                col.objColunasGridUsu.nWidth = dgvCol.Width;
+
+                                col.Base = this.GetInfoField(comp.xTable, col.xDataPropertyName);
+                                if (col.Base != null)
+                                {
+                                    col.xType = col.Base.TYPE_NAME;
+                                    if (dgvCol.GetType() == typeof(KryptonDataGridViewNumericUpDownColumn))
+                                    {
+                                        col.objColunasGridUsu.nMaxLength = col.Base.GetMaxLeghtToNumericUpDown();
+                                        col.objColunasGridUsu.nDecimalPlaces = col.Base.SCALE.ToInt32();
+                                    }
+                                    else
+                                    {
+                                        col.objColunasGridUsu.nMaxLength = col.Base.GetMaxLenghtNormal();
+                                    }
+                                }
+                                else
+                                {
+                                    throw new Exception(string.Format("Erro ao buscar informações do campo {0}. da Tabelda {1}", col.xDataPropertyName, comp.xTable));
+                                }
+
+                                col.objColunasGridUsu.nDisplayIndex = dgvCol.Index;
+                                col.objColunasGridUsu.xHelp = dgvCol.ToolTipText;
+
+
+                                if (dgvCol.GetType() == typeof(DataGridViewComboBoxColumn))
+                                {
+                                    col.objColunasGridUsu.xDisplayMember = ((DataGridViewComboBoxColumn)dgvCol).DisplayMember;
+                                }
+                                comp.lConfigColunasGrid.Add(col);
+                            }
+                            #endregion
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception(string.Format("Erro ao buscar informações do componente:{0} - tipo:{1}, que se encontra na TabPage:{2}{3} Erro:", comp.xName, comp.xTypeComp, tab.xNameTab, Environment.NewLine) + ex.Message);
+                        }
                     }
+                    tab.lConfigComponente.Add(comp);
+                    if (lobjConfigComponente == null)
+                    {
+                        lobjConfigComponente = new List<ConfigComponenteModel>();
+                    }
+                    lobjConfigComponente.Add(comp);
+
                 }
-                tab.lConfigComponente.Add(comp);
-                if (lobjConfigComponente == null)
+                catch (Exception ex)
                 {
-                    lobjConfigComponente = new List<ConfigComponenteModel>();
+                    throw ex;
                 }
-                lobjConfigComponente.Add(comp);
-
-
             }
+
         }
 
         public void SetConfigToComp(List<ConfigComponenteModel> lCompModel, List<Control> lControl)
