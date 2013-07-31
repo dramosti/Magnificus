@@ -137,11 +137,11 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.kryptonPanel8 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dgvProduto_Revisao = new HLP.Comum.Components.HLP_DataGridView();
+            this.bsProduto_Revisao = new System.Windows.Forms.BindingSource(this.components);
             this.dInicialDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
             this.xRevisaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idUsuario = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dFinalDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
-            this.bsProduto_Revisao = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
@@ -632,7 +632,7 @@ namespace HLP.UI.Entries.Comercial
             // 
             // cbxidUsuario
             // 
-            this.cbxidUsuario._Field = "idUsuario";
+            this.cbxidUsuario._Field = "idFuncionario";
             this.cbxidUsuario._Help = "Informa o usuário que cadastrou o item";
             this.cbxidUsuario._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxidUsuario._Itens")));
             this.cbxidUsuario._LabelGroup = this.sep_Item;
@@ -2163,7 +2163,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1059, 655);
+            this.tabPage7.Size = new System.Drawing.Size(1144, 225);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Tag = false;
             this.tabPage7.Text = "Dados de ordem de compras";
@@ -2174,7 +2174,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel5.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel5.Name = "kryptonPanel5";
-            this.kryptonPanel5.Size = new System.Drawing.Size(1059, 655);
+            this.kryptonPanel5.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel5.TabIndex = 1;
             // 
             // flowLayoutPanel5
@@ -2195,7 +2195,7 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(1059, 655);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(1144, 225);
             this.flowLayoutPanel5.TabIndex = 0;
             // 
             // sep_ConfigOrdemCompra
@@ -2463,7 +2463,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimeCotacao.Color = System.Drawing.Color.Empty;
             this.dtdleadTimeCotacao.CustomFormat = "";
             this.dtdleadTimeCotacao.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdleadTimeCotacao.Location = new System.Drawing.Point(154, 217);
+            this.dtdleadTimeCotacao.Location = new System.Drawing.Point(740, 3);
             this.dtdleadTimeCotacao.Margin = new System.Windows.Forms.Padding(154, 3, 15, 3);
             this.dtdleadTimeCotacao.Name = "dtdleadTimeCotacao";
             this.dtdleadTimeCotacao.objConfigComponenteModel = null;
@@ -2488,7 +2488,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimePedido.Color = System.Drawing.Color.Empty;
             this.dtdleadTimePedido.CustomFormat = "";
             this.dtdleadTimePedido.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdleadTimePedido.Location = new System.Drawing.Point(160, 244);
+            this.dtdleadTimePedido.Location = new System.Drawing.Point(746, 30);
             this.dtdleadTimePedido.Margin = new System.Windows.Forms.Padding(160, 3, 15, 3);
             this.dtdleadTimePedido.Name = "dtdleadTimePedido";
             this.dtdleadTimePedido.objConfigComponenteModel = null;
@@ -2513,7 +2513,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimeRecebimento.Color = System.Drawing.Color.Empty;
             this.dtdleadTimeRecebimento.CustomFormat = "";
             this.dtdleadTimeRecebimento.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdleadTimeRecebimento.Location = new System.Drawing.Point(129, 271);
+            this.dtdleadTimeRecebimento.Location = new System.Drawing.Point(715, 57);
             this.dtdleadTimeRecebimento.Margin = new System.Windows.Forms.Padding(129, 3, 15, 3);
             this.dtdleadTimeRecebimento.Name = "dtdleadTimeRecebimento";
             this.dtdleadTimeRecebimento.objConfigComponenteModel = null;
@@ -2527,7 +2527,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage8.Location = new System.Drawing.Point(4, 25);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1059, 655);
+            this.tabPage8.Size = new System.Drawing.Size(1144, 225);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Tag = false;
             this.tabPage8.Text = "Dados de produção";
@@ -2538,7 +2538,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel6.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel6.Name = "kryptonPanel6";
-            this.kryptonPanel6.Size = new System.Drawing.Size(1059, 655);
+            this.kryptonPanel6.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel6.TabIndex = 1;
             // 
             // flowLayoutPanel6
@@ -2553,7 +2553,7 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(1059, 655);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(1144, 225);
             this.flowLayoutPanel6.TabIndex = 0;
             // 
             // Sep_ConfigProdutucao
@@ -2726,7 +2726,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPageFornecedores.Location = new System.Drawing.Point(4, 25);
             this.tabPageFornecedores.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageFornecedores.Name = "tabPageFornecedores";
-            this.tabPageFornecedores.Size = new System.Drawing.Size(1059, 655);
+            this.tabPageFornecedores.Size = new System.Drawing.Size(1144, 225);
             this.tabPageFornecedores.TabIndex = 8;
             this.tabPageFornecedores.Tag = false;
             this.tabPageFornecedores.Text = "Fornecedores";
@@ -2737,7 +2737,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel7.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel7.Name = "kryptonPanel7";
-            this.kryptonPanel7.Size = new System.Drawing.Size(1059, 655);
+            this.kryptonPanel7.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel7.TabIndex = 1;
             // 
             // dgvProduto_Fornecedor_Homologado
@@ -2757,7 +2757,7 @@ namespace HLP.UI.Entries.Comercial
             this.dgvProduto_Fornecedor_Homologado.Inclui = false;
             this.dgvProduto_Fornecedor_Homologado.Location = new System.Drawing.Point(0, 0);
             this.dgvProduto_Fornecedor_Homologado.Name = "dgvProduto_Fornecedor_Homologado";
-            this.dgvProduto_Fornecedor_Homologado.Size = new System.Drawing.Size(1059, 655);
+            this.dgvProduto_Fornecedor_Homologado.Size = new System.Drawing.Size(1144, 225);
             this.dgvProduto_Fornecedor_Homologado.TabIndex = 1;
             this.dgvProduto_Fornecedor_Homologado.Tag = "Produto_Fornecedor_Homologado";
             // 
@@ -2869,6 +2869,10 @@ namespace HLP.UI.Entries.Comercial
             this.dgvProduto_Revisao.Tag = "Produto_Revisao";
             this.dgvProduto_Revisao.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvProduto_Revisao_DefaultValuesNeeded);
             // 
+            // bsProduto_Revisao
+            // 
+            this.bsProduto_Revisao.DataSource = typeof(HLP.Models.Entries.Comercial.Produto_RevisaoModel);
+            // 
             // dInicialDataGridViewTextBoxColumn
             // 
             this.dInicialDataGridViewTextBoxColumn.CalendarTodayDate = new System.DateTime(2012, 8, 28, 0, 0, 0, 0);
@@ -2894,7 +2898,7 @@ namespace HLP.UI.Entries.Comercial
             // 
             // idUsuario
             // 
-            this.idUsuario.DataPropertyName = "idUsuario";
+            this.idUsuario.DataPropertyName = "idFuncionario";
             this.idUsuario.HeaderText = "Usuário";
             this.idUsuario.Name = "idUsuario";
             this.idUsuario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -2916,10 +2920,6 @@ namespace HLP.UI.Entries.Comercial
             this.dFinalDataGridViewTextBoxColumn.ToolTipText = "O Sistema informa a data final de quando foi alterado a engenharia ou qualquer ca" +
     "mpo do cadastro de produto.";
             this.dFinalDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // bsProduto_Revisao
-            // 
-            this.bsProduto_Revisao.DataSource = typeof(HLP.Models.Entries.Comercial.Produto_RevisaoModel);
             // 
             // FormProduto
             // 
@@ -3071,10 +3071,6 @@ namespace HLP.UI.Entries.Comercial
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidUnidadeMedidaProducao;
         private Comum.Components.HLP_ComboBox cbxidUsuario;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidUnidadeMedidaEstoque;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dInicialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xRevisaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idUsuario;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dFinalDataGridViewTextBoxColumn;
         private Comum.Components.HLP_TextBox txtdValorVenda;
         private Comum.Components.HLP_LabelSeparator sep_Identificacao;
         private Comum.Components.HLP_LabelSeparator sep_Item;
@@ -3092,5 +3088,9 @@ namespace HLP.UI.Entries.Comercial
         private Comum.Components.HLP_LabelSeparator Sep_ConfigProdutucao;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidTipoProduto;
         private HLP_TextBox txtdBloqueio;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dInicialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xRevisaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idUsuario;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dFinalDataGridViewTextBoxColumn;
     }
 }
