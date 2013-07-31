@@ -75,7 +75,7 @@ namespace HLP.Comum.Components
                     txt.TextBox.Enabled = value;
                 //this.Enabled = txt.TextBox.Enabled;
 
-                if ((!ReadOnly) && (!txt.TextBox.Enabled))
+                if (!ReadOnly)
                 {
                     this.TabStop = value;
                     if (value)

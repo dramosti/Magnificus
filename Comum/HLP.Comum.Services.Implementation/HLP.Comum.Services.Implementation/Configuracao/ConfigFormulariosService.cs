@@ -142,8 +142,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             List<ConfigTabPageModel> lConfgTabPage = this.objConfigFormularioModel.lConfigTabPage;
             //lConfgTabPage.xNameTab = "HLP";
             itabPageService.GetInfoTabPagesRecursiovo(pnPrincipal.Controls, lConfgTabPage, lControl);
-            //this.objConfigFormularioModel.lConfigTabPage = lConfgTabPage;
-
 
             objConfigFormularioModel.xNameFormulario = pnPrincipal.FindForm().Name;
             objConfigFormularioModel.xNameView = sViewForm;
@@ -163,16 +161,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             {
                 (ctr as FlowLayoutPanel).VerticalScroll.Value = 0;
                 (ctr as FlowLayoutPanel).HorizontalScroll.Value = 0;
-            }
-            //foreach (FlowLayoutPanel f in layoutService.lFlowLayoutPanel)
-            //{
-            //    f.VerticalScroll.Value = 0;
-            //    f.HorizontalScroll.Value = 0;
-            //}
-            //foreach (AC.ExtendedRenderer.Navigator.KryptonTabControl t in layoutService.lTabControl)
-            //{
-            //    t.SelectedIndex = 0; //esta dando erro...          
-            //}
+            }            
         }
 
         public List<TabPage> GetTabPages()

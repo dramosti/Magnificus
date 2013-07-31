@@ -37,6 +37,12 @@
             this.lblError = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblProgresso = new System.Windows.Forms.ToolStripStatusLabel();
             this.pbProgresso = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.tsConfigComp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsConsistForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsRestaurarPadrao = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsArquivoSys = new System.Windows.Forms.ToolStripMenuItem();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.sepNovo = new System.Windows.Forms.ToolStripSeparator();
             this.sepExcluir = new System.Windows.Forms.ToolStripSeparator();
@@ -45,21 +51,6 @@
             this.sepCancelar = new System.Windows.Forms.ToolStripSeparator();
             this.sepPesquisar = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sepImprimir = new System.Windows.Forms.ToolStripSeparator();
-            this.lblCount = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelPadrao = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.cmsOpcoesGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.exportarConteudoPExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salvarTamanhoDasColunasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bwWorkerInicializa = new System.ComponentModel.BackgroundWorker();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.tsConfigComp = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsConsistForm = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsRestaurarPadrao = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsArquivoSys = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNovo = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.btnAtualizar = new System.Windows.Forms.ToolStripButton();
@@ -67,24 +58,33 @@
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnPesquisar = new System.Windows.Forms.ToolStripButton();
             this.btnImprimir = new System.Windows.Forms.ToolStripButton();
+            this.sepImprimir = new System.Windows.Forms.ToolStripSeparator();
             this.btnDuplicar = new System.Windows.Forms.ToolStripButton();
-            this.btnPrimeiro = new System.Windows.Forms.ToolStripButton();
-            this.btnAnterior = new System.Windows.Forms.ToolStripButton();
-            this.btnProximo = new System.Windows.Forms.ToolStripButton();
-            this.btnUltimo = new System.Windows.Forms.ToolStripButton();
-            this.bwWorkerRecarregaForm = new System.ComponentModel.BackgroundWorker();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsConfigurar = new System.Windows.Forms.ToolStripMenuItem();
-            this.sepDuplicar = new System.Windows.Forms.ToolStripSeparator();
             this.ctxConfiguracao = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsHabilitar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsDesabilitar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsCamposVisiveis = new System.Windows.Forms.ToolStripMenuItem();
+            this.sepDuplicar = new System.Windows.Forms.ToolStripSeparator();
+            this.btnPrimeiro = new System.Windows.Forms.ToolStripButton();
+            this.btnAnterior = new System.Windows.Forms.ToolStripButton();
+            this.lblCount = new System.Windows.Forms.ToolStripButton();
+            this.btnProximo = new System.Windows.Forms.ToolStripButton();
+            this.btnUltimo = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelPadrao = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.cmsOpcoesGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exportarConteudoPExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvarTamanhoDasColunasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bwWorkerInicializa = new System.ComponentModel.BackgroundWorker();
+            this.bwWorkerRecarregaForm = new System.ComponentModel.BackgroundWorker();
             this.stripPadrao.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.ctxConfiguracao.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.cmsOpcoesGrid.SuspendLayout();
-            this.ctxConfiguracao.SuspendLayout();
             this.SuspendLayout();
             // 
             // stripPadrao
@@ -153,6 +153,60 @@
             this.pbProgresso.Size = new System.Drawing.Size(100, 16);
             this.pbProgresso.Step = 1;
             this.pbProgresso.Visible = false;
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsConfigComp,
+            this.tsConsistForm,
+            this.toolStripSeparator9,
+            this.tsRestaurarPadrao,
+            this.tsArquivoSys});
+            this.toolStripSplitButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripSplitButton1.Image = global::HLP.Comum.UI.Properties.Resources.Utilitarios;
+            this.toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(107, 20);
+            this.toolStripSplitButton1.Text = "Propriedades";
+            this.toolStripSplitButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // tsConfigComp
+            // 
+            this.tsConfigComp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsConfigComp.Name = "tsConfigComp";
+            this.tsConfigComp.Size = new System.Drawing.Size(198, 22);
+            this.tsConfigComp.Text = "Configurar Componetes";
+            this.tsConfigComp.Click += new System.EventHandler(this.TsUtility_Click);
+            // 
+            // tsConsistForm
+            // 
+            this.tsConsistForm.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsConsistForm.Name = "tsConsistForm";
+            this.tsConsistForm.Size = new System.Drawing.Size(198, 22);
+            this.tsConsistForm.Text = "Consistir Formulário";
+            this.tsConsistForm.Click += new System.EventHandler(this.TsUtility_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(195, 6);
+            // 
+            // tsRestaurarPadrao
+            // 
+            this.tsRestaurarPadrao.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsRestaurarPadrao.Name = "tsRestaurarPadrao";
+            this.tsRestaurarPadrao.Size = new System.Drawing.Size(198, 22);
+            this.tsRestaurarPadrao.Text = "Restaurar Padrão HLP";
+            this.tsRestaurarPadrao.Click += new System.EventHandler(this.TsUtility_Click);
+            // 
+            // tsArquivoSys
+            // 
+            this.tsArquivoSys.Name = "tsArquivoSys";
+            this.tsArquivoSys.Size = new System.Drawing.Size(198, 22);
+            this.tsArquivoSys.Text = "Criar Arquivo Sys.Form";
+            this.tsArquivoSys.Click += new System.EventHandler(this.TsUtility_Click);
             // 
             // miniToolStrip
             // 
@@ -226,128 +280,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1160, 27);
             this.menuStrip1.TabIndex = 104;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // sepImprimir
-            // 
-            this.sepImprimir.Name = "sepImprimir";
-            this.sepImprimir.Size = new System.Drawing.Size(6, 23);
-            // 
-            // lblCount
-            // 
-            this.lblCount.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(42, 20);
-            this.lblCount.Text = "0 de 0";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panelPadrao);
-            this.panel1.Controls.Add(this.stripPadrao);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1160, 284);
-            this.panel1.TabIndex = 117;
-            // 
-            // panelPadrao
-            // 
-            this.panelPadrao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPadrao.Location = new System.Drawing.Point(0, 0);
-            this.panelPadrao.Name = "panelPadrao";
-            this.panelPadrao.Padding = new System.Windows.Forms.Padding(3);
-            this.panelPadrao.Size = new System.Drawing.Size(1158, 260);
-            this.panelPadrao.TabIndex = 117;
-            // 
-            // cmsOpcoesGrid
-            // 
-            this.cmsOpcoesGrid.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmsOpcoesGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportarConteudoPExcelToolStripMenuItem,
-            this.salvarTamanhoDasColunasToolStripMenuItem});
-            this.cmsOpcoesGrid.Name = "cmsOpcoesGrid";
-            this.cmsOpcoesGrid.Size = new System.Drawing.Size(244, 48);
-            // 
-            // exportarConteudoPExcelToolStripMenuItem
-            // 
-            this.exportarConteudoPExcelToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportarConteudoPExcelToolStripMenuItem.Name = "exportarConteudoPExcelToolStripMenuItem";
-            this.exportarConteudoPExcelToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.exportarConteudoPExcelToolStripMenuItem.Text = "Exportar Conteúdo p/ Excel";
-            this.exportarConteudoPExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarConteudoPExcelToolStripMenuItem_Click);
-            // 
-            // salvarTamanhoDasColunasToolStripMenuItem
-            // 
-            this.salvarTamanhoDasColunasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salvarTamanhoDasColunasToolStripMenuItem.Name = "salvarTamanhoDasColunasToolStripMenuItem";
-            this.salvarTamanhoDasColunasToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.salvarTamanhoDasColunasToolStripMenuItem.Text = "Salvar Configuração das Colunas";
-            this.salvarTamanhoDasColunasToolStripMenuItem.Click += new System.EventHandler(this.salvarTamanhoDasColunasToolStripMenuItem_Click);
-            // 
-            // bwWorkerInicializa
-            // 
-            this.bwWorkerInicializa.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwWorker_DoWork);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 23);
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsConfigComp,
-            this.tsConsistForm,
-            this.toolStripSeparator9,
-            this.tsRestaurarPadrao,
-            this.tsArquivoSys});
-            this.toolStripSplitButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripSplitButton1.Image = global::HLP.Comum.UI.Properties.Resources.Utilitarios;
-            this.toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(107, 20);
-            this.toolStripSplitButton1.Text = "Propriedades";
-            this.toolStripSplitButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // tsConfigComp
-            // 
-            this.tsConfigComp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsConfigComp.Name = "tsConfigComp";
-            this.tsConfigComp.Size = new System.Drawing.Size(198, 22);
-            this.tsConfigComp.Text = "Configurar Componetes";
-            this.tsConfigComp.Click += new System.EventHandler(this.TsUtility_Click);
-            // 
-            // tsConsistForm
-            // 
-            this.tsConsistForm.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsConsistForm.Name = "tsConsistForm";
-            this.tsConsistForm.Size = new System.Drawing.Size(198, 22);
-            this.tsConsistForm.Text = "Consistir Formulário";
-            this.tsConsistForm.Click += new System.EventHandler(this.TsUtility_Click);
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(195, 6);
-            // 
-            // tsRestaurarPadrao
-            // 
-            this.tsRestaurarPadrao.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsRestaurarPadrao.Name = "tsRestaurarPadrao";
-            this.tsRestaurarPadrao.Size = new System.Drawing.Size(198, 22);
-            this.tsRestaurarPadrao.Text = "Restaurar Padrão HLP";
-            this.tsRestaurarPadrao.Click += new System.EventHandler(this.TsUtility_Click);
-            // 
-            // tsArquivoSys
-            // 
-            this.tsArquivoSys.Name = "tsArquivoSys";
-            this.tsArquivoSys.Size = new System.Drawing.Size(198, 22);
-            this.tsArquivoSys.Text = "Criar Arquivo Sys.Form";
-            this.tsArquivoSys.Click += new System.EventHandler(this.TsUtility_Click);
             // 
             // btnNovo
             // 
@@ -423,6 +355,11 @@
             this.btnImprimir.Text = "&Imprimir";
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
+            // sepImprimir
+            // 
+            this.sepImprimir.Name = "sepImprimir";
+            this.sepImprimir.Size = new System.Drawing.Size(6, 23);
+            // 
             // btnDuplicar
             // 
             this.btnDuplicar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -433,49 +370,10 @@
             this.btnDuplicar.Text = "&Duplicar";
             this.btnDuplicar.Click += new System.EventHandler(this.btnDuplicar_Click);
             // 
-            // btnPrimeiro
+            // toolStripSeparator1
             // 
-            this.btnPrimeiro.Image = global::HLP.Comum.UI.Properties.Resources.primeiro__2_;
-            this.btnPrimeiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrimeiro.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPrimeiro.Name = "btnPrimeiro";
-            this.btnPrimeiro.Size = new System.Drawing.Size(23, 20);
-            this.btnPrimeiro.ToolTipText = "Próximo";
-            this.btnPrimeiro.Click += new System.EventHandler(this.btnPrimeiro_Click);
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.Image = global::HLP.Comum.UI.Properties.Resources.esquerda;
-            this.btnAnterior.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(23, 20);
-            this.btnAnterior.ToolTipText = "Próximo";
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
-            // 
-            // btnProximo
-            // 
-            this.btnProximo.Image = global::HLP.Comum.UI.Properties.Resources.direita___Cópia;
-            this.btnProximo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(23, 20);
-            this.btnProximo.ToolTipText = "Próximo";
-            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
-            // 
-            // btnUltimo
-            // 
-            this.btnUltimo.Image = global::HLP.Comum.UI.Properties.Resources.ultimo__4_;
-            this.btnUltimo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnUltimo.Name = "btnUltimo";
-            this.btnUltimo.Size = new System.Drawing.Size(23, 20);
-            this.btnUltimo.ToolTipText = "Próximo";
-            this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
-            // 
-            // bwWorkerRecarregaForm
-            // 
-            this.bwWorkerRecarregaForm.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwWorkerRecarregaForm_DoWork);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 23);
             // 
             // tsConfigurar
             // 
@@ -488,11 +386,6 @@
             this.tsConfigurar.Size = new System.Drawing.Size(75, 23);
             this.tsConfigurar.Text = "Con&figurar";
             // 
-            // sepDuplicar
-            // 
-            this.sepDuplicar.Name = "sepDuplicar";
-            this.sepDuplicar.Size = new System.Drawing.Size(6, 23);
-            // 
             // ctxConfiguracao
             // 
             this.ctxConfiguracao.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -501,6 +394,7 @@
             this.tsDesabilitar,
             this.tsCamposVisiveis});
             this.ctxConfiguracao.Name = "cmsOpcoesGrid";
+            this.ctxConfiguracao.OwnerItem = this.tsConfigurar;
             this.ctxConfiguracao.Size = new System.Drawing.Size(211, 70);
             // 
             // tsHabilitar
@@ -528,6 +422,113 @@
             this.tsCamposVisiveis.Text = "Mostrar campos invisíveis";
             this.tsCamposVisiveis.Click += new System.EventHandler(this.tsHab_Click);
             // 
+            // sepDuplicar
+            // 
+            this.sepDuplicar.Name = "sepDuplicar";
+            this.sepDuplicar.Size = new System.Drawing.Size(6, 23);
+            // 
+            // btnPrimeiro
+            // 
+            this.btnPrimeiro.Image = global::HLP.Comum.UI.Properties.Resources.primeiro__2_;
+            this.btnPrimeiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrimeiro.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPrimeiro.Name = "btnPrimeiro";
+            this.btnPrimeiro.Size = new System.Drawing.Size(23, 20);
+            this.btnPrimeiro.ToolTipText = "Próximo";
+            this.btnPrimeiro.Click += new System.EventHandler(this.btnPrimeiro_Click);
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.Image = global::HLP.Comum.UI.Properties.Resources.esquerda;
+            this.btnAnterior.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(23, 20);
+            this.btnAnterior.ToolTipText = "Próximo";
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            // 
+            // lblCount
+            // 
+            this.lblCount.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(42, 20);
+            this.lblCount.Text = "0 de 0";
+            // 
+            // btnProximo
+            // 
+            this.btnProximo.Image = global::HLP.Comum.UI.Properties.Resources.direita___Cópia;
+            this.btnProximo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnProximo.Name = "btnProximo";
+            this.btnProximo.Size = new System.Drawing.Size(23, 20);
+            this.btnProximo.ToolTipText = "Próximo";
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
+            // 
+            // btnUltimo
+            // 
+            this.btnUltimo.Image = global::HLP.Comum.UI.Properties.Resources.ultimo__4_;
+            this.btnUltimo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUltimo.Name = "btnUltimo";
+            this.btnUltimo.Size = new System.Drawing.Size(23, 20);
+            this.btnUltimo.ToolTipText = "Próximo";
+            this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panelPadrao);
+            this.panel1.Controls.Add(this.stripPadrao);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1160, 284);
+            this.panel1.TabIndex = 117;
+            // 
+            // panelPadrao
+            // 
+            this.panelPadrao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPadrao.Location = new System.Drawing.Point(0, 0);
+            this.panelPadrao.Name = "panelPadrao";
+            this.panelPadrao.Padding = new System.Windows.Forms.Padding(3);
+            this.panelPadrao.Size = new System.Drawing.Size(1158, 260);
+            this.panelPadrao.TabIndex = 117;
+            // 
+            // cmsOpcoesGrid
+            // 
+            this.cmsOpcoesGrid.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmsOpcoesGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarConteudoPExcelToolStripMenuItem,
+            this.salvarTamanhoDasColunasToolStripMenuItem});
+            this.cmsOpcoesGrid.Name = "cmsOpcoesGrid";
+            this.cmsOpcoesGrid.Size = new System.Drawing.Size(244, 48);
+            // 
+            // exportarConteudoPExcelToolStripMenuItem
+            // 
+            this.exportarConteudoPExcelToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportarConteudoPExcelToolStripMenuItem.Name = "exportarConteudoPExcelToolStripMenuItem";
+            this.exportarConteudoPExcelToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.exportarConteudoPExcelToolStripMenuItem.Text = "Exportar Conteúdo p/ Excel";
+            this.exportarConteudoPExcelToolStripMenuItem.Click += new System.EventHandler(this.exportarConteudoPExcelToolStripMenuItem_Click);
+            // 
+            // salvarTamanhoDasColunasToolStripMenuItem
+            // 
+            this.salvarTamanhoDasColunasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salvarTamanhoDasColunasToolStripMenuItem.Name = "salvarTamanhoDasColunasToolStripMenuItem";
+            this.salvarTamanhoDasColunasToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.salvarTamanhoDasColunasToolStripMenuItem.Text = "Salvar Configuração das Colunas";
+            this.salvarTamanhoDasColunasToolStripMenuItem.Click += new System.EventHandler(this.salvarTamanhoDasColunasToolStripMenuItem_Click);
+            // 
+            // bwWorkerInicializa
+            // 
+            this.bwWorkerInicializa.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwWorker_DoWork);
+            // 
+            // bwWorkerRecarregaForm
+            // 
+            this.bwWorkerRecarregaForm.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwWorkerRecarregaForm_DoWork);
+            // 
             // FormPadraoCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,11 +554,11 @@
             this.stripPadrao.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.ctxConfiguracao.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).EndInit();
             this.cmsOpcoesGrid.ResumeLayout(false);
-            this.ctxConfiguracao.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

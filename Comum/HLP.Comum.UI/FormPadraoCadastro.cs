@@ -403,106 +403,132 @@ namespace HLP.Comum.UI
 
         private void Componente_Enter(object sender, EventArgs e)
         {
-            Control c = (Control)sender;
-            if (c.Parent.GetType() == typeof(HLP_TextBox))
+            try
             {
-                if (!String.IsNullOrEmpty(((HLP_TextBox)c.Parent)._Help))
+                Control c = (Control)sender;
+
+                UserControlBase objcomp = null;
+
+                if (c.GetType().BaseType == typeof(UserControlBase))
+                    objcomp = c as UserControlBase;
+                else if (c.Parent.GetType().BaseType == typeof(UserControlBase))
+                    objcomp = c.Parent as UserControlBase;
+
+                lblHelp.Text = "";
+                if (objcomp != null)
                 {
-                    lblHelp.Text = ((HLP_TextBox)c.Parent)._Help;
+                    if (objcomp.objConfigComponenteModel != null)
+                    {
+                        lblHelp.Text = objcomp.objConfigComponenteModel.objConfigCompUsu.xHelp;
+                    }
                 }
-                else
-                {
-                    lblHelp.Text = "";
-                }
+                
             }
-            else if (c.Parent.GetType() == typeof(HLP_CheckBox))
+            catch (System.Exception ex)
             {
-                if (!String.IsNullOrEmpty(((HLP_CheckBox)c.Parent)._Help))
-                {
-                    lblHelp.Text = ((HLP_CheckBox)c.Parent)._Help;
-                }
-                else
-                {
-                    lblHelp.Text = "";
-                }
+                HLPMessageBox.ShowAviso("Erro ao buscar o help do componente");
             }
-            else if (c.Parent.GetType() == typeof(HLP_ComboBox))
-            {
-                if (!String.IsNullOrEmpty(((HLP_ComboBox)c.Parent)._Help))
-                {
-                    lblHelp.Text = ((HLP_ComboBox)c.Parent)._Help;
-                }
-                else
-                {
-                    lblHelp.Text = "";
-                }
-            }
-            else if (c.Parent.GetType() == typeof(HLP_DateTimePicker))
-            {
-                if (!String.IsNullOrEmpty(((HLP_DateTimePicker)c.Parent)._Help))
-                {
-                    lblHelp.Text = ((HLP_DateTimePicker)c.Parent)._Help;
-                }
-                else
-                {
-                    lblHelp.Text = "";
-                }
-            }
-            else if (c.Parent.GetType() == typeof(HLP_ListBox))
-            {
-                if (!String.IsNullOrEmpty(((HLP_ListBox)c.Parent)._Help))
-                {
-                    lblHelp.Text = ((HLP_ListBox)c.Parent)._Help;
-                }
-                else
-                {
-                    lblHelp.Text = "";
-                }
-            }
-            else if (c.Parent.GetType() == typeof(HLP_MaskedTextBox))
-            {
-                if (!String.IsNullOrEmpty(((HLP_MaskedTextBox)c.Parent)._Help))
-                {
-                    lblHelp.Text = ((HLP_MaskedTextBox)c.Parent)._Help;
-                }
-                else
-                {
-                    lblHelp.Text = "";
-                }
-            }
-            else if (c.Parent.GetType() == typeof(HLP_NumericUpDown))
-            {
-                if (!String.IsNullOrEmpty(((HLP_NumericUpDown)c.Parent)._Help))
-                {
-                    lblHelp.Text = ((HLP_NumericUpDown)c.Parent)._Help;
-                }
-                else
-                {
-                    lblHelp.Text = "";
-                }
-            }
-            else if (c.Parent.GetType() == typeof(HLP_Observacao))
-            {
-                if (!String.IsNullOrEmpty(((HLP_Observacao)c.Parent)._Help))
-                {
-                    lblHelp.Text = ((HLP_Observacao)c.Parent)._Help;
-                }
-                else
-                {
-                    lblHelp.Text = "";
-                }
-            }
-            else if (c.GetType() == typeof(HLP_Pesquisa))
-            {
-                if (!String.IsNullOrEmpty(((HLP_Pesquisa)c)._Help))
-                {
-                    lblHelp.Text = ((HLP_Pesquisa)c)._Help;
-                }
-                else
-                {
-                    lblHelp.Text = "";
-                }
-            }
+
+
+            //if (c.Parent.GetType() == typeof(HLP_TextBox))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_TextBox)c.Parent)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_TextBox)c.Parent)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
+            //else if (c.Parent.GetType() == typeof(HLP_CheckBox))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_CheckBox)c.Parent)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_CheckBox)c.Parent)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
+            //else if (c.Parent.GetType() == typeof(HLP_ComboBox))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_ComboBox)c.Parent)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_ComboBox)c.Parent)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
+            //else if (c.Parent.GetType() == typeof(HLP_DateTimePicker))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_DateTimePicker)c.Parent)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_DateTimePicker)c.Parent)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
+            //else if (c.Parent.GetType() == typeof(HLP_ListBox))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_ListBox)c.Parent)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_ListBox)c.Parent)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
+            //else if (c.Parent.GetType() == typeof(HLP_MaskedTextBox))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_MaskedTextBox)c.Parent)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_MaskedTextBox)c.Parent)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
+            //else if (c.Parent.GetType() == typeof(HLP_NumericUpDown))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_NumericUpDown)c.Parent)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_NumericUpDown)c.Parent)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
+            //else if (c.Parent.GetType() == typeof(HLP_Observacao))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_Observacao)c.Parent)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_Observacao)c.Parent)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
+            //else if (c.GetType() == typeof(HLP_Pesquisa))
+            //{
+            //    if (!String.IsNullOrEmpty(((HLP_Pesquisa)c)._Help))
+            //    {
+            //        lblHelp.Text = ((HLP_Pesquisa)c)._Help;
+            //    }
+            //    else
+            //    {
+            //        lblHelp.Text = "";
+            //    }
+            //}
         }
         void tabPage_Enter(object sender, EventArgs e)
         {
@@ -774,7 +800,7 @@ namespace HLP.Comum.UI
         #endregion
 
         #region Metodos Publicos
-     
+
         /// <summary>
         /// 1 -> Após pesquisar e Salvar
         /// 2 -> Após Cancelar e Excluir e Iniciar
@@ -1025,17 +1051,12 @@ namespace HLP.Comum.UI
                 if (this.InvokeRequired)
                     this.BeginInvoke((MethodInvoker)delegate
                     {
-
                         iConfigFormularioService.InitializeFormulario(this.panelPadrao, sView);
                         ConfiguraAcoesPermitidas();
                         HabilitaBotoes(2);
                         HabilitaBotoesNavegacao(false);
                         objMetodosForm.HabilitaCampos(false);
                         objMetodosForm.HabilitaButtonSpecPesquisa(true);
-                        objMetodosForm.JogarFocoPrimeiroComponente();
-                        SetaEventos();          
-
-                       
                     });
 
             }
@@ -1055,6 +1076,7 @@ namespace HLP.Comum.UI
                     {
                         iConfigFormularioService.InitializeFormulario(this.panelPadrao, sView);
                         objMetodosForm = new MetodosForm(iConfigFormularioService);
+                        objMetodosForm.JogarFocoPrimeiroComponente();
                         objEventosForm = new EventosForm(iConfigFormularioService);
                         objValidaCampos = new ValidaCampos(iConfigFormularioService, objEventosForm);
                         ConfiguraAcoesPermitidas();
@@ -1062,12 +1084,11 @@ namespace HLP.Comum.UI
                         HabilitaBotoesNavegacao(false);
                         objMetodosForm.HabilitaCampos(false);
                         objMetodosForm.HabilitaButtonSpecPesquisa(true);
-                        objMetodosForm.JogarFocoPrimeiroComponente();
                         SetaEventos();
                         if (this.Modal == true)  // executa os métodos novo ao iniciar form modal 
                         {
                             //ExecutaEventoNovo();
-                        }       
+                        }
                     });
 
             }
@@ -1095,22 +1116,22 @@ namespace HLP.Comum.UI
                 tsDesabilitar.Enabled = true;
                 tsHabilitar.Enabled = false;
             }
-            else if(sender == tsDesabilitar)
+            else if (sender == tsDesabilitar)
             {
                 bwWorkerRecarregaForm.RunWorkerAsync();
                 objMetodosForm.HabilitaButtonSpecConfig(false);
-                tsCamposVisiveis.Enabled = false; 
+                tsCamposVisiveis.Enabled = false;
                 tsDesabilitar.Enabled = false;
                 tsHabilitar.Enabled = true;
             }
             else if (sender == tsCamposVisiveis)
             {
-                
+
             }
         }
 
-       
 
-      
+
+
     }
 }

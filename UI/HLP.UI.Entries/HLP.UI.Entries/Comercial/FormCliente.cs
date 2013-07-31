@@ -44,6 +44,7 @@ namespace HLP.UI.Entries.Comercial
             IKernel kernel = new StandardKernel(new MagnificusDependenciesModule());
             kernel.Settings.ActivationCacheDisabled = false;
             kernel.Inject(this);
+          
         }
 
         private void FormCliente_Load(object sender, EventArgs e)
@@ -53,16 +54,14 @@ namespace HLP.UI.Entries.Comercial
             idContato.Tag = "FormContato-vwContato-xNome";
             idProduto.Tag = "FormProduto-vwProduto-xComercial";
             idListaPrecoPai.Tag = "FormListaPreco-vwListaPrecoPai-xLista";
-
-
+                        
             InicializaFormPadrao("vwCliente");
             VerifBw += (() =>
-                {
-                    CarregaCombosGrid();
-                });
+            {
+                CarregaCombosGrid();
+            });
             t1 = new Thread(new ThreadStart(VerifBw));
             t1.Start();
-
         }
         public override void Novo()
         {
