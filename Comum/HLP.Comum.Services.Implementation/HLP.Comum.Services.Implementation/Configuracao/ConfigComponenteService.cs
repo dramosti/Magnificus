@@ -14,6 +14,7 @@ using HLP.Comum.Models;
 using HLP.Services.Interfaces.Entries.Parametros;
 using HLP.Models.Entries.Parametros;
 using System.Drawing;
+using HLP.Comum.Messages;
 
 
 namespace HLP.Comum.Services.Implementation.Configuracao
@@ -123,12 +124,11 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                             comp.xField = controle.ToObject().GetPropertyValue("_Field").ToString();
                             comp.xTable = controle.ToObject().GetPropertyValue("_Table").ToString();
 
-
                             // User Info                        
                             comp.objConfigCompUsu.nOrder = controle.Parent.Controls.IndexOf(controle);
                             comp.objConfigCompUsu.xLabelText = controle.ToObject().GetPropertyValue("_LabelText").ToString();
                             comp.objConfigCompUsu.xText = "";// controle.ToObject().GetPropertyValue("_LabelText").ToString(); --Verificar
-                            comp.objConfigCompUsu.stVisible = Convert.ToBoolean(controle.ToObject().GetPropertyValue("Visible")).ToByte();
+                            comp.objConfigCompUsu.stVisible = 1; // Convert.ToBoolean(controle.ToObject().GetPropertyValue("Visible")).ToByte();
                             comp.objConfigCompUsu.stEnabled = controle.Enabled.ToByte();
                             if (controle.ToObject().GetPropertyValue("_LabelGroup") != null)
                                 comp.xLabelGroup = (controle.ToObject().GetPropertyValue("_LabelGroup") as HLP_LabelSeparator).Name;
@@ -158,16 +158,22 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                             if (comp.xField != "" && comp.xTable != "")
                             {
                                 comp.Base = this.GetInfoField(comp.xTable, comp.xField);
-
-                                if (comp.xTypeComp.Equals("HLP_NumericUpDown"))
+                                if (comp.Base != null)
                                 {
-                                    comp.objConfigCompUsu.xText = "0";
-                                    comp.objConfigCompUsu.nMaxLength = comp.Base.GetMaxLeghtToNumericUpDown();
-                                    comp.objConfigCompUsu.nDecimalPlaces = comp.Base.SCALE.ToInt32();
+                                    if (comp.xTypeComp.Equals("HLP_NumericUpDown"))
+                                    {
+                                        comp.objConfigCompUsu.xText = "0";
+                                        comp.objConfigCompUsu.nMaxLength = comp.Base.GetMaxLeghtToNumericUpDown();
+                                        comp.objConfigCompUsu.nDecimalPlaces = comp.Base.SCALE.ToInt32();
+                                    }
+                                    else
+                                    {
+                                        comp.objConfigCompUsu.nMaxLength = comp.Base.GetMaxLenghtNormal();
+                                    }
                                 }
                                 else
                                 {
-                                    comp.objConfigCompUsu.nMaxLength = comp.Base.GetMaxLenghtNormal();
+                                    HLPMessageBox.ShowAviso(string.Format("Dados não encontrado na base de dados do campo {0} da tabela {1}, componente: {2}", comp.xField, comp.xTable, comp.xName));
                                 }
                             }
                             #endregion
@@ -221,7 +227,8 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                                 }
                                 else
                                 {
-                                    throw new Exception(string.Format("Erro ao buscar informações do campo {0}. da Tabelda {1}", col.xDataPropertyName, comp.xTable));
+                                    HLPMessageBox.ShowAviso(string.Format("Erro ao buscar informações do campo {0}. da Tabelda {1}", col.xDataPropertyName, comp.xTable));
+                                    //throw new Exception(string.Format("Erro ao buscar informações do campo {0}. da Tabelda {1}", col.xDataPropertyName, comp.xTable));
                                 }
 
                                 col.objColunasGridUsu.nDisplayIndex = dgvCol.Index;
@@ -238,7 +245,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                         }
                         catch (Exception ex)
                         {
-                            throw new Exception(string.Format("Erro ao buscar informações do componente:{0} - tipo:{1}, que se encontra na TabPage:{2}{3} Erro:", comp.xName, comp.xTypeComp, tab.xNameTab, Environment.NewLine) + ex.Message);
+                            HLPMessageBox.ShowAviso(string.Format("Erro ao buscar informações do componente:{0} - tipo:{1}, que se encontra na TabPage:{2}{3} Erro:", comp.xName, comp.xTypeComp, tab.xNameTab, Environment.NewLine) + ex.Message);
                         }
                     }
                     tab.lConfigComponente.Add(comp);

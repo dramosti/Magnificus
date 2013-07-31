@@ -62,33 +62,27 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
         public void GetInfoTabPagesRecursiovo(Control.ControlCollection lControles, List<ConfigTabPageModel> lConfigTab, List<Control> lControl)
         {
+
             foreach (Control ctr in lControles)
             {
                 if (ctr.GetType() == typeof(TabPage))
                 {
-                    //Verificação para desconciderar o objteto inicial que é HLP, e carregar a primeira TAB .
-                    //if (lConfigTab.xNameTab.Equals("HLP"))
-                    //{
-                    //    this.GetInfoTabPage(ctr, lConfigTab);
-                    //    iComponenteService.GetInfoCompByTabePage(lConfigTab, lControl);
-                    //    GetInfoTabPagesRecursiovo(ctr.Controls, lConfigTab, lControl);
-                    //}
-                    //else
-                    {
-                        AC.ExtendedRenderer.Navigator.KryptonTabControl tabControl = (ctr as TabPage).Parent as AC.ExtendedRenderer.Navigator.KryptonTabControl;
-                        tabControl.SelectedTab = (ctr as TabPage);
-                        ConfigTabPageModel tab = new ConfigTabPageModel();                        
-                        this.GetInfoTabPage(ctr, tab);
-                        iComponenteService.GetInfoCompByTabePage(tab, lControl);
-                        lConfigTab.Add(tab);
-                        GetInfoTabPagesRecursiovo(ctr.Controls, tab.lConfigTabPageModel, lControl);
-                    }
+                    //AC.ExtendedRenderer.Navigator.KryptonTabControl tabControl = (ctr as TabPage).Parent as AC.ExtendedRenderer.Navigator.KryptonTabControl;
+                    //tabControl.SelectedTab = (ctr as TabPage);
+                    ConfigTabPageModel tab = new ConfigTabPageModel();
+                    this.GetInfoTabPage(ctr, tab);
+                    iComponenteService.GetInfoCompByTabePage(tab, lControl);
+                    lConfigTab.Add(tab);
+                    GetInfoTabPagesRecursiovo(ctr.Controls, tab.lConfigTabPageModel, lControl);
                 }
                 else if (ctr.HasChildren)
                 {
                     GetInfoTabPagesRecursiovo(ctr.Controls, lConfigTab, lControl);
                 }
             }
+
+
+
         }
 
         /// <summary>

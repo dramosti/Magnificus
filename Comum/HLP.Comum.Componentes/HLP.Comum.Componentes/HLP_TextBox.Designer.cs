@@ -74,12 +74,17 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt.StateDisabled.Border.Width = 1;
             this.txt.StateDisabled.Content.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.txt.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.txt.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.txt.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt.StateNormal.Border.Width = 1;
             this.txt.TabIndex = 5;
+            this.txt.TextChanged += new System.EventHandler(this.txt_TextChanged);
+            this.txt.Enter += new System.EventHandler(this.txt_Enter);
+            this.txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_KeyPress);
+            this.txt.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // btnPesquisaCampo
             // 
