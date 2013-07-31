@@ -67,10 +67,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>F67F2C7B89090B7C45D914A038D591D61F6CD858</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>746414CFE58AB3698BF15ADD872E9F3BEA6C4C27</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Magnificus_8_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Magnificus_9_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -208,6 +208,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Magnificus_8_TemporaryKey.pfx" />
+    <None Include="Magnificus_9_TemporaryKey.pfx" />
     <None Include="Magnificus_TemporaryKey.pfx" />
     <None Include="Resources\1374535171_Warning.png" />
     <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.Log_ScriptsModel.datasource" />
