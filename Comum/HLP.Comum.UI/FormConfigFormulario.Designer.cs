@@ -323,7 +323,7 @@
             this.txtHelp._Regex = null;
             this.txtHelp._TamanhoComponente = 600;
             this.txtHelp._TamanhoMaiorLabel = 142;
-            this.txtHelp._Visible = false;
+            this.txtHelp._Visible = true;
             this.txtHelp.BackColor = System.Drawing.Color.Transparent;
             this.txtHelp.Base = null;
             this.txtHelp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -348,7 +348,7 @@
             this.txtLabelText._Regex = null;
             this.txtLabelText._TamanhoComponente = 600;
             this.txtLabelText._TamanhoMaiorLabel = 142;
-            this.txtLabelText._Visible = false;
+            this.txtLabelText._Visible = true;
             this.txtLabelText.BackColor = System.Drawing.Color.Transparent;
             this.txtLabelText.Base = null;
             this.txtLabelText.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -371,7 +371,7 @@
             this.nudDecimalPlaces._Regex = null;
             this.nudDecimalPlaces._TamanhoComponente = 86;
             this.nudDecimalPlaces._TamanhoMaiorLabel = 142;
-            this.nudDecimalPlaces._Visible = false;
+            this.nudDecimalPlaces._Visible = true;
             this.nudDecimalPlaces.BackColor = System.Drawing.Color.Transparent;
             this.nudDecimalPlaces.Base = null;
             this.nudDecimalPlaces.Color = System.Drawing.Color.White;
@@ -410,7 +410,7 @@
             this.nudMaxLength._Regex = null;
             this.nudMaxLength._TamanhoComponente = 86;
             this.nudMaxLength._TamanhoMaiorLabel = 142;
-            this.nudMaxLength._Visible = false;
+            this.nudMaxLength._Visible = true;
             this.nudMaxLength.BackColor = System.Drawing.Color.Transparent;
             this.nudMaxLength.Base = null;
             this.nudMaxLength.Color = System.Drawing.Color.White;
@@ -448,7 +448,7 @@
             this.chkEnabled._Regex = null;
             this.chkEnabled._TamanhoComponente = 43;
             this.chkEnabled._TamanhoMaiorLabel = 142;
-            this.chkEnabled._Visible = false;
+            this.chkEnabled._Visible = true;
             this.chkEnabled.BackColor = System.Drawing.Color.Transparent;
             this.chkEnabled.Base = null;
             this.chkEnabled.Checked = false;
@@ -469,7 +469,7 @@
             this.chkVisible._Regex = null;
             this.chkVisible._TamanhoComponente = 42;
             this.chkVisible._TamanhoMaiorLabel = 142;
-            this.chkVisible._Visible = false;
+            this.chkVisible._Visible = true;
             this.chkVisible.BackColor = System.Drawing.Color.Transparent;
             this.chkVisible.Base = null;
             this.chkVisible.Checked = false;
@@ -490,7 +490,7 @@
             this.nudComprimento._Regex = null;
             this.nudComprimento._TamanhoComponente = 86;
             this.nudComprimento._TamanhoMaiorLabel = 142;
-            this.nudComprimento._Visible = false;
+            this.nudComprimento._Visible = true;
             this.nudComprimento.BackColor = System.Drawing.Color.Transparent;
             this.nudComprimento.Base = null;
             this.nudComprimento.Color = System.Drawing.Color.White;
@@ -528,7 +528,7 @@
             this.btnValorPadrao._Regex = null;
             this.btnValorPadrao._TamanhoComponente = 86;
             this.btnValorPadrao._TamanhoMaiorLabel = 142;
-            this.btnValorPadrao._Visible = false;
+            this.btnValorPadrao._Visible = true;
             this.btnValorPadrao.Base = null;
             this.btnValorPadrao.Location = new System.Drawing.Point(145, 188);
             this.btnValorPadrao.Margin = new System.Windows.Forms.Padding(145, 3, 15, 3);
@@ -545,7 +545,7 @@
             this.btnCor._Regex = null;
             this.btnCor._TamanhoComponente = 86;
             this.btnCor._TamanhoMaiorLabel = 142;
-            this.btnCor._Visible = false;
+            this.btnCor._Visible = true;
             this.btnCor.Base = null;
             this.btnCor.Location = new System.Drawing.Point(145, 218);
             this.btnCor.Margin = new System.Windows.Forms.Padding(145, 3, 15, 3);
@@ -562,7 +562,7 @@
             this.listDisplay._Regex = null;
             this.listDisplay._TamanhoComponente = 307;
             this.listDisplay._TamanhoMaiorLabel = 142;
-            this.listDisplay._Visible = false;
+            this.listDisplay._Visible = true;
             this.listDisplay.Base = null;
             this.listDisplay.HeaderGroup1 = "Possibilidades";
             this.listDisplay.HeaderGroup2 = "Itens selecionados";
