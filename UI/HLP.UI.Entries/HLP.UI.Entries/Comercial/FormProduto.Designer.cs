@@ -1989,6 +1989,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudvVenda._Table = "Produto";
             this.nudvVenda._TamanhoComponente = 122;
             this.nudvVenda._TamanhoMaiorLabel = 200;
+            this.nudvVenda._Visible = false;
             this.nudvVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudvVenda.Base = null;
             this.nudvVenda.Color = System.Drawing.Color.White;
@@ -2028,6 +2029,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaExcedenteVenda._Table = "Produto";
             this.nudpEntregaExcedenteVenda._TamanhoComponente = 122;
             this.nudpEntregaExcedenteVenda._TamanhoMaiorLabel = 200;
+            this.nudpEntregaExcedenteVenda._Visible = false;
             this.nudpEntregaExcedenteVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaExcedenteVenda.Base = null;
             this.nudpEntregaExcedenteVenda.Color = System.Drawing.Color.White;
@@ -2067,6 +2069,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaInsuficienteVenda._Table = "Produto";
             this.nudpEntregaInsuficienteVenda._TamanhoComponente = 122;
             this.nudpEntregaInsuficienteVenda._TamanhoMaiorLabel = 200;
+            this.nudpEntregaInsuficienteVenda._Visible = false;
             this.nudpEntregaInsuficienteVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaInsuficienteVenda.Base = null;
             this.nudpEntregaInsuficienteVenda.Color = System.Drawing.Color.White;
@@ -2108,6 +2111,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtdValorVenda._Table = "Produto";
             this.txtdValorVenda._TamanhoComponente = 122;
             this.txtdValorVenda._TamanhoMaiorLabel = 200;
+            this.txtdValorVenda._Visible = false;
             this.txtdValorVenda.BackColor = System.Drawing.Color.Transparent;
             this.txtdValorVenda.Base = null;
             this.txtdValorVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -2140,6 +2144,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaVendas._TamanhoComponente = 300;
             this.hlP_PesquisaidUnidadeMedidaVendas._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidUnidadeMedidaVendas._Vinculado = false;
+            this.hlP_PesquisaidUnidadeMedidaVendas._Visible = false;
             this.hlP_PesquisaidUnidadeMedidaVendas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaVendas.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaVendas.Base = null;
@@ -2158,7 +2163,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1144, 225);
+            this.tabPage7.Size = new System.Drawing.Size(1059, 655);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Tag = false;
             this.tabPage7.Text = "Dados de ordem de compras";
@@ -2169,7 +2174,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel5.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel5.Name = "kryptonPanel5";
-            this.kryptonPanel5.Size = new System.Drawing.Size(1144, 225);
+            this.kryptonPanel5.Size = new System.Drawing.Size(1059, 655);
             this.kryptonPanel5.TabIndex = 1;
             // 
             // flowLayoutPanel5
@@ -2190,7 +2195,7 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(1144, 225);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(1059, 655);
             this.flowLayoutPanel5.TabIndex = 0;
             // 
             // sep_ConfigOrdemCompra
@@ -2458,7 +2463,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimeCotacao.Color = System.Drawing.Color.Empty;
             this.dtdleadTimeCotacao.CustomFormat = "";
             this.dtdleadTimeCotacao.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdleadTimeCotacao.Location = new System.Drawing.Point(740, 3);
+            this.dtdleadTimeCotacao.Location = new System.Drawing.Point(154, 217);
             this.dtdleadTimeCotacao.Margin = new System.Windows.Forms.Padding(154, 3, 15, 3);
             this.dtdleadTimeCotacao.Name = "dtdleadTimeCotacao";
             this.dtdleadTimeCotacao.objConfigComponenteModel = null;
@@ -2483,7 +2488,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimePedido.Color = System.Drawing.Color.Empty;
             this.dtdleadTimePedido.CustomFormat = "";
             this.dtdleadTimePedido.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdleadTimePedido.Location = new System.Drawing.Point(746, 30);
+            this.dtdleadTimePedido.Location = new System.Drawing.Point(160, 244);
             this.dtdleadTimePedido.Margin = new System.Windows.Forms.Padding(160, 3, 15, 3);
             this.dtdleadTimePedido.Name = "dtdleadTimePedido";
             this.dtdleadTimePedido.objConfigComponenteModel = null;
@@ -2508,7 +2513,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimeRecebimento.Color = System.Drawing.Color.Empty;
             this.dtdleadTimeRecebimento.CustomFormat = "";
             this.dtdleadTimeRecebimento.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdleadTimeRecebimento.Location = new System.Drawing.Point(715, 57);
+            this.dtdleadTimeRecebimento.Location = new System.Drawing.Point(129, 271);
             this.dtdleadTimeRecebimento.Margin = new System.Windows.Forms.Padding(129, 3, 15, 3);
             this.dtdleadTimeRecebimento.Name = "dtdleadTimeRecebimento";
             this.dtdleadTimeRecebimento.objConfigComponenteModel = null;
@@ -2522,7 +2527,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage8.Location = new System.Drawing.Point(4, 25);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1144, 225);
+            this.tabPage8.Size = new System.Drawing.Size(1059, 655);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Tag = false;
             this.tabPage8.Text = "Dados de produção";
@@ -2533,7 +2538,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel6.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel6.Name = "kryptonPanel6";
-            this.kryptonPanel6.Size = new System.Drawing.Size(1144, 225);
+            this.kryptonPanel6.Size = new System.Drawing.Size(1059, 655);
             this.kryptonPanel6.TabIndex = 1;
             // 
             // flowLayoutPanel6
@@ -2548,7 +2553,7 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(1144, 225);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(1059, 655);
             this.flowLayoutPanel6.TabIndex = 0;
             // 
             // Sep_ConfigProdutucao
@@ -2721,7 +2726,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPageFornecedores.Location = new System.Drawing.Point(4, 25);
             this.tabPageFornecedores.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageFornecedores.Name = "tabPageFornecedores";
-            this.tabPageFornecedores.Size = new System.Drawing.Size(1144, 225);
+            this.tabPageFornecedores.Size = new System.Drawing.Size(1059, 655);
             this.tabPageFornecedores.TabIndex = 8;
             this.tabPageFornecedores.Tag = false;
             this.tabPageFornecedores.Text = "Fornecedores";
@@ -2732,7 +2737,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel7.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel7.Name = "kryptonPanel7";
-            this.kryptonPanel7.Size = new System.Drawing.Size(1144, 225);
+            this.kryptonPanel7.Size = new System.Drawing.Size(1059, 655);
             this.kryptonPanel7.TabIndex = 1;
             // 
             // dgvProduto_Fornecedor_Homologado
@@ -2752,7 +2757,7 @@ namespace HLP.UI.Entries.Comercial
             this.dgvProduto_Fornecedor_Homologado.Inclui = false;
             this.dgvProduto_Fornecedor_Homologado.Location = new System.Drawing.Point(0, 0);
             this.dgvProduto_Fornecedor_Homologado.Name = "dgvProduto_Fornecedor_Homologado";
-            this.dgvProduto_Fornecedor_Homologado.Size = new System.Drawing.Size(1144, 225);
+            this.dgvProduto_Fornecedor_Homologado.Size = new System.Drawing.Size(1059, 655);
             this.dgvProduto_Fornecedor_Homologado.TabIndex = 1;
             this.dgvProduto_Fornecedor_Homologado.Tag = "Produto_Fornecedor_Homologado";
             // 
@@ -2827,7 +2832,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1144, 225);
+            this.tabPage10.Size = new System.Drawing.Size(1059, 655);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Tag = false;
             this.tabPage10.Text = "Log de revisão";
@@ -2838,7 +2843,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel8.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel8.Name = "kryptonPanel8";
-            this.kryptonPanel8.Size = new System.Drawing.Size(1144, 225);
+            this.kryptonPanel8.Size = new System.Drawing.Size(1059, 655);
             this.kryptonPanel8.TabIndex = 1;
             // 
             // dgvProduto_Revisao
@@ -2859,7 +2864,7 @@ namespace HLP.UI.Entries.Comercial
             this.dgvProduto_Revisao.Inclui = false;
             this.dgvProduto_Revisao.Location = new System.Drawing.Point(0, 0);
             this.dgvProduto_Revisao.Name = "dgvProduto_Revisao";
-            this.dgvProduto_Revisao.Size = new System.Drawing.Size(1144, 225);
+            this.dgvProduto_Revisao.Size = new System.Drawing.Size(1059, 655);
             this.dgvProduto_Revisao.TabIndex = 2;
             this.dgvProduto_Revisao.Tag = "Produto_Revisao";
             this.dgvProduto_Revisao.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvProduto_Revisao_DefaultValuesNeeded);
