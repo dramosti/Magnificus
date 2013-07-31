@@ -67,7 +67,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>7537F94CB9AB9A3073D11F7DAC72305C4D093352</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>F67F2C7B89090B7C45D914A038D591D61F6CD858</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Magnificus_8_TemporaryKey.pfx</ManifestKeyFile>
@@ -207,7 +207,6 @@
       <LastGenOutput>HLP_Lista_de_Banco.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Magnificus_11_TemporaryKey.pfx" />
     <None Include="Magnificus_8_TemporaryKey.pfx" />
     <None Include="Magnificus_TemporaryKey.pfx" />
     <None Include="Resources\1374535171_Warning.png" />

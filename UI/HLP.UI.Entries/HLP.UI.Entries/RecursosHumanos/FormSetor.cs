@@ -243,7 +243,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             try
             {
                 setorModel.xDescricao = txtxDescricao.Text;
-                setorModel.xSetor = txtCodigo.Text;
+                setorModel.xSetor = txtxSetor.Text;
                 setorModel.xEmail = txtxEmail.Text;
                 setorModel.idEmpresa = CompanyData.idEmpresa;
 

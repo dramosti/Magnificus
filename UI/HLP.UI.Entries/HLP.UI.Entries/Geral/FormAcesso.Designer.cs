@@ -239,7 +239,6 @@
             this.txtIdFuncionario._Table = "Funcionario";
             this.txtIdFuncionario._TamanhoComponente = 98;
             this.txtIdFuncionario._TamanhoMaiorLabel = 100;
-            this.txtIdFuncionario._Visible = true;
             this.txtIdFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.txtIdFuncionario.Base = null;
             this.txtIdFuncionario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -248,6 +247,7 @@
             this.txtIdFuncionario.Margin = new System.Windows.Forms.Padding(23, 3, 15, 3);
             this.txtIdFuncionario.MaxLength = 32767;
             this.txtIdFuncionario.Name = "txtIdFuncionario";
+            this.txtIdFuncionario.objConfigComponenteModel = null;
             this.txtIdFuncionario.ReadOnly = false;
             this.txtIdFuncionario.Size = new System.Drawing.Size(178, 23);
             this.txtIdFuncionario.TabIndex = 3;
@@ -265,7 +265,6 @@
             this.txtxCodigoAlternativo._Table = "Funcionario";
             this.txtxCodigoAlternativo._TamanhoComponente = 159;
             this.txtxCodigoAlternativo._TamanhoMaiorLabel = 100;
-            this.txtxCodigoAlternativo._Visible = true;
             this.txtxCodigoAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoAlternativo.Base = null;
             this.txtxCodigoAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -274,6 +273,7 @@
             this.txtxCodigoAlternativo.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.txtxCodigoAlternativo.MaxLength = 32767;
             this.txtxCodigoAlternativo.Name = "txtxCodigoAlternativo";
+            this.txtxCodigoAlternativo.objConfigComponenteModel = null;
             this.txtxCodigoAlternativo.ReadOnly = false;
             this.txtxCodigoAlternativo.Size = new System.Drawing.Size(262, 21);
             this.txtxCodigoAlternativo.TabIndex = 4;
@@ -290,7 +290,6 @@
             this.txtxNome._Table = "Funcionario";
             this.txtxNome._TamanhoComponente = 405;
             this.txtxNome._TamanhoMaiorLabel = 100;
-            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -299,6 +298,7 @@
             this.txtxNome.Margin = new System.Windows.Forms.Padding(66, 3, 15, 3);
             this.txtxNome.MaxLength = 32767;
             this.txtxNome.Name = "txtxNome";
+            this.txtxNome.objConfigComponenteModel = null;
             this.txtxNome.ReadOnly = false;
             this.txtxNome.Size = new System.Drawing.Size(442, 21);
             this.txtxNome.TabIndex = 5;
@@ -324,13 +324,13 @@
             this.chkstUsuarioAtivo._Table = "Funcionario";
             this.chkstUsuarioAtivo._TamanhoComponente = 43;
             this.chkstUsuarioAtivo._TamanhoMaiorLabel = 100;
-            this.chkstUsuarioAtivo._Visible = true;
             this.chkstUsuarioAtivo.BackColor = System.Drawing.Color.Transparent;
             this.chkstUsuarioAtivo.Base = null;
             this.chkstUsuarioAtivo.Checked = false;
             this.chkstUsuarioAtivo.Location = new System.Drawing.Point(23, 134);
             this.chkstUsuarioAtivo.Margin = new System.Windows.Forms.Padding(23, 3, 15, 3);
             this.chkstUsuarioAtivo.Name = "chkstUsuarioAtivo";
+            this.chkstUsuarioAtivo.objConfigComponenteModel = null;
             this.chkstUsuarioAtivo.Size = new System.Drawing.Size(123, 21);
             this.chkstUsuarioAtivo.TabIndex = 10;
             this.chkstUsuarioAtivo.Value = false;
@@ -348,7 +348,6 @@
             this.txtxId._Table = "Funcionario";
             this.txtxId._TamanhoComponente = 174;
             this.txtxId._TamanhoMaiorLabel = 100;
-            this.txtxId._Visible = true;
             this.txtxId.BackColor = System.Drawing.Color.Transparent;
             this.txtxId.Base = null;
             this.txtxId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -357,6 +356,7 @@
             this.txtxId.Margin = new System.Windows.Forms.Padding(67, 3, 15, 3);
             this.txtxId.MaxLength = 32767;
             this.txtxId.Name = "txtxId";
+            this.txtxId.objConfigComponenteModel = null;
             this.txtxId.ReadOnly = false;
             this.txtxId.Size = new System.Drawing.Size(210, 21);
             this.txtxId.TabIndex = 6;
@@ -374,7 +374,6 @@
             this.txtxSenha._Table = "Funcionario";
             this.txtxSenha._TamanhoComponente = 174;
             this.txtxSenha._TamanhoMaiorLabel = 100;
-            this.txtxSenha._Visible = true;
             this.txtxSenha.BackColor = System.Drawing.Color.Transparent;
             this.txtxSenha.Base = null;
             this.txtxSenha.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -383,6 +382,7 @@
             this.txtxSenha.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.txtxSenha.MaxLength = 32767;
             this.txtxSenha.Name = "txtxSenha";
+            this.txtxSenha.objConfigComponenteModel = null;
             this.txtxSenha.ReadOnly = false;
             this.txtxSenha.Size = new System.Drawing.Size(213, 21);
             this.txtxSenha.TabIndex = 7;
@@ -400,7 +400,6 @@
             this.cbxstUsuario._Table = "Funcionario";
             this.cbxstUsuario._TamanhoComponente = 199;
             this.cbxstUsuario._TamanhoMaiorLabel = 100;
-            this.cbxstUsuario._Visible = true;
             this.cbxstUsuario.BackColor = System.Drawing.Color.Transparent;
             this.cbxstUsuario.Base = null;
             this.cbxstUsuario.Color = System.Drawing.Color.White;
@@ -409,6 +408,7 @@
             this.cbxstUsuario.Location = new System.Drawing.Point(32, 215);
             this.cbxstUsuario.Margin = new System.Windows.Forms.Padding(32, 3, 15, 3);
             this.cbxstUsuario.Name = "cbxstUsuario";
+            this.cbxstUsuario.objConfigComponenteModel = null;
             this.cbxstUsuario.SelectedIndex = -1;
             this.cbxstUsuario.SelectedValue = 0;
             this.cbxstUsuario.Size = new System.Drawing.Size(270, 21);
@@ -424,11 +424,11 @@
             this.btnVerificar._Regex = null;
             this.btnVerificar._TamanhoComponente = 164;
             this.btnVerificar._TamanhoMaiorLabel = 0;
-            this.btnVerificar._Visible = true;
             this.btnVerificar.Base = null;
             this.btnVerificar.Location = new System.Drawing.Point(3, 242);
             this.btnVerificar.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.objConfigComponenteModel = null;
             this.btnVerificar.Size = new System.Drawing.Size(164, 24);
             this.btnVerificar.TabIndex = 9;
             this.btnVerificar._btnHlpClick += new System.EventHandler(this.btnVerificar__btnHlpClick);

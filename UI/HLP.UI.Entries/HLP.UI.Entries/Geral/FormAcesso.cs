@@ -298,12 +298,13 @@ namespace HLP.UI.Entries.Geral
             txtxCodigoAlternativo.Text = objFuncionarioModel.xCodigoAlternativo;
             txtxNome.Text = objFuncionarioModel.xNome;
             chkstUsuarioAtivo.Checked = objFuncionarioModel.stUsuarioAtivo;
-            txtxId.Text = objFuncionarioModel.xID;
+            txtxId.Text = objFuncionarioModel.xID != null ? objFuncionarioModel.xID : "";
             txtxSenha.Text = objFuncionarioModel.xSenha != null ?
                 Criptografia.Decripta(objFuncionarioModel.xSenha) : "";
             cbxstUsuario.SelectedIndex = objFuncionarioModel.stUsuario != null ?
                 (int)objFuncionarioModel.stUsuario : -1;
-            
+
+            bsAcesso.DataSource = objFuncionarioModel.lFuncionario_Acesso;            
         }
 
         void CarregaAcesso()

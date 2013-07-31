@@ -175,6 +175,7 @@ namespace Magnificus
         private void formLoginHlp_FormClosed(object sender, FormClosedEventArgs e)
         {
             ControleAcessoService.InsereControleAcesso(false);
+            timer1.Stop();
         }
 
         private void formLoginHlp_Load(object sender, EventArgs e)

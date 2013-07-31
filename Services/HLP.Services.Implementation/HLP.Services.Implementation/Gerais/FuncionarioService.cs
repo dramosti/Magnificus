@@ -265,6 +265,7 @@ namespace HLP.Services.Implementation.Entries.Gerais
                 objFuncionario.lFuncionario_Comissao_Produto = _Funcionario_Comissao_ProdutoRepository.GetAllFuncionario_Comissao_Produto(idFuncionario);
                 objFuncionario.lFuncionario_Arquivo = _Funcionario_ArquivoRepository.GetAllFuncionario_Arquivo(idFuncionario);
                 objFuncionario.lFuncionario_Certificacao = _Funcionario_CertificacaoRepository.GetAllFuncionario_Certificacao(idFuncionario);
+                objFuncionario.lFuncionario_Acesso = _Acesso_Funcionario.GetAllAcesso_Funcionario(idFuncionario);
             }
 
             return objFuncionario;
