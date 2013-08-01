@@ -61,7 +61,8 @@ namespace HLP.Comum.UI.Metodos
                                 ctr.SetPropertyValue("Enabled", Convert.ToBoolean(lobjConfigComp.FirstOrDefault(c => c.xName == ctr.Name).objConfigCompUsu.stEnabled));
                             }
                             else
-                            {
+                            {         
+                       
                                 ctr.SetPropertyValue("Enabled", bHabilita);
                             }
                         }

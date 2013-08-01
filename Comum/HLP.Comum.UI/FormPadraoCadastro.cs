@@ -826,6 +826,7 @@ namespace HLP.Comum.UI
                     {
                         if (bVisualizaBotoesNavegacao && (bsRetPesquisa.DataSource as List<int>).Count > 0) { HabilitaBotoesNavegacao(true); } else { HabilitaBotoesNavegacao(false); }
                     }
+                    this.tsConfigurar.Enabled = true;
                     break;
                 case 2: this.btnSalvar.Enabled = false;
                     this.btnCancelar.Enabled = false;
@@ -839,6 +840,7 @@ namespace HLP.Comum.UI
                     {
                         if (bVisualizaBotoesNavegacao && (bsRetPesquisa.DataSource as List<int>).Count > 0) { HabilitaBotoesNavegacao(true); } else { HabilitaBotoesNavegacao(false); }
                     }
+                    this.tsConfigurar.Enabled = true;
                     break;
                 case 3: this.btnSalvar.Enabled = true;
                     this.btnCancelar.Enabled = true;
@@ -848,6 +850,7 @@ namespace HLP.Comum.UI
                     this.btnNovo.Enabled = false;
                     this.btnAtualizar.Enabled = false;
                     this.btnDuplicar.Enabled = false;
+                    this.tsConfigurar.Enabled = false;
                     HabilitaBotoesNavegacao(false);
                     break;
                 case 4: this.btnSalvar.Enabled = false;
@@ -867,6 +870,7 @@ namespace HLP.Comum.UI
                     this.btnNovo.Enabled = false;
                     this.btnAtualizar.Enabled = false;
                     this.btnDuplicar.Enabled = false;
+                    this.tsConfigurar.Enabled = true;
                     break;
             }
 
@@ -1053,10 +1057,14 @@ namespace HLP.Comum.UI
                     {
                         iConfigFormularioService.InitializeFormulario(this.panelPadrao, sView);
                         ConfiguraAcoesPermitidas();
-                        HabilitaBotoes(2);
                         HabilitaBotoesNavegacao(false);
                         objMetodosForm.HabilitaCampos(false);
                         objMetodosForm.HabilitaButtonSpecPesquisa(true);
+                        objMetodosForm.HabilitaButtonSpecConfig(false);
+                        tsCamposVisiveis.Enabled = false;
+                        tsDesabilitar.Enabled = false;
+                        tsHabilitar.Enabled = true;
+                        HabilitaBotoes(2);
                     });
 
             }
@@ -1118,16 +1126,17 @@ namespace HLP.Comum.UI
             }
             else if (sender == tsDesabilitar)
             {
-                bwWorkerRecarregaForm.RunWorkerAsync();
-                objMetodosForm.HabilitaButtonSpecConfig(false);
-                tsCamposVisiveis.Enabled = false;
-                tsDesabilitar.Enabled = false;
-                tsHabilitar.Enabled = true;
+                bwWorkerRecarregaForm.RunWorkerAsync();               
             }
             else if (sender == tsCamposVisiveis)
             {
 
             }
+        }
+
+        private void tsConfigurar_Click(object sender, EventArgs e)
+        {
+
         }
 
 

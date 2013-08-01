@@ -27,6 +27,8 @@ namespace HLP.Comum.Components
         public Label lblBase = new Label();
         [Browsable(false)]
         public Control controleBase = new Control();
+        [Browsable(false)]
+        public bool bConfiguracao { get; set; }
 
 
         [Category("HLP")]
@@ -74,17 +76,17 @@ namespace HLP.Comum.Components
             {
                 try
                 {
-                    if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
+                    this.Visible = value;
+                    if (bConfiguracao)
                     {
-                        if (objConfigComponenteModel.Base.NULLABLE == "0")
+                        if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
                         {
-                            this.Visible = true;
+                            if (objConfigComponenteModel.Base.NULLABLE == "0")
+                            {
+                                this.Visible = true;
+                            }
                         }
-                        else
-                            this.Visible = value;
                     }
-                    else
-                        this.Visible = value;
                 }
                 catch (Exception)
                 {

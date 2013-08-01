@@ -65,7 +65,7 @@ namespace Magnificus
                             //if (param_geral != null)
                             //    CompanyData.stMaiusculo = param_geral.stMaiusculo.ToBoolean();
 
-                            Pastas.Path_SettingsEmpresa = (cbxIdEmpresa.SelectedItem as EmpresaModel).xLinkPastas;
+                            //Pastas.Path_SettingsEmpresa = (cbxIdEmpresa.SelectedItem as EmpresaModel).xLinkPastas;
 
                             UserData.xNome = objUsuario.xNome;
                             UserData.idUser = (int)objUsuario.idFuncionario;

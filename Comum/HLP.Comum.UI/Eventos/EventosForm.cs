@@ -298,13 +298,15 @@ namespace HLP.Comum.UI.Eventos
         private void btnConfig_Click(object sender, EventArgs e)
         {
             ComponentFactory.Krypton.Toolkit.ButtonSpecAny ctr = sender as ComponentFactory.Krypton.Toolkit.ButtonSpecAny;
-            FormPopupConfig objFrm = new FormPopupConfig(ctr.Tag as Control);
+            ctr.SetPropertyValue("bConfiguracao", true);
+            FormPopupConfig objFrm = new FormPopupConfig(ctr.Tag as Control);            
             objFrm.ShowDialog();
 
             if (objFrm.bAlterou)
             {
                 iConfigComponenteService.Save((ctr.Tag as Control).GetPropertyValue("objConfigComponenteModel") as ConfigComponenteModel);
             }
+            ctr.SetPropertyValue("bConfiguracao", false);
 
 
         }

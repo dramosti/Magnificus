@@ -46,6 +46,7 @@ namespace HLP.UI.Entries.Geral
             this.nudpAcrescimoMaximo = new HLP.Comum.Components.HLP_NumericUpDown();
             this.hlP_PesquisaidContaContabil = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_PesquisaidCentroCusto = new HLP.Comum.Components.HLP_Pesquisa();
+            this.cbostAlteraDescricaoComercialProdutoVenda = new HLP.Comum.Components.HLP_ComboBox();
             this.sp_representante = new HLP.Comum.Components.HLP_LabelSeparator();
             this.hlP_PesquisaidLinhaProdutoBase = new HLP.Comum.Components.HLP_Pesquisa();
             this.nudpComissaoAvista = new HLP.Comum.Components.HLP_NumericUpDown();
@@ -56,7 +57,6 @@ namespace HLP.UI.Entries.Geral
             this.idTipoOperacao = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.idClasseFinanceira = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bsFamiliaProduto = new System.Windows.Forms.BindingSource(this.components);
-            this.cbostAlteraDescricaoComercialProdutoVenda = new HLP.Comum.Components.HLP_ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
@@ -184,7 +184,6 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo._Table = "Familia_Produto";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 300;
-            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -193,6 +192,7 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(258, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(152, 21);
             this.txtCodigo.TabIndex = 0;
@@ -210,7 +210,6 @@ namespace HLP.UI.Entries.Geral
             this.txtxFamiliaProduto._Table = "Familia_Produto";
             this.txtxFamiliaProduto._TamanhoComponente = 224;
             this.txtxFamiliaProduto._TamanhoMaiorLabel = 300;
-            this.txtxFamiliaProduto._Visible = true;
             this.txtxFamiliaProduto.BackColor = System.Drawing.Color.Transparent;
             this.txtxFamiliaProduto.Base = null;
             this.txtxFamiliaProduto.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -219,6 +218,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxFamiliaProduto.Margin = new System.Windows.Forms.Padding(143, 3, 15, 3);
             this.txtxFamiliaProduto.MaxLength = 32767;
             this.txtxFamiliaProduto.Name = "txtxFamiliaProduto";
+            this.txtxFamiliaProduto.objConfigComponenteModel = null;
             this.txtxFamiliaProduto.ReadOnly = false;
             this.txtxFamiliaProduto.Size = new System.Drawing.Size(384, 21);
             this.txtxFamiliaProduto.TabIndex = 3;
@@ -236,7 +236,6 @@ namespace HLP.UI.Entries.Geral
             this.txtxDescricao._Table = "Familia_Produto";
             this.txtxDescricao._TamanhoComponente = 221;
             this.txtxDescricao._TamanhoMaiorLabel = 300;
-            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -245,6 +244,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxDescricao.Margin = new System.Windows.Forms.Padding(244, 3, 15, 3);
             this.txtxDescricao.MaxLength = 10;
             this.txtxDescricao.Name = "txtxDescricao";
+            this.txtxDescricao.objConfigComponenteModel = null;
             this.txtxDescricao.ReadOnly = false;
             this.txtxDescricao.Size = new System.Drawing.Size(280, 21);
             this.txtxDescricao.TabIndex = 2;
@@ -263,7 +263,6 @@ namespace HLP.UI.Entries.Geral
             this.txtxSigla._Table = "Familia_Produto";
             this.txtxSigla._TamanhoComponente = 134;
             this.txtxSigla._TamanhoMaiorLabel = 300;
-            this.txtxSigla._Visible = true;
             this.txtxSigla.BackColor = System.Drawing.Color.Transparent;
             this.txtxSigla.Base = null;
             this.txtxSigla.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -272,6 +271,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxSigla.Margin = new System.Windows.Forms.Padding(271, 3, 15, 3);
             this.txtxSigla.MaxLength = 32767;
             this.txtxSigla.Name = "txtxSigla";
+            this.txtxSigla.objConfigComponenteModel = null;
             this.txtxSigla.ReadOnly = false;
             this.txtxSigla.Size = new System.Drawing.Size(166, 21);
             this.txtxSigla.TabIndex = 4;
@@ -287,9 +287,8 @@ namespace HLP.UI.Entries.Geral
             this.cbxstGrau._Regex = null;
             this.cbxstGrau._situacao = false;
             this.cbxstGrau._Table = "Familia_produto";
-            this.cbxstGrau._TamanhoComponente = 120;
+            this.cbxstGrau._TamanhoComponente = 104;
             this.cbxstGrau._TamanhoMaiorLabel = 300;
-            this.cbxstGrau._Visible = true;
             this.cbxstGrau.BackColor = System.Drawing.Color.Transparent;
             this.cbxstGrau.Base = null;
             this.cbxstGrau.Color = System.Drawing.Color.White;
@@ -298,9 +297,10 @@ namespace HLP.UI.Entries.Geral
             this.cbxstGrau.Location = new System.Drawing.Point(271, 135);
             this.cbxstGrau.Margin = new System.Windows.Forms.Padding(271, 3, 15, 3);
             this.cbxstGrau.Name = "cbxstGrau";
+            this.cbxstGrau.objConfigComponenteModel = null;
             this.cbxstGrau.SelectedIndex = -1;
             this.cbxstGrau.SelectedValue = 0;
-            this.cbxstGrau.Size = new System.Drawing.Size(152, 21);
+            this.cbxstGrau.Size = new System.Drawing.Size(136, 21);
             this.cbxstGrau.TabIndex = 17;
             this.cbxstGrau.ValueMember = "ValueMember";
             // 
@@ -327,7 +327,6 @@ namespace HLP.UI.Entries.Geral
             this.nudpDescontoMaximo._Table = "Familia_Produto";
             this.nudpDescontoMaximo._TamanhoComponente = 121;
             this.nudpDescontoMaximo._TamanhoMaiorLabel = 300;
-            this.nudpDescontoMaximo._Visible = true;
             this.nudpDescontoMaximo.BackColor = System.Drawing.Color.Transparent;
             this.nudpDescontoMaximo.Base = null;
             this.nudpDescontoMaximo.Color = System.Drawing.Color.White;
@@ -345,6 +344,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudpDescontoMaximo.Name = "nudpDescontoMaximo";
+            this.nudpDescontoMaximo.objConfigComponenteModel = null;
             this.nudpDescontoMaximo.ReadOnly = false;
             this.nudpDescontoMaximo.Size = new System.Drawing.Size(291, 22);
             this.nudpDescontoMaximo.TabIndex = 5;
@@ -367,7 +367,6 @@ namespace HLP.UI.Entries.Geral
             this.nudpAcrescimoMaximo._Table = "Familia_Produto";
             this.nudpAcrescimoMaximo._TamanhoComponente = 121;
             this.nudpAcrescimoMaximo._TamanhoMaiorLabel = 300;
-            this.nudpAcrescimoMaximo._Visible = true;
             this.nudpAcrescimoMaximo.BackColor = System.Drawing.Color.Transparent;
             this.nudpAcrescimoMaximo.Base = null;
             this.nudpAcrescimoMaximo.Color = System.Drawing.Color.White;
@@ -385,6 +384,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudpAcrescimoMaximo.Name = "nudpAcrescimoMaximo";
+            this.nudpAcrescimoMaximo.objConfigComponenteModel = null;
             this.nudpAcrescimoMaximo.ReadOnly = false;
             this.nudpAcrescimoMaximo.Size = new System.Drawing.Size(293, 22);
             this.nudpAcrescimoMaximo.TabIndex = 6;
@@ -413,15 +413,15 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidContaContabil._TamanhoComponente = 300;
             this.hlP_PesquisaidContaContabil._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidContaContabil._Vinculado = false;
-            this.hlP_PesquisaidContaContabil._Visible = true;
             this.hlP_PesquisaidContaContabil.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidContaContabil.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidContaContabil.Base = null;
             this.hlP_PesquisaidContaContabil.Location = new System.Drawing.Point(220, 242);
             this.hlP_PesquisaidContaContabil.Margin = new System.Windows.Forms.Padding(220, 3, 15, 3);
             this.hlP_PesquisaidContaContabil.Name = "hlP_PesquisaidContaContabil";
+            this.hlP_PesquisaidContaContabil.objConfigComponenteModel = null;
             this.hlP_PesquisaidContaContabil.ReadOnly = false;
-            this.hlP_PesquisaidContaContabil.Size = new System.Drawing.Size(473, 21);
+            this.hlP_PesquisaidContaContabil.Size = new System.Drawing.Size(383, 21);
             this.hlP_PesquisaidContaContabil.TabIndex = 9;
             this.hlP_PesquisaidContaContabil.Value = 0;
             // 
@@ -443,17 +443,46 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidCentroCusto._TamanhoComponente = 300;
             this.hlP_PesquisaidCentroCusto._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidCentroCusto._Vinculado = false;
-            this.hlP_PesquisaidCentroCusto._Visible = true;
             this.hlP_PesquisaidCentroCusto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCentroCusto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCentroCusto.Base = null;
             this.hlP_PesquisaidCentroCusto.Location = new System.Drawing.Point(214, 269);
             this.hlP_PesquisaidCentroCusto.Margin = new System.Windows.Forms.Padding(214, 3, 15, 3);
             this.hlP_PesquisaidCentroCusto.Name = "hlP_PesquisaidCentroCusto";
+            this.hlP_PesquisaidCentroCusto.objConfigComponenteModel = null;
             this.hlP_PesquisaidCentroCusto.ReadOnly = false;
-            this.hlP_PesquisaidCentroCusto.Size = new System.Drawing.Size(479, 21);
+            this.hlP_PesquisaidCentroCusto.Size = new System.Drawing.Size(389, 21);
             this.hlP_PesquisaidCentroCusto.TabIndex = 10;
             this.hlP_PesquisaidCentroCusto.Value = 0;
+            // 
+            // cbostAlteraDescricaoComercialProdutoVenda
+            // 
+            this.cbostAlteraDescricaoComercialProdutoVenda._Field = "stAlteraDescricaoComercialProdutoVenda";
+            this.cbostAlteraDescricaoComercialProdutoVenda._Help = "Informar ao sistema se poderá ou não alterar a descrição do produto no módulo com" +
+    "ercial (orçamento, vendas, faturamento). 0 - não 1 - sim (default)";
+            this.cbostAlteraDescricaoComercialProdutoVenda._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostAlteraDescricaoComercialProdutoVenda._Itens")));
+            this.cbostAlteraDescricaoComercialProdutoVenda._LabelGroup = this.sp_config;
+            this.cbostAlteraDescricaoComercialProdutoVenda._LabelText = "Altera descrição comercial do produto em vendas";
+            this.cbostAlteraDescricaoComercialProdutoVenda._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.cbostAlteraDescricaoComercialProdutoVenda._Regex = null;
+            this.cbostAlteraDescricaoComercialProdutoVenda._situacao = true;
+            this.cbostAlteraDescricaoComercialProdutoVenda._Table = "Familia_produto";
+            this.cbostAlteraDescricaoComercialProdutoVenda._TamanhoComponente = 80;
+            this.cbostAlteraDescricaoComercialProdutoVenda._TamanhoMaiorLabel = 300;
+            this.cbostAlteraDescricaoComercialProdutoVenda.BackColor = System.Drawing.Color.Transparent;
+            this.cbostAlteraDescricaoComercialProdutoVenda.Base = null;
+            this.cbostAlteraDescricaoComercialProdutoVenda.Color = System.Drawing.Color.White;
+            this.cbostAlteraDescricaoComercialProdutoVenda.DataSource = null;
+            this.cbostAlteraDescricaoComercialProdutoVenda.DisplayMember = "DisplayMember";
+            this.cbostAlteraDescricaoComercialProdutoVenda.Location = new System.Drawing.Point(44, 296);
+            this.cbostAlteraDescricaoComercialProdutoVenda.Margin = new System.Windows.Forms.Padding(44, 3, 15, 3);
+            this.cbostAlteraDescricaoComercialProdutoVenda.Name = "cbostAlteraDescricaoComercialProdutoVenda";
+            this.cbostAlteraDescricaoComercialProdutoVenda.objConfigComponenteModel = null;
+            this.cbostAlteraDescricaoComercialProdutoVenda.SelectedIndex = 1;
+            this.cbostAlteraDescricaoComercialProdutoVenda.SelectedValue = 0;
+            this.cbostAlteraDescricaoComercialProdutoVenda.Size = new System.Drawing.Size(339, 21);
+            this.cbostAlteraDescricaoComercialProdutoVenda.TabIndex = 18;
+            this.cbostAlteraDescricaoComercialProdutoVenda.ValueMember = "ValueMember";
             // 
             // sp_representante
             // 
@@ -469,7 +498,7 @@ namespace HLP.UI.Entries.Geral
             // 
             // hlP_PesquisaidLinhaProdutoBase
             // 
-            this.hlP_PesquisaidLinhaProdutoBase._Field = "idFamiliaProduto";
+            this.hlP_PesquisaidLinhaProdutoBase._Field = "idFamiliaProdutoBase";
             this.hlP_PesquisaidLinhaProdutoBase._Help = "Informar a familia de produto que servirá como base para os lançamentos de classe" +
     "s financeira";
             this.hlP_PesquisaidLinhaProdutoBase._LabelGroup = this.sp_representante;
@@ -485,15 +514,15 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidLinhaProdutoBase._TamanhoComponente = 300;
             this.hlP_PesquisaidLinhaProdutoBase._TamanhoMaiorLabel = 300;
             this.hlP_PesquisaidLinhaProdutoBase._Vinculado = false;
-            this.hlP_PesquisaidLinhaProdutoBase._Visible = true;
             this.hlP_PesquisaidLinhaProdutoBase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidLinhaProdutoBase.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidLinhaProdutoBase.Base = null;
             this.hlP_PesquisaidLinhaProdutoBase.Location = new System.Drawing.Point(171, 347);
             this.hlP_PesquisaidLinhaProdutoBase.Margin = new System.Windows.Forms.Padding(171, 3, 15, 3);
             this.hlP_PesquisaidLinhaProdutoBase.Name = "hlP_PesquisaidLinhaProdutoBase";
+            this.hlP_PesquisaidLinhaProdutoBase.objConfigComponenteModel = null;
             this.hlP_PesquisaidLinhaProdutoBase.ReadOnly = false;
-            this.hlP_PesquisaidLinhaProdutoBase.Size = new System.Drawing.Size(522, 21);
+            this.hlP_PesquisaidLinhaProdutoBase.Size = new System.Drawing.Size(432, 21);
             this.hlP_PesquisaidLinhaProdutoBase.TabIndex = 13;
             this.hlP_PesquisaidLinhaProdutoBase.Value = 0;
             // 
@@ -509,7 +538,6 @@ namespace HLP.UI.Entries.Geral
             this.nudpComissaoAvista._Table = "Familia_Produto";
             this.nudpComissaoAvista._TamanhoComponente = 121;
             this.nudpComissaoAvista._TamanhoMaiorLabel = 300;
-            this.nudpComissaoAvista._Visible = true;
             this.nudpComissaoAvista.BackColor = System.Drawing.Color.Transparent;
             this.nudpComissaoAvista.Base = null;
             this.nudpComissaoAvista.Color = System.Drawing.Color.White;
@@ -527,6 +555,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudpComissaoAvista.Name = "nudpComissaoAvista";
+            this.nudpComissaoAvista.objConfigComponenteModel = null;
             this.nudpComissaoAvista.ReadOnly = false;
             this.nudpComissaoAvista.Size = new System.Drawing.Size(264, 22);
             this.nudpComissaoAvista.TabIndex = 11;
@@ -550,12 +579,11 @@ namespace HLP.UI.Entries.Geral
             this.nudpComissaoAprazo._Table = "Familia_Produto";
             this.nudpComissaoAprazo._TamanhoComponente = 121;
             this.nudpComissaoAprazo._TamanhoMaiorLabel = 300;
-            this.nudpComissaoAprazo._Visible = true;
             this.nudpComissaoAprazo.BackColor = System.Drawing.Color.Transparent;
             this.nudpComissaoAprazo.Base = null;
             this.nudpComissaoAprazo.Color = System.Drawing.Color.White;
             this.nudpComissaoAprazo.DecimalPlaces = 2;
-            this.nudpComissaoAprazo.Location = new System.Drawing.Point(154, 402);
+            this.nudpComissaoAprazo.Location = new System.Drawing.Point(862, 3);
             this.nudpComissaoAprazo.Margin = new System.Windows.Forms.Padding(154, 3, 15, 3);
             this.nudpComissaoAprazo.Maximum = new decimal(new int[] {
             9,
@@ -568,6 +596,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudpComissaoAprazo.Name = "nudpComissaoAprazo";
+            this.nudpComissaoAprazo.objConfigComponenteModel = null;
             this.nudpComissaoAprazo.ReadOnly = false;
             this.nudpComissaoAprazo.Size = new System.Drawing.Size(270, 22);
             this.nudpComissaoAprazo.TabIndex = 12;
@@ -584,7 +613,7 @@ namespace HLP.UI.Entries.Geral
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(804, 225);
+            this.tabPage3.Size = new System.Drawing.Size(1144, 225);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Tag = false;
             this.tabPage3.Text = "Classificação financeira  das Familias de produtos";
@@ -602,7 +631,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.PersistentColors = false;
-            this.kryptonPanel2.Size = new System.Drawing.Size(804, 225);
+            this.kryptonPanel2.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel2.TabIndex = 1;
             // 
             // dgvClassificacaoFinanc
@@ -621,7 +650,7 @@ namespace HLP.UI.Entries.Geral
             this.dgvClassificacaoFinanc.Inclui = false;
             this.dgvClassificacaoFinanc.Location = new System.Drawing.Point(0, 0);
             this.dgvClassificacaoFinanc.Name = "dgvClassificacaoFinanc";
-            this.dgvClassificacaoFinanc.Size = new System.Drawing.Size(804, 225);
+            this.dgvClassificacaoFinanc.Size = new System.Drawing.Size(1144, 225);
             this.dgvClassificacaoFinanc.TabIndex = 0;
             this.dgvClassificacaoFinanc.Tag = "Familia_Produto_Classes";
             // 
@@ -646,35 +675,6 @@ namespace HLP.UI.Entries.Geral
             // bsFamiliaProduto
             // 
             this.bsFamiliaProduto.DataSource = typeof(HLP.Models.Entries.Gerais.Familia_Produto_ClassesModel);
-            // 
-            // cbostAlteraDescricaoComercialProdutoVenda
-            // 
-            this.cbostAlteraDescricaoComercialProdutoVenda._Field = "stAlteraDescricaoComercialProdutoVenda";
-            this.cbostAlteraDescricaoComercialProdutoVenda._Help = "Informar ao sistema se poderá ou não alterar a descrição do produto no módulo com" +
-    "ercial (orçamento, vendas, faturamento). 0 - não 1 - sim (default)";
-            this.cbostAlteraDescricaoComercialProdutoVenda._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostAlteraDescricaoComercialProdutoVenda._Itens")));
-            this.cbostAlteraDescricaoComercialProdutoVenda._LabelGroup = this.sp_config;
-            this.cbostAlteraDescricaoComercialProdutoVenda._LabelText = "Altera descrição comercial do produto em vendas";
-            this.cbostAlteraDescricaoComercialProdutoVenda._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.cbostAlteraDescricaoComercialProdutoVenda._Regex = null;
-            this.cbostAlteraDescricaoComercialProdutoVenda._situacao = true;
-            this.cbostAlteraDescricaoComercialProdutoVenda._Table = "Familia_produto";
-            this.cbostAlteraDescricaoComercialProdutoVenda._TamanhoComponente = 162;
-            this.cbostAlteraDescricaoComercialProdutoVenda._TamanhoMaiorLabel = 300;
-            this.cbostAlteraDescricaoComercialProdutoVenda._Visible = true;
-            this.cbostAlteraDescricaoComercialProdutoVenda.BackColor = System.Drawing.Color.Transparent;
-            this.cbostAlteraDescricaoComercialProdutoVenda.Base = null;
-            this.cbostAlteraDescricaoComercialProdutoVenda.Color = System.Drawing.Color.White;
-            this.cbostAlteraDescricaoComercialProdutoVenda.DataSource = null;
-            this.cbostAlteraDescricaoComercialProdutoVenda.DisplayMember = "DisplayMember";
-            this.cbostAlteraDescricaoComercialProdutoVenda.Location = new System.Drawing.Point(44, 296);
-            this.cbostAlteraDescricaoComercialProdutoVenda.Margin = new System.Windows.Forms.Padding(44, 3, 15, 3);
-            this.cbostAlteraDescricaoComercialProdutoVenda.Name = "cbostAlteraDescricaoComercialProdutoVenda";
-            this.cbostAlteraDescricaoComercialProdutoVenda.SelectedIndex = 1;
-            this.cbostAlteraDescricaoComercialProdutoVenda.SelectedValue = 0;
-            this.cbostAlteraDescricaoComercialProdutoVenda.Size = new System.Drawing.Size(421, 21);
-            this.cbostAlteraDescricaoComercialProdutoVenda.TabIndex = 18;
-            this.cbostAlteraDescricaoComercialProdutoVenda.ValueMember = "ValueMember";
             // 
             // FormFamiliaProduto
             // 
