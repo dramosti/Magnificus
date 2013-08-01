@@ -12,6 +12,7 @@ TestResults
 *.suo
 *.user
 *.sln.docstates
+*.pfx
 
 # Build results
 [Dd]ebug/
@@ -30,6 +31,7 @@ x64/
 *.sbr
 *.tlb
 *.tli
+*.pfx
 *.tlh
 *.tmp
 *.log
@@ -95,6 +97,7 @@ sql
 TestResults
 [Tt]est[Rr]esult*
 *.Cache
+*.pfx
 ClientBin
 [Ss]tyle[Cc]op.*
 ~$*

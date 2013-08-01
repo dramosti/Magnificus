@@ -10,32 +10,32 @@ namespace HLP.Comum.Infrastructure.Static
 {
     public static class Pastas
     {
-        private static string _Path_SettingsEmpresa;
-        public static string Path_SettingsEmpresa
-        {
-            get { return Pastas._Path_SettingsEmpresa; }
-            set
-            {
-                Pastas._Path_SettingsEmpresa = value;
-                if (Pastas._Path_SettingsEmpresa == "")
-                {
-                    string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                    Pastas._Path_SettingsEmpresa = Path.Combine(localAppData, "HLP");
-                }
+        //private static string _Path_SettingsEmpresa;
+        //public static string Path_SettingsEmpresa
+        //{
+        //    get { return Pastas._Path_SettingsEmpresa; }
+        //    set
+        //    {
+        //        Pastas._Path_SettingsEmpresa = value;
+        //        if (Pastas._Path_SettingsEmpresa == "")
+        //        {
+        //            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        //            Pastas._Path_SettingsEmpresa = Path.Combine(localAppData, "HLP");
+        //        }
 
-                if (!Directory.Exists(Pastas._Path_SettingsEmpresa))
-                {
-                    Directory.CreateDirectory(Pastas._Path_SettingsEmpresa);
-                }
+        //        if (!Directory.Exists(Pastas._Path_SettingsEmpresa))
+        //        {
+        //            Directory.CreateDirectory(Pastas._Path_SettingsEmpresa);
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
         public static string Path_SettingsUser
         {
             get
             {
-                return Util.ValidaCaminho(Pastas.Path_SettingsEmpresa + "\\USER_" + UserData.idUser + "\\");
+                return Util.ValidaCaminho(Pastas.CaminhoPadraoRegWindows + "\\USER_" + UserData.idUser + "\\");
             }
         }
 
@@ -43,7 +43,7 @@ namespace HLP.Comum.Infrastructure.Static
         {
             get
             {
-                return Util.ValidaCaminho(Pastas.Path_SettingsEmpresa + "\\RELATORIOS\\");
+                return Util.ValidaCaminho(Pastas.CaminhoPadraoRegWindows + "\\RELATORIOS\\");
             }
         }
         public static string Path_Report
@@ -66,7 +66,7 @@ namespace HLP.Comum.Infrastructure.Static
         {
             get
             {
-                return Util.ValidaCaminho(Pastas.Path_SettingsEmpresa + "\\SYS_FORM\\");
+                return Util.ValidaCaminho(Pastas.CaminhoPadraoRegWindows + "\\SYS_FORM\\");
             }
         }
 

@@ -385,6 +385,7 @@
             this.tsConfigurar.Name = "tsConfigurar";
             this.tsConfigurar.Size = new System.Drawing.Size(75, 23);
             this.tsConfigurar.Text = "Con&figurar";
+            this.tsConfigurar.Click += new System.EventHandler(this.tsConfigurar_Click);
             // 
             // ctxConfiguracao
             // 
@@ -395,7 +396,7 @@
             this.tsCamposVisiveis});
             this.ctxConfiguracao.Name = "cmsOpcoesGrid";
             this.ctxConfiguracao.OwnerItem = this.tsConfigurar;
-            this.ctxConfiguracao.Size = new System.Drawing.Size(211, 70);
+            this.ctxConfiguracao.Size = new System.Drawing.Size(211, 92);
             // 
             // tsHabilitar
             // 

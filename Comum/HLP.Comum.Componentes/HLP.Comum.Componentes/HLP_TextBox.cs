@@ -36,20 +36,20 @@ namespace HLP.Comum.Components
             get { return txt.MaxLength; }
             set
             {
-                //txt.TextBox.MaxLength = value;
-                if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
+                txt.TextBox.MaxLength = value;
+                if (bConfiguracao)
                 {
-                    if (value <= objConfigComponenteModel.Base.GetMaxLenghtNormal())
-                        txt.TextBox.MaxLength = value;
-                    else
+                    if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
                     {
-                        value =  objConfigComponenteModel.Base.GetMaxLenghtNormal();
-                        txt.TextBox.MaxLength = value;
+                        if (value <= objConfigComponenteModel.Base.GetMaxLenghtNormal())
+                            txt.TextBox.MaxLength = value;
+                        else
+                        {
+                            value = objConfigComponenteModel.Base.GetMaxLenghtNormal();
+                            txt.TextBox.MaxLength = value;
+                        }
                     }
                 }
-                else
-                    txt.TextBox.MaxLength = value;
-
                 string str = "".PadLeft(value, 'Z');
                 int iSize = (int)CreateGraphics().MeasureString(str, txt.Font).Width;
                 _TamanhoComponente = iSize > 600 ? 600 : (iSize < 50 ? 50 : iSize);
@@ -62,23 +62,22 @@ namespace HLP.Comum.Components
             get { return txt.TextBox.Enabled; }
             set
             {
-                if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
+                txt.TextBox.Enabled = value;
+                if (bConfiguracao)
                 {
-                    if (objConfigComponenteModel.Base.NULLABLE == "0" && this.Text == "")
+                    if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
                     {
-                        txt.TextBox.Enabled = true;
+                        if (objConfigComponenteModel.Base.NULLABLE == "0" && this.Text == "")
+                        {
+                            txt.TextBox.Enabled = true;
+                        }
                     }
-                    else
-                        txt.TextBox.Enabled = value;
                 }
-                else
-                    txt.TextBox.Enabled = value;
-                //this.Enabled = txt.TextBox.Enabled;
 
                 if (!ReadOnly)
                 {
-                    this.TabStop = value;
-                    if (value)
+                    this.TabStop = txt.TextBox.Enabled;
+                    if (txt.TextBox.Enabled)
                     {
                         txt.StateNormal.Back.Color1 = Color;
                     }
@@ -221,12 +220,6 @@ namespace HLP.Comum.Components
             }
         }
 
-        private void btnConfig_Click(object sender, EventArgs e)
-        {
-            //FormPopupConfig objFrm = new FormPopupConfig(this);
-            //objFrm.ShowDialog(this);
-        }
-
         public override void CarregaobjConfigComponenteModelByControle()
         {
             try
@@ -255,7 +248,7 @@ namespace HLP.Comum.Components
             {
                 if (objConfigComponenteModel != null)
                 {
-                    this._color = Color.FromArgb(objConfigComponenteModel.objConfigCompUsu.xColor.ToInt32());                    
+                    this._color = Color.FromArgb(objConfigComponenteModel.objConfigCompUsu.xColor.ToInt32());
                     this.Text = objConfigComponenteModel.objConfigCompUsu.xText;
                     this.Enabled = objConfigComponenteModel.objConfigCompUsu.stEnabled.ToBoolean();
                     this.MaxLength = objConfigComponenteModel.objConfigCompUsu.nMaxLength.ToInt32();

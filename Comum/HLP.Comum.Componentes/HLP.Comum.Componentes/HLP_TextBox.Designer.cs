@@ -98,7 +98,6 @@
             this.btnConfig.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.InputControl;
             this.btnConfig.UniqueName = "06CA02F59824458249B89DE168D264CF";
             this.btnConfig.Visible = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // lblDescricao
             // 
