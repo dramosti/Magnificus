@@ -290,6 +290,12 @@
     <Compile Include="Geral\FormFamiliaProduto.Designer.cs">
       <DependentUpon>FormFamiliaProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parametrizacao\formParametrizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacao\formParametrizacao.Designer.cs">
+      <DependentUpon>formParametrizacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="RecursosHumanos\FormFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -582,6 +588,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Geral\FormFamiliaProduto.resx">
       <DependentUpon>FormFamiliaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacao\formParametrizacao.resx">
+      <DependentUpon>formParametrizacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\FormFuncionario.resx">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
