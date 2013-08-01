@@ -222,10 +222,7 @@ namespace HLP.Models.Entries.Comercial
         [ParameterOrder(Order = 106)]
         public int? idMultas { get; set; }
         [ParameterOrder(Order = 107)]
-        public byte stCalculaIcms { get; set; }
-        [ParameterOrder(Order = 108)]
-        public byte stCalculaIpi { get; set; }
-
+        public byte? stObrigaListaPreco { get; set; }
 
         public List<Cliente_Fornecedor_ObservacaoModel> lCliente_Fornecedor_Observacao = new List<Cliente_Fornecedor_ObservacaoModel>();
         public List<Cliente_fornecedor_representanteModel> lCliente_fornecedor_representante = new List<Cliente_fornecedor_representanteModel>();
@@ -363,6 +360,10 @@ namespace HLP.Models.Entries.Comercial
         public byte stSubsticaoTributariaIcmsDiferenciada { get; set; }
         [ParameterOrder(Order = 23)]
         public int idClienteFornecedor { get; set; }
+        [ParameterOrder(Order = 24)]
+        public byte stCalculaIcms { get; set; }
+        [ParameterOrder(Order = 25)]
+        public byte stCalculaIpi { get; set; }
 
 
     }

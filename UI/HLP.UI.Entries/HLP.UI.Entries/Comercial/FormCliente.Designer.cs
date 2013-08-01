@@ -93,6 +93,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostSpc = new HLP.Comum.Components.HLP_ComboBox();
             this.cbostAssociacaoComercial = new HLP.Comum.Components.HLP_ComboBox();
             this.cbostSituacaoSci = new HLP.Comum.Components.HLP_ComboBox();
+            this.cbostObrigaListaPreco = new HLP.Comum.Components.HLP_ComboBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.kryptonPanel6 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
@@ -396,7 +397,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(1345, 342);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Tag = true;
+            this.tabPage1.Tag = false;
             this.tabPage1.Text = "Geral";
             // 
             // kryptonTabControl2
@@ -514,6 +515,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtCodigo._Table = "Cliente_fornecedor";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
+            this.txtCodigo._Visible = false;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -539,6 +541,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtdCadastro._Table = "Cliente_fornecedor";
             this.txtdCadastro._TamanhoComponente = 157;
             this.txtdCadastro._TamanhoMaiorLabel = 150;
+            this.txtdCadastro._Visible = false;
             this.txtdCadastro.BackColor = System.Drawing.Color.Transparent;
             this.txtdCadastro.Base = null;
             this.txtdCadastro.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -564,6 +567,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtcAlternativo._Table = "Cliente_fornecedor";
             this.txtcAlternativo._TamanhoComponente = 156;
             this.txtcAlternativo._TamanhoMaiorLabel = 150;
+            this.txtcAlternativo._Visible = false;
             this.txtcAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtcAlternativo.Base = null;
             this.txtcAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -589,6 +593,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxNome._Table = "Cliente_fornecedor";
             this.txtxNome._TamanhoComponente = 390;
             this.txtxNome._TamanhoMaiorLabel = 150;
+            this.txtxNome._Visible = false;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -614,6 +619,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxFantasia._Table = "Cliente_fornecedor";
             this.txtxFantasia._TamanhoComponente = 390;
             this.txtxFantasia._TamanhoMaiorLabel = 150;
+            this.txtxFantasia._Visible = false;
             this.txtxFantasia.BackColor = System.Drawing.Color.Transparent;
             this.txtxFantasia.Base = null;
             this.txtxFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -643,6 +649,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidRamoAtividade._TamanhoComponente = 300;
             this.hlP_PesquisaidRamoAtividade._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidRamoAtividade._Vinculado = false;
+            this.hlP_PesquisaidRamoAtividade._Visible = false;
             this.hlP_PesquisaidRamoAtividade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidRamoAtividade.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidRamoAtividade.Base = null;
@@ -671,6 +678,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidMoeda._TamanhoComponente = 300;
             this.hlP_PesquisaidMoeda._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidMoeda._Vinculado = false;
+            this.hlP_PesquisaidMoeda._Visible = false;
             this.hlP_PesquisaidMoeda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidMoeda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidMoeda.Base = null;
@@ -699,6 +707,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidFuncionario._TamanhoComponente = 300;
             this.hlP_PesquisaidFuncionario._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidFuncionario._Vinculado = false;
+            this.hlP_PesquisaidFuncionario._Visible = false;
             this.hlP_PesquisaidFuncionario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidFuncionario.Base = null;
@@ -735,6 +744,7 @@ namespace HLP.UI.Entries.Comercial
             this.mskxCpf._TamanhoMaiorLabel = 150;
             this.mskxCpf._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCpf._UF = null;
+            this.mskxCpf._Visible = false;
             this.mskxCpf.BackColor = System.Drawing.Color.Transparent;
             this.mskxCpf.Base = null;
             this.mskxCpf.Color = System.Drawing.Color.White;
@@ -761,6 +771,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxRg._Table = "Cliente_fornecedor";
             this.txtxRg._TamanhoComponente = 126;
             this.txtxRg._TamanhoMaiorLabel = 150;
+            this.txtxRg._Visible = false;
             this.txtxRg.BackColor = System.Drawing.Color.Transparent;
             this.txtxRg.Base = null;
             this.txtxRg.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -786,6 +797,7 @@ namespace HLP.UI.Entries.Comercial
             this.mskxCNPJ._TamanhoMaiorLabel = 150;
             this.mskxCNPJ._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCNPJ._UF = null;
+            this.mskxCNPJ._Visible = false;
             this.mskxCNPJ.BackColor = System.Drawing.Color.Transparent;
             this.mskxCNPJ.Base = null;
             this.mskxCNPJ.Color = System.Drawing.Color.White;
@@ -812,6 +824,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxIE._Table = "Cliente_fornecedor";
             this.txtxIE._TamanhoComponente = 156;
             this.txtxIE._TamanhoMaiorLabel = 150;
+            this.txtxIE._Visible = false;
             this.txtxIE.BackColor = System.Drawing.Color.Transparent;
             this.txtxIE.Base = null;
             this.txtxIE.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -837,6 +850,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxIm._Table = "Cliente_fornecedor";
             this.txtxIm._TamanhoComponente = 157;
             this.txtxIm._TamanhoMaiorLabel = 150;
+            this.txtxIm._Visible = false;
             this.txtxIm.BackColor = System.Drawing.Color.Transparent;
             this.txtxIm.Base = null;
             this.txtxIm.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -862,6 +876,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostPessoa._Table = "Cliente_fornecedor";
             this.cbostPessoa._TamanhoComponente = 80;
             this.cbostPessoa._TamanhoMaiorLabel = 150;
+            this.cbostPessoa._Visible = false;
             this.cbostPessoa.BackColor = System.Drawing.Color.Transparent;
             this.cbostPessoa.Base = null;
             this.cbostPessoa.Color = System.Drawing.Color.White;
@@ -902,6 +917,7 @@ namespace HLP.UI.Entries.Comercial
             this.mskxTelefone1._TamanhoMaiorLabel = 150;
             this.mskxTelefone1._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxTelefone1._UF = null;
+            this.mskxTelefone1._Visible = false;
             this.mskxTelefone1.BackColor = System.Drawing.Color.Transparent;
             this.mskxTelefone1.Base = null;
             this.mskxTelefone1.Color = System.Drawing.Color.White;
@@ -928,6 +944,7 @@ namespace HLP.UI.Entries.Comercial
             this.mskxTelefone2._TamanhoMaiorLabel = 150;
             this.mskxTelefone2._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxTelefone2._UF = null;
+            this.mskxTelefone2._Visible = false;
             this.mskxTelefone2.BackColor = System.Drawing.Color.Transparent;
             this.mskxTelefone2.Base = null;
             this.mskxTelefone2.Color = System.Drawing.Color.White;
@@ -966,6 +983,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxFax._Table = "Cliente_fornecedor";
             this.txtxFax._TamanhoComponente = 159;
             this.txtxFax._TamanhoMaiorLabel = 150;
+            this.txtxFax._Visible = false;
             this.txtxFax.BackColor = System.Drawing.Color.Transparent;
             this.txtxFax.Base = null;
             this.txtxFax.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -991,6 +1009,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxEmail._Table = "Cliente_fornecedor";
             this.txtxEmail._TamanhoComponente = 159;
             this.txtxEmail._TamanhoMaiorLabel = 150;
+            this.txtxEmail._Visible = false;
             this.txtxEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmail.Base = null;
             this.txtxEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1016,6 +1035,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxHttp._Table = "Cliente_fornecedor";
             this.txtxHttp._TamanhoComponente = 275;
             this.txtxHttp._TamanhoMaiorLabel = 150;
+            this.txtxHttp._Visible = false;
             this.txtxHttp.BackColor = System.Drawing.Color.Transparent;
             this.txtxHttp.Base = null;
             this.txtxHttp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1053,6 +1073,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxMemorando._Table = "Cliente_fornecedor";
             this.txtxMemorando._TamanhoComponente = 283;
             this.txtxMemorando._TamanhoMaiorLabel = 150;
+            this.txtxMemorando._Visible = false;
             this.txtxMemorando.BackColor = System.Drawing.Color.Transparent;
             this.txtxMemorando.Base = null;
             this.txtxMemorando.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1078,6 +1099,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxFusoHorario._Table = "Cliente_fornecedor";
             this.txtxFusoHorario._TamanhoComponente = 156;
             this.txtxFusoHorario._TamanhoMaiorLabel = 150;
+            this.txtxFusoHorario._Visible = false;
             this.txtxFusoHorario.BackColor = System.Drawing.Color.Transparent;
             this.txtxFusoHorario.Base = null;
             this.txtxFusoHorario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1103,6 +1125,7 @@ namespace HLP.UI.Entries.Comercial
             this.cboAtivo._Table = "Cliente_fornecedor";
             this.cboAtivo._TamanhoComponente = 80;
             this.cboAtivo._TamanhoMaiorLabel = 150;
+            this.cboAtivo._Visible = false;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.Color = System.Drawing.Color.White;
@@ -1392,7 +1415,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabComercial_PAI.Location = new System.Drawing.Point(4, 25);
             this.tabComercial_PAI.Margin = new System.Windows.Forms.Padding(0);
             this.tabComercial_PAI.Name = "tabComercial_PAI";
-            this.tabComercial_PAI.Size = new System.Drawing.Size(1144, 225);
+            this.tabComercial_PAI.Size = new System.Drawing.Size(1345, 342);
             this.tabComercial_PAI.TabIndex = 3;
             this.tabComercial_PAI.Tag = false;
             this.tabComercial_PAI.Text = "Comercial";
@@ -1421,7 +1444,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonTabControl3.Name = "kryptonTabControl3";
             this.kryptonTabControl3.PreserveTabColor = false;
             this.kryptonTabControl3.SelectedIndex = 0;
-            this.kryptonTabControl3.Size = new System.Drawing.Size(1144, 225);
+            this.kryptonTabControl3.Size = new System.Drawing.Size(1345, 342);
             this.kryptonTabControl3.TabIndex = 41;
             this.kryptonTabControl3.UseExtendedLayout = false;
             // 
@@ -1432,7 +1455,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1136, 196);
+            this.tabPage2.Size = new System.Drawing.Size(1337, 313);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Tag = false;
             this.tabPage2.Text = "Geral";
@@ -1449,7 +1472,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel4.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel4.Name = "kryptonPanel4";
             this.kryptonPanel4.PersistentColors = false;
-            this.kryptonPanel4.Size = new System.Drawing.Size(1136, 196);
+            this.kryptonPanel4.Size = new System.Drawing.Size(1337, 313);
             this.kryptonPanel4.TabIndex = 2;
             // 
             // flowLayoutPanel4
@@ -1467,11 +1490,12 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel4.Controls.Add(this.cbostSpc);
             this.flowLayoutPanel4.Controls.Add(this.cbostAssociacaoComercial);
             this.flowLayoutPanel4.Controls.Add(this.cbostSituacaoSci);
+            this.flowLayoutPanel4.Controls.Add(this.cbostObrigaListaPreco);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1136, 196);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1337, 313);
             this.flowLayoutPanel4.TabIndex = 0;
             this.flowLayoutPanel4.Tag = "Geral";
             // 
@@ -1497,7 +1521,6 @@ namespace HLP.UI.Entries.Comercial
             this.nudnFuncionarios._Table = "Cliente_fornecedor";
             this.nudnFuncionarios._TamanhoComponente = 116;
             this.nudnFuncionarios._TamanhoMaiorLabel = 190;
-            this.nudnFuncionarios._Visible = false;
             this.nudnFuncionarios.BackColor = System.Drawing.Color.Transparent;
             this.nudnFuncionarios.Base = null;
             this.nudnFuncionarios.Color = System.Drawing.Color.White;
@@ -1542,7 +1565,6 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCanalVenda._TamanhoComponente = 300;
             this.hlP_PesquisaidCanalVenda._TamanhoMaiorLabel = 190;
             this.hlP_PesquisaidCanalVenda._Vinculado = false;
-            this.hlP_PesquisaidCanalVenda._Visible = false;
             this.hlP_PesquisaidCanalVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCanalVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCanalVenda.Base = null;
@@ -1567,7 +1589,6 @@ namespace HLP.UI.Entries.Comercial
             this.cbostCategoria._Table = "Cliente_fornecedor";
             this.cbostCategoria._TamanhoComponente = 107;
             this.cbostCategoria._TamanhoMaiorLabel = 190;
-            this.cbostCategoria._Visible = false;
             this.cbostCategoria.BackColor = System.Drawing.Color.Transparent;
             this.cbostCategoria.Base = null;
             this.cbostCategoria.Color = System.Drawing.Color.White;
@@ -1599,7 +1620,6 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidListaPrecoPai._TamanhoComponente = 300;
             this.hlP_PesquisaidListaPrecoPai._TamanhoMaiorLabel = 190;
             this.hlP_PesquisaidListaPrecoPai._Vinculado = false;
-            this.hlP_PesquisaidListaPrecoPai._Visible = false;
             this.hlP_PesquisaidListaPrecoPai.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidListaPrecoPai.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidListaPrecoPai.Base = null;
@@ -1628,7 +1648,6 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidRota._TamanhoComponente = 300;
             this.hlP_PesquisaidRota._TamanhoMaiorLabel = 190;
             this.hlP_PesquisaidRota._Vinculado = false;
-            this.hlP_PesquisaidRota._Visible = false;
             this.hlP_PesquisaidRota.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidRota.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidRota.Base = null;
@@ -1653,7 +1672,6 @@ namespace HLP.UI.Entries.Comercial
             this.cbostFrete._Table = "Cliente_fornecedor";
             this.cbostFrete._TamanhoComponente = 80;
             this.cbostFrete._TamanhoMaiorLabel = 190;
-            this.cbostFrete._Visible = false;
             this.cbostFrete.BackColor = System.Drawing.Color.Transparent;
             this.cbostFrete.Base = null;
             this.cbostFrete.Color = System.Drawing.Color.White;
@@ -1685,11 +1703,10 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidSite._TamanhoComponente = 300;
             this.hlP_PesquisaidSite._TamanhoMaiorLabel = 190;
             this.hlP_PesquisaidSite._Vinculado = false;
-            this.hlP_PesquisaidSite._Visible = false;
             this.hlP_PesquisaidSite.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidSite.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidSite.Base = null;
-            this.hlP_PesquisaidSite.Location = new System.Drawing.Point(725, 3);
+            this.hlP_PesquisaidSite.Location = new System.Drawing.Point(167, 189);
             this.hlP_PesquisaidSite.Margin = new System.Windows.Forms.Padding(167, 3, 15, 3);
             this.hlP_PesquisaidSite.Name = "hlP_PesquisaidSite";
             this.hlP_PesquisaidSite.objConfigComponenteModel = null;
@@ -1714,11 +1731,10 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidDeposito._TamanhoComponente = 300;
             this.hlP_PesquisaidDeposito._TamanhoMaiorLabel = 190;
             this.hlP_PesquisaidDeposito._Vinculado = false;
-            this.hlP_PesquisaidDeposito._Visible = false;
             this.hlP_PesquisaidDeposito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDeposito.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDeposito.Base = null;
-            this.hlP_PesquisaidDeposito.Location = new System.Drawing.Point(697, 30);
+            this.hlP_PesquisaidDeposito.Location = new System.Drawing.Point(139, 216);
             this.hlP_PesquisaidDeposito.Margin = new System.Windows.Forms.Padding(139, 3, 15, 3);
             this.hlP_PesquisaidDeposito.Name = "hlP_PesquisaidDeposito";
             this.hlP_PesquisaidDeposito.objConfigComponenteModel = null;
@@ -1739,13 +1755,12 @@ namespace HLP.UI.Entries.Comercial
             this.cbostSpc._Table = "Cliente_fornecedor";
             this.cbostSpc._TamanhoComponente = 80;
             this.cbostSpc._TamanhoMaiorLabel = 190;
-            this.cbostSpc._Visible = false;
             this.cbostSpc.BackColor = System.Drawing.Color.Transparent;
             this.cbostSpc.Base = null;
             this.cbostSpc.Color = System.Drawing.Color.White;
             this.cbostSpc.DataSource = null;
             this.cbostSpc.DisplayMember = "DisplayMember";
-            this.cbostSpc.Location = new System.Drawing.Point(646, 57);
+            this.cbostSpc.Location = new System.Drawing.Point(88, 243);
             this.cbostSpc.Margin = new System.Windows.Forms.Padding(88, 3, 15, 3);
             this.cbostSpc.Name = "cbostSpc";
             this.cbostSpc.objConfigComponenteModel = null;
@@ -1767,13 +1782,12 @@ namespace HLP.UI.Entries.Comercial
             this.cbostAssociacaoComercial._Table = "Cliente_fornecedor";
             this.cbostAssociacaoComercial._TamanhoComponente = 80;
             this.cbostAssociacaoComercial._TamanhoMaiorLabel = 190;
-            this.cbostAssociacaoComercial._Visible = false;
             this.cbostAssociacaoComercial.BackColor = System.Drawing.Color.Transparent;
             this.cbostAssociacaoComercial.Base = null;
             this.cbostAssociacaoComercial.Color = System.Drawing.Color.White;
             this.cbostAssociacaoComercial.DataSource = null;
             this.cbostAssociacaoComercial.DisplayMember = "DisplayMember";
-            this.cbostAssociacaoComercial.Location = new System.Drawing.Point(558, 84);
+            this.cbostAssociacaoComercial.Location = new System.Drawing.Point(0, 270);
             this.cbostAssociacaoComercial.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.cbostAssociacaoComercial.Name = "cbostAssociacaoComercial";
             this.cbostAssociacaoComercial.objConfigComponenteModel = null;
@@ -1794,15 +1808,14 @@ namespace HLP.UI.Entries.Comercial
             this.cbostSituacaoSci._situacao = false;
             this.cbostSituacaoSci._Table = "Cliente_fornecedor";
             this.cbostSituacaoSci._TamanhoComponente = 124;
-            this.cbostSituacaoSci._TamanhoMaiorLabel = 0;
-            this.cbostSituacaoSci._Visible = false;
+            this.cbostSituacaoSci._TamanhoMaiorLabel = 120;
             this.cbostSituacaoSci.BackColor = System.Drawing.Color.Transparent;
             this.cbostSituacaoSci.Base = null;
             this.cbostSituacaoSci.Color = System.Drawing.Color.White;
             this.cbostSituacaoSci.DataSource = null;
             this.cbostSituacaoSci.DisplayMember = "DisplayMember";
-            this.cbostSituacaoSci.Location = new System.Drawing.Point(561, 111);
-            this.cbostSituacaoSci.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.cbostSituacaoSci.Location = new System.Drawing.Point(592, 3);
+            this.cbostSituacaoSci.Margin = new System.Windows.Forms.Padding(34, 3, 15, 3);
             this.cbostSituacaoSci.Name = "cbostSituacaoSci";
             this.cbostSituacaoSci.objConfigComponenteModel = null;
             this.cbostSituacaoSci.SelectedIndex = -1;
@@ -1810,6 +1823,35 @@ namespace HLP.UI.Entries.Comercial
             this.cbostSituacaoSci.Size = new System.Drawing.Size(213, 21);
             this.cbostSituacaoSci.TabIndex = 39;
             this.cbostSituacaoSci.ValueMember = "ValueMember";
+            // 
+            // cbostObrigaListaPreco
+            // 
+            this.cbostObrigaListaPreco._Field = "stObrigaListaPreco";
+            this.cbostObrigaListaPreco._Help = "Informar se será obrigatório o uso da lista de preço definido no cadastro de clie" +
+    "nte.";
+            this.cbostObrigaListaPreco._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostObrigaListaPreco._Itens")));
+            this.cbostObrigaListaPreco._LabelGroup = this.sp_geral;
+            this.cbostObrigaListaPreco._LabelText = "Obriga lista de preço";
+            this.cbostObrigaListaPreco._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.cbostObrigaListaPreco._Regex = null;
+            this.cbostObrigaListaPreco._situacao = true;
+            this.cbostObrigaListaPreco._Table = "Cliente_fornecedor";
+            this.cbostObrigaListaPreco._TamanhoComponente = 80;
+            this.cbostObrigaListaPreco._TamanhoMaiorLabel = 120;
+            this.cbostObrigaListaPreco.BackColor = System.Drawing.Color.Transparent;
+            this.cbostObrigaListaPreco.Base = null;
+            this.cbostObrigaListaPreco.Color = System.Drawing.Color.White;
+            this.cbostObrigaListaPreco.DataSource = null;
+            this.cbostObrigaListaPreco.DisplayMember = "DisplayMember";
+            this.cbostObrigaListaPreco.Location = new System.Drawing.Point(566, 30);
+            this.cbostObrigaListaPreco.Margin = new System.Windows.Forms.Padding(8, 3, 15, 3);
+            this.cbostObrigaListaPreco.Name = "cbostObrigaListaPreco";
+            this.cbostObrigaListaPreco.objConfigComponenteModel = null;
+            this.cbostObrigaListaPreco.SelectedIndex = -1;
+            this.cbostObrigaListaPreco.SelectedValue = 0;
+            this.cbostObrigaListaPreco.Size = new System.Drawing.Size(195, 21);
+            this.cbostObrigaListaPreco.TabIndex = 42;
+            this.cbostObrigaListaPreco.ValueMember = "ValueMember";
             // 
             // tabPage7
             // 
@@ -4126,7 +4168,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage17.Location = new System.Drawing.Point(4, 25);
             this.tabPage17.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Size = new System.Drawing.Size(1345, 342);
+            this.tabPage17.Size = new System.Drawing.Size(1144, 225);
             this.tabPage17.TabIndex = 6;
             this.tabPage17.Tag = false;
             this.tabPage17.Text = "Configuração";
@@ -4143,7 +4185,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel12.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel12.Name = "kryptonPanel12";
             this.kryptonPanel12.PersistentColors = false;
-            this.kryptonPanel12.Size = new System.Drawing.Size(1345, 342);
+            this.kryptonPanel12.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel12.TabIndex = 6;
             // 
             // flowLayoutPanel12
@@ -4163,7 +4205,7 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel12.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(1345, 342);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(1144, 225);
             this.flowLayoutPanel12.TabIndex = 1;
             this.flowLayoutPanel12.Tag = "Configuração";
             // 
@@ -4351,7 +4393,7 @@ namespace HLP.UI.Entries.Comercial
             this.sp_doc._LabelText = "Documento";
             this.sp_doc._TamanhoMaiorLabel = 0;
             this.sp_doc.BackColor = System.Drawing.Color.Transparent;
-            this.sp_doc.Location = new System.Drawing.Point(0, 210);
+            this.sp_doc.Location = new System.Drawing.Point(675, 3);
             this.sp_doc.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_doc.Name = "sp_doc";
             this.sp_doc.Size = new System.Drawing.Size(660, 18);
@@ -4378,7 +4420,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidTipoDocumento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoDocumento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoDocumento.Base = null;
-            this.hlP_PesquisaidTipoDocumento.Location = new System.Drawing.Point(25, 234);
+            this.hlP_PesquisaidTipoDocumento.Location = new System.Drawing.Point(700, 27);
             this.hlP_PesquisaidTipoDocumento.Margin = new System.Windows.Forms.Padding(25, 3, 15, 3);
             this.hlP_PesquisaidTipoDocumento.Name = "hlP_PesquisaidTipoDocumento";
             this.hlP_PesquisaidTipoDocumento.objConfigComponenteModel = null;
@@ -5447,7 +5489,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostCalculaIcms._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.cbostCalculaIcms._Regex = null;
             this.cbostCalculaIcms._situacao = true;
-            this.cbostCalculaIcms._Table = "Cliente_fornecedor";
+            this.cbostCalculaIcms._Table = "Cliente_fornecedor_fiscal";
             this.cbostCalculaIcms._TamanhoComponente = 80;
             this.cbostCalculaIcms._TamanhoMaiorLabel = 250;
             this.cbostCalculaIcms._Visible = false;
@@ -5477,7 +5519,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostCalculaIpi._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.cbostCalculaIpi._Regex = null;
             this.cbostCalculaIpi._situacao = true;
-            this.cbostCalculaIpi._Table = "Cliente_fornecedor";
+            this.cbostCalculaIpi._Table = "Cliente_fornecedor_fiscal";
             this.cbostCalculaIpi._TamanhoComponente = 80;
             this.cbostCalculaIpi._TamanhoMaiorLabel = 250;
             this.cbostCalculaIpi._Visible = false;
@@ -5843,5 +5885,6 @@ namespace HLP.UI.Entries.Comercial
         private System.Windows.Forms.DataGridViewComboBoxColumn idProduto;
         private System.Windows.Forms.DataGridViewComboBoxColumn idListaPrecoPai;
         private System.Windows.Forms.DataGridViewComboBoxColumn stObrigaListaPreco;
+        private HLP_ComboBox cbostObrigaListaPreco;
     }
 }

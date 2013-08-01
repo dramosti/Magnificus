@@ -72,20 +72,24 @@ namespace HLP.Comum.Components
             get { return this.Visible; }
             set
             {
-
-                if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
+                try
                 {
-                    if (objConfigComponenteModel.Base.NULLABLE == "0")
+                    if (objConfigComponenteModel != null && objConfigComponenteModel.Base != null)
                     {
-                        this.Visible = true;
+                        if (objConfigComponenteModel.Base.NULLABLE == "0")
+                        {
+                            this.Visible = true;
+                        }
+                        else
+                            this.Visible = value;
                     }
                     else
                         this.Visible = value;
                 }
-                else
-                    this.Visible = value;
-
-                //MessageBox.Show(value.ToString());
+                catch (Exception)
+                {
+                    this.Visible = true;
+                }
             }
         }
 

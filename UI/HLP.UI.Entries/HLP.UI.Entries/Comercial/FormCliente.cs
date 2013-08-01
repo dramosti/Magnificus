@@ -328,6 +328,7 @@ namespace HLP.UI.Entries.Comercial
             objCliForModel.xEmail = txtxEmail.Text;
             objCliForModel.xHttp = txtxHttp.Text;
             objCliForModel.Ativo = cboAtivo.SelectedIndex == 0 ? false : true;
+            objCliForModel.stObrigaListaPreco = cboAtivo.SelectedIndexByte;
 
             #endregion
 
@@ -508,8 +509,8 @@ namespace HLP.UI.Entries.Comercial
             objCliForModel.cliforFiscalModel.stConsumidorFinal = cbostConsumidorFinal.SelectedIndexByte;
             objCliForModel.cliforFiscalModel.stContribuienteIcms = cbostContribuienteIcms.SelectedIndexByte;
             objCliForModel.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada = cbostSubsticaoTributariaIcmsDiferenciada.SelectedIndexByte;
-            objCliForModel.stCalculaIcms = cbostCalculaIcms.SelectedIndexByte;
-            objCliForModel.stCalculaIpi = cbostCalculaIpi.SelectedIndexByte;
+            objCliForModel.cliforFiscalModel.stCalculaIcms = cbostCalculaIcms.SelectedIndexByte;
+            objCliForModel.cliforFiscalModel.stCalculaIpi = cbostCalculaIpi.SelectedIndexByte;
 
 
 
@@ -549,6 +550,7 @@ namespace HLP.UI.Entries.Comercial
                 txtxEmail.Text = objCliForModel.xEmail;
                 txtxHttp.Text = objCliForModel.xHttp;
                 cboAtivo.SelectedIndex = objCliForModel.Ativo == true ? 1 : 0;
+                cbostObrigaListaPreco.SelectedIndex = Convert.ToInt32(objCliForModel.stObrigaListaPreco);
 
                 #endregion
 
@@ -726,8 +728,8 @@ namespace HLP.UI.Entries.Comercial
                 cbostConsumidorFinal.SelectedIndex = objCliForModel.cliforFiscalModel.stConsumidorFinal;
                 cbostContribuienteIcms.SelectedIndex = objCliForModel.cliforFiscalModel.stContribuienteIcms;
                 cbostSubsticaoTributariaIcmsDiferenciada.SelectedIndex = objCliForModel.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada;
-                cbostCalculaIpi.SelectedIndex = objCliForModel.stCalculaIpi;
-                cbostCalculaIcms.SelectedIndex = objCliForModel.stCalculaIcms;
+                cbostCalculaIpi.SelectedIndex = objCliForModel.cliforFiscalModel.stCalculaIpi;
+                cbostCalculaIcms.SelectedIndex = objCliForModel.cliforFiscalModel.stCalculaIcms;
 
 
                 #endregion

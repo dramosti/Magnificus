@@ -593,6 +593,9 @@
   <metadata name="bsProduto_Fornecedor_Homologado.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>375, 17</value>
   </metadata>
+  <metadata name="idUsuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="xRevisaoDataGridViewTextBoxColumn.ToolTipText" xml:space="preserve">
     <value>Informar o motivo da Revisão quando for alterado os dados da engenharia do produto, quando é alterado qualquer campo do cadastro de produto o Magníficus joga nessa campo o valor anterior a alteração mais o que foi alterado.</value>
   </data>
