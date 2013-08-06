@@ -211,6 +211,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlBase.resx">
@@ -258,12 +259,6 @@
     <None Include="Resources\arrow_down.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arrrow_frente.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\arrow_down_2.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\system_config_boot.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -277,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1374622719_70556.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seta_down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seta_up.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -77,8 +77,8 @@ namespace HLP.Comum.UI.Eventos
                 }
                 else if (ctr.GetType() == typeof(HLP_TextBox))
                 {
-                    ((HLP_TextBox)ctr).btnConfig.Click -= btnConfig_Click;
-                    ((HLP_TextBox)ctr).btnConfig.Click += btnConfig_Click;
+                    ((HLP_TextBox)ctr).tsmConfigurar.Click -= tsmConfigurar_Click;
+                    ((HLP_TextBox)ctr).tsmConfigurar.Click += tsmConfigurar_Click;
                 }
             }
             List<Control> lgrids = iConfigFormulario.lControl.Where(c => c.GetType() == typeof(HLP_DataGridView)).ToList();
@@ -295,20 +295,21 @@ namespace HLP.Comum.UI.Eventos
             this.objSenderComponentePesquisa = sender;
             PesquisaComponente();
         }
-        private void btnConfig_Click(object sender, EventArgs e)
+        private void tsmConfigurar_Click(object sender, EventArgs e)
         {
-            ComponentFactory.Krypton.Toolkit.ButtonSpecAny ctr = sender as ComponentFactory.Krypton.Toolkit.ButtonSpecAny;
-            ctr.SetPropertyValue("bConfiguracao", true);
-            FormPopupConfig objFrm = new FormPopupConfig(ctr.Tag as Control);            
+            ToolStripMenuItem tsm = sender as ToolStripMenuItem;
+            (tsm.Tag as UserControlBase).bConfiguracao = true;
+            FormPopupConfig objFrm = new FormPopupConfig(tsm.Tag as Control);
             objFrm.ShowDialog();
 
             if (objFrm.bAlterou)
             {
-                iConfigComponenteService.Save((ctr.Tag as Control).GetPropertyValue("objConfigComponenteModel") as ConfigComponenteModel);
+                iConfigComponenteService.Save(((tsm.Tag as UserControlBase).objConfigComponenteModel));
+                ((tsm.Tag as UserControlBase))._labelGroup.ConfigMaiorLabel();
+                
+
             }
-            ctr.SetPropertyValue("bConfiguracao", false);
-
-
+            (tsm.Tag as UserControlBase).bConfiguracao = false;
         }
         public void txtPesquisa_Leave(object sender, EventArgs e)
         {

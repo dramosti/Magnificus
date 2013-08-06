@@ -33,7 +33,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnPesquisaCampo = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
-            this.btnConfig = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -49,8 +48,7 @@
             // 
             this.txt.AlwaysActive = false;
             this.txt.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecAny[] {
-            this.btnPesquisaCampo,
-            this.btnConfig});
+            this.btnPesquisaCampo});
             this.txt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt.Location = new System.Drawing.Point(46, 0);
             this.txt.Name = "txt";
@@ -91,13 +89,6 @@
             this.btnPesquisaCampo.Image = global::HLP.Comum.Components.Properties.Resources.Pesquisa;
             this.btnPesquisaCampo.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.InputControl;
             this.btnPesquisaCampo.UniqueName = "48E09EA72DFA415A4F99CE0538C9FBB2";
-            // 
-            // btnConfig
-            // 
-            this.btnConfig.Image = global::HLP.Comum.Components.Properties.Resources._1374622719_70556;
-            this.btnConfig.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.InputControl;
-            this.btnConfig.UniqueName = "06CA02F59824458249B89DE168D264CF";
-            this.btnConfig.Visible = false;
             // 
             // lblDescricao
             // 
@@ -142,7 +133,6 @@
         private System.Windows.Forms.Label lblDescricao;
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox txt;
         public ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnPesquisaCampo;
-        public ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnConfig;
 
     }
 }

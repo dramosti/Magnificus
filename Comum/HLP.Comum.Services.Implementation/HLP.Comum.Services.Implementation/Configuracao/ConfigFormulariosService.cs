@@ -159,6 +159,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
         {
             foreach (Control ctr in lFlowLayoutPanel)
             {
+                (ctr as FlowLayoutPanel).AutoScroll = true;
                 (ctr as FlowLayoutPanel).VerticalScroll.Value = 0;
                 (ctr as FlowLayoutPanel).HorizontalScroll.Value = 0;
             }            

@@ -507,23 +507,24 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
                     List<HLP_LabelSeparator> lseparador = (tab.Controls[0].Controls.OfType<FlowLayoutPanel>().ToList())[0].Controls.OfType<HLP_LabelSeparator>().ToList();
 
-                    List<UserControl> lControlesBySeparador = null;
-                    int iMax = 50;
+                    //List<UserControl> lControlesBySeparador = null;
+                    //int iMax = 50;
                     foreach (HLP_LabelSeparator separador in lseparador)
                     {
-                        lControlesBySeparador = lUsersControl.Where(c => (c.GetPropertyValue("_LabelGroup") as HLP_LabelSeparator).Name == separador.Name).ToList();
-                        if (lControlesBySeparador.Count() > 0)
-                        {
-                            //Maior Label
-                            iMax = lControlesBySeparador.Max(c => c.GetPropertyValue("_TamanhoLabel")).ToInt32();
-                            foreach (UserControl ctr in lControlesBySeparador)
-                            {
-                                ctr.SetPropertyValue("_TamanhoMaiorLabel", iMax);
-                            }
-                            //Maior Componente
-                            iMax = lControlesBySeparador.Max(c => c.Width).ToInt32();
-                            separador.SetPropertyValue("_TamanhoMaiorLabel", iMax);
-                        }
+                        //lControlesBySeparador = lUsersControl.Where(c => (c.GetPropertyValue("_LabelGroup") as HLP_LabelSeparator).Name == separador.Name).ToList();
+                        //if (lControlesBySeparador.Count() > 0)
+                        //{
+                        //    //Maior Label
+                        //    iMax = lControlesBySeparador.Max(c => c.GetPropertyValue("_TamanhoLabel")).ToInt32();
+                        //    foreach (UserControl ctr in lControlesBySeparador)
+                        //    {
+                        //        ctr.SetPropertyValue("_TamanhoMaiorLabel", iMax);
+                        //    }
+                        //    //Maior Componente
+                        //    iMax = lControlesBySeparador.Max(c => c.Width).ToInt32();
+                        //    separador.SetPropertyValue("_TamanhoMaiorLabel", iMax);
+                        //}
+                        separador.ConfigMaiorLabel();
                     }
                 }
 

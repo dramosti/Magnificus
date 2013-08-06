@@ -1134,12 +1134,6 @@ namespace HLP.Comum.UI
             }
         }
 
-        private void tsConfigurar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
 
 
     }

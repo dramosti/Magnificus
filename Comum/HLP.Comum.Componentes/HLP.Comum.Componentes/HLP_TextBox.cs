@@ -23,12 +23,17 @@ namespace HLP.Comum.Components
 
         public HLP_TextBox()
         {
+            base.Initialize();
             InitializeComponent();
             base.controleBase = this.txt;
             base.lblBase = this.lblDescricao;
-            this.btnConfig.Tag = this;
+            this.tsmConfigurar.Tag = this;
+            //tsmMoveUp.Click += tsmMoveUp_Click;
+            //tsmMoveDown.Click += tsmMoveDown_Click;
+            lblBase.Click += lblBase_Click;
         }
 
+       
         [Category("HLP")]
         [Description("Tamanho Máximo")]
         public new int MaxLength
@@ -217,7 +222,8 @@ namespace HLP.Comum.Components
             else
             {
                 this.Height = 70;
-            }
+            }         
+            
         }
 
         public override void CarregaobjConfigComponenteModelByControle()
@@ -262,6 +268,11 @@ namespace HLP.Comum.Components
                 throw ex;
             }
 
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            //contextMenuStrip1.Show(MousePosition.X, MousePosition.Y);
         }
 
     }

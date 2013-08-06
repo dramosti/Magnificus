@@ -61,8 +61,8 @@ namespace HLP.Comum.UI.Metodos
                                 ctr.SetPropertyValue("Enabled", Convert.ToBoolean(lobjConfigComp.FirstOrDefault(c => c.xName == ctr.Name).objConfigCompUsu.stEnabled));
                             }
                             else
-                            {         
-                       
+                            {
+
                                 ctr.SetPropertyValue("Enabled", bHabilita);
                             }
                         }
@@ -124,7 +124,8 @@ namespace HLP.Comum.UI.Metodos
             var txt = lControles.OfType<HLP_TextBox>().ToList();
             foreach (HLP_TextBox t in txt)
             {
-                t.btnConfig.Visible = bHabilita;
+               // t.btnConfig.Visible = bHabilita;
+                t.ChangeColorLabel(bHabilita);
             }
         }
         public void LimpaCampos()
@@ -299,7 +300,7 @@ namespace HLP.Comum.UI.Metodos
                     }
                     else
                     {
-                        sDisplay = sDisplay.Contains('_') ? "concat("+sDisplay.Replace("_", ", ' - ' ,")+")" : sDisplay;
+                        sDisplay = sDisplay.Contains('_') ? "concat(" + sDisplay.Replace("_", ", ' - ' ,") + ")" : sDisplay;
                         sFields = string.Format("{0}, {1} AS DISPLAY ", "ID AS " + column.ValueMember, sDisplay);
                     }
                 }

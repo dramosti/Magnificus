@@ -13,12 +13,15 @@ namespace HLP.Comum.Components
 {
     public partial class HLP_LabelSeparator : UserControl
     {
+        public bool bOpen = true;
         public HLP_LabelSeparator()
         {
             InitializeComponent();
             this.TabStop = false;
+
         }
 
+        public List<Control> lComponentesBySerparador = new List<Control>();
 
 
         private int _tamanhoMaiorLabel;
@@ -38,17 +41,64 @@ namespace HLP.Comum.Components
 
         public string _LabelText
         {
-            get { return lblDescricao.Text; }
+            get { return headerSep.Text; }
             set
             {
-                lblDescricao.Text = Util.ToUpperFirstLetter(value);
+                headerSep.Text = Util.ToUpperFirstLetter(value);
             }
         }
 
         private void HLP_LabelSeparator_Load(object sender, EventArgs e)
         {
             // this.Width = 300;
-            this.Height = 18;
+            this.Height = 19;
+        }
+
+        public void ConfigMaiorLabel()
+        {
+            try
+            {
+                List<Control> lctr = this.lComponentesBySerparador.Where(c => (c as UserControlBase)._labelGroup == this).ToList();
+
+                int iLabelMax = lctr.Max(c => c.GetPropertyValue("_TamanhoLabel")).ToInt32();
+                foreach (Control ctr in lctr)
+                {
+                    ctr.SetPropertyValue("_TamanhoMaiorLabel", iLabelMax);
+                }
+                int iWidthMax = lctr.Max(c => c.Width);
+                Control controle = lctr.FirstOrDefault(c => c.Width == iWidthMax);
+                this.Width = (controle.Width + controle.Margin.Left) - 3;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao configurar maior label dos componentes");
+            }
+
+
+        }
+
+        private void btnStatus_Click(object sender, EventArgs e)
+        {
+            VisibleComponentes(!bOpen);
+            if (bOpen)
+            {
+                btnStatus.Image = HLP.Comum.Components.Properties.Resources.seta_down;
+            }
+            else
+            {
+                btnStatus.Image = HLP.Comum.Components.Properties.Resources.seta_up;
+            }
+            bOpen = !bOpen;
+        }
+
+        void VisibleComponentes(bool bVisible)
+        {
+            foreach (Control ctr in lComponentesBySerparador)
+            {
+                ctr.Visible = bVisible;
+            }
         }
 
     }

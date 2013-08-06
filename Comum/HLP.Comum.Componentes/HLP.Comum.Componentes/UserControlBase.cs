@@ -28,12 +28,52 @@ namespace HLP.Comum.Components
         [Browsable(false)]
         public Control controleBase = new Control();
         [Browsable(false)]
-        public bool bConfiguracao { get; set; }
+        public bool _bConfiguracao;
+
+        public bool bConfiguracao
+        {
+            get { return _bConfiguracao; }
+            set
+            {
+                _bConfiguracao = value;
+                if (value)
+                    lblBase.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                else
+                    lblBase.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+        }
 
 
         [Category("HLP")]
         [Description("Separador de Componentes")]
-        public HLP_LabelSeparator _LabelGroup { get; set; }
+        public HLP_LabelSeparator _labelGroup;
+
+        public HLP_LabelSeparator _LabelGroup
+        {
+            get { return _labelGroup; }
+            set
+            {
+                _labelGroup = value;
+                if (_labelGroup != null)
+                {
+                    if (_labelGroup.lComponentesBySerparador.Where(c => c == this).Count() == 0)
+                    {
+                        _labelGroup.lComponentesBySerparador.Add(this);
+                    }
+                    else
+                    {
+                        if (value == null)
+                        {
+                            _labelGroup.lComponentesBySerparador.Remove(this);
+                        }
+                    }
+                    _labelGroup.ConfigMaiorLabel();
+                }
+                
+
+            }
+        }
+
 
         public int _TamanhoLabel
         {
@@ -130,14 +170,17 @@ namespace HLP.Comum.Components
             }
             set
             {
-                int i = controleBase.Width;
-                controleBase.Dock = DockStyle.None;
-                if (controleBase.GetType() == typeof(KryptonButton))
-                    controleBase.Text = Util.ToUpperFirstLetter(value);
-                else
-                    lblBase.Text = Util.ToUpperFirstLetter(value);
-                controleBase.Dock = DockStyle.Fill;
-                this.Width = _TamanhoLabel + i;
+                if (value != "")
+                {
+                    int i = controleBase.Width;
+                    controleBase.Dock = DockStyle.None;
+                    if (controleBase.GetType() == typeof(KryptonButton))
+                        controleBase.Text = Util.ToUpperFirstLetter(value);
+                    else
+                        lblBase.Text = Util.ToUpperFirstLetter(value);
+                    controleBase.Dock = DockStyle.Fill;
+                    this.Width = _TamanhoLabel + i;
+                }
             }
         }
 
@@ -467,6 +510,7 @@ namespace HLP.Comum.Components
                     objConfigComponenteModel.objConfigCompUsu.xHelp = this._help;
                     objConfigComponenteModel.objConfigCompUsu.stVisible = this.Visible.ToByte();
                     objConfigComponenteModel.objConfigCompUsu.iTamanhoComponente = this._TamanhoComponente;
+                    objConfigComponenteModel.objConfigCompUsu.nOrder = (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this);
                 }
             }
             catch (Exception ex)
@@ -486,7 +530,6 @@ namespace HLP.Comum.Components
                     this._Visible = objConfigComponenteModel.objConfigCompUsu.stVisible.ToBoolean();
                     this._TamanhoComponente = objConfigComponenteModel.objConfigCompUsu.iTamanhoComponente.ToInt32();
                     this.TabIndex = objConfigComponenteModel.objConfigCompUsu.nOrder;
-
 
                     if (!objConfigComponenteModel.xName.Equals("txtCodigo") && (objConfigComponenteModel.Base != null))
                     {
@@ -510,6 +553,79 @@ namespace HLP.Comum.Components
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// True - Red
+        /// False - Black
+        /// </summary>
+        /// <param name="bValor"></param>
+        public void ChangeColorLabel(bool bValor)
+        {
+            try
+            {
+                if (bValor)
+                    lblBase.ForeColor = Color.Red;
+                else
+                    lblBase.ForeColor = Color.Black;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+        public void lblBase_Click(object sender, EventArgs e)
+        {
+            if (lblBase.ForeColor == Color.Red)
+            {
+                ctxConfig.Show(MousePosition.X, MousePosition.Y);
+            }
+        }
+        public void tsmMoveDown_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) < ((this.Parent as FlowLayoutPanel).Controls.Count - 1))
+                {
+                    (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) + 1);
+
+                    this.TabIndex = (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void tsmMoveUp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) > 0)
+                {
+                    (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) - 1);
+                    this.TabIndex = (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        internal void Initialize()
+        {
+            this.InitializeComponent();
+
+            tsmMoveUp.Click += tsmMoveUp_Click;
+            tsmMoveDown.Click += tsmMoveDown_Click;
+
+        }
+
 
 
     }

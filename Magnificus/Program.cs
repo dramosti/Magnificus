@@ -35,6 +35,7 @@ namespace Magnificus
         [STAThread]
         static void Main()
         {
+           
             FormSplash splash = null;
             try
             {
@@ -82,6 +83,8 @@ namespace Magnificus
                                 throw;
                             }
                         }
+                        formTeste aa = new formTeste();
+                        aa.ShowDialog();
                         FormScripts frmScripts = new FormScripts();
                         formLoginHlp login = new formLoginHlp();
                         UserData.xNome = "Login";
@@ -95,7 +98,8 @@ namespace Magnificus
                             splash.Close();
                             ServerData.Refresh();
                             if(frmScripts.ScriptNaoExec())
-                                frmScripts.ShowDialog();                            
+                                frmScripts.ShowDialog();       
+                     
                             Application.Run(GerenciadorModulo.Instancia.FormPrincipal as Form);
                         }
                     }

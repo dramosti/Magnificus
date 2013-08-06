@@ -83,36 +83,6 @@ namespace HLP.Comum.Components.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_down {
-            get {
-                object obj = ResourceManager.GetObject("arrow_down", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap arrow_down_2 {
-            get {
-                object obj = ResourceManager.GetObject("arrow_down_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap arrrow_frente {
-            get {
-                object obj = ResourceManager.GetObject("arrrow_frente", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Expandido {
             get {
                 object obj = ResourceManager.GetObject("Expandido", resourceCulture);
@@ -156,6 +126,26 @@ namespace HLP.Comum.Components.Properties {
         internal static System.Drawing.Bitmap Pesquisa {
             get {
                 object obj = ResourceManager.GetObject("Pesquisa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seta_down {
+            get {
+                object obj = ResourceManager.GetObject("seta_down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seta_up {
+            get {
+                object obj = ResourceManager.GetObject("seta_up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
