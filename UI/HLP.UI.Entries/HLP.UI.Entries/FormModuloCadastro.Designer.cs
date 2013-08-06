@@ -86,6 +86,8 @@
             this.FormTransportadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormRotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormModoEntregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formParametrizacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,7 +101,8 @@
             this.fiscaisToolStripMenuItem,
             this.geralToolStripMenuItem,
             this.recursosHumanosToolStripMenuItem,
-            this.TransportesToolStripMenuItem});
+            this.TransportesToolStripMenuItem,
+            this.parametrizaçãoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(683, 24);
@@ -366,118 +369,118 @@
             // 
             this.FormCalendarioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormCalendarioToolStripMenuItem.Name = "FormCalendarioToolStripMenuItem";
-            this.FormCalendarioToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormCalendarioToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormCalendarioToolStripMenuItem.Text = "Calendário";
             // 
             // FormCidadeToolStripMenuItem
             // 
             this.FormCidadeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormCidadeToolStripMenuItem.Name = "FormCidadeToolStripMenuItem";
-            this.FormCidadeToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormCidadeToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormCidadeToolStripMenuItem.Text = "Cidades";
             // 
             // FormCondicaoEntregaToolStripMenuItem
             // 
             this.FormCondicaoEntregaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormCondicaoEntregaToolStripMenuItem.Name = "FormCondicaoEntregaToolStripMenuItem";
-            this.FormCondicaoEntregaToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormCondicaoEntregaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormCondicaoEntregaToolStripMenuItem.Text = "Condições de Entrega";
             // 
             // FormContatoToolStripMenuItem
             // 
             this.FormContatoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormContatoToolStripMenuItem.Name = "FormContatoToolStripMenuItem";
-            this.FormContatoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormContatoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormContatoToolStripMenuItem.Text = "Contato";
             // 
             // FormConversaoToolStripMenuItem
             // 
             this.FormConversaoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormConversaoToolStripMenuItem.Name = "FormConversaoToolStripMenuItem";
-            this.FormConversaoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormConversaoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormConversaoToolStripMenuItem.Text = "Conversões";
             // 
             // FormEmpresaToolStripMenuItem
             // 
             this.FormEmpresaToolStripMenuItem.Name = "FormEmpresaToolStripMenuItem";
-            this.FormEmpresaToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormEmpresaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormEmpresaToolStripMenuItem.Text = "Empresa";
             // 
             // FormFabricanteToolStripMenuItem
             // 
             this.FormFabricanteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormFabricanteToolStripMenuItem.Name = "FormFabricanteToolStripMenuItem";
-            this.FormFabricanteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormFabricanteToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormFabricanteToolStripMenuItem.Text = "Fabricante";
             // 
             // FormFamiliaProdutoToolStripMenuItem
             // 
             this.FormFamiliaProdutoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormFamiliaProdutoToolStripMenuItem.Name = "FormFamiliaProdutoToolStripMenuItem";
-            this.FormFamiliaProdutoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormFamiliaProdutoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormFamiliaProdutoToolStripMenuItem.Text = "Familia de Produto";
             // 
             // FormTipoServicoToolStripMenuItem
             // 
             this.FormTipoServicoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormTipoServicoToolStripMenuItem.Name = "FormTipoServicoToolStripMenuItem";
-            this.FormTipoServicoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormTipoServicoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormTipoServicoToolStripMenuItem.Text = "Tipos de Serviço";
             // 
             // FormUFToolStripMenuItem
             // 
             this.FormUFToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormUFToolStripMenuItem.Name = "FormUFToolStripMenuItem";
-            this.FormUFToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormUFToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormUFToolStripMenuItem.Text = "UF";
             // 
             // FormUnidadeMedidaToolStripMenuItem
             // 
             this.FormUnidadeMedidaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormUnidadeMedidaToolStripMenuItem.Name = "FormUnidadeMedidaToolStripMenuItem";
-            this.FormUnidadeMedidaToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormUnidadeMedidaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormUnidadeMedidaToolStripMenuItem.Text = "Unidades de Medida";
             // 
             // FormCondicaoPagamentoToolStripMenuItem
             // 
             this.FormCondicaoPagamentoToolStripMenuItem.Name = "FormCondicaoPagamentoToolStripMenuItem";
-            this.FormCondicaoPagamentoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormCondicaoPagamentoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormCondicaoPagamentoToolStripMenuItem.Text = "Condição de Pagamento";
             // 
             // FormPlanoPagamentoToolStripMenuItem
             // 
             this.FormPlanoPagamentoToolStripMenuItem.Name = "FormPlanoPagamentoToolStripMenuItem";
-            this.FormPlanoPagamentoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormPlanoPagamentoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormPlanoPagamentoToolStripMenuItem.Text = "Planos de Pagamento";
             // 
             // FormDepositoToolStripMenuItem
             // 
             this.FormDepositoToolStripMenuItem.Name = "FormDepositoToolStripMenuItem";
-            this.FormDepositoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormDepositoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormDepositoToolStripMenuItem.Text = "Depósito";
             // 
             // FormRamoAtividadeToolStripMenuItem
             // 
             this.FormRamoAtividadeToolStripMenuItem.Name = "FormRamoAtividadeToolStripMenuItem";
-            this.FormRamoAtividadeToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormRamoAtividadeToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormRamoAtividadeToolStripMenuItem.Text = "Ramo de Atividade";
             // 
             // FormMoedaToolStripMenuItem
             // 
             this.FormMoedaToolStripMenuItem.Name = "FormMoedaToolStripMenuItem";
-            this.FormMoedaToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormMoedaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormMoedaToolStripMenuItem.Text = "Moedas";
             // 
             // FormSiteToolStripMenuItem
             // 
             this.FormSiteToolStripMenuItem.Name = "FormSiteToolStripMenuItem";
-            this.FormSiteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormSiteToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormSiteToolStripMenuItem.Text = "Sites";
             // 
             // FormAcessoToolStripMenuItem
             // 
             this.FormAcessoToolStripMenuItem.Name = "FormAcessoToolStripMenuItem";
-            this.FormAcessoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.FormAcessoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.FormAcessoToolStripMenuItem.Text = "Acesso";
             // 
             // recursosHumanosToolStripMenuItem
@@ -542,6 +545,20 @@
             this.FormModoEntregaToolStripMenuItem.Name = "FormModoEntregaToolStripMenuItem";
             this.FormModoEntregaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.FormModoEntregaToolStripMenuItem.Text = "Modos de entrega";
+            // 
+            // parametrizaçãoToolStripMenuItem
+            // 
+            this.parametrizaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.formParametrizacaoToolStripMenuItem});
+            this.parametrizaçãoToolStripMenuItem.Name = "parametrizaçãoToolStripMenuItem";
+            this.parametrizaçãoToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.parametrizaçãoToolStripMenuItem.Text = "Parametrização";
+            // 
+            // formParametrizacaoToolStripMenuItem
+            // 
+            this.formParametrizacaoToolStripMenuItem.Name = "formParametrizacaoToolStripMenuItem";
+            this.formParametrizacaoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.formParametrizacaoToolStripMenuItem.Text = "Parâmetros";
             // 
             // FormModuloCadastro
             // 
@@ -620,5 +637,7 @@
         private System.Windows.Forms.ToolStripMenuItem FormSiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FormEmpresaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FormAcessoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parametrizaçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formParametrizacaoToolStripMenuItem;
     }
 }

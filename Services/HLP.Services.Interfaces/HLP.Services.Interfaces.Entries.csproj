@@ -121,6 +121,12 @@
     <Compile Include="Gerais\ITransportador_EnderecoService.cs" />
     <Compile Include="Gerais\ITransportador_MotoristaService.cs" />
     <Compile Include="Gerais\ITransportador_VeiculosService.cs" />
+    <Compile Include="Parametros\IParametro_ComercialService.cs" />
+    <Compile Include="Parametros\IParametro_ComprasService.cs" />
+    <Compile Include="Parametros\IParametro_CustosService.cs" />
+    <Compile Include="Parametros\IParametro_EstoqueService.cs" />
+    <Compile Include="Parametros\IParametro_FiscalService.cs" />
+    <Compile Include="Parametros\IParametro_Ordem_ProducaoService.cs" />
     <Compile Include="RecursosHumanos\ICargoService.cs" />
     <Compile Include="Gerais\ICidadeService.cs" />
     <Compile Include="Gerais\IContatoService.cs" />
@@ -136,7 +142,7 @@
     <Compile Include="Gerais\IUFService.cs" />
     <Compile Include="Gerais\IUnidade_medidaService.cs" />
     <Compile Include="Gerais\ITransportadorService.cs" />
-    <Compile Include="Parametros\IParametro_financeiroService.cs" />
+    <Compile Include="Parametros\IParametro_FinanceiroService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

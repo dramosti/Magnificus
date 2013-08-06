@@ -7,6 +7,7 @@ using Ninject;
 using HLP.Repository.Interfaces.Entries.Gerais;
 using HLP.Models.Entries.Gerais;
 using HLP.Comum.Infrastructure;
+using HLP.Services.Interfaces.Entries.Parametros;
 
 namespace HLP.Services.Implementation.Entries.Gerais
 {
@@ -19,13 +20,34 @@ namespace HLP.Services.Implementation.Entries.Gerais
         [Inject]
         public IEmpresa_EnderecoRepository _Empresa_EnderecoRepository { get; set; }
 
+        [Inject]
+        public IParametro_ComercialService _Parametro_ComercialService { get; set; }
+
+        [Inject]
+        public IParametro_ComprasService _Parametro_ComprasService { get; set; }
+
+        [Inject]
+        public IParametro_CustosService _Parametro_CustosService { get; set; }
+
+        [Inject]
+        public IParametro_EstoqueService _Parametro_EstoqueService { get; set; }
+
+        [Inject]
+        public IParametro_FinanceiroService _Parametro_FinanceiroService { get; set; }
+
+        [Inject]
+        public IParametro_FiscalService _Parametro_FiscalService { get; set; }
+
+        [Inject]
+        public IParametro_Ordem_ProducaoService _Parametro_Ordem_ProducaoService { get; set; }
+
         public void Save(EmpresaModel objEmpresa)
-        {            
+        {
             try
             {
                 _EmpresaRepository.BeginTransaction();
                 _EmpresaRepository.Save(objEmpresa);
-                
+
 
                 foreach (Empresa_EnderecoModel item in objEmpresa.lEmpresa_endereco.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Incluido))
                 {
@@ -106,6 +128,47 @@ namespace HLP.Services.Implementation.Entries.Gerais
             else
             {
                 return _EmpresaRepository.GetAllEmpresa();
+            }
+        }
+
+        public void SalvarParametrosEmpresa(EmpresaParametrosModel objParametrosModel)
+        {
+            try
+            {
+                _Parametro_ComercialService.Save(objParametrosModel.ObjParametro_ComercialModel);
+                _Parametro_ComprasService.Save(objParametrosModel.ObjParametro_ComprasModel);
+                _Parametro_CustosService.Save(objParametrosModel.ObjParametro_CustosModel);
+                _Parametro_EstoqueService.Save(objParametrosModel.ObjParametro_EstoqueModel);
+                _Parametro_FinanceiroService.Save(objParametrosModel.ObjParametro_FinanceiroModel);
+                _Parametro_FiscalService.Save(objParametrosModel.ObjParametro_FiscalModel);
+                _Parametro_Ordem_ProducaoService.Save(objParametrosModel.ObjParametro_Ordem_ProducaoModel);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+        public EmpresaParametrosModel GetParametrosEmpresa()
+        {
+            try
+            {
+                EmpresaParametrosModel objEmpresaParametrosModel = new EmpresaParametrosModel();
+                objEmpresaParametrosModel.ObjParametro_ComercialModel = _Parametro_ComercialService.GetParametro_Comercial();
+                objEmpresaParametrosModel.ObjParametro_ComprasModel = _Parametro_ComprasService.GetParametro_Compras();
+                objEmpresaParametrosModel.ObjParametro_CustosModel = _Parametro_CustosService.GetParametro_Custos();
+                objEmpresaParametrosModel.ObjParametro_EstoqueModel = _Parametro_EstoqueService.GetParametro_Estoque();
+                objEmpresaParametrosModel.ObjParametro_FinanceiroModel = _Parametro_FinanceiroService.GetParametro_Financeiro();
+                objEmpresaParametrosModel.ObjParametro_FiscalModel = _Parametro_FiscalService.GetParametro_Fiscal();
+                objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel = _Parametro_Ordem_ProducaoService.GetParametro_Ordem_Producao();
+                return objEmpresaParametrosModel;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }

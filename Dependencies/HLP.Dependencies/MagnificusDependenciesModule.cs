@@ -62,7 +62,7 @@ namespace HLP.Dependencies
             Bind<IConfigTabPageRepository>().To<ConfigTabPageRepository>();
             Bind<IConfigPesquisaRepository>().To<ConfigPesquisaRepository>();
             //IConta_bancariaService into property contaService
-            
+
 
             #region Fiscal
 
@@ -118,7 +118,7 @@ namespace HLP.Dependencies
             Bind<ICondicoes_entregaRepository>().To<Condicoes_entregaRepository>();
             Bind<IRotaRepository>().To<RotaRepository>();
             Bind<IUFRepository>().To<UFRepository>();
-            Bind<ICidadeRepository>().To<CidadeRepository>();            
+            Bind<ICidadeRepository>().To<CidadeRepository>();
             Bind<IEmpresaRepository>().To<EmpresaRepository>();
             Bind<IRegiaoRepository>().To<RegiaoRepository>();
             Bind<ISetorRepository>().To<SetorRepository>();
@@ -168,7 +168,13 @@ namespace HLP.Dependencies
 
             #region Parametros
 
-            Bind<IParametro_financeiroRepository>().To<Parametro_financeiroRepository>();
+            Bind<IParametro_EstoqueRepository>().To<Parametro_EstoqueRepository>();
+            Bind<IParametro_CustosRepository>().To<Parametro_CustosRepository>();
+            Bind<IParametro_ComprasRepository>().To<Parametro_ComprasRepository>();
+            Bind<IParametro_Ordem_ProducaoRepository>().To<Parametro_Ordem_ProducaoRepository>();
+            Bind<IParametro_FiscalRepository>().To<Parametro_FiscalRepository>();
+            Bind<IParametro_ComercialRepository>().To<Parametro_ComercialRepository>();
+            Bind<IParametro_FinanceiroRepository>().To<Parametro_FinanceiroRepository>();
 
             #endregion
 
@@ -194,7 +200,7 @@ namespace HLP.Dependencies
             Bind<IConfigTabPageService>().To<ConfigTabPageService>();
             Bind<ILogExceptionService>().To<LogExceptionService>();
             Bind<IInitializeConfigService>().To<InitializeConfigService>();
-            
+
 
             #region Fiscal
 
@@ -249,7 +255,7 @@ namespace HLP.Dependencies
             Bind<ICondicoes_entregaService>().To<Condicoes_entregaService>();
             Bind<IRotaService>().To<RotaService>();
             Bind<ICidadeService>().To<CidadeService>();
-            Bind<IUFService>().To<UFService>();            
+            Bind<IUFService>().To<UFService>();
             Bind<IEmpresaService>().To<EmpresaService>();
             Bind<IRegiaoService>().To<RegiaoService>();
             Bind<ISetorService>().To<SetorService>();
@@ -301,7 +307,13 @@ namespace HLP.Dependencies
 
             #region Parametros
 
-            Bind<IParametro_financeiroService>().To<Parametro_financeiroService>();
+            Bind<IParametro_EstoqueService>().To<Parametro_EstoqueService>();
+            Bind<IParametro_CustosService>().To<Parametro_CustosService>();
+            Bind<IParametro_ComprasService>().To<Parametro_ComprasService>();
+            Bind<IParametro_Ordem_ProducaoService>().To<Parametro_Ordem_ProducaoService>();
+            Bind<IParametro_FiscalService>().To<Parametro_FiscalService>();
+            Bind<IParametro_ComercialService>().To<Parametro_ComercialService>();
+            Bind<IParametro_FinanceiroService>().To<Parametro_FinanceiroService>();
 
             #endregion
 
