@@ -13,36 +13,71 @@ using HLP.Comum.Infrastructure.Static;
 
 namespace HLP.Repository.Implementation.Entries.Parametros
 {
-    public class Parametro_financeiroRepository : IParametro_financeiroRepository
+    public class Parametro_FinanceiroRepository : IParametro_FinanceiroRepository
     {
         [Inject]
         public UnitOfWorkBase UndTrabalho { get; set; }
 
+        private DataAccessor<bool> regCreditoAprovadoAcesso;
+        private DataAccessor<Parametro_FinanceiroModel> regParametro_FinanceiroAccessor;
+        private DataAccessor<Parametro_FinanceiroModel> regAllParametro_FinanceiroAccessor;
 
-        private DataAccessor<Parametro_financeiroModel> regParametroAccessor;
-
-        public bool CreditoAprovado()
+        public void Save(Parametro_FinanceiroModel objParametro_Financeiro)
         {
-            bool Aprovado = false;
-            if (regParametroAccessor == null)
+            if (objParametro_Financeiro.idParametroFinanceiro == null)
             {
-                regParametroAccessor = UndTrabalho.dbPrincipal.CreateSqlStringAccessor("SELECT * FROM Parametro_financeiro WHERE idEmpresa = @idEmpresa",
-                                  new Parameters(UndTrabalho.dbPrincipal)
-                                    .AddParameter<int>("idEmpresa"),
-                                  MapBuilder<Parametro_financeiroModel>.MapAllProperties().Build());
+                objParametro_Financeiro.idParametroFinanceiro = (int)UndTrabalho.dbPrincipal.ExecuteScalar("dbo.Proc_save_Parametro_Financeiro",
+                ParameterBase<Parametro_FinanceiroModel>.SetParameterValue(objParametro_Financeiro));
+            }
+            else
+            {
+                UndTrabalho.dbPrincipal.ExecuteScalar("[dbo].[Proc_update_Parametro_Financeiro]",
+                ParameterBase<Parametro_FinanceiroModel>.SetParameterValue(objParametro_Financeiro));
+            }
+        }
+
+        public void Delete(int idParametroFinanceiro)
+        {
+            UndTrabalho.dbPrincipal.ExecuteScalar("dbo.Proc_delete_Parametro_Financeiro",
+                 UserData.idUser,
+                 idParametroFinanceiro);
+        }
+
+        public int Copy(int idParametroFinanceiro)
+        {
+            return (int)UndTrabalho.dbPrincipal.ExecuteScalar(
+                      "dbo.Proc_copy_Parametro_Financeiro",
+                       idParametroFinanceiro);
+        }
+
+        public Parametro_FinanceiroModel GetParametro_Financeiro()
+        {
+            if (regParametro_FinanceiroAccessor == null)
+            {
+                regParametro_FinanceiroAccessor = UndTrabalho.dbPrincipal.CreateSqlStringAccessor("SELECT * FROM Parametro_Financeiro" +
+                " where idEmpresa = " + CompanyData.idEmpresa,
+                                MapBuilder<Parametro_FinanceiroModel>.MapAllProperties().Build());
             }
 
+            return regParametro_FinanceiroAccessor.Execute().FirstOrDefault();
+        }
 
-            Parametro_financeiroModel param = regParametroAccessor.Execute(CompanyData.idEmpresa).FirstOrDefault();
-            if (param != null)
+        public List<Parametro_FinanceiroModel> GetAllParametro_Financeiro()
+        {
+            if (regAllParametro_FinanceiroAccessor == null)
             {
-                if (param.stCreditoAprovado == 1)
-                {
-                    Aprovado = true;
-                }
+                regAllParametro_FinanceiroAccessor = UndTrabalho.dbPrincipal.CreateSqlStringAccessor("SELECT * FROM Parametro_Financeiro",
+                                MapBuilder<Parametro_FinanceiroModel>.MapAllProperties().Build());
             }
+            return regAllParametro_FinanceiroAccessor.Execute().ToList();
+        }
 
-            return Aprovado;
+        public bool GetCreditoAprovado()
+        {
+            regCreditoAprovadoAcesso = UndTrabalho.dbPrincipal.CreateSqlStringAccessor("select stCreditoAprovado from Parametro_Financeiro where "
+                + "idEmpresa = " + CompanyData.idEmpresa,
+                                MapBuilder<bool>.MapAllProperties().Build());
+            return regCreditoAprovadoAcesso.Execute().FirstOrDefault();
         }
     }
 }

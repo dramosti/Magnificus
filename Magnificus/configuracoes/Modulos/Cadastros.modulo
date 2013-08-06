@@ -149,14 +149,17 @@ type="HLP.UI.Entries.Comercial.FormProduto, HLP.UI.Entries">
   <object id="FormEmpresa" name="FormEmpresa" singleton="false" scope="request"
 type="HLP.UI.Entries.Geral.FormEmpresa, HLP.UI.Entries">
   </object>
-  
+  <object id="formParametrizacao" name="formParametrizacao" singleton="false" scope="request"
+type="HLP.UI.Entries.Parametrizacao.formParametrizacao, HLP.UI.Entries">
+  </object>
 
-<object id="FormDiaPagamento" name="FormDiaPagamento" singleton="false" scope="request"
-  type="HLP.UI.Entries.Financeiro.FormDiaPagamento, HLP.UI.Entries">
-</object>
+
+  <object id="FormDiaPagamento" name="FormDiaPagamento" singleton="false" scope="request"
+    type="HLP.UI.Entries.Financeiro.FormDiaPagamento, HLP.UI.Entries">
+  </object>
   <object id="FormAcesso" name="FormAcesso" singleton="false" scope="request"
   type="HLP.UI.Entries.Geral.FormAcesso, HLP.UI.Entries">
-  </object> 
-  
-  
+  </object>
+
+
 </objects>

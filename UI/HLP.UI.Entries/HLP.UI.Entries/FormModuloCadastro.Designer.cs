@@ -87,7 +87,7 @@
             this.FormRotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormModoEntregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parâmetrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formParametrizacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -549,16 +549,16 @@
             // parametrizaçãoToolStripMenuItem
             // 
             this.parametrizaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.parâmetrosToolStripMenuItem});
+            this.formParametrizacaoToolStripMenuItem});
             this.parametrizaçãoToolStripMenuItem.Name = "parametrizaçãoToolStripMenuItem";
             this.parametrizaçãoToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.parametrizaçãoToolStripMenuItem.Text = "Parametrização";
             // 
-            // parâmetrosToolStripMenuItem
+            // formParametrizacaoToolStripMenuItem
             // 
-            this.parâmetrosToolStripMenuItem.Name = "parâmetrosToolStripMenuItem";
-            this.parâmetrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.parâmetrosToolStripMenuItem.Text = "Parâmetros";
+            this.formParametrizacaoToolStripMenuItem.Name = "formParametrizacaoToolStripMenuItem";
+            this.formParametrizacaoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.formParametrizacaoToolStripMenuItem.Text = "Parâmetros";
             // 
             // FormModuloCadastro
             // 
@@ -638,6 +638,6 @@
         private System.Windows.Forms.ToolStripMenuItem FormEmpresaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FormAcessoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parametrizaçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parâmetrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formParametrizacaoToolStripMenuItem;
     }
 }

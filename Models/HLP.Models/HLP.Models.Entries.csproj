@@ -98,6 +98,12 @@
     <Compile Include="Gerais\Calendario_DetalheModel.cs" />
     <Compile Include="Gerais\VersaoModel.cs" />
     <Compile Include="Gerais\VersaoService.cs" />
+    <Compile Include="Parametros\Parametro_ComercialModel.cs" />
+    <Compile Include="Parametros\Parametro_CustosModel.cs" />
+    <Compile Include="Parametros\Parametro_EstoqueModel.cs" />
+    <Compile Include="Parametros\Parametro_ComprasModel.cs" />
+    <Compile Include="Parametros\Parametro_FiscalModel.cs" />
+    <Compile Include="Parametros\Parametro_Ordem_ProducaoModel.cs" />
     <Compile Include="RecursosHumanos\CargoModel.cs" />
     <Compile Include="Gerais\CidadeModel.cs" />
     <Compile Include="Gerais\ContatoModel.cs" />
@@ -113,7 +119,7 @@
     <Compile Include="Gerais\TransportadorModel.cs" />
     <Compile Include="Gerais\UFModel.cs" />
     <Compile Include="Gerais\Unidade_medidaModel.cs" />
-    <Compile Include="Parametros\Parametro_financeiroModel.cs" />
+    <Compile Include="Parametros\Parametro_FinanceiroModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

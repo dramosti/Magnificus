@@ -135,6 +135,12 @@
     <Compile Include="Gerais\Transportador_EnderecoRepository.cs" />
     <Compile Include="Gerais\Transportador_MotoristaRepository.cs" />
     <Compile Include="Gerais\Transportador_VeiculosRepository.cs" />
+    <Compile Include="Parametros\Parametro_ComercialRepository.cs" />
+    <Compile Include="Parametros\Parametro_ComprasRepository.cs" />
+    <Compile Include="Parametros\Parametro_CustosRepository.cs" />
+    <Compile Include="Parametros\Parametro_EstoqueRepository.cs" />
+    <Compile Include="Parametros\Parametro_FiscalRepository.cs" />
+    <Compile Include="Parametros\Parametro_Ordem_ProducaoRepository.cs" />
     <Compile Include="RecursosHumanos\CargoRepository.cs" />
     <Compile Include="Gerais\CidadeRepository.cs" />
     <Compile Include="Gerais\ContatoRepository.cs" />
@@ -150,7 +156,7 @@
     <Compile Include="Gerais\TransportadorRepository.cs" />
     <Compile Include="Gerais\Unidade_medidaRepository.cs" />
     <Compile Include="Gerais\UFRepository.cs" />
-    <Compile Include="Parametros\Parametro_financeiroRepository.cs" />
+    <Compile Include="Parametros\Parametro_FinanceiroRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>

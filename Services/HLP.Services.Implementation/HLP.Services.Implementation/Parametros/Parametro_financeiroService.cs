@@ -5,17 +5,43 @@ using System.Text;
 using HLP.Services.Interfaces.Entries.Parametros;
 using Ninject;
 using HLP.Repository.Interfaces.Entries.Parametros;
+using HLP.Models.Entries.Parametros;
 
 namespace HLP.Services.Implementation.Entries.Parametros
 {
-    public class Parametro_financeiroService : IParametro_financeiroService
+    public class Parametro_FinanceiroService : IParametro_FinanceiroService
     {
         [Inject]
-        public IParametro_financeiroRepository parametroRepository { get; set; }
+        public IParametro_FinanceiroRepository _Parametro_FinanceiroRepository { get; set; }
 
-        public bool CreditoAprovado()
+        public void Save(Parametro_FinanceiroModel objParametro_Financeiro)
         {
-            return parametroRepository.CreditoAprovado();
+            _Parametro_FinanceiroRepository.Save(objParametro_Financeiro);
+        }
+
+        public void Delete(int idParametroFinanceiro)
+        {
+            _Parametro_FinanceiroRepository.Delete(idParametroFinanceiro);
+        }
+
+        public int Copy(int idParametroFinanceiro)
+        {
+            return _Parametro_FinanceiroRepository.Copy(idParametroFinanceiro);
+        }
+
+        public Parametro_FinanceiroModel GetParametro_Financeiro()
+        {
+            return _Parametro_FinanceiroRepository.GetParametro_Financeiro();
+        }
+
+        public List<Parametro_FinanceiroModel> GetAllParametro_Financeiro()
+        {
+            return _Parametro_FinanceiroRepository.GetAllParametro_Financeiro();
+        }
+
+        public bool GetCreditoAprovado()
+        {
+            return _Parametro_FinanceiroRepository.GetCreditoAprovado();
         }
     }
 }

@@ -13,5 +13,7 @@ namespace HLP.Services.Interfaces.Entries.Gerais
         int Copy(EmpresaModel objEmpresa);
         EmpresaModel GetEmpresa(int idEmpresa, bool bChildren = false);
         List<EmpresaModel> GetAllEmpresa(bool bEstruturaComboBox);
+        void SalvarParametrosEmpresa(EmpresaParametrosModel objParametrosModel);
+        EmpresaParametrosModel GetParametrosEmpresa();
     }
 }

@@ -29,7 +29,7 @@ namespace HLP.UI.Entries.Comercial
         public IPesquisaPadraoService pesquisaPadraoService { get; set; }
 
         [Inject]
-        public IParametro_financeiroService paramFinanceiroService { get; set; }
+        public IParametro_FinanceiroService paramFinanceiroService { get; set; }
 
         [Inject]
         public ICliente_fornecedorService cliforService { get; set; }
@@ -69,7 +69,7 @@ namespace HLP.UI.Entries.Comercial
             {
                 base.Novo();
                 cbostPessoa.SelectedIndex = 0;
-                cbostCreditoAprovado.SelectedIndex = paramFinanceiroService.CreditoAprovado() == true ? 1 : 0;
+                cbostCreditoAprovado.SelectedIndex = paramFinanceiroService.GetCreditoAprovado() == true ? 1 : 0;
                 cbostCreditoAprovado.Enabled = false;
                 txtdCadastro.Text = DateTime.Now.ToShortDateString();
                 cboAtivo.SelectedIndex = 1;
