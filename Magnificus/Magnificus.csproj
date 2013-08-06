@@ -180,9 +180,7 @@
     <Compile Include="FormInformacao.Designer.cs">
       <DependentUpon>FormInformacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="formTeste.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="formTeste.cs" />
     <Compile Include="formTeste.Designer.cs">
       <DependentUpon>formTeste.cs</DependentUpon>
     </Compile>
