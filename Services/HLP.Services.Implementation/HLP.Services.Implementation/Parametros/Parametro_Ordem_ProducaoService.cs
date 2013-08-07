@@ -32,7 +32,8 @@ namespace HLP.Services.Implementation.Entries.Parametros
 
         public Parametro_Ordem_ProducaoModel GetParametro_Ordem_Producao()
         {
-            return _Parametro_Ordem_ProducaoRepository.GetParametro_Ordem_Producao();
+            Parametro_Ordem_ProducaoModel objParamOrdProdModel = new Parametro_Ordem_ProducaoModel();
+            return _Parametro_Ordem_ProducaoRepository.GetParametro_Ordem_Producao() ?? objParamOrdProdModel;
         }
 
         public List<Parametro_Ordem_ProducaoModel> GetAllParametro_Ordem_Producao()

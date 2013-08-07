@@ -31,7 +31,8 @@ namespace HLP.Services.Implementation.Entries.Parametros
 
         public Parametro_FinanceiroModel GetParametro_Financeiro()
         {
-            return _Parametro_FinanceiroRepository.GetParametro_Financeiro();
+            Parametro_FinanceiroModel objParamFinanceiroModel = new Parametro_FinanceiroModel();
+            return _Parametro_FinanceiroRepository.GetParametro_Financeiro() ?? objParamFinanceiroModel;
         }
 
         public List<Parametro_FinanceiroModel> GetAllParametro_Financeiro()

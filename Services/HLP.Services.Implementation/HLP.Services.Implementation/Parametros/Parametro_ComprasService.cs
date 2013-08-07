@@ -32,7 +32,8 @@ namespace HLP.Services.Implementation.Entries.Parametros
 
         public Parametro_ComprasModel GetParametro_Compras()
         {
-            return _Parametro_ComprasRepository.GetParametro_Compras();
+            Parametro_ComprasModel objParamComprasModel = new Parametro_ComprasModel();
+            return _Parametro_ComprasRepository.GetParametro_Compras() ?? objParamComprasModel;
         }
 
         public List<Parametro_ComprasModel> GetAllParametro_Compras()

@@ -32,7 +32,8 @@ namespace HLP.Services.Implementation.Entries.Parametros
 
         public Parametro_CustosModel GetParametro_Custos()
         {
-            return _Parametro_CustosRepository.GetParametro_Custos();
+            Parametro_CustosModel objParamCustoModel = new Parametro_CustosModel();
+            return _Parametro_CustosRepository.GetParametro_Custos() ?? objParamCustoModel;
         }
 
         public List<Parametro_CustosModel> GetAllParametro_Custos()

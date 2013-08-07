@@ -67,10 +67,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>F96211471960C3B3B3811696BABE92E5C4530A6E</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>EC862B345063413D94527C71FABB4E039F259839</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Magnificus_8_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Magnificus_11_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -180,7 +180,9 @@
     <Compile Include="FormInformacao.Designer.cs">
       <DependentUpon>FormInformacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="formTeste.cs" />
+    <Compile Include="formTeste.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formTeste.Designer.cs">
       <DependentUpon>formTeste.cs</DependentUpon>
     </Compile>
@@ -211,6 +213,7 @@
       <LastGenOutput>HLP_Lista_de_Banco.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Magnificus_11_TemporaryKey.pfx" />
     <None Include="Magnificus_8_TemporaryKey.pfx" />
     <None Include="Magnificus_9_TemporaryKey.pfx" />
     <None Include="Magnificus_TemporaryKey.pfx" />

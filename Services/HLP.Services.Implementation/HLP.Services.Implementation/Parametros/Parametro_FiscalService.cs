@@ -32,7 +32,8 @@ namespace HLP.Services.Implementation.Entries.Parametros
 
         public Parametro_FiscalModel GetParametro_Fiscal()
         {
-            return _Parametro_FiscalRepository.GetParametro_Fiscal();
+            Parametro_FiscalModel objParamFiscalModel = new Parametro_FiscalModel();
+            return _Parametro_FiscalRepository.GetParametro_Fiscal() ?? objParamFiscalModel;
         }
 
         public List<Parametro_FiscalModel> GetAllParametro_Fiscal()

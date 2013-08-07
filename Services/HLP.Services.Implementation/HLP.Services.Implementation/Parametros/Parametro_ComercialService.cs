@@ -32,7 +32,8 @@ namespace HLP.Services.Implementation.Entries.Parametros
 
         public Parametro_ComercialModel GetParametro_Comercial()
         {
-            return _Parametro_ComercialRepository.GetParametro_Comercial();
+            Parametro_ComercialModel objParamComercialModel = new Parametro_ComercialModel();
+            return _Parametro_ComercialRepository.GetParametro_Comercial() ?? objParamComercialModel;
         }
 
         public List<Parametro_ComercialModel> GetAllParametro_Comercial()

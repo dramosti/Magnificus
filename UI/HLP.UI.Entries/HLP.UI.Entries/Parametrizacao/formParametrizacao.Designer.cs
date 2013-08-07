@@ -31,9 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formParametrizacao));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kryptonTabControl1 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.hlP_LabelSeparatorEmpresa = new HLP.Comum.Components.HLP_LabelSeparator();
+            this.txtCodigo = new HLP.Comum.Components.HLP_TextBox();
+            this.txtxNome = new HLP.Comum.Components.HLP_TextBox();
             this.kryptonTabControl2 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -117,6 +122,7 @@
             this.nudpCOFINSss = new HLP.Comum.Components.HLP_NumericUpDown();
             this.nudnItensNfProduto = new HLP.Comum.Components.HLP_NumericUpDown();
             this.nudnItensNfServico = new HLP.Comum.Components.HLP_NumericUpDown();
+            this.nudpINSSss = new HLP.Comum.Components.HLP_NumericUpDown();
             this.cbxstSuperSimples = new HLP.Comum.Components.HLP_ComboBox();
             this.cbxstCRT = new HLP.Comum.Components.HLP_ComboBox();
             this.cbxstImprimeMsgPadraoSs = new HLP.Comum.Components.HLP_ComboBox();
@@ -153,23 +159,23 @@
             this.cbxstPagaComissaoPor = new HLP.Comum.Components.HLP_ComboBox();
             this.cbxstCreditoAprovado = new HLP.Comum.Components.HLP_ComboBox();
             this.cbxstBloqueiaClientePosCartaCobranca = new HLP.Comum.Components.HLP_ComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.hlP_LabelSeparatorEmpresa = new HLP.Comum.Components.HLP_LabelSeparator();
-            this.txtIdEmpresa = new HLP.Comum.Components.HLP_TextBox();
-            this.txtxNome = new HLP.Comum.Components.HLP_TextBox();
-            this.txtxFantasia = new HLP.Comum.Components.HLP_TextBox();
-            this.maskxCNPJ = new HLP.Comum.Components.HLP_MaskedTextBox();
-            this.nudpINSSss = new HLP.Comum.Components.HLP_NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.panelPadrao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
+            this.kryptonSplitContainer1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).BeginInit();
+            this.kryptonSplitContainer1.Panel2.SuspendLayout();
+            this.kryptonSplitContainer1.SuspendLayout();
             this.kryptonTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.kryptonTabControl2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
@@ -207,7 +213,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel9)).BeginInit();
             this.kryptonPanel9.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -221,12 +226,31 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kryptonTabControl1);
+            this.kryptonPanel1.Controls.Add(this.kryptonSplitContainer1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(3, 3);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1346, 490);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kryptonSplitContainer1
+            // 
+            this.kryptonSplitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kryptonSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonSplitContainer1.Name = "kryptonSplitContainer1";
+            this.kryptonSplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // kryptonSplitContainer1.Panel1
+            // 
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.kryptonTabControl1);
+            // 
+            // kryptonSplitContainer1.Panel2
+            // 
+            this.kryptonSplitContainer1.Panel2.Controls.Add(this.kryptonTabControl2);
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1346, 490);
+            this.kryptonSplitContainer1.SplitterDistance = 118;
+            this.kryptonSplitContainer1.TabIndex = 0;
             // 
             // kryptonTabControl1
             // 
@@ -247,8 +271,8 @@
             this.kryptonTabControl1.Name = "kryptonTabControl1";
             this.kryptonTabControl1.PreserveTabColor = false;
             this.kryptonTabControl1.SelectedIndex = 0;
-            this.kryptonTabControl1.Size = new System.Drawing.Size(1346, 490);
-            this.kryptonTabControl1.TabIndex = 0;
+            this.kryptonTabControl1.Size = new System.Drawing.Size(1346, 118);
+            this.kryptonTabControl1.TabIndex = 3;
             this.kryptonTabControl1.UseExtendedLayout = false;
             // 
             // tabPage1
@@ -257,7 +281,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1338, 461);
+            this.tabPage1.Size = new System.Drawing.Size(1338, 89);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "Parâmetros";
@@ -265,13 +289,90 @@
             // 
             // kryptonPanel2
             // 
-            this.kryptonPanel2.Controls.Add(this.kryptonTabControl2);
             this.kryptonPanel2.Controls.Add(this.flowLayoutPanel1);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(1338, 461);
+            this.kryptonPanel2.Size = new System.Drawing.Size(1338, 89);
             this.kryptonPanel2.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Controls.Add(this.hlP_LabelSeparatorEmpresa);
+            this.flowLayoutPanel1.Controls.Add(this.txtCodigo);
+            this.flowLayoutPanel1.Controls.Add(this.txtxNome);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1338, 89);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // hlP_LabelSeparatorEmpresa
+            // 
+            this.hlP_LabelSeparatorEmpresa._LabelText = "Dados empresa";
+            this.hlP_LabelSeparatorEmpresa._TamanhoMaiorLabel = 0;
+            this.hlP_LabelSeparatorEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.hlP_LabelSeparatorEmpresa.Location = new System.Drawing.Point(3, 3);
+            this.hlP_LabelSeparatorEmpresa.Name = "hlP_LabelSeparatorEmpresa";
+            this.hlP_LabelSeparatorEmpresa.Size = new System.Drawing.Size(180, 19);
+            this.hlP_LabelSeparatorEmpresa.TabIndex = 0;
+            this.hlP_LabelSeparatorEmpresa.TabStop = false;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo._Field = "idEmpresa";
+            this.txtCodigo._LabelGroup = this.hlP_LabelSeparatorEmpresa;
+            this.txtCodigo._LabelText = "Código";
+            this.txtCodigo._Multiline = false;
+            this.txtCodigo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.txtCodigo._Password = false;
+            this.txtCodigo._Regex = null;
+            this.txtCodigo._Table = "Empresa";
+            this.txtCodigo._TamanhoComponente = 101;
+            this.txtCodigo._TamanhoMaiorLabel = 50;
+            this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
+            this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtCodigo.Color = System.Drawing.Color.White;
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(8, 28);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(8, 3, 15, 3);
+            this.txtCodigo.MaxLength = 32767;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
+            this.txtCodigo.ReadOnly = false;
+            this.txtCodigo.Size = new System.Drawing.Size(146, 22);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // txtxNome
+            // 
+            this.txtxNome._Field = "xNome";
+            this.txtxNome._LabelGroup = this.hlP_LabelSeparatorEmpresa;
+            this.txtxNome._LabelText = "Nome";
+            this.txtxNome._Multiline = false;
+            this.txtxNome._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.txtxNome._Password = false;
+            this.txtxNome._Regex = null;
+            this.txtxNome._Table = "Empresa";
+            this.txtxNome._TamanhoComponente = 286;
+            this.txtxNome._TamanhoMaiorLabel = 50;
+            this.txtxNome.BackColor = System.Drawing.Color.Transparent;
+            this.txtxNome.Base = null;
+            this.txtxNome.bConfiguracao = false;
+            this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtxNome.Color = System.Drawing.Color.White;
+            this.txtxNome.Enabled = false;
+            this.txtxNome.Location = new System.Drawing.Point(16, 56);
+            this.txtxNome.Margin = new System.Windows.Forms.Padding(16, 3, 15, 3);
+            this.txtxNome.MaxLength = 32767;
+            this.txtxNome.Name = "txtxNome";
+            this.txtxNome.objConfigComponenteModel = null;
+            this.txtxNome.ReadOnly = false;
+            this.txtxNome.Size = new System.Drawing.Size(323, 22);
+            this.txtxNome.TabIndex = 2;
             // 
             // kryptonTabControl2
             // 
@@ -294,12 +395,12 @@
             this.kryptonTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonTabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.kryptonTabControl2.HotTrack = true;
-            this.kryptonTabControl2.Location = new System.Drawing.Point(0, 86);
+            this.kryptonTabControl2.Location = new System.Drawing.Point(0, 0);
             this.kryptonTabControl2.Name = "kryptonTabControl2";
             this.kryptonTabControl2.PreserveTabColor = false;
             this.kryptonTabControl2.SelectedIndex = 0;
-            this.kryptonTabControl2.Size = new System.Drawing.Size(1338, 375);
-            this.kryptonTabControl2.TabIndex = 1;
+            this.kryptonTabControl2.Size = new System.Drawing.Size(1346, 367);
+            this.kryptonTabControl2.TabIndex = 2;
             this.kryptonTabControl2.UseExtendedLayout = false;
             // 
             // tabPage2
@@ -308,7 +409,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1330, 346);
+            this.tabPage2.Size = new System.Drawing.Size(1338, 338);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Tag = false;
             this.tabPage2.Text = "Estoque";
@@ -320,7 +421,7 @@
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(1330, 346);
+            this.kryptonPanel3.Size = new System.Drawing.Size(1338, 338);
             this.kryptonPanel3.TabIndex = 0;
             // 
             // flowLayoutPanel2
@@ -337,7 +438,7 @@
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1330, 346);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1338, 338);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // hlP_LabelSeparatorEstoque
@@ -347,7 +448,7 @@
             this.hlP_LabelSeparatorEstoque.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorEstoque.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorEstoque.Name = "hlP_LabelSeparatorEstoque";
-            this.hlP_LabelSeparatorEstoque.Size = new System.Drawing.Size(399, 18);
+            this.hlP_LabelSeparatorEstoque.Size = new System.Drawing.Size(309, 19);
             this.hlP_LabelSeparatorEstoque.TabIndex = 0;
             this.hlP_LabelSeparatorEstoque.TabStop = false;
             // 
@@ -362,8 +463,8 @@
             this.cbxstEstoqueMinimo._Regex = null;
             this.cbxstEstoqueMinimo._situacao = false;
             this.cbxstEstoqueMinimo._Table = "Parametro_Estoque";
-            this.cbxstEstoqueMinimo._TamanhoComponente = 150;
-            this.cbxstEstoqueMinimo._TamanhoMaiorLabel = 250;
+            this.cbxstEstoqueMinimo._TamanhoComponente = 149;
+            this.cbxstEstoqueMinimo._TamanhoMaiorLabel = 195;
             this.cbxstEstoqueMinimo._Visible = false;
             this.cbxstEstoqueMinimo.BackColor = System.Drawing.Color.Transparent;
             this.cbxstEstoqueMinimo.Base = null;
@@ -371,13 +472,13 @@
             this.cbxstEstoqueMinimo.Color = System.Drawing.Color.White;
             this.cbxstEstoqueMinimo.DataSource = null;
             this.cbxstEstoqueMinimo.DisplayMember = "DisplayMember";
-            this.cbxstEstoqueMinimo.Location = new System.Drawing.Point(121, 27);
-            this.cbxstEstoqueMinimo.Margin = new System.Windows.Forms.Padding(121, 3, 15, 3);
+            this.cbxstEstoqueMinimo.Location = new System.Drawing.Point(66, 28);
+            this.cbxstEstoqueMinimo.Margin = new System.Windows.Forms.Padding(66, 3, 15, 3);
             this.cbxstEstoqueMinimo.Name = "cbxstEstoqueMinimo";
             this.cbxstEstoqueMinimo.objConfigComponenteModel = null;
             this.cbxstEstoqueMinimo.SelectedIndex = -1;
             this.cbxstEstoqueMinimo.SelectedValue = 0;
-            this.cbxstEstoqueMinimo.Size = new System.Drawing.Size(282, 21);
+            this.cbxstEstoqueMinimo.Size = new System.Drawing.Size(281, 21);
             this.cbxstEstoqueMinimo.TabIndex = 1;
             this.cbxstEstoqueMinimo.ValueMember = "ValueMember";
             // 
@@ -392,8 +493,8 @@
             this.cbxstEstoqueMaximo._Regex = null;
             this.cbxstEstoqueMaximo._situacao = false;
             this.cbxstEstoqueMaximo._Table = "Parametro_Estoque";
-            this.cbxstEstoqueMaximo._TamanhoComponente = 150;
-            this.cbxstEstoqueMaximo._TamanhoMaiorLabel = 250;
+            this.cbxstEstoqueMaximo._TamanhoComponente = 149;
+            this.cbxstEstoqueMaximo._TamanhoMaiorLabel = 195;
             this.cbxstEstoqueMaximo._Visible = false;
             this.cbxstEstoqueMaximo.BackColor = System.Drawing.Color.Transparent;
             this.cbxstEstoqueMaximo.Base = null;
@@ -401,13 +502,13 @@
             this.cbxstEstoqueMaximo.Color = System.Drawing.Color.White;
             this.cbxstEstoqueMaximo.DataSource = null;
             this.cbxstEstoqueMaximo.DisplayMember = "DisplayMember";
-            this.cbxstEstoqueMaximo.Location = new System.Drawing.Point(120, 54);
-            this.cbxstEstoqueMaximo.Margin = new System.Windows.Forms.Padding(120, 3, 15, 3);
+            this.cbxstEstoqueMaximo.Location = new System.Drawing.Point(65, 55);
+            this.cbxstEstoqueMaximo.Margin = new System.Windows.Forms.Padding(65, 3, 15, 3);
             this.cbxstEstoqueMaximo.Name = "cbxstEstoqueMaximo";
             this.cbxstEstoqueMaximo.objConfigComponenteModel = null;
             this.cbxstEstoqueMaximo.SelectedIndex = -1;
             this.cbxstEstoqueMaximo.SelectedValue = 0;
-            this.cbxstEstoqueMaximo.Size = new System.Drawing.Size(283, 21);
+            this.cbxstEstoqueMaximo.Size = new System.Drawing.Size(282, 21);
             this.cbxstEstoqueMaximo.TabIndex = 2;
             this.cbxstEstoqueMaximo.ValueMember = "ValueMember";
             // 
@@ -422,8 +523,8 @@
             this.cbxstMediaConsumo._Regex = null;
             this.cbxstMediaConsumo._situacao = false;
             this.cbxstMediaConsumo._Table = "Parametro_Estoque";
-            this.cbxstMediaConsumo._TamanhoComponente = 150;
-            this.cbxstMediaConsumo._TamanhoMaiorLabel = 250;
+            this.cbxstMediaConsumo._TamanhoComponente = 126;
+            this.cbxstMediaConsumo._TamanhoMaiorLabel = 195;
             this.cbxstMediaConsumo._Visible = false;
             this.cbxstMediaConsumo.BackColor = System.Drawing.Color.Transparent;
             this.cbxstMediaConsumo.Base = null;
@@ -431,13 +532,13 @@
             this.cbxstMediaConsumo.Color = System.Drawing.Color.White;
             this.cbxstMediaConsumo.DataSource = null;
             this.cbxstMediaConsumo.DisplayMember = "DisplayMember";
-            this.cbxstMediaConsumo.Location = new System.Drawing.Point(124, 81);
-            this.cbxstMediaConsumo.Margin = new System.Windows.Forms.Padding(124, 3, 15, 3);
+            this.cbxstMediaConsumo.Location = new System.Drawing.Point(69, 82);
+            this.cbxstMediaConsumo.Margin = new System.Windows.Forms.Padding(69, 3, 15, 3);
             this.cbxstMediaConsumo.Name = "cbxstMediaConsumo";
             this.cbxstMediaConsumo.objConfigComponenteModel = null;
             this.cbxstMediaConsumo.SelectedIndex = -1;
             this.cbxstMediaConsumo.SelectedValue = 0;
-            this.cbxstMediaConsumo.Size = new System.Drawing.Size(279, 21);
+            this.cbxstMediaConsumo.Size = new System.Drawing.Size(255, 21);
             this.cbxstMediaConsumo.TabIndex = 3;
             this.cbxstMediaConsumo.ValueMember = "ValueMember";
             // 
@@ -453,8 +554,8 @@
             this.cbxstVendasGera._Regex = null;
             this.cbxstVendasGera._situacao = false;
             this.cbxstVendasGera._Table = "Parametro_Estoque";
-            this.cbxstVendasGera._TamanhoComponente = 150;
-            this.cbxstVendasGera._TamanhoMaiorLabel = 250;
+            this.cbxstVendasGera._TamanhoComponente = 142;
+            this.cbxstVendasGera._TamanhoMaiorLabel = 195;
             this.cbxstVendasGera._Visible = false;
             this.cbxstVendasGera.BackColor = System.Drawing.Color.Transparent;
             this.cbxstVendasGera.Base = null;
@@ -462,13 +563,13 @@
             this.cbxstVendasGera.Color = System.Drawing.Color.White;
             this.cbxstVendasGera.DataSource = null;
             this.cbxstVendasGera.DisplayMember = "DisplayMember";
-            this.cbxstVendasGera.Location = new System.Drawing.Point(177, 108);
-            this.cbxstVendasGera.Margin = new System.Windows.Forms.Padding(177, 3, 15, 3);
+            this.cbxstVendasGera.Location = new System.Drawing.Point(122, 109);
+            this.cbxstVendasGera.Margin = new System.Windows.Forms.Padding(122, 3, 15, 3);
             this.cbxstVendasGera.Name = "cbxstVendasGera";
             this.cbxstVendasGera.objConfigComponenteModel = null;
             this.cbxstVendasGera.SelectedIndex = -1;
             this.cbxstVendasGera.SelectedValue = 0;
-            this.cbxstVendasGera.Size = new System.Drawing.Size(226, 21);
+            this.cbxstVendasGera.Size = new System.Drawing.Size(218, 21);
             this.cbxstVendasGera.TabIndex = 4;
             this.cbxstVendasGera.ValueMember = "ValueMember";
             // 
@@ -483,8 +584,8 @@
             this.cbxstGradeEstoque._Regex = null;
             this.cbxstGradeEstoque._situacao = false;
             this.cbxstGradeEstoque._Table = "Parametro_Estoque";
-            this.cbxstGradeEstoque._TamanhoComponente = 150;
-            this.cbxstGradeEstoque._TamanhoMaiorLabel = 250;
+            this.cbxstGradeEstoque._TamanhoComponente = 114;
+            this.cbxstGradeEstoque._TamanhoMaiorLabel = 195;
             this.cbxstGradeEstoque._Visible = false;
             this.cbxstGradeEstoque.BackColor = System.Drawing.Color.Transparent;
             this.cbxstGradeEstoque.Base = null;
@@ -492,13 +593,13 @@
             this.cbxstGradeEstoque.Color = System.Drawing.Color.White;
             this.cbxstGradeEstoque.DataSource = null;
             this.cbxstGradeEstoque.DisplayMember = "DisplayMember";
-            this.cbxstGradeEstoque.Location = new System.Drawing.Point(103, 135);
-            this.cbxstGradeEstoque.Margin = new System.Windows.Forms.Padding(103, 3, 15, 3);
+            this.cbxstGradeEstoque.Location = new System.Drawing.Point(48, 136);
+            this.cbxstGradeEstoque.Margin = new System.Windows.Forms.Padding(48, 3, 15, 3);
             this.cbxstGradeEstoque.Name = "cbxstGradeEstoque";
             this.cbxstGradeEstoque.objConfigComponenteModel = null;
             this.cbxstGradeEstoque.SelectedIndex = -1;
             this.cbxstGradeEstoque.SelectedValue = 0;
-            this.cbxstGradeEstoque.Size = new System.Drawing.Size(300, 21);
+            this.cbxstGradeEstoque.Size = new System.Drawing.Size(264, 21);
             this.cbxstGradeEstoque.TabIndex = 5;
             this.cbxstGradeEstoque.ValueMember = "ValueMember";
             // 
@@ -514,8 +615,8 @@
             this.cbxstRastreabilidadeMaterial._Regex = null;
             this.cbxstRastreabilidadeMaterial._situacao = false;
             this.cbxstRastreabilidadeMaterial._Table = "Parametro_Estoque";
-            this.cbxstRastreabilidadeMaterial._TamanhoComponente = 150;
-            this.cbxstRastreabilidadeMaterial._TamanhoMaiorLabel = 250;
+            this.cbxstRastreabilidadeMaterial._TamanhoComponente = 114;
+            this.cbxstRastreabilidadeMaterial._TamanhoMaiorLabel = 195;
             this.cbxstRastreabilidadeMaterial._Visible = false;
             this.cbxstRastreabilidadeMaterial.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRastreabilidadeMaterial.Base = null;
@@ -523,13 +624,13 @@
             this.cbxstRastreabilidadeMaterial.Color = System.Drawing.Color.White;
             this.cbxstRastreabilidadeMaterial.DataSource = null;
             this.cbxstRastreabilidadeMaterial.DisplayMember = "DisplayMember";
-            this.cbxstRastreabilidadeMaterial.Location = new System.Drawing.Point(58, 162);
-            this.cbxstRastreabilidadeMaterial.Margin = new System.Windows.Forms.Padding(58, 3, 15, 3);
+            this.cbxstRastreabilidadeMaterial.Location = new System.Drawing.Point(3, 163);
+            this.cbxstRastreabilidadeMaterial.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.cbxstRastreabilidadeMaterial.Name = "cbxstRastreabilidadeMaterial";
             this.cbxstRastreabilidadeMaterial.objConfigComponenteModel = null;
             this.cbxstRastreabilidadeMaterial.SelectedIndex = -1;
             this.cbxstRastreabilidadeMaterial.SelectedValue = 0;
-            this.cbxstRastreabilidadeMaterial.Size = new System.Drawing.Size(345, 21);
+            this.cbxstRastreabilidadeMaterial.Size = new System.Drawing.Size(309, 21);
             this.cbxstRastreabilidadeMaterial.TabIndex = 6;
             this.cbxstRastreabilidadeMaterial.ValueMember = "ValueMember";
             // 
@@ -545,7 +646,7 @@
             this.cbxstRastreabilidadeProdutoAcabado._Regex = null;
             this.cbxstRastreabilidadeProdutoAcabado._situacao = false;
             this.cbxstRastreabilidadeProdutoAcabado._Table = "Parametro_Estoque";
-            this.cbxstRastreabilidadeProdutoAcabado._TamanhoComponente = 150;
+            this.cbxstRastreabilidadeProdutoAcabado._TamanhoComponente = 114;
             this.cbxstRastreabilidadeProdutoAcabado._TamanhoMaiorLabel = 250;
             this.cbxstRastreabilidadeProdutoAcabado._Visible = false;
             this.cbxstRastreabilidadeProdutoAcabado.BackColor = System.Drawing.Color.Transparent;
@@ -554,13 +655,13 @@
             this.cbxstRastreabilidadeProdutoAcabado.Color = System.Drawing.Color.White;
             this.cbxstRastreabilidadeProdutoAcabado.DataSource = null;
             this.cbxstRastreabilidadeProdutoAcabado.DisplayMember = "DisplayMember";
-            this.cbxstRastreabilidadeProdutoAcabado.Location = new System.Drawing.Point(4, 189);
+            this.cbxstRastreabilidadeProdutoAcabado.Location = new System.Drawing.Point(4, 190);
             this.cbxstRastreabilidadeProdutoAcabado.Margin = new System.Windows.Forms.Padding(4, 3, 15, 3);
             this.cbxstRastreabilidadeProdutoAcabado.Name = "cbxstRastreabilidadeProdutoAcabado";
             this.cbxstRastreabilidadeProdutoAcabado.objConfigComponenteModel = null;
             this.cbxstRastreabilidadeProdutoAcabado.SelectedIndex = -1;
             this.cbxstRastreabilidadeProdutoAcabado.SelectedValue = 0;
-            this.cbxstRastreabilidadeProdutoAcabado.Size = new System.Drawing.Size(399, 21);
+            this.cbxstRastreabilidadeProdutoAcabado.Size = new System.Drawing.Size(363, 21);
             this.cbxstRastreabilidadeProdutoAcabado.TabIndex = 7;
             this.cbxstRastreabilidadeProdutoAcabado.ValueMember = "ValueMember";
             // 
@@ -570,7 +671,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1330, 346);
+            this.tabPage3.Size = new System.Drawing.Size(1338, 338);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Tag = false;
             this.tabPage3.Text = "Custos";
@@ -582,7 +683,7 @@
             this.kryptonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel4.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel4.Name = "kryptonPanel4";
-            this.kryptonPanel4.Size = new System.Drawing.Size(1330, 346);
+            this.kryptonPanel4.Size = new System.Drawing.Size(1338, 338);
             this.kryptonPanel4.TabIndex = 0;
             // 
             // flowLayoutPanel3
@@ -602,7 +703,7 @@
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1330, 346);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1338, 338);
             this.flowLayoutPanel3.TabIndex = 0;
             // 
             // hlP_LabelSeparatorCustos
@@ -612,7 +713,7 @@
             this.hlP_LabelSeparatorCustos.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorCustos.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorCustos.Name = "hlP_LabelSeparatorCustos";
-            this.hlP_LabelSeparatorCustos.Size = new System.Drawing.Size(686, 18);
+            this.hlP_LabelSeparatorCustos.Size = new System.Drawing.Size(1688, 19);
             this.hlP_LabelSeparatorCustos.TabIndex = 0;
             this.hlP_LabelSeparatorCustos.TabStop = false;
             // 
@@ -627,15 +728,15 @@
             this.nudxHorasTrabalhadasDia._Regex = null;
             this.nudxHorasTrabalhadasDia._Table = "Parametro_Custos";
             this.nudxHorasTrabalhadasDia._TamanhoComponente = 100;
-            this.nudxHorasTrabalhadasDia._TamanhoMaiorLabel = 360;
+            this.nudxHorasTrabalhadasDia._TamanhoMaiorLabel = 302;
             this.nudxHorasTrabalhadasDia._Visible = false;
             this.nudxHorasTrabalhadasDia.BackColor = System.Drawing.Color.Transparent;
             this.nudxHorasTrabalhadasDia.Base = null;
             this.nudxHorasTrabalhadasDia.bConfiguracao = false;
             this.nudxHorasTrabalhadasDia.Color = System.Drawing.Color.White;
             this.nudxHorasTrabalhadasDia.DecimalPlaces = 2;
-            this.nudxHorasTrabalhadasDia.Location = new System.Drawing.Point(169, 27);
-            this.nudxHorasTrabalhadasDia.Margin = new System.Windows.Forms.Padding(169, 3, 15, 3);
+            this.nudxHorasTrabalhadasDia.Location = new System.Drawing.Point(111, 28);
+            this.nudxHorasTrabalhadasDia.Margin = new System.Windows.Forms.Padding(111, 3, 15, 3);
             this.nudxHorasTrabalhadasDia.Maximum = new decimal(new int[] {
             9,
             0,
@@ -668,15 +769,15 @@
             this.nudxDiasTrabalhadasSemana._Regex = null;
             this.nudxDiasTrabalhadasSemana._Table = "Parametro_Custos";
             this.nudxDiasTrabalhadasSemana._TamanhoComponente = 100;
-            this.nudxDiasTrabalhadasSemana._TamanhoMaiorLabel = 360;
+            this.nudxDiasTrabalhadasSemana._TamanhoMaiorLabel = 302;
             this.nudxDiasTrabalhadasSemana._Visible = false;
             this.nudxDiasTrabalhadasSemana.BackColor = System.Drawing.Color.Transparent;
             this.nudxDiasTrabalhadasSemana.Base = null;
             this.nudxDiasTrabalhadasSemana.bConfiguracao = false;
             this.nudxDiasTrabalhadasSemana.Color = System.Drawing.Color.White;
             this.nudxDiasTrabalhadasSemana.DecimalPlaces = 2;
-            this.nudxDiasTrabalhadasSemana.Location = new System.Drawing.Point(138, 55);
-            this.nudxDiasTrabalhadasSemana.Margin = new System.Windows.Forms.Padding(138, 3, 15, 3);
+            this.nudxDiasTrabalhadasSemana.Location = new System.Drawing.Point(80, 56);
+            this.nudxDiasTrabalhadasSemana.Margin = new System.Windows.Forms.Padding(80, 3, 15, 3);
             this.nudxDiasTrabalhadasSemana.Maximum = new decimal(new int[] {
             9,
             0,
@@ -710,8 +811,8 @@
             this.cbxstCustoComposicao._Regex = null;
             this.cbxstCustoComposicao._situacao = false;
             this.cbxstCustoComposicao._Table = "Parametro_Custos";
-            this.cbxstCustoComposicao._TamanhoComponente = 150;
-            this.cbxstCustoComposicao._TamanhoMaiorLabel = 360;
+            this.cbxstCustoComposicao._TamanhoComponente = 93;
+            this.cbxstCustoComposicao._TamanhoMaiorLabel = 302;
             this.cbxstCustoComposicao._Visible = false;
             this.cbxstCustoComposicao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCustoComposicao.Base = null;
@@ -719,13 +820,13 @@
             this.cbxstCustoComposicao.Color = System.Drawing.Color.White;
             this.cbxstCustoComposicao.DataSource = null;
             this.cbxstCustoComposicao.DisplayMember = "DisplayMember";
-            this.cbxstCustoComposicao.Location = new System.Drawing.Point(61, 83);
-            this.cbxstCustoComposicao.Margin = new System.Windows.Forms.Padding(61, 3, 15, 3);
+            this.cbxstCustoComposicao.Location = new System.Drawing.Point(3, 84);
+            this.cbxstCustoComposicao.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.cbxstCustoComposicao.Name = "cbxstCustoComposicao";
             this.cbxstCustoComposicao.objConfigComponenteModel = null;
             this.cbxstCustoComposicao.SelectedIndex = -1;
             this.cbxstCustoComposicao.SelectedValue = 0;
-            this.cbxstCustoComposicao.Size = new System.Drawing.Size(452, 21);
+            this.cbxstCustoComposicao.Size = new System.Drawing.Size(395, 21);
             this.cbxstCustoComposicao.TabIndex = 3;
             this.cbxstCustoComposicao.ValueMember = "ValueMember";
             // 
@@ -740,8 +841,8 @@
             this.cbxstValorVenda._Regex = null;
             this.cbxstValorVenda._situacao = false;
             this.cbxstValorVenda._Table = "Parametro_Custos";
-            this.cbxstValorVenda._TamanhoComponente = 150;
-            this.cbxstValorVenda._TamanhoMaiorLabel = 360;
+            this.cbxstValorVenda._TamanhoComponente = 403;
+            this.cbxstValorVenda._TamanhoMaiorLabel = 302;
             this.cbxstValorVenda._Visible = false;
             this.cbxstValorVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbxstValorVenda.Base = null;
@@ -749,13 +850,13 @@
             this.cbxstValorVenda.Color = System.Drawing.Color.White;
             this.cbxstValorVenda.DataSource = null;
             this.cbxstValorVenda.DisplayMember = "DisplayMember";
-            this.cbxstValorVenda.Location = new System.Drawing.Point(240, 110);
-            this.cbxstValorVenda.Margin = new System.Windows.Forms.Padding(240, 3, 15, 3);
+            this.cbxstValorVenda.Location = new System.Drawing.Point(182, 111);
+            this.cbxstValorVenda.Margin = new System.Windows.Forms.Padding(182, 3, 15, 3);
             this.cbxstValorVenda.Name = "cbxstValorVenda";
             this.cbxstValorVenda.objConfigComponenteModel = null;
             this.cbxstValorVenda.SelectedIndex = -1;
             this.cbxstValorVenda.SelectedValue = 0;
-            this.cbxstValorVenda.Size = new System.Drawing.Size(273, 21);
+            this.cbxstValorVenda.Size = new System.Drawing.Size(526, 21);
             this.cbxstValorVenda.TabIndex = 4;
             this.cbxstValorVenda.ValueMember = "ValueMember";
             // 
@@ -770,8 +871,8 @@
             this.cbxstAtualizaValorCusto._Regex = null;
             this.cbxstAtualizaValorCusto._situacao = true;
             this.cbxstAtualizaValorCusto._Table = "Parametro_Custos";
-            this.cbxstAtualizaValorCusto._TamanhoComponente = 150;
-            this.cbxstAtualizaValorCusto._TamanhoMaiorLabel = 360;
+            this.cbxstAtualizaValorCusto._TamanhoComponente = 80;
+            this.cbxstAtualizaValorCusto._TamanhoMaiorLabel = 302;
             this.cbxstAtualizaValorCusto._Visible = false;
             this.cbxstAtualizaValorCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAtualizaValorCusto.Base = null;
@@ -779,13 +880,13 @@
             this.cbxstAtualizaValorCusto.Color = System.Drawing.Color.White;
             this.cbxstAtualizaValorCusto.DataSource = null;
             this.cbxstAtualizaValorCusto.DisplayMember = "DisplayMember";
-            this.cbxstAtualizaValorCusto.Location = new System.Drawing.Point(240, 137);
-            this.cbxstAtualizaValorCusto.Margin = new System.Windows.Forms.Padding(240, 3, 15, 3);
+            this.cbxstAtualizaValorCusto.Location = new System.Drawing.Point(182, 138);
+            this.cbxstAtualizaValorCusto.Margin = new System.Windows.Forms.Padding(182, 3, 15, 3);
             this.cbxstAtualizaValorCusto.Name = "cbxstAtualizaValorCusto";
             this.cbxstAtualizaValorCusto.objConfigComponenteModel = null;
             this.cbxstAtualizaValorCusto.SelectedIndex = -1;
             this.cbxstAtualizaValorCusto.SelectedValue = 0;
-            this.cbxstAtualizaValorCusto.Size = new System.Drawing.Size(273, 21);
+            this.cbxstAtualizaValorCusto.Size = new System.Drawing.Size(203, 21);
             this.cbxstAtualizaValorCusto.TabIndex = 5;
             this.cbxstAtualizaValorCusto.ValueMember = "ValueMember";
             // 
@@ -801,8 +902,8 @@
             this.cbxstAtualizaValorVenda._Regex = null;
             this.cbxstAtualizaValorVenda._situacao = false;
             this.cbxstAtualizaValorVenda._Table = "Parametro_Custos";
-            this.cbxstAtualizaValorVenda._TamanhoComponente = 150;
-            this.cbxstAtualizaValorVenda._TamanhoMaiorLabel = 360;
+            this.cbxstAtualizaValorVenda._TamanhoComponente = 114;
+            this.cbxstAtualizaValorVenda._TamanhoMaiorLabel = 302;
             this.cbxstAtualizaValorVenda._Visible = false;
             this.cbxstAtualizaValorVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAtualizaValorVenda.Base = null;
@@ -810,13 +911,13 @@
             this.cbxstAtualizaValorVenda.Color = System.Drawing.Color.White;
             this.cbxstAtualizaValorVenda.DataSource = null;
             this.cbxstAtualizaValorVenda.DisplayMember = "DisplayMember";
-            this.cbxstAtualizaValorVenda.Location = new System.Drawing.Point(143, 164);
-            this.cbxstAtualizaValorVenda.Margin = new System.Windows.Forms.Padding(143, 3, 15, 3);
+            this.cbxstAtualizaValorVenda.Location = new System.Drawing.Point(85, 165);
+            this.cbxstAtualizaValorVenda.Margin = new System.Windows.Forms.Padding(85, 3, 15, 3);
             this.cbxstAtualizaValorVenda.Name = "cbxstAtualizaValorVenda";
             this.cbxstAtualizaValorVenda.objConfigComponenteModel = null;
             this.cbxstAtualizaValorVenda.SelectedIndex = -1;
             this.cbxstAtualizaValorVenda.SelectedValue = 0;
-            this.cbxstAtualizaValorVenda.Size = new System.Drawing.Size(370, 21);
+            this.cbxstAtualizaValorVenda.Size = new System.Drawing.Size(334, 21);
             this.cbxstAtualizaValorVenda.TabIndex = 6;
             this.cbxstAtualizaValorVenda.ValueMember = "ValueMember";
             // 
@@ -831,8 +932,8 @@
             this.cbxstCustoDefault._Regex = null;
             this.cbxstCustoDefault._situacao = false;
             this.cbxstCustoDefault._Table = "Parametro_Custos";
-            this.cbxstCustoDefault._TamanhoComponente = 150;
-            this.cbxstCustoDefault._TamanhoMaiorLabel = 360;
+            this.cbxstCustoDefault._TamanhoComponente = 157;
+            this.cbxstCustoDefault._TamanhoMaiorLabel = 302;
             this.cbxstCustoDefault._Visible = false;
             this.cbxstCustoDefault.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCustoDefault.Base = null;
@@ -840,13 +941,13 @@
             this.cbxstCustoDefault.Color = System.Drawing.Color.White;
             this.cbxstCustoDefault.DataSource = null;
             this.cbxstCustoDefault.DisplayMember = "DisplayMember";
-            this.cbxstCustoDefault.Location = new System.Drawing.Point(242, 191);
-            this.cbxstCustoDefault.Margin = new System.Windows.Forms.Padding(242, 3, 15, 3);
+            this.cbxstCustoDefault.Location = new System.Drawing.Point(184, 192);
+            this.cbxstCustoDefault.Margin = new System.Windows.Forms.Padding(184, 3, 15, 3);
             this.cbxstCustoDefault.Name = "cbxstCustoDefault";
             this.cbxstCustoDefault.objConfigComponenteModel = null;
             this.cbxstCustoDefault.SelectedIndex = -1;
             this.cbxstCustoDefault.SelectedValue = 0;
-            this.cbxstCustoDefault.Size = new System.Drawing.Size(271, 21);
+            this.cbxstCustoDefault.Size = new System.Drawing.Size(278, 21);
             this.cbxstCustoDefault.TabIndex = 7;
             this.cbxstCustoDefault.ValueMember = "ValueMember";
             // 
@@ -861,8 +962,8 @@
             this.cbxstCustoMedio._Regex = null;
             this.cbxstCustoMedio._situacao = false;
             this.cbxstCustoMedio._Table = "Parametro_Custos";
-            this.cbxstCustoMedio._TamanhoComponente = 150;
-            this.cbxstCustoMedio._TamanhoMaiorLabel = 360;
+            this.cbxstCustoMedio._TamanhoComponente = 176;
+            this.cbxstCustoMedio._TamanhoMaiorLabel = 302;
             this.cbxstCustoMedio._Visible = false;
             this.cbxstCustoMedio.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCustoMedio.Base = null;
@@ -870,13 +971,13 @@
             this.cbxstCustoMedio.Color = System.Drawing.Color.White;
             this.cbxstCustoMedio.DataSource = null;
             this.cbxstCustoMedio.DisplayMember = "DisplayMember";
-            this.cbxstCustoMedio.Location = new System.Drawing.Point(251, 218);
-            this.cbxstCustoMedio.Margin = new System.Windows.Forms.Padding(251, 3, 15, 3);
+            this.cbxstCustoMedio.Location = new System.Drawing.Point(193, 219);
+            this.cbxstCustoMedio.Margin = new System.Windows.Forms.Padding(193, 3, 15, 3);
             this.cbxstCustoMedio.Name = "cbxstCustoMedio";
             this.cbxstCustoMedio.objConfigComponenteModel = null;
             this.cbxstCustoMedio.SelectedIndex = -1;
             this.cbxstCustoMedio.SelectedValue = 0;
-            this.cbxstCustoMedio.Size = new System.Drawing.Size(262, 21);
+            this.cbxstCustoMedio.Size = new System.Drawing.Size(288, 21);
             this.cbxstCustoMedio.TabIndex = 8;
             this.cbxstCustoMedio.ValueMember = "ValueMember";
             // 
@@ -891,8 +992,8 @@
             this.cbxstCompoeBaseCalculoCustoOperacional._Regex = null;
             this.cbxstCompoeBaseCalculoCustoOperacional._situacao = false;
             this.cbxstCompoeBaseCalculoCustoOperacional._Table = "Parametro_Custos";
-            this.cbxstCompoeBaseCalculoCustoOperacional._TamanhoComponente = 150;
-            this.cbxstCompoeBaseCalculoCustoOperacional._TamanhoMaiorLabel = 360;
+            this.cbxstCompoeBaseCalculoCustoOperacional._TamanhoComponente = 1386;
+            this.cbxstCompoeBaseCalculoCustoOperacional._TamanhoMaiorLabel = 302;
             this.cbxstCompoeBaseCalculoCustoOperacional._Visible = false;
             this.cbxstCompoeBaseCalculoCustoOperacional.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCompoeBaseCalculoCustoOperacional.Base = null;
@@ -900,13 +1001,13 @@
             this.cbxstCompoeBaseCalculoCustoOperacional.Color = System.Drawing.Color.White;
             this.cbxstCompoeBaseCalculoCustoOperacional.DataSource = null;
             this.cbxstCompoeBaseCalculoCustoOperacional.DisplayMember = "DisplayMember";
-            this.cbxstCompoeBaseCalculoCustoOperacional.Location = new System.Drawing.Point(146, 245);
-            this.cbxstCompoeBaseCalculoCustoOperacional.Margin = new System.Windows.Forms.Padding(146, 3, 15, 3);
+            this.cbxstCompoeBaseCalculoCustoOperacional.Location = new System.Drawing.Point(88, 246);
+            this.cbxstCompoeBaseCalculoCustoOperacional.Margin = new System.Windows.Forms.Padding(88, 3, 15, 3);
             this.cbxstCompoeBaseCalculoCustoOperacional.Name = "cbxstCompoeBaseCalculoCustoOperacional";
             this.cbxstCompoeBaseCalculoCustoOperacional.objConfigComponenteModel = null;
             this.cbxstCompoeBaseCalculoCustoOperacional.SelectedIndex = -1;
             this.cbxstCompoeBaseCalculoCustoOperacional.SelectedValue = 0;
-            this.cbxstCompoeBaseCalculoCustoOperacional.Size = new System.Drawing.Size(367, 21);
+            this.cbxstCompoeBaseCalculoCustoOperacional.Size = new System.Drawing.Size(1603, 21);
             this.cbxstCompoeBaseCalculoCustoOperacional.TabIndex = 9;
             this.cbxstCompoeBaseCalculoCustoOperacional.ValueMember = "ValueMember";
             // 
@@ -924,7 +1025,7 @@
             this.hlP_PesquisaidTipoOperacao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidTipoOperacao._Regex = null;
             this.hlP_PesquisaidTipoOperacao._Table = "Parametro_Custos";
-            this.hlP_PesquisaidTipoOperacao._TamanhoComponente = 352;
+            this.hlP_PesquisaidTipoOperacao._TamanhoComponente = 300;
             this.hlP_PesquisaidTipoOperacao._TamanhoMaiorLabel = 360;
             this.hlP_PesquisaidTipoOperacao._Vinculado = false;
             this.hlP_PesquisaidTipoOperacao._Visible = false;
@@ -932,12 +1033,12 @@
             this.hlP_PesquisaidTipoOperacao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoOperacao.Base = null;
             this.hlP_PesquisaidTipoOperacao.bConfiguracao = false;
-            this.hlP_PesquisaidTipoOperacao.Location = new System.Drawing.Point(7, 272);
+            this.hlP_PesquisaidTipoOperacao.Location = new System.Drawing.Point(7, 273);
             this.hlP_PesquisaidTipoOperacao.Margin = new System.Windows.Forms.Padding(7, 3, 15, 3);
             this.hlP_PesquisaidTipoOperacao.Name = "hlP_PesquisaidTipoOperacao";
             this.hlP_PesquisaidTipoOperacao.objConfigComponenteModel = null;
             this.hlP_PesquisaidTipoOperacao.ReadOnly = false;
-            this.hlP_PesquisaidTipoOperacao.Size = new System.Drawing.Size(708, 21);
+            this.hlP_PesquisaidTipoOperacao.Size = new System.Drawing.Size(656, 21);
             this.hlP_PesquisaidTipoOperacao.TabIndex = 10;
             this.hlP_PesquisaidTipoOperacao.Value = 0;
             // 
@@ -947,7 +1048,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1330, 346);
+            this.tabPage4.Size = new System.Drawing.Size(1338, 338);
             this.tabPage4.TabIndex = 2;
             this.tabPage4.Tag = false;
             this.tabPage4.Text = "Compras";
@@ -959,7 +1060,7 @@
             this.kryptonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel5.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel5.Name = "kryptonPanel5";
-            this.kryptonPanel5.Size = new System.Drawing.Size(1330, 346);
+            this.kryptonPanel5.Size = new System.Drawing.Size(1338, 338);
             this.kryptonPanel5.TabIndex = 0;
             // 
             // flowLayoutPanel4
@@ -974,7 +1075,7 @@
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1330, 346);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1338, 338);
             this.flowLayoutPanel4.TabIndex = 0;
             // 
             // hlP_LabelSeparatorCompras
@@ -984,7 +1085,7 @@
             this.hlP_LabelSeparatorCompras.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorCompras.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorCompras.Name = "hlP_LabelSeparatorCompras";
-            this.hlP_LabelSeparatorCompras.Size = new System.Drawing.Size(388, 18);
+            this.hlP_LabelSeparatorCompras.Size = new System.Drawing.Size(358, 19);
             this.hlP_LabelSeparatorCompras.TabIndex = 0;
             this.hlP_LabelSeparatorCompras.TabStop = false;
             // 
@@ -999,15 +1100,15 @@
             this.nudvAprovacaoAutomaticaPedidoCompras._Regex = null;
             this.nudvAprovacaoAutomaticaPedidoCompras._Table = "Parametro_Compras";
             this.nudvAprovacaoAutomaticaPedidoCompras._TamanhoComponente = 91;
-            this.nudvAprovacaoAutomaticaPedidoCompras._TamanhoMaiorLabel = 270;
+            this.nudvAprovacaoAutomaticaPedidoCompras._TamanhoMaiorLabel = 267;
             this.nudvAprovacaoAutomaticaPedidoCompras._Visible = false;
             this.nudvAprovacaoAutomaticaPedidoCompras.BackColor = System.Drawing.Color.Transparent;
             this.nudvAprovacaoAutomaticaPedidoCompras.Base = null;
             this.nudvAprovacaoAutomaticaPedidoCompras.bConfiguracao = false;
             this.nudvAprovacaoAutomaticaPedidoCompras.Color = System.Drawing.Color.White;
             this.nudvAprovacaoAutomaticaPedidoCompras.DecimalPlaces = 2;
-            this.nudvAprovacaoAutomaticaPedidoCompras.Location = new System.Drawing.Point(6, 27);
-            this.nudvAprovacaoAutomaticaPedidoCompras.Margin = new System.Windows.Forms.Padding(6, 3, 15, 3);
+            this.nudvAprovacaoAutomaticaPedidoCompras.Location = new System.Drawing.Point(3, 28);
+            this.nudvAprovacaoAutomaticaPedidoCompras.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.nudvAprovacaoAutomaticaPedidoCompras.Maximum = new decimal(new int[] {
             9,
             0,
@@ -1041,8 +1142,8 @@
             this.cbxstAprovacaoRequisicao._Regex = null;
             this.cbxstAprovacaoRequisicao._situacao = false;
             this.cbxstAprovacaoRequisicao._Table = "Parametro_Compras";
-            this.cbxstAprovacaoRequisicao._TamanhoComponente = 150;
-            this.cbxstAprovacaoRequisicao._TamanhoMaiorLabel = 270;
+            this.cbxstAprovacaoRequisicao._TamanhoComponente = 114;
+            this.cbxstAprovacaoRequisicao._TamanhoMaiorLabel = 267;
             this.cbxstAprovacaoRequisicao._Visible = false;
             this.cbxstAprovacaoRequisicao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAprovacaoRequisicao.Base = null;
@@ -1050,13 +1151,13 @@
             this.cbxstAprovacaoRequisicao.Color = System.Drawing.Color.White;
             this.cbxstAprovacaoRequisicao.DataSource = null;
             this.cbxstAprovacaoRequisicao.DisplayMember = "DisplayMember";
-            this.cbxstAprovacaoRequisicao.Location = new System.Drawing.Point(96, 55);
-            this.cbxstAprovacaoRequisicao.Margin = new System.Windows.Forms.Padding(96, 3, 15, 3);
+            this.cbxstAprovacaoRequisicao.Location = new System.Drawing.Point(93, 56);
+            this.cbxstAprovacaoRequisicao.Margin = new System.Windows.Forms.Padding(93, 3, 15, 3);
             this.cbxstAprovacaoRequisicao.Name = "cbxstAprovacaoRequisicao";
             this.cbxstAprovacaoRequisicao.objConfigComponenteModel = null;
             this.cbxstAprovacaoRequisicao.SelectedIndex = -1;
             this.cbxstAprovacaoRequisicao.SelectedValue = 0;
-            this.cbxstAprovacaoRequisicao.Size = new System.Drawing.Size(327, 21);
+            this.cbxstAprovacaoRequisicao.Size = new System.Drawing.Size(291, 21);
             this.cbxstAprovacaoRequisicao.TabIndex = 1;
             this.cbxstAprovacaoRequisicao.ValueMember = "ValueMember";
             // 
@@ -1073,8 +1174,8 @@
             this.cbxstAprovacaoCotacaoCompras._Regex = null;
             this.cbxstAprovacaoCotacaoCompras._situacao = false;
             this.cbxstAprovacaoCotacaoCompras._Table = "Parametro_Compras";
-            this.cbxstAprovacaoCotacaoCompras._TamanhoComponente = 150;
-            this.cbxstAprovacaoCotacaoCompras._TamanhoMaiorLabel = 270;
+            this.cbxstAprovacaoCotacaoCompras._TamanhoComponente = 114;
+            this.cbxstAprovacaoCotacaoCompras._TamanhoMaiorLabel = 267;
             this.cbxstAprovacaoCotacaoCompras._Visible = false;
             this.cbxstAprovacaoCotacaoCompras.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAprovacaoCotacaoCompras.Base = null;
@@ -1082,13 +1183,13 @@
             this.cbxstAprovacaoCotacaoCompras.Color = System.Drawing.Color.White;
             this.cbxstAprovacaoCotacaoCompras.DataSource = null;
             this.cbxstAprovacaoCotacaoCompras.DisplayMember = "DisplayMember";
-            this.cbxstAprovacaoCotacaoCompras.Location = new System.Drawing.Point(47, 82);
-            this.cbxstAprovacaoCotacaoCompras.Margin = new System.Windows.Forms.Padding(47, 3, 15, 3);
+            this.cbxstAprovacaoCotacaoCompras.Location = new System.Drawing.Point(44, 83);
+            this.cbxstAprovacaoCotacaoCompras.Margin = new System.Windows.Forms.Padding(44, 3, 15, 3);
             this.cbxstAprovacaoCotacaoCompras.Name = "cbxstAprovacaoCotacaoCompras";
             this.cbxstAprovacaoCotacaoCompras.objConfigComponenteModel = null;
             this.cbxstAprovacaoCotacaoCompras.SelectedIndex = -1;
             this.cbxstAprovacaoCotacaoCompras.SelectedValue = 0;
-            this.cbxstAprovacaoCotacaoCompras.Size = new System.Drawing.Size(376, 21);
+            this.cbxstAprovacaoCotacaoCompras.Size = new System.Drawing.Size(340, 21);
             this.cbxstAprovacaoCotacaoCompras.TabIndex = 2;
             this.cbxstAprovacaoCotacaoCompras.ValueMember = "ValueMember";
             // 
@@ -1102,8 +1203,8 @@
             this.cbxstAprovacaoPedidoCompras._Regex = null;
             this.cbxstAprovacaoPedidoCompras._situacao = false;
             this.cbxstAprovacaoPedidoCompras._Table = "Parametro_Compras";
-            this.cbxstAprovacaoPedidoCompras._TamanhoComponente = 150;
-            this.cbxstAprovacaoPedidoCompras._TamanhoMaiorLabel = 270;
+            this.cbxstAprovacaoPedidoCompras._TamanhoComponente = 95;
+            this.cbxstAprovacaoPedidoCompras._TamanhoMaiorLabel = 267;
             this.cbxstAprovacaoPedidoCompras._Visible = false;
             this.cbxstAprovacaoPedidoCompras.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAprovacaoPedidoCompras.Base = null;
@@ -1111,13 +1212,13 @@
             this.cbxstAprovacaoPedidoCompras.Color = System.Drawing.Color.White;
             this.cbxstAprovacaoPedidoCompras.DataSource = null;
             this.cbxstAprovacaoPedidoCompras.DisplayMember = "DisplayMember";
-            this.cbxstAprovacaoPedidoCompras.Location = new System.Drawing.Point(50, 109);
-            this.cbxstAprovacaoPedidoCompras.Margin = new System.Windows.Forms.Padding(50, 3, 15, 3);
+            this.cbxstAprovacaoPedidoCompras.Location = new System.Drawing.Point(47, 110);
+            this.cbxstAprovacaoPedidoCompras.Margin = new System.Windows.Forms.Padding(47, 3, 15, 3);
             this.cbxstAprovacaoPedidoCompras.Name = "cbxstAprovacaoPedidoCompras";
             this.cbxstAprovacaoPedidoCompras.objConfigComponenteModel = null;
             this.cbxstAprovacaoPedidoCompras.SelectedIndex = -1;
             this.cbxstAprovacaoPedidoCompras.SelectedValue = 0;
-            this.cbxstAprovacaoPedidoCompras.Size = new System.Drawing.Size(373, 21);
+            this.cbxstAprovacaoPedidoCompras.Size = new System.Drawing.Size(318, 21);
             this.cbxstAprovacaoPedidoCompras.TabIndex = 3;
             this.cbxstAprovacaoPedidoCompras.ValueMember = "ValueMember";
             // 
@@ -1133,7 +1234,7 @@
             this.cbxstIgnoraSaldoRequisicao._Regex = null;
             this.cbxstIgnoraSaldoRequisicao._situacao = false;
             this.cbxstIgnoraSaldoRequisicao._Table = "Parametro_Compras";
-            this.cbxstIgnoraSaldoRequisicao._TamanhoComponente = 150;
+            this.cbxstIgnoraSaldoRequisicao._TamanhoComponente = 114;
             this.cbxstIgnoraSaldoRequisicao._TamanhoMaiorLabel = 270;
             this.cbxstIgnoraSaldoRequisicao._Visible = false;
             this.cbxstIgnoraSaldoRequisicao.BackColor = System.Drawing.Color.Transparent;
@@ -1142,13 +1243,13 @@
             this.cbxstIgnoraSaldoRequisicao.Color = System.Drawing.Color.White;
             this.cbxstIgnoraSaldoRequisicao.DataSource = null;
             this.cbxstIgnoraSaldoRequisicao.DisplayMember = "DisplayMember";
-            this.cbxstIgnoraSaldoRequisicao.Location = new System.Drawing.Point(62, 136);
+            this.cbxstIgnoraSaldoRequisicao.Location = new System.Drawing.Point(62, 137);
             this.cbxstIgnoraSaldoRequisicao.Margin = new System.Windows.Forms.Padding(62, 3, 15, 3);
             this.cbxstIgnoraSaldoRequisicao.Name = "cbxstIgnoraSaldoRequisicao";
             this.cbxstIgnoraSaldoRequisicao.objConfigComponenteModel = null;
             this.cbxstIgnoraSaldoRequisicao.SelectedIndex = -1;
             this.cbxstIgnoraSaldoRequisicao.SelectedValue = 0;
-            this.cbxstIgnoraSaldoRequisicao.Size = new System.Drawing.Size(361, 21);
+            this.cbxstIgnoraSaldoRequisicao.Size = new System.Drawing.Size(325, 21);
             this.cbxstIgnoraSaldoRequisicao.TabIndex = 5;
             this.cbxstIgnoraSaldoRequisicao.ValueMember = "ValueMember";
             // 
@@ -1158,7 +1259,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1330, 346);
+            this.tabPage5.Size = new System.Drawing.Size(1338, 338);
             this.tabPage5.TabIndex = 3;
             this.tabPage5.Tag = false;
             this.tabPage5.Text = "Ordem de Produção";
@@ -1170,7 +1271,7 @@
             this.kryptonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel6.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel6.Name = "kryptonPanel6";
-            this.kryptonPanel6.Size = new System.Drawing.Size(1330, 346);
+            this.kryptonPanel6.Size = new System.Drawing.Size(1338, 338);
             this.kryptonPanel6.TabIndex = 0;
             // 
             // flowLayoutPanel5
@@ -1186,7 +1287,7 @@
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(1330, 346);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(1338, 338);
             this.flowLayoutPanel5.TabIndex = 0;
             // 
             // hlP_LabelSeparatorOrdemProducao
@@ -1196,7 +1297,7 @@
             this.hlP_LabelSeparatorOrdemProducao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorOrdemProducao.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorOrdemProducao.Name = "hlP_LabelSeparatorOrdemProducao";
-            this.hlP_LabelSeparatorOrdemProducao.Size = new System.Drawing.Size(650, 18);
+            this.hlP_LabelSeparatorOrdemProducao.Size = new System.Drawing.Size(605, 19);
             this.hlP_LabelSeparatorOrdemProducao.TabIndex = 0;
             this.hlP_LabelSeparatorOrdemProducao.TabStop = false;
             // 
@@ -1213,8 +1314,8 @@
             this.cbxstProducaoGera._Regex = null;
             this.cbxstProducaoGera._situacao = false;
             this.cbxstProducaoGera._Table = "Parametro_Ordem_Producao";
-            this.cbxstProducaoGera._TamanhoComponente = 150;
-            this.cbxstProducaoGera._TamanhoMaiorLabel = 350;
+            this.cbxstProducaoGera._TamanhoComponente = 102;
+            this.cbxstProducaoGera._TamanhoMaiorLabel = 305;
             this.cbxstProducaoGera._Visible = false;
             this.cbxstProducaoGera.BackColor = System.Drawing.Color.Transparent;
             this.cbxstProducaoGera.Base = null;
@@ -1222,13 +1323,13 @@
             this.cbxstProducaoGera.Color = System.Drawing.Color.White;
             this.cbxstProducaoGera.DataSource = null;
             this.cbxstProducaoGera.DisplayMember = "DisplayMember";
-            this.cbxstProducaoGera.Location = new System.Drawing.Point(266, 27);
-            this.cbxstProducaoGera.Margin = new System.Windows.Forms.Padding(266, 3, 15, 3);
+            this.cbxstProducaoGera.Location = new System.Drawing.Point(221, 28);
+            this.cbxstProducaoGera.Margin = new System.Windows.Forms.Padding(221, 3, 15, 3);
             this.cbxstProducaoGera.Name = "cbxstProducaoGera";
             this.cbxstProducaoGera.objConfigComponenteModel = null;
             this.cbxstProducaoGera.SelectedIndex = -1;
             this.cbxstProducaoGera.SelectedValue = 0;
-            this.cbxstProducaoGera.Size = new System.Drawing.Size(237, 21);
+            this.cbxstProducaoGera.Size = new System.Drawing.Size(189, 21);
             this.cbxstProducaoGera.TabIndex = 1;
             this.cbxstProducaoGera.ValueMember = "ValueMember";
             // 
@@ -1243,8 +1344,8 @@
             this.cbxstGeraOPFilhas._Regex = null;
             this.cbxstGeraOPFilhas._situacao = false;
             this.cbxstGeraOPFilhas._Table = "Parametro_Ordem_Producao";
-            this.cbxstGeraOPFilhas._TamanhoComponente = 150;
-            this.cbxstGeraOPFilhas._TamanhoMaiorLabel = 350;
+            this.cbxstGeraOPFilhas._TamanhoComponente = 112;
+            this.cbxstGeraOPFilhas._TamanhoMaiorLabel = 305;
             this.cbxstGeraOPFilhas._Visible = false;
             this.cbxstGeraOPFilhas.BackColor = System.Drawing.Color.Transparent;
             this.cbxstGeraOPFilhas.Base = null;
@@ -1252,13 +1353,13 @@
             this.cbxstGeraOPFilhas.Color = System.Drawing.Color.White;
             this.cbxstGeraOPFilhas.DataSource = null;
             this.cbxstGeraOPFilhas.DisplayMember = "DisplayMember";
-            this.cbxstGeraOPFilhas.Location = new System.Drawing.Point(178, 54);
-            this.cbxstGeraOPFilhas.Margin = new System.Windows.Forms.Padding(178, 3, 15, 3);
+            this.cbxstGeraOPFilhas.Location = new System.Drawing.Point(133, 55);
+            this.cbxstGeraOPFilhas.Margin = new System.Windows.Forms.Padding(133, 3, 15, 3);
             this.cbxstGeraOPFilhas.Name = "cbxstGeraOPFilhas";
             this.cbxstGeraOPFilhas.objConfigComponenteModel = null;
             this.cbxstGeraOPFilhas.SelectedIndex = -1;
             this.cbxstGeraOPFilhas.SelectedValue = 0;
-            this.cbxstGeraOPFilhas.Size = new System.Drawing.Size(325, 21);
+            this.cbxstGeraOPFilhas.Size = new System.Drawing.Size(287, 21);
             this.cbxstGeraOPFilhas.TabIndex = 2;
             this.cbxstGeraOPFilhas.ValueMember = "ValueMember";
             // 
@@ -1274,8 +1375,8 @@
             this.cbxstFechaOPSaldoAproduzir._Regex = null;
             this.cbxstFechaOPSaldoAproduzir._situacao = false;
             this.cbxstFechaOPSaldoAproduzir._Table = "Parametro_Ordem_Producao";
-            this.cbxstFechaOPSaldoAproduzir._TamanhoComponente = 150;
-            this.cbxstFechaOPSaldoAproduzir._TamanhoMaiorLabel = 350;
+            this.cbxstFechaOPSaldoAproduzir._TamanhoComponente = 114;
+            this.cbxstFechaOPSaldoAproduzir._TamanhoMaiorLabel = 305;
             this.cbxstFechaOPSaldoAproduzir._Visible = false;
             this.cbxstFechaOPSaldoAproduzir.BackColor = System.Drawing.Color.Transparent;
             this.cbxstFechaOPSaldoAproduzir.Base = null;
@@ -1283,13 +1384,13 @@
             this.cbxstFechaOPSaldoAproduzir.Color = System.Drawing.Color.White;
             this.cbxstFechaOPSaldoAproduzir.DataSource = null;
             this.cbxstFechaOPSaldoAproduzir.DisplayMember = "DisplayMember";
-            this.cbxstFechaOPSaldoAproduzir.Location = new System.Drawing.Point(91, 81);
-            this.cbxstFechaOPSaldoAproduzir.Margin = new System.Windows.Forms.Padding(91, 3, 15, 3);
+            this.cbxstFechaOPSaldoAproduzir.Location = new System.Drawing.Point(46, 82);
+            this.cbxstFechaOPSaldoAproduzir.Margin = new System.Windows.Forms.Padding(46, 3, 15, 3);
             this.cbxstFechaOPSaldoAproduzir.Name = "cbxstFechaOPSaldoAproduzir";
             this.cbxstFechaOPSaldoAproduzir.objConfigComponenteModel = null;
             this.cbxstFechaOPSaldoAproduzir.SelectedIndex = -1;
             this.cbxstFechaOPSaldoAproduzir.SelectedValue = 0;
-            this.cbxstFechaOPSaldoAproduzir.Size = new System.Drawing.Size(412, 21);
+            this.cbxstFechaOPSaldoAproduzir.Size = new System.Drawing.Size(376, 21);
             this.cbxstFechaOPSaldoAproduzir.TabIndex = 3;
             this.cbxstFechaOPSaldoAproduzir.ValueMember = "ValueMember";
             // 
@@ -1309,15 +1410,15 @@
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._Regex = null;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._Table = "Parametro_Ordem_Producao";
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._TamanhoComponente = 300;
-            this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._TamanhoMaiorLabel = 350;
+            this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._TamanhoMaiorLabel = 305;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._Vinculado = false;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._Visible = false;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.Base = null;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.bConfiguracao = false;
-            this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.Location = new System.Drawing.Point(48, 108);
-            this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.Margin = new System.Windows.Forms.Padding(48, 3, 15, 3);
+            this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.Location = new System.Drawing.Point(3, 109);
+            this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.Name = "hlP_Pesquisa1idTipoOperacaoparaOPProduto";
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.objConfigComponenteModel = null;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.ReadOnly = false;
@@ -1341,15 +1442,15 @@
             this.hlP_PesquisaidTipoOperacaoparaOPServico._Regex = null;
             this.hlP_PesquisaidTipoOperacaoparaOPServico._Table = "Parametro_Ordem_Producao";
             this.hlP_PesquisaidTipoOperacaoparaOPServico._TamanhoComponente = 300;
-            this.hlP_PesquisaidTipoOperacaoparaOPServico._TamanhoMaiorLabel = 350;
+            this.hlP_PesquisaidTipoOperacaoparaOPServico._TamanhoMaiorLabel = 305;
             this.hlP_PesquisaidTipoOperacaoparaOPServico._Vinculado = false;
             this.hlP_PesquisaidTipoOperacaoparaOPServico._Visible = false;
             this.hlP_PesquisaidTipoOperacaoparaOPServico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoOperacaoparaOPServico.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoOperacaoparaOPServico.Base = null;
             this.hlP_PesquisaidTipoOperacaoparaOPServico.bConfiguracao = false;
-            this.hlP_PesquisaidTipoOperacaoparaOPServico.Location = new System.Drawing.Point(56, 135);
-            this.hlP_PesquisaidTipoOperacaoparaOPServico.Margin = new System.Windows.Forms.Padding(56, 3, 15, 3);
+            this.hlP_PesquisaidTipoOperacaoparaOPServico.Location = new System.Drawing.Point(11, 136);
+            this.hlP_PesquisaidTipoOperacaoparaOPServico.Margin = new System.Windows.Forms.Padding(11, 3, 15, 3);
             this.hlP_PesquisaidTipoOperacaoparaOPServico.Name = "hlP_PesquisaidTipoOperacaoparaOPServico";
             this.hlP_PesquisaidTipoOperacaoparaOPServico.objConfigComponenteModel = null;
             this.hlP_PesquisaidTipoOperacaoparaOPServico.ReadOnly = false;
@@ -1380,7 +1481,7 @@
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Base = null;
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.bConfiguracao = false;
-            this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Location = new System.Drawing.Point(16, 162);
+            this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Location = new System.Drawing.Point(16, 163);
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Margin = new System.Windows.Forms.Padding(16, 3, 15, 3);
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Name = "hlP_PesquisaidTipoOperacaoparaOPBenificiamento";
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.objConfigComponenteModel = null;
@@ -1395,7 +1496,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1330, 346);
+            this.tabPage6.Size = new System.Drawing.Size(1338, 338);
             this.tabPage6.TabIndex = 4;
             this.tabPage6.Tag = false;
             this.tabPage6.Text = "Fiscal";
@@ -1407,7 +1508,7 @@
             this.kryptonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel7.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel7.Name = "kryptonPanel7";
-            this.kryptonPanel7.Size = new System.Drawing.Size(1330, 346);
+            this.kryptonPanel7.Size = new System.Drawing.Size(1338, 338);
             this.kryptonPanel7.TabIndex = 0;
             // 
             // kryptonTabControl3
@@ -1430,7 +1531,7 @@
             this.kryptonTabControl3.Name = "kryptonTabControl3";
             this.kryptonTabControl3.PreserveTabColor = false;
             this.kryptonTabControl3.SelectedIndex = 0;
-            this.kryptonTabControl3.Size = new System.Drawing.Size(1330, 346);
+            this.kryptonTabControl3.Size = new System.Drawing.Size(1338, 338);
             this.kryptonTabControl3.TabIndex = 0;
             this.kryptonTabControl3.UseExtendedLayout = false;
             // 
@@ -1440,7 +1541,7 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 25);
             this.tabPage9.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1322, 317);
+            this.tabPage9.Size = new System.Drawing.Size(1330, 309);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Tag = false;
             this.tabPage9.Text = "Geral";
@@ -1452,7 +1553,7 @@
             this.kryptonPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel10.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel10.Name = "kryptonPanel10";
-            this.kryptonPanel10.Size = new System.Drawing.Size(1322, 317);
+            this.kryptonPanel10.Size = new System.Drawing.Size(1330, 309);
             this.kryptonPanel10.TabIndex = 0;
             // 
             // flowLayoutPanel6
@@ -1481,7 +1582,7 @@
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(1322, 317);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(1330, 309);
             this.flowLayoutPanel6.TabIndex = 0;
             // 
             // hlP_LabelSeparatorFiscal
@@ -1491,7 +1592,7 @@
             this.hlP_LabelSeparatorFiscal.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorFiscal.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorFiscal.Name = "hlP_LabelSeparatorFiscal";
-            this.hlP_LabelSeparatorFiscal.Size = new System.Drawing.Size(379, 18);
+            this.hlP_LabelSeparatorFiscal.Size = new System.Drawing.Size(462, 19);
             this.hlP_LabelSeparatorFiscal.TabIndex = 36;
             this.hlP_LabelSeparatorFiscal.TabStop = false;
             // 
@@ -1506,15 +1607,15 @@
             this.nudpAliquotaPIS._Regex = null;
             this.nudpAliquotaPIS._Table = "Parametro_Fiscal";
             this.nudpAliquotaPIS._TamanhoComponente = 121;
-            this.nudpAliquotaPIS._TamanhoMaiorLabel = 210;
+            this.nudpAliquotaPIS._TamanhoMaiorLabel = 251;
             this.nudpAliquotaPIS._Visible = false;
             this.nudpAliquotaPIS.BackColor = System.Drawing.Color.Transparent;
             this.nudpAliquotaPIS.Base = null;
             this.nudpAliquotaPIS.bConfiguracao = false;
             this.nudpAliquotaPIS.Color = System.Drawing.Color.White;
             this.nudpAliquotaPIS.DecimalPlaces = 2;
-            this.nudpAliquotaPIS.Location = new System.Drawing.Point(144, 27);
-            this.nudpAliquotaPIS.Margin = new System.Windows.Forms.Padding(144, 3, 15, 3);
+            this.nudpAliquotaPIS.Location = new System.Drawing.Point(185, 28);
+            this.nudpAliquotaPIS.Margin = new System.Windows.Forms.Padding(185, 3, 15, 3);
             this.nudpAliquotaPIS.Maximum = new decimal(new int[] {
             9,
             0,
@@ -1548,15 +1649,15 @@
             this.nudpAliquotaCOFINS._Regex = null;
             this.nudpAliquotaCOFINS._Table = "Parametro_Fiscal";
             this.nudpAliquotaCOFINS._TamanhoComponente = 121;
-            this.nudpAliquotaCOFINS._TamanhoMaiorLabel = 210;
+            this.nudpAliquotaCOFINS._TamanhoMaiorLabel = 251;
             this.nudpAliquotaCOFINS._Visible = false;
             this.nudpAliquotaCOFINS.BackColor = System.Drawing.Color.Transparent;
             this.nudpAliquotaCOFINS.Base = null;
             this.nudpAliquotaCOFINS.bConfiguracao = false;
             this.nudpAliquotaCOFINS.Color = System.Drawing.Color.White;
             this.nudpAliquotaCOFINS.DecimalPlaces = 2;
-            this.nudpAliquotaCOFINS.Location = new System.Drawing.Point(128, 55);
-            this.nudpAliquotaCOFINS.Margin = new System.Windows.Forms.Padding(128, 3, 15, 3);
+            this.nudpAliquotaCOFINS.Location = new System.Drawing.Point(169, 56);
+            this.nudpAliquotaCOFINS.Margin = new System.Windows.Forms.Padding(169, 3, 15, 3);
             this.nudpAliquotaCOFINS.Maximum = new decimal(new int[] {
             9,
             0,
@@ -1589,15 +1690,15 @@
             this.nudpAliquotaCSLL._Regex = null;
             this.nudpAliquotaCSLL._Table = "Parametro_Fiscal";
             this.nudpAliquotaCSLL._TamanhoComponente = 121;
-            this.nudpAliquotaCSLL._TamanhoMaiorLabel = 210;
+            this.nudpAliquotaCSLL._TamanhoMaiorLabel = 251;
             this.nudpAliquotaCSLL._Visible = false;
             this.nudpAliquotaCSLL.BackColor = System.Drawing.Color.Transparent;
             this.nudpAliquotaCSLL.Base = null;
             this.nudpAliquotaCSLL.bConfiguracao = false;
             this.nudpAliquotaCSLL.Color = System.Drawing.Color.White;
             this.nudpAliquotaCSLL.DecimalPlaces = 2;
-            this.nudpAliquotaCSLL.Location = new System.Drawing.Point(143, 83);
-            this.nudpAliquotaCSLL.Margin = new System.Windows.Forms.Padding(143, 3, 15, 3);
+            this.nudpAliquotaCSLL.Location = new System.Drawing.Point(184, 84);
+            this.nudpAliquotaCSLL.Margin = new System.Windows.Forms.Padding(184, 3, 15, 3);
             this.nudpAliquotaCSLL.Maximum = new decimal(new int[] {
             9,
             0,
@@ -1631,8 +1732,8 @@
             this.cbxstRegimeApuracaoIRPJ._Regex = null;
             this.cbxstRegimeApuracaoIRPJ._situacao = false;
             this.cbxstRegimeApuracaoIRPJ._Table = "Parametro_Fiscal";
-            this.cbxstRegimeApuracaoIRPJ._TamanhoComponente = 129;
-            this.cbxstRegimeApuracaoIRPJ._TamanhoMaiorLabel = 210;
+            this.cbxstRegimeApuracaoIRPJ._TamanhoComponente = 181;
+            this.cbxstRegimeApuracaoIRPJ._TamanhoMaiorLabel = 251;
             this.cbxstRegimeApuracaoIRPJ._Visible = false;
             this.cbxstRegimeApuracaoIRPJ.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRegimeApuracaoIRPJ.Base = null;
@@ -1640,13 +1741,13 @@
             this.cbxstRegimeApuracaoIRPJ.Color = System.Drawing.Color.White;
             this.cbxstRegimeApuracaoIRPJ.DataSource = null;
             this.cbxstRegimeApuracaoIRPJ.DisplayMember = "DisplayMember";
-            this.cbxstRegimeApuracaoIRPJ.Location = new System.Drawing.Point(64, 111);
-            this.cbxstRegimeApuracaoIRPJ.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
+            this.cbxstRegimeApuracaoIRPJ.Location = new System.Drawing.Point(105, 112);
+            this.cbxstRegimeApuracaoIRPJ.Margin = new System.Windows.Forms.Padding(105, 3, 15, 3);
             this.cbxstRegimeApuracaoIRPJ.Name = "cbxstRegimeApuracaoIRPJ";
             this.cbxstRegimeApuracaoIRPJ.objConfigComponenteModel = null;
             this.cbxstRegimeApuracaoIRPJ.SelectedIndex = -1;
             this.cbxstRegimeApuracaoIRPJ.SelectedValue = 0;
-            this.cbxstRegimeApuracaoIRPJ.Size = new System.Drawing.Size(278, 21);
+            this.cbxstRegimeApuracaoIRPJ.Size = new System.Drawing.Size(330, 21);
             this.cbxstRegimeApuracaoIRPJ.TabIndex = 37;
             this.cbxstRegimeApuracaoIRPJ.ValueMember = "ValueMember";
             // 
@@ -1662,7 +1763,7 @@
             this.cbxstRegimeApuracaoIPI._situacao = false;
             this.cbxstRegimeApuracaoIPI._Table = "Parametro_Fiscal";
             this.cbxstRegimeApuracaoIPI._TamanhoComponente = 129;
-            this.cbxstRegimeApuracaoIPI._TamanhoMaiorLabel = 210;
+            this.cbxstRegimeApuracaoIPI._TamanhoMaiorLabel = 251;
             this.cbxstRegimeApuracaoIPI._Visible = false;
             this.cbxstRegimeApuracaoIPI.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRegimeApuracaoIPI.Base = null;
@@ -1670,8 +1771,8 @@
             this.cbxstRegimeApuracaoIPI.Color = System.Drawing.Color.White;
             this.cbxstRegimeApuracaoIPI.DataSource = null;
             this.cbxstRegimeApuracaoIPI.DisplayMember = "DisplayMember";
-            this.cbxstRegimeApuracaoIPI.Location = new System.Drawing.Point(84, 138);
-            this.cbxstRegimeApuracaoIPI.Margin = new System.Windows.Forms.Padding(84, 3, 15, 3);
+            this.cbxstRegimeApuracaoIPI.Location = new System.Drawing.Point(125, 139);
+            this.cbxstRegimeApuracaoIPI.Margin = new System.Windows.Forms.Padding(125, 3, 15, 3);
             this.cbxstRegimeApuracaoIPI.Name = "cbxstRegimeApuracaoIPI";
             this.cbxstRegimeApuracaoIPI.objConfigComponenteModel = null;
             this.cbxstRegimeApuracaoIPI.SelectedIndex = -1;
@@ -1691,8 +1792,8 @@
             this.cbxstRegimeTributacaoPISCOFINS._Regex = null;
             this.cbxstRegimeTributacaoPISCOFINS._situacao = false;
             this.cbxstRegimeTributacaoPISCOFINS._Table = "Parametro_Fiscal";
-            this.cbxstRegimeTributacaoPISCOFINS._TamanhoComponente = 129;
-            this.cbxstRegimeTributacaoPISCOFINS._TamanhoMaiorLabel = 210;
+            this.cbxstRegimeTributacaoPISCOFINS._TamanhoComponente = 211;
+            this.cbxstRegimeTributacaoPISCOFINS._TamanhoMaiorLabel = 251;
             this.cbxstRegimeTributacaoPISCOFINS._Visible = false;
             this.cbxstRegimeTributacaoPISCOFINS.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRegimeTributacaoPISCOFINS.Base = null;
@@ -1700,13 +1801,13 @@
             this.cbxstRegimeTributacaoPISCOFINS.Color = System.Drawing.Color.White;
             this.cbxstRegimeTributacaoPISCOFINS.DataSource = null;
             this.cbxstRegimeTributacaoPISCOFINS.DisplayMember = "DisplayMember";
-            this.cbxstRegimeTributacaoPISCOFINS.Location = new System.Drawing.Point(18, 165);
-            this.cbxstRegimeTributacaoPISCOFINS.Margin = new System.Windows.Forms.Padding(18, 3, 15, 3);
+            this.cbxstRegimeTributacaoPISCOFINS.Location = new System.Drawing.Point(59, 166);
+            this.cbxstRegimeTributacaoPISCOFINS.Margin = new System.Windows.Forms.Padding(59, 3, 15, 3);
             this.cbxstRegimeTributacaoPISCOFINS.Name = "cbxstRegimeTributacaoPISCOFINS";
             this.cbxstRegimeTributacaoPISCOFINS.objConfigComponenteModel = null;
             this.cbxstRegimeTributacaoPISCOFINS.SelectedIndex = -1;
             this.cbxstRegimeTributacaoPISCOFINS.SelectedValue = 0;
-            this.cbxstRegimeTributacaoPISCOFINS.Size = new System.Drawing.Size(324, 21);
+            this.cbxstRegimeTributacaoPISCOFINS.Size = new System.Drawing.Size(406, 21);
             this.cbxstRegimeTributacaoPISCOFINS.TabIndex = 39;
             this.cbxstRegimeTributacaoPISCOFINS.ValueMember = "ValueMember";
             // 
@@ -1722,7 +1823,7 @@
             this.cbxstRegimeApuracaoPISCOFINS._situacao = false;
             this.cbxstRegimeApuracaoPISCOFINS._Table = "Parametro_Fiscal";
             this.cbxstRegimeApuracaoPISCOFINS._TamanhoComponente = 129;
-            this.cbxstRegimeApuracaoPISCOFINS._TamanhoMaiorLabel = 210;
+            this.cbxstRegimeApuracaoPISCOFINS._TamanhoMaiorLabel = 251;
             this.cbxstRegimeApuracaoPISCOFINS._Visible = false;
             this.cbxstRegimeApuracaoPISCOFINS.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRegimeApuracaoPISCOFINS.Base = null;
@@ -1730,8 +1831,8 @@
             this.cbxstRegimeApuracaoPISCOFINS.Color = System.Drawing.Color.White;
             this.cbxstRegimeApuracaoPISCOFINS.DataSource = null;
             this.cbxstRegimeApuracaoPISCOFINS.DisplayMember = "DisplayMember";
-            this.cbxstRegimeApuracaoPISCOFINS.Location = new System.Drawing.Point(55, 192);
-            this.cbxstRegimeApuracaoPISCOFINS.Margin = new System.Windows.Forms.Padding(55, 3, 15, 3);
+            this.cbxstRegimeApuracaoPISCOFINS.Location = new System.Drawing.Point(96, 193);
+            this.cbxstRegimeApuracaoPISCOFINS.Margin = new System.Windows.Forms.Padding(96, 3, 15, 3);
             this.cbxstRegimeApuracaoPISCOFINS.Name = "cbxstRegimeApuracaoPISCOFINS";
             this.cbxstRegimeApuracaoPISCOFINS.objConfigComponenteModel = null;
             this.cbxstRegimeApuracaoPISCOFINS.SelectedIndex = -1;
@@ -1751,8 +1852,8 @@
             this.cbxstProdutorRural._Regex = null;
             this.cbxstProdutorRural._situacao = false;
             this.cbxstProdutorRural._Table = "Parametro_Fiscal";
-            this.cbxstProdutorRural._TamanhoComponente = 129;
-            this.cbxstProdutorRural._TamanhoMaiorLabel = 210;
+            this.cbxstProdutorRural._TamanhoComponente = 114;
+            this.cbxstProdutorRural._TamanhoMaiorLabel = 251;
             this.cbxstProdutorRural._Visible = false;
             this.cbxstProdutorRural.BackColor = System.Drawing.Color.Transparent;
             this.cbxstProdutorRural.Base = null;
@@ -1760,13 +1861,13 @@
             this.cbxstProdutorRural.Color = System.Drawing.Color.White;
             this.cbxstProdutorRural.DataSource = null;
             this.cbxstProdutorRural.DisplayMember = "DisplayMember";
-            this.cbxstProdutorRural.Location = new System.Drawing.Point(128, 219);
-            this.cbxstProdutorRural.Margin = new System.Windows.Forms.Padding(128, 3, 15, 3);
+            this.cbxstProdutorRural.Location = new System.Drawing.Point(169, 220);
+            this.cbxstProdutorRural.Margin = new System.Windows.Forms.Padding(169, 3, 15, 3);
             this.cbxstProdutorRural.Name = "cbxstProdutorRural";
             this.cbxstProdutorRural.objConfigComponenteModel = null;
             this.cbxstProdutorRural.SelectedIndex = -1;
             this.cbxstProdutorRural.SelectedValue = 0;
-            this.cbxstProdutorRural.Size = new System.Drawing.Size(214, 21);
+            this.cbxstProdutorRural.Size = new System.Drawing.Size(199, 21);
             this.cbxstProdutorRural.TabIndex = 43;
             this.cbxstProdutorRural.ValueMember = "ValueMember";
             // 
@@ -1781,8 +1882,8 @@
             this.cbxstCooperativaAgricola._Regex = null;
             this.cbxstCooperativaAgricola._situacao = false;
             this.cbxstCooperativaAgricola._Table = "Parametro_Fiscal";
-            this.cbxstCooperativaAgricola._TamanhoComponente = 129;
-            this.cbxstCooperativaAgricola._TamanhoMaiorLabel = 210;
+            this.cbxstCooperativaAgricola._TamanhoComponente = 114;
+            this.cbxstCooperativaAgricola._TamanhoMaiorLabel = 251;
             this.cbxstCooperativaAgricola._Visible = false;
             this.cbxstCooperativaAgricola.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCooperativaAgricola.Base = null;
@@ -1790,13 +1891,13 @@
             this.cbxstCooperativaAgricola.Color = System.Drawing.Color.White;
             this.cbxstCooperativaAgricola.DataSource = null;
             this.cbxstCooperativaAgricola.DisplayMember = "DisplayMember";
-            this.cbxstCooperativaAgricola.Location = new System.Drawing.Point(95, 246);
-            this.cbxstCooperativaAgricola.Margin = new System.Windows.Forms.Padding(95, 3, 15, 3);
+            this.cbxstCooperativaAgricola.Location = new System.Drawing.Point(136, 247);
+            this.cbxstCooperativaAgricola.Margin = new System.Windows.Forms.Padding(136, 3, 15, 3);
             this.cbxstCooperativaAgricola.Name = "cbxstCooperativaAgricola";
             this.cbxstCooperativaAgricola.objConfigComponenteModel = null;
             this.cbxstCooperativaAgricola.SelectedIndex = -1;
             this.cbxstCooperativaAgricola.SelectedValue = 0;
-            this.cbxstCooperativaAgricola.Size = new System.Drawing.Size(247, 21);
+            this.cbxstCooperativaAgricola.Size = new System.Drawing.Size(232, 21);
             this.cbxstCooperativaAgricola.TabIndex = 44;
             this.cbxstCooperativaAgricola.ValueMember = "ValueMember";
             // 
@@ -1812,8 +1913,8 @@
             this.cbxstDestacaISSnfServico._Regex = null;
             this.cbxstDestacaISSnfServico._situacao = false;
             this.cbxstDestacaISSnfServico._Table = "Parametro_Fiscal";
-            this.cbxstDestacaISSnfServico._TamanhoComponente = 129;
-            this.cbxstDestacaISSnfServico._TamanhoMaiorLabel = 210;
+            this.cbxstDestacaISSnfServico._TamanhoComponente = 114;
+            this.cbxstDestacaISSnfServico._TamanhoMaiorLabel = 251;
             this.cbxstDestacaISSnfServico._Visible = false;
             this.cbxstDestacaISSnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaISSnfServico.Base = null;
@@ -1821,13 +1922,13 @@
             this.cbxstDestacaISSnfServico.Color = System.Drawing.Color.White;
             this.cbxstDestacaISSnfServico.DataSource = null;
             this.cbxstDestacaISSnfServico.DisplayMember = "DisplayMember";
-            this.cbxstDestacaISSnfServico.Location = new System.Drawing.Point(14, 273);
-            this.cbxstDestacaISSnfServico.Margin = new System.Windows.Forms.Padding(14, 3, 15, 3);
+            this.cbxstDestacaISSnfServico.Location = new System.Drawing.Point(55, 274);
+            this.cbxstDestacaISSnfServico.Margin = new System.Windows.Forms.Padding(55, 3, 15, 3);
             this.cbxstDestacaISSnfServico.Name = "cbxstDestacaISSnfServico";
             this.cbxstDestacaISSnfServico.objConfigComponenteModel = null;
             this.cbxstDestacaISSnfServico.SelectedIndex = -1;
             this.cbxstDestacaISSnfServico.SelectedValue = 0;
-            this.cbxstDestacaISSnfServico.Size = new System.Drawing.Size(328, 21);
+            this.cbxstDestacaISSnfServico.Size = new System.Drawing.Size(313, 21);
             this.cbxstDestacaISSnfServico.TabIndex = 46;
             this.cbxstDestacaISSnfServico.ValueMember = "ValueMember";
             // 
@@ -1844,7 +1945,7 @@
             this.cbxstDestacaCSLLnfServico._situacao = false;
             this.cbxstDestacaCSLLnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaCSLLnfServico._TamanhoComponente = 114;
-            this.cbxstDestacaCSLLnfServico._TamanhoMaiorLabel = 300;
+            this.cbxstDestacaCSLLnfServico._TamanhoMaiorLabel = 251;
             this.cbxstDestacaCSLLnfServico._Visible = false;
             this.cbxstDestacaCSLLnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaCSLLnfServico.Base = null;
@@ -1852,8 +1953,8 @@
             this.cbxstDestacaCSLLnfServico.Color = System.Drawing.Color.White;
             this.cbxstDestacaCSLLnfServico.DataSource = null;
             this.cbxstDestacaCSLLnfServico.DisplayMember = "DisplayMember";
-            this.cbxstDestacaCSLLnfServico.Location = new System.Drawing.Point(486, 3);
-            this.cbxstDestacaCSLLnfServico.Margin = new System.Windows.Forms.Padding(101, 3, 15, 3);
+            this.cbxstDestacaCSLLnfServico.Location = new System.Drawing.Point(532, 3);
+            this.cbxstDestacaCSLLnfServico.Margin = new System.Windows.Forms.Padding(52, 3, 15, 3);
             this.cbxstDestacaCSLLnfServico.Name = "cbxstDestacaCSLLnfServico";
             this.cbxstDestacaCSLLnfServico.objConfigComponenteModel = null;
             this.cbxstDestacaCSLLnfServico.SelectedIndex = -1;
@@ -1875,7 +1976,7 @@
             this.cbxstDestacaIRRFnfServico._situacao = false;
             this.cbxstDestacaIRRFnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaIRRFnfServico._TamanhoComponente = 114;
-            this.cbxstDestacaIRRFnfServico._TamanhoMaiorLabel = 300;
+            this.cbxstDestacaIRRFnfServico._TamanhoMaiorLabel = 251;
             this.cbxstDestacaIRRFnfServico._Visible = false;
             this.cbxstDestacaIRRFnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaIRRFnfServico.Base = null;
@@ -1883,8 +1984,8 @@
             this.cbxstDestacaIRRFnfServico.Color = System.Drawing.Color.White;
             this.cbxstDestacaIRRFnfServico.DataSource = null;
             this.cbxstDestacaIRRFnfServico.DisplayMember = "DisplayMember";
-            this.cbxstDestacaIRRFnfServico.Location = new System.Drawing.Point(487, 30);
-            this.cbxstDestacaIRRFnfServico.Margin = new System.Windows.Forms.Padding(102, 3, 15, 3);
+            this.cbxstDestacaIRRFnfServico.Location = new System.Drawing.Point(533, 30);
+            this.cbxstDestacaIRRFnfServico.Margin = new System.Windows.Forms.Padding(53, 3, 15, 3);
             this.cbxstDestacaIRRFnfServico.Name = "cbxstDestacaIRRFnfServico";
             this.cbxstDestacaIRRFnfServico.objConfigComponenteModel = null;
             this.cbxstDestacaIRRFnfServico.SelectedIndex = -1;
@@ -1905,7 +2006,7 @@
             this.cbxstDestacaPISCOFINSnfServico._situacao = false;
             this.cbxstDestacaPISCOFINSnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaPISCOFINSnfServico._TamanhoComponente = 114;
-            this.cbxstDestacaPISCOFINSnfServico._TamanhoMaiorLabel = 300;
+            this.cbxstDestacaPISCOFINSnfServico._TamanhoMaiorLabel = 251;
             this.cbxstDestacaPISCOFINSnfServico._Visible = false;
             this.cbxstDestacaPISCOFINSnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaPISCOFINSnfServico.Base = null;
@@ -1913,8 +2014,8 @@
             this.cbxstDestacaPISCOFINSnfServico.Color = System.Drawing.Color.White;
             this.cbxstDestacaPISCOFINSnfServico.DataSource = null;
             this.cbxstDestacaPISCOFINSnfServico.DisplayMember = "DisplayMember";
-            this.cbxstDestacaPISCOFINSnfServico.Location = new System.Drawing.Point(444, 57);
-            this.cbxstDestacaPISCOFINSnfServico.Margin = new System.Windows.Forms.Padding(59, 3, 15, 3);
+            this.cbxstDestacaPISCOFINSnfServico.Location = new System.Drawing.Point(490, 57);
+            this.cbxstDestacaPISCOFINSnfServico.Margin = new System.Windows.Forms.Padding(10, 3, 15, 3);
             this.cbxstDestacaPISCOFINSnfServico.Name = "cbxstDestacaPISCOFINSnfServico";
             this.cbxstDestacaPISCOFINSnfServico.objConfigComponenteModel = null;
             this.cbxstDestacaPISCOFINSnfServico.SelectedIndex = -1;
@@ -1936,7 +2037,7 @@
             this.cbxstDestacaINSSnfServico._situacao = false;
             this.cbxstDestacaINSSnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaINSSnfServico._TamanhoComponente = 114;
-            this.cbxstDestacaINSSnfServico._TamanhoMaiorLabel = 300;
+            this.cbxstDestacaINSSnfServico._TamanhoMaiorLabel = 251;
             this.cbxstDestacaINSSnfServico._Visible = false;
             this.cbxstDestacaINSSnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaINSSnfServico.Base = null;
@@ -1944,8 +2045,8 @@
             this.cbxstDestacaINSSnfServico.Color = System.Drawing.Color.White;
             this.cbxstDestacaINSSnfServico.DataSource = null;
             this.cbxstDestacaINSSnfServico.DisplayMember = "DisplayMember";
-            this.cbxstDestacaINSSnfServico.Location = new System.Drawing.Point(482, 84);
-            this.cbxstDestacaINSSnfServico.Margin = new System.Windows.Forms.Padding(97, 3, 15, 3);
+            this.cbxstDestacaINSSnfServico.Location = new System.Drawing.Point(528, 84);
+            this.cbxstDestacaINSSnfServico.Margin = new System.Windows.Forms.Padding(48, 3, 15, 3);
             this.cbxstDestacaINSSnfServico.Name = "cbxstDestacaINSSnfServico";
             this.cbxstDestacaINSSnfServico.objConfigComponenteModel = null;
             this.cbxstDestacaINSSnfServico.SelectedIndex = -1;
@@ -1966,8 +2067,8 @@
             this.cbxstAmbienteNfeProdutos._Regex = null;
             this.cbxstAmbienteNfeProdutos._situacao = false;
             this.cbxstAmbienteNfeProdutos._Table = "Parametro_Fiscal";
-            this.cbxstAmbienteNfeProdutos._TamanhoComponente = 114;
-            this.cbxstAmbienteNfeProdutos._TamanhoMaiorLabel = 300;
+            this.cbxstAmbienteNfeProdutos._TamanhoComponente = 176;
+            this.cbxstAmbienteNfeProdutos._TamanhoMaiorLabel = 251;
             this.cbxstAmbienteNfeProdutos._Visible = false;
             this.cbxstAmbienteNfeProdutos.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAmbienteNfeProdutos.Base = null;
@@ -1975,13 +2076,13 @@
             this.cbxstAmbienteNfeProdutos.Color = System.Drawing.Color.White;
             this.cbxstAmbienteNfeProdutos.DataSource = null;
             this.cbxstAmbienteNfeProdutos.DisplayMember = "DisplayMember";
-            this.cbxstAmbienteNfeProdutos.Location = new System.Drawing.Point(510, 111);
-            this.cbxstAmbienteNfeProdutos.Margin = new System.Windows.Forms.Padding(125, 3, 15, 3);
+            this.cbxstAmbienteNfeProdutos.Location = new System.Drawing.Point(556, 111);
+            this.cbxstAmbienteNfeProdutos.Margin = new System.Windows.Forms.Padding(76, 3, 15, 3);
             this.cbxstAmbienteNfeProdutos.Name = "cbxstAmbienteNfeProdutos";
             this.cbxstAmbienteNfeProdutos.objConfigComponenteModel = null;
             this.cbxstAmbienteNfeProdutos.SelectedIndex = -1;
             this.cbxstAmbienteNfeProdutos.SelectedValue = 0;
-            this.cbxstAmbienteNfeProdutos.Size = new System.Drawing.Size(292, 21);
+            this.cbxstAmbienteNfeProdutos.Size = new System.Drawing.Size(354, 21);
             this.cbxstAmbienteNfeProdutos.TabIndex = 51;
             this.cbxstAmbienteNfeProdutos.ValueMember = "ValueMember";
             // 
@@ -1997,8 +2098,8 @@
             this.cbxstAmbienteNfeServicos._Regex = null;
             this.cbxstAmbienteNfeServicos._situacao = false;
             this.cbxstAmbienteNfeServicos._Table = "Parametro_Fiscal";
-            this.cbxstAmbienteNfeServicos._TamanhoComponente = 114;
-            this.cbxstAmbienteNfeServicos._TamanhoMaiorLabel = 300;
+            this.cbxstAmbienteNfeServicos._TamanhoComponente = 176;
+            this.cbxstAmbienteNfeServicos._TamanhoMaiorLabel = 251;
             this.cbxstAmbienteNfeServicos._Visible = false;
             this.cbxstAmbienteNfeServicos.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAmbienteNfeServicos.Base = null;
@@ -2006,13 +2107,13 @@
             this.cbxstAmbienteNfeServicos.Color = System.Drawing.Color.White;
             this.cbxstAmbienteNfeServicos.DataSource = null;
             this.cbxstAmbienteNfeServicos.DisplayMember = "DisplayMember";
-            this.cbxstAmbienteNfeServicos.Location = new System.Drawing.Point(518, 138);
-            this.cbxstAmbienteNfeServicos.Margin = new System.Windows.Forms.Padding(133, 3, 15, 3);
+            this.cbxstAmbienteNfeServicos.Location = new System.Drawing.Point(564, 138);
+            this.cbxstAmbienteNfeServicos.Margin = new System.Windows.Forms.Padding(84, 3, 15, 3);
             this.cbxstAmbienteNfeServicos.Name = "cbxstAmbienteNfeServicos";
             this.cbxstAmbienteNfeServicos.objConfigComponenteModel = null;
             this.cbxstAmbienteNfeServicos.SelectedIndex = -1;
             this.cbxstAmbienteNfeServicos.SelectedValue = 0;
-            this.cbxstAmbienteNfeServicos.Size = new System.Drawing.Size(284, 21);
+            this.cbxstAmbienteNfeServicos.Size = new System.Drawing.Size(346, 21);
             this.cbxstAmbienteNfeServicos.TabIndex = 52;
             this.cbxstAmbienteNfeServicos.ValueMember = "ValueMember";
             // 
@@ -2029,7 +2130,7 @@
             this.cbxstImprimeMsgSuframaNf._situacao = false;
             this.cbxstImprimeMsgSuframaNf._Table = "Parametro_Fiscal";
             this.cbxstImprimeMsgSuframaNf._TamanhoComponente = 114;
-            this.cbxstImprimeMsgSuframaNf._TamanhoMaiorLabel = 300;
+            this.cbxstImprimeMsgSuframaNf._TamanhoMaiorLabel = 251;
             this.cbxstImprimeMsgSuframaNf._Visible = false;
             this.cbxstImprimeMsgSuframaNf.BackColor = System.Drawing.Color.Transparent;
             this.cbxstImprimeMsgSuframaNf.Base = null;
@@ -2037,8 +2138,8 @@
             this.cbxstImprimeMsgSuframaNf.Color = System.Drawing.Color.White;
             this.cbxstImprimeMsgSuframaNf.DataSource = null;
             this.cbxstImprimeMsgSuframaNf.DisplayMember = "DisplayMember";
-            this.cbxstImprimeMsgSuframaNf.Location = new System.Drawing.Point(448, 165);
-            this.cbxstImprimeMsgSuframaNf.Margin = new System.Windows.Forms.Padding(63, 3, 15, 3);
+            this.cbxstImprimeMsgSuframaNf.Location = new System.Drawing.Point(494, 165);
+            this.cbxstImprimeMsgSuframaNf.Margin = new System.Windows.Forms.Padding(14, 3, 15, 3);
             this.cbxstImprimeMsgSuframaNf.Name = "cbxstImprimeMsgSuframaNf";
             this.cbxstImprimeMsgSuframaNf.objConfigComponenteModel = null;
             this.cbxstImprimeMsgSuframaNf.SelectedIndex = -1;
@@ -2059,8 +2160,8 @@
             this.cbxstImprimeCodigoNf._Regex = null;
             this.cbxstImprimeCodigoNf._situacao = false;
             this.cbxstImprimeCodigoNf._Table = "Parametro_Fiscal";
-            this.cbxstImprimeCodigoNf._TamanhoComponente = 114;
-            this.cbxstImprimeCodigoNf._TamanhoMaiorLabel = 300;
+            this.cbxstImprimeCodigoNf._TamanhoComponente = 138;
+            this.cbxstImprimeCodigoNf._TamanhoMaiorLabel = 251;
             this.cbxstImprimeCodigoNf._Visible = false;
             this.cbxstImprimeCodigoNf.BackColor = System.Drawing.Color.Transparent;
             this.cbxstImprimeCodigoNf.Base = null;
@@ -2068,13 +2169,13 @@
             this.cbxstImprimeCodigoNf.Color = System.Drawing.Color.White;
             this.cbxstImprimeCodigoNf.DataSource = null;
             this.cbxstImprimeCodigoNf.DisplayMember = "DisplayMember";
-            this.cbxstImprimeCodigoNf.Location = new System.Drawing.Point(437, 192);
-            this.cbxstImprimeCodigoNf.Margin = new System.Windows.Forms.Padding(52, 3, 15, 3);
+            this.cbxstImprimeCodigoNf.Location = new System.Drawing.Point(483, 192);
+            this.cbxstImprimeCodigoNf.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.cbxstImprimeCodigoNf.Name = "cbxstImprimeCodigoNf";
             this.cbxstImprimeCodigoNf.objConfigComponenteModel = null;
             this.cbxstImprimeCodigoNf.SelectedIndex = -1;
             this.cbxstImprimeCodigoNf.SelectedValue = 0;
-            this.cbxstImprimeCodigoNf.Size = new System.Drawing.Size(365, 21);
+            this.cbxstImprimeCodigoNf.Size = new System.Drawing.Size(389, 21);
             this.cbxstImprimeCodigoNf.TabIndex = 54;
             this.cbxstImprimeCodigoNf.ValueMember = "ValueMember";
             // 
@@ -2098,7 +2199,7 @@
             this.cbxstIcmsSubstDif.Color = System.Drawing.Color.White;
             this.cbxstIcmsSubstDif.DataSource = null;
             this.cbxstIcmsSubstDif.DisplayMember = "DisplayMember";
-            this.cbxstIcmsSubstDif.Location = new System.Drawing.Point(409, 219);
+            this.cbxstIcmsSubstDif.Location = new System.Drawing.Point(504, 219);
             this.cbxstIcmsSubstDif.Margin = new System.Windows.Forms.Padding(24, 3, 15, 3);
             this.cbxstIcmsSubstDif.Name = "cbxstIcmsSubstDif";
             this.cbxstIcmsSubstDif.objConfigComponenteModel = null;
@@ -2114,7 +2215,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1322, 317);
+            this.tabPage10.Size = new System.Drawing.Size(1330, 309);
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Tag = false;
             this.tabPage10.Text = "Super Simples";
@@ -2126,7 +2227,7 @@
             this.kryptonPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel11.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel11.Name = "kryptonPanel11";
-            this.kryptonPanel11.Size = new System.Drawing.Size(1322, 317);
+            this.kryptonPanel11.Size = new System.Drawing.Size(1330, 309);
             this.kryptonPanel11.TabIndex = 0;
             // 
             // flowLayoutPanel7
@@ -2140,18 +2241,18 @@
             this.flowLayoutPanel7.Controls.Add(this.nudpCOFINSss);
             this.flowLayoutPanel7.Controls.Add(this.nudnItensNfProduto);
             this.flowLayoutPanel7.Controls.Add(this.nudnItensNfServico);
+            this.flowLayoutPanel7.Controls.Add(this.nudpINSSss);
             this.flowLayoutPanel7.Controls.Add(this.cbxstSuperSimples);
             this.flowLayoutPanel7.Controls.Add(this.cbxstCRT);
             this.flowLayoutPanel7.Controls.Add(this.cbxstImprimeMsgPadraoSs);
             this.flowLayoutPanel7.Controls.Add(this.hlP_PesquisaidObservacaoMsgSuperSimples);
             this.flowLayoutPanel7.Controls.Add(this.cbxstImprimeMsgCreditoIcmsSs);
             this.flowLayoutPanel7.Controls.Add(this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples);
-            this.flowLayoutPanel7.Controls.Add(this.nudpINSSss);
             this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(1322, 317);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(1330, 309);
             this.flowLayoutPanel7.TabIndex = 0;
             // 
             // hlP_LabelSeparatorSuperSimples
@@ -2161,7 +2262,7 @@
             this.hlP_LabelSeparatorSuperSimples.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorSuperSimples.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorSuperSimples.Name = "hlP_LabelSeparatorSuperSimples";
-            this.hlP_LabelSeparatorSuperSimples.Size = new System.Drawing.Size(531, 18);
+            this.hlP_LabelSeparatorSuperSimples.Size = new System.Drawing.Size(597, 19);
             this.hlP_LabelSeparatorSuperSimples.TabIndex = 69;
             this.hlP_LabelSeparatorSuperSimples.TabStop = false;
             // 
@@ -2176,15 +2277,14 @@
             this.nudpICMSss._Regex = null;
             this.nudpICMSss._Table = "Parametro_Fiscal";
             this.nudpICMSss._TamanhoComponente = 121;
-            this.nudpICMSss._TamanhoMaiorLabel = 370;
-            this.nudpICMSss._Visible = false;
+            this.nudpICMSss._TamanhoMaiorLabel = 297;
             this.nudpICMSss.BackColor = System.Drawing.Color.Transparent;
             this.nudpICMSss.Base = null;
             this.nudpICMSss.bConfiguracao = false;
             this.nudpICMSss.Color = System.Drawing.Color.White;
             this.nudpICMSss.DecimalPlaces = 2;
-            this.nudpICMSss.Location = new System.Drawing.Point(172, 27);
-            this.nudpICMSss.Margin = new System.Windows.Forms.Padding(172, 3, 15, 3);
+            this.nudpICMSss.Location = new System.Drawing.Point(99, 28);
+            this.nudpICMSss.Margin = new System.Windows.Forms.Padding(99, 3, 15, 3);
             this.nudpICMSss.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2217,15 +2317,14 @@
             this.nudpISSss._Regex = null;
             this.nudpISSss._Table = "Parametro_Fiscal";
             this.nudpISSss._TamanhoComponente = 121;
-            this.nudpISSss._TamanhoMaiorLabel = 370;
-            this.nudpISSss._Visible = false;
+            this.nudpISSss._TamanhoMaiorLabel = 297;
             this.nudpISSss.BackColor = System.Drawing.Color.Transparent;
             this.nudpISSss.Base = null;
             this.nudpISSss.bConfiguracao = false;
             this.nudpISSss.Color = System.Drawing.Color.White;
             this.nudpISSss.DecimalPlaces = 2;
-            this.nudpISSss.Location = new System.Drawing.Point(181, 55);
-            this.nudpISSss.Margin = new System.Windows.Forms.Padding(181, 3, 15, 3);
+            this.nudpISSss.Location = new System.Drawing.Point(108, 56);
+            this.nudpISSss.Margin = new System.Windows.Forms.Padding(108, 3, 15, 3);
             this.nudpISSss.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2259,15 +2358,14 @@
             this.nudpCSLLss._Regex = null;
             this.nudpCSLLss._Table = "Parametro_Fiscal";
             this.nudpCSLLss._TamanhoComponente = 121;
-            this.nudpCSLLss._TamanhoMaiorLabel = 370;
-            this.nudpCSLLss._Visible = false;
+            this.nudpCSLLss._TamanhoMaiorLabel = 297;
             this.nudpCSLLss.BackColor = System.Drawing.Color.Transparent;
             this.nudpCSLLss.Base = null;
             this.nudpCSLLss.bConfiguracao = false;
             this.nudpCSLLss.Color = System.Drawing.Color.White;
             this.nudpCSLLss.DecimalPlaces = 2;
-            this.nudpCSLLss.Location = new System.Drawing.Point(178, 83);
-            this.nudpCSLLss.Margin = new System.Windows.Forms.Padding(178, 3, 15, 3);
+            this.nudpCSLLss.Location = new System.Drawing.Point(105, 84);
+            this.nudpCSLLss.Margin = new System.Windows.Forms.Padding(105, 3, 15, 3);
             this.nudpCSLLss.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2301,15 +2399,14 @@
             this.nudpIRRFss._Regex = null;
             this.nudpIRRFss._Table = "Parametro_Fiscal";
             this.nudpIRRFss._TamanhoComponente = 121;
-            this.nudpIRRFss._TamanhoMaiorLabel = 370;
-            this.nudpIRRFss._Visible = false;
+            this.nudpIRRFss._TamanhoMaiorLabel = 297;
             this.nudpIRRFss.BackColor = System.Drawing.Color.Transparent;
             this.nudpIRRFss.Base = null;
             this.nudpIRRFss.bConfiguracao = false;
             this.nudpIRRFss.Color = System.Drawing.Color.White;
             this.nudpIRRFss.DecimalPlaces = 2;
-            this.nudpIRRFss.Location = new System.Drawing.Point(179, 111);
-            this.nudpIRRFss.Margin = new System.Windows.Forms.Padding(179, 3, 15, 3);
+            this.nudpIRRFss.Location = new System.Drawing.Point(106, 112);
+            this.nudpIRRFss.Margin = new System.Windows.Forms.Padding(106, 3, 15, 3);
             this.nudpIRRFss.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2342,15 +2439,14 @@
             this.nudpPISss._Regex = null;
             this.nudpPISss._Table = "Parametro_Fiscal";
             this.nudpPISss._TamanhoComponente = 121;
-            this.nudpPISss._TamanhoMaiorLabel = 370;
-            this.nudpPISss._Visible = false;
+            this.nudpPISss._TamanhoMaiorLabel = 297;
             this.nudpPISss.BackColor = System.Drawing.Color.Transparent;
             this.nudpPISss.Base = null;
             this.nudpPISss.bConfiguracao = false;
             this.nudpPISss.Color = System.Drawing.Color.White;
             this.nudpPISss.DecimalPlaces = 2;
-            this.nudpPISss.Location = new System.Drawing.Point(179, 139);
-            this.nudpPISss.Margin = new System.Windows.Forms.Padding(179, 3, 15, 3);
+            this.nudpPISss.Location = new System.Drawing.Point(106, 140);
+            this.nudpPISss.Margin = new System.Windows.Forms.Padding(106, 3, 15, 3);
             this.nudpPISss.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2384,15 +2480,14 @@
             this.nudpCOFINSss._Regex = null;
             this.nudpCOFINSss._Table = "Parametro_Fiscal";
             this.nudpCOFINSss._TamanhoComponente = 121;
-            this.nudpCOFINSss._TamanhoMaiorLabel = 370;
-            this.nudpCOFINSss._Visible = false;
+            this.nudpCOFINSss._TamanhoMaiorLabel = 297;
             this.nudpCOFINSss.BackColor = System.Drawing.Color.Transparent;
             this.nudpCOFINSss.Base = null;
             this.nudpCOFINSss.bConfiguracao = false;
             this.nudpCOFINSss.Color = System.Drawing.Color.White;
             this.nudpCOFINSss.DecimalPlaces = 2;
-            this.nudpCOFINSss.Location = new System.Drawing.Point(163, 167);
-            this.nudpCOFINSss.Margin = new System.Windows.Forms.Padding(163, 3, 15, 3);
+            this.nudpCOFINSss.Location = new System.Drawing.Point(90, 168);
+            this.nudpCOFINSss.Margin = new System.Windows.Forms.Padding(90, 3, 15, 3);
             this.nudpCOFINSss.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2427,13 +2522,12 @@
             this.nudnItensNfProduto._Table = "Parametro_Fiscal";
             this.nudnItensNfProduto._TamanhoComponente = 121;
             this.nudnItensNfProduto._TamanhoMaiorLabel = 370;
-            this.nudnItensNfProduto._Visible = false;
             this.nudnItensNfProduto.BackColor = System.Drawing.Color.Transparent;
             this.nudnItensNfProduto.Base = null;
             this.nudnItensNfProduto.bConfiguracao = false;
             this.nudnItensNfProduto.Color = System.Drawing.Color.White;
             this.nudnItensNfProduto.DecimalPlaces = 2;
-            this.nudnItensNfProduto.Location = new System.Drawing.Point(74, 195);
+            this.nudnItensNfProduto.Location = new System.Drawing.Point(74, 196);
             this.nudnItensNfProduto.Margin = new System.Windows.Forms.Padding(74, 3, 15, 3);
             this.nudnItensNfProduto.Maximum = new decimal(new int[] {
             9,
@@ -2469,13 +2563,12 @@
             this.nudnItensNfServico._Table = "Parametro_Fiscal";
             this.nudnItensNfServico._TamanhoComponente = 121;
             this.nudnItensNfServico._TamanhoMaiorLabel = 370;
-            this.nudnItensNfServico._Visible = false;
             this.nudnItensNfServico.BackColor = System.Drawing.Color.Transparent;
             this.nudnItensNfServico.Base = null;
             this.nudnItensNfServico.bConfiguracao = false;
             this.nudnItensNfServico.Color = System.Drawing.Color.White;
             this.nudnItensNfServico.DecimalPlaces = 2;
-            this.nudnItensNfServico.Location = new System.Drawing.Point(20, 223);
+            this.nudnItensNfServico.Location = new System.Drawing.Point(20, 224);
             this.nudnItensNfServico.Margin = new System.Windows.Forms.Padding(20, 3, 15, 3);
             this.nudnItensNfServico.Maximum = new decimal(new int[] {
             9,
@@ -2499,6 +2592,47 @@
             131072});
             this.nudnItensNfServico.ValueInt = 0;
             // 
+            // nudpINSSss
+            // 
+            this.nudpINSSss._Field = "pINSSss";
+            this.nudpINSSss._Help = "Informar a alíquota do inss – instituo nacional do seguro social para o super sim" +
+    "ples";
+            this.nudpINSSss._LabelGroup = this.hlP_LabelSeparatorSuperSimples;
+            this.nudpINSSss._LabelText = "Alíquota de inss para o super simples";
+            this.nudpINSSss._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.nudpINSSss._Regex = null;
+            this.nudpINSSss._Table = "Parametro_Fiscal";
+            this.nudpINSSss._TamanhoComponente = 121;
+            this.nudpINSSss._TamanhoMaiorLabel = 297;
+            this.nudpINSSss.BackColor = System.Drawing.Color.Transparent;
+            this.nudpINSSss.Base = null;
+            this.nudpINSSss.bConfiguracao = false;
+            this.nudpINSSss.Color = System.Drawing.Color.White;
+            this.nudpINSSss.DecimalPlaces = 2;
+            this.nudpINSSss.Location = new System.Drawing.Point(101, 252);
+            this.nudpINSSss.Margin = new System.Windows.Forms.Padding(101, 3, 15, 3);
+            this.nudpINSSss.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.nudpINSSss.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.nudpINSSss.Name = "nudpINSSss";
+            this.nudpINSSss.objConfigComponenteModel = null;
+            this.nudpINSSss.ReadOnly = false;
+            this.nudpINSSss.Size = new System.Drawing.Size(320, 22);
+            this.nudpINSSss.TabIndex = 84;
+            this.nudpINSSss.Value = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.nudpINSSss.ValueInt = 0;
+            // 
             // cbxstSuperSimples
             // 
             this.cbxstSuperSimples._Field = "stSuperSimples";
@@ -2510,22 +2644,21 @@
             this.cbxstSuperSimples._Regex = null;
             this.cbxstSuperSimples._situacao = false;
             this.cbxstSuperSimples._Table = "Parametro_Fiscal";
-            this.cbxstSuperSimples._TamanhoComponente = 150;
-            this.cbxstSuperSimples._TamanhoMaiorLabel = 370;
-            this.cbxstSuperSimples._Visible = false;
+            this.cbxstSuperSimples._TamanhoComponente = 114;
+            this.cbxstSuperSimples._TamanhoMaiorLabel = 297;
             this.cbxstSuperSimples.BackColor = System.Drawing.Color.Transparent;
             this.cbxstSuperSimples.Base = null;
             this.cbxstSuperSimples.bConfiguracao = false;
             this.cbxstSuperSimples.Color = System.Drawing.Color.White;
             this.cbxstSuperSimples.DataSource = null;
             this.cbxstSuperSimples.DisplayMember = "DisplayMember";
-            this.cbxstSuperSimples.Location = new System.Drawing.Point(228, 251);
-            this.cbxstSuperSimples.Margin = new System.Windows.Forms.Padding(228, 3, 15, 3);
+            this.cbxstSuperSimples.Location = new System.Drawing.Point(155, 280);
+            this.cbxstSuperSimples.Margin = new System.Windows.Forms.Padding(155, 3, 15, 3);
             this.cbxstSuperSimples.Name = "cbxstSuperSimples";
             this.cbxstSuperSimples.objConfigComponenteModel = null;
             this.cbxstSuperSimples.SelectedIndex = -1;
             this.cbxstSuperSimples.SelectedValue = 0;
-            this.cbxstSuperSimples.Size = new System.Drawing.Size(295, 21);
+            this.cbxstSuperSimples.Size = new System.Drawing.Size(259, 21);
             this.cbxstSuperSimples.TabIndex = 70;
             this.cbxstSuperSimples.ValueMember = "ValueMember";
             // 
@@ -2540,22 +2673,21 @@
             this.cbxstCRT._Regex = null;
             this.cbxstCRT._situacao = false;
             this.cbxstCRT._Table = "Parametro_Fiscal";
-            this.cbxstCRT._TamanhoComponente = 150;
-            this.cbxstCRT._TamanhoMaiorLabel = 370;
-            this.cbxstCRT._Visible = false;
+            this.cbxstCRT._TamanhoComponente = 333;
+            this.cbxstCRT._TamanhoMaiorLabel = 297;
             this.cbxstCRT.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCRT.Base = null;
             this.cbxstCRT.bConfiguracao = false;
             this.cbxstCRT.Color = System.Drawing.Color.White;
             this.cbxstCRT.DataSource = null;
             this.cbxstCRT.DisplayMember = "DisplayMember";
-            this.cbxstCRT.Location = new System.Drawing.Point(195, 278);
-            this.cbxstCRT.Margin = new System.Windows.Forms.Padding(195, 3, 15, 3);
+            this.cbxstCRT.Location = new System.Drawing.Point(725, 3);
+            this.cbxstCRT.Margin = new System.Windows.Forms.Padding(122, 3, 15, 3);
             this.cbxstCRT.Name = "cbxstCRT";
             this.cbxstCRT.objConfigComponenteModel = null;
             this.cbxstCRT.SelectedIndex = -1;
             this.cbxstCRT.SelectedValue = 0;
-            this.cbxstCRT.Size = new System.Drawing.Size(328, 21);
+            this.cbxstCRT.Size = new System.Drawing.Size(511, 21);
             this.cbxstCRT.TabIndex = 71;
             this.cbxstCRT.ValueMember = "ValueMember";
             // 
@@ -2570,22 +2702,21 @@
             this.cbxstImprimeMsgPadraoSs._Regex = null;
             this.cbxstImprimeMsgPadraoSs._situacao = false;
             this.cbxstImprimeMsgPadraoSs._Table = "Parametro_Fiscal";
-            this.cbxstImprimeMsgPadraoSs._TamanhoComponente = 150;
-            this.cbxstImprimeMsgPadraoSs._TamanhoMaiorLabel = 470;
-            this.cbxstImprimeMsgPadraoSs._Visible = false;
+            this.cbxstImprimeMsgPadraoSs._TamanhoComponente = 114;
+            this.cbxstImprimeMsgPadraoSs._TamanhoMaiorLabel = 297;
             this.cbxstImprimeMsgPadraoSs.BackColor = System.Drawing.Color.Transparent;
             this.cbxstImprimeMsgPadraoSs.Base = null;
             this.cbxstImprimeMsgPadraoSs.bConfiguracao = false;
             this.cbxstImprimeMsgPadraoSs.Color = System.Drawing.Color.White;
             this.cbxstImprimeMsgPadraoSs.DataSource = null;
             this.cbxstImprimeMsgPadraoSs.DisplayMember = "DisplayMember";
-            this.cbxstImprimeMsgPadraoSs.Location = new System.Drawing.Point(754, 3);
-            this.cbxstImprimeMsgPadraoSs.Margin = new System.Windows.Forms.Padding(216, 3, 15, 3);
+            this.cbxstImprimeMsgPadraoSs.Location = new System.Drawing.Point(646, 30);
+            this.cbxstImprimeMsgPadraoSs.Margin = new System.Windows.Forms.Padding(43, 3, 15, 3);
             this.cbxstImprimeMsgPadraoSs.Name = "cbxstImprimeMsgPadraoSs";
             this.cbxstImprimeMsgPadraoSs.objConfigComponenteModel = null;
             this.cbxstImprimeMsgPadraoSs.SelectedIndex = -1;
             this.cbxstImprimeMsgPadraoSs.SelectedValue = 0;
-            this.cbxstImprimeMsgPadraoSs.Size = new System.Drawing.Size(407, 21);
+            this.cbxstImprimeMsgPadraoSs.Size = new System.Drawing.Size(371, 21);
             this.cbxstImprimeMsgPadraoSs.TabIndex = 72;
             this.cbxstImprimeMsgPadraoSs.ValueMember = "ValueMember";
             // 
@@ -2604,15 +2735,14 @@
             this.hlP_PesquisaidObservacaoMsgSuperSimples._Regex = null;
             this.hlP_PesquisaidObservacaoMsgSuperSimples._Table = "Parametro_Fiscal";
             this.hlP_PesquisaidObservacaoMsgSuperSimples._TamanhoComponente = 300;
-            this.hlP_PesquisaidObservacaoMsgSuperSimples._TamanhoMaiorLabel = 470;
+            this.hlP_PesquisaidObservacaoMsgSuperSimples._TamanhoMaiorLabel = 297;
             this.hlP_PesquisaidObservacaoMsgSuperSimples._Vinculado = false;
-            this.hlP_PesquisaidObservacaoMsgSuperSimples._Visible = false;
             this.hlP_PesquisaidObservacaoMsgSuperSimples.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidObservacaoMsgSuperSimples.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidObservacaoMsgSuperSimples.Base = null;
             this.hlP_PesquisaidObservacaoMsgSuperSimples.bConfiguracao = false;
-            this.hlP_PesquisaidObservacaoMsgSuperSimples.Location = new System.Drawing.Point(718, 30);
-            this.hlP_PesquisaidObservacaoMsgSuperSimples.Margin = new System.Windows.Forms.Padding(180, 3, 15, 3);
+            this.hlP_PesquisaidObservacaoMsgSuperSimples.Location = new System.Drawing.Point(610, 57);
+            this.hlP_PesquisaidObservacaoMsgSuperSimples.Margin = new System.Windows.Forms.Padding(7, 3, 15, 3);
             this.hlP_PesquisaidObservacaoMsgSuperSimples.Name = "hlP_PesquisaidObservacaoMsgSuperSimples";
             this.hlP_PesquisaidObservacaoMsgSuperSimples.objConfigComponenteModel = null;
             this.hlP_PesquisaidObservacaoMsgSuperSimples.ReadOnly = false;
@@ -2631,22 +2761,21 @@
             this.cbxstImprimeMsgCreditoIcmsSs._Regex = null;
             this.cbxstImprimeMsgCreditoIcmsSs._situacao = false;
             this.cbxstImprimeMsgCreditoIcmsSs._Table = "Parametro_Fiscal";
-            this.cbxstImprimeMsgCreditoIcmsSs._TamanhoComponente = 150;
-            this.cbxstImprimeMsgCreditoIcmsSs._TamanhoMaiorLabel = 470;
-            this.cbxstImprimeMsgCreditoIcmsSs._Visible = false;
+            this.cbxstImprimeMsgCreditoIcmsSs._TamanhoComponente = 114;
+            this.cbxstImprimeMsgCreditoIcmsSs._TamanhoMaiorLabel = 297;
             this.cbxstImprimeMsgCreditoIcmsSs.BackColor = System.Drawing.Color.Transparent;
             this.cbxstImprimeMsgCreditoIcmsSs.Base = null;
             this.cbxstImprimeMsgCreditoIcmsSs.bConfiguracao = false;
             this.cbxstImprimeMsgCreditoIcmsSs.Color = System.Drawing.Color.White;
             this.cbxstImprimeMsgCreditoIcmsSs.DataSource = null;
             this.cbxstImprimeMsgCreditoIcmsSs.DisplayMember = "DisplayMember";
-            this.cbxstImprimeMsgCreditoIcmsSs.Location = new System.Drawing.Point(714, 57);
-            this.cbxstImprimeMsgCreditoIcmsSs.Margin = new System.Windows.Forms.Padding(176, 3, 15, 3);
+            this.cbxstImprimeMsgCreditoIcmsSs.Location = new System.Drawing.Point(606, 84);
+            this.cbxstImprimeMsgCreditoIcmsSs.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.cbxstImprimeMsgCreditoIcmsSs.Name = "cbxstImprimeMsgCreditoIcmsSs";
             this.cbxstImprimeMsgCreditoIcmsSs.objConfigComponenteModel = null;
             this.cbxstImprimeMsgCreditoIcmsSs.SelectedIndex = -1;
             this.cbxstImprimeMsgCreditoIcmsSs.SelectedValue = 0;
-            this.cbxstImprimeMsgCreditoIcmsSs.Size = new System.Drawing.Size(447, 21);
+            this.cbxstImprimeMsgCreditoIcmsSs.Size = new System.Drawing.Size(411, 21);
             this.cbxstImprimeMsgCreditoIcmsSs.TabIndex = 74;
             this.cbxstImprimeMsgCreditoIcmsSs.ValueMember = "ValueMember";
             // 
@@ -2666,15 +2795,14 @@
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples._Regex = null;
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples._Table = "Parametro_Fiscal";
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples._TamanhoComponente = 300;
-            this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples._TamanhoMaiorLabel = 470;
+            this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples._TamanhoMaiorLabel = 466;
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples._Vinculado = false;
-            this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples._Visible = false;
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Base = null;
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.bConfiguracao = false;
-            this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Location = new System.Drawing.Point(545, 84);
-            this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Margin = new System.Windows.Forms.Padding(7, 3, 15, 3);
+            this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Location = new System.Drawing.Point(606, 111);
+            this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Name = "hlP_PesquisaidObservacaoMsgCreditoSuperSimples";
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.objConfigComponenteModel = null;
             this.hlP_PesquisaidObservacaoMsgCreditoSuperSimples.ReadOnly = false;
@@ -2688,7 +2816,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1330, 346);
+            this.tabPage7.Size = new System.Drawing.Size(1338, 338);
             this.tabPage7.TabIndex = 5;
             this.tabPage7.Tag = false;
             this.tabPage7.Text = "Comercial";
@@ -2700,7 +2828,7 @@
             this.kryptonPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel8.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel8.Name = "kryptonPanel8";
-            this.kryptonPanel8.Size = new System.Drawing.Size(1330, 346);
+            this.kryptonPanel8.Size = new System.Drawing.Size(1338, 338);
             this.kryptonPanel8.TabIndex = 0;
             // 
             // flowLayoutPanel8
@@ -2726,7 +2854,7 @@
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(1330, 346);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(1338, 338);
             this.flowLayoutPanel8.TabIndex = 0;
             // 
             // hlP_LabelSeparatorComercial
@@ -2736,7 +2864,7 @@
             this.hlP_LabelSeparatorComercial.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorComercial.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorComercial.Name = "hlP_LabelSeparatorComercial";
-            this.hlP_LabelSeparatorComercial.Size = new System.Drawing.Size(519, 18);
+            this.hlP_LabelSeparatorComercial.Size = new System.Drawing.Size(585, 19);
             this.hlP_LabelSeparatorComercial.TabIndex = 1;
             this.hlP_LabelSeparatorComercial.TabStop = false;
             // 
@@ -2752,15 +2880,15 @@
             this.txtxMaskCentroCusto._Regex = null;
             this.txtxMaskCentroCusto._Table = "Parametro_Comercial";
             this.txtxMaskCentroCusto._TamanhoComponente = 134;
-            this.txtxMaskCentroCusto._TamanhoMaiorLabel = 310;
+            this.txtxMaskCentroCusto._TamanhoMaiorLabel = 285;
             this.txtxMaskCentroCusto._Visible = false;
             this.txtxMaskCentroCusto.BackColor = System.Drawing.Color.Transparent;
             this.txtxMaskCentroCusto.Base = null;
             this.txtxMaskCentroCusto.bConfiguracao = false;
             this.txtxMaskCentroCusto.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxMaskCentroCusto.Color = System.Drawing.Color.White;
-            this.txtxMaskCentroCusto.Location = new System.Drawing.Point(181, 27);
-            this.txtxMaskCentroCusto.Margin = new System.Windows.Forms.Padding(181, 3, 15, 3);
+            this.txtxMaskCentroCusto.Location = new System.Drawing.Point(156, 28);
+            this.txtxMaskCentroCusto.Margin = new System.Windows.Forms.Padding(156, 3, 15, 3);
             this.txtxMaskCentroCusto.MaxLength = 32767;
             this.txtxMaskCentroCusto.Name = "txtxMaskCentroCusto";
             this.txtxMaskCentroCusto.objConfigComponenteModel = null;
@@ -2779,15 +2907,15 @@
             this.nudnQuantidadeDiasOrcamento._Regex = null;
             this.nudnQuantidadeDiasOrcamento._Table = "Parametro_Comercial";
             this.nudnQuantidadeDiasOrcamento._TamanhoComponente = 121;
-            this.nudnQuantidadeDiasOrcamento._TamanhoMaiorLabel = 310;
+            this.nudnQuantidadeDiasOrcamento._TamanhoMaiorLabel = 285;
             this.nudnQuantidadeDiasOrcamento._Visible = false;
             this.nudnQuantidadeDiasOrcamento.BackColor = System.Drawing.Color.Transparent;
             this.nudnQuantidadeDiasOrcamento.Base = null;
             this.nudnQuantidadeDiasOrcamento.bConfiguracao = false;
             this.nudnQuantidadeDiasOrcamento.Color = System.Drawing.Color.White;
             this.nudnQuantidadeDiasOrcamento.DecimalPlaces = 2;
-            this.nudnQuantidadeDiasOrcamento.Location = new System.Drawing.Point(58, 55);
-            this.nudnQuantidadeDiasOrcamento.Margin = new System.Windows.Forms.Padding(58, 3, 15, 3);
+            this.nudnQuantidadeDiasOrcamento.Location = new System.Drawing.Point(33, 56);
+            this.nudnQuantidadeDiasOrcamento.Margin = new System.Windows.Forms.Padding(33, 3, 15, 3);
             this.nudnQuantidadeDiasOrcamento.Maximum = new decimal(new int[] {
             9,
             0,
@@ -2823,8 +2951,8 @@
             this.cbxstObrigaCreditoAprovado._Regex = null;
             this.cbxstObrigaCreditoAprovado._situacao = false;
             this.cbxstObrigaCreditoAprovado._Table = "Parametro_Comercial";
-            this.cbxstObrigaCreditoAprovado._TamanhoComponente = 150;
-            this.cbxstObrigaCreditoAprovado._TamanhoMaiorLabel = 310;
+            this.cbxstObrigaCreditoAprovado._TamanhoComponente = 114;
+            this.cbxstObrigaCreditoAprovado._TamanhoMaiorLabel = 285;
             this.cbxstObrigaCreditoAprovado._Visible = false;
             this.cbxstObrigaCreditoAprovado.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaCreditoAprovado.Base = null;
@@ -2832,13 +2960,13 @@
             this.cbxstObrigaCreditoAprovado.Color = System.Drawing.Color.White;
             this.cbxstObrigaCreditoAprovado.DataSource = null;
             this.cbxstObrigaCreditoAprovado.DisplayMember = "DisplayMember";
-            this.cbxstObrigaCreditoAprovado.Location = new System.Drawing.Point(106, 83);
-            this.cbxstObrigaCreditoAprovado.Margin = new System.Windows.Forms.Padding(106, 3, 15, 3);
+            this.cbxstObrigaCreditoAprovado.Location = new System.Drawing.Point(81, 84);
+            this.cbxstObrigaCreditoAprovado.Margin = new System.Windows.Forms.Padding(81, 3, 15, 3);
             this.cbxstObrigaCreditoAprovado.Name = "cbxstObrigaCreditoAprovado";
             this.cbxstObrigaCreditoAprovado.objConfigComponenteModel = null;
             this.cbxstObrigaCreditoAprovado.SelectedIndex = -1;
             this.cbxstObrigaCreditoAprovado.SelectedValue = 0;
-            this.cbxstObrigaCreditoAprovado.Size = new System.Drawing.Size(357, 21);
+            this.cbxstObrigaCreditoAprovado.Size = new System.Drawing.Size(321, 21);
             this.cbxstObrigaCreditoAprovado.TabIndex = 2;
             this.cbxstObrigaCreditoAprovado.ValueMember = "ValueMember";
             // 
@@ -2853,8 +2981,8 @@
             this.cbxstObrigaAnaliseFinanceiraOrcamento._Regex = null;
             this.cbxstObrigaAnaliseFinanceiraOrcamento._situacao = false;
             this.cbxstObrigaAnaliseFinanceiraOrcamento._Table = "Parametro_Comercial";
-            this.cbxstObrigaAnaliseFinanceiraOrcamento._TamanhoComponente = 150;
-            this.cbxstObrigaAnaliseFinanceiraOrcamento._TamanhoMaiorLabel = 310;
+            this.cbxstObrigaAnaliseFinanceiraOrcamento._TamanhoComponente = 68;
+            this.cbxstObrigaAnaliseFinanceiraOrcamento._TamanhoMaiorLabel = 285;
             this.cbxstObrigaAnaliseFinanceiraOrcamento._Visible = false;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.Base = null;
@@ -2862,13 +2990,13 @@
             this.cbxstObrigaAnaliseFinanceiraOrcamento.Color = System.Drawing.Color.White;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.DataSource = null;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.DisplayMember = "DisplayMember";
-            this.cbxstObrigaAnaliseFinanceiraOrcamento.Location = new System.Drawing.Point(28, 110);
-            this.cbxstObrigaAnaliseFinanceiraOrcamento.Margin = new System.Windows.Forms.Padding(28, 3, 15, 3);
+            this.cbxstObrigaAnaliseFinanceiraOrcamento.Location = new System.Drawing.Point(3, 111);
+            this.cbxstObrigaAnaliseFinanceiraOrcamento.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.cbxstObrigaAnaliseFinanceiraOrcamento.Name = "cbxstObrigaAnaliseFinanceiraOrcamento";
             this.cbxstObrigaAnaliseFinanceiraOrcamento.objConfigComponenteModel = null;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.SelectedIndex = -1;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.SelectedValue = 0;
-            this.cbxstObrigaAnaliseFinanceiraOrcamento.Size = new System.Drawing.Size(435, 21);
+            this.cbxstObrigaAnaliseFinanceiraOrcamento.Size = new System.Drawing.Size(353, 21);
             this.cbxstObrigaAnaliseFinanceiraOrcamento.TabIndex = 3;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.ValueMember = "ValueMember";
             // 
@@ -2883,8 +3011,8 @@
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda._Regex = null;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda._situacao = false;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda._Table = "Parametro_Comercial";
-            this.cbxstObrigaAnaliseFinanceiraPedidoVenda._TamanhoComponente = 150;
-            this.cbxstObrigaAnaliseFinanceiraPedidoVenda._TamanhoMaiorLabel = 310;
+            this.cbxstObrigaAnaliseFinanceiraPedidoVenda._TamanhoComponente = 68;
+            this.cbxstObrigaAnaliseFinanceiraPedidoVenda._TamanhoMaiorLabel = 285;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda._Visible = false;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Base = null;
@@ -2892,13 +3020,13 @@
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Color = System.Drawing.Color.White;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.DataSource = null;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.DisplayMember = "DisplayMember";
-            this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Location = new System.Drawing.Point(46, 137);
-            this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Margin = new System.Windows.Forms.Padding(46, 3, 15, 3);
+            this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Location = new System.Drawing.Point(21, 138);
+            this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Margin = new System.Windows.Forms.Padding(21, 3, 15, 3);
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Name = "cbxstObrigaAnaliseFinanceiraPedidoVenda";
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.objConfigComponenteModel = null;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.SelectedIndex = -1;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.SelectedValue = 0;
-            this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Size = new System.Drawing.Size(417, 21);
+            this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Size = new System.Drawing.Size(335, 21);
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.TabIndex = 4;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.ValueMember = "ValueMember";
             // 
@@ -2913,8 +3041,8 @@
             this.cbxstObrigaAnaliseFinanceiraFaturamento._Regex = null;
             this.cbxstObrigaAnaliseFinanceiraFaturamento._situacao = false;
             this.cbxstObrigaAnaliseFinanceiraFaturamento._Table = "Parametro_Comercial";
-            this.cbxstObrigaAnaliseFinanceiraFaturamento._TamanhoComponente = 150;
-            this.cbxstObrigaAnaliseFinanceiraFaturamento._TamanhoMaiorLabel = 310;
+            this.cbxstObrigaAnaliseFinanceiraFaturamento._TamanhoComponente = 68;
+            this.cbxstObrigaAnaliseFinanceiraFaturamento._TamanhoMaiorLabel = 285;
             this.cbxstObrigaAnaliseFinanceiraFaturamento._Visible = false;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.Base = null;
@@ -2922,13 +3050,13 @@
             this.cbxstObrigaAnaliseFinanceiraFaturamento.Color = System.Drawing.Color.White;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.DataSource = null;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.DisplayMember = "DisplayMember";
-            this.cbxstObrigaAnaliseFinanceiraFaturamento.Location = new System.Drawing.Point(74, 164);
-            this.cbxstObrigaAnaliseFinanceiraFaturamento.Margin = new System.Windows.Forms.Padding(74, 3, 15, 3);
+            this.cbxstObrigaAnaliseFinanceiraFaturamento.Location = new System.Drawing.Point(49, 165);
+            this.cbxstObrigaAnaliseFinanceiraFaturamento.Margin = new System.Windows.Forms.Padding(49, 3, 15, 3);
             this.cbxstObrigaAnaliseFinanceiraFaturamento.Name = "cbxstObrigaAnaliseFinanceiraFaturamento";
             this.cbxstObrigaAnaliseFinanceiraFaturamento.objConfigComponenteModel = null;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.SelectedIndex = -1;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.SelectedValue = 0;
-            this.cbxstObrigaAnaliseFinanceiraFaturamento.Size = new System.Drawing.Size(389, 21);
+            this.cbxstObrigaAnaliseFinanceiraFaturamento.Size = new System.Drawing.Size(307, 21);
             this.cbxstObrigaAnaliseFinanceiraFaturamento.TabIndex = 5;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.ValueMember = "ValueMember";
             // 
@@ -2945,7 +3073,7 @@
             this.cbxstObrigaUsoListaPreco._situacao = true;
             this.cbxstObrigaUsoListaPreco._Table = "Parametro_Comercial";
             this.cbxstObrigaUsoListaPreco._TamanhoComponente = 80;
-            this.cbxstObrigaUsoListaPreco._TamanhoMaiorLabel = 310;
+            this.cbxstObrigaUsoListaPreco._TamanhoMaiorLabel = 285;
             this.cbxstObrigaUsoListaPreco._Visible = false;
             this.cbxstObrigaUsoListaPreco.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaUsoListaPreco.Base = null;
@@ -2953,8 +3081,8 @@
             this.cbxstObrigaUsoListaPreco.Color = System.Drawing.Color.White;
             this.cbxstObrigaUsoListaPreco.DataSource = null;
             this.cbxstObrigaUsoListaPreco.DisplayMember = "DisplayMember";
-            this.cbxstObrigaUsoListaPreco.Location = new System.Drawing.Point(150, 191);
-            this.cbxstObrigaUsoListaPreco.Margin = new System.Windows.Forms.Padding(150, 3, 15, 3);
+            this.cbxstObrigaUsoListaPreco.Location = new System.Drawing.Point(125, 192);
+            this.cbxstObrigaUsoListaPreco.Margin = new System.Windows.Forms.Padding(125, 3, 15, 3);
             this.cbxstObrigaUsoListaPreco.Name = "cbxstObrigaUsoListaPreco";
             this.cbxstObrigaUsoListaPreco.objConfigComponenteModel = null;
             this.cbxstObrigaUsoListaPreco.SelectedIndex = -1;
@@ -2974,8 +3102,8 @@
             this.cbxstDescontoPor._Regex = null;
             this.cbxstDescontoPor._situacao = false;
             this.cbxstDescontoPor._Table = "Parametro_Comercial";
-            this.cbxstDescontoPor._TamanhoComponente = 150;
-            this.cbxstDescontoPor._TamanhoMaiorLabel = 310;
+            this.cbxstDescontoPor._TamanhoComponente = 162;
+            this.cbxstDescontoPor._TamanhoMaiorLabel = 285;
             this.cbxstDescontoPor._Visible = false;
             this.cbxstDescontoPor.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDescontoPor.Base = null;
@@ -2983,13 +3111,13 @@
             this.cbxstDescontoPor.Color = System.Drawing.Color.White;
             this.cbxstDescontoPor.DataSource = null;
             this.cbxstDescontoPor.DisplayMember = "DisplayMember";
-            this.cbxstDescontoPor.Location = new System.Drawing.Point(136, 218);
-            this.cbxstDescontoPor.Margin = new System.Windows.Forms.Padding(136, 3, 15, 3);
+            this.cbxstDescontoPor.Location = new System.Drawing.Point(111, 219);
+            this.cbxstDescontoPor.Margin = new System.Windows.Forms.Padding(111, 3, 15, 3);
             this.cbxstDescontoPor.Name = "cbxstDescontoPor";
             this.cbxstDescontoPor.objConfigComponenteModel = null;
             this.cbxstDescontoPor.SelectedIndex = -1;
             this.cbxstDescontoPor.SelectedValue = 0;
-            this.cbxstDescontoPor.Size = new System.Drawing.Size(327, 21);
+            this.cbxstDescontoPor.Size = new System.Drawing.Size(339, 21);
             this.cbxstDescontoPor.TabIndex = 7;
             this.cbxstDescontoPor.ValueMember = "ValueMember";
             // 
@@ -3004,8 +3132,8 @@
             this.cbxstDesconto._Regex = null;
             this.cbxstDesconto._situacao = false;
             this.cbxstDesconto._Table = "Parametro_Comercial";
-            this.cbxstDesconto._TamanhoComponente = 150;
-            this.cbxstDesconto._TamanhoMaiorLabel = 310;
+            this.cbxstDesconto._TamanhoComponente = 124;
+            this.cbxstDesconto._TamanhoMaiorLabel = 285;
             this.cbxstDesconto._Visible = false;
             this.cbxstDesconto.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDesconto.Base = null;
@@ -3013,13 +3141,13 @@
             this.cbxstDesconto.Color = System.Drawing.Color.White;
             this.cbxstDesconto.DataSource = null;
             this.cbxstDesconto.DisplayMember = "DisplayMember";
-            this.cbxstDesconto.Location = new System.Drawing.Point(217, 245);
-            this.cbxstDesconto.Margin = new System.Windows.Forms.Padding(217, 3, 15, 3);
+            this.cbxstDesconto.Location = new System.Drawing.Point(192, 246);
+            this.cbxstDesconto.Margin = new System.Windows.Forms.Padding(192, 3, 15, 3);
             this.cbxstDesconto.Name = "cbxstDesconto";
             this.cbxstDesconto.objConfigComponenteModel = null;
             this.cbxstDesconto.SelectedIndex = -1;
             this.cbxstDesconto.SelectedValue = 0;
-            this.cbxstDesconto.Size = new System.Drawing.Size(246, 21);
+            this.cbxstDesconto.Size = new System.Drawing.Size(220, 21);
             this.cbxstDesconto.TabIndex = 8;
             this.cbxstDesconto.ValueMember = "ValueMember";
             // 
@@ -3033,8 +3161,8 @@
             this.cbxstOrcamentoProjeto._Regex = null;
             this.cbxstOrcamentoProjeto._situacao = true;
             this.cbxstOrcamentoProjeto._Table = "Parametro_Comercial";
-            this.cbxstOrcamentoProjeto._TamanhoComponente = 150;
-            this.cbxstOrcamentoProjeto._TamanhoMaiorLabel = 310;
+            this.cbxstOrcamentoProjeto._TamanhoComponente = 80;
+            this.cbxstOrcamentoProjeto._TamanhoMaiorLabel = 285;
             this.cbxstOrcamentoProjeto._Visible = false;
             this.cbxstOrcamentoProjeto.BackColor = System.Drawing.Color.Transparent;
             this.cbxstOrcamentoProjeto.Base = null;
@@ -3042,13 +3170,13 @@
             this.cbxstOrcamentoProjeto.Color = System.Drawing.Color.White;
             this.cbxstOrcamentoProjeto.DataSource = null;
             this.cbxstOrcamentoProjeto.DisplayMember = "DisplayMember";
-            this.cbxstOrcamentoProjeto.Location = new System.Drawing.Point(167, 272);
-            this.cbxstOrcamentoProjeto.Margin = new System.Windows.Forms.Padding(167, 3, 15, 3);
+            this.cbxstOrcamentoProjeto.Location = new System.Drawing.Point(142, 273);
+            this.cbxstOrcamentoProjeto.Margin = new System.Windows.Forms.Padding(142, 3, 15, 3);
             this.cbxstOrcamentoProjeto.Name = "cbxstOrcamentoProjeto";
             this.cbxstOrcamentoProjeto.objConfigComponenteModel = null;
             this.cbxstOrcamentoProjeto.SelectedIndex = -1;
             this.cbxstOrcamentoProjeto.SelectedValue = 0;
-            this.cbxstOrcamentoProjeto.Size = new System.Drawing.Size(296, 21);
+            this.cbxstOrcamentoProjeto.Size = new System.Drawing.Size(226, 21);
             this.cbxstOrcamentoProjeto.TabIndex = 9;
             this.cbxstOrcamentoProjeto.ValueMember = "ValueMember";
             // 
@@ -3063,8 +3191,8 @@
             this.cbxstObrigaAprovacaoPedidoVenda._Regex = null;
             this.cbxstObrigaAprovacaoPedidoVenda._situacao = false;
             this.cbxstObrigaAprovacaoPedidoVenda._Table = "Parametro_Comercial";
-            this.cbxstObrigaAprovacaoPedidoVenda._TamanhoComponente = 150;
-            this.cbxstObrigaAprovacaoPedidoVenda._TamanhoMaiorLabel = 310;
+            this.cbxstObrigaAprovacaoPedidoVenda._TamanhoComponente = 114;
+            this.cbxstObrigaAprovacaoPedidoVenda._TamanhoMaiorLabel = 285;
             this.cbxstObrigaAprovacaoPedidoVenda._Visible = false;
             this.cbxstObrigaAprovacaoPedidoVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaAprovacaoPedidoVenda.Base = null;
@@ -3072,13 +3200,13 @@
             this.cbxstObrigaAprovacaoPedidoVenda.Color = System.Drawing.Color.White;
             this.cbxstObrigaAprovacaoPedidoVenda.DataSource = null;
             this.cbxstObrigaAprovacaoPedidoVenda.DisplayMember = "DisplayMember";
-            this.cbxstObrigaAprovacaoPedidoVenda.Location = new System.Drawing.Point(89, 299);
-            this.cbxstObrigaAprovacaoPedidoVenda.Margin = new System.Windows.Forms.Padding(89, 3, 15, 3);
+            this.cbxstObrigaAprovacaoPedidoVenda.Location = new System.Drawing.Point(64, 300);
+            this.cbxstObrigaAprovacaoPedidoVenda.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.cbxstObrigaAprovacaoPedidoVenda.Name = "cbxstObrigaAprovacaoPedidoVenda";
             this.cbxstObrigaAprovacaoPedidoVenda.objConfigComponenteModel = null;
             this.cbxstObrigaAprovacaoPedidoVenda.SelectedIndex = -1;
             this.cbxstObrigaAprovacaoPedidoVenda.SelectedValue = 0;
-            this.cbxstObrigaAprovacaoPedidoVenda.Size = new System.Drawing.Size(374, 21);
+            this.cbxstObrigaAprovacaoPedidoVenda.Size = new System.Drawing.Size(338, 21);
             this.cbxstObrigaAprovacaoPedidoVenda.TabIndex = 10;
             this.cbxstObrigaAprovacaoPedidoVenda.ValueMember = "ValueMember";
             // 
@@ -3099,15 +3227,15 @@
             this.hlP_PesquisaidMoeda._Regex = null;
             this.hlP_PesquisaidMoeda._Table = "Parametro_Comercial";
             this.hlP_PesquisaidMoeda._TamanhoComponente = 300;
-            this.hlP_PesquisaidMoeda._TamanhoMaiorLabel = 250;
+            this.hlP_PesquisaidMoeda._TamanhoMaiorLabel = 285;
             this.hlP_PesquisaidMoeda._Vinculado = false;
             this.hlP_PesquisaidMoeda._Visible = false;
             this.hlP_PesquisaidMoeda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidMoeda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidMoeda.Base = null;
             this.hlP_PesquisaidMoeda.bConfiguracao = false;
-            this.hlP_PesquisaidMoeda.Location = new System.Drawing.Point(537, 3);
-            this.hlP_PesquisaidMoeda.Margin = new System.Windows.Forms.Padding(12, 3, 15, 3);
+            this.hlP_PesquisaidMoeda.Location = new System.Drawing.Point(638, 3);
+            this.hlP_PesquisaidMoeda.Margin = new System.Windows.Forms.Padding(47, 3, 15, 3);
             this.hlP_PesquisaidMoeda.Name = "hlP_PesquisaidMoeda";
             this.hlP_PesquisaidMoeda.objConfigComponenteModel = null;
             this.hlP_PesquisaidMoeda.ReadOnly = false;
@@ -3126,8 +3254,8 @@
             this.cbxstOrigemListaPreco._Regex = null;
             this.cbxstOrigemListaPreco._situacao = false;
             this.cbxstOrigemListaPreco._Table = "Parametro_Comercial";
-            this.cbxstOrigemListaPreco._TamanhoComponente = 150;
-            this.cbxstOrigemListaPreco._TamanhoMaiorLabel = 250;
+            this.cbxstOrigemListaPreco._TamanhoComponente = 196;
+            this.cbxstOrigemListaPreco._TamanhoMaiorLabel = 285;
             this.cbxstOrigemListaPreco._Visible = false;
             this.cbxstOrigemListaPreco.BackColor = System.Drawing.Color.Transparent;
             this.cbxstOrigemListaPreco.Base = null;
@@ -3135,13 +3263,13 @@
             this.cbxstOrigemListaPreco.Color = System.Drawing.Color.White;
             this.cbxstOrigemListaPreco.DataSource = null;
             this.cbxstOrigemListaPreco.DisplayMember = "DisplayMember";
-            this.cbxstOrigemListaPreco.Location = new System.Drawing.Point(645, 30);
-            this.cbxstOrigemListaPreco.Margin = new System.Windows.Forms.Padding(120, 3, 15, 3);
+            this.cbxstOrigemListaPreco.Location = new System.Drawing.Point(746, 30);
+            this.cbxstOrigemListaPreco.Margin = new System.Windows.Forms.Padding(155, 3, 15, 3);
             this.cbxstOrigemListaPreco.Name = "cbxstOrigemListaPreco";
             this.cbxstOrigemListaPreco.objConfigComponenteModel = null;
             this.cbxstOrigemListaPreco.SelectedIndex = -1;
             this.cbxstOrigemListaPreco.SelectedValue = 0;
-            this.cbxstOrigemListaPreco.Size = new System.Drawing.Size(283, 21);
+            this.cbxstOrigemListaPreco.Size = new System.Drawing.Size(329, 21);
             this.cbxstOrigemListaPreco.TabIndex = 12;
             this.cbxstOrigemListaPreco.ValueMember = "ValueMember";
             // 
@@ -3155,8 +3283,8 @@
             this.cbxstUtilizaVendaCasada._Regex = null;
             this.cbxstUtilizaVendaCasada._situacao = true;
             this.cbxstUtilizaVendaCasada._Table = "Parametro_Comercial";
-            this.cbxstUtilizaVendaCasada._TamanhoComponente = 150;
-            this.cbxstUtilizaVendaCasada._TamanhoMaiorLabel = 250;
+            this.cbxstUtilizaVendaCasada._TamanhoComponente = 80;
+            this.cbxstUtilizaVendaCasada._TamanhoMaiorLabel = 285;
             this.cbxstUtilizaVendaCasada._Visible = false;
             this.cbxstUtilizaVendaCasada.BackColor = System.Drawing.Color.Transparent;
             this.cbxstUtilizaVendaCasada.Base = null;
@@ -3164,13 +3292,13 @@
             this.cbxstUtilizaVendaCasada.Color = System.Drawing.Color.White;
             this.cbxstUtilizaVendaCasada.DataSource = null;
             this.cbxstUtilizaVendaCasada.DisplayMember = "DisplayMember";
-            this.cbxstUtilizaVendaCasada.Location = new System.Drawing.Point(662, 57);
-            this.cbxstUtilizaVendaCasada.Margin = new System.Windows.Forms.Padding(137, 3, 15, 3);
+            this.cbxstUtilizaVendaCasada.Location = new System.Drawing.Point(763, 57);
+            this.cbxstUtilizaVendaCasada.Margin = new System.Windows.Forms.Padding(172, 3, 15, 3);
             this.cbxstUtilizaVendaCasada.Name = "cbxstUtilizaVendaCasada";
             this.cbxstUtilizaVendaCasada.objConfigComponenteModel = null;
             this.cbxstUtilizaVendaCasada.SelectedIndex = -1;
             this.cbxstUtilizaVendaCasada.SelectedValue = 0;
-            this.cbxstUtilizaVendaCasada.Size = new System.Drawing.Size(266, 21);
+            this.cbxstUtilizaVendaCasada.Size = new System.Drawing.Size(196, 21);
             this.cbxstUtilizaVendaCasada.TabIndex = 14;
             this.cbxstUtilizaVendaCasada.ValueMember = "ValueMember";
             // 
@@ -3184,8 +3312,8 @@
             this.cbxstUtilizaVendaKitMateria._Regex = null;
             this.cbxstUtilizaVendaKitMateria._situacao = true;
             this.cbxstUtilizaVendaKitMateria._Table = "Parametro_Comercial";
-            this.cbxstUtilizaVendaKitMateria._TamanhoComponente = 150;
-            this.cbxstUtilizaVendaKitMateria._TamanhoMaiorLabel = 250;
+            this.cbxstUtilizaVendaKitMateria._TamanhoComponente = 80;
+            this.cbxstUtilizaVendaKitMateria._TamanhoMaiorLabel = 285;
             this.cbxstUtilizaVendaKitMateria._Visible = false;
             this.cbxstUtilizaVendaKitMateria.BackColor = System.Drawing.Color.Transparent;
             this.cbxstUtilizaVendaKitMateria.Base = null;
@@ -3193,13 +3321,13 @@
             this.cbxstUtilizaVendaKitMateria.Color = System.Drawing.Color.White;
             this.cbxstUtilizaVendaKitMateria.DataSource = null;
             this.cbxstUtilizaVendaKitMateria.DisplayMember = "DisplayMember";
-            this.cbxstUtilizaVendaKitMateria.Location = new System.Drawing.Point(668, 84);
-            this.cbxstUtilizaVendaKitMateria.Margin = new System.Windows.Forms.Padding(143, 3, 15, 3);
+            this.cbxstUtilizaVendaKitMateria.Location = new System.Drawing.Point(769, 84);
+            this.cbxstUtilizaVendaKitMateria.Margin = new System.Windows.Forms.Padding(178, 3, 15, 3);
             this.cbxstUtilizaVendaKitMateria.Name = "cbxstUtilizaVendaKitMateria";
             this.cbxstUtilizaVendaKitMateria.objConfigComponenteModel = null;
             this.cbxstUtilizaVendaKitMateria.SelectedIndex = -1;
             this.cbxstUtilizaVendaKitMateria.SelectedValue = 0;
-            this.cbxstUtilizaVendaKitMateria.Size = new System.Drawing.Size(260, 21);
+            this.cbxstUtilizaVendaKitMateria.Size = new System.Drawing.Size(190, 21);
             this.cbxstUtilizaVendaKitMateria.TabIndex = 15;
             this.cbxstUtilizaVendaKitMateria.ValueMember = "ValueMember";
             // 
@@ -3213,7 +3341,7 @@
             this.cbxstRateioFrete._Regex = null;
             this.cbxstRateioFrete._situacao = false;
             this.cbxstRateioFrete._Table = "Parametro_Comercial";
-            this.cbxstRateioFrete._TamanhoComponente = 150;
+            this.cbxstRateioFrete._TamanhoComponente = 198;
             this.cbxstRateioFrete._TamanhoMaiorLabel = 250;
             this.cbxstRateioFrete._Visible = false;
             this.cbxstRateioFrete.BackColor = System.Drawing.Color.Transparent;
@@ -3222,13 +3350,13 @@
             this.cbxstRateioFrete.Color = System.Drawing.Color.White;
             this.cbxstRateioFrete.DataSource = null;
             this.cbxstRateioFrete.DisplayMember = "DisplayMember";
-            this.cbxstRateioFrete.Location = new System.Drawing.Point(631, 111);
+            this.cbxstRateioFrete.Location = new System.Drawing.Point(697, 111);
             this.cbxstRateioFrete.Margin = new System.Windows.Forms.Padding(106, 3, 15, 3);
             this.cbxstRateioFrete.Name = "cbxstRateioFrete";
             this.cbxstRateioFrete.objConfigComponenteModel = null;
             this.cbxstRateioFrete.SelectedIndex = -1;
             this.cbxstRateioFrete.SelectedValue = 0;
-            this.cbxstRateioFrete.Size = new System.Drawing.Size(297, 21);
+            this.cbxstRateioFrete.Size = new System.Drawing.Size(345, 21);
             this.cbxstRateioFrete.TabIndex = 16;
             this.cbxstRateioFrete.ValueMember = "ValueMember";
             // 
@@ -3238,7 +3366,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 25);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1330, 346);
+            this.tabPage8.Size = new System.Drawing.Size(1338, 338);
             this.tabPage8.TabIndex = 6;
             this.tabPage8.Tag = false;
             this.tabPage8.Text = "Financeiro";
@@ -3250,7 +3378,7 @@
             this.kryptonPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel9.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel9.Name = "kryptonPanel9";
-            this.kryptonPanel9.Size = new System.Drawing.Size(1330, 346);
+            this.kryptonPanel9.Size = new System.Drawing.Size(1338, 338);
             this.kryptonPanel9.TabIndex = 0;
             // 
             // flowLayoutPanel9
@@ -3266,7 +3394,7 @@
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel9.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(1330, 346);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(1338, 338);
             this.flowLayoutPanel9.TabIndex = 0;
             // 
             // hlP_LabelSeparatorFinanceiro
@@ -3276,7 +3404,7 @@
             this.hlP_LabelSeparatorFinanceiro.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorFinanceiro.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorFinanceiro.Name = "hlP_LabelSeparatorFinanceiro";
-            this.hlP_LabelSeparatorFinanceiro.Size = new System.Drawing.Size(424, 18);
+            this.hlP_LabelSeparatorFinanceiro.Size = new System.Drawing.Size(363, 19);
             this.hlP_LabelSeparatorFinanceiro.TabIndex = 0;
             this.hlP_LabelSeparatorFinanceiro.TabStop = false;
             // 
@@ -3294,14 +3422,15 @@
             this.txtxMaskClasseFinanceira._Regex = null;
             this.txtxMaskClasseFinanceira._Table = "Parametro_Financeiro";
             this.txtxMaskClasseFinanceira._TamanhoComponente = 134;
-            this.txtxMaskClasseFinanceira._TamanhoMaiorLabel = 260;
+            this.txtxMaskClasseFinanceira._TamanhoMaiorLabel = 249;
+            this.txtxMaskClasseFinanceira._Visible = false;
             this.txtxMaskClasseFinanceira.BackColor = System.Drawing.Color.Transparent;
             this.txtxMaskClasseFinanceira.Base = null;
             this.txtxMaskClasseFinanceira.bConfiguracao = false;
             this.txtxMaskClasseFinanceira.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxMaskClasseFinanceira.Color = System.Drawing.Color.White;
-            this.txtxMaskClasseFinanceira.Location = new System.Drawing.Point(96, 27);
-            this.txtxMaskClasseFinanceira.Margin = new System.Windows.Forms.Padding(96, 3, 15, 3);
+            this.txtxMaskClasseFinanceira.Location = new System.Drawing.Point(85, 28);
+            this.txtxMaskClasseFinanceira.Margin = new System.Windows.Forms.Padding(85, 3, 15, 3);
             this.txtxMaskClasseFinanceira.MaxLength = 32767;
             this.txtxMaskClasseFinanceira.Name = "txtxMaskClasseFinanceira";
             this.txtxMaskClasseFinanceira.objConfigComponenteModel = null;
@@ -3320,21 +3449,22 @@
             this.cbxstPedidoCompraGeraPrevisao._Regex = null;
             this.cbxstPedidoCompraGeraPrevisao._situacao = false;
             this.cbxstPedidoCompraGeraPrevisao._Table = "Parametro_Financeiro";
-            this.cbxstPedidoCompraGeraPrevisao._TamanhoComponente = 150;
-            this.cbxstPedidoCompraGeraPrevisao._TamanhoMaiorLabel = 260;
+            this.cbxstPedidoCompraGeraPrevisao._TamanhoComponente = 114;
+            this.cbxstPedidoCompraGeraPrevisao._TamanhoMaiorLabel = 249;
+            this.cbxstPedidoCompraGeraPrevisao._Visible = false;
             this.cbxstPedidoCompraGeraPrevisao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPedidoCompraGeraPrevisao.Base = null;
             this.cbxstPedidoCompraGeraPrevisao.bConfiguracao = false;
             this.cbxstPedidoCompraGeraPrevisao.Color = System.Drawing.Color.White;
             this.cbxstPedidoCompraGeraPrevisao.DataSource = null;
             this.cbxstPedidoCompraGeraPrevisao.DisplayMember = "DisplayMember";
-            this.cbxstPedidoCompraGeraPrevisao.Location = new System.Drawing.Point(14, 55);
-            this.cbxstPedidoCompraGeraPrevisao.Margin = new System.Windows.Forms.Padding(14, 3, 15, 3);
+            this.cbxstPedidoCompraGeraPrevisao.Location = new System.Drawing.Point(3, 56);
+            this.cbxstPedidoCompraGeraPrevisao.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.cbxstPedidoCompraGeraPrevisao.Name = "cbxstPedidoCompraGeraPrevisao";
             this.cbxstPedidoCompraGeraPrevisao.objConfigComponenteModel = null;
             this.cbxstPedidoCompraGeraPrevisao.SelectedIndex = -1;
             this.cbxstPedidoCompraGeraPrevisao.SelectedValue = 0;
-            this.cbxstPedidoCompraGeraPrevisao.Size = new System.Drawing.Size(399, 21);
+            this.cbxstPedidoCompraGeraPrevisao.Size = new System.Drawing.Size(363, 21);
             this.cbxstPedidoCompraGeraPrevisao.TabIndex = 1;
             this.cbxstPedidoCompraGeraPrevisao.ValueMember = "ValueMember";
             // 
@@ -3349,21 +3479,22 @@
             this.cbxstPedidoVendaGeraPrevisao._Regex = null;
             this.cbxstPedidoVendaGeraPrevisao._situacao = false;
             this.cbxstPedidoVendaGeraPrevisao._Table = "Parametro_Financeiro";
-            this.cbxstPedidoVendaGeraPrevisao._TamanhoComponente = 150;
-            this.cbxstPedidoVendaGeraPrevisao._TamanhoMaiorLabel = 260;
+            this.cbxstPedidoVendaGeraPrevisao._TamanhoComponente = 114;
+            this.cbxstPedidoVendaGeraPrevisao._TamanhoMaiorLabel = 249;
+            this.cbxstPedidoVendaGeraPrevisao._Visible = false;
             this.cbxstPedidoVendaGeraPrevisao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPedidoVendaGeraPrevisao.Base = null;
             this.cbxstPedidoVendaGeraPrevisao.bConfiguracao = false;
             this.cbxstPedidoVendaGeraPrevisao.Color = System.Drawing.Color.White;
             this.cbxstPedidoVendaGeraPrevisao.DataSource = null;
             this.cbxstPedidoVendaGeraPrevisao.DisplayMember = "DisplayMember";
-            this.cbxstPedidoVendaGeraPrevisao.Location = new System.Drawing.Point(21, 82);
-            this.cbxstPedidoVendaGeraPrevisao.Margin = new System.Windows.Forms.Padding(21, 3, 15, 3);
+            this.cbxstPedidoVendaGeraPrevisao.Location = new System.Drawing.Point(10, 83);
+            this.cbxstPedidoVendaGeraPrevisao.Margin = new System.Windows.Forms.Padding(10, 3, 15, 3);
             this.cbxstPedidoVendaGeraPrevisao.Name = "cbxstPedidoVendaGeraPrevisao";
             this.cbxstPedidoVendaGeraPrevisao.objConfigComponenteModel = null;
             this.cbxstPedidoVendaGeraPrevisao.SelectedIndex = -1;
             this.cbxstPedidoVendaGeraPrevisao.SelectedValue = 0;
-            this.cbxstPedidoVendaGeraPrevisao.Size = new System.Drawing.Size(392, 21);
+            this.cbxstPedidoVendaGeraPrevisao.Size = new System.Drawing.Size(356, 21);
             this.cbxstPedidoVendaGeraPrevisao.TabIndex = 2;
             this.cbxstPedidoVendaGeraPrevisao.ValueMember = "ValueMember";
             // 
@@ -3379,21 +3510,22 @@
             this.cbxstPagaComissaoPor._Regex = null;
             this.cbxstPagaComissaoPor._situacao = false;
             this.cbxstPagaComissaoPor._Table = "Parametro_Financeiro";
-            this.cbxstPagaComissaoPor._TamanhoComponente = 150;
-            this.cbxstPagaComissaoPor._TamanhoMaiorLabel = 260;
+            this.cbxstPagaComissaoPor._TamanhoComponente = 181;
+            this.cbxstPagaComissaoPor._TamanhoMaiorLabel = 249;
+            this.cbxstPagaComissaoPor._Visible = false;
             this.cbxstPagaComissaoPor.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPagaComissaoPor.Base = null;
             this.cbxstPagaComissaoPor.bConfiguracao = false;
             this.cbxstPagaComissaoPor.Color = System.Drawing.Color.White;
             this.cbxstPagaComissaoPor.DataSource = null;
             this.cbxstPagaComissaoPor.DisplayMember = "DisplayMember";
-            this.cbxstPagaComissaoPor.Location = new System.Drawing.Point(152, 109);
-            this.cbxstPagaComissaoPor.Margin = new System.Windows.Forms.Padding(152, 3, 15, 3);
+            this.cbxstPagaComissaoPor.Location = new System.Drawing.Point(141, 110);
+            this.cbxstPagaComissaoPor.Margin = new System.Windows.Forms.Padding(141, 3, 15, 3);
             this.cbxstPagaComissaoPor.Name = "cbxstPagaComissaoPor";
             this.cbxstPagaComissaoPor.objConfigComponenteModel = null;
             this.cbxstPagaComissaoPor.SelectedIndex = -1;
             this.cbxstPagaComissaoPor.SelectedValue = 0;
-            this.cbxstPagaComissaoPor.Size = new System.Drawing.Size(261, 21);
+            this.cbxstPagaComissaoPor.Size = new System.Drawing.Size(292, 21);
             this.cbxstPagaComissaoPor.TabIndex = 3;
             this.cbxstPagaComissaoPor.ValueMember = "ValueMember";
             // 
@@ -3408,21 +3540,22 @@
             this.cbxstCreditoAprovado._Regex = null;
             this.cbxstCreditoAprovado._situacao = false;
             this.cbxstCreditoAprovado._Table = "Parametro_Financeiro";
-            this.cbxstCreditoAprovado._TamanhoComponente = 150;
-            this.cbxstCreditoAprovado._TamanhoMaiorLabel = 260;
+            this.cbxstCreditoAprovado._TamanhoComponente = 114;
+            this.cbxstCreditoAprovado._TamanhoMaiorLabel = 249;
+            this.cbxstCreditoAprovado._Visible = false;
             this.cbxstCreditoAprovado.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCreditoAprovado.Base = null;
             this.cbxstCreditoAprovado.bConfiguracao = false;
             this.cbxstCreditoAprovado.Color = System.Drawing.Color.White;
             this.cbxstCreditoAprovado.DataSource = null;
             this.cbxstCreditoAprovado.DisplayMember = "DisplayMember";
-            this.cbxstCreditoAprovado.Location = new System.Drawing.Point(161, 136);
-            this.cbxstCreditoAprovado.Margin = new System.Windows.Forms.Padding(161, 3, 15, 3);
+            this.cbxstCreditoAprovado.Location = new System.Drawing.Point(150, 137);
+            this.cbxstCreditoAprovado.Margin = new System.Windows.Forms.Padding(150, 3, 15, 3);
             this.cbxstCreditoAprovado.Name = "cbxstCreditoAprovado";
             this.cbxstCreditoAprovado.objConfigComponenteModel = null;
             this.cbxstCreditoAprovado.SelectedIndex = -1;
             this.cbxstCreditoAprovado.SelectedValue = 0;
-            this.cbxstCreditoAprovado.Size = new System.Drawing.Size(252, 21);
+            this.cbxstCreditoAprovado.Size = new System.Drawing.Size(216, 21);
             this.cbxstCreditoAprovado.TabIndex = 4;
             this.cbxstCreditoAprovado.ValueMember = "ValueMember";
             // 
@@ -3438,199 +3571,24 @@
             this.cbxstBloqueiaClientePosCartaCobranca._Regex = null;
             this.cbxstBloqueiaClientePosCartaCobranca._situacao = false;
             this.cbxstBloqueiaClientePosCartaCobranca._Table = "Parametro_Financeiro";
-            this.cbxstBloqueiaClientePosCartaCobranca._TamanhoComponente = 150;
+            this.cbxstBloqueiaClientePosCartaCobranca._TamanhoComponente = 114;
             this.cbxstBloqueiaClientePosCartaCobranca._TamanhoMaiorLabel = 260;
+            this.cbxstBloqueiaClientePosCartaCobranca._Visible = false;
             this.cbxstBloqueiaClientePosCartaCobranca.BackColor = System.Drawing.Color.Transparent;
             this.cbxstBloqueiaClientePosCartaCobranca.Base = null;
             this.cbxstBloqueiaClientePosCartaCobranca.bConfiguracao = false;
             this.cbxstBloqueiaClientePosCartaCobranca.Color = System.Drawing.Color.White;
             this.cbxstBloqueiaClientePosCartaCobranca.DataSource = null;
             this.cbxstBloqueiaClientePosCartaCobranca.DisplayMember = "DisplayMember";
-            this.cbxstBloqueiaClientePosCartaCobranca.Location = new System.Drawing.Point(8, 163);
+            this.cbxstBloqueiaClientePosCartaCobranca.Location = new System.Drawing.Point(8, 164);
             this.cbxstBloqueiaClientePosCartaCobranca.Margin = new System.Windows.Forms.Padding(8, 3, 15, 3);
             this.cbxstBloqueiaClientePosCartaCobranca.Name = "cbxstBloqueiaClientePosCartaCobranca";
             this.cbxstBloqueiaClientePosCartaCobranca.objConfigComponenteModel = null;
             this.cbxstBloqueiaClientePosCartaCobranca.SelectedIndex = -1;
             this.cbxstBloqueiaClientePosCartaCobranca.SelectedValue = 0;
-            this.cbxstBloqueiaClientePosCartaCobranca.Size = new System.Drawing.Size(405, 21);
+            this.cbxstBloqueiaClientePosCartaCobranca.Size = new System.Drawing.Size(369, 21);
             this.cbxstBloqueiaClientePosCartaCobranca.TabIndex = 5;
             this.cbxstBloqueiaClientePosCartaCobranca.ValueMember = "ValueMember";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.hlP_LabelSeparatorEmpresa);
-            this.flowLayoutPanel1.Controls.Add(this.txtIdEmpresa);
-            this.flowLayoutPanel1.Controls.Add(this.txtxNome);
-            this.flowLayoutPanel1.Controls.Add(this.txtxFantasia);
-            this.flowLayoutPanel1.Controls.Add(this.maskxCNPJ);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1338, 86);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // hlP_LabelSeparatorEmpresa
-            // 
-            this.hlP_LabelSeparatorEmpresa._LabelText = "Dados empresa";
-            this.hlP_LabelSeparatorEmpresa._TamanhoMaiorLabel = 0;
-            this.hlP_LabelSeparatorEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorEmpresa.Location = new System.Drawing.Point(3, 3);
-            this.hlP_LabelSeparatorEmpresa.Name = "hlP_LabelSeparatorEmpresa";
-            this.hlP_LabelSeparatorEmpresa.Size = new System.Drawing.Size(300, 18);
-            this.hlP_LabelSeparatorEmpresa.TabIndex = 0;
-            this.hlP_LabelSeparatorEmpresa.TabStop = false;
-            // 
-            // txtIdEmpresa
-            // 
-            this.txtIdEmpresa._Field = "idEmpresa";
-            this.txtIdEmpresa._LabelGroup = this.hlP_LabelSeparatorEmpresa;
-            this.txtIdEmpresa._LabelText = "Código";
-            this.txtIdEmpresa._Multiline = false;
-            this.txtIdEmpresa._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.txtIdEmpresa._Password = false;
-            this.txtIdEmpresa._Regex = null;
-            this.txtIdEmpresa._Table = "Empresa";
-            this.txtIdEmpresa._TamanhoComponente = 101;
-            this.txtIdEmpresa._TamanhoMaiorLabel = 50;
-            this.txtIdEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.txtIdEmpresa.Base = null;
-            this.txtIdEmpresa.bConfiguracao = false;
-            this.txtIdEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtIdEmpresa.Color = System.Drawing.Color.White;
-            this.txtIdEmpresa.Enabled = false;
-            this.txtIdEmpresa.Location = new System.Drawing.Point(8, 27);
-            this.txtIdEmpresa.Margin = new System.Windows.Forms.Padding(8, 3, 15, 3);
-            this.txtIdEmpresa.MaxLength = 32767;
-            this.txtIdEmpresa.Name = "txtIdEmpresa";
-            this.txtIdEmpresa.objConfigComponenteModel = null;
-            this.txtIdEmpresa.ReadOnly = false;
-            this.txtIdEmpresa.Size = new System.Drawing.Size(146, 22);
-            this.txtIdEmpresa.TabIndex = 1;
-            // 
-            // txtxNome
-            // 
-            this.txtxNome._Field = "xNome";
-            this.txtxNome._LabelGroup = this.hlP_LabelSeparatorEmpresa;
-            this.txtxNome._LabelText = "Nome";
-            this.txtxNome._Multiline = false;
-            this.txtxNome._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.txtxNome._Password = false;
-            this.txtxNome._Regex = null;
-            this.txtxNome._Table = "Empresa";
-            this.txtxNome._TamanhoComponente = 286;
-            this.txtxNome._TamanhoMaiorLabel = 50;
-            this.txtxNome.BackColor = System.Drawing.Color.Transparent;
-            this.txtxNome.Base = null;
-            this.txtxNome.bConfiguracao = false;
-            this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtxNome.Color = System.Drawing.Color.White;
-            this.txtxNome.Enabled = false;
-            this.txtxNome.Location = new System.Drawing.Point(16, 55);
-            this.txtxNome.Margin = new System.Windows.Forms.Padding(16, 3, 15, 3);
-            this.txtxNome.MaxLength = 32767;
-            this.txtxNome.Name = "txtxNome";
-            this.txtxNome.objConfigComponenteModel = null;
-            this.txtxNome.ReadOnly = false;
-            this.txtxNome.Size = new System.Drawing.Size(323, 22);
-            this.txtxNome.TabIndex = 2;
-            // 
-            // txtxFantasia
-            // 
-            this.txtxFantasia._Field = "xFantasia";
-            this.txtxFantasia._LabelGroup = this.hlP_LabelSeparatorEmpresa;
-            this.txtxFantasia._LabelText = "Fantasia";
-            this.txtxFantasia._Multiline = false;
-            this.txtxFantasia._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.txtxFantasia._Password = false;
-            this.txtxFantasia._Regex = null;
-            this.txtxFantasia._Table = "Empresa";
-            this.txtxFantasia._TamanhoComponente = 286;
-            this.txtxFantasia._TamanhoMaiorLabel = 50;
-            this.txtxFantasia.BackColor = System.Drawing.Color.Transparent;
-            this.txtxFantasia.Base = null;
-            this.txtxFantasia.bConfiguracao = false;
-            this.txtxFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtxFantasia.Color = System.Drawing.Color.White;
-            this.txtxFantasia.Enabled = false;
-            this.txtxFantasia.Location = new System.Drawing.Point(357, 3);
-            this.txtxFantasia.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
-            this.txtxFantasia.MaxLength = 32767;
-            this.txtxFantasia.Name = "txtxFantasia";
-            this.txtxFantasia.objConfigComponenteModel = null;
-            this.txtxFantasia.ReadOnly = false;
-            this.txtxFantasia.Size = new System.Drawing.Size(336, 22);
-            this.txtxFantasia.TabIndex = 4;
-            // 
-            // maskxCNPJ
-            // 
-            this.maskxCNPJ._Field = "xCNPJ";
-            this.maskxCNPJ._LabelGroup = this.hlP_LabelSeparatorEmpresa;
-            this.maskxCNPJ._LabelText = "Cnpj";
-            this.maskxCNPJ._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.maskxCNPJ._Regex = null;
-            this.maskxCNPJ._Table = "Empresa";
-            this.maskxCNPJ._TamanhoComponente = 100;
-            this.maskxCNPJ._TamanhoMaiorLabel = 50;
-            this.maskxCNPJ._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
-            this.maskxCNPJ._UF = null;
-            this.maskxCNPJ.BackColor = System.Drawing.Color.Transparent;
-            this.maskxCNPJ.Base = null;
-            this.maskxCNPJ.bConfiguracao = false;
-            this.maskxCNPJ.Color = System.Drawing.Color.White;
-            this.maskxCNPJ.Enabled = false;
-            this.maskxCNPJ.Location = new System.Drawing.Point(376, 31);
-            this.maskxCNPJ.Margin = new System.Windows.Forms.Padding(22, 3, 15, 3);
-            this.maskxCNPJ.Mask = "99.999.999/9999-99";
-            this.maskxCNPJ.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.maskxCNPJ.MaxLength = 32767;
-            this.maskxCNPJ.Name = "maskxCNPJ";
-            this.maskxCNPJ.objConfigComponenteModel = null;
-            this.maskxCNPJ.ReadOnly = false;
-            this.maskxCNPJ.Size = new System.Drawing.Size(131, 21);
-            this.maskxCNPJ.TabIndex = 3;
-            // 
-            // nudpINSSss
-            // 
-            this.nudpINSSss._Field = "pINSSss";
-            this.nudpINSSss._Help = "Informar a alíquota do inss – instituo nacional do seguro social para o super sim" +
-    "ples";
-            this.nudpINSSss._LabelGroup = this.hlP_LabelSeparatorSuperSimples;
-            this.nudpINSSss._LabelText = "Alíquota de inss para o super simples";
-            this.nudpINSSss._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.nudpINSSss._Regex = null;
-            this.nudpINSSss._Table = "Parametro_Fiscal";
-            this.nudpINSSss._TamanhoComponente = 121;
-            this.nudpINSSss._TamanhoMaiorLabel = 470;
-            this.nudpINSSss._Visible = false;
-            this.nudpINSSss.BackColor = System.Drawing.Color.Transparent;
-            this.nudpINSSss.Base = null;
-            this.nudpINSSss.bConfiguracao = false;
-            this.nudpINSSss.Color = System.Drawing.Color.White;
-            this.nudpINSSss.DecimalPlaces = 2;
-            this.nudpINSSss.Location = new System.Drawing.Point(812, 111);
-            this.nudpINSSss.Margin = new System.Windows.Forms.Padding(274, 3, 15, 3);
-            this.nudpINSSss.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.nudpINSSss.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.nudpINSSss.Name = "nudpINSSss";
-            this.nudpINSSss.objConfigComponenteModel = null;
-            this.nudpINSSss.ReadOnly = false;
-            this.nudpINSSss.Size = new System.Drawing.Size(320, 22);
-            this.nudpINSSss.TabIndex = 84;
-            this.nudpINSSss.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            131072});
-            this.nudpINSSss.ValueInt = 0;
             // 
             // formParametrizacao
             // 
@@ -3652,10 +3610,17 @@
             this.panelPadrao.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
+            this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
+            this.kryptonSplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
+            this.kryptonSplitContainer1.ResumeLayout(false);
             this.kryptonTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.kryptonTabControl2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
@@ -3693,7 +3658,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel9)).EndInit();
             this.kryptonPanel9.ResumeLayout(false);
             this.flowLayoutPanel9.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3702,30 +3666,10 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
         private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl2;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel3;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel4;
-        private System.Windows.Forms.TabPage tabPage4;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel5;
-        private System.Windows.Forms.TabPage tabPage5;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel6;
-        private System.Windows.Forms.TabPage tabPage6;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel7;
-        private System.Windows.Forms.TabPage tabPage7;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel8;
-        private System.Windows.Forms.TabPage tabPage8;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel9;
-        private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorEmpresa;
-        private Comum.Components.HLP_TextBox txtIdEmpresa;
-        private Comum.Components.HLP_TextBox txtxNome;
-        private Comum.Components.HLP_MaskedTextBox maskxCNPJ;
-        private Comum.Components.HLP_TextBox txtxFantasia;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorEstoque;
         private Comum.Components.HLP_ComboBox cbxstEstoqueMinimo;
@@ -3735,6 +3679,8 @@
         private Comum.Components.HLP_ComboBox cbxstGradeEstoque;
         private Comum.Components.HLP_ComboBox cbxstRastreabilidadeMaterial;
         private Comum.Components.HLP_ComboBox cbxstRastreabilidadeProdutoAcabado;
+        private System.Windows.Forms.TabPage tabPage3;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorCustos;
         private Comum.Components.HLP_NumericUpDown nudxHorasTrabalhadasDia;
@@ -3747,13 +3693,17 @@
         private Comum.Components.HLP_ComboBox cbxstCustoMedio;
         private Comum.Components.HLP_ComboBox cbxstCompoeBaseCalculoCustoOperacional;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidTipoOperacao;
+        private System.Windows.Forms.TabPage tabPage4;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorCompras;
+        private Comum.Components.HLP_NumericUpDown nudvAprovacaoAutomaticaPedidoCompras;
         private Comum.Components.HLP_ComboBox cbxstAprovacaoRequisicao;
         private Comum.Components.HLP_ComboBox cbxstAprovacaoCotacaoCompras;
         private Comum.Components.HLP_ComboBox cbxstAprovacaoPedidoCompras;
-        private Comum.Components.HLP_NumericUpDown nudvAprovacaoAutomaticaPedidoCompras;
         private Comum.Components.HLP_ComboBox cbxstIgnoraSaldoRequisicao;
+        private System.Windows.Forms.TabPage tabPage5;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorOrdemProducao;
         private Comum.Components.HLP_ComboBox cbxstProducaoGera;
@@ -3762,20 +3712,22 @@
         private Comum.Components.HLP_Pesquisa hlP_Pesquisa1idTipoOperacaoparaOPProduto;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidTipoOperacaoparaOPServico;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidTipoOperacaoparaOPBenificiamento;
+        private System.Windows.Forms.TabPage tabPage6;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel7;
         private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl3;
         private System.Windows.Forms.TabPage tabPage9;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel10;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorFiscal;
+        private Comum.Components.HLP_NumericUpDown nudpAliquotaPIS;
+        private Comum.Components.HLP_NumericUpDown nudpAliquotaCOFINS;
+        private Comum.Components.HLP_NumericUpDown nudpAliquotaCSLL;
         private Comum.Components.HLP_ComboBox cbxstRegimeApuracaoIRPJ;
         private Comum.Components.HLP_ComboBox cbxstRegimeApuracaoIPI;
         private Comum.Components.HLP_ComboBox cbxstRegimeTributacaoPISCOFINS;
         private Comum.Components.HLP_ComboBox cbxstRegimeApuracaoPISCOFINS;
-        private Comum.Components.HLP_NumericUpDown nudpAliquotaPIS;
-        private Comum.Components.HLP_NumericUpDown nudpAliquotaCOFINS;
         private Comum.Components.HLP_ComboBox cbxstProdutorRural;
         private Comum.Components.HLP_ComboBox cbxstCooperativaAgricola;
-        private Comum.Components.HLP_NumericUpDown nudpAliquotaCSLL;
         private Comum.Components.HLP_ComboBox cbxstDestacaISSnfServico;
         private Comum.Components.HLP_ComboBox cbxstDestacaCSLLnfServico;
         private Comum.Components.HLP_ComboBox cbxstDestacaIRRFnfServico;
@@ -3790,12 +3742,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorSuperSimples;
-        private Comum.Components.HLP_ComboBox cbxstSuperSimples;
-        private Comum.Components.HLP_ComboBox cbxstCRT;
-        private Comum.Components.HLP_ComboBox cbxstImprimeMsgPadraoSs;
-        private Comum.Components.HLP_Pesquisa hlP_PesquisaidObservacaoMsgSuperSimples;
-        private Comum.Components.HLP_ComboBox cbxstImprimeMsgCreditoIcmsSs;
-        private Comum.Components.HLP_Pesquisa hlP_PesquisaidObservacaoMsgCreditoSuperSimples;
         private Comum.Components.HLP_NumericUpDown nudpICMSss;
         private Comum.Components.HLP_NumericUpDown nudpISSss;
         private Comum.Components.HLP_NumericUpDown nudpCSLLss;
@@ -3804,9 +3750,19 @@
         private Comum.Components.HLP_NumericUpDown nudpCOFINSss;
         private Comum.Components.HLP_NumericUpDown nudnItensNfProduto;
         private Comum.Components.HLP_NumericUpDown nudnItensNfServico;
+        private Comum.Components.HLP_NumericUpDown nudpINSSss;
+        private Comum.Components.HLP_ComboBox cbxstSuperSimples;
+        private Comum.Components.HLP_ComboBox cbxstCRT;
+        private Comum.Components.HLP_ComboBox cbxstImprimeMsgPadraoSs;
+        private Comum.Components.HLP_Pesquisa hlP_PesquisaidObservacaoMsgSuperSimples;
+        private Comum.Components.HLP_ComboBox cbxstImprimeMsgCreditoIcmsSs;
+        private Comum.Components.HLP_Pesquisa hlP_PesquisaidObservacaoMsgCreditoSuperSimples;
+        private System.Windows.Forms.TabPage tabPage7;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorComercial;
         private Comum.Components.HLP_TextBox txtxMaskCentroCusto;
+        private Comum.Components.HLP_NumericUpDown nudnQuantidadeDiasOrcamento;
         private Comum.Components.HLP_ComboBox cbxstObrigaCreditoAprovado;
         private Comum.Components.HLP_ComboBox cbxstObrigaAnaliseFinanceiraOrcamento;
         private Comum.Components.HLP_ComboBox cbxstObrigaAnaliseFinanceiraPedidoVenda;
@@ -3818,19 +3774,26 @@
         private Comum.Components.HLP_ComboBox cbxstObrigaAprovacaoPedidoVenda;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidMoeda;
         private Comum.Components.HLP_ComboBox cbxstOrigemListaPreco;
-        private Comum.Components.HLP_NumericUpDown nudnQuantidadeDiasOrcamento;
         private Comum.Components.HLP_ComboBox cbxstUtilizaVendaCasada;
         private Comum.Components.HLP_ComboBox cbxstUtilizaVendaKitMateria;
         private Comum.Components.HLP_ComboBox cbxstRateioFrete;
+        private System.Windows.Forms.TabPage tabPage8;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel9;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorFinanceiro;
+        private Comum.Components.HLP_TextBox txtxMaskClasseFinanceira;
         private Comum.Components.HLP_ComboBox cbxstPedidoCompraGeraPrevisao;
         private Comum.Components.HLP_ComboBox cbxstPedidoVendaGeraPrevisao;
         private Comum.Components.HLP_ComboBox cbxstPagaComissaoPor;
         private Comum.Components.HLP_ComboBox cbxstCreditoAprovado;
         private Comum.Components.HLP_ComboBox cbxstBloqueiaClientePosCartaCobranca;
-        private Comum.Components.HLP_TextBox txtxMaskClasseFinanceira;
-        private Comum.Components.HLP_NumericUpDown nudpINSSss;
+        private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorEmpresa;
+        private Comum.Components.HLP_TextBox txtCodigo;
+        private Comum.Components.HLP_TextBox txtxNome;
 
     }
 }

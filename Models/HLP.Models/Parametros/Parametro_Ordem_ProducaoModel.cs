@@ -10,7 +10,7 @@ namespace HLP.Models.Entries.Parametros
     public class Parametro_Ordem_ProducaoModel
     {
         [ParameterOrder(Order = 1)]
-        public int idParametroOrdemProducao { get; set; }
+        public int? idParametroOrdemProducao { get; set; }
         [ParameterOrder(Order = 2)]
         public byte stProducaoGera { get; set; }
         [ParameterOrder(Order = 3)]

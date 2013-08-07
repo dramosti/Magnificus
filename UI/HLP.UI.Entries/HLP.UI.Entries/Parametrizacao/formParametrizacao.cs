@@ -55,6 +55,7 @@ namespace HLP.UI.Entries.Parametrizacao
         public override void Atualizar()
         {
             base.Atualizar();
+            txtCodigo.Enabled = txtxNome.Enabled = false;
         }
 
         public override void Salvar()
@@ -111,7 +112,6 @@ namespace HLP.UI.Entries.Parametrizacao
         private void PopulaTabela()
         {
             #region Parametro_Estoque
-            objEmpresaParametrosModel.ObjParametro_EstoqueModel = new Models.Entries.Parametros.Parametro_EstoqueModel();
             objEmpresaParametrosModel.ObjParametro_EstoqueModel.stEstoqueMinimo = cbxstEstoqueMinimo.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_EstoqueModel.stEstoqueMaximo = cbxstEstoqueMaximo.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_EstoqueModel.stMediaConsumo = cbxstMediaConsumo.SelectedIndexByte;
@@ -122,7 +122,6 @@ namespace HLP.UI.Entries.Parametrizacao
             #endregion
 
             #region Parametro_Custos
-            objEmpresaParametrosModel.ObjParametro_CustosModel = new Models.Entries.Parametros.Parametro_CustosModel();
             objEmpresaParametrosModel.ObjParametro_CustosModel.xHorasTrabalhadasDia = nudxHorasTrabalhadasDia.Text;
             objEmpresaParametrosModel.ObjParametro_CustosModel.xDiasTrabalhadasSemana = nudxDiasTrabalhadasSemana.Text;
             objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoComposicao = cbxstCustoComposicao.SelectedIndexByte;
@@ -132,11 +131,11 @@ namespace HLP.UI.Entries.Parametrizacao
             objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoDefault = cbxstCustoDefault.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoMedio = cbxstCustoMedio.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_CustosModel.stCompoeBaseCalculoCustoOperacional = cbxstCompoeBaseCalculoCustoOperacional.SelectedIndexByte;
-            objEmpresaParametrosModel.ObjParametro_CustosModel.idTipoOperacao = hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value;
+            if (hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value != 0)
+                objEmpresaParametrosModel.ObjParametro_CustosModel.idTipoOperacao = hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value;
             #endregion
 
             #region Parametro_Compras
-            objEmpresaParametrosModel.ObjParametro_ComprasModel = new Models.Entries.Parametros.Parametro_ComprasModel();
             objEmpresaParametrosModel.ObjParametro_ComprasModel.vAprovacaoAutomaticaPedidoCompras = Convert.ToDecimal(nudvAprovacaoAutomaticaPedidoCompras.Value);
             objEmpresaParametrosModel.ObjParametro_ComprasModel.stAprovacaoRequisicao = cbxstAprovacaoRequisicao.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_ComprasModel.stAprovacaoCotacaoCompras = cbxstAprovacaoCotacaoCompras.SelectedIndexByte;
@@ -145,17 +144,18 @@ namespace HLP.UI.Entries.Parametrizacao
             #endregion
 
             #region Parametro Ordem de Produção
-            objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel = new Models.Entries.Parametros.Parametro_Ordem_ProducaoModel();
             objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stProducaoGera = cbxstProducaoGera.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stGeraOPFilhas = cbxstGeraOPFilhas.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stFechaOPSaldoAproduzir = cbxstFechaOPSaldoAproduzir.SelectedIndexByte;
-            objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPProduto = hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value;
-            objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPServico = hlP_PesquisaidTipoOperacaoparaOPServico.Value;
-            objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPBenificiamento = hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Value;
+            if (hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value != 0)
+                objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPProduto = hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value;
+            if (hlP_PesquisaidTipoOperacaoparaOPServico.Value != 0)
+                objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPServico = hlP_PesquisaidTipoOperacaoparaOPServico.Value;
+            if (hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Value != 0)
+                objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPBenificiamento = hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Value;
             #endregion
 
             #region Parametro Fiscal Geral
-            objEmpresaParametrosModel.ObjParametro_FiscalModel = new Models.Entries.Parametros.Parametro_FiscalModel();
             objEmpresaParametrosModel.ObjParametro_FiscalModel.pPIS = nudpAliquotaPIS.Value;
             objEmpresaParametrosModel.ObjParametro_FiscalModel.pCOFINS = nudpAliquotaCOFINS.Value;
             objEmpresaParametrosModel.ObjParametro_FiscalModel.pAliquotaCSLL = nudpAliquotaCSLL.Value;
@@ -189,14 +189,15 @@ namespace HLP.UI.Entries.Parametrizacao
             objEmpresaParametrosModel.ObjParametro_FiscalModel.stSuperSimples = cbxstSuperSimples.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_FiscalModel.stCRT = cbxstCRT.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeMsgPadraoSs = cbxstImprimeMsgPadraoSs.SelectedIndexByte;
-            objEmpresaParametrosModel.ObjParametro_FiscalModel.idObservacaoMsgSuperSimples = hlP_PesquisaidObservacaoMsgSuperSimples.Value;
+            if (hlP_PesquisaidObservacaoMsgSuperSimples.Value != 0)
+                objEmpresaParametrosModel.ObjParametro_FiscalModel.idObservacaoMsgSuperSimples = hlP_PesquisaidObservacaoMsgSuperSimples.Value;
             objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeMsgCreditoIcmsSs = cbxstImprimeMsgCreditoIcmsSs.SelectedIndexByte;
-            objEmpresaParametrosModel.ObjParametro_FiscalModel.idObservacaoMsgCreditoSuperSimples = hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Value;
+            if (hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Value != 0)
+                objEmpresaParametrosModel.ObjParametro_FiscalModel.idObservacaoMsgCreditoSuperSimples = hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Value;
             objEmpresaParametrosModel.ObjParametro_FiscalModel.pINSSss = nudpINSSss.Value;
             #endregion
 
             #region Parametro Comercial
-            objEmpresaParametrosModel.ObjParametro_ComercialModel = new Models.Entries.Parametros.Parametro_ComercialModel();
             objEmpresaParametrosModel.ObjParametro_ComercialModel.xMaskCentroCusto = txtxMaskCentroCusto.Text;
             objEmpresaParametrosModel.ObjParametro_ComercialModel.nQuantidadeDiasOrcamento = nudnQuantidadeDiasOrcamento.ValueInt;
             objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaCreditoAprovado = cbxstObrigaCreditoAprovado.SelectedIndexByte;
@@ -208,7 +209,8 @@ namespace HLP.UI.Entries.Parametrizacao
             objEmpresaParametrosModel.ObjParametro_ComercialModel.stDesconto = cbxstDesconto.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_ComercialModel.stOrcamentoProjeto = cbxstOrcamentoProjeto.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAprovacaoPedidoVenda = cbxstObrigaAprovacaoPedidoVenda.SelectedIndexByte;
-            objEmpresaParametrosModel.ObjParametro_ComercialModel.idMoeda = hlP_PesquisaidMoeda.Value;
+            if (hlP_PesquisaidMoeda.Value != 0)
+                objEmpresaParametrosModel.ObjParametro_ComercialModel.idMoeda = hlP_PesquisaidMoeda.Value;
             objEmpresaParametrosModel.ObjParametro_ComercialModel.stOrigemListaPreco = cbxstOrigemListaPreco.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_ComercialModel.stUtilizaVendaCasada = cbxstUtilizaVendaCasada.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_ComercialModel.stUtilizaVendaKitMaterial = cbxstUtilizaVendaKitMateria.SelectedIndexByte;
@@ -216,7 +218,6 @@ namespace HLP.UI.Entries.Parametrizacao
             #endregion
 
             #region Parametro Financeiro
-            objEmpresaParametrosModel.ObjParametro_FinanceiroModel = new Models.Entries.Parametros.Parametro_FinanceiroModel();
             objEmpresaParametrosModel.ObjParametro_FinanceiroModel.xMaskClasseFinanceira = txtxMaskClasseFinanceira.Text;
             objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stPedidoCompraGeraPrevisao = cbxstPedidoCompraGeraPrevisao.SelectedIndexByte;
             objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stPedidoVendaGeraPrevisao = cbxstPedidoVendaGeraPrevisao.SelectedIndexByte;
@@ -229,112 +230,137 @@ namespace HLP.UI.Entries.Parametrizacao
         private void PopulaForm()
         {
             #region Parametro_Estoque
-            cbxstEstoqueMinimo.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stEstoqueMinimo;
-            cbxstEstoqueMaximo.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stEstoqueMaximo;
-            cbxstMediaConsumo.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stMediaConsumo;
-            cbxstVendasGera.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stVendasGera;
-            cbxstGradeEstoque.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stGradeEstoque;
-            cbxstRastreabilidadeMaterial.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stRastreabilidadeMaterial;
-            cbxstRastreabilidadeProdutoAcabado.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stRastreabilidadeProdutoAcabado;
+            if (objEmpresaParametrosModel.ObjParametro_EstoqueModel.idParametroEstoque != null)
+            {
+                cbxstEstoqueMinimo.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stEstoqueMinimo;
+                cbxstEstoqueMaximo.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stEstoqueMaximo;
+                cbxstMediaConsumo.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stMediaConsumo;
+                cbxstVendasGera.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stVendasGera;
+                cbxstGradeEstoque.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stGradeEstoque;
+                cbxstRastreabilidadeMaterial.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stRastreabilidadeMaterial;
+                cbxstRastreabilidadeProdutoAcabado.SelectedIndex = objEmpresaParametrosModel.ObjParametro_EstoqueModel.stRastreabilidadeProdutoAcabado;
+            }
             #endregion
 
             #region Parametro_Custos
-            nudxHorasTrabalhadasDia.Value = Convert.ToDecimal(objEmpresaParametrosModel.ObjParametro_CustosModel.xHorasTrabalhadasDia);
-            nudxDiasTrabalhadasSemana.Value = Convert.ToDecimal(objEmpresaParametrosModel.ObjParametro_CustosModel.xDiasTrabalhadasSemana);
-            cbxstCustoComposicao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoComposicao;
-            cbxstValorVenda.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stValorVenda;
-            cbxstAtualizaValorCusto.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stAtualizaValorCusto;
-            cbxstAtualizaValorVenda.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stValorVenda;
-            cbxstCustoComposicao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoDefault;
-            cbxstCustoMedio.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoMedio;
-            cbxstCompoeBaseCalculoCustoOperacional.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stCompoeBaseCalculoCustoOperacional;
-            hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value = (int)objEmpresaParametrosModel.ObjParametro_CustosModel.idTipoOperacao;
+            if (objEmpresaParametrosModel.ObjParametro_CustosModel.idParametroCustos != null)
+            {
+                nudxHorasTrabalhadasDia.Value = Convert.ToDecimal(objEmpresaParametrosModel.ObjParametro_CustosModel.xHorasTrabalhadasDia);
+                nudxDiasTrabalhadasSemana.Value = Convert.ToDecimal(objEmpresaParametrosModel.ObjParametro_CustosModel.xDiasTrabalhadasSemana);
+                cbxstCustoComposicao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoComposicao;
+                cbxstValorVenda.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stValorVenda;
+                cbxstAtualizaValorCusto.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stAtualizaValorCusto;
+                cbxstAtualizaValorVenda.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stValorVenda;
+                cbxstCustoDefault.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoDefault;
+                cbxstCustoMedio.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stCustoMedio;
+                cbxstCompoeBaseCalculoCustoOperacional.SelectedIndex = objEmpresaParametrosModel.ObjParametro_CustosModel.stCompoeBaseCalculoCustoOperacional;
+                hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value = objEmpresaParametrosModel.ObjParametro_CustosModel.idTipoOperacao ?? 0;
+
+            }
             #endregion
 
             #region Parametro_Compras
-            nudvAprovacaoAutomaticaPedidoCompras.Value = objEmpresaParametrosModel.ObjParametro_ComprasModel.vAprovacaoAutomaticaPedidoCompras;
-            cbxstAprovacaoRequisicao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComprasModel.stIgnoraSaldoRequisicao;
-            cbxstAprovacaoCotacaoCompras.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComprasModel.stAprovacaoCotacaoCompras;
-            cbxstAprovacaoPedidoCompras.SelectedValue = objEmpresaParametrosModel.ObjParametro_ComprasModel.stAprovacaoPedidoCompras;
-            cbxstIgnoraSaldoRequisicao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComprasModel.stIgnoraSaldoRequisicao;
+            if (objEmpresaParametrosModel.ObjParametro_ComprasModel.idParametro_Compras != null)
+            {
+                nudvAprovacaoAutomaticaPedidoCompras.Value = objEmpresaParametrosModel.ObjParametro_ComprasModel.vAprovacaoAutomaticaPedidoCompras;
+                cbxstAprovacaoRequisicao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComprasModel.stIgnoraSaldoRequisicao;
+                cbxstAprovacaoCotacaoCompras.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComprasModel.stAprovacaoCotacaoCompras;
+                cbxstAprovacaoPedidoCompras.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComprasModel.stAprovacaoPedidoCompras;
+                cbxstIgnoraSaldoRequisicao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComprasModel.stIgnoraSaldoRequisicao;
+            }
             #endregion
 
             #region Parametro Ordem de Produção
-            cbxstProducaoGera.SelectedIndex = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stProducaoGera;
-            cbxstGeraOPFilhas.SelectedIndex = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stGeraOPFilhas;
-            cbxstFechaOPSaldoAproduzir.SelectedIndex = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stFechaOPSaldoAproduzir;
-            hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value = (int)objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPProduto;
-            hlP_PesquisaidTipoOperacaoparaOPServico.Value = (int)objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPServico;
-            hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Value = (int)objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPBenificiamento;
+            if (objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idParametroOrdemProducao != null)
+            {
+                cbxstProducaoGera.SelectedIndex = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stProducaoGera;
+                cbxstGeraOPFilhas.SelectedIndex = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stGeraOPFilhas;
+                cbxstFechaOPSaldoAproduzir.SelectedIndex = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.stFechaOPSaldoAproduzir;
+                hlP_Pesquisa1idTipoOperacaoparaOPProduto.Value = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPProduto ?? 0;
+                hlP_PesquisaidTipoOperacaoparaOPServico.Value = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPServico ?? 0;
+                hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Value = objEmpresaParametrosModel.ObjParametro_Ordem_ProducaoModel.idTipoOperacaoparaOPBenificiamento ?? 0;
+            }
             #endregion
 
             #region Parametro Fiscal Geral
-            nudpAliquotaPIS.Value = objEmpresaParametrosModel.ObjParametro_FiscalModel.pPIS;
-            nudpAliquotaCOFINS.Value = objEmpresaParametrosModel.ObjParametro_FiscalModel.pCOFINS;
-            nudpAliquotaCSLL.Value = objEmpresaParametrosModel.ObjParametro_FiscalModel.pAliquotaCSLL;
-            cbxstRegimeApuracaoIRPJ.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stRegimeApuracaoIRPJ;
-            cbxstRegimeApuracaoIPI.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stRegimeApuracaoIPI;
-            cbxstRegimeTributacaoPISCOFINS.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stRegimeTributacaoPISCOFINS;
-            cbxstRegimeApuracaoPISCOFINS.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stRegimeApuracaoPISCOFINS;
-            cbxstProdutorRural.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stProdutorRural;
-            cbxstCooperativaAgricola.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stCooperativaAgricola;
-            cbxstDestacaISSnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaISSnfServico;
-            cbxstDestacaCSLLnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaCSLLnfServico;
-            cbxstDestacaIRRFnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaIRRFnfServico;
-            cbxstDestacaPISCOFINSnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaPISCOFINSnfServico;
-            cbxstDestacaINSSnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaINSSnfServico;
-            cbxstAmbienteNfeProdutos.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stAmbienteNfeProdutos;
-            cbxstAmbienteNfeServicos.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stAmbienteNfeServicos;
-            cbxstImprimeMsgSuframaNf.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeMsgSuframaNf;
-            cbxstImprimeCodigoNf.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeCodigoNf;
-            cbxstIcmsSubstDif.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stIcmsSubstDif;
+            if (objEmpresaParametrosModel.ObjParametro_FiscalModel.idParametroFiscal != null)
+            {
+                nudpAliquotaPIS.Value = objEmpresaParametrosModel.ObjParametro_FiscalModel.pPIS;
+                nudpAliquotaCOFINS.Value = objEmpresaParametrosModel.ObjParametro_FiscalModel.pCOFINS;
+                nudpAliquotaCSLL.Value = objEmpresaParametrosModel.ObjParametro_FiscalModel.pAliquotaCSLL;
+                cbxstRegimeApuracaoIRPJ.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stRegimeApuracaoIRPJ;
+                cbxstRegimeApuracaoIPI.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stRegimeApuracaoIPI;
+                cbxstRegimeTributacaoPISCOFINS.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stRegimeTributacaoPISCOFINS;
+                cbxstRegimeApuracaoPISCOFINS.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stRegimeApuracaoPISCOFINS;
+                cbxstProdutorRural.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stProdutorRural;
+                cbxstCooperativaAgricola.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stCooperativaAgricola;
+                cbxstDestacaISSnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaISSnfServico;
+                cbxstDestacaCSLLnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaCSLLnfServico;
+                cbxstDestacaIRRFnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaIRRFnfServico;
+                cbxstDestacaPISCOFINSnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaPISCOFINSnfServico;
+                cbxstDestacaINSSnfServico.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stDestacaINSSnfServico;
+                cbxstAmbienteNfeProdutos.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stAmbienteNfeProdutos;
+                cbxstAmbienteNfeServicos.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stAmbienteNfeServicos;
+                cbxstImprimeMsgSuframaNf.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeMsgSuframaNf;
+                cbxstImprimeCodigoNf.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeCodigoNf;
+                cbxstIcmsSubstDif.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stIcmsSubstDif;
+            }
 
             #endregion
 
             #region Parametro Fiscal Super Simples
-            nudpICMSss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pICMSss;
-            nudpISSss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pISSss;
-            nudpCSLLss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pCSLLss;
-            nudpIRRFss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pIRRFss;
-            nudpPISss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pPISss;
-            nudpCOFINSss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pCOFINSss;
-            nudnItensNfProduto.ValueInt = objEmpresaParametrosModel.ObjParametro_FiscalModel.nItensNfProduto;
-            nudnItensNfServico.ValueInt = objEmpresaParametrosModel.ObjParametro_FiscalModel.nItensNfServico;
-            cbxstSuperSimples.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stSuperSimples;
-            cbxstCRT.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stCRT;
-            cbxstImprimeMsgPadraoSs.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeMsgPadraoSs;
-            hlP_PesquisaidObservacaoMsgSuperSimples.Value = (int)objEmpresaParametrosModel.ObjParametro_FiscalModel.idObservacaoMsgSuperSimples;
-            cbxstImprimeMsgPadraoSs.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeMsgCreditoIcmsSs;
-            hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Value = (int)objEmpresaParametrosModel.ObjParametro_FiscalModel.idObservacaoMsgCreditoSuperSimples;
-            nudpINSSss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pINSSss;
+            if (objEmpresaParametrosModel.ObjParametro_FiscalModel.idParametroFiscal != null)
+            {
+                nudpICMSss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pICMSss;
+                nudpISSss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pISSss;
+                nudpCSLLss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pCSLLss;
+                nudpIRRFss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pIRRFss;
+                nudpPISss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pPISss;
+                nudpCOFINSss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pCOFINSss;
+                nudnItensNfProduto.ValueInt = objEmpresaParametrosModel.ObjParametro_FiscalModel.nItensNfProduto;
+                nudnItensNfServico.ValueInt = objEmpresaParametrosModel.ObjParametro_FiscalModel.nItensNfServico;
+                cbxstSuperSimples.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stSuperSimples;
+                cbxstCRT.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stCRT;
+                cbxstImprimeMsgPadraoSs.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeMsgPadraoSs;
+                hlP_PesquisaidObservacaoMsgSuperSimples.Value = objEmpresaParametrosModel.ObjParametro_FiscalModel.idObservacaoMsgSuperSimples ?? 0;
+                cbxstImprimeMsgCreditoIcmsSs.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FiscalModel.stImprimeMsgCreditoIcmsSs;
+                hlP_PesquisaidObservacaoMsgCreditoSuperSimples.Value = objEmpresaParametrosModel.ObjParametro_FiscalModel.idObservacaoMsgCreditoSuperSimples ?? 0;
+                nudpINSSss.Value = (decimal)objEmpresaParametrosModel.ObjParametro_FiscalModel.pINSSss;
+            }
             #endregion
 
             #region Parametro Comercial
-            txtxMaskCentroCusto.Text = objEmpresaParametrosModel.ObjParametro_ComercialModel.xMaskCentroCusto;
-            nudnQuantidadeDiasOrcamento.ValueInt = objEmpresaParametrosModel.ObjParametro_ComercialModel.nQuantidadeDiasOrcamento;
-            cbxstObrigaCreditoAprovado.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaCreditoAprovado;
-            cbxstObrigaAnaliseFinanceiraOrcamento.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAnaliseFinanceiraOrcamento;
-            cbxstObrigaAnaliseFinanceiraPedidoVenda.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAnaliseFinanceiraPedidoVenda;
-            cbxstObrigaAnaliseFinanceiraFaturamento.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAnaliseFinanceiraFaturamento;
-            cbxstObrigaUsoListaPreco.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaUsoListaPreco;
-            cbxstDescontoPor.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stDescontoPor;
-            cbxstDesconto.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stDesconto;
-            cbxstOrcamentoProjeto.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stOrcamentoProjeto;
-            cbxstObrigaAprovacaoPedidoVenda.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAprovacaoPedidoVenda;
-            hlP_PesquisaidMoeda.Value = objEmpresaParametrosModel.ObjParametro_ComercialModel.idMoeda;
-            cbxstOrigemListaPreco.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stOrigemListaPreco;
-            cbxstUtilizaVendaCasada.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stUtilizaVendaCasada;
-            cbxstUtilizaVendaKitMateria.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stUtilizaVendaKitMaterial;
-            cbxstRateioFrete.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stRateioFrete;
+            if (objEmpresaParametrosModel.ObjParametro_ComercialModel.idParametroComercial != null)
+            {
+                txtxMaskCentroCusto.Text = objEmpresaParametrosModel.ObjParametro_ComercialModel.xMaskCentroCusto;
+                nudnQuantidadeDiasOrcamento.ValueInt = objEmpresaParametrosModel.ObjParametro_ComercialModel.nQuantidadeDiasOrcamento;
+                cbxstObrigaCreditoAprovado.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaCreditoAprovado;
+                cbxstObrigaAnaliseFinanceiraOrcamento.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAnaliseFinanceiraOrcamento;
+                cbxstObrigaAnaliseFinanceiraPedidoVenda.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAnaliseFinanceiraPedidoVenda;
+                cbxstObrigaAnaliseFinanceiraFaturamento.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAnaliseFinanceiraFaturamento;
+                cbxstObrigaUsoListaPreco.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaUsoListaPreco;
+                cbxstDescontoPor.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stDescontoPor;
+                cbxstDesconto.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stDesconto;
+                cbxstOrcamentoProjeto.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stOrcamentoProjeto;
+                cbxstObrigaAprovacaoPedidoVenda.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stObrigaAprovacaoPedidoVenda;
+                hlP_PesquisaidMoeda.Value = objEmpresaParametrosModel.ObjParametro_ComercialModel.idMoeda;
+                cbxstOrigemListaPreco.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stOrigemListaPreco;
+                cbxstUtilizaVendaCasada.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stUtilizaVendaCasada;
+                cbxstUtilizaVendaKitMateria.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stUtilizaVendaKitMaterial;
+                cbxstRateioFrete.SelectedIndex = objEmpresaParametrosModel.ObjParametro_ComercialModel.stRateioFrete;
+            }
             #endregion
 
             #region Parametro Financeiro
-            txtxMaskClasseFinanceira.Text = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.xMaskClasseFinanceira;
-            cbxstPedidoCompraGeraPrevisao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stPedidoCompraGeraPrevisao;
-            cbxstPedidoVendaGeraPrevisao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stPedidoVendaGeraPrevisao;
-            cbxstPagaComissaoPor.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stPagaComissaoPor;
-            cbxstCreditoAprovado.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stCreditoAprovado;
-            cbxstBloqueiaClientePosCartaCobranca.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stBloqueiaClientePosCartaCobranca;
+            if (objEmpresaParametrosModel.ObjParametro_FinanceiroModel.idParametroFinanceiro != null)
+            {
+                txtxMaskClasseFinanceira.Text = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.xMaskClasseFinanceira;
+                cbxstPedidoCompraGeraPrevisao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stPedidoCompraGeraPrevisao;
+                cbxstPedidoVendaGeraPrevisao.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stPedidoVendaGeraPrevisao;
+                cbxstPagaComissaoPor.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stPagaComissaoPor;
+                cbxstCreditoAprovado.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stCreditoAprovado;
+                cbxstBloqueiaClientePosCartaCobranca.SelectedIndex = objEmpresaParametrosModel.ObjParametro_FinanceiroModel.stBloqueiaClientePosCartaCobranca;
+            }
             #endregion
         }
 
@@ -367,7 +393,7 @@ namespace HLP.UI.Entries.Parametrizacao
                 objEmpresaModel = empresaService.GetEmpresa(CompanyData.idEmpresa);
                 Invoke(new MethodInvoker(delegate
                     {
-                        txtIdEmpresa.Text = objEmpresaModel.idEmpresa.ToString();
+                        txtCodigo.Text = objEmpresaModel.idEmpresa.ToString();
                     }));
 
                 Invoke(new MethodInvoker(delegate
@@ -377,13 +403,9 @@ namespace HLP.UI.Entries.Parametrizacao
 
                 Invoke(new MethodInvoker(delegate
                 {
-                    txtxFantasia.Text = objEmpresaModel.xFantasia;
+                    PopulaForm();
                 }));
 
-                Invoke(new MethodInvoker(delegate
-                {
-                    maskxCNPJ.Text = objEmpresaModel.xCNPJ;
-                }));
                 Invoke(new MethodInvoker(delegate
                 {
                     HabilitaBotoes(1);

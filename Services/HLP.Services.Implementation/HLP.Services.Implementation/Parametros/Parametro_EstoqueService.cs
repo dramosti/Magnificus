@@ -32,7 +32,8 @@ namespace HLP.Services.Implementation.Entries.Parametros
 
         public Parametro_EstoqueModel GetParametro_Estoque()
         {
-            return _Parametro_EstoqueRepository.GetParametro_Estoque();
+            Parametro_EstoqueModel objParamEstoqueModel = new Parametro_EstoqueModel();
+            return _Parametro_EstoqueRepository.GetParametro_Estoque() ?? objParamEstoqueModel;
         }
 
         public List<Parametro_EstoqueModel> GetAllParametro_Estoque()
