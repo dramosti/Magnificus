@@ -67,7 +67,11 @@ namespace HLP.Comum.Components
                 }
                 int iWidthMax = lctr.Max(c => c.Width);
                 Control controle = lctr.FirstOrDefault(c => c.Width == iWidthMax);
-                this.Width = (controle.Width + controle.Margin.Left) - 3;
+
+
+                //this.Width = (controle.Width + controle.Margin.Left) - 3;
+
+                this.Width = ((controle as UserControlBase)._TamanhoComponente + (controle as UserControlBase)._TamanhoMaiorLabel);
 
 
             }
@@ -89,6 +93,7 @@ namespace HLP.Comum.Components
             else
             {
                 btnStatus.Image = HLP.Comum.Components.Properties.Resources.seta_up;
+                ConfigMaiorLabel();
             }
             bOpen = !bOpen;
         }
@@ -98,6 +103,11 @@ namespace HLP.Comum.Components
             foreach (Control ctr in lComponentesBySerparador)
             {
                 ctr.Visible = bVisible;
+                if (!bVisible)
+                    ctr.Visible = bVisible;
+                else
+                    (ctr as UserControlBase).CarregaComponente();
+
             }
         }
 

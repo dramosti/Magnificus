@@ -83,8 +83,8 @@ namespace Magnificus
                                 throw;
                             }
                         }
-                        formTeste aa = new formTeste();
-                        aa.ShowDialog();
+                        //formTeste aa = new formTeste();
+                        //aa.ShowDialog();
                         FormScripts frmScripts = new FormScripts();
                         formLoginHlp login = new formLoginHlp();
                         UserData.xNome = "Login";

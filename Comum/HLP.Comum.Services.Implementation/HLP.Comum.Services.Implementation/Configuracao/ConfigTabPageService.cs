@@ -151,20 +151,13 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                     //Configura TabPage
                     tab.Text = Util.ToUpperFirstLetter(objTabPage.objConfigTabPageUsu.xTabPage);
                     tab.ToolTipText = Util.ToUpperFirstLetter(objTabPage.objConfigTabPageUsu.xHelp);
-
-                    //Busca o maior label
-                    TabPage Tab = lTabPageControl.FirstOrDefault(c => c.Name == objTabPage.xNameTab);
                     //Configura Componentes;
                     iComponenteService.SetConfigToComp(objTabPage.lConfigComponente, lControl);
-
-                    iComponenteService.SetTamanhoComponentes(tab);
+                    //iComponenteService.SetTamanhoComponentes(tab);
 
                     if (objTabPage.lConfigTabPageModel.Count() > 0)
                     {
                         SetConfigToTabPagesRecursivo(objTabPage.lConfigTabPageModel, lControl);
-                        //foreach (ConfigTabPageModel objtab in objTabPage.lConfigTabPageModel)
-                        //{
-                        //}
                     }
                 }
             }

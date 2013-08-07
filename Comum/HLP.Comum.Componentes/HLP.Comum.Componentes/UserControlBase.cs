@@ -67,9 +67,9 @@ namespace HLP.Comum.Components
                             _labelGroup.lComponentesBySerparador.Remove(this);
                         }
                     }
-                    _labelGroup.ConfigMaiorLabel();
+                    //_labelGroup.ConfigMaiorLabel();
                 }
-                
+
 
             }
         }
@@ -172,7 +172,7 @@ namespace HLP.Comum.Components
             {
                 if (value != "")
                 {
-                    int i = controleBase.Width;
+                    int i = this.Width - lblBase.Width + 4;// controleBase.Width;
                     controleBase.Dock = DockStyle.None;
                     if (controleBase.GetType() == typeof(KryptonButton))
                         controleBase.Text = Util.ToUpperFirstLetter(value);
@@ -578,6 +578,7 @@ namespace HLP.Comum.Components
 
         public void lblBase_Click(object sender, EventArgs e)
         {
+            controleBase.Focus();
             if (lblBase.ForeColor == Color.Red)
             {
                 ctxConfig.Show(MousePosition.X, MousePosition.Y);
@@ -587,11 +588,17 @@ namespace HLP.Comum.Components
         {
             try
             {
-                if ((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) < ((this.Parent as FlowLayoutPanel).Controls.Count - 1))
+                if (!this.Name.ToUpper().Equals("TXTCODIGO"))
                 {
-                    (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) + 1);
+                    if ((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) < ((this.Parent as FlowLayoutPanel).Controls.Count - 1))
+                    {
+                        if (((this.Parent as FlowLayoutPanel).Controls[((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) + 1)]).GetType() != typeof(HLP_LabelSeparator))
+                        {
+                            (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) + 1);
 
-                    this.TabIndex = (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this);
+                            this.TabIndex = (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this);
+                        }
+                    }
                 }
 
             }
@@ -605,10 +612,20 @@ namespace HLP.Comum.Components
         {
             try
             {
-                if ((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) > 0)
+                if (!this.Name.ToUpper().Equals("TXTCODIGO"))
                 {
-                    (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) - 1);
-                    this.TabIndex = (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this);
+                    int index = (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) - 1;
+                    if (!((this.Parent as FlowLayoutPanel).Controls[index + 1].Name.ToUpper().Equals("TXTCODIGO")))
+                    {
+                        if ((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) > 0)
+                        {
+                            if (((this.Parent as FlowLayoutPanel).Controls[(index)]).GetType() != typeof(HLP_LabelSeparator))
+                            {
+                                (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, index);
+                                this.TabIndex = index;
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -625,8 +642,6 @@ namespace HLP.Comum.Components
             tsmMoveDown.Click += tsmMoveDown_Click;
 
         }
-
-
 
     }
 }

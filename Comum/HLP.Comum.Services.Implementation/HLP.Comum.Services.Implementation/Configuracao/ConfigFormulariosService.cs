@@ -63,8 +63,8 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                 CarregaDadosFormulario(pnPrincipal, sViewForm);
                 // Se estiver sendo debugado, ira salvar a configuração da Tela na Base de Dados com o usuario HLP
                 if (System.Diagnostics.Debugger.IsAttached)
-                {                   
-                        
+                {
+
                     if (iConfigFormulariosRepository.FormularioExistInDataBase(objConfigFormularioModel.xNameFormulario))
                     {
                         iConfigFormulariosRepository.DeleteFormularioUsuario(objConfigFormularioModel.xNameFormulario, UserData.idUserHLP);
@@ -101,6 +101,13 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                 pnPrincipal.FindForm().Enabled = Convert.ToBoolean(objConfigFormularioModel.objConfigFormUsu.stAtivo);
 
                 itabPageService.SetConfigToTabPagesRecursivo(objConfigFormularioModel.lConfigTabPage, lControl);
+                foreach (FlowLayoutPanel flp in lFlowLayoutPanel)
+                {
+                    foreach (HLP_LabelSeparator sep in flp.Controls.OfType<HLP_LabelSeparator>())
+                    {
+                        sep.ConfigMaiorLabel();
+                    }
+                }
                 objConfigFormularioModel.lobjConfigComponente = itabPageService.GetListaControlesConfigComponenteModel();
 
 
@@ -162,7 +169,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                 (ctr as FlowLayoutPanel).AutoScroll = true;
                 (ctr as FlowLayoutPanel).VerticalScroll.Value = 0;
                 (ctr as FlowLayoutPanel).HorizontalScroll.Value = 0;
-            }            
+            }
         }
 
         public List<TabPage> GetTabPages()
