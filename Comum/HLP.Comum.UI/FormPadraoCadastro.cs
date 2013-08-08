@@ -16,6 +16,7 @@ using HLP.Comum.Messages;
 using HLP.Comum.Services.Interface.Configuracao;
 using HLP.Comum.Infrastructure;
 using HLP.Comum.Infrastructure.Static;
+using System.Reflection;
 
 
 namespace HLP.Comum.UI
@@ -47,6 +48,13 @@ namespace HLP.Comum.UI
         public List<int> lParaExcluir = new List<int>();
         public List<int> lExcluido = new List<int>();
 
+        private struct Propriedades
+        {
+            public string xnome;
+            public object value;
+            public string xtabela;
+        }
+        List<Propriedades> lPropriedades = new List<Propriedades>();
 
         public FormPadraoCadastro()
         {
@@ -422,7 +430,7 @@ namespace HLP.Comum.UI
                         lblHelp.Text = objcomp.objConfigComponenteModel.objConfigCompUsu.xHelp;
                     }
                 }
-                
+
             }
             catch (System.Exception ex)
             {
@@ -1126,7 +1134,7 @@ namespace HLP.Comum.UI
             }
             else if (sender == tsDesabilitar)
             {
-                bwWorkerRecarregaForm.RunWorkerAsync();               
+                bwWorkerRecarregaForm.RunWorkerAsync();
             }
             else if (sender == tsCamposVisiveis)
             {
@@ -1134,6 +1142,146 @@ namespace HLP.Comum.UI
             }
         }
 
+        #region CarregaValores
+        protected void CarregaPropriedades<T>(T model, bool inicio = false) where T : class
+        {
+            if (inicio)
+            {
+                lPropriedades = new List<Propriedades>();
+            }
+            Type tipo = model.GetType();
+            Propriedades objPropriedades;
+            foreach (PropertyInfo property in tipo.GetProperties())
+            {
+                objPropriedades = new Propriedades();
+                objPropriedades.xnome = property.Name;
+                objPropriedades.value = property.GetValue(model);
+                objPropriedades.xtabela = model.GetType().Name.ToString().Replace("Model", "");
+
+                lPropriedades.Add(objPropriedades);
+            }
+        }
+
+        protected void CarregaForm()
+        {
+            string nomeProp = null;
+            Type tipo = null;
+            List<Propriedades> lTemp = new List<Propriedades>();
+            lTemp = lPropriedades.OrderBy(i => i.xnome).ToList();
+            foreach (Control c in iConfigFormularioService.lControl)
+            {
+                tipo = c.GetType();
+                if (c.GetType() != typeof(HLP.Comum.Components.HLP_DataGridView))
+                {
+                    nomeProp = ((HLP.Comum.Components.UserControlBase)c)._Field;
+
+                    try
+                    {
+                        Propriedades p = lPropriedades.FirstOrDefault(i => i.xnome ==
+                               nomeProp && i.xtabela == ((HLP.Comum.Components.UserControlBase)c)._Table);
+                        object valor = lPropriedades.FirstOrDefault(i => i.xnome ==
+                               nomeProp && i.xtabela == ((HLP.Comum.Components.UserControlBase)c)._Table).value;
+
+
+                        if (c.GetType() == typeof(HLP.Comum.Components.HLP_TextBox))
+                            ((HLP.Comum.Components.HLP_TextBox)c).Text = valor != null ? valor.ToString() : "";
+                        else if (c.GetType() == typeof(HLP.Comum.Components.HLP_MaskedTextBox))
+                            ((HLP.Comum.Components.HLP_MaskedTextBox)c).Text = valor != null ? valor.ToString() : "";
+                        else if (c.GetType() == typeof(HLP.Comum.Components.HLP_ComboBox))
+                        {
+                            if (((HLP.Comum.Components.HLP_ComboBox)c).DataSource == null)
+                                ((HLP.Comum.Components.HLP_ComboBox)c).SelectedIndex = valor != null ? valor.ToInt32() : -1;
+                            else
+                                ((HLP.Comum.Components.HLP_ComboBox)c).SelectedValue = valor != null ? valor.ToInt32() : -1;
+                        }
+                        else if (c.GetType() == typeof(HLP.Comum.Components.HLP_NumericUpDown))
+                        {
+                            ((HLP.Comum.Components.HLP_NumericUpDown)c).Value = valor != null ?
+                                valor.ToString() != "0" ? (decimal)valor : decimal.Zero : decimal.Zero;
+                        }
+                        else if (c.GetType() == typeof(HLP.Comum.Components.HLP_Pesquisa))
+                        {
+                            if (lPropriedades.FirstOrDefault(i => i.xnome ==
+                               nomeProp && i.xtabela == ((HLP.Comum.Components.UserControlBase)c)._Table).value != null)
+                                ((HLP.Comum.Components.HLP_Pesquisa)c).Value = lPropriedades.FirstOrDefault(i => i.xnome ==
+                                   nomeProp && i.xtabela == ((HLP.Comum.Components.UserControlBase)c)._Table).value.ToInt32();
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+                    }
+                }
+
+            }
+        }
+
+        protected object CarregaClasse<T>(T model) where T : class
+        {
+            string sTabela = model.GetType().Name.ToString().Replace("Model", "");
+            Type tipo = model.GetType();
+            Control controle = null;
+            List<Control> lControles = new List<Control>();
+            lControles = iConfigFormularioService.lControl.Where(c => c.GetType() !=
+                typeof(HLP.Comum.Components.HLP_DataGridView)).ToList();
+            //List<Control> lControlsTemp = new List<Control>();
+            //lControlsTemp = iConfigFormularioService.lControl.Where(i => ((UserControlBase)i)._Table == sTabela).ToList();
+            foreach (PropertyInfo item in tipo.GetProperties())
+            {
+                controle = (lControles.Where(c => c.GetType() != typeof(DataGridView))).
+                    FirstOrDefault(c =>
+                   ((UserControlBase)c)._Table == sTabela
+                     && ((UserControlBase)c)._Field == item.Name);
+
+                if (controle != null && controle.Name != "txtCodigo")
+                {
+                    try
+                    {
+                        if (controle.GetType() == typeof(HLP.Comum.Components.HLP_TextBox))
+                        {
+                            if (item.PropertyType == typeof(DateTime))
+                                item.SetValue(model, Convert.ToDateTime(((HLP.Comum.Components.HLP_TextBox)controle).Text));
+                            else if (item.PropertyType == typeof(string))
+                                item.SetValue(model, ((HLP.Comum.Components.HLP_TextBox)controle).Text);
+                        }
+
+                        else if (controle.GetType() == typeof(HLP.Comum.Components.HLP_MaskedTextBox))
+                        {
+                            item.SetValue(model, ((HLP.Comum.Components.HLP_MaskedTextBox)controle).Text);
+                        }
+
+                        else if (controle.GetType() == typeof(HLP.Comum.Components.HLP_NumericUpDown))
+                        {
+                            if (item.PropertyType == typeof(Int32))
+                                item.SetValue(model, ((HLP.Comum.Components.HLP_NumericUpDown)controle).Value.ToInt32());
+                            else if (item.PropertyType == typeof(decimal))
+                                item.SetValue(model, ((HLP.Comum.Components.HLP_NumericUpDown)controle).Value);
+                        }
+
+                        else if (controle.GetType() == typeof(HLP.Comum.Components.HLP_ComboBox))
+                        {
+                            if (item.PropertyType == typeof(bool))
+                                item.SetValue(model,
+                                    ((HLP.Comum.Components.HLP_ComboBox)controle).Text.Contains("SIM") ? true : false);
+                            else if (item.PropertyType == typeof(byte))
+                                item.SetValue(model, ((HLP.Comum.Components.HLP_ComboBox)controle).SelectedIndexByte);
+                        }
+                        else if (controle.GetType() == typeof(HLP.Comum.Components.HLP_Pesquisa))
+                        {
+                            if (((HLP.Comum.Components.HLP_Pesquisa)controle).Value != 0)
+                                item.SetValue(model, ((HLP.Comum.Components.HLP_Pesquisa)controle).Value);
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+                    }
+                }
+
+                //item.SetValue(model, 
+            }
+
+            return model;
+        }
+        #endregion
 
 
     }

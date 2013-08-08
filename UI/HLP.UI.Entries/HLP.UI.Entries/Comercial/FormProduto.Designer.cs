@@ -137,11 +137,11 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.kryptonPanel8 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dgvProduto_Revisao = new HLP.Comum.Components.HLP_DataGridView();
-            this.bsProduto_Revisao = new System.Windows.Forms.BindingSource(this.components);
             this.dInicialDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
             this.idUsuario = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.xRevisaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dFinalDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
+            this.bsProduto_Revisao = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
@@ -286,7 +286,7 @@ namespace HLP.UI.Entries.Comercial
             this.sep_Identificacao.Location = new System.Drawing.Point(0, 3);
             this.sep_Identificacao.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_Identificacao.Name = "sep_Identificacao";
-            this.sep_Identificacao.Size = new System.Drawing.Size(300, 18);
+            this.sep_Identificacao.Size = new System.Drawing.Size(300, 19);
             this.sep_Identificacao.TabIndex = 27;
             this.sep_Identificacao.TabStop = false;
             // 
@@ -306,9 +306,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(108, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(108, 28);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(108, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
@@ -333,9 +334,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtxcAlternativo._Visible = true;
             this.txtxcAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtxcAlternativo.Base = null;
+            this.txtxcAlternativo.bConfiguracao = false;
             this.txtxcAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxcAlternativo.Color = System.Drawing.Color.White;
-            this.txtxcAlternativo.Location = new System.Drawing.Point(50, 52);
+            this.txtxcAlternativo.Location = new System.Drawing.Point(50, 53);
             this.txtxcAlternativo.Margin = new System.Windows.Forms.Padding(50, 3, 15, 3);
             this.txtxcAlternativo.MaxLength = 32767;
             this.txtxcAlternativo.Name = "txtxcAlternativo";
@@ -360,9 +362,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtcEan._Visible = true;
             this.txtcEan.BackColor = System.Drawing.Color.Transparent;
             this.txtcEan.Base = null;
+            this.txtcEan.bConfiguracao = false;
             this.txtcEan.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtcEan.Color = System.Drawing.Color.White;
-            this.txtcEan.Location = new System.Drawing.Point(86, 77);
+            this.txtcEan.Location = new System.Drawing.Point(86, 78);
             this.txtcEan.Margin = new System.Windows.Forms.Padding(86, 3, 15, 3);
             this.txtcEan.MaxLength = 32767;
             this.txtcEan.Name = "txtcEan";
@@ -376,10 +379,10 @@ namespace HLP.UI.Entries.Comercial
             this.sep_Item._LabelText = "Item";
             this.sep_Item._TamanhoMaiorLabel = 0;
             this.sep_Item.BackColor = System.Drawing.Color.Transparent;
-            this.sep_Item.Location = new System.Drawing.Point(0, 27);
+            this.sep_Item.Location = new System.Drawing.Point(0, 104);
             this.sep_Item.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_Item.Name = "sep_Item";
-            this.sep_Item.Size = new System.Drawing.Size(494, 18);
+            this.sep_Item.Size = new System.Drawing.Size(494, 19);
             this.sep_Item.TabIndex = 28;
             this.sep_Item.TabStop = false;
             // 
@@ -399,9 +402,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtxPesquisa._Visible = true;
             this.txtxPesquisa.BackColor = System.Drawing.Color.Transparent;
             this.txtxPesquisa.Base = null;
+            this.txtxPesquisa.bConfiguracao = false;
             this.txtxPesquisa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxPesquisa.Color = System.Drawing.Color.White;
-            this.txtxPesquisa.Location = new System.Drawing.Point(51, 127);
+            this.txtxPesquisa.Location = new System.Drawing.Point(51, 129);
             this.txtxPesquisa.Margin = new System.Windows.Forms.Padding(51, 3, 15, 3);
             this.txtxPesquisa.MaxLength = 32767;
             this.txtxPesquisa.Name = "txtxPesquisa";
@@ -426,9 +430,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtxComercial._Visible = true;
             this.txtxComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxComercial.Base = null;
+            this.txtxComercial.bConfiguracao = false;
             this.txtxComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxComercial.Color = System.Drawing.Color.White;
-            this.txtxComercial.Location = new System.Drawing.Point(65, 152);
+            this.txtxComercial.Location = new System.Drawing.Point(65, 154);
             this.txtxComercial.Margin = new System.Windows.Forms.Padding(65, 3, 15, 3);
             this.txtxComercial.MaxLength = 32767;
             this.txtxComercial.Name = "txtxComercial";
@@ -453,9 +458,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtxFiscal._Visible = true;
             this.txtxFiscal.BackColor = System.Drawing.Color.Transparent;
             this.txtxFiscal.Base = null;
+            this.txtxFiscal.bConfiguracao = false;
             this.txtxFiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxFiscal.Color = System.Drawing.Color.White;
-            this.txtxFiscal.Location = new System.Drawing.Point(87, 177);
+            this.txtxFiscal.Location = new System.Drawing.Point(87, 179);
             this.txtxFiscal.Margin = new System.Windows.Forms.Padding(87, 3, 15, 3);
             this.txtxFiscal.MaxLength = 32767;
             this.txtxFiscal.Name = "txtxFiscal";
@@ -480,9 +486,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtxIngles._Visible = true;
             this.txtxIngles.BackColor = System.Drawing.Color.Transparent;
             this.txtxIngles.Base = null;
+            this.txtxIngles.bConfiguracao = false;
             this.txtxIngles.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxIngles.Color = System.Drawing.Color.White;
-            this.txtxIngles.Location = new System.Drawing.Point(82, 202);
+            this.txtxIngles.Location = new System.Drawing.Point(82, 204);
             this.txtxIngles.Margin = new System.Windows.Forms.Padding(82, 3, 15, 3);
             this.txtxIngles.MaxLength = 32767;
             this.txtxIngles.Name = "txtxIngles";
@@ -507,9 +514,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtxFoto._Visible = true;
             this.txtxFoto.BackColor = System.Drawing.Color.Transparent;
             this.txtxFoto.Base = null;
+            this.txtxFoto.bConfiguracao = false;
             this.txtxFoto.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxFoto.Color = System.Drawing.Color.White;
-            this.txtxFoto.Location = new System.Drawing.Point(59, 227);
+            this.txtxFoto.Location = new System.Drawing.Point(59, 229);
             this.txtxFoto.Margin = new System.Windows.Forms.Padding(59, 3, 15, 3);
             this.txtxFoto.MaxLength = 32767;
             this.txtxFoto.Name = "txtxFoto";
@@ -535,9 +543,10 @@ namespace HLP.UI.Entries.Comercial
             this.txtdCadastro._Visible = true;
             this.txtdCadastro.BackColor = System.Drawing.Color.Transparent;
             this.txtdCadastro.Base = null;
+            this.txtdCadastro.bConfiguracao = false;
             this.txtdCadastro.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtdCadastro.Color = System.Drawing.Color.White;
-            this.txtdCadastro.Location = new System.Drawing.Point(58, 254);
+            this.txtdCadastro.Location = new System.Drawing.Point(58, 256);
             this.txtdCadastro.Margin = new System.Windows.Forms.Padding(58, 3, 15, 3);
             this.txtdCadastro.MaxLength = 32767;
             this.txtdCadastro.Name = "txtdCadastro";
@@ -568,7 +577,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidTipoProduto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoProduto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoProduto.Base = null;
-            this.hlP_PesquisaidTipoProduto.Location = new System.Drawing.Point(61, 281);
+            this.hlP_PesquisaidTipoProduto.bConfiguracao = false;
+            this.hlP_PesquisaidTipoProduto.Location = new System.Drawing.Point(61, 283);
             this.hlP_PesquisaidTipoProduto.Margin = new System.Windows.Forms.Padding(61, 3, 15, 3);
             this.hlP_PesquisaidTipoProduto.Name = "hlP_PesquisaidTipoProduto";
             this.hlP_PesquisaidTipoProduto.objConfigComponenteModel = null;
@@ -591,7 +601,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_Observacao1._Visible = true;
             this.hlP_Observacao1.BackColor = System.Drawing.Color.Transparent;
             this.hlP_Observacao1.Base = null;
-            this.hlP_Observacao1.Location = new System.Drawing.Point(0, 308);
+            this.hlP_Observacao1.bConfiguracao = false;
+            this.hlP_Observacao1.Location = new System.Drawing.Point(0, 310);
             this.hlP_Observacao1.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.hlP_Observacao1.Name = "hlP_Observacao1";
             this.hlP_Observacao1.objConfigComponenteModel = null;
@@ -621,7 +632,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidTipoServico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoServico.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoServico.Base = null;
-            this.hlP_PesquisaidTipoServico.Location = new System.Drawing.Point(70, 340);
+            this.hlP_PesquisaidTipoServico.bConfiguracao = false;
+            this.hlP_PesquisaidTipoServico.Location = new System.Drawing.Point(70, 342);
             this.hlP_PesquisaidTipoServico.Margin = new System.Windows.Forms.Padding(70, 3, 15, 3);
             this.hlP_PesquisaidTipoServico.Name = "hlP_PesquisaidTipoServico";
             this.hlP_PesquisaidTipoServico.objConfigComponenteModel = null;
@@ -646,10 +658,11 @@ namespace HLP.UI.Entries.Comercial
             this.cbxidUsuario._Visible = true;
             this.cbxidUsuario.BackColor = System.Drawing.Color.Transparent;
             this.cbxidUsuario.Base = null;
+            this.cbxidUsuario.bConfiguracao = false;
             this.cbxidUsuario.Color = System.Drawing.Color.White;
             this.cbxidUsuario.DataSource = null;
             this.cbxidUsuario.DisplayMember = "xNome";
-            this.cbxidUsuario.Location = new System.Drawing.Point(106, 367);
+            this.cbxidUsuario.Location = new System.Drawing.Point(106, 369);
             this.cbxidUsuario.Margin = new System.Windows.Forms.Padding(106, 3, 15, 3);
             this.cbxidUsuario.Name = "cbxidUsuario";
             this.cbxidUsuario.objConfigComponenteModel = null;
@@ -665,10 +678,10 @@ namespace HLP.UI.Entries.Comercial
             this.sep_Grupos._LabelText = "Grupos";
             this.sep_Grupos._TamanhoMaiorLabel = 0;
             this.sep_Grupos.BackColor = System.Drawing.Color.Transparent;
-            this.sep_Grupos.Location = new System.Drawing.Point(0, 51);
+            this.sep_Grupos.Location = new System.Drawing.Point(0, 396);
             this.sep_Grupos.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_Grupos.Name = "sep_Grupos";
-            this.sep_Grupos.Size = new System.Drawing.Size(494, 18);
+            this.sep_Grupos.Size = new System.Drawing.Size(494, 19);
             this.sep_Grupos.TabIndex = 29;
             this.sep_Grupos.TabStop = false;
             // 
@@ -693,7 +706,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidFamiliaProduto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidFamiliaProduto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidFamiliaProduto.Base = null;
-            this.hlP_PesquisaidFamiliaProduto.Location = new System.Drawing.Point(47, 418);
+            this.hlP_PesquisaidFamiliaProduto.bConfiguracao = false;
+            this.hlP_PesquisaidFamiliaProduto.Location = new System.Drawing.Point(47, 421);
             this.hlP_PesquisaidFamiliaProduto.Margin = new System.Windows.Forms.Padding(47, 3, 15, 3);
             this.hlP_PesquisaidFamiliaProduto.Name = "hlP_PesquisaidFamiliaProduto";
             this.hlP_PesquisaidFamiliaProduto.objConfigComponenteModel = null;
@@ -761,7 +775,7 @@ namespace HLP.UI.Entries.Comercial
             this.sep_Config.Location = new System.Drawing.Point(0, 3);
             this.sep_Config.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_Config.Name = "sep_Config";
-            this.sep_Config.Size = new System.Drawing.Size(486, 18);
+            this.sep_Config.Size = new System.Drawing.Size(486, 19);
             this.sep_Config.TabIndex = 60;
             this.sep_Config.TabStop = false;
             // 
@@ -780,9 +794,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudnPesoBruto._Visible = true;
             this.nudnPesoBruto.BackColor = System.Drawing.Color.Transparent;
             this.nudnPesoBruto.Base = null;
+            this.nudnPesoBruto.bConfiguracao = false;
             this.nudnPesoBruto.Color = System.Drawing.Color.White;
             this.nudnPesoBruto.DecimalPlaces = 2;
-            this.nudnPesoBruto.Location = new System.Drawing.Point(90, 27);
+            this.nudnPesoBruto.Location = new System.Drawing.Point(90, 28);
             this.nudnPesoBruto.Margin = new System.Windows.Forms.Padding(90, 3, 15, 3);
             this.nudnPesoBruto.Maximum = new decimal(new int[] {
             9,
@@ -821,9 +836,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudnPesoLiquido._Visible = true;
             this.nudnPesoLiquido.BackColor = System.Drawing.Color.Transparent;
             this.nudnPesoLiquido.Base = null;
+            this.nudnPesoLiquido.bConfiguracao = false;
             this.nudnPesoLiquido.Color = System.Drawing.Color.White;
             this.nudnPesoLiquido.DecimalPlaces = 2;
-            this.nudnPesoLiquido.Location = new System.Drawing.Point(82, 55);
+            this.nudnPesoLiquido.Location = new System.Drawing.Point(82, 56);
             this.nudnPesoLiquido.Margin = new System.Windows.Forms.Padding(82, 3, 15, 3);
             this.nudnPesoLiquido.Maximum = new decimal(new int[] {
             9,
@@ -861,9 +877,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudnPrazoValidade._Visible = true;
             this.nudnPrazoValidade.BackColor = System.Drawing.Color.Transparent;
             this.nudnPrazoValidade.Base = null;
+            this.nudnPrazoValidade.bConfiguracao = false;
             this.nudnPrazoValidade.Color = System.Drawing.Color.White;
             this.nudnPrazoValidade.DecimalPlaces = 2;
-            this.nudnPrazoValidade.Location = new System.Drawing.Point(56, 83);
+            this.nudnPrazoValidade.Location = new System.Drawing.Point(56, 84);
             this.nudnPrazoValidade.Margin = new System.Windows.Forms.Padding(56, 3, 15, 3);
             this.nudnPrazoValidade.Maximum = new decimal(new int[] {
             9,
@@ -903,10 +920,11 @@ namespace HLP.UI.Entries.Comercial
             this.txtdBloqueio._Visible = true;
             this.txtdBloqueio.BackColor = System.Drawing.Color.Transparent;
             this.txtdBloqueio.Base = null;
+            this.txtdBloqueio.bConfiguracao = false;
             this.txtdBloqueio.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtdBloqueio.Color = System.Drawing.Color.White;
             this.txtdBloqueio.Enabled = false;
-            this.txtdBloqueio.Location = new System.Drawing.Point(56, 111);
+            this.txtdBloqueio.Location = new System.Drawing.Point(56, 112);
             this.txtdBloqueio.Margin = new System.Windows.Forms.Padding(56, 3, 15, 3);
             this.txtdBloqueio.MaxLength = 32767;
             this.txtdBloqueio.Name = "txtdBloqueio";
@@ -931,9 +949,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudnEstoqueMinimo._Visible = true;
             this.nudnEstoqueMinimo.BackColor = System.Drawing.Color.Transparent;
             this.nudnEstoqueMinimo.Base = null;
+            this.nudnEstoqueMinimo.bConfiguracao = false;
             this.nudnEstoqueMinimo.Color = System.Drawing.Color.White;
             this.nudnEstoqueMinimo.DecimalPlaces = 2;
-            this.nudnEstoqueMinimo.Location = new System.Drawing.Point(63, 137);
+            this.nudnEstoqueMinimo.Location = new System.Drawing.Point(63, 138);
             this.nudnEstoqueMinimo.Margin = new System.Windows.Forms.Padding(63, 3, 15, 3);
             this.nudnEstoqueMinimo.Maximum = new decimal(new int[] {
             9,
@@ -972,9 +991,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudnEstoqueMaximo._Visible = true;
             this.nudnEstoqueMaximo.BackColor = System.Drawing.Color.Transparent;
             this.nudnEstoqueMaximo.Base = null;
+            this.nudnEstoqueMaximo.bConfiguracao = false;
             this.nudnEstoqueMaximo.Color = System.Drawing.Color.White;
             this.nudnEstoqueMaximo.DecimalPlaces = 2;
-            this.nudnEstoqueMaximo.Location = new System.Drawing.Point(62, 165);
+            this.nudnEstoqueMaximo.Location = new System.Drawing.Point(62, 166);
             this.nudnEstoqueMaximo.Margin = new System.Windows.Forms.Padding(62, 3, 15, 3);
             this.nudnEstoqueMaximo.Maximum = new decimal(new int[] {
             9,
@@ -1020,7 +1040,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaEstoque.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaEstoque.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaEstoque.Base = null;
-            this.hlP_PesquisaidUnidadeMedidaEstoque.Location = new System.Drawing.Point(45, 193);
+            this.hlP_PesquisaidUnidadeMedidaEstoque.bConfiguracao = false;
+            this.hlP_PesquisaidUnidadeMedidaEstoque.Location = new System.Drawing.Point(45, 194);
             this.hlP_PesquisaidUnidadeMedidaEstoque.Margin = new System.Windows.Forms.Padding(45, 3, 15, 3);
             this.hlP_PesquisaidUnidadeMedidaEstoque.Name = "hlP_PesquisaidUnidadeMedidaEstoque";
             this.hlP_PesquisaidUnidadeMedidaEstoque.objConfigComponenteModel = null;
@@ -1047,6 +1068,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbxAtivo._Visible = true;
             this.cbxAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cbxAtivo.Base = null;
+            this.cbxAtivo.bConfiguracao = false;
             this.cbxAtivo.Color = System.Drawing.Color.White;
             this.cbxAtivo.DataSource = null;
             this.cbxAtivo.DisplayMember = "DisplayMember";
@@ -1065,10 +1087,10 @@ namespace HLP.UI.Entries.Comercial
             this.sep_Localizacao._LabelText = "Localização";
             this.sep_Localizacao._TamanhoMaiorLabel = 0;
             this.sep_Localizacao.BackColor = System.Drawing.Color.Transparent;
-            this.sep_Localizacao.Location = new System.Drawing.Point(0, 27);
+            this.sep_Localizacao.Location = new System.Drawing.Point(501, 30);
             this.sep_Localizacao.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_Localizacao.Name = "sep_Localizacao";
-            this.sep_Localizacao.Size = new System.Drawing.Size(486, 18);
+            this.sep_Localizacao.Size = new System.Drawing.Size(486, 19);
             this.sep_Localizacao.TabIndex = 61;
             this.sep_Localizacao.TabStop = false;
             // 
@@ -1093,7 +1115,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidProdutoLocalizacao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidProdutoLocalizacao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidProdutoLocalizacao.Base = null;
-            this.hlP_PesquisaidProdutoLocalizacao.Location = new System.Drawing.Point(589, 54);
+            this.hlP_PesquisaidProdutoLocalizacao.bConfiguracao = false;
+            this.hlP_PesquisaidProdutoLocalizacao.Location = new System.Drawing.Point(589, 55);
             this.hlP_PesquisaidProdutoLocalizacao.Margin = new System.Windows.Forms.Padding(88, 3, 15, 3);
             this.hlP_PesquisaidProdutoLocalizacao.Name = "hlP_PesquisaidProdutoLocalizacao";
             this.hlP_PesquisaidProdutoLocalizacao.objConfigComponenteModel = null;
@@ -1123,7 +1146,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidDeposito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDeposito.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDeposito.Base = null;
-            this.hlP_PesquisaidDeposito.Location = new System.Drawing.Point(600, 81);
+            this.hlP_PesquisaidDeposito.bConfiguracao = false;
+            this.hlP_PesquisaidDeposito.Location = new System.Drawing.Point(600, 82);
             this.hlP_PesquisaidDeposito.Margin = new System.Windows.Forms.Padding(99, 3, 15, 3);
             this.hlP_PesquisaidDeposito.Name = "hlP_PesquisaidDeposito";
             this.hlP_PesquisaidDeposito.objConfigComponenteModel = null;
@@ -1153,7 +1177,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidFabricante.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidFabricante.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidFabricante.Base = null;
-            this.hlP_PesquisaidFabricante.Location = new System.Drawing.Point(593, 108);
+            this.hlP_PesquisaidFabricante.bConfiguracao = false;
+            this.hlP_PesquisaidFabricante.Location = new System.Drawing.Point(593, 109);
             this.hlP_PesquisaidFabricante.Margin = new System.Windows.Forms.Padding(92, 3, 15, 3);
             this.hlP_PesquisaidFabricante.Name = "hlP_PesquisaidFabricante";
             this.hlP_PesquisaidFabricante.objConfigComponenteModel = null;
@@ -1167,10 +1192,10 @@ namespace HLP.UI.Entries.Comercial
             this.sep_dimensao._LabelText = "Dimensão física";
             this.sep_dimensao._TamanhoMaiorLabel = 0;
             this.sep_dimensao.BackColor = System.Drawing.Color.Transparent;
-            this.sep_dimensao.Location = new System.Drawing.Point(0, 51);
+            this.sep_dimensao.Location = new System.Drawing.Point(501, 136);
             this.sep_dimensao.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_dimensao.Name = "sep_dimensao";
-            this.sep_dimensao.Size = new System.Drawing.Size(486, 18);
+            this.sep_dimensao.Size = new System.Drawing.Size(486, 19);
             this.sep_dimensao.TabIndex = 62;
             this.sep_dimensao.TabStop = false;
             // 
@@ -1188,9 +1213,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudnProfundidadeBruta._Visible = true;
             this.nudnProfundidadeBruta.BackColor = System.Drawing.Color.Transparent;
             this.nudnProfundidadeBruta.Base = null;
+            this.nudnProfundidadeBruta.bConfiguracao = false;
             this.nudnProfundidadeBruta.Color = System.Drawing.Color.White;
             this.nudnProfundidadeBruta.DecimalPlaces = 2;
-            this.nudnProfundidadeBruta.Location = new System.Drawing.Point(545, 159);
+            this.nudnProfundidadeBruta.Location = new System.Drawing.Point(545, 161);
             this.nudnProfundidadeBruta.Margin = new System.Windows.Forms.Padding(44, 3, 15, 3);
             this.nudnProfundidadeBruta.Maximum = new decimal(new int[] {
             9,
@@ -1228,9 +1254,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudnLarguraBruta._Visible = true;
             this.nudnLarguraBruta.BackColor = System.Drawing.Color.Transparent;
             this.nudnLarguraBruta.Base = null;
+            this.nudnLarguraBruta.bConfiguracao = false;
             this.nudnLarguraBruta.Color = System.Drawing.Color.White;
             this.nudnLarguraBruta.DecimalPlaces = 2;
-            this.nudnLarguraBruta.Location = new System.Drawing.Point(577, 187);
+            this.nudnLarguraBruta.Location = new System.Drawing.Point(577, 189);
             this.nudnLarguraBruta.Margin = new System.Windows.Forms.Padding(76, 3, 15, 3);
             this.nudnLarguraBruta.Maximum = new decimal(new int[] {
             9,
@@ -1268,6 +1295,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnAlturaBruta._Visible = true;
             this.nudnAlturaBruta.BackColor = System.Drawing.Color.Transparent;
             this.nudnAlturaBruta.Base = null;
+            this.nudnAlturaBruta.bConfiguracao = false;
             this.nudnAlturaBruta.Color = System.Drawing.Color.White;
             this.nudnAlturaBruta.DecimalPlaces = 2;
             this.nudnAlturaBruta.Location = new System.Drawing.Point(1086, 3);
@@ -1299,10 +1327,10 @@ namespace HLP.UI.Entries.Comercial
             this.sep_FormacaoCusto._LabelText = "Formação de custo";
             this.sep_FormacaoCusto._TamanhoMaiorLabel = 0;
             this.sep_FormacaoCusto.BackColor = System.Drawing.Color.Transparent;
-            this.sep_FormacaoCusto.Location = new System.Drawing.Point(0, 75);
+            this.sep_FormacaoCusto.Location = new System.Drawing.Point(1002, 31);
             this.sep_FormacaoCusto.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_FormacaoCusto.Name = "sep_FormacaoCusto";
-            this.sep_FormacaoCusto.Size = new System.Drawing.Size(486, 18);
+            this.sep_FormacaoCusto.Size = new System.Drawing.Size(486, 19);
             this.sep_FormacaoCusto.TabIndex = 64;
             this.sep_FormacaoCusto.TabStop = false;
             // 
@@ -1323,10 +1351,11 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstCusto._Visible = true;
             this.cbxstCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCusto.Base = null;
+            this.cbxstCusto.bConfiguracao = false;
             this.cbxstCusto.Color = System.Drawing.Color.White;
             this.cbxstCusto.DataSource = null;
             this.cbxstCusto.DisplayMember = "DisplayMember";
-            this.cbxstCusto.Location = new System.Drawing.Point(1050, 55);
+            this.cbxstCusto.Location = new System.Drawing.Point(1050, 56);
             this.cbxstCusto.Margin = new System.Windows.Forms.Padding(48, 3, 15, 3);
             this.cbxstCusto.Name = "cbxstCusto";
             this.cbxstCusto.objConfigComponenteModel = null;
@@ -1354,10 +1383,11 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstCustoMedio._Visible = true;
             this.cbxstCustoMedio.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCustoMedio.Base = null;
+            this.cbxstCustoMedio.bConfiguracao = false;
             this.cbxstCustoMedio.Color = System.Drawing.Color.White;
             this.cbxstCustoMedio.DataSource = null;
             this.cbxstCustoMedio.DisplayMember = "DisplayMember";
-            this.cbxstCustoMedio.Location = new System.Drawing.Point(1018, 82);
+            this.cbxstCustoMedio.Location = new System.Drawing.Point(1018, 83);
             this.cbxstCustoMedio.Margin = new System.Windows.Forms.Padding(16, 3, 15, 3);
             this.cbxstCustoMedio.Name = "cbxstCustoMedio";
             this.cbxstCustoMedio.objConfigComponenteModel = null;
@@ -1423,7 +1453,7 @@ namespace HLP.UI.Entries.Comercial
             this.sep_GeralDadosFiscais.Location = new System.Drawing.Point(0, 3);
             this.sep_GeralDadosFiscais.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_GeralDadosFiscais.Name = "sep_GeralDadosFiscais";
-            this.sep_GeralDadosFiscais.Size = new System.Drawing.Size(517, 18);
+            this.sep_GeralDadosFiscais.Size = new System.Drawing.Size(517, 19);
             this.sep_GeralDadosFiscais.TabIndex = 2;
             this.sep_GeralDadosFiscais.TabStop = false;
             // 
@@ -1441,9 +1471,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudpInss._Visible = true;
             this.nudpInss.BackColor = System.Drawing.Color.Transparent;
             this.nudpInss.Base = null;
+            this.nudpInss.bConfiguracao = false;
             this.nudpInss.Color = System.Drawing.Color.White;
             this.nudpInss.DecimalPlaces = 2;
-            this.nudpInss.Location = new System.Drawing.Point(148, 27);
+            this.nudpInss.Location = new System.Drawing.Point(148, 28);
             this.nudpInss.Margin = new System.Windows.Forms.Padding(148, 3, 15, 3);
             this.nudpInss.Maximum = new decimal(new int[] {
             9,
@@ -1481,9 +1512,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudpImportacao._Visible = true;
             this.nudpImportacao.BackColor = System.Drawing.Color.Transparent;
             this.nudpImportacao.Base = null;
+            this.nudpImportacao.bConfiguracao = false;
             this.nudpImportacao.Color = System.Drawing.Color.White;
             this.nudpImportacao.DecimalPlaces = 2;
-            this.nudpImportacao.Location = new System.Drawing.Point(75, 55);
+            this.nudpImportacao.Location = new System.Drawing.Point(75, 56);
             this.nudpImportacao.Margin = new System.Windows.Forms.Padding(75, 3, 15, 3);
             this.nudpImportacao.Maximum = new decimal(new int[] {
             9,
@@ -1523,10 +1555,11 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstOrigemMercadoria._Visible = true;
             this.cbxstOrigemMercadoria.BackColor = System.Drawing.Color.Transparent;
             this.cbxstOrigemMercadoria.Base = null;
+            this.cbxstOrigemMercadoria.bConfiguracao = false;
             this.cbxstOrigemMercadoria.Color = System.Drawing.Color.White;
             this.cbxstOrigemMercadoria.DataSource = null;
             this.cbxstOrigemMercadoria.DisplayMember = "DisplayMember";
-            this.cbxstOrigemMercadoria.Location = new System.Drawing.Point(82, 83);
+            this.cbxstOrigemMercadoria.Location = new System.Drawing.Point(82, 84);
             this.cbxstOrigemMercadoria.Margin = new System.Windows.Forms.Padding(82, 3, 15, 3);
             this.cbxstOrigemMercadoria.Name = "cbxstOrigemMercadoria";
             this.cbxstOrigemMercadoria.objConfigComponenteModel = null;
@@ -1558,7 +1591,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTIcms.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTIcms.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTIcms.Base = null;
-            this.hlP_PesquisaidCSTIcms.Location = new System.Drawing.Point(44, 110);
+            this.hlP_PesquisaidCSTIcms.bConfiguracao = false;
+            this.hlP_PesquisaidCSTIcms.Location = new System.Drawing.Point(44, 111);
             this.hlP_PesquisaidCSTIcms.Margin = new System.Windows.Forms.Padding(44, 3, 15, 3);
             this.hlP_PesquisaidCSTIcms.Name = "hlP_PesquisaidCSTIcms";
             this.hlP_PesquisaidCSTIcms.objConfigComponenteModel = null;
@@ -1584,10 +1618,11 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstInss._Visible = true;
             this.cbxstInss.BackColor = System.Drawing.Color.Transparent;
             this.cbxstInss.Base = null;
+            this.cbxstInss.bConfiguracao = false;
             this.cbxstInss.Color = System.Drawing.Color.White;
             this.cbxstInss.DataSource = null;
             this.cbxstInss.DisplayMember = "DisplayMember";
-            this.cbxstInss.Location = new System.Drawing.Point(77, 137);
+            this.cbxstInss.Location = new System.Drawing.Point(77, 138);
             this.cbxstInss.Margin = new System.Windows.Forms.Padding(77, 3, 15, 3);
             this.cbxstInss.Name = "cbxstInss";
             this.cbxstInss.objConfigComponenteModel = null;
@@ -1602,10 +1637,10 @@ namespace HLP.UI.Entries.Comercial
             this.sep_OrdemVenda._LabelText = "Ordem de venda";
             this.sep_OrdemVenda._TamanhoMaiorLabel = 0;
             this.sep_OrdemVenda.BackColor = System.Drawing.Color.Transparent;
-            this.sep_OrdemVenda.Location = new System.Drawing.Point(0, 27);
+            this.sep_OrdemVenda.Location = new System.Drawing.Point(0, 165);
             this.sep_OrdemVenda.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_OrdemVenda.Name = "sep_OrdemVenda";
-            this.sep_OrdemVenda.Size = new System.Drawing.Size(517, 18);
+            this.sep_OrdemVenda.Size = new System.Drawing.Size(517, 19);
             this.sep_OrdemVenda.TabIndex = 81;
             this.sep_OrdemVenda.TabStop = false;
             // 
@@ -1631,7 +1666,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCodigoIcmsPaiVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCodigoIcmsPaiVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCodigoIcmsPaiVenda.Base = null;
-            this.hlP_PesquisaidCodigoIcmsPaiVenda.Location = new System.Drawing.Point(117, 188);
+            this.hlP_PesquisaidCodigoIcmsPaiVenda.bConfiguracao = false;
+            this.hlP_PesquisaidCodigoIcmsPaiVenda.Location = new System.Drawing.Point(117, 190);
             this.hlP_PesquisaidCodigoIcmsPaiVenda.Margin = new System.Windows.Forms.Padding(117, 3, 15, 3);
             this.hlP_PesquisaidCodigoIcmsPaiVenda.Name = "hlP_PesquisaidCodigoIcmsPaiVenda";
             this.hlP_PesquisaidCodigoIcmsPaiVenda.objConfigComponenteModel = null;
@@ -1662,6 +1698,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTIpiVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTIpiVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTIpiVenda.Base = null;
+            this.hlP_PesquisaidCSTIpiVenda.bConfiguracao = false;
             this.hlP_PesquisaidCSTIpiVenda.Location = new System.Drawing.Point(609, 3);
             this.hlP_PesquisaidCSTIpiVenda.Margin = new System.Windows.Forms.Padding(66, 3, 15, 3);
             this.hlP_PesquisaidCSTIpiVenda.Name = "hlP_PesquisaidCSTIpiVenda";
@@ -1693,6 +1730,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTPisVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTPisVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTPisVenda.Base = null;
+            this.hlP_PesquisaidCSTPisVenda.bConfiguracao = false;
             this.hlP_PesquisaidCSTPisVenda.Location = new System.Drawing.Point(607, 30);
             this.hlP_PesquisaidCSTPisVenda.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.hlP_PesquisaidCSTPisVenda.Name = "hlP_PesquisaidCSTPisVenda";
@@ -1724,6 +1762,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTCofinsVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTCofinsVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTCofinsVenda.Base = null;
+            this.hlP_PesquisaidCSTCofinsVenda.bConfiguracao = false;
             this.hlP_PesquisaidCSTCofinsVenda.Location = new System.Drawing.Point(594, 57);
             this.hlP_PesquisaidCSTCofinsVenda.Margin = new System.Windows.Forms.Padding(51, 3, 15, 3);
             this.hlP_PesquisaidCSTCofinsVenda.Name = "hlP_PesquisaidCSTCofinsVenda";
@@ -1754,6 +1793,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidClassificacaoFiscalVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidClassificacaoFiscalVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidClassificacaoFiscalVenda.Base = null;
+            this.hlP_PesquisaidClassificacaoFiscalVenda.bConfiguracao = false;
             this.hlP_PesquisaidClassificacaoFiscalVenda.Location = new System.Drawing.Point(645, 84);
             this.hlP_PesquisaidClassificacaoFiscalVenda.Margin = new System.Windows.Forms.Padding(102, 3, 15, 3);
             this.hlP_PesquisaidClassificacaoFiscalVenda.Name = "hlP_PesquisaidClassificacaoFiscalVenda";
@@ -1768,10 +1808,10 @@ namespace HLP.UI.Entries.Comercial
             this.sep_OrdemCompra._LabelText = "Ordem de compra";
             this.sep_OrdemCompra._TamanhoMaiorLabel = 0;
             this.sep_OrdemCompra.BackColor = System.Drawing.Color.Transparent;
-            this.sep_OrdemCompra.Location = new System.Drawing.Point(0, 51);
+            this.sep_OrdemCompra.Location = new System.Drawing.Point(543, 111);
             this.sep_OrdemCompra.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_OrdemCompra.Name = "sep_OrdemCompra";
-            this.sep_OrdemCompra.Size = new System.Drawing.Size(517, 18);
+            this.sep_OrdemCompra.Size = new System.Drawing.Size(517, 19);
             this.sep_OrdemCompra.TabIndex = 82;
             this.sep_OrdemCompra.TabStop = false;
             // 
@@ -1797,7 +1837,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCodigoIcmsPaiCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCodigoIcmsPaiCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCodigoIcmsPaiCompra.Base = null;
-            this.hlP_PesquisaidCodigoIcmsPaiCompra.Location = new System.Drawing.Point(660, 135);
+            this.hlP_PesquisaidCodigoIcmsPaiCompra.bConfiguracao = false;
+            this.hlP_PesquisaidCodigoIcmsPaiCompra.Location = new System.Drawing.Point(660, 136);
             this.hlP_PesquisaidCodigoIcmsPaiCompra.Margin = new System.Windows.Forms.Padding(117, 3, 15, 3);
             this.hlP_PesquisaidCodigoIcmsPaiCompra.Name = "hlP_PesquisaidCodigoIcmsPaiCompra";
             this.hlP_PesquisaidCodigoIcmsPaiCompra.objConfigComponenteModel = null;
@@ -1828,7 +1869,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTIpiCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTIpiCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTIpiCompra.Base = null;
-            this.hlP_PesquisaidCSTIpiCompra.Location = new System.Drawing.Point(609, 162);
+            this.hlP_PesquisaidCSTIpiCompra.bConfiguracao = false;
+            this.hlP_PesquisaidCSTIpiCompra.Location = new System.Drawing.Point(609, 163);
             this.hlP_PesquisaidCSTIpiCompra.Margin = new System.Windows.Forms.Padding(66, 3, 15, 3);
             this.hlP_PesquisaidCSTIpiCompra.Name = "hlP_PesquisaidCSTIpiCompra";
             this.hlP_PesquisaidCSTIpiCompra.objConfigComponenteModel = null;
@@ -1859,7 +1901,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTPisCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTPisCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTPisCompra.Base = null;
-            this.hlP_PesquisaidCSTPisCompra.Location = new System.Drawing.Point(607, 189);
+            this.hlP_PesquisaidCSTPisCompra.bConfiguracao = false;
+            this.hlP_PesquisaidCSTPisCompra.Location = new System.Drawing.Point(607, 190);
             this.hlP_PesquisaidCSTPisCompra.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.hlP_PesquisaidCSTPisCompra.Name = "hlP_PesquisaidCSTPisCompra";
             this.hlP_PesquisaidCSTPisCompra.objConfigComponenteModel = null;
@@ -1890,6 +1933,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCSTCofinsCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCSTCofinsCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCSTCofinsCompra.Base = null;
+            this.hlP_PesquisaidCSTCofinsCompra.bConfiguracao = false;
             this.hlP_PesquisaidCSTCofinsCompra.Location = new System.Drawing.Point(1126, 3);
             this.hlP_PesquisaidCSTCofinsCompra.Margin = new System.Windows.Forms.Padding(51, 3, 15, 3);
             this.hlP_PesquisaidCSTCofinsCompra.Name = "hlP_PesquisaidCSTCofinsCompra";
@@ -1920,6 +1964,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidClassificacaoFiscalCompra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidClassificacaoFiscalCompra.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidClassificacaoFiscalCompra.Base = null;
+            this.hlP_PesquisaidClassificacaoFiscalCompra.bConfiguracao = false;
             this.hlP_PesquisaidClassificacaoFiscalCompra.Location = new System.Drawing.Point(1177, 30);
             this.hlP_PesquisaidClassificacaoFiscalCompra.Margin = new System.Windows.Forms.Padding(102, 3, 15, 3);
             this.hlP_PesquisaidClassificacaoFiscalCompra.Name = "hlP_PesquisaidClassificacaoFiscalCompra";
@@ -1935,7 +1980,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1144, 225);
+            this.tabPage6.Size = new System.Drawing.Size(1059, 655);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Tag = false;
             this.tabPage6.Text = "Dados de ordem de venda";
@@ -1946,7 +1991,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel4.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel4.Name = "kryptonPanel4";
-            this.kryptonPanel4.Size = new System.Drawing.Size(1144, 225);
+            this.kryptonPanel4.Size = new System.Drawing.Size(1059, 655);
             this.kryptonPanel4.TabIndex = 1;
             // 
             // flowLayoutPanel4
@@ -1962,7 +2007,7 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1144, 225);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1059, 655);
             this.flowLayoutPanel4.TabIndex = 0;
             // 
             // sep_ConfigOrdemVenda
@@ -1973,7 +2018,7 @@ namespace HLP.UI.Entries.Comercial
             this.sep_ConfigOrdemVenda.Location = new System.Drawing.Point(0, 3);
             this.sep_ConfigOrdemVenda.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_ConfigOrdemVenda.Name = "sep_ConfigOrdemVenda";
-            this.sep_ConfigOrdemVenda.Size = new System.Drawing.Size(590, 18);
+            this.sep_ConfigOrdemVenda.Size = new System.Drawing.Size(590, 19);
             this.sep_ConfigOrdemVenda.TabIndex = 7;
             this.sep_ConfigOrdemVenda.TabStop = false;
             // 
@@ -1989,12 +2034,12 @@ namespace HLP.UI.Entries.Comercial
             this.nudvVenda._Table = "Produto";
             this.nudvVenda._TamanhoComponente = 122;
             this.nudvVenda._TamanhoMaiorLabel = 200;
-            this.nudvVenda._Visible = true;
             this.nudvVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudvVenda.Base = null;
+            this.nudvVenda.bConfiguracao = false;
             this.nudvVenda.Color = System.Drawing.Color.White;
             this.nudvVenda.DecimalPlaces = 2;
-            this.nudvVenda.Location = new System.Drawing.Point(118, 27);
+            this.nudvVenda.Location = new System.Drawing.Point(118, 28);
             this.nudvVenda.Margin = new System.Windows.Forms.Padding(118, 3, 15, 3);
             this.nudvVenda.Maximum = new decimal(new int[] {
             9,
@@ -2029,12 +2074,12 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaExcedenteVenda._Table = "Produto";
             this.nudpEntregaExcedenteVenda._TamanhoComponente = 122;
             this.nudpEntregaExcedenteVenda._TamanhoMaiorLabel = 200;
-            this.nudpEntregaExcedenteVenda._Visible = true;
             this.nudpEntregaExcedenteVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaExcedenteVenda.Base = null;
+            this.nudpEntregaExcedenteVenda.bConfiguracao = false;
             this.nudpEntregaExcedenteVenda.Color = System.Drawing.Color.White;
             this.nudpEntregaExcedenteVenda.DecimalPlaces = 2;
-            this.nudpEntregaExcedenteVenda.Location = new System.Drawing.Point(101, 55);
+            this.nudpEntregaExcedenteVenda.Location = new System.Drawing.Point(101, 56);
             this.nudpEntregaExcedenteVenda.Margin = new System.Windows.Forms.Padding(101, 3, 15, 3);
             this.nudpEntregaExcedenteVenda.Maximum = new decimal(new int[] {
             9,
@@ -2069,12 +2114,12 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaInsuficienteVenda._Table = "Produto";
             this.nudpEntregaInsuficienteVenda._TamanhoComponente = 122;
             this.nudpEntregaInsuficienteVenda._TamanhoMaiorLabel = 200;
-            this.nudpEntregaInsuficienteVenda._Visible = true;
             this.nudpEntregaInsuficienteVenda.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaInsuficienteVenda.Base = null;
+            this.nudpEntregaInsuficienteVenda.bConfiguracao = false;
             this.nudpEntregaInsuficienteVenda.Color = System.Drawing.Color.White;
             this.nudpEntregaInsuficienteVenda.DecimalPlaces = 2;
-            this.nudpEntregaInsuficienteVenda.Location = new System.Drawing.Point(93, 83);
+            this.nudpEntregaInsuficienteVenda.Location = new System.Drawing.Point(93, 84);
             this.nudpEntregaInsuficienteVenda.Margin = new System.Windows.Forms.Padding(93, 3, 15, 3);
             this.nudpEntregaInsuficienteVenda.Maximum = new decimal(new int[] {
             9,
@@ -2100,7 +2145,7 @@ namespace HLP.UI.Entries.Comercial
             // 
             // txtdValorVenda
             // 
-            this.txtdValorVenda._Field = "dValorvenda";
+            this.txtdValorVenda._Field = "dValorVenda";
             this.txtdValorVenda._Help = "Ultima alteração no preço de venda";
             this.txtdValorVenda._LabelGroup = this.sep_ConfigOrdemVenda;
             this.txtdValorVenda._LabelText = "Ultima alteração no preço de venda";
@@ -2111,12 +2156,12 @@ namespace HLP.UI.Entries.Comercial
             this.txtdValorVenda._Table = "Produto";
             this.txtdValorVenda._TamanhoComponente = 122;
             this.txtdValorVenda._TamanhoMaiorLabel = 200;
-            this.txtdValorVenda._Visible = true;
             this.txtdValorVenda.BackColor = System.Drawing.Color.Transparent;
             this.txtdValorVenda.Base = null;
+            this.txtdValorVenda.bConfiguracao = false;
             this.txtdValorVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtdValorVenda.Color = System.Drawing.Color.White;
-            this.txtdValorVenda.Location = new System.Drawing.Point(14, 111);
+            this.txtdValorVenda.Location = new System.Drawing.Point(14, 112);
             this.txtdValorVenda.Margin = new System.Windows.Forms.Padding(14, 3, 15, 3);
             this.txtdValorVenda.MaxLength = 32767;
             this.txtdValorVenda.Name = "txtdValorVenda";
@@ -2144,11 +2189,11 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaVendas._TamanhoComponente = 300;
             this.hlP_PesquisaidUnidadeMedidaVendas._TamanhoMaiorLabel = 200;
             this.hlP_PesquisaidUnidadeMedidaVendas._Vinculado = false;
-            this.hlP_PesquisaidUnidadeMedidaVendas._Visible = true;
             this.hlP_PesquisaidUnidadeMedidaVendas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaVendas.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaVendas.Base = null;
-            this.hlP_PesquisaidUnidadeMedidaVendas.Location = new System.Drawing.Point(95, 138);
+            this.hlP_PesquisaidUnidadeMedidaVendas.bConfiguracao = false;
+            this.hlP_PesquisaidUnidadeMedidaVendas.Location = new System.Drawing.Point(95, 139);
             this.hlP_PesquisaidUnidadeMedidaVendas.Margin = new System.Windows.Forms.Padding(95, 3, 15, 3);
             this.hlP_PesquisaidUnidadeMedidaVendas.Name = "hlP_PesquisaidUnidadeMedidaVendas";
             this.hlP_PesquisaidUnidadeMedidaVendas.objConfigComponenteModel = null;
@@ -2206,7 +2251,7 @@ namespace HLP.UI.Entries.Comercial
             this.sep_ConfigOrdemCompra.Location = new System.Drawing.Point(0, 3);
             this.sep_ConfigOrdemCompra.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_ConfigOrdemCompra.Name = "sep_ConfigOrdemCompra";
-            this.sep_ConfigOrdemCompra.Size = new System.Drawing.Size(571, 18);
+            this.sep_ConfigOrdemCompra.Size = new System.Drawing.Size(571, 19);
             this.sep_ConfigOrdemCompra.TabIndex = 19;
             this.sep_ConfigOrdemCompra.TabStop = false;
             // 
@@ -2225,9 +2270,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudvCompra._Visible = true;
             this.nudvCompra.BackColor = System.Drawing.Color.Transparent;
             this.nudvCompra.Base = null;
+            this.nudvCompra.bConfiguracao = false;
             this.nudvCompra.Color = System.Drawing.Color.White;
             this.nudvCompra.DecimalPlaces = 2;
-            this.nudvCompra.Location = new System.Drawing.Point(53, 27);
+            this.nudvCompra.Location = new System.Drawing.Point(53, 28);
             this.nudvCompra.Margin = new System.Windows.Forms.Padding(53, 3, 15, 3);
             this.nudvCompra.Maximum = new decimal(new int[] {
             9,
@@ -2266,9 +2312,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudnLoteMinimoCompras._Visible = true;
             this.nudnLoteMinimoCompras.BackColor = System.Drawing.Color.Transparent;
             this.nudnLoteMinimoCompras.Base = null;
+            this.nudnLoteMinimoCompras.bConfiguracao = false;
             this.nudnLoteMinimoCompras.Color = System.Drawing.Color.White;
             this.nudnLoteMinimoCompras.DecimalPlaces = 2;
-            this.nudnLoteMinimoCompras.Location = new System.Drawing.Point(66, 55);
+            this.nudnLoteMinimoCompras.Location = new System.Drawing.Point(66, 56);
             this.nudnLoteMinimoCompras.Margin = new System.Windows.Forms.Padding(66, 3, 15, 3);
             this.nudnLoteMinimoCompras.Maximum = new decimal(new int[] {
             9,
@@ -2306,9 +2353,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaExcedenteCompra._Visible = true;
             this.nudpEntregaExcedenteCompra.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaExcedenteCompra.Base = null;
+            this.nudpEntregaExcedenteCompra.bConfiguracao = false;
             this.nudpEntregaExcedenteCompra.Color = System.Drawing.Color.White;
             this.nudpEntregaExcedenteCompra.DecimalPlaces = 2;
-            this.nudpEntregaExcedenteCompra.Location = new System.Drawing.Point(101, 83);
+            this.nudpEntregaExcedenteCompra.Location = new System.Drawing.Point(101, 84);
             this.nudpEntregaExcedenteCompra.Margin = new System.Windows.Forms.Padding(101, 3, 15, 3);
             this.nudpEntregaExcedenteCompra.Maximum = new decimal(new int[] {
             9,
@@ -2346,9 +2394,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudpEntregaInsuficienteCompra._Visible = true;
             this.nudpEntregaInsuficienteCompra.BackColor = System.Drawing.Color.Transparent;
             this.nudpEntregaInsuficienteCompra.Base = null;
+            this.nudpEntregaInsuficienteCompra.bConfiguracao = false;
             this.nudpEntregaInsuficienteCompra.Color = System.Drawing.Color.White;
             this.nudpEntregaInsuficienteCompra.DecimalPlaces = 2;
-            this.nudpEntregaInsuficienteCompra.Location = new System.Drawing.Point(93, 111);
+            this.nudpEntregaInsuficienteCompra.Location = new System.Drawing.Point(93, 112);
             this.nudpEntregaInsuficienteCompra.Margin = new System.Windows.Forms.Padding(93, 3, 15, 3);
             this.nudpEntregaInsuficienteCompra.Maximum = new decimal(new int[] {
             9,
@@ -2394,7 +2443,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaCompras.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaCompras.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaCompras.Base = null;
-            this.hlP_PesquisaidUnidadeMedidaCompras.Location = new System.Drawing.Point(95, 139);
+            this.hlP_PesquisaidUnidadeMedidaCompras.bConfiguracao = false;
+            this.hlP_PesquisaidUnidadeMedidaCompras.Location = new System.Drawing.Point(95, 140);
             this.hlP_PesquisaidUnidadeMedidaCompras.Margin = new System.Windows.Forms.Padding(95, 3, 15, 3);
             this.hlP_PesquisaidUnidadeMedidaCompras.Name = "hlP_PesquisaidUnidadeMedidaCompras";
             this.hlP_PesquisaidUnidadeMedidaCompras.objConfigComponenteModel = null;
@@ -2420,10 +2470,11 @@ namespace HLP.UI.Entries.Comercial
             this.cbxstFornecedorHomologado._Visible = true;
             this.cbxstFornecedorHomologado.BackColor = System.Drawing.Color.Transparent;
             this.cbxstFornecedorHomologado.Base = null;
+            this.cbxstFornecedorHomologado.bConfiguracao = false;
             this.cbxstFornecedorHomologado.Color = System.Drawing.Color.White;
             this.cbxstFornecedorHomologado.DataSource = null;
             this.cbxstFornecedorHomologado.DisplayMember = "DisplayMember";
-            this.cbxstFornecedorHomologado.Location = new System.Drawing.Point(39, 166);
+            this.cbxstFornecedorHomologado.Location = new System.Drawing.Point(39, 167);
             this.cbxstFornecedorHomologado.Margin = new System.Windows.Forms.Padding(39, 3, 15, 3);
             this.cbxstFornecedorHomologado.Name = "cbxstFornecedorHomologado";
             this.cbxstFornecedorHomologado.objConfigComponenteModel = null;
@@ -2439,10 +2490,10 @@ namespace HLP.UI.Entries.Comercial
             this.sep_LeadTime._LabelText = "Lead time";
             this.sep_LeadTime._TamanhoMaiorLabel = 0;
             this.sep_LeadTime.BackColor = System.Drawing.Color.Transparent;
-            this.sep_LeadTime.Location = new System.Drawing.Point(0, 27);
+            this.sep_LeadTime.Location = new System.Drawing.Point(0, 194);
             this.sep_LeadTime.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sep_LeadTime.Name = "sep_LeadTime";
-            this.sep_LeadTime.Size = new System.Drawing.Size(289, 18);
+            this.sep_LeadTime.Size = new System.Drawing.Size(289, 19);
             this.sep_LeadTime.TabIndex = 20;
             this.sep_LeadTime.TabStop = false;
             // 
@@ -2460,6 +2511,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimeCotacao._Visible = true;
             this.dtdleadTimeCotacao.BackColor = System.Drawing.Color.Transparent;
             this.dtdleadTimeCotacao.Base = null;
+            this.dtdleadTimeCotacao.bConfiguracao = false;
             this.dtdleadTimeCotacao.Color = System.Drawing.Color.Empty;
             this.dtdleadTimeCotacao.CustomFormat = "";
             this.dtdleadTimeCotacao.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -2485,6 +2537,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimePedido._Visible = true;
             this.dtdleadTimePedido.BackColor = System.Drawing.Color.Transparent;
             this.dtdleadTimePedido.Base = null;
+            this.dtdleadTimePedido.bConfiguracao = false;
             this.dtdleadTimePedido.Color = System.Drawing.Color.Empty;
             this.dtdleadTimePedido.CustomFormat = "";
             this.dtdleadTimePedido.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -2510,6 +2563,7 @@ namespace HLP.UI.Entries.Comercial
             this.dtdleadTimeRecebimento._Visible = true;
             this.dtdleadTimeRecebimento.BackColor = System.Drawing.Color.Transparent;
             this.dtdleadTimeRecebimento.Base = null;
+            this.dtdleadTimeRecebimento.bConfiguracao = false;
             this.dtdleadTimeRecebimento.Color = System.Drawing.Color.Empty;
             this.dtdleadTimeRecebimento.CustomFormat = "";
             this.dtdleadTimeRecebimento.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -2564,7 +2618,7 @@ namespace HLP.UI.Entries.Comercial
             this.Sep_ConfigProdutucao.Location = new System.Drawing.Point(0, 3);
             this.Sep_ConfigProdutucao.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.Sep_ConfigProdutucao.Name = "Sep_ConfigProdutucao";
-            this.Sep_ConfigProdutucao.Size = new System.Drawing.Size(550, 18);
+            this.Sep_ConfigProdutucao.Size = new System.Drawing.Size(550, 19);
             this.Sep_ConfigProdutucao.TabIndex = 20;
             this.Sep_ConfigProdutucao.TabStop = false;
             // 
@@ -2582,9 +2636,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudvProducao._Visible = true;
             this.nudvProducao.BackColor = System.Drawing.Color.Transparent;
             this.nudvProducao.Base = null;
+            this.nudvProducao.bConfiguracao = false;
             this.nudvProducao.Color = System.Drawing.Color.White;
             this.nudvProducao.DecimalPlaces = 2;
-            this.nudvProducao.Location = new System.Drawing.Point(28, 27);
+            this.nudvProducao.Location = new System.Drawing.Point(28, 28);
             this.nudvProducao.Margin = new System.Windows.Forms.Padding(28, 3, 15, 3);
             this.nudvProducao.Maximum = new decimal(new int[] {
             9,
@@ -2622,9 +2677,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudpPerdaConstante._Visible = true;
             this.nudpPerdaConstante.BackColor = System.Drawing.Color.Transparent;
             this.nudpPerdaConstante.Base = null;
+            this.nudpPerdaConstante.bConfiguracao = false;
             this.nudpPerdaConstante.Color = System.Drawing.Color.White;
             this.nudpPerdaConstante.DecimalPlaces = 2;
-            this.nudpPerdaConstante.Location = new System.Drawing.Point(76, 55);
+            this.nudpPerdaConstante.Location = new System.Drawing.Point(76, 56);
             this.nudpPerdaConstante.Margin = new System.Windows.Forms.Padding(76, 3, 15, 3);
             this.nudpPerdaConstante.Maximum = new decimal(new int[] {
             9,
@@ -2663,9 +2719,10 @@ namespace HLP.UI.Entries.Comercial
             this.nudpPerdaVariavel._Visible = true;
             this.nudpPerdaVariavel.BackColor = System.Drawing.Color.Transparent;
             this.nudpPerdaVariavel.Base = null;
+            this.nudpPerdaVariavel.bConfiguracao = false;
             this.nudpPerdaVariavel.Color = System.Drawing.Color.White;
             this.nudpPerdaVariavel.DecimalPlaces = 2;
-            this.nudpPerdaVariavel.Location = new System.Drawing.Point(89, 83);
+            this.nudpPerdaVariavel.Location = new System.Drawing.Point(89, 84);
             this.nudpPerdaVariavel.Margin = new System.Windows.Forms.Padding(89, 3, 15, 3);
             this.nudpPerdaVariavel.Maximum = new decimal(new int[] {
             9,
@@ -2711,7 +2768,8 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidUnidadeMedidaProducao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeMedidaProducao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeMedidaProducao.Base = null;
-            this.hlP_PesquisaidUnidadeMedidaProducao.Location = new System.Drawing.Point(95, 111);
+            this.hlP_PesquisaidUnidadeMedidaProducao.bConfiguracao = false;
+            this.hlP_PesquisaidUnidadeMedidaProducao.Location = new System.Drawing.Point(95, 112);
             this.hlP_PesquisaidUnidadeMedidaProducao.Margin = new System.Windows.Forms.Padding(95, 3, 15, 3);
             this.hlP_PesquisaidUnidadeMedidaProducao.Name = "hlP_PesquisaidUnidadeMedidaProducao";
             this.hlP_PesquisaidUnidadeMedidaProducao.objConfigComponenteModel = null;
@@ -2832,7 +2890,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1059, 655);
+            this.tabPage10.Size = new System.Drawing.Size(1144, 225);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Tag = false;
             this.tabPage10.Text = "Log de revisão";
@@ -2843,7 +2901,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel8.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel8.Name = "kryptonPanel8";
-            this.kryptonPanel8.Size = new System.Drawing.Size(1059, 655);
+            this.kryptonPanel8.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel8.TabIndex = 1;
             // 
             // dgvProduto_Revisao
@@ -2864,14 +2922,10 @@ namespace HLP.UI.Entries.Comercial
             this.dgvProduto_Revisao.Inclui = false;
             this.dgvProduto_Revisao.Location = new System.Drawing.Point(0, 0);
             this.dgvProduto_Revisao.Name = "dgvProduto_Revisao";
-            this.dgvProduto_Revisao.Size = new System.Drawing.Size(1059, 655);
+            this.dgvProduto_Revisao.Size = new System.Drawing.Size(1144, 225);
             this.dgvProduto_Revisao.TabIndex = 2;
             this.dgvProduto_Revisao.Tag = "Produto_Revisao";
             this.dgvProduto_Revisao.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvProduto_Revisao_DefaultValuesNeeded);
-            // 
-            // bsProduto_Revisao
-            // 
-            this.bsProduto_Revisao.DataSource = typeof(HLP.Models.Entries.Comercial.Produto_RevisaoModel);
             // 
             // dInicialDataGridViewTextBoxColumn
             // 
@@ -2918,6 +2972,10 @@ namespace HLP.UI.Entries.Comercial
             this.dFinalDataGridViewTextBoxColumn.ToolTipText = "O Sistema informa a data final de quando foi alterado a engenharia ou qualquer ca" +
     "mpo do cadastro de produto.";
             this.dFinalDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // bsProduto_Revisao
+            // 
+            this.bsProduto_Revisao.DataSource = typeof(HLP.Models.Entries.Comercial.Produto_RevisaoModel);
             // 
             // FormProduto
             // 

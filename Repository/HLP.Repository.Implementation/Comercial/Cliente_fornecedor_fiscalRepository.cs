@@ -32,9 +32,18 @@ namespace HLP.Repository.Implementation.Entries.Comercial
 
         public void Save(Cliente_fornecedor_fiscalModel objCliente_fornecedor_fiscal)
         {
-            objCliente_fornecedor_fiscal.idClienteFornecedorFiscal = (int)UndTrabalho.dbPrincipal.ExecuteScalar(
-            "[dbo].[Proc_save_Cliente_fornecedor_fiscal]",
-            ParameterBase<Cliente_fornecedor_fiscalModel>.SetParameterValue(objCliente_fornecedor_fiscal));
+            if (objCliente_fornecedor_fiscal.idClienteFornecedorFiscal == 0)
+            {
+                objCliente_fornecedor_fiscal.idClienteFornecedorFiscal = (int)UndTrabalho.dbPrincipal.ExecuteScalar(
+                "[dbo].[Proc_save_Cliente_fornecedor_fiscal]",
+                ParameterBase<Cliente_fornecedor_fiscalModel>.SetParameterValue(objCliente_fornecedor_fiscal));
+            }
+            else
+            {
+                UndTrabalho.dbPrincipal.ExecuteScalar(
+                "[dbo].[Proc_update_Cliente_fornecedor_fiscal]",
+                ParameterBase<Cliente_fornecedor_fiscalModel>.SetParameterValue(objCliente_fornecedor_fiscal));
+            }
         }
 
         public void Delete(int idClienteFornecedor)
