@@ -33,8 +33,11 @@
             this.ctxConfig = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmConfigurar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmMoverPara = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMoveUp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMoveDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSeparador = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmTabPage = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.ctxConfig.SuspendLayout();
             this.SuspendLayout();
@@ -49,33 +52,55 @@
             this.ctxConfig.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.tsmConfigurar,
-            this.tsmMoveUp,
-            this.tsmMoveDown});
+            this.tsmMoverPara});
             this.ctxConfig.Name = "contextMenuStrip1";
-            this.ctxConfig.Size = new System.Drawing.Size(166, 98);
+            this.ctxConfig.Size = new System.Drawing.Size(153, 76);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // tsmConfigurar
             // 
             this.tsmConfigurar.Name = "tsmConfigurar";
-            this.tsmConfigurar.Size = new System.Drawing.Size(165, 22);
+            this.tsmConfigurar.Size = new System.Drawing.Size(152, 22);
             this.tsmConfigurar.Text = "Propriedades";
+            // 
+            // tsmMoverPara
+            // 
+            this.tsmMoverPara.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmMoveUp,
+            this.tsmMoveDown,
+            this.tsmSeparador,
+            this.tsmTabPage});
+            this.tsmMoverPara.Name = "tsmMoverPara";
+            this.tsmMoverPara.Size = new System.Drawing.Size(152, 22);
+            this.tsmMoverPara.Text = "Mover para";
             // 
             // tsmMoveUp
             // 
             this.tsmMoveUp.Name = "tsmMoveUp";
-            this.tsmMoveUp.Size = new System.Drawing.Size(165, 22);
-            this.tsmMoveUp.Text = "Mover para cima";
+            this.tsmMoveUp.Size = new System.Drawing.Size(160, 22);
+            this.tsmMoveUp.Text = "Cima";
             // 
             // tsmMoveDown
             // 
             this.tsmMoveDown.Name = "tsmMoveDown";
-            this.tsmMoveDown.Size = new System.Drawing.Size(165, 22);
-            this.tsmMoveDown.Text = "Mover para baixo";
+            this.tsmMoveDown.Size = new System.Drawing.Size(160, 22);
+            this.tsmMoveDown.Text = "Baixo";
+            // 
+            // tsmSeparador
+            // 
+            this.tsmSeparador.Name = "tsmSeparador";
+            this.tsmSeparador.Size = new System.Drawing.Size(160, 22);
+            this.tsmSeparador.Text = "Outro separador";
+            // 
+            // tsmTabPage
+            // 
+            this.tsmTabPage.Name = "tsmTabPage";
+            this.tsmTabPage.Size = new System.Drawing.Size(160, 22);
+            this.tsmTabPage.Text = "Outra Aba";
             // 
             // UserControlBase
             // 
@@ -93,9 +118,12 @@
 
         private System.Windows.Forms.ErrorProvider errorProv;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem tsmMoveUp;
-        private System.Windows.Forms.ToolStripMenuItem tsmMoveDown;
         public System.Windows.Forms.ToolStripMenuItem tsmConfigurar;
         public System.Windows.Forms.ContextMenuStrip ctxConfig;
+        public System.Windows.Forms.ToolStripMenuItem tsmMoveUp;
+        public System.Windows.Forms.ToolStripMenuItem tsmMoveDown;
+        public System.Windows.Forms.ToolStripMenuItem tsmSeparador;
+        public System.Windows.Forms.ToolStripMenuItem tsmTabPage;
+        public System.Windows.Forms.ToolStripMenuItem tsmMoverPara;
     }
 }

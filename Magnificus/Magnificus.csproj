@@ -275,6 +275,7 @@
     </Compile>
     <Content Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="configuracoes\log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

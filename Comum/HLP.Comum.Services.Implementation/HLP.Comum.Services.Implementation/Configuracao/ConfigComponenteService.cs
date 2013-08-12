@@ -282,7 +282,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                             {
                                 if (controle.GetType() == typeof(HLP_TextBox))
                                 {
-                                    //controle.SetPropertyValue("objConfigComponenteModel", objCompModel);
                                     (controle as UserControlBase).objConfigComponenteModel = objCompModel;
                                     (controle as UserControlBase).CarregaComponente();
                                 }
@@ -292,9 +291,8 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
                                     // achar o flowlayoutPanel do componente;
                                     //flp.Controls.SetChildIndex(control, control.Parent.Controls.IndexOf(control));
-                                    controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;
-
-                                    controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;
+                                    controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;                                    
+                                    (controle.Parent as FlowLayoutPanel).Controls.SetChildIndex(controle, controle.TabIndex);
                                     controle.SetPropertyValue("_LabelText", objCompModel.objConfigCompUsu.xLabelText);
                                     // Valor Padrão não tratado TEXT
                                     controle.SetPropertyValue("_Visible", Convert.ToBoolean(objCompModel.objConfigCompUsu.stVisible));

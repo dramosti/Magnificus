@@ -56,7 +56,7 @@ namespace HLP.Comum.UI.Eventos
             }
         }
 
-        private void CarregaEventos()
+        void CarregaEventos()
         {
 
             foreach (Control ctr in iConfigFormulario.lControl)
@@ -75,10 +75,18 @@ namespace HLP.Comum.UI.Eventos
                     ((HLP_Pesquisa)ctr).txtPesquisa.KeyDown -= new KeyEventHandler(txtPesquisa_KeyDown);
                     ((HLP_Pesquisa)ctr).txtPesquisa.KeyDown += new KeyEventHandler(txtPesquisa_KeyDown);
                 }
-                else if (ctr.GetType() == typeof(HLP_TextBox))
+                else if (ctr.GetType() == typeof(HLP_TextBox)) // Mudar para UserControlBase
                 {
                     ((HLP_TextBox)ctr).tsmConfigurar.Click -= tsmConfigurar_Click;
+                    ((HLP_TextBox)ctr).tsmMoveDown.Click -= tsmMoveDown_Click;
+                    ((HLP_TextBox)ctr).tsmMoveUp.Click -= tsmMoveUp_Click;
+                    ((HLP_TextBox)ctr).tsmMoverPara.MouseEnter -= tsmMoverPara_MouseHover;
+
+                    ((HLP_TextBox)ctr).tsmMoveDown.Click += tsmMoveDown_Click;
                     ((HLP_TextBox)ctr).tsmConfigurar.Click += tsmConfigurar_Click;
+                    ((HLP_TextBox)ctr).tsmMoveUp.Click += tsmMoveUp_Click;
+                    ((HLP_TextBox)ctr).tsmMoverPara.MouseEnter += tsmMoverPara_MouseHover;
+
                 }
             }
             List<Control> lgrids = iConfigFormulario.lControl.Where(c => c.GetType() == typeof(HLP_DataGridView)).ToList();
@@ -106,6 +114,7 @@ namespace HLP.Comum.UI.Eventos
             }
         }
 
+
         void dados_Leave(object sender, EventArgs e)
         {
             try
@@ -122,8 +131,9 @@ namespace HLP.Comum.UI.Eventos
                     SendKeys.Send("{RIGHT}");
                 }
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
+                new HLPexception(ex);
             }
         }
 
@@ -283,33 +293,130 @@ namespace HLP.Comum.UI.Eventos
         }
 
 
-        #region Componente Pesquisa
-
-
-        List<PesquisaPadraoModel> listInformation = null;
-        private object objSenderComponentePesquisa;
-
-
-        public void btnPesquisa_Click(object sender, EventArgs e)
+        #region ContextMenuStrip
+        void SavePositionsComponent(ContextMenuStrip ctx)
         {
-            this.objSenderComponentePesquisa = sender;
-            PesquisaComponente();
+            foreach (UserControlBase ctr in (ctx.Tag as UserControlBase)._LabelGroup.lComponentesBySerparador)
+            {
+                if (ctr.objConfigComponenteModel != null)
+                {
+                    ctr.objConfigComponenteModel.objConfigCompUsu.nOrder = (ctr.Parent as FlowLayoutPanel).Controls.GetChildIndex(ctr);
+                    iConfigComponenteService.Save(ctr.objConfigComponenteModel);
+                }
+            }
         }
-        private void tsmConfigurar_Click(object sender, EventArgs e)
+        void tsmMoverPara_MouseHover(object sender, EventArgs e)
         {
-            ToolStripMenuItem tsm = sender as ToolStripMenuItem;
-            (tsm.Tag as UserControlBase).bConfiguracao = true;
-            FormPopupConfig objFrm = new FormPopupConfig(tsm.Tag as Control);
+            try
+            {
+                UserControlBase controle = (sender as ToolStripMenuItem).GetContextMenuStrip().Tag as UserControlBase;
+                if (controle.tsmSeparador.DropDownItems.Count == 0)
+                {
+                    List<HLP_LabelSeparator> lSeparadores = (controle.Parent as FlowLayoutPanel).Controls.OfType<HLP_LabelSeparator>().ToList();
+                    if (lSeparadores != null)
+                    {
+                        if (lSeparadores.Count > 1)
+                        {
+                            List<ToolStripMenuItem> lMenusSep = new List<ToolStripMenuItem>();
+                            ToolStripMenuItem newMenuSep = null;
+                            foreach (HLP_LabelSeparator sep in lSeparadores.Where(c => c != controle._LabelGroup))
+                            {
+                                newMenuSep = new ToolStripMenuItem();
+                                newMenuSep.Text = sep._LabelText;
+                                newMenuSep.Tag = sep;
+                                newMenuSep.Click -= newMenuSep_Click;
+                                newMenuSep.Click += newMenuSep_Click;
+                                lMenusSep.Add(newMenuSep);
+                            }
+                            controle.tsmSeparador.DropDownItems.AddRange(lMenusSep.ToArray());
+                        }
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                new HLPexception(ex);
+            }
+        }
+        void tsmConfigurar_Click(object sender, EventArgs e)
+        {
+            ContextMenuStrip ctx = (sender as ToolStripMenuItem).Owner as ContextMenuStrip;
+            (ctx.Tag as UserControlBase).bConfiguracao = true;
+            FormPopupConfig objFrm = new FormPopupConfig(ctx.Tag as Control);
             objFrm.ShowDialog();
 
             if (objFrm.bAlterou)
             {
-                iConfigComponenteService.Save(((tsm.Tag as UserControlBase).objConfigComponenteModel));
-                ((tsm.Tag as UserControlBase))._labelGroup.ConfigMaiorLabel();
-                
+                iConfigComponenteService.Save(((ctx.Tag as UserControlBase).objConfigComponenteModel));
+                ((ctx.Tag as UserControlBase))._LabelGroup.ConfigMaiorLabel();
+
 
             }
-            (tsm.Tag as UserControlBase).bConfiguracao = false;
+            (ctx.Tag as UserControlBase).bConfiguracao = false;
+        }
+        void tsmMoveUp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ContextMenuStrip ctx = (sender as ToolStripMenuItem).GetContextMenuStrip();
+                (ctx.Tag as UserControlBase).MoveUp();
+                this.SavePositionsComponent(ctx);
+            }
+            catch (System.Exception ex)
+            {
+                new HLPexception(ex);
+            }
+        }
+        void tsmMoveDown_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ContextMenuStrip ctx = (sender as ToolStripMenuItem).GetContextMenuStrip();
+                (ctx.Tag as UserControlBase).MoveDown();
+                this.SavePositionsComponent(ctx);
+
+            }
+            catch (System.Exception ex)
+            {
+                new HLPexception(ex);
+            }
+
+        }
+        void newMenuSep_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Separador Escolhido
+                HLP_LabelSeparator sepSelect = (sender as ToolStripMenuItem).Tag as HLP_LabelSeparator;
+
+                UserControlBase controle = (sender as ToolStripMenuItem).GetContextMenuStrip().Tag as UserControlBase;
+                //Remove primeiro o componente do grupo atual dele no separador
+                //controle._LabelGroup.lComponentesBySerparador.Remove(controle);
+
+                //Busca a primeira posição do novo grupo do separador escolhido
+                int iPosicao = (sepSelect.lComponentesBySerparador.Min(c => c.TabIndex) - 1);
+                (controle.Parent as FlowLayoutPanel).Controls.SetChildIndex(controle, iPosicao);
+                controle.TabIndex = iPosicao;
+                controle._LabelGroup = sepSelect;              
+                this.SavePositionsComponent((sender as ToolStripMenuItem).GetContextMenuStrip());
+
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        #endregion
+
+        #region Componente Pesquisa
+        List<PesquisaPadraoModel> listInformation = null;
+        private object objSenderComponentePesquisa;
+        public void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            this.objSenderComponentePesquisa = sender;
+            PesquisaComponente();
         }
         public void txtPesquisa_Leave(object sender, EventArgs e)
         {
@@ -348,8 +455,6 @@ namespace HLP.Comum.UI.Eventos
                 btnPesquisa_Click(sender, e);
             }
         }
-
-
         public void PesquisaComponente()
         {
             try
@@ -463,7 +568,6 @@ namespace HLP.Comum.UI.Eventos
         }
 
         #endregion
-
 
         #region Pesquisa Campo
 
