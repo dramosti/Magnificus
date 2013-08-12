@@ -27,7 +27,7 @@ namespace HLP.Comum.Components
             InitializeComponent();
             base.controleBase = this.txt;
             base.lblBase = this.lblDescricao;
-            this.tsmConfigurar.Tag = this;
+            this.ctxConfig.Tag = this;
             //tsmMoveUp.Click += tsmMoveUp_Click;
             //tsmMoveDown.Click += tsmMoveDown_Click;
             lblBase.Click += lblBase_Click;

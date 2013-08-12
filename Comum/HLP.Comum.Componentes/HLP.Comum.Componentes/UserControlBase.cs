@@ -44,33 +44,43 @@ namespace HLP.Comum.Components
         }
 
 
+
+        private HLP_LabelSeparator _labelGroup;
         [Category("HLP")]
         [Description("Separador de Componentes")]
-        public HLP_LabelSeparator _labelGroup;
-
         public HLP_LabelSeparator _LabelGroup
         {
             get { return _labelGroup; }
             set
             {
+                if (_labelGroup != null)
+                {
+                    if (value != _labelGroup)
+                    {
+                        _labelGroup.lComponentesBySerparador.Remove(this);
+                    }
+                }
                 _labelGroup = value;
                 if (_labelGroup != null)
                 {
                     if (_labelGroup.lComponentesBySerparador.Where(c => c == this).Count() == 0)
                     {
                         _labelGroup.lComponentesBySerparador.Add(this);
-                    }
-                    else
-                    {
-                        if (value == null)
-                        {
-                            _labelGroup.lComponentesBySerparador.Remove(this);
-                        }
-                    }
-                    //_labelGroup.ConfigMaiorLabel();
+                    }                    
+                    _labelGroup.ConfigMaiorLabel();
                 }
+            }
+        }
 
-
+        public string SetSeparador
+        {
+            set
+            {
+                HLP_LabelSeparator sep = (this.Parent as FlowLayoutPanel).Controls.OfType<HLP_LabelSeparator>().ToList().FirstOrDefault(C => C.Name == value);
+                if (sep != null)
+                {
+                    this._LabelGroup = sep;
+                }
             }
         }
 
@@ -529,7 +539,9 @@ namespace HLP.Comum.Components
                     this._help = objConfigComponenteModel.objConfigCompUsu.xHelp;
                     this._Visible = objConfigComponenteModel.objConfigCompUsu.stVisible.ToBoolean();
                     this._TamanhoComponente = objConfigComponenteModel.objConfigCompUsu.iTamanhoComponente.ToInt32();
+                    this.SetSeparador = objConfigComponenteModel.xLabelGroup;
                     this.TabIndex = objConfigComponenteModel.objConfigCompUsu.nOrder;
+                    (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, this.TabIndex);
 
                     if (!objConfigComponenteModel.xName.Equals("txtCodigo") && (objConfigComponenteModel.Base != null))
                     {
@@ -584,7 +596,8 @@ namespace HLP.Comum.Components
                 ctxConfig.Show(MousePosition.X, MousePosition.Y);
             }
         }
-        public void tsmMoveDown_Click(object sender, EventArgs e)
+
+        public void MoveDown()
         {
             try
             {
@@ -600,7 +613,6 @@ namespace HLP.Comum.Components
                         }
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -608,14 +620,14 @@ namespace HLP.Comum.Components
             }
         }
 
-        public void tsmMoveUp_Click(object sender, EventArgs e)
+        public void MoveUp()
         {
             try
             {
                 if (!this.Name.ToUpper().Equals("TXTCODIGO"))
                 {
                     int index = (this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) - 1;
-                    if (!((this.Parent as FlowLayoutPanel).Controls[index + 1].Name.ToUpper().Equals("TXTCODIGO")))
+                    if (!((this.Parent as FlowLayoutPanel).Controls[index].Name.ToUpper().Equals("TXTCODIGO")))
                     {
                         if ((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) > 0)
                         {
@@ -637,10 +649,6 @@ namespace HLP.Comum.Components
         internal void Initialize()
         {
             this.InitializeComponent();
-
-            tsmMoveUp.Click += tsmMoveUp_Click;
-            tsmMoveDown.Click += tsmMoveDown_Click;
-
         }
 
     }

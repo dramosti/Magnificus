@@ -58,7 +58,7 @@ namespace HLP.Comum.Components
         {
             try
             {
-                List<Control> lctr = this.lComponentesBySerparador.Where(c => (c as UserControlBase)._labelGroup == this).ToList();
+                List<Control> lctr = this.lComponentesBySerparador.Where(c => (c as UserControlBase)._LabelGroup == this).ToList();
 
                 int iLabelMax = lctr.Max(c => c.GetPropertyValue("_TamanhoLabel")).ToInt32();
                 foreach (Control ctr in lctr)
@@ -67,9 +67,6 @@ namespace HLP.Comum.Components
                 }
                 int iWidthMax = lctr.Max(c => c.Width);
                 Control controle = lctr.FirstOrDefault(c => c.Width == iWidthMax);
-
-
-                //this.Width = (controle.Width + controle.Margin.Left) - 3;
 
                 this.Width = ((controle as UserControlBase)._TamanhoComponente + (controle as UserControlBase)._TamanhoMaiorLabel);
 

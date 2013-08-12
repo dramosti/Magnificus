@@ -218,18 +218,18 @@ namespace HLP.Comum.Infrastructure.Static
             {
                 image.Save(stream, format);
                 return stream.ToArray();
-            }            
+            }
         }
 
 
         public static bool ToBoolean(this byte value)
-        {            
-            if(value == 0)
+        {
+            if (value == 0)
                 return false;
-            else 
-                return true;	
+            else
+                return true;
         }
-        
+
 
 
         #endregion
@@ -354,6 +354,7 @@ namespace HLP.Comum.Infrastructure.Static
         }
 
         #endregion
+
         #region Extension Reflection
 
         /// <summary>
@@ -442,6 +443,21 @@ namespace HLP.Comum.Infrastructure.Static
             return att.Description;
         }
 
+        #endregion
+
+        #region ToolStripItem
+
+        public static ContextMenuStrip GetContextMenuStrip(this ToolStripItem item)
+        {
+            ToolStripItem itemCheck = item;
+
+            while (!(itemCheck.GetCurrentParent() is ContextMenuStrip) && itemCheck.GetCurrentParent() is ToolStripDropDown)
+            {
+                itemCheck = (itemCheck.GetCurrentParent() as ToolStripDropDown).OwnerItem;
+            }
+
+            return itemCheck.GetCurrentParent() as ContextMenuStrip;
+        }
         #endregion
 
     }
