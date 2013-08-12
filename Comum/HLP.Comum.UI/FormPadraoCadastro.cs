@@ -1283,6 +1283,10 @@ namespace HLP.Comum.UI
                         {
                             item.SetValue(model, ((HLP.Comum.Components.HLP_DateTimePicker)controle).Value);
                         }
+                        else if (controle.GetType() == typeof(HLP.Comum.Components.HLP_CheckBox))
+                        {
+                            item.SetValue(model, ((HLP.Comum.Components.HLP_CheckBox)controle).Value);
+                        }
                     }
                     catch (System.Exception ex)
                     {
