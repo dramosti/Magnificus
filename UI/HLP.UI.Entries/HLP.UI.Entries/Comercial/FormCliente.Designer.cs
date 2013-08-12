@@ -1376,7 +1376,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxCaixaPostal.bConfiguracao = false;
             this.txtxCaixaPostal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxCaixaPostal.Color = System.Drawing.Color.White;
-            this.txtxCaixaPostal.Location = new System.Drawing.Point(402, 3);
+            this.txtxCaixaPostal.Location = new System.Drawing.Point(13, 171);
             this.txtxCaixaPostal.Margin = new System.Windows.Forms.Padding(13, 3, 15, 3);
             this.txtxCaixaPostal.MaxLength = 32767;
             this.txtxCaixaPostal.Name = "txtxCaixaPostal";
@@ -1403,7 +1403,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxLatitude.bConfiguracao = false;
             this.txtxLatitude.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxLatitude.Color = System.Drawing.Color.White;
-            this.txtxLatitude.Location = new System.Drawing.Point(422, 33);
+            this.txtxLatitude.Location = new System.Drawing.Point(33, 201);
             this.txtxLatitude.Margin = new System.Windows.Forms.Padding(33, 3, 15, 3);
             this.txtxLatitude.MaxLength = 32767;
             this.txtxLatitude.Name = "txtxLatitude";
@@ -1430,7 +1430,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxLongitude.bConfiguracao = false;
             this.txtxLongitude.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxLongitude.Color = System.Drawing.Color.White;
-            this.txtxLongitude.Location = new System.Drawing.Point(482, 63);
+            this.txtxLongitude.Location = new System.Drawing.Point(93, 231);
             this.txtxLongitude.Margin = new System.Windows.Forms.Padding(93, 3, 15, 3);
             this.txtxLongitude.MaxLength = 32767;
             this.txtxLongitude.Name = "txtxLongitude";
@@ -4279,7 +4279,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage17.Location = new System.Drawing.Point(4, 25);
             this.tabPage17.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Size = new System.Drawing.Size(1345, 342);
+            this.tabPage17.Size = new System.Drawing.Size(1144, 225);
             this.tabPage17.TabIndex = 6;
             this.tabPage17.Tag = false;
             this.tabPage17.Text = "Configuração";
@@ -4296,7 +4296,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel12.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel12.Name = "kryptonPanel12";
             this.kryptonPanel12.PersistentColors = false;
-            this.kryptonPanel12.Size = new System.Drawing.Size(1345, 342);
+            this.kryptonPanel12.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel12.TabIndex = 6;
             // 
             // flowLayoutPanel12
@@ -4316,7 +4316,7 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel12.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(1345, 342);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(1144, 225);
             this.flowLayoutPanel12.TabIndex = 1;
             this.flowLayoutPanel12.Tag = "Configuração";
             // 
@@ -4348,6 +4348,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCondicaoEntrega._TamanhoComponente = 300;
             this.hlP_PesquisaidCondicaoEntrega._TamanhoMaiorLabel = 120;
             this.hlP_PesquisaidCondicaoEntrega._Vinculado = false;
+            this.hlP_PesquisaidCondicaoEntrega._Visible = false;
             this.hlP_PesquisaidCondicaoEntrega.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCondicaoEntrega.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCondicaoEntrega.Base = null;
@@ -4377,6 +4378,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidModosEntrega._TamanhoComponente = 300;
             this.hlP_PesquisaidModosEntrega._TamanhoMaiorLabel = 120;
             this.hlP_PesquisaidModosEntrega._Vinculado = false;
+            this.hlP_PesquisaidModosEntrega._Visible = false;
             this.hlP_PesquisaidModosEntrega.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidModosEntrega.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidModosEntrega.Base = null;
@@ -4395,7 +4397,7 @@ namespace HLP.UI.Entries.Comercial
             this.sp_produtos._LabelText = "Produtos";
             this.sp_produtos._TamanhoMaiorLabel = 0;
             this.sp_produtos.BackColor = System.Drawing.Color.Transparent;
-            this.sp_produtos.Location = new System.Drawing.Point(0, 82);
+            this.sp_produtos.Location = new System.Drawing.Point(0, 28);
             this.sp_produtos.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_produtos.Name = "sp_produtos";
             this.sp_produtos.Size = new System.Drawing.Size(330, 19);
@@ -4414,6 +4416,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostExigeRelacaoProduto._Table = "Cliente_fornecedor";
             this.cbostExigeRelacaoProduto._TamanhoComponente = 80;
             this.cbostExigeRelacaoProduto._TamanhoMaiorLabel = 199;
+            this.cbostExigeRelacaoProduto._Visible = false;
             this.cbostExigeRelacaoProduto.BackColor = System.Drawing.Color.Transparent;
             this.cbostExigeRelacaoProduto.Base = null;
             this.cbostExigeRelacaoProduto.bConfiguracao = false;
@@ -4442,6 +4445,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostMostraProdutosRelacionado._Table = "Cliente_fornecedor";
             this.cbostMostraProdutosRelacionado._TamanhoComponente = 80;
             this.cbostMostraProdutosRelacionado._TamanhoMaiorLabel = 199;
+            this.cbostMostraProdutosRelacionado._Visible = false;
             this.cbostMostraProdutosRelacionado.BackColor = System.Drawing.Color.Transparent;
             this.cbostMostraProdutosRelacionado.Base = null;
             this.cbostMostraProdutosRelacionado.bConfiguracao = false;
@@ -4463,7 +4467,7 @@ namespace HLP.UI.Entries.Comercial
             this.sp_calendario._LabelText = "Calendário";
             this.sp_calendario._TamanhoMaiorLabel = 0;
             this.sp_calendario.BackColor = System.Drawing.Color.Transparent;
-            this.sp_calendario.Location = new System.Drawing.Point(0, 161);
+            this.sp_calendario.Location = new System.Drawing.Point(0, 53);
             this.sp_calendario.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_calendario.Name = "sp_calendario";
             this.sp_calendario.Size = new System.Drawing.Size(420, 19);
@@ -4486,6 +4490,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidCalendario._TamanhoComponente = 300;
             this.hlP_PesquisaidCalendario._TamanhoMaiorLabel = 250;
             this.hlP_PesquisaidCalendario._Vinculado = false;
+            this.hlP_PesquisaidCalendario._Visible = false;
             this.hlP_PesquisaidCalendario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCalendario.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCalendario.Base = null;
@@ -4504,7 +4509,7 @@ namespace HLP.UI.Entries.Comercial
             this.sp_doc._LabelText = "Documento";
             this.sp_doc._TamanhoMaiorLabel = 0;
             this.sp_doc.BackColor = System.Drawing.Color.Transparent;
-            this.sp_doc.Location = new System.Drawing.Point(0, 213);
+            this.sp_doc.Location = new System.Drawing.Point(0, 78);
             this.sp_doc.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_doc.Name = "sp_doc";
             this.sp_doc.Size = new System.Drawing.Size(420, 19);
@@ -4527,11 +4532,12 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidTipoDocumento._TamanhoComponente = 300;
             this.hlP_PesquisaidTipoDocumento._TamanhoMaiorLabel = 250;
             this.hlP_PesquisaidTipoDocumento._Vinculado = false;
+            this.hlP_PesquisaidTipoDocumento._Visible = false;
             this.hlP_PesquisaidTipoDocumento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoDocumento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoDocumento.Base = null;
             this.hlP_PesquisaidTipoDocumento.bConfiguracao = false;
-            this.hlP_PesquisaidTipoDocumento.Location = new System.Drawing.Point(25, 238);
+            this.hlP_PesquisaidTipoDocumento.Location = new System.Drawing.Point(593, 28);
             this.hlP_PesquisaidTipoDocumento.Margin = new System.Windows.Forms.Padding(25, 3, 15, 3);
             this.hlP_PesquisaidTipoDocumento.Name = "hlP_PesquisaidTipoDocumento";
             this.hlP_PesquisaidTipoDocumento.objConfigComponenteModel = null;
@@ -4894,7 +4900,7 @@ namespace HLP.UI.Entries.Comercial
             this.tabPage22.Location = new System.Drawing.Point(4, 25);
             this.tabPage22.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage22.Name = "tabPage22";
-            this.tabPage22.Size = new System.Drawing.Size(1144, 225);
+            this.tabPage22.Size = new System.Drawing.Size(1345, 342);
             this.tabPage22.TabIndex = 11;
             this.tabPage22.Tag = false;
             this.tabPage22.Text = "Fiscais";
@@ -4911,7 +4917,7 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel13.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel13.Name = "kryptonPanel13";
             this.kryptonPanel13.PersistentColors = false;
-            this.kryptonPanel13.Size = new System.Drawing.Size(1144, 225);
+            this.kryptonPanel13.Size = new System.Drawing.Size(1345, 342);
             this.kryptonPanel13.TabIndex = 6;
             // 
             // flowLayoutPanel13
@@ -4945,7 +4951,7 @@ namespace HLP.UI.Entries.Comercial
             this.flowLayoutPanel13.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel13.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
-            this.flowLayoutPanel13.Size = new System.Drawing.Size(1144, 225);
+            this.flowLayoutPanel13.Size = new System.Drawing.Size(1345, 342);
             this.flowLayoutPanel13.TabIndex = 1;
             this.flowLayoutPanel13.Tag = "Fiscais";
             // 
@@ -4973,7 +4979,6 @@ namespace HLP.UI.Entries.Comercial
             this.txtxCodigoSuframa._Table = "Cliente_fornecedor_fiscal";
             this.txtxCodigoSuframa._TamanhoComponente = 157;
             this.txtxCodigoSuframa._TamanhoMaiorLabel = 328;
-            this.txtxCodigoSuframa._Visible = false;
             this.txtxCodigoSuframa.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoSuframa.Base = null;
             this.txtxCodigoSuframa.bConfiguracao = false;
@@ -4998,7 +5003,6 @@ namespace HLP.UI.Entries.Comercial
             this.nudpDescontaIcmsSuframa._Table = "Cliente_fornecedor_fiscal";
             this.nudpDescontaIcmsSuframa._TamanhoComponente = 111;
             this.nudpDescontaIcmsSuframa._TamanhoMaiorLabel = 328;
-            this.nudpDescontaIcmsSuframa._Visible = false;
             this.nudpDescontaIcmsSuframa.BackColor = System.Drawing.Color.Transparent;
             this.nudpDescontaIcmsSuframa.Base = null;
             this.nudpDescontaIcmsSuframa.bConfiguracao = false;
@@ -5038,7 +5042,6 @@ namespace HLP.UI.Entries.Comercial
             this.nudpDescontaPisSuframa._Table = "Cliente_fornecedor_fiscal";
             this.nudpDescontaPisSuframa._TamanhoComponente = 109;
             this.nudpDescontaPisSuframa._TamanhoMaiorLabel = 328;
-            this.nudpDescontaPisSuframa._Visible = false;
             this.nudpDescontaPisSuframa.BackColor = System.Drawing.Color.Transparent;
             this.nudpDescontaPisSuframa.Base = null;
             this.nudpDescontaPisSuframa.bConfiguracao = false;
@@ -5078,7 +5081,6 @@ namespace HLP.UI.Entries.Comercial
             this.nudpDescontaCofinsSuframa._Table = "Cliente_fornecedor_fiscal";
             this.nudpDescontaCofinsSuframa._TamanhoComponente = 111;
             this.nudpDescontaCofinsSuframa._TamanhoMaiorLabel = 328;
-            this.nudpDescontaCofinsSuframa._Visible = false;
             this.nudpDescontaCofinsSuframa.BackColor = System.Drawing.Color.Transparent;
             this.nudpDescontaCofinsSuframa.Base = null;
             this.nudpDescontaCofinsSuframa.bConfiguracao = false;
@@ -5118,7 +5120,6 @@ namespace HLP.UI.Entries.Comercial
             this.nudpFunrural._Table = "Cliente_fornecedor_fiscal";
             this.nudpFunrural._TamanhoComponente = 113;
             this.nudpFunrural._TamanhoMaiorLabel = 328;
-            this.nudpFunrural._Visible = false;
             this.nudpFunrural.BackColor = System.Drawing.Color.Transparent;
             this.nudpFunrural.Base = null;
             this.nudpFunrural.bConfiguracao = false;
@@ -5160,7 +5161,6 @@ namespace HLP.UI.Entries.Comercial
             this.txtxCodigoSuspensaoPisCofins._Table = "Cliente_fornecedor_fiscal";
             this.txtxCodigoSuspensaoPisCofins._TamanhoComponente = 154;
             this.txtxCodigoSuspensaoPisCofins._TamanhoMaiorLabel = 328;
-            this.txtxCodigoSuspensaoPisCofins._Visible = false;
             this.txtxCodigoSuspensaoPisCofins.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoSuspensaoPisCofins.Base = null;
             this.txtxCodigoSuspensaoPisCofins.bConfiguracao = false;
@@ -5187,7 +5187,6 @@ namespace HLP.UI.Entries.Comercial
             this.cbostSimplesNacional._Table = "Cliente_fornecedor_fiscal";
             this.cbostSimplesNacional._TamanhoComponente = 80;
             this.cbostSimplesNacional._TamanhoMaiorLabel = 328;
-            this.cbostSimplesNacional._Visible = false;
             this.cbostSimplesNacional.BackColor = System.Drawing.Color.Transparent;
             this.cbostSimplesNacional.Base = null;
             this.cbostSimplesNacional.bConfiguracao = false;
@@ -5216,14 +5215,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostProdutorRural._Table = "Cliente_fornecedor_fiscal";
             this.cbostProdutorRural._TamanhoComponente = 80;
             this.cbostProdutorRural._TamanhoMaiorLabel = 328;
-            this.cbostProdutorRural._Visible = false;
             this.cbostProdutorRural.BackColor = System.Drawing.Color.Transparent;
             this.cbostProdutorRural.Base = null;
             this.cbostProdutorRural.bConfiguracao = false;
             this.cbostProdutorRural.Color = System.Drawing.Color.White;
             this.cbostProdutorRural.DataSource = null;
             this.cbostProdutorRural.DisplayMember = "DisplayMember";
-            this.cbostProdutorRural.Location = new System.Drawing.Point(739, 3);
+            this.cbostProdutorRural.Location = new System.Drawing.Point(236, 223);
             this.cbostProdutorRural.Margin = new System.Windows.Forms.Padding(236, 3, 15, 3);
             this.cbostProdutorRural.Name = "cbostProdutorRural";
             this.cbostProdutorRural.objConfigComponenteModel = null;
@@ -5245,14 +5243,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostExportador._Table = "Cliente_fornecedor_fiscal";
             this.cbostExportador._TamanhoComponente = 80;
             this.cbostExportador._TamanhoMaiorLabel = 328;
-            this.cbostExportador._Visible = false;
             this.cbostExportador.BackColor = System.Drawing.Color.Transparent;
             this.cbostExportador.Base = null;
             this.cbostExportador.bConfiguracao = false;
             this.cbostExportador.Color = System.Drawing.Color.White;
             this.cbostExportador.DataSource = null;
             this.cbostExportador.DisplayMember = "DisplayMember";
-            this.cbostExportador.Location = new System.Drawing.Point(756, 30);
+            this.cbostExportador.Location = new System.Drawing.Point(253, 250);
             this.cbostExportador.Margin = new System.Windows.Forms.Padding(253, 3, 15, 3);
             this.cbostExportador.Name = "cbostExportador";
             this.cbostExportador.objConfigComponenteModel = null;
@@ -5274,14 +5271,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostCooperativaAgricola._Table = "Cliente_fornecedor_fiscal";
             this.cbostCooperativaAgricola._TamanhoComponente = 80;
             this.cbostCooperativaAgricola._TamanhoMaiorLabel = 328;
-            this.cbostCooperativaAgricola._Visible = false;
             this.cbostCooperativaAgricola.BackColor = System.Drawing.Color.Transparent;
             this.cbostCooperativaAgricola.Base = null;
             this.cbostCooperativaAgricola.bConfiguracao = false;
             this.cbostCooperativaAgricola.Color = System.Drawing.Color.White;
             this.cbostCooperativaAgricola.DataSource = null;
             this.cbostCooperativaAgricola.DisplayMember = "DisplayMember";
-            this.cbostCooperativaAgricola.Location = new System.Drawing.Point(709, 57);
+            this.cbostCooperativaAgricola.Location = new System.Drawing.Point(206, 277);
             this.cbostCooperativaAgricola.Margin = new System.Windows.Forms.Padding(206, 3, 15, 3);
             this.cbostCooperativaAgricola.Name = "cbostCooperativaAgricola";
             this.cbostCooperativaAgricola.objConfigComponenteModel = null;
@@ -5303,14 +5299,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostDescontaIcmsSuframa._Table = "Cliente_fornecedor_fiscal";
             this.cbostDescontaIcmsSuframa._TamanhoComponente = 80;
             this.cbostDescontaIcmsSuframa._TamanhoMaiorLabel = 328;
-            this.cbostDescontaIcmsSuframa._Visible = false;
             this.cbostDescontaIcmsSuframa.BackColor = System.Drawing.Color.Transparent;
             this.cbostDescontaIcmsSuframa.Base = null;
             this.cbostDescontaIcmsSuframa.bConfiguracao = false;
             this.cbostDescontaIcmsSuframa.Color = System.Drawing.Color.White;
             this.cbostDescontaIcmsSuframa.DataSource = null;
             this.cbostDescontaIcmsSuframa.DisplayMember = "DisplayMember";
-            this.cbostDescontaIcmsSuframa.Location = new System.Drawing.Point(645, 84);
+            this.cbostDescontaIcmsSuframa.Location = new System.Drawing.Point(142, 304);
             this.cbostDescontaIcmsSuframa.Margin = new System.Windows.Forms.Padding(142, 3, 15, 3);
             this.cbostDescontaIcmsSuframa.Name = "cbostDescontaIcmsSuframa";
             this.cbostDescontaIcmsSuframa.objConfigComponenteModel = null;
@@ -5332,14 +5327,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostDescontaPisCofinsSuframa._Table = "Cliente_fornecedor_fiscal";
             this.cbostDescontaPisCofinsSuframa._TamanhoComponente = 80;
             this.cbostDescontaPisCofinsSuframa._TamanhoMaiorLabel = 328;
-            this.cbostDescontaPisCofinsSuframa._Visible = false;
             this.cbostDescontaPisCofinsSuframa.BackColor = System.Drawing.Color.Transparent;
             this.cbostDescontaPisCofinsSuframa.Base = null;
             this.cbostDescontaPisCofinsSuframa.bConfiguracao = false;
             this.cbostDescontaPisCofinsSuframa.Color = System.Drawing.Color.White;
             this.cbostDescontaPisCofinsSuframa.DataSource = null;
             this.cbostDescontaPisCofinsSuframa.DisplayMember = "DisplayMember";
-            this.cbostDescontaPisCofinsSuframa.Location = new System.Drawing.Point(617, 111);
+            this.cbostDescontaPisCofinsSuframa.Location = new System.Drawing.Point(617, 3);
             this.cbostDescontaPisCofinsSuframa.Margin = new System.Windows.Forms.Padding(114, 3, 15, 3);
             this.cbostDescontaPisCofinsSuframa.Name = "cbostDescontaPisCofinsSuframa";
             this.cbostDescontaPisCofinsSuframa.objConfigComponenteModel = null;
@@ -5361,14 +5355,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostCalculaFunrural._Table = "Cliente_fornecedor_fiscal";
             this.cbostCalculaFunrural._TamanhoComponente = 80;
             this.cbostCalculaFunrural._TamanhoMaiorLabel = 328;
-            this.cbostCalculaFunrural._Visible = false;
             this.cbostCalculaFunrural.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalculaFunrural.Base = null;
             this.cbostCalculaFunrural.bConfiguracao = false;
             this.cbostCalculaFunrural.Color = System.Drawing.Color.White;
             this.cbostCalculaFunrural.DataSource = null;
             this.cbostCalculaFunrural.DisplayMember = "DisplayMember";
-            this.cbostCalculaFunrural.Location = new System.Drawing.Point(740, 138);
+            this.cbostCalculaFunrural.Location = new System.Drawing.Point(740, 30);
             this.cbostCalculaFunrural.Margin = new System.Windows.Forms.Padding(237, 3, 15, 3);
             this.cbostCalculaFunrural.Name = "cbostCalculaFunrural";
             this.cbostCalculaFunrural.objConfigComponenteModel = null;
@@ -5390,14 +5383,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostRetemIss._Table = "Cliente_fornecedor_fiscal";
             this.cbostRetemIss._TamanhoComponente = 80;
             this.cbostRetemIss._TamanhoMaiorLabel = 328;
-            this.cbostRetemIss._Visible = false;
             this.cbostRetemIss.BackColor = System.Drawing.Color.Transparent;
             this.cbostRetemIss.Base = null;
             this.cbostRetemIss.bConfiguracao = false;
             this.cbostRetemIss.Color = System.Drawing.Color.White;
             this.cbostRetemIss.DataSource = null;
             this.cbostRetemIss.DisplayMember = "DisplayMember";
-            this.cbostRetemIss.Location = new System.Drawing.Point(774, 165);
+            this.cbostRetemIss.Location = new System.Drawing.Point(774, 57);
             this.cbostRetemIss.Margin = new System.Windows.Forms.Padding(271, 3, 15, 3);
             this.cbostRetemIss.Name = "cbostRetemIss";
             this.cbostRetemIss.objConfigComponenteModel = null;
@@ -5419,14 +5411,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostRetemCsll._Table = "Cliente_fornecedor_fiscal";
             this.cbostRetemCsll._TamanhoComponente = 80;
             this.cbostRetemCsll._TamanhoMaiorLabel = 328;
-            this.cbostRetemCsll._Visible = false;
             this.cbostRetemCsll.BackColor = System.Drawing.Color.Transparent;
             this.cbostRetemCsll.Base = null;
             this.cbostRetemCsll.bConfiguracao = false;
             this.cbostRetemCsll.Color = System.Drawing.Color.White;
             this.cbostRetemCsll.DataSource = null;
             this.cbostRetemCsll.DisplayMember = "DisplayMember";
-            this.cbostRetemCsll.Location = new System.Drawing.Point(771, 192);
+            this.cbostRetemCsll.Location = new System.Drawing.Point(771, 84);
             this.cbostRetemCsll.Margin = new System.Windows.Forms.Padding(268, 3, 15, 3);
             this.cbostRetemCsll.Name = "cbostRetemCsll";
             this.cbostRetemCsll.objConfigComponenteModel = null;
@@ -5448,14 +5439,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostRetemInss._Table = "Cliente_fornecedor_fiscal";
             this.cbostRetemInss._TamanhoComponente = 80;
             this.cbostRetemInss._TamanhoMaiorLabel = 328;
-            this.cbostRetemInss._Visible = false;
             this.cbostRetemInss.BackColor = System.Drawing.Color.Transparent;
             this.cbostRetemInss.Base = null;
             this.cbostRetemInss.bConfiguracao = false;
             this.cbostRetemInss.Color = System.Drawing.Color.White;
             this.cbostRetemInss.DataSource = null;
             this.cbostRetemInss.DisplayMember = "DisplayMember";
-            this.cbostRetemInss.Location = new System.Drawing.Point(1193, 3);
+            this.cbostRetemInss.Location = new System.Drawing.Point(767, 111);
             this.cbostRetemInss.Margin = new System.Windows.Forms.Padding(264, 3, 15, 3);
             this.cbostRetemInss.Name = "cbostRetemInss";
             this.cbostRetemInss.objConfigComponenteModel = null;
@@ -5477,14 +5467,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostRetemPisCofins._Table = "Cliente_fornecedor_fiscal";
             this.cbostRetemPisCofins._TamanhoComponente = 80;
             this.cbostRetemPisCofins._TamanhoMaiorLabel = 328;
-            this.cbostRetemPisCofins._Visible = false;
             this.cbostRetemPisCofins.BackColor = System.Drawing.Color.Transparent;
             this.cbostRetemPisCofins.Base = null;
             this.cbostRetemPisCofins.bConfiguracao = false;
             this.cbostRetemPisCofins.Color = System.Drawing.Color.White;
             this.cbostRetemPisCofins.DataSource = null;
             this.cbostRetemPisCofins.DisplayMember = "DisplayMember";
-            this.cbostRetemPisCofins.Location = new System.Drawing.Point(1163, 30);
+            this.cbostRetemPisCofins.Location = new System.Drawing.Point(737, 138);
             this.cbostRetemPisCofins.Margin = new System.Windows.Forms.Padding(234, 3, 15, 3);
             this.cbostRetemPisCofins.Name = "cbostRetemPisCofins";
             this.cbostRetemPisCofins.objConfigComponenteModel = null;
@@ -5506,14 +5495,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostRetemIrrf._Table = "Cliente_fornecedor_fiscal";
             this.cbostRetemIrrf._TamanhoComponente = 80;
             this.cbostRetemIrrf._TamanhoMaiorLabel = 328;
-            this.cbostRetemIrrf._Visible = false;
             this.cbostRetemIrrf.BackColor = System.Drawing.Color.Transparent;
             this.cbostRetemIrrf.Base = null;
             this.cbostRetemIrrf.bConfiguracao = false;
             this.cbostRetemIrrf.Color = System.Drawing.Color.White;
             this.cbostRetemIrrf.DataSource = null;
             this.cbostRetemIrrf.DisplayMember = "DisplayMember";
-            this.cbostRetemIrrf.Location = new System.Drawing.Point(1198, 57);
+            this.cbostRetemIrrf.Location = new System.Drawing.Point(772, 165);
             this.cbostRetemIrrf.Margin = new System.Windows.Forms.Padding(269, 3, 15, 3);
             this.cbostRetemIrrf.Name = "cbostRetemIrrf";
             this.cbostRetemIrrf.objConfigComponenteModel = null;
@@ -5535,14 +5523,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostConsumidorFinal._Table = "Cliente_fornecedor_fiscal";
             this.cbostConsumidorFinal._TamanhoComponente = 80;
             this.cbostConsumidorFinal._TamanhoMaiorLabel = 328;
-            this.cbostConsumidorFinal._Visible = false;
             this.cbostConsumidorFinal.BackColor = System.Drawing.Color.Transparent;
             this.cbostConsumidorFinal.Base = null;
             this.cbostConsumidorFinal.bConfiguracao = false;
             this.cbostConsumidorFinal.Color = System.Drawing.Color.White;
             this.cbostConsumidorFinal.DataSource = null;
             this.cbostConsumidorFinal.DisplayMember = "DisplayMember";
-            this.cbostConsumidorFinal.Location = new System.Drawing.Point(1159, 84);
+            this.cbostConsumidorFinal.Location = new System.Drawing.Point(733, 192);
             this.cbostConsumidorFinal.Margin = new System.Windows.Forms.Padding(230, 3, 15, 3);
             this.cbostConsumidorFinal.Name = "cbostConsumidorFinal";
             this.cbostConsumidorFinal.objConfigComponenteModel = null;
@@ -5564,14 +5551,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostContribuienteIcms._Table = "Cliente_fornecedor_fiscal";
             this.cbostContribuienteIcms._TamanhoComponente = 80;
             this.cbostContribuienteIcms._TamanhoMaiorLabel = 328;
-            this.cbostContribuienteIcms._Visible = false;
             this.cbostContribuienteIcms.BackColor = System.Drawing.Color.Transparent;
             this.cbostContribuienteIcms.Base = null;
             this.cbostContribuienteIcms.bConfiguracao = false;
             this.cbostContribuienteIcms.Color = System.Drawing.Color.White;
             this.cbostContribuienteIcms.DataSource = null;
             this.cbostContribuienteIcms.DisplayMember = "DisplayMember";
-            this.cbostContribuienteIcms.Location = new System.Drawing.Point(1141, 111);
+            this.cbostContribuienteIcms.Location = new System.Drawing.Point(715, 219);
             this.cbostContribuienteIcms.Margin = new System.Windows.Forms.Padding(212, 3, 15, 3);
             this.cbostContribuienteIcms.Name = "cbostContribuienteIcms";
             this.cbostContribuienteIcms.objConfigComponenteModel = null;
@@ -5593,14 +5579,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostSubsticaoTributariaIcmsDiferenciada._Table = "Cliente_fornecedor_fiscal";
             this.cbostSubsticaoTributariaIcmsDiferenciada._TamanhoComponente = 80;
             this.cbostSubsticaoTributariaIcmsDiferenciada._TamanhoMaiorLabel = 328;
-            this.cbostSubsticaoTributariaIcmsDiferenciada._Visible = false;
             this.cbostSubsticaoTributariaIcmsDiferenciada.BackColor = System.Drawing.Color.Transparent;
             this.cbostSubsticaoTributariaIcmsDiferenciada.Base = null;
             this.cbostSubsticaoTributariaIcmsDiferenciada.bConfiguracao = false;
             this.cbostSubsticaoTributariaIcmsDiferenciada.Color = System.Drawing.Color.White;
             this.cbostSubsticaoTributariaIcmsDiferenciada.DataSource = null;
             this.cbostSubsticaoTributariaIcmsDiferenciada.DisplayMember = "DisplayMember";
-            this.cbostSubsticaoTributariaIcmsDiferenciada.Location = new System.Drawing.Point(1023, 138);
+            this.cbostSubsticaoTributariaIcmsDiferenciada.Location = new System.Drawing.Point(597, 246);
             this.cbostSubsticaoTributariaIcmsDiferenciada.Margin = new System.Windows.Forms.Padding(94, 3, 15, 3);
             this.cbostSubsticaoTributariaIcmsDiferenciada.Name = "cbostSubsticaoTributariaIcmsDiferenciada";
             this.cbostSubsticaoTributariaIcmsDiferenciada.objConfigComponenteModel = null;
@@ -5624,14 +5609,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostCalculaIcms._Table = "Cliente_fornecedor_fiscal";
             this.cbostCalculaIcms._TamanhoComponente = 80;
             this.cbostCalculaIcms._TamanhoMaiorLabel = 328;
-            this.cbostCalculaIcms._Visible = false;
             this.cbostCalculaIcms.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalculaIcms.Base = null;
             this.cbostCalculaIcms.bConfiguracao = false;
             this.cbostCalculaIcms.Color = System.Drawing.Color.White;
             this.cbostCalculaIcms.DataSource = null;
             this.cbostCalculaIcms.DisplayMember = "DisplayMember";
-            this.cbostCalculaIcms.Location = new System.Drawing.Point(1186, 165);
+            this.cbostCalculaIcms.Location = new System.Drawing.Point(760, 273);
             this.cbostCalculaIcms.Margin = new System.Windows.Forms.Padding(257, 3, 15, 3);
             this.cbostCalculaIcms.Name = "cbostCalculaIcms";
             this.cbostCalculaIcms.objConfigComponenteModel = null;
@@ -5655,14 +5639,13 @@ namespace HLP.UI.Entries.Comercial
             this.cbostCalculaIpi._Table = "Cliente_fornecedor_fiscal";
             this.cbostCalculaIpi._TamanhoComponente = 80;
             this.cbostCalculaIpi._TamanhoMaiorLabel = 250;
-            this.cbostCalculaIpi._Visible = false;
             this.cbostCalculaIpi.BackColor = System.Drawing.Color.Transparent;
             this.cbostCalculaIpi.Base = null;
             this.cbostCalculaIpi.bConfiguracao = false;
             this.cbostCalculaIpi.Color = System.Drawing.Color.White;
             this.cbostCalculaIpi.DataSource = null;
             this.cbostCalculaIpi.DisplayMember = "DisplayMember";
-            this.cbostCalculaIpi.Location = new System.Drawing.Point(1117, 192);
+            this.cbostCalculaIpi.Location = new System.Drawing.Point(691, 300);
             this.cbostCalculaIpi.Margin = new System.Windows.Forms.Padding(188, 3, 15, 3);
             this.cbostCalculaIpi.Name = "cbostCalculaIpi";
             this.cbostCalculaIpi.objConfigComponenteModel = null;

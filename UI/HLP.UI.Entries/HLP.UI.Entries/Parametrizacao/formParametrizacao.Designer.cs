@@ -465,7 +465,7 @@
             this.cbxstEstoqueMinimo._Table = "Parametro_Estoque";
             this.cbxstEstoqueMinimo._TamanhoComponente = 149;
             this.cbxstEstoqueMinimo._TamanhoMaiorLabel = 195;
-            this.cbxstEstoqueMinimo._Visible = false;
+            this.cbxstEstoqueMinimo._Visible = true;
             this.cbxstEstoqueMinimo.BackColor = System.Drawing.Color.Transparent;
             this.cbxstEstoqueMinimo.Base = null;
             this.cbxstEstoqueMinimo.bConfiguracao = false;
@@ -495,7 +495,7 @@
             this.cbxstEstoqueMaximo._Table = "Parametro_Estoque";
             this.cbxstEstoqueMaximo._TamanhoComponente = 149;
             this.cbxstEstoqueMaximo._TamanhoMaiorLabel = 195;
-            this.cbxstEstoqueMaximo._Visible = false;
+            this.cbxstEstoqueMaximo._Visible = true;
             this.cbxstEstoqueMaximo.BackColor = System.Drawing.Color.Transparent;
             this.cbxstEstoqueMaximo.Base = null;
             this.cbxstEstoqueMaximo.bConfiguracao = false;
@@ -525,7 +525,7 @@
             this.cbxstMediaConsumo._Table = "Parametro_Estoque";
             this.cbxstMediaConsumo._TamanhoComponente = 126;
             this.cbxstMediaConsumo._TamanhoMaiorLabel = 195;
-            this.cbxstMediaConsumo._Visible = false;
+            this.cbxstMediaConsumo._Visible = true;
             this.cbxstMediaConsumo.BackColor = System.Drawing.Color.Transparent;
             this.cbxstMediaConsumo.Base = null;
             this.cbxstMediaConsumo.bConfiguracao = false;
@@ -556,7 +556,7 @@
             this.cbxstVendasGera._Table = "Parametro_Estoque";
             this.cbxstVendasGera._TamanhoComponente = 142;
             this.cbxstVendasGera._TamanhoMaiorLabel = 195;
-            this.cbxstVendasGera._Visible = false;
+            this.cbxstVendasGera._Visible = true;
             this.cbxstVendasGera.BackColor = System.Drawing.Color.Transparent;
             this.cbxstVendasGera.Base = null;
             this.cbxstVendasGera.bConfiguracao = false;
@@ -586,7 +586,7 @@
             this.cbxstGradeEstoque._Table = "Parametro_Estoque";
             this.cbxstGradeEstoque._TamanhoComponente = 114;
             this.cbxstGradeEstoque._TamanhoMaiorLabel = 195;
-            this.cbxstGradeEstoque._Visible = false;
+            this.cbxstGradeEstoque._Visible = true;
             this.cbxstGradeEstoque.BackColor = System.Drawing.Color.Transparent;
             this.cbxstGradeEstoque.Base = null;
             this.cbxstGradeEstoque.bConfiguracao = false;
@@ -617,7 +617,7 @@
             this.cbxstRastreabilidadeMaterial._Table = "Parametro_Estoque";
             this.cbxstRastreabilidadeMaterial._TamanhoComponente = 114;
             this.cbxstRastreabilidadeMaterial._TamanhoMaiorLabel = 195;
-            this.cbxstRastreabilidadeMaterial._Visible = false;
+            this.cbxstRastreabilidadeMaterial._Visible = true;
             this.cbxstRastreabilidadeMaterial.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRastreabilidadeMaterial.Base = null;
             this.cbxstRastreabilidadeMaterial.bConfiguracao = false;
@@ -648,7 +648,7 @@
             this.cbxstRastreabilidadeProdutoAcabado._Table = "Parametro_Estoque";
             this.cbxstRastreabilidadeProdutoAcabado._TamanhoComponente = 114;
             this.cbxstRastreabilidadeProdutoAcabado._TamanhoMaiorLabel = 250;
-            this.cbxstRastreabilidadeProdutoAcabado._Visible = false;
+            this.cbxstRastreabilidadeProdutoAcabado._Visible = true;
             this.cbxstRastreabilidadeProdutoAcabado.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRastreabilidadeProdutoAcabado.Base = null;
             this.cbxstRastreabilidadeProdutoAcabado.bConfiguracao = false;
@@ -729,7 +729,7 @@
             this.nudxHorasTrabalhadasDia._Table = "Parametro_Custos";
             this.nudxHorasTrabalhadasDia._TamanhoComponente = 100;
             this.nudxHorasTrabalhadasDia._TamanhoMaiorLabel = 302;
-            this.nudxHorasTrabalhadasDia._Visible = false;
+            this.nudxHorasTrabalhadasDia._Visible = true;
             this.nudxHorasTrabalhadasDia.BackColor = System.Drawing.Color.Transparent;
             this.nudxHorasTrabalhadasDia.Base = null;
             this.nudxHorasTrabalhadasDia.bConfiguracao = false;
@@ -770,7 +770,7 @@
             this.nudxDiasTrabalhadasSemana._Table = "Parametro_Custos";
             this.nudxDiasTrabalhadasSemana._TamanhoComponente = 100;
             this.nudxDiasTrabalhadasSemana._TamanhoMaiorLabel = 302;
-            this.nudxDiasTrabalhadasSemana._Visible = false;
+            this.nudxDiasTrabalhadasSemana._Visible = true;
             this.nudxDiasTrabalhadasSemana.BackColor = System.Drawing.Color.Transparent;
             this.nudxDiasTrabalhadasSemana.Base = null;
             this.nudxDiasTrabalhadasSemana.bConfiguracao = false;
@@ -813,7 +813,7 @@
             this.cbxstCustoComposicao._Table = "Parametro_Custos";
             this.cbxstCustoComposicao._TamanhoComponente = 93;
             this.cbxstCustoComposicao._TamanhoMaiorLabel = 302;
-            this.cbxstCustoComposicao._Visible = false;
+            this.cbxstCustoComposicao._Visible = true;
             this.cbxstCustoComposicao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCustoComposicao.Base = null;
             this.cbxstCustoComposicao.bConfiguracao = false;
@@ -843,7 +843,7 @@
             this.cbxstValorVenda._Table = "Parametro_Custos";
             this.cbxstValorVenda._TamanhoComponente = 403;
             this.cbxstValorVenda._TamanhoMaiorLabel = 302;
-            this.cbxstValorVenda._Visible = false;
+            this.cbxstValorVenda._Visible = true;
             this.cbxstValorVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbxstValorVenda.Base = null;
             this.cbxstValorVenda.bConfiguracao = false;
@@ -873,7 +873,7 @@
             this.cbxstAtualizaValorCusto._Table = "Parametro_Custos";
             this.cbxstAtualizaValorCusto._TamanhoComponente = 80;
             this.cbxstAtualizaValorCusto._TamanhoMaiorLabel = 302;
-            this.cbxstAtualizaValorCusto._Visible = false;
+            this.cbxstAtualizaValorCusto._Visible = true;
             this.cbxstAtualizaValorCusto.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAtualizaValorCusto.Base = null;
             this.cbxstAtualizaValorCusto.bConfiguracao = false;
@@ -904,7 +904,7 @@
             this.cbxstAtualizaValorVenda._Table = "Parametro_Custos";
             this.cbxstAtualizaValorVenda._TamanhoComponente = 114;
             this.cbxstAtualizaValorVenda._TamanhoMaiorLabel = 302;
-            this.cbxstAtualizaValorVenda._Visible = false;
+            this.cbxstAtualizaValorVenda._Visible = true;
             this.cbxstAtualizaValorVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAtualizaValorVenda.Base = null;
             this.cbxstAtualizaValorVenda.bConfiguracao = false;
@@ -934,7 +934,7 @@
             this.cbxstCustoDefault._Table = "Parametro_Custos";
             this.cbxstCustoDefault._TamanhoComponente = 157;
             this.cbxstCustoDefault._TamanhoMaiorLabel = 302;
-            this.cbxstCustoDefault._Visible = false;
+            this.cbxstCustoDefault._Visible = true;
             this.cbxstCustoDefault.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCustoDefault.Base = null;
             this.cbxstCustoDefault.bConfiguracao = false;
@@ -964,7 +964,7 @@
             this.cbxstCustoMedio._Table = "Parametro_Custos";
             this.cbxstCustoMedio._TamanhoComponente = 176;
             this.cbxstCustoMedio._TamanhoMaiorLabel = 302;
-            this.cbxstCustoMedio._Visible = false;
+            this.cbxstCustoMedio._Visible = true;
             this.cbxstCustoMedio.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCustoMedio.Base = null;
             this.cbxstCustoMedio.bConfiguracao = false;
@@ -994,7 +994,7 @@
             this.cbxstCompoeBaseCalculoCustoOperacional._Table = "Parametro_Custos";
             this.cbxstCompoeBaseCalculoCustoOperacional._TamanhoComponente = 1386;
             this.cbxstCompoeBaseCalculoCustoOperacional._TamanhoMaiorLabel = 302;
-            this.cbxstCompoeBaseCalculoCustoOperacional._Visible = false;
+            this.cbxstCompoeBaseCalculoCustoOperacional._Visible = true;
             this.cbxstCompoeBaseCalculoCustoOperacional.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCompoeBaseCalculoCustoOperacional.Base = null;
             this.cbxstCompoeBaseCalculoCustoOperacional.bConfiguracao = false;
@@ -1028,7 +1028,7 @@
             this.hlP_PesquisaidTipoOperacao._TamanhoComponente = 300;
             this.hlP_PesquisaidTipoOperacao._TamanhoMaiorLabel = 360;
             this.hlP_PesquisaidTipoOperacao._Vinculado = false;
-            this.hlP_PesquisaidTipoOperacao._Visible = false;
+            this.hlP_PesquisaidTipoOperacao._Visible = true;
             this.hlP_PesquisaidTipoOperacao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoOperacao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoOperacao.Base = null;
@@ -1101,7 +1101,7 @@
             this.nudvAprovacaoAutomaticaPedidoCompras._Table = "Parametro_Compras";
             this.nudvAprovacaoAutomaticaPedidoCompras._TamanhoComponente = 91;
             this.nudvAprovacaoAutomaticaPedidoCompras._TamanhoMaiorLabel = 267;
-            this.nudvAprovacaoAutomaticaPedidoCompras._Visible = false;
+            this.nudvAprovacaoAutomaticaPedidoCompras._Visible = true;
             this.nudvAprovacaoAutomaticaPedidoCompras.BackColor = System.Drawing.Color.Transparent;
             this.nudvAprovacaoAutomaticaPedidoCompras.Base = null;
             this.nudvAprovacaoAutomaticaPedidoCompras.bConfiguracao = false;
@@ -1144,7 +1144,7 @@
             this.cbxstAprovacaoRequisicao._Table = "Parametro_Compras";
             this.cbxstAprovacaoRequisicao._TamanhoComponente = 114;
             this.cbxstAprovacaoRequisicao._TamanhoMaiorLabel = 267;
-            this.cbxstAprovacaoRequisicao._Visible = false;
+            this.cbxstAprovacaoRequisicao._Visible = true;
             this.cbxstAprovacaoRequisicao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAprovacaoRequisicao.Base = null;
             this.cbxstAprovacaoRequisicao.bConfiguracao = false;
@@ -1176,7 +1176,7 @@
             this.cbxstAprovacaoCotacaoCompras._Table = "Parametro_Compras";
             this.cbxstAprovacaoCotacaoCompras._TamanhoComponente = 114;
             this.cbxstAprovacaoCotacaoCompras._TamanhoMaiorLabel = 267;
-            this.cbxstAprovacaoCotacaoCompras._Visible = false;
+            this.cbxstAprovacaoCotacaoCompras._Visible = true;
             this.cbxstAprovacaoCotacaoCompras.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAprovacaoCotacaoCompras.Base = null;
             this.cbxstAprovacaoCotacaoCompras.bConfiguracao = false;
@@ -1205,7 +1205,7 @@
             this.cbxstAprovacaoPedidoCompras._Table = "Parametro_Compras";
             this.cbxstAprovacaoPedidoCompras._TamanhoComponente = 95;
             this.cbxstAprovacaoPedidoCompras._TamanhoMaiorLabel = 267;
-            this.cbxstAprovacaoPedidoCompras._Visible = false;
+            this.cbxstAprovacaoPedidoCompras._Visible = true;
             this.cbxstAprovacaoPedidoCompras.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAprovacaoPedidoCompras.Base = null;
             this.cbxstAprovacaoPedidoCompras.bConfiguracao = false;
@@ -1236,7 +1236,7 @@
             this.cbxstIgnoraSaldoRequisicao._Table = "Parametro_Compras";
             this.cbxstIgnoraSaldoRequisicao._TamanhoComponente = 114;
             this.cbxstIgnoraSaldoRequisicao._TamanhoMaiorLabel = 270;
-            this.cbxstIgnoraSaldoRequisicao._Visible = false;
+            this.cbxstIgnoraSaldoRequisicao._Visible = true;
             this.cbxstIgnoraSaldoRequisicao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstIgnoraSaldoRequisicao.Base = null;
             this.cbxstIgnoraSaldoRequisicao.bConfiguracao = false;
@@ -1316,7 +1316,7 @@
             this.cbxstProducaoGera._Table = "Parametro_Ordem_Producao";
             this.cbxstProducaoGera._TamanhoComponente = 102;
             this.cbxstProducaoGera._TamanhoMaiorLabel = 305;
-            this.cbxstProducaoGera._Visible = false;
+            this.cbxstProducaoGera._Visible = true;
             this.cbxstProducaoGera.BackColor = System.Drawing.Color.Transparent;
             this.cbxstProducaoGera.Base = null;
             this.cbxstProducaoGera.bConfiguracao = false;
@@ -1346,7 +1346,7 @@
             this.cbxstGeraOPFilhas._Table = "Parametro_Ordem_Producao";
             this.cbxstGeraOPFilhas._TamanhoComponente = 112;
             this.cbxstGeraOPFilhas._TamanhoMaiorLabel = 305;
-            this.cbxstGeraOPFilhas._Visible = false;
+            this.cbxstGeraOPFilhas._Visible = true;
             this.cbxstGeraOPFilhas.BackColor = System.Drawing.Color.Transparent;
             this.cbxstGeraOPFilhas.Base = null;
             this.cbxstGeraOPFilhas.bConfiguracao = false;
@@ -1377,7 +1377,7 @@
             this.cbxstFechaOPSaldoAproduzir._Table = "Parametro_Ordem_Producao";
             this.cbxstFechaOPSaldoAproduzir._TamanhoComponente = 114;
             this.cbxstFechaOPSaldoAproduzir._TamanhoMaiorLabel = 305;
-            this.cbxstFechaOPSaldoAproduzir._Visible = false;
+            this.cbxstFechaOPSaldoAproduzir._Visible = true;
             this.cbxstFechaOPSaldoAproduzir.BackColor = System.Drawing.Color.Transparent;
             this.cbxstFechaOPSaldoAproduzir.Base = null;
             this.cbxstFechaOPSaldoAproduzir.bConfiguracao = false;
@@ -1412,7 +1412,7 @@
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._TamanhoComponente = 300;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._TamanhoMaiorLabel = 305;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._Vinculado = false;
-            this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._Visible = false;
+            this.hlP_Pesquisa1idTipoOperacaoparaOPProduto._Visible = true;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_Pesquisa1idTipoOperacaoparaOPProduto.Base = null;
@@ -1444,7 +1444,7 @@
             this.hlP_PesquisaidTipoOperacaoparaOPServico._TamanhoComponente = 300;
             this.hlP_PesquisaidTipoOperacaoparaOPServico._TamanhoMaiorLabel = 305;
             this.hlP_PesquisaidTipoOperacaoparaOPServico._Vinculado = false;
-            this.hlP_PesquisaidTipoOperacaoparaOPServico._Visible = false;
+            this.hlP_PesquisaidTipoOperacaoparaOPServico._Visible = true;
             this.hlP_PesquisaidTipoOperacaoparaOPServico.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoOperacaoparaOPServico.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoOperacaoparaOPServico.Base = null;
@@ -1476,7 +1476,7 @@
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento._TamanhoComponente = 300;
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento._TamanhoMaiorLabel = 350;
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento._Vinculado = false;
-            this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento._Visible = false;
+            this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento._Visible = true;
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoOperacaoparaOPBenificiamento.Base = null;
@@ -1608,7 +1608,7 @@
             this.nudpAliquotaPIS._Table = "Parametro_Fiscal";
             this.nudpAliquotaPIS._TamanhoComponente = 121;
             this.nudpAliquotaPIS._TamanhoMaiorLabel = 251;
-            this.nudpAliquotaPIS._Visible = false;
+            this.nudpAliquotaPIS._Visible = true;
             this.nudpAliquotaPIS.BackColor = System.Drawing.Color.Transparent;
             this.nudpAliquotaPIS.Base = null;
             this.nudpAliquotaPIS.bConfiguracao = false;
@@ -1650,7 +1650,7 @@
             this.nudpAliquotaCOFINS._Table = "Parametro_Fiscal";
             this.nudpAliquotaCOFINS._TamanhoComponente = 121;
             this.nudpAliquotaCOFINS._TamanhoMaiorLabel = 251;
-            this.nudpAliquotaCOFINS._Visible = false;
+            this.nudpAliquotaCOFINS._Visible = true;
             this.nudpAliquotaCOFINS.BackColor = System.Drawing.Color.Transparent;
             this.nudpAliquotaCOFINS.Base = null;
             this.nudpAliquotaCOFINS.bConfiguracao = false;
@@ -1691,7 +1691,7 @@
             this.nudpAliquotaCSLL._Table = "Parametro_Fiscal";
             this.nudpAliquotaCSLL._TamanhoComponente = 121;
             this.nudpAliquotaCSLL._TamanhoMaiorLabel = 251;
-            this.nudpAliquotaCSLL._Visible = false;
+            this.nudpAliquotaCSLL._Visible = true;
             this.nudpAliquotaCSLL.BackColor = System.Drawing.Color.Transparent;
             this.nudpAliquotaCSLL.Base = null;
             this.nudpAliquotaCSLL.bConfiguracao = false;
@@ -1734,7 +1734,7 @@
             this.cbxstRegimeApuracaoIRPJ._Table = "Parametro_Fiscal";
             this.cbxstRegimeApuracaoIRPJ._TamanhoComponente = 181;
             this.cbxstRegimeApuracaoIRPJ._TamanhoMaiorLabel = 251;
-            this.cbxstRegimeApuracaoIRPJ._Visible = false;
+            this.cbxstRegimeApuracaoIRPJ._Visible = true;
             this.cbxstRegimeApuracaoIRPJ.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRegimeApuracaoIRPJ.Base = null;
             this.cbxstRegimeApuracaoIRPJ.bConfiguracao = false;
@@ -1764,7 +1764,7 @@
             this.cbxstRegimeApuracaoIPI._Table = "Parametro_Fiscal";
             this.cbxstRegimeApuracaoIPI._TamanhoComponente = 129;
             this.cbxstRegimeApuracaoIPI._TamanhoMaiorLabel = 251;
-            this.cbxstRegimeApuracaoIPI._Visible = false;
+            this.cbxstRegimeApuracaoIPI._Visible = true;
             this.cbxstRegimeApuracaoIPI.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRegimeApuracaoIPI.Base = null;
             this.cbxstRegimeApuracaoIPI.bConfiguracao = false;
@@ -1794,7 +1794,7 @@
             this.cbxstRegimeTributacaoPISCOFINS._Table = "Parametro_Fiscal";
             this.cbxstRegimeTributacaoPISCOFINS._TamanhoComponente = 211;
             this.cbxstRegimeTributacaoPISCOFINS._TamanhoMaiorLabel = 251;
-            this.cbxstRegimeTributacaoPISCOFINS._Visible = false;
+            this.cbxstRegimeTributacaoPISCOFINS._Visible = true;
             this.cbxstRegimeTributacaoPISCOFINS.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRegimeTributacaoPISCOFINS.Base = null;
             this.cbxstRegimeTributacaoPISCOFINS.bConfiguracao = false;
@@ -1824,7 +1824,7 @@
             this.cbxstRegimeApuracaoPISCOFINS._Table = "Parametro_Fiscal";
             this.cbxstRegimeApuracaoPISCOFINS._TamanhoComponente = 129;
             this.cbxstRegimeApuracaoPISCOFINS._TamanhoMaiorLabel = 251;
-            this.cbxstRegimeApuracaoPISCOFINS._Visible = false;
+            this.cbxstRegimeApuracaoPISCOFINS._Visible = true;
             this.cbxstRegimeApuracaoPISCOFINS.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRegimeApuracaoPISCOFINS.Base = null;
             this.cbxstRegimeApuracaoPISCOFINS.bConfiguracao = false;
@@ -1854,7 +1854,7 @@
             this.cbxstProdutorRural._Table = "Parametro_Fiscal";
             this.cbxstProdutorRural._TamanhoComponente = 114;
             this.cbxstProdutorRural._TamanhoMaiorLabel = 251;
-            this.cbxstProdutorRural._Visible = false;
+            this.cbxstProdutorRural._Visible = true;
             this.cbxstProdutorRural.BackColor = System.Drawing.Color.Transparent;
             this.cbxstProdutorRural.Base = null;
             this.cbxstProdutorRural.bConfiguracao = false;
@@ -1884,7 +1884,7 @@
             this.cbxstCooperativaAgricola._Table = "Parametro_Fiscal";
             this.cbxstCooperativaAgricola._TamanhoComponente = 114;
             this.cbxstCooperativaAgricola._TamanhoMaiorLabel = 251;
-            this.cbxstCooperativaAgricola._Visible = false;
+            this.cbxstCooperativaAgricola._Visible = true;
             this.cbxstCooperativaAgricola.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCooperativaAgricola.Base = null;
             this.cbxstCooperativaAgricola.bConfiguracao = false;
@@ -1915,7 +1915,7 @@
             this.cbxstDestacaISSnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaISSnfServico._TamanhoComponente = 114;
             this.cbxstDestacaISSnfServico._TamanhoMaiorLabel = 251;
-            this.cbxstDestacaISSnfServico._Visible = false;
+            this.cbxstDestacaISSnfServico._Visible = true;
             this.cbxstDestacaISSnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaISSnfServico.Base = null;
             this.cbxstDestacaISSnfServico.bConfiguracao = false;
@@ -1946,7 +1946,7 @@
             this.cbxstDestacaCSLLnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaCSLLnfServico._TamanhoComponente = 114;
             this.cbxstDestacaCSLLnfServico._TamanhoMaiorLabel = 251;
-            this.cbxstDestacaCSLLnfServico._Visible = false;
+            this.cbxstDestacaCSLLnfServico._Visible = true;
             this.cbxstDestacaCSLLnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaCSLLnfServico.Base = null;
             this.cbxstDestacaCSLLnfServico.bConfiguracao = false;
@@ -1977,7 +1977,7 @@
             this.cbxstDestacaIRRFnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaIRRFnfServico._TamanhoComponente = 114;
             this.cbxstDestacaIRRFnfServico._TamanhoMaiorLabel = 251;
-            this.cbxstDestacaIRRFnfServico._Visible = false;
+            this.cbxstDestacaIRRFnfServico._Visible = true;
             this.cbxstDestacaIRRFnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaIRRFnfServico.Base = null;
             this.cbxstDestacaIRRFnfServico.bConfiguracao = false;
@@ -2007,7 +2007,7 @@
             this.cbxstDestacaPISCOFINSnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaPISCOFINSnfServico._TamanhoComponente = 114;
             this.cbxstDestacaPISCOFINSnfServico._TamanhoMaiorLabel = 251;
-            this.cbxstDestacaPISCOFINSnfServico._Visible = false;
+            this.cbxstDestacaPISCOFINSnfServico._Visible = true;
             this.cbxstDestacaPISCOFINSnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaPISCOFINSnfServico.Base = null;
             this.cbxstDestacaPISCOFINSnfServico.bConfiguracao = false;
@@ -2038,7 +2038,7 @@
             this.cbxstDestacaINSSnfServico._Table = "Parametro_Fiscal";
             this.cbxstDestacaINSSnfServico._TamanhoComponente = 114;
             this.cbxstDestacaINSSnfServico._TamanhoMaiorLabel = 251;
-            this.cbxstDestacaINSSnfServico._Visible = false;
+            this.cbxstDestacaINSSnfServico._Visible = true;
             this.cbxstDestacaINSSnfServico.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDestacaINSSnfServico.Base = null;
             this.cbxstDestacaINSSnfServico.bConfiguracao = false;
@@ -2069,7 +2069,7 @@
             this.cbxstAmbienteNfeProdutos._Table = "Parametro_Fiscal";
             this.cbxstAmbienteNfeProdutos._TamanhoComponente = 176;
             this.cbxstAmbienteNfeProdutos._TamanhoMaiorLabel = 251;
-            this.cbxstAmbienteNfeProdutos._Visible = false;
+            this.cbxstAmbienteNfeProdutos._Visible = true;
             this.cbxstAmbienteNfeProdutos.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAmbienteNfeProdutos.Base = null;
             this.cbxstAmbienteNfeProdutos.bConfiguracao = false;
@@ -2100,7 +2100,7 @@
             this.cbxstAmbienteNfeServicos._Table = "Parametro_Fiscal";
             this.cbxstAmbienteNfeServicos._TamanhoComponente = 176;
             this.cbxstAmbienteNfeServicos._TamanhoMaiorLabel = 251;
-            this.cbxstAmbienteNfeServicos._Visible = false;
+            this.cbxstAmbienteNfeServicos._Visible = true;
             this.cbxstAmbienteNfeServicos.BackColor = System.Drawing.Color.Transparent;
             this.cbxstAmbienteNfeServicos.Base = null;
             this.cbxstAmbienteNfeServicos.bConfiguracao = false;
@@ -2131,7 +2131,7 @@
             this.cbxstImprimeMsgSuframaNf._Table = "Parametro_Fiscal";
             this.cbxstImprimeMsgSuframaNf._TamanhoComponente = 114;
             this.cbxstImprimeMsgSuframaNf._TamanhoMaiorLabel = 251;
-            this.cbxstImprimeMsgSuframaNf._Visible = false;
+            this.cbxstImprimeMsgSuframaNf._Visible = true;
             this.cbxstImprimeMsgSuframaNf.BackColor = System.Drawing.Color.Transparent;
             this.cbxstImprimeMsgSuframaNf.Base = null;
             this.cbxstImprimeMsgSuframaNf.bConfiguracao = false;
@@ -2162,7 +2162,7 @@
             this.cbxstImprimeCodigoNf._Table = "Parametro_Fiscal";
             this.cbxstImprimeCodigoNf._TamanhoComponente = 138;
             this.cbxstImprimeCodigoNf._TamanhoMaiorLabel = 251;
-            this.cbxstImprimeCodigoNf._Visible = false;
+            this.cbxstImprimeCodigoNf._Visible = true;
             this.cbxstImprimeCodigoNf.BackColor = System.Drawing.Color.Transparent;
             this.cbxstImprimeCodigoNf.Base = null;
             this.cbxstImprimeCodigoNf.bConfiguracao = false;
@@ -2192,7 +2192,7 @@
             this.cbxstIcmsSubstDif._Table = "Parametro_Fiscal";
             this.cbxstIcmsSubstDif._TamanhoComponente = 114;
             this.cbxstIcmsSubstDif._TamanhoMaiorLabel = 300;
-            this.cbxstIcmsSubstDif._Visible = false;
+            this.cbxstIcmsSubstDif._Visible = true;
             this.cbxstIcmsSubstDif.BackColor = System.Drawing.Color.Transparent;
             this.cbxstIcmsSubstDif.Base = null;
             this.cbxstIcmsSubstDif.bConfiguracao = false;
@@ -2881,7 +2881,7 @@
             this.txtxMaskCentroCusto._Table = "Parametro_Comercial";
             this.txtxMaskCentroCusto._TamanhoComponente = 134;
             this.txtxMaskCentroCusto._TamanhoMaiorLabel = 285;
-            this.txtxMaskCentroCusto._Visible = false;
+            this.txtxMaskCentroCusto._Visible = true;
             this.txtxMaskCentroCusto.BackColor = System.Drawing.Color.Transparent;
             this.txtxMaskCentroCusto.Base = null;
             this.txtxMaskCentroCusto.bConfiguracao = false;
@@ -2908,7 +2908,7 @@
             this.nudnQuantidadeDiasOrcamento._Table = "Parametro_Comercial";
             this.nudnQuantidadeDiasOrcamento._TamanhoComponente = 121;
             this.nudnQuantidadeDiasOrcamento._TamanhoMaiorLabel = 285;
-            this.nudnQuantidadeDiasOrcamento._Visible = false;
+            this.nudnQuantidadeDiasOrcamento._Visible = true;
             this.nudnQuantidadeDiasOrcamento.BackColor = System.Drawing.Color.Transparent;
             this.nudnQuantidadeDiasOrcamento.Base = null;
             this.nudnQuantidadeDiasOrcamento.bConfiguracao = false;
@@ -2953,7 +2953,7 @@
             this.cbxstObrigaCreditoAprovado._Table = "Parametro_Comercial";
             this.cbxstObrigaCreditoAprovado._TamanhoComponente = 114;
             this.cbxstObrigaCreditoAprovado._TamanhoMaiorLabel = 285;
-            this.cbxstObrigaCreditoAprovado._Visible = false;
+            this.cbxstObrigaCreditoAprovado._Visible = true;
             this.cbxstObrigaCreditoAprovado.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaCreditoAprovado.Base = null;
             this.cbxstObrigaCreditoAprovado.bConfiguracao = false;
@@ -2983,7 +2983,7 @@
             this.cbxstObrigaAnaliseFinanceiraOrcamento._Table = "Parametro_Comercial";
             this.cbxstObrigaAnaliseFinanceiraOrcamento._TamanhoComponente = 68;
             this.cbxstObrigaAnaliseFinanceiraOrcamento._TamanhoMaiorLabel = 285;
-            this.cbxstObrigaAnaliseFinanceiraOrcamento._Visible = false;
+            this.cbxstObrigaAnaliseFinanceiraOrcamento._Visible = true;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.Base = null;
             this.cbxstObrigaAnaliseFinanceiraOrcamento.bConfiguracao = false;
@@ -3013,7 +3013,7 @@
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda._Table = "Parametro_Comercial";
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda._TamanhoComponente = 68;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda._TamanhoMaiorLabel = 285;
-            this.cbxstObrigaAnaliseFinanceiraPedidoVenda._Visible = false;
+            this.cbxstObrigaAnaliseFinanceiraPedidoVenda._Visible = true;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.Base = null;
             this.cbxstObrigaAnaliseFinanceiraPedidoVenda.bConfiguracao = false;
@@ -3043,7 +3043,7 @@
             this.cbxstObrigaAnaliseFinanceiraFaturamento._Table = "Parametro_Comercial";
             this.cbxstObrigaAnaliseFinanceiraFaturamento._TamanhoComponente = 68;
             this.cbxstObrigaAnaliseFinanceiraFaturamento._TamanhoMaiorLabel = 285;
-            this.cbxstObrigaAnaliseFinanceiraFaturamento._Visible = false;
+            this.cbxstObrigaAnaliseFinanceiraFaturamento._Visible = true;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.Base = null;
             this.cbxstObrigaAnaliseFinanceiraFaturamento.bConfiguracao = false;
@@ -3074,7 +3074,7 @@
             this.cbxstObrigaUsoListaPreco._Table = "Parametro_Comercial";
             this.cbxstObrigaUsoListaPreco._TamanhoComponente = 80;
             this.cbxstObrigaUsoListaPreco._TamanhoMaiorLabel = 285;
-            this.cbxstObrigaUsoListaPreco._Visible = false;
+            this.cbxstObrigaUsoListaPreco._Visible = true;
             this.cbxstObrigaUsoListaPreco.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaUsoListaPreco.Base = null;
             this.cbxstObrigaUsoListaPreco.bConfiguracao = false;
@@ -3104,7 +3104,7 @@
             this.cbxstDescontoPor._Table = "Parametro_Comercial";
             this.cbxstDescontoPor._TamanhoComponente = 162;
             this.cbxstDescontoPor._TamanhoMaiorLabel = 285;
-            this.cbxstDescontoPor._Visible = false;
+            this.cbxstDescontoPor._Visible = true;
             this.cbxstDescontoPor.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDescontoPor.Base = null;
             this.cbxstDescontoPor.bConfiguracao = false;
@@ -3134,7 +3134,7 @@
             this.cbxstDesconto._Table = "Parametro_Comercial";
             this.cbxstDesconto._TamanhoComponente = 124;
             this.cbxstDesconto._TamanhoMaiorLabel = 285;
-            this.cbxstDesconto._Visible = false;
+            this.cbxstDesconto._Visible = true;
             this.cbxstDesconto.BackColor = System.Drawing.Color.Transparent;
             this.cbxstDesconto.Base = null;
             this.cbxstDesconto.bConfiguracao = false;
@@ -3163,7 +3163,7 @@
             this.cbxstOrcamentoProjeto._Table = "Parametro_Comercial";
             this.cbxstOrcamentoProjeto._TamanhoComponente = 80;
             this.cbxstOrcamentoProjeto._TamanhoMaiorLabel = 285;
-            this.cbxstOrcamentoProjeto._Visible = false;
+            this.cbxstOrcamentoProjeto._Visible = true;
             this.cbxstOrcamentoProjeto.BackColor = System.Drawing.Color.Transparent;
             this.cbxstOrcamentoProjeto.Base = null;
             this.cbxstOrcamentoProjeto.bConfiguracao = false;
@@ -3193,7 +3193,7 @@
             this.cbxstObrigaAprovacaoPedidoVenda._Table = "Parametro_Comercial";
             this.cbxstObrigaAprovacaoPedidoVenda._TamanhoComponente = 114;
             this.cbxstObrigaAprovacaoPedidoVenda._TamanhoMaiorLabel = 285;
-            this.cbxstObrigaAprovacaoPedidoVenda._Visible = false;
+            this.cbxstObrigaAprovacaoPedidoVenda._Visible = true;
             this.cbxstObrigaAprovacaoPedidoVenda.BackColor = System.Drawing.Color.Transparent;
             this.cbxstObrigaAprovacaoPedidoVenda.Base = null;
             this.cbxstObrigaAprovacaoPedidoVenda.bConfiguracao = false;
@@ -3229,7 +3229,7 @@
             this.hlP_PesquisaidMoeda._TamanhoComponente = 300;
             this.hlP_PesquisaidMoeda._TamanhoMaiorLabel = 285;
             this.hlP_PesquisaidMoeda._Vinculado = false;
-            this.hlP_PesquisaidMoeda._Visible = false;
+            this.hlP_PesquisaidMoeda._Visible = true;
             this.hlP_PesquisaidMoeda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidMoeda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidMoeda.Base = null;
@@ -3256,7 +3256,7 @@
             this.cbxstOrigemListaPreco._Table = "Parametro_Comercial";
             this.cbxstOrigemListaPreco._TamanhoComponente = 196;
             this.cbxstOrigemListaPreco._TamanhoMaiorLabel = 285;
-            this.cbxstOrigemListaPreco._Visible = false;
+            this.cbxstOrigemListaPreco._Visible = true;
             this.cbxstOrigemListaPreco.BackColor = System.Drawing.Color.Transparent;
             this.cbxstOrigemListaPreco.Base = null;
             this.cbxstOrigemListaPreco.bConfiguracao = false;
@@ -3285,7 +3285,7 @@
             this.cbxstUtilizaVendaCasada._Table = "Parametro_Comercial";
             this.cbxstUtilizaVendaCasada._TamanhoComponente = 80;
             this.cbxstUtilizaVendaCasada._TamanhoMaiorLabel = 285;
-            this.cbxstUtilizaVendaCasada._Visible = false;
+            this.cbxstUtilizaVendaCasada._Visible = true;
             this.cbxstUtilizaVendaCasada.BackColor = System.Drawing.Color.Transparent;
             this.cbxstUtilizaVendaCasada.Base = null;
             this.cbxstUtilizaVendaCasada.bConfiguracao = false;
@@ -3314,7 +3314,7 @@
             this.cbxstUtilizaVendaKitMateria._Table = "Parametro_Comercial";
             this.cbxstUtilizaVendaKitMateria._TamanhoComponente = 80;
             this.cbxstUtilizaVendaKitMateria._TamanhoMaiorLabel = 285;
-            this.cbxstUtilizaVendaKitMateria._Visible = false;
+            this.cbxstUtilizaVendaKitMateria._Visible = true;
             this.cbxstUtilizaVendaKitMateria.BackColor = System.Drawing.Color.Transparent;
             this.cbxstUtilizaVendaKitMateria.Base = null;
             this.cbxstUtilizaVendaKitMateria.bConfiguracao = false;
@@ -3343,7 +3343,7 @@
             this.cbxstRateioFrete._Table = "Parametro_Comercial";
             this.cbxstRateioFrete._TamanhoComponente = 198;
             this.cbxstRateioFrete._TamanhoMaiorLabel = 250;
-            this.cbxstRateioFrete._Visible = false;
+            this.cbxstRateioFrete._Visible = true;
             this.cbxstRateioFrete.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRateioFrete.Base = null;
             this.cbxstRateioFrete.bConfiguracao = false;
@@ -3423,7 +3423,7 @@
             this.txtxMaskClasseFinanceira._Table = "Parametro_Financeiro";
             this.txtxMaskClasseFinanceira._TamanhoComponente = 134;
             this.txtxMaskClasseFinanceira._TamanhoMaiorLabel = 249;
-            this.txtxMaskClasseFinanceira._Visible = false;
+            this.txtxMaskClasseFinanceira._Visible = true;
             this.txtxMaskClasseFinanceira.BackColor = System.Drawing.Color.Transparent;
             this.txtxMaskClasseFinanceira.Base = null;
             this.txtxMaskClasseFinanceira.bConfiguracao = false;
@@ -3451,7 +3451,7 @@
             this.cbxstPedidoCompraGeraPrevisao._Table = "Parametro_Financeiro";
             this.cbxstPedidoCompraGeraPrevisao._TamanhoComponente = 114;
             this.cbxstPedidoCompraGeraPrevisao._TamanhoMaiorLabel = 249;
-            this.cbxstPedidoCompraGeraPrevisao._Visible = false;
+            this.cbxstPedidoCompraGeraPrevisao._Visible = true;
             this.cbxstPedidoCompraGeraPrevisao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPedidoCompraGeraPrevisao.Base = null;
             this.cbxstPedidoCompraGeraPrevisao.bConfiguracao = false;
@@ -3481,7 +3481,7 @@
             this.cbxstPedidoVendaGeraPrevisao._Table = "Parametro_Financeiro";
             this.cbxstPedidoVendaGeraPrevisao._TamanhoComponente = 114;
             this.cbxstPedidoVendaGeraPrevisao._TamanhoMaiorLabel = 249;
-            this.cbxstPedidoVendaGeraPrevisao._Visible = false;
+            this.cbxstPedidoVendaGeraPrevisao._Visible = true;
             this.cbxstPedidoVendaGeraPrevisao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPedidoVendaGeraPrevisao.Base = null;
             this.cbxstPedidoVendaGeraPrevisao.bConfiguracao = false;
@@ -3512,7 +3512,7 @@
             this.cbxstPagaComissaoPor._Table = "Parametro_Financeiro";
             this.cbxstPagaComissaoPor._TamanhoComponente = 181;
             this.cbxstPagaComissaoPor._TamanhoMaiorLabel = 249;
-            this.cbxstPagaComissaoPor._Visible = false;
+            this.cbxstPagaComissaoPor._Visible = true;
             this.cbxstPagaComissaoPor.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPagaComissaoPor.Base = null;
             this.cbxstPagaComissaoPor.bConfiguracao = false;
@@ -3542,7 +3542,7 @@
             this.cbxstCreditoAprovado._Table = "Parametro_Financeiro";
             this.cbxstCreditoAprovado._TamanhoComponente = 114;
             this.cbxstCreditoAprovado._TamanhoMaiorLabel = 249;
-            this.cbxstCreditoAprovado._Visible = false;
+            this.cbxstCreditoAprovado._Visible = true;
             this.cbxstCreditoAprovado.BackColor = System.Drawing.Color.Transparent;
             this.cbxstCreditoAprovado.Base = null;
             this.cbxstCreditoAprovado.bConfiguracao = false;
@@ -3573,7 +3573,7 @@
             this.cbxstBloqueiaClientePosCartaCobranca._Table = "Parametro_Financeiro";
             this.cbxstBloqueiaClientePosCartaCobranca._TamanhoComponente = 114;
             this.cbxstBloqueiaClientePosCartaCobranca._TamanhoMaiorLabel = 260;
-            this.cbxstBloqueiaClientePosCartaCobranca._Visible = false;
+            this.cbxstBloqueiaClientePosCartaCobranca._Visible = true;
             this.cbxstBloqueiaClientePosCartaCobranca.BackColor = System.Drawing.Color.Transparent;
             this.cbxstBloqueiaClientePosCartaCobranca.Base = null;
             this.cbxstBloqueiaClientePosCartaCobranca.bConfiguracao = false;
