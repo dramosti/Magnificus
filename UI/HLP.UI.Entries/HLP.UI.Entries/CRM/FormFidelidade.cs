@@ -241,9 +241,7 @@ namespace HLP.UI.Entries.CRM
         {
             try
             {
-                fidelidadeModel.xFidelidade = txtxFidelidade.Text;
-                fidelidadeModel.xDescricao = txtxDescricao.Text;
-
+                base.CarregaClasse(fidelidadeModel);
             }
             catch (Exception ex)
             {
@@ -254,9 +252,8 @@ namespace HLP.UI.Entries.CRM
         {
             try
             {
-                txtCodigo.Text = fidelidadeModel.idFidelidade.ToString();
-                txtxFidelidade.Text = fidelidadeModel.xFidelidade;
-                txtxDescricao.Text = fidelidadeModel.xDescricao;
+                base.CarregaPropriedades(fidelidadeModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

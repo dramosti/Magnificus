@@ -257,17 +257,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                objPlanoModel.xPlanoPagamento = txtxPlanoPagamento.Text;
-                objPlanoModel.xDescricao = txtxDescricao.Text;
-                objPlanoModel.stAlocacao = cbostAlocacao.SelectedIndexByte;
-                objPlanoModel.stFormaPagamento = cbostFormaPagamento.SelectedIndexByte;
-                objPlanoModel.nAlterar = nudnAlterar.ValueInt;
-                objPlanoModel.nNumerosPagamentos = nudnNumerosPagamentos.ValueInt;
-                objPlanoModel.nValorMoeda = nudnValorMoeda.Value;
-                objPlanoModel.nValorMinimo = nudnValorMinimo.Value;
-                objPlanoModel.stAlocacaoImpostos = cbostAlocacaoImpostos.SelectedIndexByte;
-                objPlanoModel.xNota = txtxNota.Text;
-
+                base.CarregaClasse(objPlanoModel);
             }
             catch (Exception ex)
             {
@@ -278,20 +268,9 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = objPlanoModel.idPlanoPagamento.ToString();
-                txtxPlanoPagamento.Text = objPlanoModel.xPlanoPagamento;
-                txtxDescricao.Text = objPlanoModel.xDescricao;
-                cbostAlocacao.SelectedIndex = objPlanoModel.stAlocacao;
-                cbostFormaPagamento.SelectedIndex = objPlanoModel.stFormaPagamento;
-                nudnAlterar.Value = objPlanoModel.nAlterar;
-                nudnNumerosPagamentos.Value = objPlanoModel.nNumerosPagamentos;
-                nudnValorMoeda.Value = objPlanoModel.nValorMoeda;
-                nudnValorMinimo.Value = objPlanoModel.nValorMinimo;
-                cbostAlocacaoImpostos.SelectedIndex = objPlanoModel.stAlocacaoImpostos;
-                txtxNota.Text = objPlanoModel.xNota;
-
+                base.CarregaPropriedades(objPlanoModel, true);
+                base.CarregaForm();
                 bsLinhas.DataSource = objPlanoModel.lPlano_pagamento_linhas;
-
             }
             catch (Exception ex)
             {
@@ -377,7 +356,7 @@ namespace HLP.UI.Entries.Geral
 
                     nudnAlterar.Enabled = false;
                     nudnAlterar.Text = "0";
-                    
+
                     nudnValorMoeda.Enabled = true;
                     nudnValorMoeda.Text = "0,00";
                     nudnValorMinimo.Enabled = true;
@@ -465,7 +444,7 @@ namespace HLP.UI.Entries.Geral
             });
 
 
-            
+
         }
 
         private void hlP_Button1__btnHlpClick(object sender, EventArgs e)

@@ -238,9 +238,7 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                cofinsModel.cCSTCofins = txtcCSTCofins.Text;
-                cofinsModel.xCSTCofins = txtxCSTCofins.Text;
-                cofinsModel.stSimplesNacional = cbostSimplesNacional.SelectedIndexByte;
+                base.CarregaClasse(cofinsModel);
             }
             catch (Exception ex)
             {
@@ -251,16 +249,13 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                txtCodigo.Text = cofinsModel.idCSTCofins.ToString();
-                txtcCSTCofins.Text = cofinsModel.cCSTCofins;
-                txtxCSTCofins.Text = cofinsModel.xCSTCofins;
-                cbostSimplesNacional.SelectedIndex = cofinsModel.stSimplesNacional;
+                base.CarregaPropriedades(cofinsModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {
                 new HLPexception(ex);
             }
-
         }
     }
 }

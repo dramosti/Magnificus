@@ -59,7 +59,7 @@ namespace HLP.UI.Entries.Comercial
             Thread t1 = new Thread(new ThreadStart(verifBw));
             t1.Start();
             InicializaFormPadrao("vwListaPrecoPai");
-            
+
         }
 
         private void CarregaGrids()
@@ -308,44 +308,7 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                lista_Preco_PaiModel.idEmpresa = CompanyData.idEmpresa;
-                lista_Preco_PaiModel.xLista = txtxLista.Text;
-                lista_Preco_PaiModel.stContrato = cbostContrato.SelectedIndexByte;
-                lista_Preco_PaiModel.xNrContrato = txtxNrContrato.Text;
-                if (cbostContrato.SelectedIndex == 0)
-                {
-                    lista_Preco_PaiModel.dValidadeContrato = null;
-                }
-                else
-                {
-                    lista_Preco_PaiModel.dValidadeContrato = dtpdValidadeContrato.Value;
-                }
-                lista_Preco_PaiModel.Ativo = cboAtivo.SelectedIndex == 1 ? true : false;
-                if (lista_Preco_PaiModel.idListaPrecoPai == null)
-                {
-                    lista_Preco_PaiModel.dListaPreco = DateTime.Now;
-                }
-                lista_Preco_PaiModel.stAtualizacao = cbostAtualizacao.SelectedIndexByte;
-                lista_Preco_PaiModel.nDiasSemAtualicao = nudnDiasSemAtualicao.ValueInt;
-                lista_Preco_PaiModel.pDescontoMaximo = nudpDescontoMaximo.Value;
-                lista_Preco_PaiModel.pAcressimoMaximo = nudpAcressimoMaximo.Value;
-                lista_Preco_PaiModel.xCodigoListaPreco = txtxCodigoListaPreco.Text;
-                if (cbostAtualizacao.SelectedIndex == 0)
-                {
-                    if (txtpPercentual.Text == "")
-                    {
-                        txtpPercentual.Text = "0";
-                    }
-                    lista_Preco_PaiModel.pPercentual = Convert.ToDecimal(txtpPercentual.Text.Replace(".", ","));
-                    lista_Preco_PaiModel.idListaPrecoOrigem = (int)hlP_PesquisaidListaPrecoOrigem.Value;
-                }
-                else
-                {
-                    lista_Preco_PaiModel.pPercentual = null;
-                    lista_Preco_PaiModel.idListaPrecoOrigem = null;
-                }
-
-
+                base.CarregaClasse(lista_Preco_PaiModel);
             }
             catch (Exception ex)
             {
@@ -356,27 +319,8 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                txtCodigo.Text = lista_Preco_PaiModel.idListaPrecoPai.ToString();
-                txtxLista.Text = lista_Preco_PaiModel.xLista;
-                cbostContrato.SelectedIndex = lista_Preco_PaiModel.stContrato;
-                txtxNrContrato.Text = lista_Preco_PaiModel.xNrContrato;
-                if (lista_Preco_PaiModel.dValidadeContrato != null)
-                {
-                    dtpdValidadeContrato.Value = (DateTime)lista_Preco_PaiModel.dValidadeContrato;
-                }
-                cboAtivo.SelectedIndex = lista_Preco_PaiModel.Ativo == true ? 1 : 0;
-                txtdListaPreco.Text = lista_Preco_PaiModel.dListaPreco.ToShortDateString();
-                cbostAtualizacao.SelectedIndex = lista_Preco_PaiModel.stAtualizacao;
-                nudnDiasSemAtualicao.Value = (decimal)lista_Preco_PaiModel.nDiasSemAtualicao;
-                nudpDescontoMaximo.Value = (decimal)lista_Preco_PaiModel.pDescontoMaximo;
-                nudpAcressimoMaximo.Value = (decimal)lista_Preco_PaiModel.pAcressimoMaximo;
-                txtxCodigoListaPreco.Text = lista_Preco_PaiModel.xCodigoListaPreco;
-                txtpPercentual.Text = lista_Preco_PaiModel.pPercentual.ToString();
-                if (lista_Preco_PaiModel.idListaPrecoOrigem != null)
-                {
-                    hlP_PesquisaidListaPrecoOrigem.Value = (int)lista_Preco_PaiModel.idListaPrecoOrigem;
-                }
-
+                base.CarregaPropriedades(lista_Preco_PaiModel, true);
+                base.CarregaForm();
                 bsListaPreco.DataSource = lista_Preco_PaiModel.lLista_preco;
                 VerificaProdutosSemAlteracaoCusto();
                 VerificaCamposHabilitar();
@@ -487,7 +431,7 @@ namespace HLP.UI.Entries.Comercial
                         decimal dvVenda = 0;
                         try
                         {
-                            dPercentual = Convert.ToDecimal(txtpPercentual.Text.Replace(".", ","));  
+                            dPercentual = Convert.ToDecimal(txtpPercentual.Text.Replace(".", ","));
                             Lista_Preco_PaiModel lPrecoOrigem = listaPaiService.GetLista_Preco_Pai((int)hlP_PesquisaidListaPrecoOrigem.Value, true);
                             foreach (Lista_precoModel listaItem in lPrecoOrigem.lLista_preco)
                             {

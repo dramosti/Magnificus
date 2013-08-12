@@ -43,7 +43,7 @@ namespace HLP.UI.Entries.RecursosHumanos
         private void FormContato_Load(object sender, EventArgs e)
         {
             idCidade.Tag = "FormCidade-vwCidade-xCidade_Uf_xRegiao_xPais";
-            idProduto.Tag = "FormProduto-vwProduto-xPesquisa";            
+            idProduto.Tag = "FormProduto-vwProduto-xPesquisa";
             InicializaFormPadrao("vwFuncionario");
 
             verifBw += (() =>
@@ -77,7 +77,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             {
                 Thread.Sleep(500);
                 InitializaComboBox();
-            }            
+            }
         }
 
         public override void Novo()
@@ -92,7 +92,7 @@ namespace HLP.UI.Entries.RecursosHumanos
                 bsFuncionarioCertificacao.DataSource = objFuncionarioModel.lFuncionario_Certificacao;
                 bsFuncionarioComissaoProduto.DataSource = objFuncionarioModel.lFuncionario_Comissao_Produto;
                 bsFuncionarioEndereco.DataSource = objFuncionarioModel.lFuncionario_Endereco;
-                bsFuncionarioMargemLucroComissao.DataSource = objFuncionarioModel.lFuncionario_Margem_Lucro_Comissao;                
+                bsFuncionarioMargemLucroComissao.DataSource = objFuncionarioModel.lFuncionario_Margem_Lucro_Comissao;
             }
             catch (Exception ex)
             {
@@ -119,7 +119,7 @@ namespace HLP.UI.Entries.RecursosHumanos
         }
         public override void Atualizar()
         {
-            base.Atualizar();            
+            base.Atualizar();
         }
         public override void Cancelar()
         {
@@ -289,7 +289,7 @@ namespace HLP.UI.Entries.RecursosHumanos
 
         void PopulaForm()
         {
-         
+
             bsFuncionarioArquivo.DataSource = objFuncionarioModel.lFuncionario_Arquivo;
             bsFuncionarioCertificacao.DataSource = objFuncionarioModel.lFuncionario_Certificacao;
             bsFuncionarioComissaoProduto.DataSource = objFuncionarioModel.lFuncionario_Comissao_Produto;
@@ -297,86 +297,11 @@ namespace HLP.UI.Entries.RecursosHumanos
             bsFuncionarioMargemLucroComissao.DataSource = objFuncionarioModel.lFuncionario_Margem_Lucro_Comissao;
 
 
-            #region Geral
-            txtCodigo.Text = objFuncionarioModel.idFuncionario.ToString();
-            txtxCodigoAlternativo.Text = objFuncionarioModel.xCodigoAlternativo;
-            cbxAtivo.SelectedIndex = objFuncionarioModel.Ativo == true ? 1 : 0;
-            txtxSaudacao.Text = objFuncionarioModel.xSaudacao;
-            txtxNome.Text = objFuncionarioModel.xNome;
-            hlP_PesquisaidCargo.Value = objFuncionarioModel.idCargo;
-            hlP_Pesquisa_idDepartamento.Value = objFuncionarioModel.idDepartamento;
-            cbxstPerfil.SelectedIndex = objFuncionarioModel.stPerfil;
-            if (objFuncionarioModel.idCalendario != null)
-                hlP_PesquisaidCalendário.Value = (int)objFuncionarioModel.idCalendario;
-            hlP_PesquisaidSite.Value = objFuncionarioModel.idSite;
-            hlP_PesquisaidDeposito.Value = objFuncionarioModel.idDeposito;
-            txtxInformacaoAtencao.Text = objFuncionarioModel.xInformacaoAtencao;
-            #endregion
-
-            #region Informaçoes pessoais
-            dtdAniversario.Value = objFuncionarioModel.dAniversario;
-            cbxstSexo.SelectedIndex = objFuncionarioModel.stSexo;
-            dtdFalecimento.Value = objFuncionarioModel.dFalecimento;
-            mskxCpf.Text = objFuncionarioModel.xCpf;
-            txtxRg.Text = objFuncionarioModel.xRg;
-            txtxConjugue.Text = objFuncionarioModel.xConjugue;
-            txtxFilhos.Text = objFuncionarioModel.xFilhos;
-            hlP_PesquisaidContaBancaria.Value = objFuncionarioModel.idContaBancaria;
-            txtxVisto.Text = objFuncionarioModel.xVisto;
-            dtdFinalVisto.Value = objFuncionarioModel.dFinalVisto;
-            txtxVistoTrabalho.Text = objFuncionarioModel.xVistoTrabalho;
-            dtdFinalVistoTrabalho.Value = objFuncionarioModel.dFinalVistoTrabalho;
-            dtdAdmissao.Value = objFuncionarioModel.dAdmissao;
-            nudvDiaria.Value = objFuncionarioModel.vDiaria;
-            cbxstSalario.SelectedIndex = objFuncionarioModel.stSalario;
-            nudvSalario.Value = objFuncionarioModel.vSalario;
-            nudvSalarioHora.Value = objFuncionarioModel.vSalarioHora;
-            if (objFuncionarioModel.idResponsavel != null)
-            {
-                hlP_PesquisaidResponsavel.Value = (int)objFuncionarioModel.idResponsavel;
-            }
-            else
-            {
-                hlP_PesquisaidResponsavel.Value = 0;
-            }
-            dtdQtdHorasDomingo.Value = DateTime.Now + objFuncionarioModel.dQtdHorasDomingo;
-            dtdQtdHorasSabado.Value = DateTime.Now + objFuncionarioModel.dQtdHorasSabado;
-            dtdQtdHorasSegunda.Value = DateTime.Now + objFuncionarioModel.dQtdHorasSegunda;
-            dtdQtdHorasTerca.Value = DateTime.Now + objFuncionarioModel.dQtdHorasTerca;
-            dtdQtdHorasQuarta.Value = DateTime.Now + objFuncionarioModel.dQtdHorasQuarta;
-            dtdQtdHorasQuinta.Value = DateTime.Now + objFuncionarioModel.dQtdHorasQuinta;
-            dtdQtdHorasSexta.Value = DateTime.Now + objFuncionarioModel.dQtdHorasSexta;
-            #endregion
-
-            #region Inf. de Contato
-            txtxTelefoneComercial.Text = objFuncionarioModel.xTelefoneComercial;
-            txtxRamalComercial.Text = objFuncionarioModel.xRamalComercial;
-            txtxCelularComercial.Text = objFuncionarioModel.xCelularComercial;
-            txtxRadioFoneComercial.Text = objFuncionarioModel.xRadioFoneComercial;
-            txtxPagerComercial.Text = objFuncionarioModel.xPagerComercial;
-            txtxFaxComercial.Text = objFuncionarioModel.xFaxComercial;
-            txtxEmailComercial.Text = objFuncionarioModel.xEmailComercial;
-            txtxSkypeComercial.Text = objFuncionarioModel.xSkypeComercial;
-            txtxMSNComercial.Text = objFuncionarioModel.xMsnComercial;
-            txtxhttpComercial.Text = objFuncionarioModel.xHttpComercial;
-            txtxCelularResidencial.Text = objFuncionarioModel.xCelularResidencial;
-            txtxTelefoneResidencial.Text = objFuncionarioModel.xTelefoneResidencial;
-            txtxTelefoneResidencial.Text = objFuncionarioModel.xCelularResidencial;
-            txtxRadioFoneResidencial.Text = objFuncionarioModel.xRadioFoneResidencial;
-            txtxEmailResidencial.Text = objFuncionarioModel.xEmailResidencial;
-            txtxSkypeResidencial.Text = objFuncionarioModel.xSkypeResidencial;
-            txtxMsnResidencial.Text = objFuncionarioModel.xMsnResidencial;
-            txtXhttpPessoal.Text = objFuncionarioModel.xHttpPessoal;
-            #endregion
-
-            #region Representante
-            cbxstComissao.SelectedIndex = objFuncionarioModel.stComissao;
-            nudpComissaoAvista.Value = objFuncionarioModel.pComissaoAvista;
-            nudpComissaoAprazo.Value = objFuncionarioModel.pComissaoAprazo;
-            #endregion
+            base.CarregaPropriedades(objFuncionarioModel, true);
+            base.CarregaForm();
 
             CalcHorasTrab();
-        }        
+        }
 
         void PopulaTabela()
         {
@@ -385,80 +310,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             objFuncionarioModel.xNota = "";
 
             objFuncionarioModel.idEmpresa = CompanyData.idEmpresa;
-
-            #region Geral
-            objFuncionarioModel.xCodigoAlternativo = txtxCodigoAlternativo.Text;
-            objFuncionarioModel.Ativo = cbxAtivo.SelectedIndex == 0 ? false : true;
-            objFuncionarioModel.xSaudacao = txtxSaudacao.Text;
-            objFuncionarioModel.xNome = txtxNome.Text;
-            objFuncionarioModel.idCargo = hlP_PesquisaidCargo.Value;
-            objFuncionarioModel.idDepartamento = hlP_Pesquisa_idDepartamento.Value;
-            objFuncionarioModel.stPerfil = cbxstPerfil.SelectedIndex;
-            if (hlP_PesquisaidCalendário.Value != 0)
-            {
-                objFuncionarioModel.idCalendario = Convert.ToInt32(hlP_PesquisaidCalendário.Value);
-            }
-            objFuncionarioModel.idSite = hlP_PesquisaidSite.Value;
-            objFuncionarioModel.idDeposito = hlP_PesquisaidDeposito.Value;
-            objFuncionarioModel.xInformacaoAtencao = txtxInformacaoAtencao.Text;
-            #endregion
-
-            #region Informaçoes pessoais
-            objFuncionarioModel.dAniversario = dtdAniversario.Value;
-            objFuncionarioModel.stSexo = cbxstSexo.SelectedIndexByte;
-            objFuncionarioModel.dFalecimento = dtdFalecimento.Value;
-            objFuncionarioModel.xCpf = mskxCpf.Text;
-            objFuncionarioModel.xRg = txtxRg.Text;
-            objFuncionarioModel.xConjugue = txtxConjugue.Text;
-            objFuncionarioModel.xFilhos = txtxFilhos.Text;
-            objFuncionarioModel.idContaBancaria = hlP_PesquisaidContaBancaria.Value;
-            objFuncionarioModel.xVisto = txtxVisto.Text;
-            objFuncionarioModel.dFinalVisto = dtdFinalVisto.Value;
-            objFuncionarioModel.xVistoTrabalho = txtxVistoTrabalho.Text;
-            objFuncionarioModel.dFinalVistoTrabalho = dtdFinalVistoTrabalho.Value;
-            objFuncionarioModel.dAdmissao = dtdAdmissao.Value;
-            nudvDiaria.Value = objFuncionarioModel.vDiaria;
-            objFuncionarioModel.stSalario = cbxstSalario.SelectedIndexByte;
-            objFuncionarioModel.vSalario = nudvSalario.Value;
-            objFuncionarioModel.vSalarioHora = nudvSalarioHora.Value;
-            if (hlP_PesquisaidResponsavel.Value != 0)
-            {
-                objFuncionarioModel.idResponsavel = hlP_PesquisaidResponsavel.Value;
-            }
-            objFuncionarioModel.dQtdHorasDomingo = dtdQtdHorasDomingo.Value.TimeOfDay;
-            objFuncionarioModel.dQtdHorasSabado = dtdQtdHorasSabado.Value.TimeOfDay;
-            objFuncionarioModel.dQtdHorasSegunda = dtdQtdHorasSegunda.Value.TimeOfDay;
-            objFuncionarioModel.dQtdHorasTerca = dtdQtdHorasTerca.Value.TimeOfDay;
-            objFuncionarioModel.dQtdHorasQuarta = dtdQtdHorasQuarta.Value.TimeOfDay;
-            objFuncionarioModel.dQtdHorasQuinta = dtdQtdHorasQuinta.Value.TimeOfDay;
-            objFuncionarioModel.dQtdHorasSexta = dtdQtdHorasSexta.Value.TimeOfDay;
-            #endregion
-
-            #region Inf. de Contato
-            objFuncionarioModel.xTelefoneComercial = txtxTelefoneComercial.Text;
-            objFuncionarioModel.xRamalComercial = txtxRamalComercial.Text;
-            objFuncionarioModel.xCelularComercial = txtxCelularComercial.Text;
-            objFuncionarioModel.xRadioFoneComercial = txtxRadioFoneComercial.Text;
-            objFuncionarioModel.xPagerComercial = txtxPagerComercial.Text;
-            objFuncionarioModel.xFaxComercial = txtxFaxComercial.Text;
-            objFuncionarioModel.xEmailComercial = txtxEmailComercial.Text;
-            objFuncionarioModel.xSkypeComercial = txtxSkypeComercial.Text;
-            objFuncionarioModel.xMsnComercial = txtxMSNComercial.Text;
-            objFuncionarioModel.xHttpComercial = txtxhttpComercial.Text;
-            objFuncionarioModel.xTelefoneResidencial = txtxTelefoneResidencial.Text;
-            objFuncionarioModel.xCelularResidencial = txtxTelefoneResidencial.Text;
-            objFuncionarioModel.xRadioFoneResidencial = txtxRadioFoneResidencial.Text;
-            objFuncionarioModel.xEmailResidencial = txtxEmailResidencial.Text;
-            objFuncionarioModel.xSkypeResidencial = txtxSkypeResidencial.Text;
-            objFuncionarioModel.xMsnResidencial = txtxMsnResidencial.Text;
-            objFuncionarioModel.xHttpPessoal = txtXhttpPessoal.Text;
-            #endregion
-
-            #region Representante
-            objFuncionarioModel.stComissao = cbxstComissao.SelectedIndexByte;
-            objFuncionarioModel.pComissaoAvista = nudpComissaoAvista.Value;
-            objFuncionarioModel.pComissaoAprazo = nudpComissaoAprazo.Value;
-            #endregion
+            base.CarregaClasse(objFuncionarioModel);
 
         }
 

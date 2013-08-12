@@ -247,12 +247,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                DepositoModel.idSite = hlP_PesquisaidSite.Value;
-                DepositoModel.xDeposito = txtxDeposito.Text;
-                DepositoModel.xDescricao = txtxDescricao.Text;
-                DepositoModel.stTipo = cbostTipo.SelectedIndexByte;
-                DepositoModel.stGrupoIdentificacao = cbostGrupoIdentificacao.SelectedIndexByte;
-
+                base.CarregaClasse(DepositoModel);
             }
             catch (Exception ex)
             {
@@ -263,12 +258,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = DepositoModel.idDeposito.ToString();
-                hlP_PesquisaidSite.Value = DepositoModel.idSite;
-                txtxDeposito.Text = DepositoModel.xDeposito;
-                txtxDescricao.Text = DepositoModel.xDescricao;
-                cbostTipo.SelectedIndex = DepositoModel.stTipo;
-                cbostGrupoIdentificacao.SelectedIndex = DepositoModel.stGrupoIdentificacao;
+                base.CarregaPropriedades(DepositoModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {
@@ -306,7 +297,7 @@ namespace HLP.UI.Entries.Geral
                 BackgroundWorker worker = sender as BackgroundWorker;
                 List<SiteModel> objListSite = siteService.GetAll();
                 List<DepositoModel> objListDeposito = null;
-                TreeNode node= new TreeNode();
+                TreeNode node = new TreeNode();
 
                 this.Invoke(new MethodInvoker(delegate()
                 {

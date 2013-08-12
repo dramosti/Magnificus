@@ -241,9 +241,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                tipoModel.cTipoServico = nudcTipoServico.ValueInt;
-                tipoModel.xTipoServico = txtxTipoServico.Text;
-
+                base.CarregaClasse(tipoModel);
             }
             catch (Exception ex)
             {
@@ -254,9 +252,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = tipoModel.idTipoServico.ToString();
-                nudcTipoServico.Value = tipoModel.cTipoServico;
-                txtxTipoServico.Text = tipoModel.xTipoServico;
+                base.CarregaPropriedades(tipoModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

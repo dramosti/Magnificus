@@ -44,7 +44,7 @@ namespace HLP.Repository.Implementation.Entries.CRM
             else
             {
                 UndTrabalho.dbPrincipal.ExecuteScalar(
-                 "dbo.Proc_save_personalidade",
+                 "[dbo].[Proc_update_Personalidade]",
                 ParameterBase<PersonalidadeModel>.SetParameterValue(personalidade));
             }
         }

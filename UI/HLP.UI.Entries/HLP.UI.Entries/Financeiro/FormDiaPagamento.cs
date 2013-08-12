@@ -255,8 +255,7 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
-                objDiaPagamento.xDiaPagamento = txtxDiaPagamento.Text;
-                objDiaPagamento.xDescricao = txtxDescricao.Text;
+                base.CarregaClasse(objDiaPagamento);
             }
             catch (Exception ex)
             {
@@ -267,9 +266,8 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
-                txtCodigo.Text = objDiaPagamento.idDiaPagamento.ToString();
-                txtxDiaPagamento.Text = objDiaPagamento.xDiaPagamento;
-                txtxDescricao.Text = objDiaPagamento.xDescricao;
+                base.CarregaPropriedades(objDiaPagamento, true);
+                base.CarregaForm();
 
                 bsdiaPagamentoLinhas.DataSource = objDiaPagamento.lDia_pagamento_linhas;
             }
@@ -309,7 +307,7 @@ namespace HLP.UI.Entries.Financeiro
             try
             {
 
-                if (e.RowIndex > -1 )
+                if (e.RowIndex > -1)
                 {
                     if (dgvDiaPagamento.Columns[e.ColumnIndex].Name.Equals("clstSemanaMes"))
                     {

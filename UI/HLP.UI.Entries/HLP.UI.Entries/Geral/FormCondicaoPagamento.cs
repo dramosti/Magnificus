@@ -118,7 +118,7 @@ namespace HLP.UI.Entries.Geral
             condicaoModel = new Condicao_pagamentoModel();
             cbostMetodo.SelectedIndex = 4;
             cbostDataVencimento.SelectedIndex = 0;
-            nud_Validated(nudnMeses, null);            
+            nud_Validated(nudnMeses, null);
         }
 
         public override void Excluir()
@@ -317,24 +317,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                condicaoModel.xCondicaoPagamento = txtxCondicaoPagamento.Text;
-                condicaoModel.xDescricao = txtxDescricao.Text;
-                condicaoModel.stMetodo = cbostMetodo.SelectedIndexByte;
-                condicaoModel.nMeses = nudnMeses.ValueInt;
-                condicaoModel.nSemanas = nudnSemanas.ValueInt;
-                condicaoModel.nDias = nudnDias.ValueInt;
-                condicaoModel.stCondicao = cbostCondicao.SelectedIndexByte;
-
-                if (hlP_PesquisaidPlanoPagamento.Value != 0)
-                {
-                    condicaoModel.idPlanoPagamento = hlP_PesquisaidPlanoPagamento.Value;
-                }
-                if (hlP_PesquisaidDiaPagamento.Value != 0)
-                {
-                    condicaoModel.idDiaPagamento = hlP_PesquisaidDiaPagamento.Value;
-                }
-                condicaoModel.stDataVencimento = cbostDataVencimento.SelectedIndexByte;
-
+                base.CarregaClasse(condicaoModel);
             }
             catch (Exception ex)
             {
@@ -345,23 +328,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = condicaoModel.idCondicaoPagamento.ToString();
-                txtxCondicaoPagamento.Text = condicaoModel.xCondicaoPagamento;
-                txtxDescricao.Text = condicaoModel.xDescricao;
-                cbostMetodo.SelectedIndex = condicaoModel.stMetodo;
-                nudnMeses.Value = (int)condicaoModel.nMeses;
-                nudnSemanas.Value = (int)condicaoModel.nSemanas;
-                nudnDias.Value = (int)condicaoModel.nDias;
-                cbostCondicao.SelectedIndex = condicaoModel.stCondicao;
-                if (condicaoModel.idPlanoPagamento != null)
-                {
-                    hlP_PesquisaidPlanoPagamento.Value = (int)condicaoModel.idPlanoPagamento;
-                }
-                if (condicaoModel.idDiaPagamento != null)
-                {
-                    hlP_PesquisaidDiaPagamento.Value = (int)condicaoModel.idDiaPagamento;
-                }
-                cbostDataVencimento.SelectedIndex = (int)condicaoModel.stDataVencimento;
+                base.CarregaPropriedades(condicaoModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

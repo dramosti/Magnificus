@@ -22,7 +22,7 @@ namespace HLP.UI.Entries.Fiscal
         [Inject]
         public ISituacao_tributaria_pisService pisService { get; set; }
 
-        Situacao_tributaria_pisModel ipiModel = new Situacao_tributaria_pisModel();
+        Situacao_tributaria_pisModel pisModel = new Situacao_tributaria_pisModel();
 
         public FormStPIS()
         {
@@ -42,7 +42,7 @@ namespace HLP.UI.Entries.Fiscal
         public override void Novo()
         {
             base.Novo();
-            ipiModel = new Situacao_tributaria_pisModel();
+            pisModel = new Situacao_tributaria_pisModel();
         }
         public override void Atualizar()
         {
@@ -55,9 +55,9 @@ namespace HLP.UI.Entries.Fiscal
                 objValidaCampos.Validar();
 
                 PopulaTabela();
-                pisService.Save(ipiModel);
+                pisService.Save(pisModel);
 
-                txtCodigo.Text = ipiModel.idCSTPis.ToString();
+                txtCodigo.Text = pisModel.idCSTPis.ToString();
 
                 base.Salvar();
 
@@ -80,7 +80,7 @@ namespace HLP.UI.Entries.Fiscal
                     }
                     else
                     {
-                        ipiModel = pisService.GetStPis(Convert.ToInt32(txtCodigo.Text));
+                        pisModel = pisService.GetStPis(Convert.ToInt32(txtCodigo.Text));
                         PopulaForm();
                         HabilitaBotoes(1);
                     }
@@ -99,7 +99,7 @@ namespace HLP.UI.Entries.Fiscal
                 base.Pesquisar();
                 if (iRetPesquisa != null)
                 {
-                    ipiModel = pisService.GetStPis((int)iRetPesquisa);
+                    pisModel = pisService.GetStPis((int)iRetPesquisa);
                     PopulaForm();
                 }
                 else if (base.bNovoPesquisa)
@@ -120,8 +120,8 @@ namespace HLP.UI.Entries.Fiscal
                 base.Navegacao();
                 if (iRetPesquisa != null)
                 {
-                    ipiModel = pisService.GetStPis((int)iRetPesquisa);
-                    if (ipiModel != null)
+                    pisModel = pisService.GetStPis((int)iRetPesquisa);
+                    if (pisModel != null)
                     {
                         objMetodosForm.LimpaCampos();
                         HabilitaBotoes(1);
@@ -142,7 +142,7 @@ namespace HLP.UI.Entries.Fiscal
                 if (iRetPesquisa != null)
                 {
                     HabilitaBotoes(1);
-                    ipiModel = pisService.GetStPis((int)iRetPesquisa);
+                    pisModel = pisService.GetStPis((int)iRetPesquisa);
                     PopulaForm();
                 }
             }
@@ -161,7 +161,7 @@ namespace HLP.UI.Entries.Fiscal
             {
                 int idOrigem = Convert.ToInt32(txtCodigo.Text);
                 int i = pisService.Copy(Convert.ToInt32(txtCodigo.Text));
-                ipiModel = pisService.GetStPis(i);
+                pisModel = pisService.GetStPis(i);
                 PopulaForm();
                 base.RegistroDuplicado(idOrigem, i);
             }
@@ -231,7 +231,7 @@ namespace HLP.UI.Entries.Fiscal
             if (iRetPesquisa != null)
             {
                 base.MoveProximoItem();
-                ipiModel = pisService.GetStPis((int)iRetPesquisa);
+                pisModel = pisService.GetStPis((int)iRetPesquisa);
                 PopulaForm();
             }
         }
@@ -241,9 +241,7 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                ipiModel.cCSTPis = txtcCSTPis.Text;
-                ipiModel.xCSTPis = txtxCSTPis.Text;
-                ipiModel.stSimplesNacional = cbostSimplesNacional.SelectedIndexByte;
+                base.CarregaClasse(pisModel);
             }
             catch (Exception ex)
             {
@@ -254,10 +252,8 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                txtCodigo.Text = ipiModel.idCSTPis.ToString();
-                txtcCSTPis.Text = ipiModel.cCSTPis;
-                txtxCSTPis.Text = ipiModel.xCSTPis;
-                cbostSimplesNacional.SelectedIndex = ipiModel.stSimplesNacional;
+                base.CarregaPropriedades(pisModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

@@ -289,8 +289,7 @@ namespace HLP.UI.Entries.Geral.Basico
         {
             try
             {
-                objSiteModel.xSite = txtxSite.Text;
-                objSiteModel.xDescricao = txtxDescricao.Text;
+                base.CarregaClasse(objSiteModel);
             }
             catch (Exception ex)
             {
@@ -301,9 +300,8 @@ namespace HLP.UI.Entries.Geral.Basico
         {
             try
             {
-                txtCodigo.Text = objSiteModel.idSite.ToString();
-                txtxSite.Text = objSiteModel.xSite;
-                txtxDescricao.Text = objSiteModel.xDescricao;
+                base.CarregaPropriedades(objSiteModel, true);
+                base.CarregaForm();
                 bsEndereco.DataSource = objSiteModel.lSite_Endereco;
 
             }

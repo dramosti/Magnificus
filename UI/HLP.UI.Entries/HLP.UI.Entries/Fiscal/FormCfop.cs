@@ -248,10 +248,7 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                cfopModel.xCfop = txtxCfop.Text;
-                cfopModel.xCfopResumida = txtxCfopResumida.Text;
-                cfopModel.cCfop = Convert.ToInt32(nudcCodCfop.Value);
-
+                base.CarregaClasse(cfopModel);
             }
             catch (Exception ex)
             {
@@ -262,10 +259,8 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                txtCodigo.Text = cfopModel.idCfop.ToString();
-                txtxCfop.Text = cfopModel.xCfop;
-                txtxCfopResumida.Text = cfopModel.xCfopResumida;
-                nudcCodCfop.Value = cfopModel.cCfop;
+                base.CarregaPropriedades(cfopModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

@@ -245,9 +245,7 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                canalModel.cCanalVenda = txtcCanalVenda.Text;
-                canalModel.xCanalVenda = txtxCanalVenda.Text;
-
+                base.CarregaClasse(canalModel);
             }
             catch (Exception ex)
             {
@@ -258,9 +256,8 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                txtCodigo.Text = canalModel.idCanalVenda.ToString();
-                txtcCanalVenda.Text = canalModel.cCanalVenda;
-                txtxCanalVenda.Text = canalModel.xCanalVenda;
+                base.CarregaPropriedades(canalModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

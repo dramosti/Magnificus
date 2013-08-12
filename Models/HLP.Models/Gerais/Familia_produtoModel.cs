@@ -33,7 +33,7 @@ namespace HLP.Models.Entries.Gerais
         [ParameterOrder(Order = 12)]
         public int? idFamiliaProdutoBase { get; set; }
         [ParameterOrder(Order = 13)]
-        public byte stgrau { get; set; }
+        public byte stGrau { get; set; }
         [ParameterOrder(Order = 14)]
         public byte stAlteraDescricaoComercialProdutoVenda { get; set; }
 

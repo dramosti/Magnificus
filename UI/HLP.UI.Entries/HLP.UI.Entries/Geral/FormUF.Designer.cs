@@ -84,13 +84,13 @@
             this.hlP_LabelSeparator1_Geral.Location = new System.Drawing.Point(0, 3);
             this.hlP_LabelSeparator1_Geral.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.hlP_LabelSeparator1_Geral.Name = "hlP_LabelSeparator1_Geral";
-            this.hlP_LabelSeparator1_Geral.Size = new System.Drawing.Size(530, 18);
+            this.hlP_LabelSeparator1_Geral.Size = new System.Drawing.Size(530, 19);
             this.hlP_LabelSeparator1_Geral.TabIndex = 31;
             this.hlP_LabelSeparator1_Geral.TabStop = false;
             // 
             // txtCodigo
             // 
-            this.txtCodigo._Field = "idFabricante";
+            this.txtCodigo._Field = "idUF";
             this.txtCodigo._Help = "Chave principal do registro da unidade federativa, campo autoinclemental.";
             this.txtCodigo._LabelGroup = this.hlP_LabelSeparator1_Geral;
             this.txtCodigo._LabelText = "Código";
@@ -98,18 +98,19 @@
             this.txtCodigo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.txtCodigo._Password = false;
             this.txtCodigo._Regex = null;
-            this.txtCodigo._Table = "Fabricante";
+            this.txtCodigo._Table = "UF";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(108, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(108, 28);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(108, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(152, 19);
             this.txtCodigo.TabIndex = 1;
@@ -127,15 +128,16 @@
             this.txtxSiglaUf._Table = "UF";
             this.txtxSiglaUf._TamanhoComponente = 192;
             this.txtxSiglaUf._TamanhoMaiorLabel = 150;
-            this.txtxSiglaUf._Visible = true;
             this.txtxSiglaUf.BackColor = System.Drawing.Color.Transparent;
             this.txtxSiglaUf.Base = null;
+            this.txtxSiglaUf.bConfiguracao = false;
             this.txtxSiglaUf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxSiglaUf.Color = System.Drawing.Color.White;
-            this.txtxSiglaUf.Location = new System.Drawing.Point(63, 52);
+            this.txtxSiglaUf.Location = new System.Drawing.Point(63, 53);
             this.txtxSiglaUf.Margin = new System.Windows.Forms.Padding(63, 3, 15, 3);
             this.txtxSiglaUf.MaxLength = 32767;
             this.txtxSiglaUf.Name = "txtxSiglaUf";
+            this.txtxSiglaUf.objConfigComponenteModel = null;
             this.txtxSiglaUf.ReadOnly = false;
             this.txtxSiglaUf.Size = new System.Drawing.Size(282, 21);
             this.txtxSiglaUf.TabIndex = 2;
@@ -153,15 +155,16 @@
             this.txtxUf._Table = "UF";
             this.txtxUf._TamanhoComponente = 192;
             this.txtxUf._TamanhoMaiorLabel = 150;
-            this.txtxUf._Visible = true;
             this.txtxUf.BackColor = System.Drawing.Color.Transparent;
             this.txtxUf.Base = null;
+            this.txtxUf.bConfiguracao = false;
             this.txtxUf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxUf.Color = System.Drawing.Color.White;
-            this.txtxUf.Location = new System.Drawing.Point(61, 79);
+            this.txtxUf.Location = new System.Drawing.Point(61, 80);
             this.txtxUf.Margin = new System.Windows.Forms.Padding(61, 3, 15, 3);
             this.txtxUf.MaxLength = 32767;
             this.txtxUf.Name = "txtxUf";
+            this.txtxUf.objConfigComponenteModel = null;
             this.txtxUf.ReadOnly = false;
             this.txtxUf.Size = new System.Drawing.Size(284, 21);
             this.txtxUf.TabIndex = 3;
@@ -177,12 +180,12 @@
             this.nudcIbgeUf._Table = "UF";
             this.nudcIbgeUf._TamanhoComponente = 111;
             this.nudcIbgeUf._TamanhoMaiorLabel = 150;
-            this.nudcIbgeUf._Visible = true;
             this.nudcIbgeUf.BackColor = System.Drawing.Color.Transparent;
             this.nudcIbgeUf.Base = null;
+            this.nudcIbgeUf.bConfiguracao = false;
             this.nudcIbgeUf.Color = System.Drawing.Color.White;
             this.nudcIbgeUf.DecimalPlaces = 2;
-            this.nudcIbgeUf.Location = new System.Drawing.Point(27, 106);
+            this.nudcIbgeUf.Location = new System.Drawing.Point(27, 107);
             this.nudcIbgeUf.Margin = new System.Windows.Forms.Padding(27, 3, 15, 3);
             this.nudcIbgeUf.Maximum = new decimal(new int[] {
             53,
@@ -195,6 +198,7 @@
             0,
             0});
             this.nudcIbgeUf.Name = "nudcIbgeUf";
+            this.nudcIbgeUf.objConfigComponenteModel = null;
             this.nudcIbgeUf.ReadOnly = false;
             this.nudcIbgeUf.Size = new System.Drawing.Size(237, 22);
             this.nudcIbgeUf.TabIndex = 4;
@@ -207,7 +211,7 @@
             // 
             // hlP_PesquisaRegiao
             // 
-            this.hlP_PesquisaRegiao._Field = "idUf";
+            this.hlP_PesquisaRegiao._Field = "idRegiao";
             this.hlP_PesquisaRegiao._Help = "Informar a região nacional em que o estado esta são elas, norte, sul, nordeste, c" +
     "entro-oeste e sudeste.";
             this.hlP_PesquisaRegiao._LabelGroup = this.hlP_LabelSeparator1_Geral;
@@ -220,18 +224,19 @@
             this.hlP_PesquisaRegiao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaRegiao._Regex = null;
             this.hlP_PesquisaRegiao._Table = "UF";
-            this.hlP_PesquisaRegiao._TamanhoComponente = 287;
+            this.hlP_PesquisaRegiao._TamanhoComponente = 300;
             this.hlP_PesquisaRegiao._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaRegiao._Vinculado = false;
-            this.hlP_PesquisaRegiao._Visible = true;
             this.hlP_PesquisaRegiao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaRegiao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaRegiao.Base = null;
-            this.hlP_PesquisaRegiao.Location = new System.Drawing.Point(110, 134);
+            this.hlP_PesquisaRegiao.bConfiguracao = false;
+            this.hlP_PesquisaRegiao.Location = new System.Drawing.Point(110, 135);
             this.hlP_PesquisaRegiao.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
             this.hlP_PesquisaRegiao.Name = "hlP_PesquisaRegiao";
+            this.hlP_PesquisaRegiao.objConfigComponenteModel = null;
             this.hlP_PesquisaRegiao.ReadOnly = false;
-            this.hlP_PesquisaRegiao.Size = new System.Drawing.Size(420, 21);
+            this.hlP_PesquisaRegiao.Size = new System.Drawing.Size(343, 21);
             this.hlP_PesquisaRegiao.TabIndex = 5;
             this.hlP_PesquisaRegiao.Value = 0;
             // 

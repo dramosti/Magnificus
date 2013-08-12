@@ -252,17 +252,7 @@ namespace HLP.UI.Entries.Geral.Transportes
         {
             try
             {
-                modos_entregaModel.xModosEntrega = txtxModosEntrega.Text;
-                modos_entregaModel.xDescricao = txtxDescricao.Text;
-                modos_entregaModel.stServico = cbostServico.SelectedIndexByte;
-                if (hlP_PesquisaidTransportador.Value != 0)
-                {
-                    modos_entregaModel.idTransportador = hlP_PesquisaidTransportador.Value;
-                }
-                else
-                {
-                    modos_entregaModel.idTransportador = null;
-                }
+                base.CarregaClasse(modos_entregaModel);
             }
             catch (Exception ex)
             {
@@ -273,12 +263,8 @@ namespace HLP.UI.Entries.Geral.Transportes
         {
             try
             {
-                txtCodigo.Text = modos_entregaModel.idModosEntrega.ToString();
-                txtxModosEntrega.Text = modos_entregaModel.xModosEntrega;
-                txtxDescricao.Text = modos_entregaModel.xDescricao;
-                cbostServico.SelectedIndex = modos_entregaModel.stServico;
-                hlP_PesquisaidTransportador.Value = modos_entregaModel.idTransportador != null ? (int)modos_entregaModel.idTransportador : 0;
-
+                base.CarregaPropriedades(modos_entregaModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

@@ -268,11 +268,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                ufModel.xSiglaUf = txtxSiglaUf.Text;
-                ufModel.xUf = txtxUf.Text;
-                ufModel.cIbgeUf = nudcIbgeUf.ValueInt;
-                ufModel.idRegiao = hlP_PesquisaRegiao.Value;
-
+                base.CarregaClasse(ufModel);
             }
             catch (Exception ex)
             {
@@ -283,11 +279,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = ufModel.idUF.ToString();
-                txtxSiglaUf.Text = ufModel.xSiglaUf;
-                txtxUf.Text = ufModel.xUf;
-                nudcIbgeUf.ValueInt = ufModel.cIbgeUf;
-                hlP_PesquisaRegiao.Value = ufModel.idRegiao;
+                base.CarregaPropriedades(ufModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

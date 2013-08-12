@@ -1166,19 +1166,20 @@ namespace HLP.Comum.UI
         {
             string nomeProp = null;
             Type tipo = null;
-            List<Propriedades> lTemp = new List<Propriedades>();
-            lTemp = lPropriedades.OrderBy(i => i.xnome).ToList();
             foreach (Control c in iConfigFormularioService.lControl)
             {
                 tipo = c.GetType();
-                if (c.GetType() != typeof(HLP.Comum.Components.HLP_DataGridView))
+                if (c.GetType() != typeof(HLP.Comum.Components.HLP_DataGridView) &&
+                    c.GetType() != typeof(HLP.Comum.Components.HLP_Button))
                 {
                     nomeProp = ((HLP.Comum.Components.UserControlBase)c)._Field;
 
                     try
                     {
-                        Propriedades p = lPropriedades.FirstOrDefault(i => i.xnome ==
-                               nomeProp && i.xtabela == ((HLP.Comum.Components.UserControlBase)c)._Table);
+                        Propriedades teste = new Propriedades();
+                        teste = lPropriedades.FirstOrDefault(i => i.xnome ==
+                               nomeProp);
+
                         object valor = lPropriedades.FirstOrDefault(i => i.xnome ==
                                nomeProp && i.xtabela == ((HLP.Comum.Components.UserControlBase)c)._Table).value;
 
@@ -1197,7 +1198,7 @@ namespace HLP.Comum.UI
                         else if (c.GetType() == typeof(HLP.Comum.Components.HLP_NumericUpDown))
                         {
                             ((HLP.Comum.Components.HLP_NumericUpDown)c).Value = valor != null ?
-                                valor.ToString() != "0" ? (decimal)valor : decimal.Zero : decimal.Zero;
+                                valor.ToString() != "0" ? Convert.ToDecimal(valor) : decimal.Zero : decimal.Zero;
                         }
                         else if (c.GetType() == typeof(HLP.Comum.Components.HLP_Pesquisa))
                         {
@@ -1206,6 +1207,8 @@ namespace HLP.Comum.UI
                                 ((HLP.Comum.Components.HLP_Pesquisa)c).Value = lPropriedades.FirstOrDefault(i => i.xnome ==
                                    nomeProp && i.xtabela == ((HLP.Comum.Components.UserControlBase)c)._Table).value.ToInt32();
                         }
+                        else if (c.GetType() == typeof(HLP.Comum.Components.HLP_CheckBox))
+                            ((HLP.Comum.Components.HLP_CheckBox)c).Checked = Convert.ToBoolean(valor);
                     }
                     catch (System.Exception ex)
                     {
@@ -1255,6 +1258,10 @@ namespace HLP.Comum.UI
                                 item.SetValue(model, ((HLP.Comum.Components.HLP_NumericUpDown)controle).Value.ToInt32());
                             else if (item.PropertyType == typeof(decimal))
                                 item.SetValue(model, ((HLP.Comum.Components.HLP_NumericUpDown)controle).Value);
+                            else if (item.PropertyType == typeof(string))
+                                item.SetValue(model, ((HLP.Comum.Components.HLP_NumericUpDown)controle).Value.ToString());
+                            else if (item.PropertyType == typeof(byte))
+                                item.SetValue(model, (Convert.ToByte(((HLP.Comum.Components.HLP_NumericUpDown)controle).ValueInt)));
                         }
 
                         else if (controle.GetType() == typeof(HLP.Comum.Components.HLP_ComboBox))
@@ -1262,13 +1269,19 @@ namespace HLP.Comum.UI
                             if (item.PropertyType == typeof(bool))
                                 item.SetValue(model,
                                     ((HLP.Comum.Components.HLP_ComboBox)controle).Text.Contains("SIM") ? true : false);
-                            else if (item.PropertyType == typeof(byte))
+                            else if (item.PropertyType == typeof(byte) || item.PropertyType == typeof(Nullable<byte>))
                                 item.SetValue(model, ((HLP.Comum.Components.HLP_ComboBox)controle).SelectedIndexByte);
+                            else if (item.PropertyType == typeof(Int32))
+                                item.SetValue(model, ((HLP.Comum.Components.HLP_ComboBox)controle).SelectedValue);
                         }
                         else if (controle.GetType() == typeof(HLP.Comum.Components.HLP_Pesquisa))
                         {
                             if (((HLP.Comum.Components.HLP_Pesquisa)controle).Value != 0)
                                 item.SetValue(model, ((HLP.Comum.Components.HLP_Pesquisa)controle).Value);
+                        }
+                        else if (controle.GetType() == typeof(HLP.Comum.Components.HLP_DateTimePicker))
+                        {
+                            item.SetValue(model, ((HLP.Comum.Components.HLP_DateTimePicker)controle).Value);
                         }
                     }
                     catch (System.Exception ex)

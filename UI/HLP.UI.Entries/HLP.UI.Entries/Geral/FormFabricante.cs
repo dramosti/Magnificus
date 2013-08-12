@@ -43,7 +43,7 @@ namespace HLP.UI.Entries.Geral
             base.Novo();
             fabricanteModel = new FabricanteModel();
         }
-    
+
         public override void Salvar()
         {
             try
@@ -213,7 +213,7 @@ namespace HLP.UI.Entries.Geral
             }
             base.FinalizaExcluirTodos();
         }
-    
+
         private void ExcluirRegistro()
         {
             fabricanteService.Delete(Convert.ToInt32(txtCodigo.Text));
@@ -230,8 +230,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                fabricanteModel.xFantasia = txtxFantasia.Text;
-                fabricanteModel.xRazao = txtxxRazao.Text;
+                base.CarregaClasse(fabricanteModel);
             }
             catch (Exception ex)
             {
@@ -242,9 +241,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = fabricanteModel.idFabricante.ToString();
-                txtxFantasia.Text = fabricanteModel.xFantasia;
-                txtxxRazao.Text = fabricanteModel.xRazao;
+                base.CarregaPropriedades(fabricanteModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

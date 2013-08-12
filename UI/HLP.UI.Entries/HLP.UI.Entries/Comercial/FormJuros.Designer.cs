@@ -41,7 +41,6 @@
             this.kryptonTabControl1 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.kryptonPanel1 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
@@ -73,7 +72,6 @@
             this.Principal.Controls.Add(this.nudnQuantidadeDiasMes);
             this.Principal.Controls.Add(this.cbostDiaMes);
             this.Principal.Controls.Add(this.nudnCarencia);
-            this.Principal.Controls.Add(this.button1);
             this.Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Principal.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Principal.Location = new System.Drawing.Point(0, 0);
@@ -89,7 +87,7 @@
             this.hlP_LabelSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparator1.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparator1.Name = "hlP_LabelSeparator1";
-            this.hlP_LabelSeparator1.Size = new System.Drawing.Size(413, 18);
+            this.hlP_LabelSeparator1.Size = new System.Drawing.Size(413, 19);
             this.hlP_LabelSeparator1.TabIndex = 9;
             this.hlP_LabelSeparator1.TabStop = false;
             // 
@@ -106,15 +104,16 @@
             this.txtCodigo._Table = "Juros";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(108, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(108, 28);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(108, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(152, 21);
             this.txtCodigo.TabIndex = 0;
@@ -132,15 +131,16 @@
             this.txtxNome._Table = "Juros";
             this.txtxNome._TamanhoComponente = 107;
             this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = true;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
+            this.txtxNome.bConfiguracao = false;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxNome.Color = System.Drawing.Color.White;
-            this.txtxNome.Location = new System.Drawing.Point(119, 54);
+            this.txtxNome.Location = new System.Drawing.Point(119, 55);
             this.txtxNome.Margin = new System.Windows.Forms.Padding(119, 3, 15, 3);
             this.txtxNome.MaxLength = 32767;
             this.txtxNome.Name = "txtxNome";
+            this.txtxNome.objConfigComponenteModel = null;
             this.txtxNome.ReadOnly = false;
             this.txtxNome.Size = new System.Drawing.Size(141, 21);
             this.txtxNome.TabIndex = 7;
@@ -158,15 +158,16 @@
             this.txtxDescricao._Table = "Juros";
             this.txtxDescricao._TamanhoComponente = 263;
             this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = true;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
+            this.txtxDescricao.bConfiguracao = false;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxDescricao.Color = System.Drawing.Color.White;
-            this.txtxDescricao.Location = new System.Drawing.Point(97, 81);
+            this.txtxDescricao.Location = new System.Drawing.Point(97, 82);
             this.txtxDescricao.Margin = new System.Windows.Forms.Padding(97, 3, 15, 3);
             this.txtxDescricao.MaxLength = 32767;
             this.txtxDescricao.Name = "txtxDescricao";
+            this.txtxDescricao.objConfigComponenteModel = null;
             this.txtxDescricao.ReadOnly = false;
             this.txtxDescricao.Size = new System.Drawing.Size(319, 21);
             this.txtxDescricao.TabIndex = 3;
@@ -182,12 +183,12 @@
             this.nudpJuros._Table = "Juros";
             this.nudpJuros._TamanhoComponente = 107;
             this.nudpJuros._TamanhoMaiorLabel = 150;
-            this.nudpJuros._Visible = true;
             this.nudpJuros.BackColor = System.Drawing.Color.Transparent;
             this.nudpJuros.Base = null;
+            this.nudpJuros.bConfiguracao = false;
             this.nudpJuros.Color = System.Drawing.Color.White;
             this.nudpJuros.DecimalPlaces = 2;
-            this.nudpJuros.Location = new System.Drawing.Point(47, 108);
+            this.nudpJuros.Location = new System.Drawing.Point(47, 109);
             this.nudpJuros.Margin = new System.Windows.Forms.Padding(47, 3, 15, 3);
             this.nudpJuros.Maximum = new decimal(new int[] {
             9,
@@ -200,6 +201,7 @@
             0,
             0});
             this.nudpJuros.Name = "nudpJuros";
+            this.nudpJuros.objConfigComponenteModel = null;
             this.nudpJuros.ReadOnly = false;
             this.nudpJuros.Size = new System.Drawing.Size(213, 22);
             this.nudpJuros.TabIndex = 4;
@@ -221,12 +223,12 @@
             this.nudnQuantidadeDiasMes._Table = "Juros";
             this.nudnQuantidadeDiasMes._TamanhoComponente = 107;
             this.nudnQuantidadeDiasMes._TamanhoMaiorLabel = 150;
-            this.nudnQuantidadeDiasMes._Visible = true;
             this.nudnQuantidadeDiasMes.BackColor = System.Drawing.Color.Transparent;
             this.nudnQuantidadeDiasMes.Base = null;
+            this.nudnQuantidadeDiasMes.bConfiguracao = false;
             this.nudnQuantidadeDiasMes.Color = System.Drawing.Color.White;
             this.nudnQuantidadeDiasMes.DecimalPlaces = 2;
-            this.nudnQuantidadeDiasMes.Location = new System.Drawing.Point(35, 136);
+            this.nudnQuantidadeDiasMes.Location = new System.Drawing.Point(35, 137);
             this.nudnQuantidadeDiasMes.Margin = new System.Windows.Forms.Padding(35, 3, 15, 3);
             this.nudnQuantidadeDiasMes.Maximum = new decimal(new int[] {
             9,
@@ -239,6 +241,7 @@
             0,
             0});
             this.nudnQuantidadeDiasMes.Name = "nudnQuantidadeDiasMes";
+            this.nudnQuantidadeDiasMes.objConfigComponenteModel = null;
             this.nudnQuantidadeDiasMes.ReadOnly = false;
             this.nudnQuantidadeDiasMes.Size = new System.Drawing.Size(225, 22);
             this.nudnQuantidadeDiasMes.TabIndex = 4;
@@ -261,20 +264,21 @@
             this.cbostDiaMes._Regex = null;
             this.cbostDiaMes._situacao = false;
             this.cbostDiaMes._Table = "Juros";
-            this.cbostDiaMes._TamanhoComponente = 107;
+            this.cbostDiaMes._TamanhoComponente = 74;
             this.cbostDiaMes._TamanhoMaiorLabel = 150;
-            this.cbostDiaMes._Visible = true;
             this.cbostDiaMes.BackColor = System.Drawing.Color.Transparent;
             this.cbostDiaMes.Base = null;
+            this.cbostDiaMes.bConfiguracao = false;
             this.cbostDiaMes.Color = System.Drawing.Color.White;
             this.cbostDiaMes.DataSource = null;
             this.cbostDiaMes.DisplayMember = "DisplayMember";
-            this.cbostDiaMes.Location = new System.Drawing.Point(100, 164);
+            this.cbostDiaMes.Location = new System.Drawing.Point(100, 165);
             this.cbostDiaMes.Margin = new System.Windows.Forms.Padding(100, 3, 15, 3);
             this.cbostDiaMes.Name = "cbostDiaMes";
+            this.cbostDiaMes.objConfigComponenteModel = null;
             this.cbostDiaMes.SelectedIndex = -1;
             this.cbostDiaMes.SelectedValue = 0;
-            this.cbostDiaMes.Size = new System.Drawing.Size(160, 21);
+            this.cbostDiaMes.Size = new System.Drawing.Size(127, 21);
             this.cbostDiaMes.TabIndex = 8;
             this.cbostDiaMes.ValueMember = "ValueMember";
             // 
@@ -289,12 +293,12 @@
             this.nudnCarencia._Table = "Juros";
             this.nudnCarencia._TamanhoComponente = 107;
             this.nudnCarencia._TamanhoMaiorLabel = 150;
-            this.nudnCarencia._Visible = true;
             this.nudnCarencia.BackColor = System.Drawing.Color.Transparent;
             this.nudnCarencia.Base = null;
+            this.nudnCarencia.bConfiguracao = false;
             this.nudnCarencia.Color = System.Drawing.Color.White;
             this.nudnCarencia.DecimalPlaces = 2;
-            this.nudnCarencia.Location = new System.Drawing.Point(102, 191);
+            this.nudnCarencia.Location = new System.Drawing.Point(102, 192);
             this.nudnCarencia.Margin = new System.Windows.Forms.Padding(102, 3, 15, 3);
             this.nudnCarencia.Maximum = new decimal(new int[] {
             9,
@@ -307,6 +311,7 @@
             0,
             0});
             this.nudnCarencia.Name = "nudnCarencia";
+            this.nudnCarencia.objConfigComponenteModel = null;
             this.nudnCarencia.ReadOnly = false;
             this.nudnCarencia.Size = new System.Drawing.Size(158, 22);
             this.nudnCarencia.TabIndex = 5;
@@ -368,16 +373,6 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(607, 225);
             this.kryptonPanel1.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(434, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormJuros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +415,5 @@
         private Comum.Components.HLP_TextBox txtxNome;
         private Comum.Components.HLP_ComboBox cbostDiaMes;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparator1;
-        private System.Windows.Forms.Button button1;
     }
 }

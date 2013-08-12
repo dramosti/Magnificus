@@ -244,13 +244,7 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                jurosModel.xNome = txtxNome.Text;
-                jurosModel.xDescricao = txtxDescricao.Text;
-                jurosModel.pJuros = nudpJuros.Value;
-                jurosModel.nQuantidadeDiasMes = nudnQuantidadeDiasMes.ValueInt;
-                jurosModel.stDiaMes = cbostDiaMes.SelectedIndexByte;
-                jurosModel.nCarencia = nudnCarencia.ValueInt;
-
+                base.CarregaClasse(jurosModel);
             }
             catch (Exception ex)
             {
@@ -261,13 +255,9 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                txtCodigo.Text = jurosModel.idJuros.ToString();
-                txtxNome.Text = jurosModel.xNome;
-                txtxDescricao.Text = jurosModel.xDescricao;
-                nudpJuros.Value = jurosModel.pJuros;
-                nudnQuantidadeDiasMes.Value = jurosModel.nQuantidadeDiasMes;
-                cbostDiaMes.SelectedIndex = jurosModel.stDiaMes;
-                nudnCarencia.Value = jurosModel.nCarencia;
+                base.CarregaPropriedades(jurosModel, true);
+                base.CarregaForm();
+
             }
             catch (Exception ex)
             {

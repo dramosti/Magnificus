@@ -241,9 +241,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                moedaModel.xSiglaMoeda = txtxSiglaMoeda.Text;
-                moedaModel.xMoeda = txtxMoeda.Text;
-                moedaModel.xSimbolo = txtxSimbolo.Text;
+                base.CarregaClasse(moedaModel);
             }
             catch (Exception ex)
             {
@@ -254,10 +252,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = moedaModel.idMoeda.ToString();
-                txtxSiglaMoeda.Text = moedaModel.xSiglaMoeda;
-                txtxMoeda.Text = moedaModel.xMoeda;
-                txtxSimbolo.Text = moedaModel.xSimbolo;
+                base.CarregaPropriedades(moedaModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

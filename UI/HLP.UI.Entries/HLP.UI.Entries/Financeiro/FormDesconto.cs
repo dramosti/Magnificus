@@ -251,12 +251,7 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
-                decontoModel.xDescontos = txtxDescontos.Text;
-                decontoModel.xDescricao = txtxDescricao.Text;
-                decontoModel.stLiquidoAtual = cbostLiquidoAtual.SelectedIndexByte;
-                decontoModel.nMeses = nudnMeses.ValueInt;
-                decontoModel.nDias = nudnDias.ValueInt;
-                decontoModel.pDesconto = nudpDesconto.Value;
+                base.CarregaClasse(decontoModel);
             }
             catch (Exception ex)
             {
@@ -267,14 +262,8 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
-                txtCodigo.Text = decontoModel.idDescontosAvista.ToString();
-                txtxDescontos.Text = decontoModel.xDescontos;
-                txtxDescricao.Text = decontoModel.xDescricao;
-
-                cbostLiquidoAtual.SelectedIndex = decontoModel.stLiquidoAtual;
-                nudnMeses.Value = (int)decontoModel.nMeses;
-                nudnDias.Value = (int)decontoModel.nDias;
-                nudpDesconto.Value = (decimal)decontoModel.pDesconto;
+                base.CarregaPropriedades(decontoModel, true);
+                base.CarregaForm();
 
             }
             catch (Exception ex)

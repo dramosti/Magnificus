@@ -322,35 +322,8 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
+                base.CarregaClasse(documentoModel);
                 documentoModel.idEmpresa = CompanyData.idEmpresa;
-                documentoModel.xTpdoc = txtxTpdoc.Text;
-                documentoModel.tpDocumento = cbotpDocumento.SelectedIndexByte;
-
-                documentoModel.stRelacaoPedidoxorcamento = cbostRelacaoPedidoxorcamento.SelectedIndexByte;
-                documentoModel.stRelacaoPedidoxnf = cbostRelacaoPedidoxnf.SelectedIndexByte;
-                documentoModel.stRelacaoPedidoxproducao = cbostRelacaoPedidoxproducao.SelectedIndexByte;
-                documentoModel.stGrupoFaturamento = Convert.ToByte(cbostGrupoFaturamento.SelectedIndex + 1);
-                documentoModel.xSerieNf = txtxSerieNf.Text;
-                documentoModel.xEspecieVolNf = txtxEspecieVolNf.Text;
-                documentoModel.xMarcaVolNf = txtxMarcaVolNf.Text;
-                documentoModel.stSomaIpi1Dup = cbostSomaIpi1Dup.SelectedIndexByte;
-                documentoModel.stSomaSt1Dup = cbostSomaSt1Dup.SelectedIndexByte;
-                documentoModel.xObs = campoxObs.Text;
-                documentoModel.stNfComplementar = cbostNfComplementar.SelectedIndexByte;
-                documentoModel.stNfImportacao = cbostNfImportacao.SelectedIndexByte;
-                documentoModel.stNfExportacao = cbostNfExportacao.SelectedIndexByte;
-                documentoModel.stNfIndustrializacao = cbostNfIndustrializacao.SelectedIndexByte;
-                documentoModel.stNfSuframa = cbostNfSuframa.SelectedIndexByte;
-                documentoModel.stCompoeVlTotalProdutos = cbostCompoeVlTotalProdutos.SelectedIndexByte;
-                documentoModel.stSomaDevolucaoVlTotalNf = cbostSomaDevolucaoVlTotalNf.SelectedIndexByte;
-                documentoModel.stImprimeIcmsProprioComNormal = cbostImprimeIcmsProprioComNormal.SelectedIndexByte;
-                documentoModel.stRelacaoRecebimentoPedidocpa = cbostRelacaoRecebimentoPedidocpa.SelectedIndexByte;
-                documentoModel.stRelacaoPedidocpaCotacao = cbostRelacaoPedidocpaCotacao.SelectedIndexByte;
-                documentoModel.stNFdevolucao = cbostNFdevolucao.SelectedIndexByte;
-                documentoModel.stNfAtivo = cbostNfAtivo.SelectedIndexByte;
-
-                documentoModel.Ativo = cboAtivo.SelectedIndex == 0 ? false : true;
-                documentoModel.idModeloDocFiscal = campoPesquisaidModeloDocFiscal.Value;
 
                 int id = 0;
                 List<Tipo_documento_oper_validaModel> newldocumentoOperModel = new List<Tipo_documento_oper_validaModel>();
@@ -392,34 +365,8 @@ namespace HLP.UI.Entries.Fiscal
             try
             {
 
-                txtCodigo.Text = documentoModel.idTipoDocumento.ToString();
-                txtxTpdoc.Text = documentoModel.xTpdoc;
-                cbotpDocumento.SelectedIndex = (documentoModel.tpDocumento);
-                cbostRelacaoPedidoxorcamento.SelectedIndex = (documentoModel.stRelacaoPedidoxorcamento);
-                cbostRelacaoPedidoxnf.SelectedIndex = (documentoModel.stRelacaoPedidoxnf);
-                cbostRelacaoPedidoxproducao.SelectedIndex = (documentoModel.stRelacaoPedidoxproducao);
-                cbostGrupoFaturamento.SelectedIndex = (documentoModel.stGrupoFaturamento - 1);
-                txtxSerieNf.Text = documentoModel.xSerieNf;
-                txtxEspecieVolNf.Text = documentoModel.xEspecieVolNf;
-                txtxMarcaVolNf.Text = documentoModel.xMarcaVolNf;
-                cbostSomaIpi1Dup.SelectedIndex = (documentoModel.stSomaIpi1Dup);
-                cbostSomaSt1Dup.SelectedIndex = (documentoModel.stSomaSt1Dup);
-                campoxObs.Text = documentoModel.xObs;
-                cbostNfComplementar.SelectedIndex = (documentoModel.stNfComplementar);
-                cbostNfAtivo.SelectedIndex = (documentoModel.stNfAtivo);
-                cbostNFdevolucao.SelectedIndex = (Convert.ToByte(documentoModel.stNFdevolucao));
-                cbostNfImportacao.SelectedIndex = (documentoModel.stNfImportacao);
-                cbostNfExportacao.SelectedIndex = (documentoModel.stNfExportacao);
-                cbostNfIndustrializacao.SelectedIndex = (documentoModel.stNfIndustrializacao);
-                cbostNfSuframa.SelectedIndex = (documentoModel.stNfSuframa);
-                cbostCompoeVlTotalProdutos.SelectedIndex = (documentoModel.stCompoeVlTotalProdutos);
-                cbostSomaDevolucaoVlTotalNf.SelectedIndex = (documentoModel.stSomaDevolucaoVlTotalNf);
-                cbostImprimeIcmsProprioComNormal.SelectedIndex = (documentoModel.stImprimeIcmsProprioComNormal);
-                cbostRelacaoRecebimentoPedidocpa.SelectedIndex = (documentoModel.stRelacaoRecebimentoPedidocpa);
-                cbostRelacaoPedidocpaCotacao.SelectedIndex = (documentoModel.stRelacaoPedidocpaCotacao);
-                cboAtivo.SelectedIndex = (documentoModel.Ativo == false ? 0 : 1);
-                campoPesquisaidModeloDocFiscal.Value = documentoModel.idModeloDocFiscal;
-
+                base.CarregaPropriedades(documentoModel, true);
+                base.CarregaForm();
 
                 lsOperacoesValidas.lst.Items.Clear();
                 foreach (Tipo_documento_oper_validaModel oper in ldocumentoOperModel)

@@ -241,9 +241,7 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                icmsModel.cCSTIcms = txtcCSTIcms.Text;
-                icmsModel.xCSTIcms = txtxCSTIcms.Text;
-                icmsModel.stSimplesNacional = cbostSimplesNacional.SelectedIndexByte;
+                base.CarregaClasse(icmsModel);
             }
             catch (Exception ex)
             {
@@ -254,10 +252,8 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                txtCodigo.Text = icmsModel.idCSTIcms.ToString();
-                txtcCSTIcms.Text = icmsModel.cCSTIcms;
-                txtxCSTIcms.Text = icmsModel.xCSTIcms;
-                cbostSimplesNacional.SelectedIndex = icmsModel.stSimplesNacional;
+                base.CarregaPropriedades(icmsModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

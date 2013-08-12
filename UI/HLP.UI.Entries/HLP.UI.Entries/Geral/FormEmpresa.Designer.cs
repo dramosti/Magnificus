@@ -167,13 +167,13 @@
             this.hlP_LabelSeparatorGeral.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorGeral.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorGeral.Name = "hlP_LabelSeparatorGeral";
-            this.hlP_LabelSeparatorGeral.Size = new System.Drawing.Size(415, 18);
+            this.hlP_LabelSeparatorGeral.Size = new System.Drawing.Size(415, 19);
             this.hlP_LabelSeparatorGeral.TabIndex = 0;
             this.hlP_LabelSeparatorGeral.TabStop = false;
             // 
             // txtCodigo
             // 
-            this.txtCodigo._Field = "IdEmpresa";
+            this.txtCodigo._Field = "idEmpresa";
             this.txtCodigo._LabelGroup = this.hlP_LabelSeparatorGeral;
             this.txtCodigo._LabelText = "Código";
             this.txtCodigo._Multiline = false;
@@ -185,9 +185,10 @@
             this.txtCodigo._TamanhoMaiorLabel = 140;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(98, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(98, 28);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(98, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
@@ -210,9 +211,10 @@
             this.txtxNome._TamanhoMaiorLabel = 140;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
+            this.txtxNome.bConfiguracao = false;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxNome.Color = System.Drawing.Color.White;
-            this.txtxNome.Location = new System.Drawing.Point(106, 54);
+            this.txtxNome.Location = new System.Drawing.Point(106, 55);
             this.txtxNome.Margin = new System.Windows.Forms.Padding(106, 3, 15, 3);
             this.txtxNome.MaxLength = 32767;
             this.txtxNome.Name = "txtxNome";
@@ -235,9 +237,10 @@
             this.txtxFantasia._TamanhoMaiorLabel = 140;
             this.txtxFantasia.BackColor = System.Drawing.Color.Transparent;
             this.txtxFantasia.Base = null;
+            this.txtxFantasia.bConfiguracao = false;
             this.txtxFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxFantasia.Color = System.Drawing.Color.White;
-            this.txtxFantasia.Location = new System.Drawing.Point(93, 81);
+            this.txtxFantasia.Location = new System.Drawing.Point(93, 82);
             this.txtxFantasia.Margin = new System.Windows.Forms.Padding(93, 3, 15, 3);
             this.txtxFantasia.MaxLength = 32767;
             this.txtxFantasia.Name = "txtxFantasia";
@@ -248,7 +251,7 @@
             // 
             // masktxtxCnpj
             // 
-            this.masktxtxCnpj._Field = "xCnpj";
+            this.masktxtxCnpj._Field = "xCNPJ";
             this.masktxtxCnpj._LabelGroup = this.hlP_LabelSeparatorGeral;
             this.masktxtxCnpj._LabelText = "Cnpj";
             this.masktxtxCnpj._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -260,8 +263,9 @@
             this.masktxtxCnpj._UF = null;
             this.masktxtxCnpj.BackColor = System.Drawing.Color.Transparent;
             this.masktxtxCnpj.Base = null;
+            this.masktxtxCnpj.bConfiguracao = false;
             this.masktxtxCnpj.Color = System.Drawing.Color.White;
-            this.masktxtxCnpj.Location = new System.Drawing.Point(112, 108);
+            this.masktxtxCnpj.Location = new System.Drawing.Point(112, 109);
             this.masktxtxCnpj.Margin = new System.Windows.Forms.Padding(112, 3, 15, 3);
             this.masktxtxCnpj.Mask = "00.000.000/0000-00";
             this.masktxtxCnpj.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
@@ -274,7 +278,7 @@
             // 
             // txtxIe
             // 
-            this.txtxIe._Field = "xIe";
+            this.txtxIe._Field = "xIE";
             this.txtxIe._LabelGroup = this.hlP_LabelSeparatorGeral;
             this.txtxIe._LabelText = "I. e.";
             this.txtxIe._Multiline = false;
@@ -286,9 +290,10 @@
             this.txtxIe._TamanhoMaiorLabel = 140;
             this.txtxIe.BackColor = System.Drawing.Color.Transparent;
             this.txtxIe.Base = null;
+            this.txtxIe.bConfiguracao = false;
             this.txtxIe.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxIe.Color = System.Drawing.Color.White;
-            this.txtxIe.Location = new System.Drawing.Point(118, 135);
+            this.txtxIe.Location = new System.Drawing.Point(118, 136);
             this.txtxIe.Margin = new System.Windows.Forms.Padding(118, 3, 15, 3);
             this.txtxIe.MaxLength = 32767;
             this.txtxIe.Name = "txtxIe";
@@ -299,7 +304,7 @@
             // 
             // txtxIm
             // 
-            this.txtxIm._Field = "xIm";
+            this.txtxIm._Field = "xIM";
             this.txtxIm._LabelGroup = this.hlP_LabelSeparatorGeral;
             this.txtxIm._LabelText = "I. m.";
             this.txtxIm._Multiline = false;
@@ -311,9 +316,10 @@
             this.txtxIm._TamanhoMaiorLabel = 140;
             this.txtxIm.BackColor = System.Drawing.Color.Transparent;
             this.txtxIm.Base = null;
+            this.txtxIm.bConfiguracao = false;
             this.txtxIm.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxIm.Color = System.Drawing.Color.White;
-            this.txtxIm.Location = new System.Drawing.Point(115, 162);
+            this.txtxIm.Location = new System.Drawing.Point(115, 163);
             this.txtxIm.Margin = new System.Windows.Forms.Padding(115, 3, 15, 3);
             this.txtxIm.MaxLength = 32767;
             this.txtxIm.Name = "txtxIm";
@@ -336,9 +342,10 @@
             this.txtxSuframa._TamanhoMaiorLabel = 140;
             this.txtxSuframa.BackColor = System.Drawing.Color.Transparent;
             this.txtxSuframa.Base = null;
+            this.txtxSuframa.bConfiguracao = false;
             this.txtxSuframa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxSuframa.Color = System.Drawing.Color.White;
-            this.txtxSuframa.Location = new System.Drawing.Point(94, 189);
+            this.txtxSuframa.Location = new System.Drawing.Point(94, 190);
             this.txtxSuframa.Margin = new System.Windows.Forms.Padding(94, 3, 15, 3);
             this.txtxSuframa.MaxLength = 32767;
             this.txtxSuframa.Name = "txtxSuframa";
@@ -361,8 +368,9 @@
             this.txtxTelefone._UF = null;
             this.txtxTelefone.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefone.Base = null;
+            this.txtxTelefone.bConfiguracao = false;
             this.txtxTelefone.Color = System.Drawing.Color.White;
-            this.txtxTelefone.Location = new System.Drawing.Point(92, 216);
+            this.txtxTelefone.Location = new System.Drawing.Point(92, 217);
             this.txtxTelefone.Margin = new System.Windows.Forms.Padding(92, 3, 15, 3);
             this.txtxTelefone.Mask = "(00)0000-0000";
             this.txtxTelefone.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
@@ -387,8 +395,9 @@
             this.txtxFax._UF = null;
             this.txtxFax.BackColor = System.Drawing.Color.Transparent;
             this.txtxFax.Base = null;
+            this.txtxFax.bConfiguracao = false;
             this.txtxFax.Color = System.Drawing.Color.White;
-            this.txtxFax.Location = new System.Drawing.Point(119, 243);
+            this.txtxFax.Location = new System.Drawing.Point(119, 244);
             this.txtxFax.Margin = new System.Windows.Forms.Padding(119, 3, 15, 3);
             this.txtxFax.Mask = "(00)90000-0000";
             this.txtxFax.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
@@ -413,9 +422,10 @@
             this.txtxEmail._TamanhoMaiorLabel = 140;
             this.txtxEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmail.Base = null;
+            this.txtxEmail.bConfiguracao = false;
             this.txtxEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxEmail.Color = System.Drawing.Color.White;
-            this.txtxEmail.Location = new System.Drawing.Point(109, 270);
+            this.txtxEmail.Location = new System.Drawing.Point(109, 271);
             this.txtxEmail.Margin = new System.Windows.Forms.Padding(109, 3, 15, 3);
             this.txtxEmail.MaxLength = 32767;
             this.txtxEmail.Name = "txtxEmail";
@@ -438,9 +448,10 @@
             this.txtxHttp._TamanhoMaiorLabel = 140;
             this.txtxHttp.BackColor = System.Drawing.Color.Transparent;
             this.txtxHttp.Base = null;
+            this.txtxHttp.bConfiguracao = false;
             this.txtxHttp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxHttp.Color = System.Drawing.Color.White;
-            this.txtxHttp.Location = new System.Drawing.Point(113, 297);
+            this.txtxHttp.Location = new System.Drawing.Point(113, 298);
             this.txtxHttp.Margin = new System.Windows.Forms.Padding(113, 3, 15, 3);
             this.txtxHttp.MaxLength = 32767;
             this.txtxHttp.Name = "txtxHttp";
@@ -463,9 +474,10 @@
             this.txtxLinkLogoEmpresa._TamanhoMaiorLabel = 140;
             this.txtxLinkLogoEmpresa.BackColor = System.Drawing.Color.Transparent;
             this.txtxLinkLogoEmpresa.Base = null;
+            this.txtxLinkLogoEmpresa.bConfiguracao = false;
             this.txtxLinkLogoEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxLinkLogoEmpresa.Color = System.Drawing.Color.White;
-            this.txtxLinkLogoEmpresa.Location = new System.Drawing.Point(64, 324);
+            this.txtxLinkLogoEmpresa.Location = new System.Drawing.Point(485, 3);
             this.txtxLinkLogoEmpresa.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.txtxLinkLogoEmpresa.MaxLength = 32767;
             this.txtxLinkLogoEmpresa.Name = "txtxLinkLogoEmpresa";
@@ -488,9 +500,10 @@
             this.txtxLinkPastas._TamanhoMaiorLabel = 140;
             this.txtxLinkPastas.BackColor = System.Drawing.Color.Transparent;
             this.txtxLinkPastas.Base = null;
+            this.txtxLinkPastas.bConfiguracao = false;
             this.txtxLinkPastas.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxLinkPastas.Color = System.Drawing.Color.White;
-            this.txtxLinkPastas.Location = new System.Drawing.Point(583, 3);
+            this.txtxLinkPastas.Location = new System.Drawing.Point(499, 30);
             this.txtxLinkPastas.Margin = new System.Windows.Forms.Padding(78, 3, 15, 3);
             this.txtxLinkPastas.MaxLength = 32767;
             this.txtxLinkPastas.Name = "txtxLinkPastas";
@@ -513,10 +526,11 @@
             this.cboAtivo._TamanhoMaiorLabel = 140;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
+            this.cboAtivo.bConfiguracao = false;
             this.cboAtivo.Color = System.Drawing.Color.White;
             this.cboAtivo.DataSource = null;
             this.cboAtivo.DisplayMember = "DisplayMember";
-            this.cboAtivo.Location = new System.Drawing.Point(615, 30);
+            this.cboAtivo.Location = new System.Drawing.Point(531, 57);
             this.cboAtivo.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
             this.cboAtivo.Name = "cboAtivo";
             this.cboAtivo.objConfigComponenteModel = null;
@@ -545,7 +559,8 @@
             this.hlP_PesquisaidRamoAtividade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidRamoAtividade.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidRamoAtividade.Base = null;
-            this.hlP_PesquisaidRamoAtividade.Location = new System.Drawing.Point(562, 57);
+            this.hlP_PesquisaidRamoAtividade.bConfiguracao = false;
+            this.hlP_PesquisaidRamoAtividade.Location = new System.Drawing.Point(478, 84);
             this.hlP_PesquisaidRamoAtividade.Margin = new System.Windows.Forms.Padding(57, 3, 15, 3);
             this.hlP_PesquisaidRamoAtividade.Name = "hlP_PesquisaidRamoAtividade";
             this.hlP_PesquisaidRamoAtividade.objConfigComponenteModel = null;
@@ -568,10 +583,11 @@
             this.cbostCodigoRegimeTributario._TamanhoMaiorLabel = 140;
             this.cbostCodigoRegimeTributario.BackColor = System.Drawing.Color.Transparent;
             this.cbostCodigoRegimeTributario.Base = null;
+            this.cbostCodigoRegimeTributario.bConfiguracao = false;
             this.cbostCodigoRegimeTributario.Color = System.Drawing.Color.White;
             this.cbostCodigoRegimeTributario.DataSource = null;
             this.cbostCodigoRegimeTributario.DisplayMember = "DisplayMember";
-            this.cbostCodigoRegimeTributario.Location = new System.Drawing.Point(551, 84);
+            this.cbostCodigoRegimeTributario.Location = new System.Drawing.Point(467, 111);
             this.cbostCodigoRegimeTributario.Margin = new System.Windows.Forms.Padding(46, 3, 15, 3);
             this.cbostCodigoRegimeTributario.Name = "cbostCodigoRegimeTributario";
             this.cbostCodigoRegimeTributario.objConfigComponenteModel = null;

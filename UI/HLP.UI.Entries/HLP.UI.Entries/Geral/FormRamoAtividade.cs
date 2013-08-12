@@ -242,9 +242,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                ramo_atividadeModel.xRamo = nudxRamo.Value.ToString();
-                ramo_atividadeModel.xDescricao = txtxDescricao.Text;
-                ramo_atividadeModel.xCnae = txtxCnae.Text;
+                base.CarregaClasse(ramo_atividadeModel);
             }
             catch (Exception ex)
             {
@@ -255,11 +253,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = ramo_atividadeModel.idRamoAtividade.ToString();
-                nudxRamo.Value = Convert.ToInt32(ramo_atividadeModel.xRamo);
-                txtxDescricao.Text = ramo_atividadeModel.xDescricao;
-                txtxCnae.Text = ramo_atividadeModel.xCnae;
-
+                base.CarregaPropriedades(ramo_atividadeModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

@@ -263,17 +263,7 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                tipoModel.xTipo = txtxTipo.Text;
-                tipoModel.xDescricao = txtxDescricao.Text;
-                tipoModel.stPatrimonio = cbostPatrimonio.SelectedIndexByte;
-                tipoModel.stProducao = cbostProducao.SelectedIndexByte;
-                tipoModel.stEstoque = cbostEstoque.SelectedIndexByte;
-                tipoModel.stCompras = cbostCompras.SelectedIndexByte;
-                tipoModel.stComercial = cbostComercial.SelectedIndexByte;
-                tipoModel.stTerceiros = cbostTerceiros.SelectedIndexByte;
-                tipoModel.stServicos = cbostServicos.SelectedIndexByte;
-
-
+                base.CarregaClasse(tipoModel);
             }
             catch (Exception ex)
             {
@@ -284,16 +274,8 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                txtCodigo.Text = tipoModel.idTipoProduto.ToString();
-                txtxTipo.Text = tipoModel.xTipo;
-                txtxDescricao.Text = tipoModel.xDescricao;
-                cbostPatrimonio.SelectedIndex = tipoModel.stPatrimonio;
-                cbostProducao.SelectedIndex = tipoModel.stProducao;
-                cbostEstoque.SelectedIndex = tipoModel.stEstoque;
-                cbostCompras.SelectedIndex = tipoModel.stCompras;
-                cbostComercial.SelectedIndex = tipoModel.stComercial;
-                cbostTerceiros.SelectedIndex = tipoModel.stTerceiros;
-                cbostServicos.SelectedIndex = tipoModel.stServicos;
+                base.CarregaPropriedades(tipoModel, true);
+                base.CarregaForm();
 
                 btnVisualizar.Enabled = true;
                 dgvProdutos.ReadOnly = true;
@@ -306,6 +288,21 @@ namespace HLP.UI.Entries.Comercial
         }
 
         private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!txtCodigo.Text.Equals(""))
+                {
+                    bsProduto.DataSource = produtoService.GetByProdutoType(Convert.ToInt32(txtCodigo.Text));
+                }
+            }
+            catch (Exception ex)
+            {
+                new HLPexception(ex);
+            }
+        }
+
+        private void hlP_Button1_Click(object sender, EventArgs e)
         {
             try
             {
