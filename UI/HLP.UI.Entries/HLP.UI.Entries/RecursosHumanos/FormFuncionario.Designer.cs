@@ -39,18 +39,18 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_Identificacao = new HLP.Comum.Components.HLP_LabelSeparator();
             this.txtCodigo = new HLP.Comum.Components.HLP_TextBox();
             this.txtxCodigoAlternativo = new HLP.Comum.Components.HLP_TextBox();
-            this.cbxAtivo = new HLP.Comum.Components.HLP_ComboBox();
             this.txtxSaudacao = new HLP.Comum.Components.HLP_TextBox();
             this.txtxNome = new HLP.Comum.Components.HLP_TextBox();
+            this.cbxAtivo = new HLP.Comum.Components.HLP_ComboBox();
             this.hlP_PesquisaidCargo = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_Pesquisa_idDepartamento = new HLP.Comum.Components.HLP_Pesquisa();
             this.sp_administracao = new HLP.Comum.Components.HLP_LabelSeparator();
             this.cbxstPerfil = new HLP.Comum.Components.HLP_ComboBox();
             this.hlP_PesquisaidCalendário = new HLP.Comum.Components.HLP_Pesquisa();
             this.sp_reqCompras = new HLP.Comum.Components.HLP_LabelSeparator();
+            this.txtxInformacaoAtencao = new HLP.Comum.Components.HLP_TextBox();
             this.hlP_PesquisaidSite = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_PesquisaidDeposito = new HLP.Comum.Components.HLP_Pesquisa();
-            this.txtxInformacaoAtencao = new HLP.Comum.Components.HLP_TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvEndereco = new HLP.Comum.Components.HLP_DataGridView();
             this.stPrincipal = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -71,27 +71,28 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.sp_InfPessoal = new HLP.Comum.Components.HLP_LabelSeparator();
-            this.dtdAniversario = new HLP.Comum.Components.HLP_DateTimePicker();
-            this.cbxstSexo = new HLP.Comum.Components.HLP_ComboBox();
-            this.dtdFalecimento = new HLP.Comum.Components.HLP_DateTimePicker();
             this.mskxCpf = new HLP.Comum.Components.HLP_MaskedTextBox();
             this.txtxRg = new HLP.Comum.Components.HLP_TextBox();
             this.txtxConjugue = new HLP.Comum.Components.HLP_TextBox();
             this.txtxFilhos = new HLP.Comum.Components.HLP_TextBox();
+            this.dtdAniversario = new HLP.Comum.Components.HLP_DateTimePicker();
+            this.cbxstSexo = new HLP.Comum.Components.HLP_ComboBox();
+            this.dtdFalecimento = new HLP.Comum.Components.HLP_DateTimePicker();
             this.hlP_PesquisaidContaBancaria = new HLP.Comum.Components.HLP_Pesquisa();
             this.spVisto = new HLP.Comum.Components.HLP_LabelSeparator();
             this.txtxVisto = new HLP.Comum.Components.HLP_TextBox();
-            this.dtdFinalVisto = new HLP.Comum.Components.HLP_DateTimePicker();
             this.txtxVistoTrabalho = new HLP.Comum.Components.HLP_TextBox();
+            this.dtdFinalVisto = new HLP.Comum.Components.HLP_DateTimePicker();
             this.dtdFinalVistoTrabalho = new HLP.Comum.Components.HLP_DateTimePicker();
             this.sp_deptoPessoal = new HLP.Comum.Components.HLP_LabelSeparator();
-            this.dtdAdmissao = new HLP.Comum.Components.HLP_DateTimePicker();
             this.nudvDiaria = new HLP.Comum.Components.HLP_NumericUpDown();
-            this.cbxstSalario = new HLP.Comum.Components.HLP_ComboBox();
             this.nudvSalario = new HLP.Comum.Components.HLP_NumericUpDown();
             this.nudvSalarioHora = new HLP.Comum.Components.HLP_NumericUpDown();
+            this.dtdAdmissao = new HLP.Comum.Components.HLP_DateTimePicker();
+            this.cbxstSalario = new HLP.Comum.Components.HLP_ComboBox();
             this.hlP_PesquisaidResponsavel = new HLP.Comum.Components.HLP_Pesquisa();
             this.sp_qtdehorastrab = new HLP.Comum.Components.HLP_LabelSeparator();
+            this.txtTotalHorasTab = new HLP.Comum.Components.HLP_TextBox();
             this.dtdQtdHorasSegunda = new HLP.Comum.Components.HLP_DateTimePicker();
             this.dtdQtdHorasTerca = new HLP.Comum.Components.HLP_DateTimePicker();
             this.dtdQtdHorasQuarta = new HLP.Comum.Components.HLP_DateTimePicker();
@@ -99,7 +100,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasSexta = new HLP.Comum.Components.HLP_DateTimePicker();
             this.dtdQtdHorasSabado = new HLP.Comum.Components.HLP_DateTimePicker();
             this.dtdQtdHorasDomingo = new HLP.Comum.Components.HLP_DateTimePicker();
-            this.txtTotalHorasTab = new HLP.Comum.Components.HLP_TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -140,8 +140,8 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.pComissaoAprazoDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.bsFuncionarioComissaoProduto = new System.Windows.Forms.BindingSource(this.components);
             this.kryptonPanel9 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.btnAplicarComissao = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnCarregarProdutos = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnAplicarComissao = new HLP.Comum.Components.HLP_Button();
+            this.btnCarregarProdutos = new HLP.Comum.Components.HLP_Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.kryptonTabControl2 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
@@ -301,18 +301,18 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.flowLayoutPanel1.Controls.Add(this.sp_Identificacao);
             this.flowLayoutPanel1.Controls.Add(this.txtCodigo);
             this.flowLayoutPanel1.Controls.Add(this.txtxCodigoAlternativo);
-            this.flowLayoutPanel1.Controls.Add(this.cbxAtivo);
             this.flowLayoutPanel1.Controls.Add(this.txtxSaudacao);
             this.flowLayoutPanel1.Controls.Add(this.txtxNome);
+            this.flowLayoutPanel1.Controls.Add(this.cbxAtivo);
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidCargo);
             this.flowLayoutPanel1.Controls.Add(this.hlP_Pesquisa_idDepartamento);
             this.flowLayoutPanel1.Controls.Add(this.sp_administracao);
             this.flowLayoutPanel1.Controls.Add(this.cbxstPerfil);
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidCalendário);
             this.flowLayoutPanel1.Controls.Add(this.sp_reqCompras);
+            this.flowLayoutPanel1.Controls.Add(this.txtxInformacaoAtencao);
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidSite);
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidDeposito);
-            this.flowLayoutPanel1.Controls.Add(this.txtxInformacaoAtencao);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -330,7 +330,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_Identificacao.Location = new System.Drawing.Point(0, 3);
             this.sp_Identificacao.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_Identificacao.Name = "sp_Identificacao";
-            this.sp_Identificacao.Size = new System.Drawing.Size(565, 18);
+            this.sp_Identificacao.Size = new System.Drawing.Size(565, 19);
             this.sp_Identificacao.TabIndex = 24;
             this.sp_Identificacao.TabStop = false;
             // 
@@ -346,15 +346,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtCodigo._Table = "Funcionario";
             this.txtCodigo._TamanhoComponente = 132;
             this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = true;
+            this.txtCodigo._Visible = false;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(108, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(108, 28);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(108, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(177, 24);
             this.txtCodigo.TabIndex = 3;
@@ -372,46 +374,20 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxCodigoAlternativo._Table = "Funcionario";
             this.txtxCodigoAlternativo._TamanhoComponente = 157;
             this.txtxCodigoAlternativo._TamanhoMaiorLabel = 150;
-            this.txtxCodigoAlternativo._Visible = true;
+            this.txtxCodigoAlternativo._Visible = false;
             this.txtxCodigoAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoAlternativo.Base = null;
+            this.txtxCodigoAlternativo.bConfiguracao = false;
             this.txtxCodigoAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxCodigoAlternativo.Color = System.Drawing.Color.White;
-            this.txtxCodigoAlternativo.Location = new System.Drawing.Point(50, 57);
+            this.txtxCodigoAlternativo.Location = new System.Drawing.Point(50, 58);
             this.txtxCodigoAlternativo.Margin = new System.Windows.Forms.Padding(50, 3, 15, 3);
             this.txtxCodigoAlternativo.MaxLength = 32767;
             this.txtxCodigoAlternativo.Name = "txtxCodigoAlternativo";
+            this.txtxCodigoAlternativo.objConfigComponenteModel = null;
             this.txtxCodigoAlternativo.ReadOnly = false;
             this.txtxCodigoAlternativo.Size = new System.Drawing.Size(260, 24);
             this.txtxCodigoAlternativo.TabIndex = 5;
-            // 
-            // cbxAtivo
-            // 
-            this.cbxAtivo._Field = "Ativo";
-            this.cbxAtivo._Help = "Informe o status do funcionário, se ele está ativo ou não para a empresa";
-            this.cbxAtivo._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxAtivo._Itens")));
-            this.cbxAtivo._LabelGroup = this.sp_Identificacao;
-            this.cbxAtivo._LabelText = "Ativo";
-            this.cbxAtivo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.cbxAtivo._Regex = null;
-            this.cbxAtivo._situacao = true;
-            this.cbxAtivo._Table = "Funcionario";
-            this.cbxAtivo._TamanhoComponente = 80;
-            this.cbxAtivo._TamanhoMaiorLabel = 150;
-            this.cbxAtivo._Visible = true;
-            this.cbxAtivo.BackColor = System.Drawing.Color.Transparent;
-            this.cbxAtivo.Base = null;
-            this.cbxAtivo.Color = System.Drawing.Color.White;
-            this.cbxAtivo.DataSource = null;
-            this.cbxAtivo.DisplayMember = "DisplayMember";
-            this.cbxAtivo.Location = new System.Drawing.Point(120, 87);
-            this.cbxAtivo.Margin = new System.Windows.Forms.Padding(120, 3, 15, 3);
-            this.cbxAtivo.Name = "cbxAtivo";
-            this.cbxAtivo.SelectedIndex = -1;
-            this.cbxAtivo.SelectedValue = 0;
-            this.cbxAtivo.Size = new System.Drawing.Size(113, 21);
-            this.cbxAtivo.TabIndex = 16;
-            this.cbxAtivo.ValueMember = "ValueMember";
             // 
             // txtxSaudacao
             // 
@@ -426,15 +402,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxSaudacao._Table = "Funcionario";
             this.txtxSaudacao._TamanhoComponente = 412;
             this.txtxSaudacao._TamanhoMaiorLabel = 150;
-            this.txtxSaudacao._Visible = true;
+            this.txtxSaudacao._Visible = false;
             this.txtxSaudacao.BackColor = System.Drawing.Color.Transparent;
             this.txtxSaudacao.Base = null;
+            this.txtxSaudacao.bConfiguracao = false;
             this.txtxSaudacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxSaudacao.Color = System.Drawing.Color.White;
-            this.txtxSaudacao.Location = new System.Drawing.Point(96, 114);
+            this.txtxSaudacao.Location = new System.Drawing.Point(96, 88);
             this.txtxSaudacao.Margin = new System.Windows.Forms.Padding(96, 3, 15, 3);
             this.txtxSaudacao.MaxLength = 32767;
             this.txtxSaudacao.Name = "txtxSaudacao";
+            this.txtxSaudacao.objConfigComponenteModel = null;
             this.txtxSaudacao.ReadOnly = false;
             this.txtxSaudacao.Size = new System.Drawing.Size(469, 24);
             this.txtxSaudacao.TabIndex = 6;
@@ -452,18 +430,50 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxNome._Table = "Funcionario";
             this.txtxNome._TamanhoComponente = 390;
             this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = true;
+            this.txtxNome._Visible = false;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
+            this.txtxNome.bConfiguracao = false;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxNome.Color = System.Drawing.Color.White;
-            this.txtxNome.Location = new System.Drawing.Point(116, 144);
+            this.txtxNome.Location = new System.Drawing.Point(116, 118);
             this.txtxNome.Margin = new System.Windows.Forms.Padding(116, 3, 15, 3);
             this.txtxNome.MaxLength = 32767;
             this.txtxNome.Name = "txtxNome";
+            this.txtxNome.objConfigComponenteModel = null;
             this.txtxNome.ReadOnly = false;
             this.txtxNome.Size = new System.Drawing.Size(427, 24);
             this.txtxNome.TabIndex = 30;
+            // 
+            // cbxAtivo
+            // 
+            this.cbxAtivo._Field = "Ativo";
+            this.cbxAtivo._Help = "Informe o status do funcionário, se ele está ativo ou não para a empresa";
+            this.cbxAtivo._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxAtivo._Itens")));
+            this.cbxAtivo._LabelGroup = this.sp_Identificacao;
+            this.cbxAtivo._LabelText = "Ativo";
+            this.cbxAtivo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.cbxAtivo._Regex = null;
+            this.cbxAtivo._situacao = true;
+            this.cbxAtivo._Table = "Funcionario";
+            this.cbxAtivo._TamanhoComponente = 80;
+            this.cbxAtivo._TamanhoMaiorLabel = 150;
+            this.cbxAtivo._Visible = false;
+            this.cbxAtivo.BackColor = System.Drawing.Color.Transparent;
+            this.cbxAtivo.Base = null;
+            this.cbxAtivo.bConfiguracao = false;
+            this.cbxAtivo.Color = System.Drawing.Color.White;
+            this.cbxAtivo.DataSource = null;
+            this.cbxAtivo.DisplayMember = "DisplayMember";
+            this.cbxAtivo.Location = new System.Drawing.Point(120, 148);
+            this.cbxAtivo.Margin = new System.Windows.Forms.Padding(120, 3, 15, 3);
+            this.cbxAtivo.Name = "cbxAtivo";
+            this.cbxAtivo.objConfigComponenteModel = null;
+            this.cbxAtivo.SelectedIndex = -1;
+            this.cbxAtivo.SelectedValue = 0;
+            this.cbxAtivo.Size = new System.Drawing.Size(113, 21);
+            this.cbxAtivo.TabIndex = 16;
+            this.cbxAtivo.ValueMember = "ValueMember";
             // 
             // hlP_PesquisaidCargo
             // 
@@ -479,16 +489,18 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidCargo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidCargo._Regex = null;
             this.hlP_PesquisaidCargo._Table = "Funcionario";
-            this.hlP_PesquisaidCargo._TamanhoComponente = 210;
+            this.hlP_PesquisaidCargo._TamanhoComponente = 300;
             this.hlP_PesquisaidCargo._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidCargo._Vinculado = false;
-            this.hlP_PesquisaidCargo._Visible = true;
+            this.hlP_PesquisaidCargo._Visible = false;
             this.hlP_PesquisaidCargo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCargo.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCargo.Base = null;
-            this.hlP_PesquisaidCargo.Location = new System.Drawing.Point(115, 174);
+            this.hlP_PesquisaidCargo.bConfiguracao = false;
+            this.hlP_PesquisaidCargo.Location = new System.Drawing.Point(115, 175);
             this.hlP_PesquisaidCargo.Margin = new System.Windows.Forms.Padding(115, 3, 15, 3);
             this.hlP_PesquisaidCargo.Name = "hlP_PesquisaidCargo";
+            this.hlP_PesquisaidCargo.objConfigComponenteModel = null;
             this.hlP_PesquisaidCargo.ReadOnly = false;
             this.hlP_PesquisaidCargo.Size = new System.Drawing.Size(338, 21);
             this.hlP_PesquisaidCargo.TabIndex = 32;
@@ -508,16 +520,18 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_Pesquisa_idDepartamento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_Pesquisa_idDepartamento._Regex = null;
             this.hlP_Pesquisa_idDepartamento._Table = "Funcionario";
-            this.hlP_Pesquisa_idDepartamento._TamanhoComponente = 210;
+            this.hlP_Pesquisa_idDepartamento._TamanhoComponente = 300;
             this.hlP_Pesquisa_idDepartamento._TamanhoMaiorLabel = 150;
             this.hlP_Pesquisa_idDepartamento._Vinculado = false;
-            this.hlP_Pesquisa_idDepartamento._Visible = true;
+            this.hlP_Pesquisa_idDepartamento._Visible = false;
             this.hlP_Pesquisa_idDepartamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_Pesquisa_idDepartamento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_Pesquisa_idDepartamento.Base = null;
-            this.hlP_Pesquisa_idDepartamento.Location = new System.Drawing.Point(72, 201);
+            this.hlP_Pesquisa_idDepartamento.bConfiguracao = false;
+            this.hlP_Pesquisa_idDepartamento.Location = new System.Drawing.Point(72, 202);
             this.hlP_Pesquisa_idDepartamento.Margin = new System.Windows.Forms.Padding(72, 3, 15, 3);
             this.hlP_Pesquisa_idDepartamento.Name = "hlP_Pesquisa_idDepartamento";
+            this.hlP_Pesquisa_idDepartamento.objConfigComponenteModel = null;
             this.hlP_Pesquisa_idDepartamento.ReadOnly = false;
             this.hlP_Pesquisa_idDepartamento.Size = new System.Drawing.Size(381, 21);
             this.hlP_Pesquisa_idDepartamento.TabIndex = 38;
@@ -528,10 +542,10 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_administracao._LabelText = "Identificação";
             this.sp_administracao._TamanhoMaiorLabel = 0;
             this.sp_administracao.BackColor = System.Drawing.Color.Transparent;
-            this.sp_administracao.Location = new System.Drawing.Point(0, 228);
+            this.sp_administracao.Location = new System.Drawing.Point(0, 229);
             this.sp_administracao.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_administracao.Name = "sp_administracao";
-            this.sp_administracao.Size = new System.Drawing.Size(565, 18);
+            this.sp_administracao.Size = new System.Drawing.Size(565, 19);
             this.sp_administracao.TabIndex = 36;
             this.sp_administracao.TabStop = false;
             // 
@@ -548,15 +562,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxstPerfil._Table = "Funcionario";
             this.cbxstPerfil._TamanhoComponente = 194;
             this.cbxstPerfil._TamanhoMaiorLabel = 150;
-            this.cbxstPerfil._Visible = true;
+            this.cbxstPerfil._Visible = false;
             this.cbxstPerfil.BackColor = System.Drawing.Color.Transparent;
             this.cbxstPerfil.Base = null;
+            this.cbxstPerfil.bConfiguracao = false;
             this.cbxstPerfil.Color = System.Drawing.Color.White;
             this.cbxstPerfil.DataSource = null;
             this.cbxstPerfil.DisplayMember = "DisplayMember";
-            this.cbxstPerfil.Location = new System.Drawing.Point(61, 252);
+            this.cbxstPerfil.Location = new System.Drawing.Point(61, 254);
             this.cbxstPerfil.Margin = new System.Windows.Forms.Padding(61, 3, 15, 3);
             this.cbxstPerfil.Name = "cbxstPerfil";
+            this.cbxstPerfil.objConfigComponenteModel = null;
             this.cbxstPerfil.SelectedIndex = -1;
             this.cbxstPerfil.SelectedValue = 0;
             this.cbxstPerfil.Size = new System.Drawing.Size(286, 21);
@@ -577,16 +593,18 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidCalendário._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidCalendário._Regex = null;
             this.hlP_PesquisaidCalendário._Table = "Funcionario";
-            this.hlP_PesquisaidCalendário._TamanhoComponente = 210;
+            this.hlP_PesquisaidCalendário._TamanhoComponente = 300;
             this.hlP_PesquisaidCalendário._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidCalendário._Vinculado = false;
-            this.hlP_PesquisaidCalendário._Visible = true;
+            this.hlP_PesquisaidCalendário._Visible = false;
             this.hlP_PesquisaidCalendário.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCalendário.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCalendário.Base = null;
-            this.hlP_PesquisaidCalendário.Location = new System.Drawing.Point(90, 279);
+            this.hlP_PesquisaidCalendário.bConfiguracao = false;
+            this.hlP_PesquisaidCalendário.Location = new System.Drawing.Point(90, 281);
             this.hlP_PesquisaidCalendário.Margin = new System.Windows.Forms.Padding(90, 3, 15, 3);
             this.hlP_PesquisaidCalendário.Name = "hlP_PesquisaidCalendário";
+            this.hlP_PesquisaidCalendário.objConfigComponenteModel = null;
             this.hlP_PesquisaidCalendário.ReadOnly = false;
             this.hlP_PesquisaidCalendário.Size = new System.Drawing.Size(363, 21);
             this.hlP_PesquisaidCalendário.TabIndex = 33;
@@ -597,12 +615,41 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_reqCompras._LabelText = "Requisição de compras";
             this.sp_reqCompras._TamanhoMaiorLabel = 0;
             this.sp_reqCompras.BackColor = System.Drawing.Color.Transparent;
-            this.sp_reqCompras.Location = new System.Drawing.Point(0, 306);
+            this.sp_reqCompras.Location = new System.Drawing.Point(0, 308);
             this.sp_reqCompras.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_reqCompras.Name = "sp_reqCompras";
-            this.sp_reqCompras.Size = new System.Drawing.Size(565, 18);
+            this.sp_reqCompras.Size = new System.Drawing.Size(565, 19);
             this.sp_reqCompras.TabIndex = 37;
             this.sp_reqCompras.TabStop = false;
+            // 
+            // txtxInformacaoAtencao
+            // 
+            this.txtxInformacaoAtencao._Field = "xInformacaoAtencao";
+            this.txtxInformacaoAtencao._Help = "Insira informações sobre endereço de entrega adicional para um funcionário como, " +
+    "por exemplo, localização do escritório";
+            this.txtxInformacaoAtencao._LabelGroup = this.sp_reqCompras;
+            this.txtxInformacaoAtencao._LabelText = "Informação de atenção";
+            this.txtxInformacaoAtencao._Multiline = false;
+            this.txtxInformacaoAtencao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.txtxInformacaoAtencao._Password = false;
+            this.txtxInformacaoAtencao._Regex = null;
+            this.txtxInformacaoAtencao._Table = "Funcionario";
+            this.txtxInformacaoAtencao._TamanhoComponente = 100;
+            this.txtxInformacaoAtencao._TamanhoMaiorLabel = 150;
+            this.txtxInformacaoAtencao._Visible = false;
+            this.txtxInformacaoAtencao.BackColor = System.Drawing.Color.Transparent;
+            this.txtxInformacaoAtencao.Base = null;
+            this.txtxInformacaoAtencao.bConfiguracao = false;
+            this.txtxInformacaoAtencao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtxInformacaoAtencao.Color = System.Drawing.Color.White;
+            this.txtxInformacaoAtencao.Location = new System.Drawing.Point(28, 333);
+            this.txtxInformacaoAtencao.Margin = new System.Windows.Forms.Padding(28, 3, 15, 3);
+            this.txtxInformacaoAtencao.MaxLength = 32767;
+            this.txtxInformacaoAtencao.Name = "txtxInformacaoAtencao";
+            this.txtxInformacaoAtencao.objConfigComponenteModel = null;
+            this.txtxInformacaoAtencao.ReadOnly = false;
+            this.txtxInformacaoAtencao.Size = new System.Drawing.Size(225, 24);
+            this.txtxInformacaoAtencao.TabIndex = 7;
             // 
             // hlP_PesquisaidSite
             // 
@@ -618,16 +665,18 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidSite._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidSite._Regex = null;
             this.hlP_PesquisaidSite._Table = "Funcionario";
-            this.hlP_PesquisaidSite._TamanhoComponente = 210;
+            this.hlP_PesquisaidSite._TamanhoComponente = 300;
             this.hlP_PesquisaidSite._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidSite._Vinculado = false;
-            this.hlP_PesquisaidSite._Visible = true;
+            this.hlP_PesquisaidSite._Visible = false;
             this.hlP_PesquisaidSite.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidSite.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidSite.Base = null;
-            this.hlP_PesquisaidSite.Location = new System.Drawing.Point(87, 330);
+            this.hlP_PesquisaidSite.bConfiguracao = false;
+            this.hlP_PesquisaidSite.Location = new System.Drawing.Point(87, 363);
             this.hlP_PesquisaidSite.Margin = new System.Windows.Forms.Padding(87, 3, 15, 3);
             this.hlP_PesquisaidSite.Name = "hlP_PesquisaidSite";
+            this.hlP_PesquisaidSite.objConfigComponenteModel = null;
             this.hlP_PesquisaidSite.ReadOnly = false;
             this.hlP_PesquisaidSite.Size = new System.Drawing.Size(366, 21);
             this.hlP_PesquisaidSite.TabIndex = 34;
@@ -647,47 +696,22 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidDeposito._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidDeposito._Regex = null;
             this.hlP_PesquisaidDeposito._Table = "Funcionario";
-            this.hlP_PesquisaidDeposito._TamanhoComponente = 210;
+            this.hlP_PesquisaidDeposito._TamanhoComponente = 300;
             this.hlP_PesquisaidDeposito._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidDeposito._Vinculado = false;
-            this.hlP_PesquisaidDeposito._Visible = true;
+            this.hlP_PesquisaidDeposito._Visible = false;
             this.hlP_PesquisaidDeposito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDeposito.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDeposito.Base = null;
-            this.hlP_PesquisaidDeposito.Location = new System.Drawing.Point(99, 357);
+            this.hlP_PesquisaidDeposito.bConfiguracao = false;
+            this.hlP_PesquisaidDeposito.Location = new System.Drawing.Point(99, 390);
             this.hlP_PesquisaidDeposito.Margin = new System.Windows.Forms.Padding(99, 3, 15, 3);
             this.hlP_PesquisaidDeposito.Name = "hlP_PesquisaidDeposito";
+            this.hlP_PesquisaidDeposito.objConfigComponenteModel = null;
             this.hlP_PesquisaidDeposito.ReadOnly = false;
             this.hlP_PesquisaidDeposito.Size = new System.Drawing.Size(354, 21);
             this.hlP_PesquisaidDeposito.TabIndex = 35;
             this.hlP_PesquisaidDeposito.Value = 0;
-            // 
-            // txtxInformacaoAtencao
-            // 
-            this.txtxInformacaoAtencao._Field = "xInformacaoAtencao";
-            this.txtxInformacaoAtencao._Help = "Insira informações sobre endereço de entrega adicional para um funcionário como, " +
-    "por exemplo, localização do escritório";
-            this.txtxInformacaoAtencao._LabelGroup = this.sp_reqCompras;
-            this.txtxInformacaoAtencao._LabelText = "Informação de atenção";
-            this.txtxInformacaoAtencao._Multiline = false;
-            this.txtxInformacaoAtencao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.txtxInformacaoAtencao._Password = false;
-            this.txtxInformacaoAtencao._Regex = null;
-            this.txtxInformacaoAtencao._Table = "Funcionario";
-            this.txtxInformacaoAtencao._TamanhoComponente = 100;
-            this.txtxInformacaoAtencao._TamanhoMaiorLabel = 150;
-            this.txtxInformacaoAtencao._Visible = true;
-            this.txtxInformacaoAtencao.BackColor = System.Drawing.Color.Transparent;
-            this.txtxInformacaoAtencao.Base = null;
-            this.txtxInformacaoAtencao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtxInformacaoAtencao.Color = System.Drawing.Color.White;
-            this.txtxInformacaoAtencao.Location = new System.Drawing.Point(28, 384);
-            this.txtxInformacaoAtencao.Margin = new System.Windows.Forms.Padding(28, 3, 15, 3);
-            this.txtxInformacaoAtencao.MaxLength = 32767;
-            this.txtxInformacaoAtencao.Name = "txtxInformacaoAtencao";
-            this.txtxInformacaoAtencao.ReadOnly = false;
-            this.txtxInformacaoAtencao.Size = new System.Drawing.Size(225, 24);
-            this.txtxInformacaoAtencao.TabIndex = 7;
             // 
             // tabPage2
             // 
@@ -695,7 +719,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(804, 225);
+            this.tabPage2.Size = new System.Drawing.Size(1052, 475);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Tag = false;
             this.tabPage2.Text = "Endereço";
@@ -854,7 +878,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(804, 225);
+            this.tabPage3.Size = new System.Drawing.Size(1052, 475);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Tag = false;
             this.tabPage3.Text = "Informações";
@@ -865,34 +889,35 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(804, 225);
+            this.kryptonPanel2.Size = new System.Drawing.Size(1052, 475);
             this.kryptonPanel2.TabIndex = 0;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel2.Controls.Add(this.sp_InfPessoal);
-            this.flowLayoutPanel2.Controls.Add(this.dtdAniversario);
-            this.flowLayoutPanel2.Controls.Add(this.cbxstSexo);
-            this.flowLayoutPanel2.Controls.Add(this.dtdFalecimento);
             this.flowLayoutPanel2.Controls.Add(this.mskxCpf);
             this.flowLayoutPanel2.Controls.Add(this.txtxRg);
             this.flowLayoutPanel2.Controls.Add(this.txtxConjugue);
             this.flowLayoutPanel2.Controls.Add(this.txtxFilhos);
+            this.flowLayoutPanel2.Controls.Add(this.dtdAniversario);
+            this.flowLayoutPanel2.Controls.Add(this.cbxstSexo);
+            this.flowLayoutPanel2.Controls.Add(this.dtdFalecimento);
             this.flowLayoutPanel2.Controls.Add(this.hlP_PesquisaidContaBancaria);
             this.flowLayoutPanel2.Controls.Add(this.spVisto);
             this.flowLayoutPanel2.Controls.Add(this.txtxVisto);
-            this.flowLayoutPanel2.Controls.Add(this.dtdFinalVisto);
             this.flowLayoutPanel2.Controls.Add(this.txtxVistoTrabalho);
+            this.flowLayoutPanel2.Controls.Add(this.dtdFinalVisto);
             this.flowLayoutPanel2.Controls.Add(this.dtdFinalVistoTrabalho);
             this.flowLayoutPanel2.Controls.Add(this.sp_deptoPessoal);
-            this.flowLayoutPanel2.Controls.Add(this.dtdAdmissao);
             this.flowLayoutPanel2.Controls.Add(this.nudvDiaria);
-            this.flowLayoutPanel2.Controls.Add(this.cbxstSalario);
             this.flowLayoutPanel2.Controls.Add(this.nudvSalario);
             this.flowLayoutPanel2.Controls.Add(this.nudvSalarioHora);
+            this.flowLayoutPanel2.Controls.Add(this.dtdAdmissao);
+            this.flowLayoutPanel2.Controls.Add(this.cbxstSalario);
             this.flowLayoutPanel2.Controls.Add(this.hlP_PesquisaidResponsavel);
             this.flowLayoutPanel2.Controls.Add(this.sp_qtdehorastrab);
+            this.flowLayoutPanel2.Controls.Add(this.txtTotalHorasTab);
             this.flowLayoutPanel2.Controls.Add(this.dtdQtdHorasSegunda);
             this.flowLayoutPanel2.Controls.Add(this.dtdQtdHorasTerca);
             this.flowLayoutPanel2.Controls.Add(this.dtdQtdHorasQuarta);
@@ -900,7 +925,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.flowLayoutPanel2.Controls.Add(this.dtdQtdHorasSexta);
             this.flowLayoutPanel2.Controls.Add(this.dtdQtdHorasSabado);
             this.flowLayoutPanel2.Controls.Add(this.dtdQtdHorasDomingo);
-            this.flowLayoutPanel2.Controls.Add(this.txtTotalHorasTab);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -915,85 +939,9 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_InfPessoal.Location = new System.Drawing.Point(0, 3);
             this.sp_InfPessoal.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_InfPessoal.Name = "sp_InfPessoal";
-            this.sp_InfPessoal.Size = new System.Drawing.Size(573, 18);
+            this.sp_InfPessoal.Size = new System.Drawing.Size(573, 19);
             this.sp_InfPessoal.TabIndex = 6;
             this.sp_InfPessoal.TabStop = false;
-            // 
-            // dtdAniversario
-            // 
-            this.dtdAniversario._Field = "dAniversario";
-            this.dtdAniversario._Help = "Informe a data de aniversário do funcionário";
-            this.dtdAniversario._LabelGroup = this.sp_InfPessoal;
-            this.dtdAniversario._LabelText = "Data de aniversário";
-            this.dtdAniversario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.dtdAniversario._Regex = null;
-            this.dtdAniversario._Table = "Funcionario";
-            this.dtdAniversario._TamanhoComponente = 114;
-            this.dtdAniversario._TamanhoMaiorLabel = 180;
-            this.dtdAniversario._Visible = true;
-            this.dtdAniversario.BackColor = System.Drawing.Color.Transparent;
-            this.dtdAniversario.Base = null;
-            this.dtdAniversario.Color = System.Drawing.Color.Empty;
-            this.dtdAniversario.CustomFormat = "";
-            this.dtdAniversario.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtdAniversario.Location = new System.Drawing.Point(77, 27);
-            this.dtdAniversario.Margin = new System.Windows.Forms.Padding(77, 3, 15, 3);
-            this.dtdAniversario.Name = "dtdAniversario";
-            this.dtdAniversario.Size = new System.Drawing.Size(220, 21);
-            this.dtdAniversario.TabIndex = 7;
-            this.dtdAniversario.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
-            // 
-            // cbxstSexo
-            // 
-            this.cbxstSexo._Field = "stSexo";
-            this.cbxstSexo._Help = "Informe o sexo do funcionário";
-            this.cbxstSexo._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxstSexo._Itens")));
-            this.cbxstSexo._LabelGroup = this.sp_InfPessoal;
-            this.cbxstSexo._LabelText = "Sexo";
-            this.cbxstSexo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.cbxstSexo._Regex = null;
-            this.cbxstSexo._situacao = false;
-            this.cbxstSexo._Table = "Funcionario";
-            this.cbxstSexo._TamanhoComponente = 111;
-            this.cbxstSexo._TamanhoMaiorLabel = 180;
-            this.cbxstSexo._Visible = true;
-            this.cbxstSexo.BackColor = System.Drawing.Color.Transparent;
-            this.cbxstSexo.Base = null;
-            this.cbxstSexo.Color = System.Drawing.Color.White;
-            this.cbxstSexo.DataSource = null;
-            this.cbxstSexo.DisplayMember = "DisplayMember";
-            this.cbxstSexo.Location = new System.Drawing.Point(152, 54);
-            this.cbxstSexo.Margin = new System.Windows.Forms.Padding(152, 3, 15, 3);
-            this.cbxstSexo.Name = "cbxstSexo";
-            this.cbxstSexo.SelectedIndex = -1;
-            this.cbxstSexo.SelectedValue = 0;
-            this.cbxstSexo.Size = new System.Drawing.Size(142, 21);
-            this.cbxstSexo.TabIndex = 8;
-            this.cbxstSexo.ValueMember = "ValueMember";
-            // 
-            // dtdFalecimento
-            // 
-            this.dtdFalecimento._Field = "dFalecimento";
-            this.dtdFalecimento._Help = "Informe a data de falecimento do funcionário";
-            this.dtdFalecimento._LabelGroup = this.sp_InfPessoal;
-            this.dtdFalecimento._LabelText = "Data de falecimento";
-            this.dtdFalecimento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.dtdFalecimento._Regex = null;
-            this.dtdFalecimento._Table = "Funcionario";
-            this.dtdFalecimento._TamanhoComponente = 117;
-            this.dtdFalecimento._TamanhoMaiorLabel = 180;
-            this.dtdFalecimento._Visible = true;
-            this.dtdFalecimento.BackColor = System.Drawing.Color.Transparent;
-            this.dtdFalecimento.Base = null;
-            this.dtdFalecimento.Color = System.Drawing.Color.Empty;
-            this.dtdFalecimento.CustomFormat = "";
-            this.dtdFalecimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtdFalecimento.Location = new System.Drawing.Point(73, 81);
-            this.dtdFalecimento.Margin = new System.Windows.Forms.Padding(73, 3, 15, 3);
-            this.dtdFalecimento.Name = "dtdFalecimento";
-            this.dtdFalecimento.Size = new System.Drawing.Size(227, 21);
-            this.dtdFalecimento.TabIndex = 9;
-            this.dtdFalecimento.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
             // 
             // mskxCpf
             // 
@@ -1008,16 +956,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.mskxCpf._TamanhoMaiorLabel = 180;
             this.mskxCpf._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.mskxCpf._UF = null;
-            this.mskxCpf._Visible = true;
             this.mskxCpf.BackColor = System.Drawing.Color.Transparent;
             this.mskxCpf.Base = null;
+            this.mskxCpf.bConfiguracao = false;
             this.mskxCpf.Color = System.Drawing.Color.White;
-            this.mskxCpf.Location = new System.Drawing.Point(158, 108);
+            this.mskxCpf.Location = new System.Drawing.Point(158, 28);
             this.mskxCpf.Margin = new System.Windows.Forms.Padding(158, 3, 15, 3);
             this.mskxCpf.Mask = "000,000,000-00";
             this.mskxCpf.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.mskxCpf.MaxLength = 32767;
             this.mskxCpf.Name = "mskxCpf";
+            this.mskxCpf.objConfigComponenteModel = null;
             this.mskxCpf.ReadOnly = false;
             this.mskxCpf.Size = new System.Drawing.Size(150, 21);
             this.mskxCpf.TabIndex = 10;
@@ -1035,15 +984,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxRg._Table = "Funcionario";
             this.txtxRg._TamanhoComponente = 135;
             this.txtxRg._TamanhoMaiorLabel = 180;
-            this.txtxRg._Visible = true;
             this.txtxRg.BackColor = System.Drawing.Color.Transparent;
             this.txtxRg.Base = null;
+            this.txtxRg.bConfiguracao = false;
             this.txtxRg.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxRg.Color = System.Drawing.Color.White;
-            this.txtxRg.Location = new System.Drawing.Point(162, 135);
+            this.txtxRg.Location = new System.Drawing.Point(162, 55);
             this.txtxRg.Margin = new System.Windows.Forms.Padding(162, 3, 15, 3);
             this.txtxRg.MaxLength = 32767;
             this.txtxRg.Name = "txtxRg";
+            this.txtxRg.objConfigComponenteModel = null;
             this.txtxRg.ReadOnly = false;
             this.txtxRg.Size = new System.Drawing.Size(156, 21);
             this.txtxRg.TabIndex = 11;
@@ -1061,15 +1011,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxConjugue._Table = "Funcionario";
             this.txtxConjugue._TamanhoComponente = 131;
             this.txtxConjugue._TamanhoMaiorLabel = 180;
-            this.txtxConjugue._Visible = true;
             this.txtxConjugue.BackColor = System.Drawing.Color.Transparent;
             this.txtxConjugue.Base = null;
+            this.txtxConjugue.bConfiguracao = false;
             this.txtxConjugue.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxConjugue.Color = System.Drawing.Color.White;
-            this.txtxConjugue.Location = new System.Drawing.Point(125, 162);
+            this.txtxConjugue.Location = new System.Drawing.Point(125, 82);
             this.txtxConjugue.Margin = new System.Windows.Forms.Padding(125, 3, 15, 3);
             this.txtxConjugue.MaxLength = 32767;
             this.txtxConjugue.Name = "txtxConjugue";
+            this.txtxConjugue.objConfigComponenteModel = null;
             this.txtxConjugue.ReadOnly = false;
             this.txtxConjugue.Size = new System.Drawing.Size(189, 21);
             this.txtxConjugue.TabIndex = 12;
@@ -1087,18 +1038,98 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxFilhos._Table = "Funcionario";
             this.txtxFilhos._TamanhoComponente = 132;
             this.txtxFilhos._TamanhoMaiorLabel = 180;
-            this.txtxFilhos._Visible = true;
             this.txtxFilhos.BackColor = System.Drawing.Color.Transparent;
             this.txtxFilhos.Base = null;
+            this.txtxFilhos.bConfiguracao = false;
             this.txtxFilhos.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxFilhos.Color = System.Drawing.Color.White;
-            this.txtxFilhos.Location = new System.Drawing.Point(145, 189);
+            this.txtxFilhos.Location = new System.Drawing.Point(145, 109);
             this.txtxFilhos.Margin = new System.Windows.Forms.Padding(145, 3, 15, 3);
             this.txtxFilhos.MaxLength = 32767;
             this.txtxFilhos.Name = "txtxFilhos";
+            this.txtxFilhos.objConfigComponenteModel = null;
             this.txtxFilhos.ReadOnly = false;
             this.txtxFilhos.Size = new System.Drawing.Size(170, 21);
             this.txtxFilhos.TabIndex = 13;
+            // 
+            // dtdAniversario
+            // 
+            this.dtdAniversario._Field = "dAniversario";
+            this.dtdAniversario._Help = "Informe a data de aniversário do funcionário";
+            this.dtdAniversario._LabelGroup = this.sp_InfPessoal;
+            this.dtdAniversario._LabelText = "Data de aniversário";
+            this.dtdAniversario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.dtdAniversario._Regex = null;
+            this.dtdAniversario._Table = "Funcionario";
+            this.dtdAniversario._TamanhoComponente = 114;
+            this.dtdAniversario._TamanhoMaiorLabel = 180;
+            this.dtdAniversario.BackColor = System.Drawing.Color.Transparent;
+            this.dtdAniversario.Base = null;
+            this.dtdAniversario.bConfiguracao = false;
+            this.dtdAniversario.Color = System.Drawing.Color.Empty;
+            this.dtdAniversario.CustomFormat = "";
+            this.dtdAniversario.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtdAniversario.Location = new System.Drawing.Point(77, 136);
+            this.dtdAniversario.Margin = new System.Windows.Forms.Padding(77, 3, 15, 3);
+            this.dtdAniversario.Name = "dtdAniversario";
+            this.dtdAniversario.objConfigComponenteModel = null;
+            this.dtdAniversario.Size = new System.Drawing.Size(220, 21);
+            this.dtdAniversario.TabIndex = 7;
+            this.dtdAniversario.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
+            // 
+            // cbxstSexo
+            // 
+            this.cbxstSexo._Field = "stSexo";
+            this.cbxstSexo._Help = "Informe o sexo do funcionário";
+            this.cbxstSexo._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxstSexo._Itens")));
+            this.cbxstSexo._LabelGroup = this.sp_InfPessoal;
+            this.cbxstSexo._LabelText = "Sexo";
+            this.cbxstSexo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.cbxstSexo._Regex = null;
+            this.cbxstSexo._situacao = false;
+            this.cbxstSexo._Table = "Funcionario";
+            this.cbxstSexo._TamanhoComponente = 111;
+            this.cbxstSexo._TamanhoMaiorLabel = 180;
+            this.cbxstSexo.BackColor = System.Drawing.Color.Transparent;
+            this.cbxstSexo.Base = null;
+            this.cbxstSexo.bConfiguracao = false;
+            this.cbxstSexo.Color = System.Drawing.Color.White;
+            this.cbxstSexo.DataSource = null;
+            this.cbxstSexo.DisplayMember = "DisplayMember";
+            this.cbxstSexo.Location = new System.Drawing.Point(152, 163);
+            this.cbxstSexo.Margin = new System.Windows.Forms.Padding(152, 3, 15, 3);
+            this.cbxstSexo.Name = "cbxstSexo";
+            this.cbxstSexo.objConfigComponenteModel = null;
+            this.cbxstSexo.SelectedIndex = -1;
+            this.cbxstSexo.SelectedValue = 0;
+            this.cbxstSexo.Size = new System.Drawing.Size(142, 21);
+            this.cbxstSexo.TabIndex = 8;
+            this.cbxstSexo.ValueMember = "ValueMember";
+            // 
+            // dtdFalecimento
+            // 
+            this.dtdFalecimento._Field = "dFalecimento";
+            this.dtdFalecimento._Help = "Informe a data de falecimento do funcionário";
+            this.dtdFalecimento._LabelGroup = this.sp_InfPessoal;
+            this.dtdFalecimento._LabelText = "Data de falecimento";
+            this.dtdFalecimento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.dtdFalecimento._Regex = null;
+            this.dtdFalecimento._Table = "Funcionario";
+            this.dtdFalecimento._TamanhoComponente = 117;
+            this.dtdFalecimento._TamanhoMaiorLabel = 180;
+            this.dtdFalecimento.BackColor = System.Drawing.Color.Transparent;
+            this.dtdFalecimento.Base = null;
+            this.dtdFalecimento.bConfiguracao = false;
+            this.dtdFalecimento.Color = System.Drawing.Color.Empty;
+            this.dtdFalecimento.CustomFormat = "";
+            this.dtdFalecimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtdFalecimento.Location = new System.Drawing.Point(73, 190);
+            this.dtdFalecimento.Margin = new System.Windows.Forms.Padding(73, 3, 15, 3);
+            this.dtdFalecimento.Name = "dtdFalecimento";
+            this.dtdFalecimento.objConfigComponenteModel = null;
+            this.dtdFalecimento.Size = new System.Drawing.Size(227, 21);
+            this.dtdFalecimento.TabIndex = 9;
+            this.dtdFalecimento.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
             // 
             // hlP_PesquisaidContaBancaria
             // 
@@ -1114,16 +1145,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidContaBancaria._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidContaBancaria._Regex = null;
             this.hlP_PesquisaidContaBancaria._Table = "Funcionario";
-            this.hlP_PesquisaidContaBancaria._TamanhoComponente = 210;
+            this.hlP_PesquisaidContaBancaria._TamanhoComponente = 300;
             this.hlP_PesquisaidContaBancaria._TamanhoMaiorLabel = 180;
             this.hlP_PesquisaidContaBancaria._Vinculado = false;
-            this.hlP_PesquisaidContaBancaria._Visible = true;
             this.hlP_PesquisaidContaBancaria.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidContaBancaria.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidContaBancaria.Base = null;
-            this.hlP_PesquisaidContaBancaria.Location = new System.Drawing.Point(98, 216);
+            this.hlP_PesquisaidContaBancaria.bConfiguracao = false;
+            this.hlP_PesquisaidContaBancaria.Location = new System.Drawing.Point(98, 217);
             this.hlP_PesquisaidContaBancaria.Margin = new System.Windows.Forms.Padding(98, 3, 15, 3);
             this.hlP_PesquisaidContaBancaria.Name = "hlP_PesquisaidContaBancaria";
+            this.hlP_PesquisaidContaBancaria.objConfigComponenteModel = null;
             this.hlP_PesquisaidContaBancaria.ReadOnly = false;
             this.hlP_PesquisaidContaBancaria.Size = new System.Drawing.Size(385, 21);
             this.hlP_PesquisaidContaBancaria.TabIndex = 14;
@@ -1134,10 +1166,10 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.spVisto._LabelText = "Visto";
             this.spVisto._TamanhoMaiorLabel = 0;
             this.spVisto.BackColor = System.Drawing.Color.Transparent;
-            this.spVisto.Location = new System.Drawing.Point(0, 243);
+            this.spVisto.Location = new System.Drawing.Point(0, 244);
             this.spVisto.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.spVisto.Name = "spVisto";
-            this.spVisto.Size = new System.Drawing.Size(573, 18);
+            this.spVisto.Size = new System.Drawing.Size(573, 19);
             this.spVisto.TabIndex = 44;
             this.spVisto.TabStop = false;
             // 
@@ -1154,42 +1186,19 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxVisto._Table = "Funcionario";
             this.txtxVisto._TamanhoComponente = 133;
             this.txtxVisto._TamanhoMaiorLabel = 180;
-            this.txtxVisto._Visible = true;
             this.txtxVisto.BackColor = System.Drawing.Color.Transparent;
             this.txtxVisto.Base = null;
+            this.txtxVisto.bConfiguracao = false;
             this.txtxVisto.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxVisto.Color = System.Drawing.Color.White;
-            this.txtxVisto.Location = new System.Drawing.Point(150, 267);
+            this.txtxVisto.Location = new System.Drawing.Point(150, 269);
             this.txtxVisto.Margin = new System.Windows.Forms.Padding(150, 3, 15, 3);
             this.txtxVisto.MaxLength = 32767;
             this.txtxVisto.Name = "txtxVisto";
+            this.txtxVisto.objConfigComponenteModel = null;
             this.txtxVisto.ReadOnly = false;
             this.txtxVisto.Size = new System.Drawing.Size(166, 21);
             this.txtxVisto.TabIndex = 15;
-            // 
-            // dtdFinalVisto
-            // 
-            this.dtdFinalVisto._Field = "dFinalVisto";
-            this.dtdFinalVisto._Help = "Informar a data final do visto de permanência brasileira do funcionário";
-            this.dtdFinalVisto._LabelGroup = this.spVisto;
-            this.dtdFinalVisto._LabelText = "Data final do visto";
-            this.dtdFinalVisto._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.dtdFinalVisto._Regex = null;
-            this.dtdFinalVisto._Table = "Funcionario";
-            this.dtdFinalVisto._TamanhoComponente = 114;
-            this.dtdFinalVisto._TamanhoMaiorLabel = 180;
-            this.dtdFinalVisto._Visible = true;
-            this.dtdFinalVisto.BackColor = System.Drawing.Color.Transparent;
-            this.dtdFinalVisto.Base = null;
-            this.dtdFinalVisto.Color = System.Drawing.Color.Empty;
-            this.dtdFinalVisto.CustomFormat = "";
-            this.dtdFinalVisto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtdFinalVisto.Location = new System.Drawing.Point(82, 294);
-            this.dtdFinalVisto.Margin = new System.Windows.Forms.Padding(82, 3, 15, 3);
-            this.dtdFinalVisto.Name = "dtdFinalVisto";
-            this.dtdFinalVisto.Size = new System.Drawing.Size(215, 21);
-            this.dtdFinalVisto.TabIndex = 16;
-            this.dtdFinalVisto.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
             // 
             // txtxVistoTrabalho
             // 
@@ -1204,19 +1213,45 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxVistoTrabalho._Table = "Funcionario";
             this.txtxVistoTrabalho._TamanhoComponente = 131;
             this.txtxVistoTrabalho._TamanhoMaiorLabel = 180;
-            this.txtxVistoTrabalho._Visible = true;
             this.txtxVistoTrabalho.BackColor = System.Drawing.Color.Transparent;
             this.txtxVistoTrabalho.Base = null;
+            this.txtxVistoTrabalho.bConfiguracao = false;
             this.txtxVistoTrabalho.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxVistoTrabalho.Color = System.Drawing.Color.White;
-            this.txtxVistoTrabalho.Location = new System.Drawing.Point(87, 321);
+            this.txtxVistoTrabalho.Location = new System.Drawing.Point(87, 296);
             this.txtxVistoTrabalho.Margin = new System.Windows.Forms.Padding(87, 3, 15, 3);
             this.txtxVistoTrabalho.MaxLength = 32767;
             this.txtxVistoTrabalho.Name = "txtxVistoTrabalho";
+            this.txtxVistoTrabalho.objConfigComponenteModel = null;
             this.txtxVistoTrabalho.ReadOnly = false;
             this.txtxVistoTrabalho.Size = new System.Drawing.Size(227, 21);
             this.txtxVistoTrabalho.TabIndex = 17;
             this.txtxVistoTrabalho.Load += new System.EventHandler(this.txtxVistoTrabalho_Load);
+            // 
+            // dtdFinalVisto
+            // 
+            this.dtdFinalVisto._Field = "dFinalVisto";
+            this.dtdFinalVisto._Help = "Informar a data final do visto de permanência brasileira do funcionário";
+            this.dtdFinalVisto._LabelGroup = this.spVisto;
+            this.dtdFinalVisto._LabelText = "Data final do visto";
+            this.dtdFinalVisto._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.dtdFinalVisto._Regex = null;
+            this.dtdFinalVisto._Table = "Funcionario";
+            this.dtdFinalVisto._TamanhoComponente = 114;
+            this.dtdFinalVisto._TamanhoMaiorLabel = 180;
+            this.dtdFinalVisto.BackColor = System.Drawing.Color.Transparent;
+            this.dtdFinalVisto.Base = null;
+            this.dtdFinalVisto.bConfiguracao = false;
+            this.dtdFinalVisto.Color = System.Drawing.Color.Empty;
+            this.dtdFinalVisto.CustomFormat = "";
+            this.dtdFinalVisto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtdFinalVisto.Location = new System.Drawing.Point(82, 323);
+            this.dtdFinalVisto.Margin = new System.Windows.Forms.Padding(82, 3, 15, 3);
+            this.dtdFinalVisto.Name = "dtdFinalVisto";
+            this.dtdFinalVisto.objConfigComponenteModel = null;
+            this.dtdFinalVisto.Size = new System.Drawing.Size(215, 21);
+            this.dtdFinalVisto.TabIndex = 16;
+            this.dtdFinalVisto.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
             // 
             // dtdFinalVistoTrabalho
             // 
@@ -1228,15 +1263,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdFinalVistoTrabalho._Table = "Funcionario";
             this.dtdFinalVistoTrabalho._TamanhoComponente = 111;
             this.dtdFinalVistoTrabalho._TamanhoMaiorLabel = 180;
-            this.dtdFinalVistoTrabalho._Visible = true;
             this.dtdFinalVistoTrabalho.BackColor = System.Drawing.Color.Transparent;
             this.dtdFinalVistoTrabalho.Base = null;
+            this.dtdFinalVistoTrabalho.bConfiguracao = false;
             this.dtdFinalVistoTrabalho.Color = System.Drawing.Color.Empty;
             this.dtdFinalVistoTrabalho.CustomFormat = "";
             this.dtdFinalVistoTrabalho.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtdFinalVistoTrabalho.Location = new System.Drawing.Point(19, 348);
+            this.dtdFinalVistoTrabalho.Location = new System.Drawing.Point(19, 350);
             this.dtdFinalVistoTrabalho.Margin = new System.Windows.Forms.Padding(19, 3, 15, 3);
             this.dtdFinalVistoTrabalho.Name = "dtdFinalVistoTrabalho";
+            this.dtdFinalVistoTrabalho.objConfigComponenteModel = null;
             this.dtdFinalVistoTrabalho.Size = new System.Drawing.Size(275, 21);
             this.dtdFinalVistoTrabalho.TabIndex = 18;
             this.dtdFinalVistoTrabalho.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
@@ -1246,37 +1282,12 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_deptoPessoal._LabelText = "Departamento pessoal";
             this.sp_deptoPessoal._TamanhoMaiorLabel = 0;
             this.sp_deptoPessoal.BackColor = System.Drawing.Color.Transparent;
-            this.sp_deptoPessoal.Location = new System.Drawing.Point(0, 375);
+            this.sp_deptoPessoal.Location = new System.Drawing.Point(0, 377);
             this.sp_deptoPessoal.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_deptoPessoal.Name = "sp_deptoPessoal";
-            this.sp_deptoPessoal.Size = new System.Drawing.Size(573, 18);
+            this.sp_deptoPessoal.Size = new System.Drawing.Size(573, 19);
             this.sp_deptoPessoal.TabIndex = 45;
             this.sp_deptoPessoal.TabStop = false;
-            // 
-            // dtdAdmissao
-            // 
-            this.dtdAdmissao._Field = "dAdmissao";
-            this.dtdAdmissao._Help = "Informar a data de admissão do funcionário";
-            this.dtdAdmissao._LabelGroup = this.sp_deptoPessoal;
-            this.dtdAdmissao._LabelText = "Data de admissão";
-            this.dtdAdmissao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.dtdAdmissao._Regex = null;
-            this.dtdAdmissao._Table = "Funcionario";
-            this.dtdAdmissao._TamanhoComponente = 115;
-            this.dtdAdmissao._TamanhoMaiorLabel = 180;
-            this.dtdAdmissao._Visible = true;
-            this.dtdAdmissao.BackColor = System.Drawing.Color.Transparent;
-            this.dtdAdmissao.Base = null;
-            this.dtdAdmissao.Color = System.Drawing.Color.Empty;
-            this.dtdAdmissao.CustomFormat = "";
-            this.dtdAdmissao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtdAdmissao.Location = new System.Drawing.Point(85, 399);
-            this.dtdAdmissao.Margin = new System.Windows.Forms.Padding(85, 3, 15, 3);
-            this.dtdAdmissao.Name = "dtdAdmissao";
-            this.dtdAdmissao.Size = new System.Drawing.Size(213, 21);
-            this.dtdAdmissao.TabIndex = 19;
-            this.dtdAdmissao.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
-            this.dtdAdmissao.Load += new System.EventHandler(this.dtdAdmissao_Load);
             // 
             // nudvDiaria
             // 
@@ -1289,12 +1300,12 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudvDiaria._Table = "Funcionario";
             this.nudvDiaria._TamanhoComponente = 119;
             this.nudvDiaria._TamanhoMaiorLabel = 180;
-            this.nudvDiaria._Visible = true;
             this.nudvDiaria.BackColor = System.Drawing.Color.Transparent;
             this.nudvDiaria.Base = null;
+            this.nudvDiaria.bConfiguracao = false;
             this.nudvDiaria.Color = System.Drawing.Color.White;
             this.nudvDiaria.DecimalPlaces = 2;
-            this.nudvDiaria.Location = new System.Drawing.Point(146, 426);
+            this.nudvDiaria.Location = new System.Drawing.Point(146, 402);
             this.nudvDiaria.Margin = new System.Windows.Forms.Padding(146, 3, 15, 3);
             this.nudvDiaria.Maximum = new decimal(new int[] {
             9,
@@ -1307,6 +1318,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             0,
             0});
             this.nudvDiaria.Name = "nudvDiaria";
+            this.nudvDiaria.objConfigComponenteModel = null;
             this.nudvDiaria.ReadOnly = false;
             this.nudvDiaria.Size = new System.Drawing.Size(156, 22);
             this.nudvDiaria.TabIndex = 20;
@@ -1316,34 +1328,6 @@ namespace HLP.UI.Entries.RecursosHumanos
             0,
             131072});
             this.nudvDiaria.ValueInt = 0;
-            // 
-            // cbxstSalario
-            // 
-            this.cbxstSalario._Field = "stSalario";
-            this.cbxstSalario._Help = "Informar se a condição de salario do  funcionário é:";
-            this.cbxstSalario._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxstSalario._Itens")));
-            this.cbxstSalario._LabelGroup = this.sp_deptoPessoal;
-            this.cbxstSalario._LabelText = "Tipo de salário";
-            this.cbxstSalario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.cbxstSalario._Regex = null;
-            this.cbxstSalario._situacao = false;
-            this.cbxstSalario._Table = "Funcionario";
-            this.cbxstSalario._TamanhoComponente = 115;
-            this.cbxstSalario._TamanhoMaiorLabel = 150;
-            this.cbxstSalario._Visible = true;
-            this.cbxstSalario.BackColor = System.Drawing.Color.Transparent;
-            this.cbxstSalario.Base = null;
-            this.cbxstSalario.Color = System.Drawing.Color.White;
-            this.cbxstSalario.DataSource = null;
-            this.cbxstSalario.DisplayMember = "DisplayMember";
-            this.cbxstSalario.Location = new System.Drawing.Point(659, 3);
-            this.cbxstSalario.Margin = new System.Windows.Forms.Padding(71, 3, 15, 3);
-            this.cbxstSalario.Name = "cbxstSalario";
-            this.cbxstSalario.SelectedIndex = -1;
-            this.cbxstSalario.SelectedValue = 0;
-            this.cbxstSalario.Size = new System.Drawing.Size(197, 21);
-            this.cbxstSalario.TabIndex = 22;
-            this.cbxstSalario.ValueMember = "ValueMember";
             // 
             // nudvSalario
             // 
@@ -1357,12 +1341,12 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudvSalario._Table = "Funcionario";
             this.nudvSalario._TamanhoComponente = 119;
             this.nudvSalario._TamanhoMaiorLabel = 150;
-            this.nudvSalario._Visible = true;
             this.nudvSalario.BackColor = System.Drawing.Color.Transparent;
             this.nudvSalario.Base = null;
+            this.nudvSalario.bConfiguracao = false;
             this.nudvSalario.Color = System.Drawing.Color.White;
             this.nudvSalario.DecimalPlaces = 2;
-            this.nudvSalario.Location = new System.Drawing.Point(699, 30);
+            this.nudvSalario.Location = new System.Drawing.Point(111, 430);
             this.nudvSalario.Margin = new System.Windows.Forms.Padding(111, 3, 15, 3);
             this.nudvSalario.Maximum = new decimal(new int[] {
             9,
@@ -1375,6 +1359,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             0,
             0});
             this.nudvSalario.Name = "nudvSalario";
+            this.nudvSalario.objConfigComponenteModel = null;
             this.nudvSalario.ReadOnly = false;
             this.nudvSalario.Size = new System.Drawing.Size(161, 22);
             this.nudvSalario.TabIndex = 23;
@@ -1396,12 +1381,12 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudvSalarioHora._Table = "Funcionario";
             this.nudvSalarioHora._TamanhoComponente = 118;
             this.nudvSalarioHora._TamanhoMaiorLabel = 150;
-            this.nudvSalarioHora._Visible = true;
             this.nudvSalarioHora.BackColor = System.Drawing.Color.Transparent;
             this.nudvSalarioHora.Base = null;
+            this.nudvSalarioHora.bConfiguracao = false;
             this.nudvSalarioHora.Color = System.Drawing.Color.White;
             this.nudvSalarioHora.DecimalPlaces = 2;
-            this.nudvSalarioHora.Location = new System.Drawing.Point(672, 58);
+            this.nudvSalarioHora.Location = new System.Drawing.Point(672, 3);
             this.nudvSalarioHora.Margin = new System.Windows.Forms.Padding(84, 3, 15, 3);
             this.nudvSalarioHora.Maximum = new decimal(new int[] {
             9,
@@ -1414,6 +1399,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             0,
             0});
             this.nudvSalarioHora.Name = "nudvSalarioHora";
+            this.nudvSalarioHora.objConfigComponenteModel = null;
             this.nudvSalarioHora.ReadOnly = false;
             this.nudvSalarioHora.Size = new System.Drawing.Size(187, 22);
             this.nudvSalarioHora.TabIndex = 24;
@@ -1423,6 +1409,61 @@ namespace HLP.UI.Entries.RecursosHumanos
             0,
             131072});
             this.nudvSalarioHora.ValueInt = 0;
+            // 
+            // dtdAdmissao
+            // 
+            this.dtdAdmissao._Field = "dAdmissao";
+            this.dtdAdmissao._Help = "Informar a data de admissão do funcionário";
+            this.dtdAdmissao._LabelGroup = this.sp_deptoPessoal;
+            this.dtdAdmissao._LabelText = "Data de admissão";
+            this.dtdAdmissao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.dtdAdmissao._Regex = null;
+            this.dtdAdmissao._Table = "Funcionario";
+            this.dtdAdmissao._TamanhoComponente = 115;
+            this.dtdAdmissao._TamanhoMaiorLabel = 180;
+            this.dtdAdmissao.BackColor = System.Drawing.Color.Transparent;
+            this.dtdAdmissao.Base = null;
+            this.dtdAdmissao.bConfiguracao = false;
+            this.dtdAdmissao.Color = System.Drawing.Color.Empty;
+            this.dtdAdmissao.CustomFormat = "";
+            this.dtdAdmissao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtdAdmissao.Location = new System.Drawing.Point(673, 31);
+            this.dtdAdmissao.Margin = new System.Windows.Forms.Padding(85, 3, 15, 3);
+            this.dtdAdmissao.Name = "dtdAdmissao";
+            this.dtdAdmissao.objConfigComponenteModel = null;
+            this.dtdAdmissao.Size = new System.Drawing.Size(213, 21);
+            this.dtdAdmissao.TabIndex = 19;
+            this.dtdAdmissao.Value = new System.DateTime(2012, 8, 15, 13, 47, 38, 34);
+            this.dtdAdmissao.Load += new System.EventHandler(this.dtdAdmissao_Load);
+            // 
+            // cbxstSalario
+            // 
+            this.cbxstSalario._Field = "stSalario";
+            this.cbxstSalario._Help = "Informar se a condição de salario do  funcionário é:";
+            this.cbxstSalario._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxstSalario._Itens")));
+            this.cbxstSalario._LabelGroup = this.sp_deptoPessoal;
+            this.cbxstSalario._LabelText = "Tipo de salário";
+            this.cbxstSalario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.cbxstSalario._Regex = null;
+            this.cbxstSalario._situacao = false;
+            this.cbxstSalario._Table = "Funcionario";
+            this.cbxstSalario._TamanhoComponente = 115;
+            this.cbxstSalario._TamanhoMaiorLabel = 150;
+            this.cbxstSalario.BackColor = System.Drawing.Color.Transparent;
+            this.cbxstSalario.Base = null;
+            this.cbxstSalario.bConfiguracao = false;
+            this.cbxstSalario.Color = System.Drawing.Color.White;
+            this.cbxstSalario.DataSource = null;
+            this.cbxstSalario.DisplayMember = "DisplayMember";
+            this.cbxstSalario.Location = new System.Drawing.Point(659, 58);
+            this.cbxstSalario.Margin = new System.Windows.Forms.Padding(71, 3, 15, 3);
+            this.cbxstSalario.Name = "cbxstSalario";
+            this.cbxstSalario.objConfigComponenteModel = null;
+            this.cbxstSalario.SelectedIndex = -1;
+            this.cbxstSalario.SelectedValue = 0;
+            this.cbxstSalario.Size = new System.Drawing.Size(197, 21);
+            this.cbxstSalario.TabIndex = 22;
+            this.cbxstSalario.ValueMember = "ValueMember";
             // 
             // hlP_PesquisaidResponsavel
             // 
@@ -1438,16 +1479,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.hlP_PesquisaidResponsavel._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidResponsavel._Regex = null;
             this.hlP_PesquisaidResponsavel._Table = "Funcionario";
-            this.hlP_PesquisaidResponsavel._TamanhoComponente = 210;
+            this.hlP_PesquisaidResponsavel._TamanhoComponente = 300;
             this.hlP_PesquisaidResponsavel._TamanhoMaiorLabel = 150;
             this.hlP_PesquisaidResponsavel._Vinculado = false;
-            this.hlP_PesquisaidResponsavel._Visible = true;
             this.hlP_PesquisaidResponsavel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidResponsavel.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidResponsavel.Base = null;
-            this.hlP_PesquisaidResponsavel.Location = new System.Drawing.Point(670, 86);
+            this.hlP_PesquisaidResponsavel.bConfiguracao = false;
+            this.hlP_PesquisaidResponsavel.Location = new System.Drawing.Point(670, 85);
             this.hlP_PesquisaidResponsavel.Margin = new System.Windows.Forms.Padding(82, 3, 15, 3);
             this.hlP_PesquisaidResponsavel.Name = "hlP_PesquisaidResponsavel";
+            this.hlP_PesquisaidResponsavel.objConfigComponenteModel = null;
             this.hlP_PesquisaidResponsavel.ReadOnly = false;
             this.hlP_PesquisaidResponsavel.Size = new System.Drawing.Size(371, 21);
             this.hlP_PesquisaidResponsavel.TabIndex = 35;
@@ -1458,12 +1500,36 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_qtdehorastrab._LabelText = "Quantidade de horas de trabalho";
             this.sp_qtdehorastrab._TamanhoMaiorLabel = 0;
             this.sp_qtdehorastrab.BackColor = System.Drawing.Color.Transparent;
-            this.sp_qtdehorastrab.Location = new System.Drawing.Point(588, 113);
+            this.sp_qtdehorastrab.Location = new System.Drawing.Point(588, 112);
             this.sp_qtdehorastrab.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_qtdehorastrab.Name = "sp_qtdehorastrab";
-            this.sp_qtdehorastrab.Size = new System.Drawing.Size(382, 18);
+            this.sp_qtdehorastrab.Size = new System.Drawing.Size(382, 19);
             this.sp_qtdehorastrab.TabIndex = 46;
             this.sp_qtdehorastrab.TabStop = false;
+            // 
+            // txtTotalHorasTab
+            // 
+            this.txtTotalHorasTab._LabelGroup = this.sp_qtdehorastrab;
+            this.txtTotalHorasTab._LabelText = "Total de horas trabalhada";
+            this.txtTotalHorasTab._Multiline = false;
+            this.txtTotalHorasTab._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.txtTotalHorasTab._Password = false;
+            this.txtTotalHorasTab._Regex = null;
+            this.txtTotalHorasTab._TamanhoComponente = 84;
+            this.txtTotalHorasTab._TamanhoMaiorLabel = 150;
+            this.txtTotalHorasTab.BackColor = System.Drawing.Color.Transparent;
+            this.txtTotalHorasTab.Base = null;
+            this.txtTotalHorasTab.bConfiguracao = false;
+            this.txtTotalHorasTab.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtTotalHorasTab.Color = System.Drawing.Color.White;
+            this.txtTotalHorasTab.Location = new System.Drawing.Point(602, 137);
+            this.txtTotalHorasTab.Margin = new System.Windows.Forms.Padding(14, 3, 15, 3);
+            this.txtTotalHorasTab.MaxLength = 32767;
+            this.txtTotalHorasTab.Name = "txtTotalHorasTab";
+            this.txtTotalHorasTab.objConfigComponenteModel = null;
+            this.txtTotalHorasTab.ReadOnly = true;
+            this.txtTotalHorasTab.Size = new System.Drawing.Size(223, 21);
+            this.txtTotalHorasTab.TabIndex = 54;
             // 
             // dtdQtdHorasSegunda
             // 
@@ -1476,15 +1542,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasSegunda._Table = "Funcionario";
             this.dtdQtdHorasSegunda._TamanhoComponente = 90;
             this.dtdQtdHorasSegunda._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasSegunda._Visible = true;
             this.dtdQtdHorasSegunda.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasSegunda.Base = null;
+            this.dtdQtdHorasSegunda.bConfiguracao = false;
             this.dtdQtdHorasSegunda.Color = System.Drawing.Color.Empty;
             this.dtdQtdHorasSegunda.CustomFormat = "";
             this.dtdQtdHorasSegunda.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdQtdHorasSegunda.Location = new System.Drawing.Point(661, 137);
+            this.dtdQtdHorasSegunda.Location = new System.Drawing.Point(661, 164);
             this.dtdQtdHorasSegunda.Margin = new System.Windows.Forms.Padding(73, 3, 15, 3);
             this.dtdQtdHorasSegunda.Name = "dtdQtdHorasSegunda";
+            this.dtdQtdHorasSegunda.objConfigComponenteModel = null;
             this.dtdQtdHorasSegunda.Size = new System.Drawing.Size(170, 21);
             this.dtdQtdHorasSegunda.TabIndex = 47;
             this.dtdQtdHorasSegunda.Value = new System.DateTime(2012, 8, 16, 16, 0, 30, 387);
@@ -1500,15 +1567,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasTerca._Table = "Funcionario";
             this.dtdQtdHorasTerca._TamanhoComponente = 90;
             this.dtdQtdHorasTerca._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasTerca._Visible = true;
             this.dtdQtdHorasTerca.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasTerca.Base = null;
+            this.dtdQtdHorasTerca.bConfiguracao = false;
             this.dtdQtdHorasTerca.Color = System.Drawing.Color.Empty;
             this.dtdQtdHorasTerca.CustomFormat = "";
             this.dtdQtdHorasTerca.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdQtdHorasTerca.Location = new System.Drawing.Point(681, 164);
+            this.dtdQtdHorasTerca.Location = new System.Drawing.Point(681, 191);
             this.dtdQtdHorasTerca.Margin = new System.Windows.Forms.Padding(93, 3, 15, 3);
             this.dtdQtdHorasTerca.Name = "dtdQtdHorasTerca";
+            this.dtdQtdHorasTerca.objConfigComponenteModel = null;
             this.dtdQtdHorasTerca.Size = new System.Drawing.Size(150, 21);
             this.dtdQtdHorasTerca.TabIndex = 48;
             this.dtdQtdHorasTerca.Value = new System.DateTime(2012, 8, 16, 16, 0, 30, 387);
@@ -1524,15 +1592,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasQuarta._Table = "Funcionario";
             this.dtdQtdHorasQuarta._TamanhoComponente = 91;
             this.dtdQtdHorasQuarta._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasQuarta._Visible = true;
             this.dtdQtdHorasQuarta.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasQuarta.Base = null;
+            this.dtdQtdHorasQuarta.bConfiguracao = false;
             this.dtdQtdHorasQuarta.Color = System.Drawing.Color.Empty;
             this.dtdQtdHorasQuarta.CustomFormat = "";
             this.dtdQtdHorasQuarta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdQtdHorasQuarta.Location = new System.Drawing.Point(672, 191);
+            this.dtdQtdHorasQuarta.Location = new System.Drawing.Point(672, 218);
             this.dtdQtdHorasQuarta.Margin = new System.Windows.Forms.Padding(84, 3, 15, 3);
             this.dtdQtdHorasQuarta.Name = "dtdQtdHorasQuarta";
+            this.dtdQtdHorasQuarta.objConfigComponenteModel = null;
             this.dtdQtdHorasQuarta.Size = new System.Drawing.Size(160, 21);
             this.dtdQtdHorasQuarta.TabIndex = 49;
             this.dtdQtdHorasQuarta.Value = new System.DateTime(2012, 8, 16, 16, 0, 30, 387);
@@ -1548,15 +1617,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasQuinta._Table = "Funcionario";
             this.dtdQtdHorasQuinta._TamanhoComponente = 91;
             this.dtdQtdHorasQuinta._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasQuinta._Visible = true;
             this.dtdQtdHorasQuinta.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasQuinta.Base = null;
+            this.dtdQtdHorasQuinta.bConfiguracao = false;
             this.dtdQtdHorasQuinta.Color = System.Drawing.Color.Empty;
             this.dtdQtdHorasQuinta.CustomFormat = "";
             this.dtdQtdHorasQuinta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdQtdHorasQuinta.Location = new System.Drawing.Point(672, 218);
+            this.dtdQtdHorasQuinta.Location = new System.Drawing.Point(672, 245);
             this.dtdQtdHorasQuinta.Margin = new System.Windows.Forms.Padding(84, 3, 15, 3);
             this.dtdQtdHorasQuinta.Name = "dtdQtdHorasQuinta";
+            this.dtdQtdHorasQuinta.objConfigComponenteModel = null;
             this.dtdQtdHorasQuinta.Size = new System.Drawing.Size(160, 21);
             this.dtdQtdHorasQuinta.TabIndex = 50;
             this.dtdQtdHorasQuinta.Value = new System.DateTime(2012, 8, 16, 16, 0, 30, 387);
@@ -1572,15 +1642,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasSexta._Table = "Funcionario";
             this.dtdQtdHorasSexta._TamanhoComponente = 90;
             this.dtdQtdHorasSexta._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasSexta._Visible = true;
             this.dtdQtdHorasSexta.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasSexta.Base = null;
+            this.dtdQtdHorasSexta.bConfiguracao = false;
             this.dtdQtdHorasSexta.Color = System.Drawing.Color.Empty;
             this.dtdQtdHorasSexta.CustomFormat = "";
             this.dtdQtdHorasSexta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdQtdHorasSexta.Location = new System.Drawing.Point(680, 245);
+            this.dtdQtdHorasSexta.Location = new System.Drawing.Point(680, 272);
             this.dtdQtdHorasSexta.Margin = new System.Windows.Forms.Padding(92, 3, 15, 3);
             this.dtdQtdHorasSexta.Name = "dtdQtdHorasSexta";
+            this.dtdQtdHorasSexta.objConfigComponenteModel = null;
             this.dtdQtdHorasSexta.Size = new System.Drawing.Size(151, 21);
             this.dtdQtdHorasSexta.TabIndex = 51;
             this.dtdQtdHorasSexta.Value = new System.DateTime(2012, 8, 16, 16, 0, 30, 387);
@@ -1596,15 +1667,16 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasSabado._Table = "Funcionario";
             this.dtdQtdHorasSabado._TamanhoComponente = 90;
             this.dtdQtdHorasSabado._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasSabado._Visible = true;
             this.dtdQtdHorasSabado.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasSabado.Base = null;
+            this.dtdQtdHorasSabado.bConfiguracao = false;
             this.dtdQtdHorasSabado.Color = System.Drawing.Color.Empty;
             this.dtdQtdHorasSabado.CustomFormat = "";
             this.dtdQtdHorasSabado.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdQtdHorasSabado.Location = new System.Drawing.Point(695, 272);
+            this.dtdQtdHorasSabado.Location = new System.Drawing.Point(695, 299);
             this.dtdQtdHorasSabado.Margin = new System.Windows.Forms.Padding(107, 3, 15, 3);
             this.dtdQtdHorasSabado.Name = "dtdQtdHorasSabado";
+            this.dtdQtdHorasSabado.objConfigComponenteModel = null;
             this.dtdQtdHorasSabado.Size = new System.Drawing.Size(136, 21);
             this.dtdQtdHorasSabado.TabIndex = 52;
             this.dtdQtdHorasSabado.Value = new System.DateTime(2012, 8, 16, 16, 0, 30, 387);
@@ -1621,41 +1693,19 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dtdQtdHorasDomingo._Table = "Funcionario";
             this.dtdQtdHorasDomingo._TamanhoComponente = 90;
             this.dtdQtdHorasDomingo._TamanhoMaiorLabel = 150;
-            this.dtdQtdHorasDomingo._Visible = true;
             this.dtdQtdHorasDomingo.BackColor = System.Drawing.Color.Transparent;
             this.dtdQtdHorasDomingo.Base = null;
+            this.dtdQtdHorasDomingo.bConfiguracao = false;
             this.dtdQtdHorasDomingo.Color = System.Drawing.Color.Empty;
             this.dtdQtdHorasDomingo.CustomFormat = "";
             this.dtdQtdHorasDomingo.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtdQtdHorasDomingo.Location = new System.Drawing.Point(686, 299);
+            this.dtdQtdHorasDomingo.Location = new System.Drawing.Point(686, 326);
             this.dtdQtdHorasDomingo.Margin = new System.Windows.Forms.Padding(98, 3, 15, 3);
             this.dtdQtdHorasDomingo.Name = "dtdQtdHorasDomingo";
+            this.dtdQtdHorasDomingo.objConfigComponenteModel = null;
             this.dtdQtdHorasDomingo.Size = new System.Drawing.Size(145, 21);
             this.dtdQtdHorasDomingo.TabIndex = 53;
             this.dtdQtdHorasDomingo.Value = new System.DateTime(2012, 8, 16, 16, 0, 30, 387);
-            // 
-            // txtTotalHorasTab
-            // 
-            this.txtTotalHorasTab._LabelGroup = this.sp_qtdehorastrab;
-            this.txtTotalHorasTab._LabelText = "Total de horas trabalhada";
-            this.txtTotalHorasTab._Multiline = false;
-            this.txtTotalHorasTab._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.txtTotalHorasTab._Password = false;
-            this.txtTotalHorasTab._Regex = null;
-            this.txtTotalHorasTab._TamanhoComponente = 84;
-            this.txtTotalHorasTab._TamanhoMaiorLabel = 150;
-            this.txtTotalHorasTab._Visible = true;
-            this.txtTotalHorasTab.BackColor = System.Drawing.Color.Transparent;
-            this.txtTotalHorasTab.Base = null;
-            this.txtTotalHorasTab.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtTotalHorasTab.Color = System.Drawing.Color.White;
-            this.txtTotalHorasTab.Location = new System.Drawing.Point(602, 326);
-            this.txtTotalHorasTab.Margin = new System.Windows.Forms.Padding(14, 3, 15, 3);
-            this.txtTotalHorasTab.MaxLength = 32767;
-            this.txtTotalHorasTab.Name = "txtTotalHorasTab";
-            this.txtTotalHorasTab.ReadOnly = true;
-            this.txtTotalHorasTab.Size = new System.Drawing.Size(223, 21);
-            this.txtTotalHorasTab.TabIndex = 54;
             // 
             // tabPage4
             // 
@@ -1663,7 +1713,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(804, 225);
+            this.tabPage4.Size = new System.Drawing.Size(1144, 225);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Tag = false;
             this.tabPage4.Text = "Contato";
@@ -1674,7 +1724,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel5.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel5.Name = "kryptonPanel5";
-            this.kryptonPanel5.Size = new System.Drawing.Size(804, 225);
+            this.kryptonPanel5.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel5.TabIndex = 0;
             // 
             // flowLayoutPanel3
@@ -1703,7 +1753,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(804, 225);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1144, 225);
             this.flowLayoutPanel3.TabIndex = 0;
             // 
             // sp_Comercial
@@ -1714,7 +1764,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_Comercial.Location = new System.Drawing.Point(0, 3);
             this.sp_Comercial.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_Comercial.Name = "sp_Comercial";
-            this.sp_Comercial.Size = new System.Drawing.Size(63, 18);
+            this.sp_Comercial.Size = new System.Drawing.Size(63, 19);
             this.sp_Comercial.TabIndex = 10;
             this.sp_Comercial.TabStop = false;
             // 
@@ -1731,15 +1781,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxTelefoneComercial._Table = "Funcionario";
             this.txtxTelefoneComercial._TamanhoComponente = 133;
             this.txtxTelefoneComercial._TamanhoMaiorLabel = 150;
-            this.txtxTelefoneComercial._Visible = true;
+            this.txtxTelefoneComercial._Visible = false;
             this.txtxTelefoneComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefoneComercial.Base = null;
+            this.txtxTelefoneComercial.bConfiguracao = false;
             this.txtxTelefoneComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxTelefoneComercial.Color = System.Drawing.Color.White;
-            this.txtxTelefoneComercial.Location = new System.Drawing.Point(102, 27);
+            this.txtxTelefoneComercial.Location = new System.Drawing.Point(102, 28);
             this.txtxTelefoneComercial.Margin = new System.Windows.Forms.Padding(102, 3, 15, 3);
             this.txtxTelefoneComercial.MaxLength = 32767;
             this.txtxTelefoneComercial.Name = "txtxTelefoneComercial";
+            this.txtxTelefoneComercial.objConfigComponenteModel = null;
             this.txtxTelefoneComercial.ReadOnly = false;
             this.txtxTelefoneComercial.Size = new System.Drawing.Size(184, 21);
             this.txtxTelefoneComercial.TabIndex = 22;
@@ -1757,15 +1809,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxRamalComercial._Table = "Funcionario";
             this.txtxRamalComercial._TamanhoComponente = 134;
             this.txtxRamalComercial._TamanhoMaiorLabel = 150;
-            this.txtxRamalComercial._Visible = true;
+            this.txtxRamalComercial._Visible = false;
             this.txtxRamalComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRamalComercial.Base = null;
+            this.txtxRamalComercial.bConfiguracao = false;
             this.txtxRamalComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxRamalComercial.Color = System.Drawing.Color.White;
-            this.txtxRamalComercial.Location = new System.Drawing.Point(115, 54);
+            this.txtxRamalComercial.Location = new System.Drawing.Point(115, 55);
             this.txtxRamalComercial.Margin = new System.Windows.Forms.Padding(115, 3, 15, 3);
             this.txtxRamalComercial.MaxLength = 32767;
             this.txtxRamalComercial.Name = "txtxRamalComercial";
+            this.txtxRamalComercial.objConfigComponenteModel = null;
             this.txtxRamalComercial.ReadOnly = false;
             this.txtxRamalComercial.Size = new System.Drawing.Size(172, 21);
             this.txtxRamalComercial.TabIndex = 20;
@@ -1783,15 +1837,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxCelularComercial._Table = "Funcionario";
             this.txtxCelularComercial._TamanhoComponente = 133;
             this.txtxCelularComercial._TamanhoMaiorLabel = 150;
-            this.txtxCelularComercial._Visible = true;
+            this.txtxCelularComercial._Visible = false;
             this.txtxCelularComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxCelularComercial.Base = null;
+            this.txtxCelularComercial.bConfiguracao = false;
             this.txtxCelularComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxCelularComercial.Color = System.Drawing.Color.White;
-            this.txtxCelularComercial.Location = new System.Drawing.Point(110, 81);
+            this.txtxCelularComercial.Location = new System.Drawing.Point(110, 82);
             this.txtxCelularComercial.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
             this.txtxCelularComercial.MaxLength = 32767;
             this.txtxCelularComercial.Name = "txtxCelularComercial";
+            this.txtxCelularComercial.objConfigComponenteModel = null;
             this.txtxCelularComercial.ReadOnly = false;
             this.txtxCelularComercial.Size = new System.Drawing.Size(176, 21);
             this.txtxCelularComercial.TabIndex = 23;
@@ -1809,15 +1865,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxRadioFoneComercial._Table = "Funcionario";
             this.txtxRadioFoneComercial._TamanhoComponente = 133;
             this.txtxRadioFoneComercial._TamanhoMaiorLabel = 150;
-            this.txtxRadioFoneComercial._Visible = true;
+            this.txtxRadioFoneComercial._Visible = false;
             this.txtxRadioFoneComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRadioFoneComercial.Base = null;
+            this.txtxRadioFoneComercial.bConfiguracao = false;
             this.txtxRadioFoneComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxRadioFoneComercial.Color = System.Drawing.Color.White;
-            this.txtxRadioFoneComercial.Location = new System.Drawing.Point(116, 108);
+            this.txtxRadioFoneComercial.Location = new System.Drawing.Point(116, 109);
             this.txtxRadioFoneComercial.Margin = new System.Windows.Forms.Padding(116, 3, 15, 3);
             this.txtxRadioFoneComercial.MaxLength = 32767;
             this.txtxRadioFoneComercial.Name = "txtxRadioFoneComercial";
+            this.txtxRadioFoneComercial.objConfigComponenteModel = null;
             this.txtxRadioFoneComercial.ReadOnly = false;
             this.txtxRadioFoneComercial.Size = new System.Drawing.Size(170, 21);
             this.txtxRadioFoneComercial.TabIndex = 3;
@@ -1835,15 +1893,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxPagerComercial._Table = "Funcionario";
             this.txtxPagerComercial._TamanhoComponente = 134;
             this.txtxPagerComercial._TamanhoMaiorLabel = 150;
-            this.txtxPagerComercial._Visible = true;
+            this.txtxPagerComercial._Visible = false;
             this.txtxPagerComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxPagerComercial.Base = null;
+            this.txtxPagerComercial.bConfiguracao = false;
             this.txtxPagerComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxPagerComercial.Color = System.Drawing.Color.White;
-            this.txtxPagerComercial.Location = new System.Drawing.Point(117, 135);
+            this.txtxPagerComercial.Location = new System.Drawing.Point(117, 136);
             this.txtxPagerComercial.Margin = new System.Windows.Forms.Padding(117, 3, 15, 3);
             this.txtxPagerComercial.MaxLength = 32767;
             this.txtxPagerComercial.Name = "txtxPagerComercial";
+            this.txtxPagerComercial.objConfigComponenteModel = null;
             this.txtxPagerComercial.ReadOnly = false;
             this.txtxPagerComercial.Size = new System.Drawing.Size(170, 21);
             this.txtxPagerComercial.TabIndex = 4;
@@ -1861,15 +1921,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxFaxComercial._Table = "Funcionario";
             this.txtxFaxComercial._TamanhoComponente = 134;
             this.txtxFaxComercial._TamanhoMaiorLabel = 150;
-            this.txtxFaxComercial._Visible = true;
+            this.txtxFaxComercial._Visible = false;
             this.txtxFaxComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxFaxComercial.Base = null;
+            this.txtxFaxComercial.bConfiguracao = false;
             this.txtxFaxComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxFaxComercial.Color = System.Drawing.Color.White;
-            this.txtxFaxComercial.Location = new System.Drawing.Point(129, 162);
+            this.txtxFaxComercial.Location = new System.Drawing.Point(129, 163);
             this.txtxFaxComercial.Margin = new System.Windows.Forms.Padding(129, 3, 15, 3);
             this.txtxFaxComercial.MaxLength = 32767;
             this.txtxFaxComercial.Name = "txtxFaxComercial";
+            this.txtxFaxComercial.objConfigComponenteModel = null;
             this.txtxFaxComercial.ReadOnly = false;
             this.txtxFaxComercial.Size = new System.Drawing.Size(158, 21);
             this.txtxFaxComercial.TabIndex = 26;
@@ -1887,15 +1949,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxEmailComercial._Table = "Funcionario";
             this.txtxEmailComercial._TamanhoComponente = 269;
             this.txtxEmailComercial._TamanhoMaiorLabel = 150;
-            this.txtxEmailComercial._Visible = true;
+            this.txtxEmailComercial._Visible = false;
             this.txtxEmailComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmailComercial.Base = null;
+            this.txtxEmailComercial.bConfiguracao = false;
             this.txtxEmailComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxEmailComercial.Color = System.Drawing.Color.White;
-            this.txtxEmailComercial.Location = new System.Drawing.Point(115, 189);
+            this.txtxEmailComercial.Location = new System.Drawing.Point(115, 190);
             this.txtxEmailComercial.Margin = new System.Windows.Forms.Padding(115, 3, 15, 3);
             this.txtxEmailComercial.MaxLength = 32767;
             this.txtxEmailComercial.Name = "txtxEmailComercial";
+            this.txtxEmailComercial.objConfigComponenteModel = null;
             this.txtxEmailComercial.ReadOnly = false;
             this.txtxEmailComercial.Size = new System.Drawing.Size(307, 21);
             this.txtxEmailComercial.TabIndex = 6;
@@ -1913,15 +1977,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxSkypeComercial._Table = "Funcionario";
             this.txtxSkypeComercial._TamanhoComponente = 269;
             this.txtxSkypeComercial._TamanhoMaiorLabel = 150;
-            this.txtxSkypeComercial._Visible = true;
+            this.txtxSkypeComercial._Visible = false;
             this.txtxSkypeComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxSkypeComercial.Base = null;
+            this.txtxSkypeComercial.bConfiguracao = false;
             this.txtxSkypeComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxSkypeComercial.Color = System.Drawing.Color.White;
             this.txtxSkypeComercial.Location = new System.Drawing.Point(553, 3);
             this.txtxSkypeComercial.Margin = new System.Windows.Forms.Padding(116, 3, 15, 3);
             this.txtxSkypeComercial.MaxLength = 32767;
             this.txtxSkypeComercial.Name = "txtxSkypeComercial";
+            this.txtxSkypeComercial.objConfigComponenteModel = null;
             this.txtxSkypeComercial.ReadOnly = false;
             this.txtxSkypeComercial.Size = new System.Drawing.Size(306, 21);
             this.txtxSkypeComercial.TabIndex = 7;
@@ -1939,15 +2005,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxMSNComercial._Table = "Funcionario";
             this.txtxMSNComercial._TamanhoComponente = 272;
             this.txtxMSNComercial._TamanhoMaiorLabel = 150;
-            this.txtxMSNComercial._Visible = true;
+            this.txtxMSNComercial._Visible = false;
             this.txtxMSNComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxMSNComercial.Base = null;
+            this.txtxMSNComercial.bConfiguracao = false;
             this.txtxMSNComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxMSNComercial.Color = System.Drawing.Color.White;
             this.txtxMSNComercial.Location = new System.Drawing.Point(561, 30);
             this.txtxMSNComercial.Margin = new System.Windows.Forms.Padding(124, 3, 15, 3);
             this.txtxMSNComercial.MaxLength = 32767;
             this.txtxMSNComercial.Name = "txtxMSNComercial";
+            this.txtxMSNComercial.objConfigComponenteModel = null;
             this.txtxMSNComercial.ReadOnly = false;
             this.txtxMSNComercial.Size = new System.Drawing.Size(301, 21);
             this.txtxMSNComercial.TabIndex = 8;
@@ -1965,15 +2033,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxhttpComercial._Table = "Funcionario";
             this.txtxhttpComercial._TamanhoComponente = 265;
             this.txtxhttpComercial._TamanhoMaiorLabel = 150;
-            this.txtxhttpComercial._Visible = true;
+            this.txtxhttpComercial._Visible = false;
             this.txtxhttpComercial.BackColor = System.Drawing.Color.Transparent;
             this.txtxhttpComercial.Base = null;
+            this.txtxhttpComercial.bConfiguracao = false;
             this.txtxhttpComercial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxhttpComercial.Color = System.Drawing.Color.White;
             this.txtxhttpComercial.Location = new System.Drawing.Point(475, 57);
             this.txtxhttpComercial.Margin = new System.Windows.Forms.Padding(38, 3, 15, 3);
             this.txtxhttpComercial.MaxLength = 32767;
             this.txtxhttpComercial.Name = "txtxhttpComercial";
+            this.txtxhttpComercial.objConfigComponenteModel = null;
             this.txtxhttpComercial.ReadOnly = false;
             this.txtxhttpComercial.Size = new System.Drawing.Size(380, 21);
             this.txtxhttpComercial.TabIndex = 9;
@@ -1986,7 +2056,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.sp_Residencial.Location = new System.Drawing.Point(437, 84);
             this.sp_Residencial.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.sp_Residencial.Name = "sp_Residencial";
-            this.sp_Residencial.Size = new System.Drawing.Size(70, 18);
+            this.sp_Residencial.Size = new System.Drawing.Size(70, 19);
             this.sp_Residencial.TabIndex = 11;
             this.sp_Residencial.TabStop = false;
             // 
@@ -2003,15 +2073,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxTelefoneResidencial._Table = "Funcionario";
             this.txtxTelefoneResidencial._TamanhoComponente = 133;
             this.txtxTelefoneResidencial._TamanhoMaiorLabel = 150;
-            this.txtxTelefoneResidencial._Visible = true;
+            this.txtxTelefoneResidencial._Visible = false;
             this.txtxTelefoneResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefoneResidencial.Base = null;
+            this.txtxTelefoneResidencial.bConfiguracao = false;
             this.txtxTelefoneResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxTelefoneResidencial.Color = System.Drawing.Color.White;
-            this.txtxTelefoneResidencial.Location = new System.Drawing.Point(539, 108);
+            this.txtxTelefoneResidencial.Location = new System.Drawing.Point(539, 109);
             this.txtxTelefoneResidencial.Margin = new System.Windows.Forms.Padding(102, 3, 15, 3);
             this.txtxTelefoneResidencial.MaxLength = 32767;
             this.txtxTelefoneResidencial.Name = "txtxTelefoneResidencial";
+            this.txtxTelefoneResidencial.objConfigComponenteModel = null;
             this.txtxTelefoneResidencial.ReadOnly = false;
             this.txtxTelefoneResidencial.Size = new System.Drawing.Size(184, 21);
             this.txtxTelefoneResidencial.TabIndex = 24;
@@ -2029,15 +2101,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxCelularResidencial._Table = "Funcionario";
             this.txtxCelularResidencial._TamanhoComponente = 133;
             this.txtxCelularResidencial._TamanhoMaiorLabel = 150;
-            this.txtxCelularResidencial._Visible = true;
+            this.txtxCelularResidencial._Visible = false;
             this.txtxCelularResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxCelularResidencial.Base = null;
+            this.txtxCelularResidencial.bConfiguracao = false;
             this.txtxCelularResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxCelularResidencial.Color = System.Drawing.Color.White;
-            this.txtxCelularResidencial.Location = new System.Drawing.Point(547, 135);
+            this.txtxCelularResidencial.Location = new System.Drawing.Point(547, 136);
             this.txtxCelularResidencial.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
             this.txtxCelularResidencial.MaxLength = 32767;
             this.txtxCelularResidencial.Name = "txtxCelularResidencial";
+            this.txtxCelularResidencial.objConfigComponenteModel = null;
             this.txtxCelularResidencial.ReadOnly = false;
             this.txtxCelularResidencial.Size = new System.Drawing.Size(176, 21);
             this.txtxCelularResidencial.TabIndex = 25;
@@ -2055,15 +2129,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxRadioFoneResidencial._Table = "Funcionario";
             this.txtxRadioFoneResidencial._TamanhoComponente = 131;
             this.txtxRadioFoneResidencial._TamanhoMaiorLabel = 150;
-            this.txtxRadioFoneResidencial._Visible = true;
+            this.txtxRadioFoneResidencial._Visible = false;
             this.txtxRadioFoneResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxRadioFoneResidencial.Base = null;
+            this.txtxRadioFoneResidencial.bConfiguracao = false;
             this.txtxRadioFoneResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxRadioFoneResidencial.Color = System.Drawing.Color.White;
-            this.txtxRadioFoneResidencial.Location = new System.Drawing.Point(522, 162);
+            this.txtxRadioFoneResidencial.Location = new System.Drawing.Point(522, 163);
             this.txtxRadioFoneResidencial.Margin = new System.Windows.Forms.Padding(85, 3, 15, 3);
             this.txtxRadioFoneResidencial.MaxLength = 32767;
             this.txtxRadioFoneResidencial.Name = "txtxRadioFoneResidencial";
+            this.txtxRadioFoneResidencial.objConfigComponenteModel = null;
             this.txtxRadioFoneResidencial.ReadOnly = false;
             this.txtxRadioFoneResidencial.Size = new System.Drawing.Size(199, 21);
             this.txtxRadioFoneResidencial.TabIndex = 15;
@@ -2081,15 +2157,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxEmailResidencial._Table = "Funcionario";
             this.txtxEmailResidencial._TamanhoComponente = 268;
             this.txtxEmailResidencial._TamanhoMaiorLabel = 150;
-            this.txtxEmailResidencial._Visible = true;
+            this.txtxEmailResidencial._Visible = false;
             this.txtxEmailResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmailResidencial.Base = null;
+            this.txtxEmailResidencial.bConfiguracao = false;
             this.txtxEmailResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxEmailResidencial.Color = System.Drawing.Color.White;
-            this.txtxEmailResidencial.Location = new System.Drawing.Point(521, 189);
+            this.txtxEmailResidencial.Location = new System.Drawing.Point(521, 190);
             this.txtxEmailResidencial.Margin = new System.Windows.Forms.Padding(84, 3, 15, 3);
             this.txtxEmailResidencial.MaxLength = 32767;
             this.txtxEmailResidencial.Name = "txtxEmailResidencial";
+            this.txtxEmailResidencial.objConfigComponenteModel = null;
             this.txtxEmailResidencial.ReadOnly = false;
             this.txtxEmailResidencial.Size = new System.Drawing.Size(337, 21);
             this.txtxEmailResidencial.TabIndex = 19;
@@ -2107,15 +2185,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxSkypeResidencial._Table = "Funcionario";
             this.txtxSkypeResidencial._TamanhoComponente = 268;
             this.txtxSkypeResidencial._TamanhoMaiorLabel = 150;
-            this.txtxSkypeResidencial._Visible = true;
+            this.txtxSkypeResidencial._Visible = false;
             this.txtxSkypeResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxSkypeResidencial.Base = null;
+            this.txtxSkypeResidencial.bConfiguracao = false;
             this.txtxSkypeResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxSkypeResidencial.Color = System.Drawing.Color.White;
             this.txtxSkypeResidencial.Location = new System.Drawing.Point(962, 3);
             this.txtxSkypeResidencial.Margin = new System.Windows.Forms.Padding(85, 3, 15, 3);
             this.txtxSkypeResidencial.MaxLength = 32767;
             this.txtxSkypeResidencial.Name = "txtxSkypeResidencial";
+            this.txtxSkypeResidencial.objConfigComponenteModel = null;
             this.txtxSkypeResidencial.ReadOnly = false;
             this.txtxSkypeResidencial.Size = new System.Drawing.Size(336, 21);
             this.txtxSkypeResidencial.TabIndex = 16;
@@ -2133,15 +2213,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtxMsnResidencial._Table = "Funcionario";
             this.txtxMsnResidencial._TamanhoComponente = 270;
             this.txtxMsnResidencial._TamanhoMaiorLabel = 160;
-            this.txtxMsnResidencial._Visible = true;
+            this.txtxMsnResidencial._Visible = false;
             this.txtxMsnResidencial.BackColor = System.Drawing.Color.Transparent;
             this.txtxMsnResidencial.Base = null;
+            this.txtxMsnResidencial.bConfiguracao = false;
             this.txtxMsnResidencial.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxMsnResidencial.Color = System.Drawing.Color.White;
             this.txtxMsnResidencial.Location = new System.Drawing.Point(980, 30);
             this.txtxMsnResidencial.Margin = new System.Windows.Forms.Padding(103, 3, 15, 3);
             this.txtxMsnResidencial.MaxLength = 32767;
             this.txtxMsnResidencial.Name = "txtxMsnResidencial";
+            this.txtxMsnResidencial.objConfigComponenteModel = null;
             this.txtxMsnResidencial.ReadOnly = false;
             this.txtxMsnResidencial.Size = new System.Drawing.Size(330, 21);
             this.txtxMsnResidencial.TabIndex = 17;
@@ -2159,15 +2241,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.txtXhttpPessoal._Table = "Funcionario";
             this.txtXhttpPessoal._TamanhoComponente = 264;
             this.txtXhttpPessoal._TamanhoMaiorLabel = 160;
-            this.txtXhttpPessoal._Visible = true;
+            this.txtXhttpPessoal._Visible = false;
             this.txtXhttpPessoal.BackColor = System.Drawing.Color.Transparent;
             this.txtXhttpPessoal.Base = null;
+            this.txtXhttpPessoal.bConfiguracao = false;
             this.txtXhttpPessoal.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtXhttpPessoal.Color = System.Drawing.Color.White;
             this.txtXhttpPessoal.Location = new System.Drawing.Point(883, 57);
             this.txtXhttpPessoal.Margin = new System.Windows.Forms.Padding(6, 3, 15, 3);
             this.txtXhttpPessoal.MaxLength = 32767;
             this.txtXhttpPessoal.Name = "txtXhttpPessoal";
+            this.txtXhttpPessoal.objConfigComponenteModel = null;
             this.txtXhttpPessoal.ReadOnly = false;
             this.txtXhttpPessoal.Size = new System.Drawing.Size(421, 21);
             this.txtXhttpPessoal.TabIndex = 18;
@@ -2178,7 +2262,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(804, 225);
+            this.tabPage5.Size = new System.Drawing.Size(1144, 225);
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Tag = false;
             this.tabPage5.Text = "Certificações";
@@ -2189,7 +2273,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel6.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel6.Name = "kryptonPanel6";
-            this.kryptonPanel6.Size = new System.Drawing.Size(804, 225);
+            this.kryptonPanel6.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel6.TabIndex = 0;
             // 
             // kryptonDataGridView1
@@ -2211,7 +2295,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonDataGridView1.Inclui = false;
             this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 0);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(804, 225);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1144, 225);
             this.kryptonDataGridView1.TabIndex = 1;
             this.kryptonDataGridView1.Tag = "Funcionario_Certificacao";
             // 
@@ -2281,12 +2365,13 @@ namespace HLP.UI.Entries.RecursosHumanos
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.kryptonTabControl3);
+            this.tabPage6.Controls.Add(this.kryptonPanel9);
             this.tabPage6.Controls.Add(this.splitter1);
             this.tabPage6.Controls.Add(this.kryptonTabControl2);
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(804, 225);
+            this.tabPage6.Size = new System.Drawing.Size(1144, 225);
             this.tabPage6.TabIndex = 6;
             this.tabPage6.Tag = false;
             this.tabPage6.Text = "Representante";
@@ -2308,23 +2393,22 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonTabControl3.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.kryptonTabControl3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.kryptonTabControl3.HotTrack = true;
-            this.kryptonTabControl3.Location = new System.Drawing.Point(0, 143);
+            this.kryptonTabControl3.Location = new System.Drawing.Point(0, 176);
             this.kryptonTabControl3.Name = "kryptonTabControl3";
             this.kryptonTabControl3.PreserveTabColor = false;
             this.kryptonTabControl3.SelectedIndex = 0;
-            this.kryptonTabControl3.Size = new System.Drawing.Size(804, 82);
-            this.kryptonTabControl3.TabIndex = 6;
+            this.kryptonTabControl3.Size = new System.Drawing.Size(1144, 49);
+            this.kryptonTabControl3.TabIndex = 8;
             this.kryptonTabControl3.UseExtendedLayout = false;
             // 
             // tabPage11
             // 
             this.tabPage11.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage11.Controls.Add(this.dgvFuncionario_Comissao_Produto);
-            this.tabPage11.Controls.Add(this.kryptonPanel9);
             this.tabPage11.Location = new System.Drawing.Point(4, 25);
             this.tabPage11.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(796, 53);
+            this.tabPage11.Size = new System.Drawing.Size(1136, 20);
             this.tabPage11.TabIndex = 0;
             this.tabPage11.Tag = false;
             this.tabPage11.Text = "Produtos";
@@ -2344,12 +2428,11 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dgvFuncionario_Comissao_Produto.DragDropLinha = false;
             this.dgvFuncionario_Comissao_Produto.Exclui = false;
             this.dgvFuncionario_Comissao_Produto.Inclui = false;
-            this.dgvFuncionario_Comissao_Produto.Location = new System.Drawing.Point(0, 33);
+            this.dgvFuncionario_Comissao_Produto.Location = new System.Drawing.Point(0, 0);
             this.dgvFuncionario_Comissao_Produto.Name = "dgvFuncionario_Comissao_Produto";
-            this.dgvFuncionario_Comissao_Produto.Size = new System.Drawing.Size(796, 20);
-            this.dgvFuncionario_Comissao_Produto.TabIndex = 4;
+            this.dgvFuncionario_Comissao_Produto.Size = new System.Drawing.Size(1136, 20);
+            this.dgvFuncionario_Comissao_Produto.TabIndex = 5;
             this.dgvFuncionario_Comissao_Produto.Tag = "Funcionario_Comissao_Produto";
-            this.dgvFuncionario_Comissao_Produto.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_Comissao_Produto_CellValidated);
             // 
             // idProduto
             // 
@@ -2420,28 +2503,46 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel9.Controls.Add(this.btnAplicarComissao);
             this.kryptonPanel9.Controls.Add(this.btnCarregarProdutos);
             this.kryptonPanel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel9.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel9.Location = new System.Drawing.Point(0, 143);
             this.kryptonPanel9.Name = "kryptonPanel9";
-            this.kryptonPanel9.Size = new System.Drawing.Size(796, 33);
-            this.kryptonPanel9.TabIndex = 3;
+            this.kryptonPanel9.Size = new System.Drawing.Size(1144, 33);
+            this.kryptonPanel9.TabIndex = 7;
             // 
             // btnAplicarComissao
             // 
-            this.btnAplicarComissao.Location = new System.Drawing.Point(181, 3);
+            this.btnAplicarComissao._LabelGroup = null;
+            this.btnAplicarComissao._LabelText = "Aplicar taxa de comissão aos produtos";
+            this.btnAplicarComissao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.btnAplicarComissao._Regex = null;
+            this.btnAplicarComissao._TamanhoComponente = 232;
+            this.btnAplicarComissao._TamanhoMaiorLabel = 0;
+            this.btnAplicarComissao._Visible = false;
+            this.btnAplicarComissao.Base = null;
+            this.btnAplicarComissao.bConfiguracao = false;
+            this.btnAplicarComissao.Location = new System.Drawing.Point(212, 4);
+            this.btnAplicarComissao.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.btnAplicarComissao.Name = "btnAplicarComissao";
-            this.btnAplicarComissao.Size = new System.Drawing.Size(236, 25);
-            this.btnAplicarComissao.TabIndex = 1;
-            this.btnAplicarComissao.Values.Text = "Aplicar taxa de comissão aos produtos";
-            this.btnAplicarComissao.Click += new System.EventHandler(this.btnAplicarComissao_Click);
+            this.btnAplicarComissao.objConfigComponenteModel = null;
+            this.btnAplicarComissao.Size = new System.Drawing.Size(232, 24);
+            this.btnAplicarComissao.TabIndex = 3;
             // 
             // btnCarregarProdutos
             // 
-            this.btnCarregarProdutos.Location = new System.Drawing.Point(6, 3);
+            this.btnCarregarProdutos._LabelGroup = null;
+            this.btnCarregarProdutos._LabelText = "Carregar todos os produtos";
+            this.btnCarregarProdutos._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.btnCarregarProdutos._Regex = null;
+            this.btnCarregarProdutos._TamanhoComponente = 168;
+            this.btnCarregarProdutos._TamanhoMaiorLabel = 0;
+            this.btnCarregarProdutos._Visible = false;
+            this.btnCarregarProdutos.Base = null;
+            this.btnCarregarProdutos.bConfiguracao = false;
+            this.btnCarregarProdutos.Location = new System.Drawing.Point(7, 4);
+            this.btnCarregarProdutos.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.btnCarregarProdutos.Name = "btnCarregarProdutos";
-            this.btnCarregarProdutos.Size = new System.Drawing.Size(169, 25);
-            this.btnCarregarProdutos.TabIndex = 0;
-            this.btnCarregarProdutos.Values.Text = "Carregar todos os produtos";
-            this.btnCarregarProdutos.Click += new System.EventHandler(this.btnCarregarProdutos_Click);
+            this.btnCarregarProdutos.objConfigComponenteModel = null;
+            this.btnCarregarProdutos.Size = new System.Drawing.Size(168, 24);
+            this.btnCarregarProdutos.TabIndex = 2;
             // 
             // splitter1
             // 
@@ -2449,7 +2550,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 140);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(804, 3);
+            this.splitter1.Size = new System.Drawing.Size(1144, 3);
             this.splitter1.TabIndex = 5;
             this.splitter1.TabStop = false;
             // 
@@ -2473,7 +2574,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonTabControl2.Name = "kryptonTabControl2";
             this.kryptonTabControl2.PreserveTabColor = false;
             this.kryptonTabControl2.SelectedIndex = 0;
-            this.kryptonTabControl2.Size = new System.Drawing.Size(804, 140);
+            this.kryptonTabControl2.Size = new System.Drawing.Size(1144, 140);
             this.kryptonTabControl2.TabIndex = 4;
             this.kryptonTabControl2.UseExtendedLayout = false;
             // 
@@ -2484,7 +2585,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(796, 111);
+            this.tabPage10.Size = new System.Drawing.Size(1136, 111);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Tag = false;
             this.tabPage10.Text = "Dados de comissão";
@@ -2501,7 +2602,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PersistentColors = false;
-            this.kryptonPanel1.Size = new System.Drawing.Size(796, 111);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1136, 111);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel4
@@ -2515,7 +2616,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(796, 111);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1136, 111);
             this.flowLayoutPanel4.TabIndex = 0;
             // 
             // spComissao
@@ -2526,7 +2627,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.spComissao.Location = new System.Drawing.Point(0, 3);
             this.spComissao.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.spComissao.Name = "spComissao";
-            this.spComissao.Size = new System.Drawing.Size(300, 18);
+            this.spComissao.Size = new System.Drawing.Size(300, 19);
             this.spComissao.TabIndex = 3;
             this.spComissao.TabStop = false;
             // 
@@ -2543,15 +2644,17 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.cbxstComissao._Table = "Funcionario";
             this.cbxstComissao._TamanhoComponente = 218;
             this.cbxstComissao._TamanhoMaiorLabel = 160;
-            this.cbxstComissao._Visible = true;
+            this.cbxstComissao._Visible = false;
             this.cbxstComissao.BackColor = System.Drawing.Color.Transparent;
             this.cbxstComissao.Base = null;
+            this.cbxstComissao.bConfiguracao = false;
             this.cbxstComissao.Color = System.Drawing.Color.White;
             this.cbxstComissao.DataSource = null;
             this.cbxstComissao.DisplayMember = "DisplayMember";
-            this.cbxstComissao.Location = new System.Drawing.Point(68, 27);
+            this.cbxstComissao.Location = new System.Drawing.Point(68, 28);
             this.cbxstComissao.Margin = new System.Windows.Forms.Padding(68, 3, 15, 3);
             this.cbxstComissao.Name = "cbxstComissao";
+            this.cbxstComissao.objConfigComponenteModel = null;
             this.cbxstComissao.SelectedIndex = 0;
             this.cbxstComissao.SelectedValue = 0;
             this.cbxstComissao.Size = new System.Drawing.Size(313, 21);
@@ -2570,12 +2673,13 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudpComissaoAvista._Table = "Funcionario";
             this.nudpComissaoAvista._TamanhoComponente = 90;
             this.nudpComissaoAvista._TamanhoMaiorLabel = 160;
-            this.nudpComissaoAvista._Visible = true;
+            this.nudpComissaoAvista._Visible = false;
             this.nudpComissaoAvista.BackColor = System.Drawing.Color.Transparent;
             this.nudpComissaoAvista.Base = null;
+            this.nudpComissaoAvista.bConfiguracao = false;
             this.nudpComissaoAvista.Color = System.Drawing.Color.White;
             this.nudpComissaoAvista.DecimalPlaces = 2;
-            this.nudpComissaoAvista.Location = new System.Drawing.Point(17, 54);
+            this.nudpComissaoAvista.Location = new System.Drawing.Point(17, 55);
             this.nudpComissaoAvista.Margin = new System.Windows.Forms.Padding(17, 3, 15, 3);
             this.nudpComissaoAvista.Maximum = new decimal(new int[] {
             9,
@@ -2588,6 +2692,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             0,
             0});
             this.nudpComissaoAvista.Name = "nudpComissaoAvista";
+            this.nudpComissaoAvista.objConfigComponenteModel = null;
             this.nudpComissaoAvista.ReadOnly = false;
             this.nudpComissaoAvista.Size = new System.Drawing.Size(236, 22);
             this.nudpComissaoAvista.TabIndex = 1;
@@ -2609,12 +2714,13 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.nudpComissaoAprazo._Table = "Funcionario";
             this.nudpComissaoAprazo._TamanhoComponente = 74;
             this.nudpComissaoAprazo._TamanhoMaiorLabel = 160;
-            this.nudpComissaoAprazo._Visible = true;
+            this.nudpComissaoAprazo._Visible = false;
             this.nudpComissaoAprazo.BackColor = System.Drawing.Color.Transparent;
             this.nudpComissaoAprazo.Base = null;
+            this.nudpComissaoAprazo.bConfiguracao = false;
             this.nudpComissaoAprazo.Color = System.Drawing.Color.White;
             this.nudpComissaoAprazo.DecimalPlaces = 2;
-            this.nudpComissaoAprazo.Location = new System.Drawing.Point(11, 82);
+            this.nudpComissaoAprazo.Location = new System.Drawing.Point(11, 83);
             this.nudpComissaoAprazo.Margin = new System.Windows.Forms.Padding(11, 3, 15, 3);
             this.nudpComissaoAprazo.Maximum = new decimal(new int[] {
             9,
@@ -2627,6 +2733,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             0,
             0});
             this.nudpComissaoAprazo.Name = "nudpComissaoAprazo";
+            this.nudpComissaoAprazo.objConfigComponenteModel = null;
             this.nudpComissaoAprazo.ReadOnly = false;
             this.nudpComissaoAprazo.Size = new System.Drawing.Size(226, 22);
             this.nudpComissaoAprazo.TabIndex = 2;
@@ -2643,7 +2750,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(804, 225);
+            this.tabPage7.Size = new System.Drawing.Size(1144, 225);
             this.tabPage7.TabIndex = 7;
             this.tabPage7.Tag = false;
             this.tabPage7.Text = "Comissão / Faixa de margem de lucro";
@@ -2655,7 +2762,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(804, 225);
+            this.kryptonPanel3.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel3.TabIndex = 0;
             // 
             // kryptonDataGridView2
@@ -2676,7 +2783,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonDataGridView2.Inclui = false;
             this.kryptonDataGridView2.Location = new System.Drawing.Point(0, 0);
             this.kryptonDataGridView2.Name = "kryptonDataGridView2";
-            this.kryptonDataGridView2.Size = new System.Drawing.Size(804, 225);
+            this.kryptonDataGridView2.Size = new System.Drawing.Size(1144, 225);
             this.kryptonDataGridView2.TabIndex = 0;
             this.kryptonDataGridView2.Tag = "Funcionario_Margem_Lucro_Comissao";
             // 
@@ -2793,7 +2900,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.tabPage8.Location = new System.Drawing.Point(4, 25);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(804, 225);
+            this.tabPage8.Size = new System.Drawing.Size(1144, 225);
             this.tabPage8.TabIndex = 8;
             this.tabPage8.Tag = false;
             this.tabPage8.Text = "Arquivos";
@@ -2805,7 +2912,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel4.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel4.Name = "kryptonPanel4";
-            this.kryptonPanel4.Size = new System.Drawing.Size(804, 225);
+            this.kryptonPanel4.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel4.TabIndex = 0;
             // 
             // dgvArquivos
@@ -2824,7 +2931,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.dgvArquivos.Inclui = false;
             this.dgvArquivos.Location = new System.Drawing.Point(0, 0);
             this.dgvArquivos.Name = "dgvArquivos";
-            this.dgvArquivos.Size = new System.Drawing.Size(804, 225);
+            this.dgvArquivos.Size = new System.Drawing.Size(1144, 225);
             this.dgvArquivos.TabIndex = 0;
             this.dgvArquivos.Tag = "Funcionario_Arquivo";
             this.dgvArquivos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView3_CellDoubleClick);
@@ -2856,7 +2963,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.tabPage9.Location = new System.Drawing.Point(4, 25);
             this.tabPage9.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(804, 225);
+            this.tabPage9.Size = new System.Drawing.Size(1144, 225);
             this.tabPage9.TabIndex = 9;
             this.tabPage9.Tag = false;
             this.tabPage9.Text = "Hierarquia";
@@ -2867,7 +2974,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.kryptonPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel8.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel8.Name = "kryptonPanel8";
-            this.kryptonPanel8.Size = new System.Drawing.Size(804, 225);
+            this.kryptonPanel8.Size = new System.Drawing.Size(1144, 225);
             this.kryptonPanel8.TabIndex = 0;
             // 
             // treeHierarquia
@@ -2880,7 +2987,7 @@ namespace HLP.UI.Entries.RecursosHumanos
             this.treeHierarquia.Location = new System.Drawing.Point(0, 0);
             this.treeHierarquia.Name = "treeHierarquia";
             this.treeHierarquia.OverrideFocus.Node.Content.DrawFocus = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.treeHierarquia.Size = new System.Drawing.Size(804, 225);
+            this.treeHierarquia.Size = new System.Drawing.Size(1144, 225);
             this.treeHierarquia.StateCommon.Node.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.treeHierarquia.StateCommon.Node.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.treeHierarquia.TabIndex = 1;
@@ -3082,8 +3189,6 @@ namespace HLP.UI.Entries.RecursosHumanos
         private Comum.Components.HLP_ComboBox cbxstComissao;
         private Comum.Components.HLP_NumericUpDown nudpComissaoAvista;
         private Comum.Components.HLP_NumericUpDown nudpComissaoAprazo;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAplicarComissao;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCarregarProdutos;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private Comum.Components.HLP_LabelSeparator sp_administracao;
@@ -3110,15 +3215,11 @@ namespace HLP.UI.Entries.RecursosHumanos
         private Comum.Components.HLP_DateTimePicker dtdQtdHorasDomingo;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn kryptonDataGridViewDateTimePickerColumn3;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn kryptonDataGridViewDateTimePickerColumn4;
-        private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl3;
-        private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.Splitter splitter1;
         private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl2;
         private System.Windows.Forms.TabPage tabPage10;
         private AC.ExtendedRenderer.Toolkit.KryptonPanel kryptonPanel1;
         private Comum.Components.HLP_Pesquisa hlP_Pesquisa_idDepartamento;
-        private HLP_DataGridView dgvFuncionario_Comissao_Produto;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel9;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private ComponentFactory.Krypton.Toolkit.KryptonTreeView treeHierarquia;
         private Comum.Components.HLP_TextBox txtTotalHorasTab;
@@ -3140,9 +3241,6 @@ namespace HLP.UI.Entries.RecursosHumanos
         private System.Windows.Forms.DataGridViewTextBoxColumn xMemorandoDataGridViewTextBoxColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dConclusaoDataGridViewTextBoxColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dValidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idProduto;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoAvistaDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoAprazoDataGridViewTextBoxColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pDeMargemVendaDataGridViewTextBoxColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pAteMargemVendaDataGridViewTextBoxColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoAvistaDataGridViewTextBoxColumn1;
@@ -3150,6 +3248,15 @@ namespace HLP.UI.Entries.RecursosHumanos
         private System.Windows.Forms.DataGridViewTextBoxColumn xArquivoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn xLinkDataGridViewTextBoxColumn;
         private HLP_LabelSeparator spComissao;
+        private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl3;
+        private System.Windows.Forms.TabPage tabPage11;
+        private HLP_DataGridView dgvFuncionario_Comissao_Produto;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idProduto;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoAvistaDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoAprazoDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel9;
+        private HLP_Button btnAplicarComissao;
+        private HLP_Button btnCarregarProdutos;
     }
 }
 

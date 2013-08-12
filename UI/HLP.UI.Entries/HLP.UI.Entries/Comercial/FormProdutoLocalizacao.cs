@@ -242,10 +242,7 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                localizacaoModel.xNome = txtxNome.Text;
-                localizacaoModel.xDescricao = txtxDescricao.Text;
-                localizacaoModel.idDeposito = hlP_PesquisaidDeposito.Value;
-
+                base.CarregaClasse(localizacaoModel);
             }
             catch (Exception ex)
             {
@@ -256,10 +253,8 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                txtCodigo.Text = localizacaoModel.idProdutoLocalizacao.ToString();
-                txtxNome.Text = localizacaoModel.xNome;
-                txtxDescricao.Text = localizacaoModel.xDescricao;
-                hlP_PesquisaidDeposito.Value = localizacaoModel.idDeposito;
+                base.CarregaPropriedades(localizacaoModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

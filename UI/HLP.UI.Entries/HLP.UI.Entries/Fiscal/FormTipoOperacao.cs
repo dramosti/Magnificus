@@ -74,7 +74,7 @@ namespace HLP.UI.Entries.Fiscal
 
             Thread t1 = new Thread(new ThreadStart(verifBw));
             t1.Start();
-            
+
         }
 
         private void CarregaComboBox()
@@ -369,120 +369,11 @@ namespace HLP.UI.Entries.Fiscal
             try
             {
 
-                #region Principal
-
-                txtCodigo.Text = operacaoModel.idTipoOperacao.ToString();
-                txtxOperacao.Text = operacaoModel.xOperacao;
-                cbotpOperacao.SelectedIndex = operacaoModel.tpOperacao;
-                cbostRepresentaFaturamento.SelectedIndex = operacaoModel.stRepresentaFaturamento;
-                cbostGeraFinanceiro.SelectedIndex = operacaoModel.stGeraFinanceiro;
-                cbostGeraComissao.SelectedIndex = operacaoModel.stGeraComissao;
-                cbostServico.SelectedIndex = operacaoModel.stServico;
-                cbostOrigemMercadoria.SelectedIndex = operacaoModel.stOrigemMercadoria;
-                cbostEstoque.SelectedIndex = operacaoModel.stEstoque;
-                cbostEstoqueClientes.SelectedIndex = operacaoModel.stEstoqueClientes;
-                cbostEstoqueFornecedores.SelectedIndex = operacaoModel.stEstoqueFornecedores;
-                cbostEntregaFutura.SelectedIndex = operacaoModel.stEntregaFutura;
-                cbostTpIndustrializacao.SelectedIndex = operacaoModel.stTipoIndustrializacao;
-                hlP_PesquisacCfopNaUf.Value = operacaoModel.cCfopNaUf;
-                hlP_PesquisacCfopOutraUf.Value = operacaoModel.cCfopOutraUf;
-                hlP_PesquisacCfopNcontribuinte.Value = operacaoModel.cCfopNaoContribuinte;
-                cboAtivo.SelectedIndex = operacaoModel.Ativo == true ? 1 : 0;
-
-                #endregion
-
-                #region Entradas
-                cbostRelacaoRecebimentoInspecao.SelectedIndex = operacaoModel.stRelacaoRecebimentoInspecao;
-                cbostCalcCustoEntrada.SelectedIndex = operacaoModel.stCalculaCustoEntrada;
-                cbostDescontaCredicmsCusto.SelectedIndex = operacaoModel.stDescontaCreditoIcmsCusto;
-                cbostDescontaCredsubstCusto.SelectedIndex = operacaoModel.stDescontaCreditoSubstituicaoTributariaCusto;
-                cbostDescontaCredipiCusto.SelectedIndex = operacaoModel.stDescontaCreditoIpiCusto;
-                cbostDescontaCredpiscofinsCusto.SelectedIndex = operacaoModel.stDescontaCreditoPiscofinsCusto;
-                cbostObrigaOpNaCompra.SelectedIndex = operacaoModel.stObrigaOpNaCompra;
-                cbostDescontaDifIcmsCusto.SelectedIndex = operacaoModel.stDescontaDiferencialIcmsCusto;
-                #endregion
-
-                #region Saidas
-                nudpInsumoIndustrializacao.Value = operacaoModel.pInsumoIndustrializacao;
-                nudpMoIndustrializacao.Value = operacaoModel.pMaoObraIndustrializacao;
-                cbostCalcImportacao.SelectedIndex = operacaoModel.stCalculaImportacao;
-                cbostCalcCredicmsSs.SelectedIndex = operacaoModel.stCalculaCreditoIcmsSuperSimples;
-                cbostCalcCredicmsSsSt.SelectedIndex = operacaoModel.stCalculaCreditoIcmsSubstituicaoTributariaSuperSimples;
-                #endregion
-
-                #region Fiscal Geral
-                cbostReduzBase.SelectedIndex = operacaoModel.stReduzBase;
-                cbostNaoReduzBase.SelectedIndex = operacaoModel.stNaoReduzBase;
-                cbostCalcIcms.SelectedIndex = operacaoModel.stCalculaIcms;
-                hlP_PesquisaidCodigoIcmsPai.Value = operacaoModel.idCodigoIcmsPai;
-                hlP_PesquisaidCSTIcms.Value = operacaoModel.idCSTIcms;
-                cbostCompoeBaseIcms.SelectedIndex = operacaoModel.stCompoeBaseIcms;
-                cbostCalcIpi.SelectedIndex = operacaoModel.stCalculaIpi;
-                if (operacaoModel.idClassificacaoFiscal != 0)
-                {
-                    hlP_PesquisaidClassificacaoFiscal.Value = operacaoModel.idClassificacaoFiscal;
-                    iCodClassificacaoFiscal = operacaoModel.idClassificacaoFiscal;
-                }
-                nudpIpi.Value = operacaoModel.pIpi;
-                hlP_PesquisaidCSTIpi.Value = operacaoModel.idCSTIpi;
-                cbostCompoeBaseIpi.SelectedIndex = operacaoModel.stCompoeBaseIpi;
-                cbostCalcIcmsSubstTributaria.SelectedIndex = operacaoModel.stCalculaCreditoIcmsSuperSimples;
-                cbostCompoeBaseIcmsSubstTributaria.SelectedIndex = operacaoModel.stCalculaCreditoIcmsSubstituicaoTributariaSuperSimples;
-                cbostCalcPisCofins.SelectedIndex = operacaoModel.stCalculaPisCofins;
-                cbostRegimeTributacaoPisCofins.SelectedIndex = operacaoModel.stRegimeTributacaoPisCofins;
-                nudnCoeficienteSubstTributariaPis.Value = operacaoModel.nCoeficienteSubstituicaoTributariaPis;
-                nudpPis.Value = operacaoModel.pPis;
-                nudnCoeficienteSubstTributariaCofins.Value = operacaoModel.nCoeficienteSubstituicaoTributariaCofins;
-                nudpCofins.Value = operacaoModel.pCofins;
-                hlP_PesquisaidCSTPis.Value = operacaoModel.idCSTPis;
-                hlP_PesquisaidCSTCofins.Value = operacaoModel.idCSTCofins;
-                cbostCompoeBaseNormalPiscofins.SelectedIndex = operacaoModel.stCompoeBaseNormalPiscofins;
-                cbostCompoeBaseSubtTribPis.SelectedIndex = operacaoModel.stCompoeBaseSubtTribPis;
-                cbostCompoeBaseSubtTribCofins.SelectedIndex = operacaoModel.stCompoeBaseSubtTribCofins;
-                cbostCalcIss.SelectedIndex = operacaoModel.stCalculaIss;
-                nudpIss.Value = operacaoModel.pIss;
-                cbostCalcIrrf.SelectedIndex = operacaoModel.stCalculaIrrf;
-                nudpReducaoBaseIrrf.Value = operacaoModel.pReducaoBaseIrrf;
-                nudpIrrf.Value = operacaoModel.pIrrf;
-                cbostCalcCsll.SelectedIndex = operacaoModel.stCalculaCsll;
-                cbostCalcInss.SelectedIndex = operacaoModel.stCalculaInss;
-                nudpReducaoBaseInss.Value = operacaoModel.pReducaoBaseInss;
-                nudpInss.Value = operacaoModel.pInss;
+                base.CarregaPropriedades(operacaoModel, true);
+                base.CarregaPropriedades(operacaoImportacaoModel);
+                base.CarregaForm();
 
                 bsOperacaoreducaobase.DataSource = lOperacao_reducao_baseModel;
-
-                #endregion
-
-                #region Producao
-                cbostBaixaMaterialOp.SelectedIndex = operacaoModel.stBaixaMaterialOp;
-                cbostExplosaoMatOp.SelectedIndex = (int)operacaoModel.stExplosaoMatOp;
-                cbostEstoqueProdFimOP.SelectedIndex = (int)operacaoModel.stEstoqueProdFimOP;
-                cbostVinculaPedVenda.SelectedIndex = (int)operacaoModel.stVinculaPedidoVenda;
-
-                #endregion
-
-                #region Importacao
-                if (operacaoImportacaoModel != null)
-                {
-                    nudImppII.Value = operacaoImportacaoModel.pII;
-                    cboImpstCompoeBaseIpi.SelectedIndex = operacaoImportacaoModel.stCompoeBaseIpi;
-                    cboImpstCompoeFatorIcms.SelectedIndex = operacaoImportacaoModel.stCompoeFatorIcms;
-                    cbostCompoeBaseIcmsOculto.SelectedIndex = operacaoImportacaoModel.stCompoeBaseIcmsOculto;
-                    cbostCompoeIcmsOculto.SelectedIndex = operacaoImportacaoModel.stCompoeIcmsOculto;
-                    cbostCompoeIcmsOculto.SelectedIndex = operacaoImportacaoModel.stCompoeFatorPisCofins;
-                    cbostCompoeBasePis.SelectedIndex = operacaoImportacaoModel.stCompoeBasePis;
-                    cbostCompoePis.SelectedIndex = operacaoImportacaoModel.stCompoePis;
-                    cbostCompoeBaseCofins.SelectedIndex = operacaoImportacaoModel.stCompoeBaseCofins;
-                    cbostCompoeFatorPisCofins.SelectedIndex = operacaoImportacaoModel.stCompoeFatorPisCofins;
-                    cbostCompoeCofins.SelectedIndex = operacaoImportacaoModel.stCompoeCofins;
-                    cbostCompoeBaseIcmsNormal.SelectedIndex = operacaoImportacaoModel.stCompoeBaseIcmsNormal;
-                    cbostCompoeIcmsNormal.SelectedIndex = operacaoImportacaoModel.stCompoeIcmsNormal;
-                    cbostCompoeValorProdutos.SelectedIndex = operacaoImportacaoModel.stCompoeValorProdutos;
-                    cbostCompoeValorNf.SelectedIndex = operacaoImportacaoModel.stCompoeValorNf;
-                }
-
-
-                #endregion
             }
             catch (Exception ex)
             {
@@ -494,115 +385,9 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                #region Principal
-
+                base.CarregaClasse(operacaoModel);
+                base.CarregaClasse(operacaoImportacaoModel);
                 operacaoModel.idEmpresa = CompanyData.idEmpresa;
-                operacaoModel.xOperacao = txtxOperacao.Text;
-                operacaoModel.tpOperacao = cbotpOperacao.SelectedIndexByte;
-                operacaoModel.stRepresentaFaturamento = cbostRepresentaFaturamento.SelectedIndexByte;
-                operacaoModel.stGeraFinanceiro = cbostGeraFinanceiro.SelectedIndexByte;
-                operacaoModel.stGeraComissao = cbostGeraComissao.SelectedIndexByte;
-                operacaoModel.stServico = cbostServico.SelectedIndexByte;
-                operacaoModel.stOrigemMercadoria = cbostOrigemMercadoria.SelectedIndexByte;
-                operacaoModel.stEstoque = cbostEstoque.SelectedIndexByte;
-                operacaoModel.stEstoqueClientes = cbostEstoqueClientes.SelectedIndexByte;
-                operacaoModel.stEstoqueFornecedores = cbostEstoqueFornecedores.SelectedIndexByte;
-                operacaoModel.stEntregaFutura = cbostEntregaFutura.SelectedIndexByte;
-                operacaoModel.stTipoIndustrializacao = cbostTpIndustrializacao.SelectedIndexByte;
-                operacaoModel.cCfopNaUf = hlP_PesquisacCfopNaUf.Value;
-                operacaoModel.cCfopOutraUf = hlP_PesquisacCfopOutraUf.Value;
-                operacaoModel.cCfopNaoContribuinte= hlP_PesquisacCfopNcontribuinte.Value;
-                operacaoModel.Ativo = cboAtivo.SelectedIndex == 1 ? true : false;
-
-                #endregion
-
-                #region Entradas
-                operacaoModel.stRelacaoRecebimentoInspecao = cbostRelacaoRecebimentoInspecao.SelectedIndexByte;
-                operacaoModel.stCalculaCustoEntrada = cbostCalcCustoEntrada.SelectedIndexByte;
-                operacaoModel.stDescontaCreditoIcmsCusto = cbostDescontaCredicmsCusto.SelectedIndexByte;
-                operacaoModel.stDescontaCreditoSubstituicaoTributariaCusto = cbostDescontaCredsubstCusto.SelectedIndexByte;
-                operacaoModel.stDescontaCreditoIpiCusto = cbostDescontaCredipiCusto.SelectedIndexByte;
-                operacaoModel.stDescontaCreditoPiscofinsCusto = cbostDescontaCredpiscofinsCusto.SelectedIndexByte;
-                operacaoModel.stObrigaOpNaCompra = cbostObrigaOpNaCompra.SelectedIndexByte;
-                operacaoModel.stDescontaDiferencialIcmsCusto = cbostDescontaDifIcmsCusto.SelectedIndexByte;
-
-                #endregion
-
-                #region Saidas
-                operacaoModel.pInsumoIndustrializacao = nudpInsumoIndustrializacao.Value;
-                operacaoModel.pMaoObraIndustrializacao = nudpMoIndustrializacao.Value;
-                operacaoModel.stCalculaImportacao = cbostCalcImportacao.SelectedIndexByte;
-                operacaoModel.stCalculaCreditoIcmsSuperSimples = cbostCalcCredicmsSs.SelectedIndexByte;
-                operacaoModel.stCalculaCreditoIcmsSubstituicaoTributariaSuperSimples = cbostCalcCredicmsSsSt.SelectedIndexByte;
-                #endregion
-
-                #region Fiscal Geral
-                operacaoModel.idCSTIcms = hlP_PesquisaidCSTIcms.Value;
-                operacaoModel.stReduzBase = cbostReduzBase.SelectedIndexByte;
-                operacaoModel.stNaoReduzBase = cbostNaoReduzBase.SelectedIndexByte;
-                operacaoModel.stCalculaIcms = cbostCalcIcms.SelectedIndexByte;
-                operacaoModel.idCodigoIcmsPai = hlP_PesquisaidCodigoIcmsPai.Value;
-                operacaoModel.stCompoeBaseIcms = cbostCompoeBaseIcms.SelectedIndexByte;
-                operacaoModel.stCalculaIpi = cbostCalcIpi.SelectedIndexByte;
-                if (hlP_PesquisaidClassificacaoFiscal.Value != 0) { operacaoModel.idClassificacaoFiscal = hlP_PesquisaidClassificacaoFiscal.Value; }
-                operacaoModel.pIpi = nudpIpi.Value;
-                operacaoModel.idCSTIpi = hlP_PesquisaidCSTIpi.Value;
-                operacaoModel.stCompoeBaseIpi = cbostCompoeBaseIpi.SelectedIndexByte;
-                operacaoModel.stCalculaCreditoIcmsSuperSimples = cbostCalcIcmsSubstTributaria.SelectedIndexByte;
-                operacaoModel.stCalculaCreditoIcmsSubstituicaoTributariaSuperSimples = cbostCompoeBaseIcmsSubstTributaria.SelectedIndexByte;
-                operacaoModel.stCalculaPisCofins = cbostCalcPisCofins.SelectedIndexByte;
-                operacaoModel.stRegimeTributacaoPisCofins = cbostRegimeTributacaoPisCofins.SelectedIndexByte;
-                operacaoModel.nCoeficienteSubstituicaoTributariaPis = nudnCoeficienteSubstTributariaPis.Value;
-                operacaoModel.pPis = nudpPis.Value;
-                operacaoModel.nCoeficienteSubstituicaoTributariaCofins = nudnCoeficienteSubstTributariaCofins.Value;
-                operacaoModel.pCofins = nudpCofins.Value;
-                operacaoModel.idCSTPis = hlP_PesquisaidCSTPis.Value;
-                operacaoModel.idCSTCofins = hlP_PesquisaidCSTCofins.Value;
-                operacaoModel.stCompoeBaseNormalPiscofins = cbostCompoeBaseNormalPiscofins.SelectedIndexByte;
-                operacaoModel.stCompoeBaseSubtTribPis = cbostCompoeBaseSubtTribPis.SelectedIndexByte;
-                operacaoModel.stCompoeBaseSubtTribCofins = cbostCompoeBaseSubtTribCofins.SelectedIndexByte;
-                operacaoModel.stCalculaIss = cbostCalcIss.SelectedIndexByte;
-                operacaoModel.pIss = nudpIss.Value;
-                operacaoModel.stCalculaIrrf = cbostCalcIrrf.SelectedIndexByte;
-                operacaoModel.pReducaoBaseIrrf = nudpReducaoBaseIrrf.Value;
-                operacaoModel.pIrrf = nudpIrrf.Value;
-                operacaoModel.stCalculaCsll = cbostCalcCsll.SelectedIndexByte;
-                operacaoModel.stCalculaInss = cbostCalcInss.SelectedIndexByte;
-                operacaoModel.pReducaoBaseIrrf = nudpIrrf.Value;
-                operacaoModel.pInss = nudpInss.Value;
-
-
-                #endregion
-
-                #region Producao
-                operacaoModel.stBaixaMaterialOp = cbostBaixaMaterialOp.SelectedIndexByte;
-                operacaoModel.stExplosaoMatOp = cbostExplosaoMatOp.SelectedIndexByte;
-                operacaoModel.stEstoqueProdFimOP = cbostEstoqueProdFimOP.SelectedIndexByte;
-                operacaoModel.stVinculaPedidoVenda = cbostVinculaPedVenda.SelectedIndexByte;
-                #endregion
-
-                #region Importacao
-                if (operacaoImportacaoModel == null)
-                {
-                    operacaoImportacaoModel = new Operacao_importacaoModel();
-                }
-                operacaoImportacaoModel.pII = nudImppII.Value;
-                operacaoImportacaoModel.stCompoeBaseIpi = cboImpstCompoeBaseIpi.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeFatorIcms = cboImpstCompoeFatorIcms.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeBaseIcmsOculto = cbostCompoeBaseIcmsOculto.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeIcmsOculto = cbostCompoeIcmsOculto.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeFatorPisCofins = cbostCompoeFatorPisCofins.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeBasePis = cbostCompoeBasePis.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoePis = cbostCompoePis.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeBaseCofins = cbostCompoeBaseCofins.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeCofins = cbostCompoeCofins.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeBaseIcmsNormal = cbostCompoeBaseIcmsNormal.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeIcmsNormal = cbostCompoeIcmsNormal.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeValorProdutos = cbostCompoeValorProdutos.SelectedIndexByte;
-                operacaoImportacaoModel.stCompoeValorNf = cbostCompoeValorNf.SelectedIndexByte;
-
-
-                #endregion
             }
             catch (Exception ex)
             {

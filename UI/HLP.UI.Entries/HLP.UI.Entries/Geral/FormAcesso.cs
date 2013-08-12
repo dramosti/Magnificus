@@ -90,7 +90,7 @@ namespace HLP.UI.Entries.Geral
         public override void Salvar()
         {
             try
-            {                
+            {
                 objValidaCampos.Validar();
                 PopulaTabela();
 
@@ -119,7 +119,7 @@ namespace HLP.UI.Entries.Geral
             chkstUsuarioAtivo__CheckedChanged(this, null);
             if (cbxstUsuario.Text == "0 - HLP")
             {
-                cbxstUsuario.Enabled = txtxId.Enabled = txtxSenha.Enabled = chkstUsuarioAtivo.Enabled 
+                cbxstUsuario.Enabled = txtxId.Enabled = txtxSenha.Enabled = chkstUsuarioAtivo.Enabled
                     = false;
             }
             else
@@ -157,8 +157,8 @@ namespace HLP.UI.Entries.Geral
             {
                 base.Pesquisar();
                 if (iRetPesquisa != null)
-                {                    
-                    objFuncionarioModel = funcionarioService.GetFuncionario((int)iRetPesquisa, true);                    
+                {
+                    objFuncionarioModel = funcionarioService.GetFuncionario((int)iRetPesquisa, true);
                     PopulaForm();
                 }
                 else if (base.bNovoPesquisa)
@@ -215,7 +215,7 @@ namespace HLP.UI.Entries.Geral
                 base.PesquisaCampo();
                 if (iRetPesquisa != null)
                 {
-                    HabilitaBotoes(1);                    
+                    HabilitaBotoes(1);
                     objFuncionarioModel = funcionarioService.GetFuncionario((int)iRetPesquisa, true);
                     PopulaForm();
                 }
@@ -294,38 +294,27 @@ namespace HLP.UI.Entries.Geral
         {
             if (!cbxstUsuario.cbx.Items.Contains("0 - HLP"))
                 cbxstUsuario.cbx.Items.Insert(0, "0 - HLP");
-            txtIdFuncionario.Text = objFuncionarioModel.idFuncionario.Value.ToString();
-            txtxCodigoAlternativo.Text = objFuncionarioModel.xCodigoAlternativo;
-            txtxNome.Text = objFuncionarioModel.xNome;
-            chkstUsuarioAtivo.Checked = objFuncionarioModel.stUsuarioAtivo;
-            txtxId.Text = objFuncionarioModel.xID != null ? objFuncionarioModel.xID : "";
-            txtxSenha.Text = objFuncionarioModel.xSenha != null ?
-                Criptografia.Decripta(objFuncionarioModel.xSenha) : "";
-            cbxstUsuario.SelectedIndex = objFuncionarioModel.stUsuario != null ?
-                (int)objFuncionarioModel.stUsuario : -1;
+            base.CarregaPropriedades(objFuncionarioModel, true);
+            base.CarregaForm();
 
-            bsAcesso.DataSource = objFuncionarioModel.lFuncionario_Acesso;            
+            bsAcesso.DataSource = objFuncionarioModel.lFuncionario_Acesso;
         }
 
         void CarregaAcesso()
         {
             objFuncionarioModel.lFuncionario_Acesso = acessoService.GetAllAcesso_Funcionario(objFuncionarioModel.idFuncionario.Value);
-            bsAcesso.DataSource = objFuncionarioModel.lFuncionario_Acesso;            
+            bsAcesso.DataSource = objFuncionarioModel.lFuncionario_Acesso;
         }
 
         void PopulaTabela()
         {
-            objFuncionarioModel.stUsuarioAtivo = chkstUsuarioAtivo.Checked;
-            objFuncionarioModel.xID = txtxId.Text;
-            objFuncionarioModel.xSenha = Criptografia.Encripta(txtxSenha.Text);
-            if (cbxstUsuario.Enabled)
-                objFuncionarioModel.stUsuario = Convert.ToByte(cbxstUsuario.SelectedIndex + 1);
+            base.CarregaClasse(objFuncionarioModel);
         }
 
         private void txtIdFuncionario__TextChanged(object sender, EventArgs e)
         {
             if (txtIdFuncionario.Text != "")
-            {                
+            {
                 CarregaAcesso();
             }
         }
@@ -336,7 +325,7 @@ namespace HLP.UI.Entries.Geral
             txtxId.errorProvider1.Clear();
             txtxSenha.errorProvider1.Clear();
             cbxstUsuario.errorProvider1.Clear();
-            
+
             if (txtxId.Text == "")
             {
                 txtxId.errorProvider1.SetError(txtxId, "Campo não pode ser vazio");

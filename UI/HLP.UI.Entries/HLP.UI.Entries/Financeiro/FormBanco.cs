@@ -66,7 +66,7 @@ namespace HLP.UI.Entries.Financeiro
         public override void Novo()
         {
             txtxLinkLogo.txt.ButtonSpecs.Add(btnLinkLogo); //adiciona o botão de pesquisa para o textbox
-            
+
             base.Novo();
             bancoModel = new BancoModel();
 
@@ -274,12 +274,7 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
-                bancoModel.cBanco = txtcBanco.Text;
-                bancoModel.xBancoResumido = txtxBancoResumido.Text;
-                bancoModel.xBanco = txtxBanco.Text;
-                bancoModel.xLinkLogo = txtxLinkLogo.Text;
-                bancoModel.vDxMais = Convert.ToByte(nudvDxMais.Value);
-                bancoModel.vDxMenos = Convert.ToByte(nudvDxMenos.Value);
+                base.CarregaClasse(bancoModel);
             }
             catch (Exception ex)
             {
@@ -289,13 +284,8 @@ namespace HLP.UI.Entries.Financeiro
         }
         public void PopulaForm()
         {
-            txtCodigo.Text = bancoModel.idBanco.ToString();
-            txtcBanco.Text = bancoModel.cBanco;
-            txtxBancoResumido.Text = bancoModel.xBancoResumido;
-            txtxBanco.Text = bancoModel.xBanco;
-            txtxLinkLogo.Text = bancoModel.xLinkLogo;
-            nudvDxMais.Value = bancoModel.vDxMais;
-            nudvDxMenos.Value = bancoModel.vDxMenos;
+            base.CarregaPropriedades(bancoModel, true);
+            base.CarregaForm();
         }
 
 
@@ -310,7 +300,7 @@ namespace HLP.UI.Entries.Financeiro
                 {
                     async_work.RunWorkerAsync();
                 }
-                
+
             }
         }
 

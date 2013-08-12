@@ -245,13 +245,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                condicoes_entregaModel.xCondicaoEntrega = txtxCondicaoEntrega.Text;
-                condicoes_entregaModel.xDescricao = txtxDescricao.Text;
-                condicoes_entregaModel.stEnderecoImpostoSobreVendas = cbostEnderecoImpostoSobreVendas.SelectedIndexByte;
-                condicoes_entregaModel.nIntrastat = txtnIntrastat.Text;
-                condicoes_entregaModel.stAplicarMinGratis = cbostAplicarMinGratis.SelectedIndexByte;
-                condicoes_entregaModel.vMinimoGratis = nudvMinimoGratis.Value;
-
+                base.CarregaClasse(condicoes_entregaModel);
             }
             catch (Exception ex)
             {
@@ -262,13 +256,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = condicoes_entregaModel.idCondicaoEntrega.ToString();
-                txtxCondicaoEntrega.Text = condicoes_entregaModel.xCondicaoEntrega;
-                txtxDescricao.Text = condicoes_entregaModel.xDescricao;
-                cbostEnderecoImpostoSobreVendas.SelectedIndex = condicoes_entregaModel.stEnderecoImpostoSobreVendas;
-                txtnIntrastat.Text = condicoes_entregaModel.nIntrastat;
-                cbostAplicarMinGratis.SelectedIndex = condicoes_entregaModel.stAplicarMinGratis;
-                nudvMinimoGratis.Value = condicoes_entregaModel.vMinimoGratis;
+                base.CarregaPropriedades(condicoes_entregaModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

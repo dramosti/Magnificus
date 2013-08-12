@@ -250,10 +250,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                cidadeModel.xCidade = txtxCidade.Text;
-                cidadeModel.cIbge = nudcIbge.ValueInt;
-                cidadeModel.idUF = (int)cboidUf.SelectedValue;
-
+                base.CarregaClasse(cidadeModel);
             }
             catch (Exception ex)
             {
@@ -264,10 +261,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = cidadeModel.idCidade.ToString();
-                txtxCidade.Text = cidadeModel.xCidade;
-                nudcIbge.Value = cidadeModel.cIbge;
-                cboidUf.SelectedValue = cidadeModel.idUF;
+                base.CarregaPropriedades(cidadeModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

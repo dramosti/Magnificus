@@ -242,9 +242,7 @@ namespace HLP.UI.Entries.CRM
         {
             try
             {
-                decisaoModel.xDecisao = txtxDecisao.Text;
-                decisaoModel.xDescricao = txtxDescricao.Text;
-
+                base.CarregaClasse(decisaoModel);
             }
             catch (Exception ex)
             {
@@ -255,9 +253,8 @@ namespace HLP.UI.Entries.CRM
         {
             try
             {
-                txtCodigo.Text = decisaoModel.idDecisao.ToString();
-                txtxDecisao.Text = decisaoModel.xDecisao;
-                txtxDescricao.Text = decisaoModel.xDescricao;
+                base.CarregaPropriedades(decisaoModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

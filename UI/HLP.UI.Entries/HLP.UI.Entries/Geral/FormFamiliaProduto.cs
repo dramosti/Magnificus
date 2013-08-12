@@ -54,7 +54,7 @@ namespace HLP.UI.Entries.Geral
             t1 = new Thread(new ThreadStart(verifBw));
             t1.Start();
             hlP_PesquisaidLinhaProdutoBase.txtPesquisa.Validating += new CancelEventHandler(txtPesquisa_Validating);
-                //+= new EventHandler(hlP_PesquisaidLinhaProdutoBase_Validated);
+            //+= new EventHandler(hlP_PesquisaidLinhaProdutoBase_Validated);
 
 
         }
@@ -68,7 +68,7 @@ namespace HLP.UI.Entries.Geral
                     HLPMessageBox.ShowAviso("Remova os Itens lançados na aba('Classificação financeira  das Familias de produtos') para poder inserir uma linha de produto base.");
                     e.Cancel = true;
                     hlP_PesquisaidLinhaProdutoBase.txtPesquisa.Text = "";
-                    hlP_PesquisaidLinhaProdutoBase.txtDisplay.Text = ""; 
+                    hlP_PesquisaidLinhaProdutoBase.txtDisplay.Text = "";
                 }
                 else
                 {
@@ -322,21 +322,7 @@ namespace HLP.UI.Entries.Geral
         void PopulaTabela()
         {
             familiaProdModel.idEmpresa = CompanyData.idEmpresa;
-            familiaProdModel.xFamiliaProduto = txtxFamiliaProduto.Text;
-            familiaProdModel.xDescricao = txtxDescricao.Text;
-            familiaProdModel.xSigla = txtxSigla.Text;
-            familiaProdModel.pDescontoMaximo = nudpDescontoMaximo.Value;
-            familiaProdModel.pAcressimoMaximo = nudpAcrescimoMaximo.Value;
-            if (hlP_PesquisaidContaContabil.Value != 0)
-                familiaProdModel.idContaContabil = hlP_PesquisaidContaContabil.Value;
-            if (hlP_PesquisaidCentroCusto.Value != 0)
-                familiaProdModel.idCentroCusto = hlP_PesquisaidCentroCusto.Value;
-            familiaProdModel.pComissaoAprazo = nudpComissaoAprazo.Value;
-            familiaProdModel.pComissaoAvista = nudpComissaoAvista.Value;
-            if (hlP_PesquisaidLinhaProdutoBase.Value != 0)
-                familiaProdModel.idFamiliaProdutoBase = hlP_PesquisaidLinhaProdutoBase.Value;
-            familiaProdModel.stgrau = cbxstGrau.SelectedIndexByte;
-            familiaProdModel.stAlteraDescricaoComercialProdutoVenda = cbostAlteraDescricaoComercialProdutoVenda.SelectedIndexByte;
+            base.CarregaClasse(familiaProdModel);
 
 
             bsFamiliaProduto.DataSource = familiaProdModel.lFamilia_Produto_Classe;
@@ -346,23 +332,8 @@ namespace HLP.UI.Entries.Geral
 
         void PopulaForm()
         {
-            txtCodigo.Text = familiaProdModel.idFamiliaProduto.ToString();
-
-            txtxFamiliaProduto.Text = familiaProdModel.xFamiliaProduto;
-            txtxDescricao.Text = familiaProdModel.xDescricao;
-            txtxSigla.Text = familiaProdModel.xSigla;
-            nudpDescontoMaximo.Value = familiaProdModel.pDescontoMaximo;
-            nudpAcrescimoMaximo.Value = familiaProdModel.pAcressimoMaximo;
-            if (familiaProdModel.idContaContabil != null)
-                hlP_PesquisaidContaContabil.Value = (int)familiaProdModel.idContaContabil;
-            if (familiaProdModel.idCentroCusto != null)
-                hlP_PesquisaidCentroCusto.Value = (int)familiaProdModel.idCentroCusto;
-            nudpComissaoAprazo.Value = familiaProdModel.pComissaoAprazo;
-            nudpComissaoAvista.Value = familiaProdModel.pComissaoAvista;
-            if (familiaProdModel.idFamiliaProdutoBase != null)
-                hlP_PesquisaidLinhaProdutoBase.Value = (int)familiaProdModel.idFamiliaProdutoBase;
-            cbxstGrau.SelectedIndex = familiaProdModel.stgrau;
-            cbostAlteraDescricaoComercialProdutoVenda.SelectedIndex= familiaProdModel.stAlteraDescricaoComercialProdutoVenda;
+            base.CarregaPropriedades(familiaProdModel, true);
+            base.CarregaForm();
             bsFamiliaProduto.DataSource = familiaProdModel.lFamilia_Produto_Classe;
 
         }

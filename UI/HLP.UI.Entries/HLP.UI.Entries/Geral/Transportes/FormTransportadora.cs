@@ -59,7 +59,7 @@ namespace HLP.UI.Entries.Geral.Transportes
 
         void InitializeComboBox()
         {
-            if(objMetodosForm != null)
+            if (objMetodosForm != null)
             {
                 idCidade.DataSource = pesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember(idCidade), true);
                 idContato_Contato.DataSource = pesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember(idContato_Contato), true);
@@ -72,7 +72,7 @@ namespace HLP.UI.Entries.Geral.Transportes
                 Thread.Sleep(500);
                 InitializeComboBox();
             }
-            
+
         }
 
         public override void Novo()
@@ -125,7 +125,7 @@ namespace HLP.UI.Entries.Geral.Transportes
 
                 objValidaCampos.Validar();
                 PopulaTabela();
-                
+
                 transportadorService.Save(objTransportador);
 
                 base.Salvar();
@@ -308,29 +308,11 @@ namespace HLP.UI.Entries.Geral.Transportes
 
         void PopulaTabela()
         {
-            objTransportador.xCodigoAlternativo = txtxCodigoAlternativo.Text;
-            objTransportador.xNome = txtxNome.Text;
-            objTransportador.xFantasia = txtxFantasia.Text;
-            objTransportador.stPessoa = cbxstPessoa.SelectedIndexByte;
-            objTransportador.xCnpj = mskxCnpj.Text;
-            objTransportador.xIe = mskxIe.Text;
-            objTransportador.xIm = txtxIm.Text;
-            objTransportador.xCpf = mskxCpf.Text;
-            objTransportador.xRg = txtxRg.Text;
-            objTransportador.xRntrc = txtxRntrc.Text;
-            objTransportador.xTelefone1 = txtxTelefone1.Text;
-            objTransportador.xTelefone2 = txtxTelefone2.Text;
-            objTransportador.xFax = txtxFax.Text;
-            objTransportador.xHttp = txtxHttp.Text;
-            objTransportador.Ativo = cboAtivo.SelectedIndex == 0 ? false : true;
-
-
-
+            base.CarregaClasse(objTransportador);
         }
 
         void PopulaForm()
         {
-            txtCodigo.Text = objTransportador.idTransportador.ToString();
             if (objTransportador.xCodigoAlternativo == String.Empty)
             {
                 txtxCodigoAlternativo.Text = txtCodigo.Text;
@@ -339,20 +321,8 @@ namespace HLP.UI.Entries.Geral.Transportes
             {
                 txtxCodigoAlternativo.Text = objTransportador.xCodigoAlternativo;
             }
-            txtxNome.Text = objTransportador.xNome;
-            txtxFantasia.Text = objTransportador.xFantasia;
-            cbxstPessoa.SelectedIndex = objTransportador.stPessoa;
-            mskxCnpj.Text = objTransportador.xCnpj;
-            mskxIe.Text = objTransportador.xIe;
-            txtxIm.Text = objTransportador.xIm;
-            mskxCpf.Text = objTransportador.xCpf;
-            txtxRg.Text = objTransportador.xRg;
-            txtxRntrc.Text = objTransportador.xRntrc;
-            txtxTelefone1.Text = objTransportador.xTelefone1;
-            txtxTelefone2.Text = objTransportador.xTelefone2;
-            txtxFax.Text = objTransportador.xFax;
-            txtxHttp.Text = objTransportador.xHttp;
-            cboAtivo.SelectedIndex = objTransportador.Ativo == true ? 1 : 0;
+            base.CarregaPropriedades(objTransportador, true);
+            base.CarregaForm();
             bsTransportadorContatoModel.DataSource = objTransportador.lTransportador_Contato;
             bsTransportadorEnderecoModel.DataSource = objTransportador.lTransportador_Endereco;
             bsTransportadorMotoristaModel.DataSource = objTransportador.lTransportador_Motorista;

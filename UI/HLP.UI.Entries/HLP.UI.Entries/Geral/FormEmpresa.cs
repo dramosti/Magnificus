@@ -32,10 +32,10 @@ namespace HLP.UI.Entries.Geral
         ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnImage2 = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
         public FormEmpresa()
         {
-            InitializeComponent();                        
+            InitializeComponent();
             IKernel kernel = new StandardKernel(new MagnificusDependenciesModule());
             kernel.Settings.ActivationCacheDisabled = false;
-            kernel.Inject(this);            
+            kernel.Inject(this);
         }
 
         private void FormEmpresa_Load(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace HLP.UI.Entries.Geral
             });
 
             Thread t1 = new Thread(new ThreadStart(verifBw));
-            t1.Start();            
+            t1.Start();
         }
 
         void btn_Click(object sender, EventArgs e)
@@ -299,39 +299,13 @@ namespace HLP.UI.Entries.Geral
         void PopulaForm()
         {
             bsEmpresaEndereco.DataSource = objEmpresaModel.lEmpresa_endereco;
-            txtCodigo.Text = objEmpresaModel.idEmpresa.ToString();
-            txtxNome.Text = objEmpresaModel.xNome;
-            txtxFantasia.Text = objEmpresaModel.xFantasia;
-            masktxtxCnpj.Text = objEmpresaModel.xCNPJ;
-            txtxIe.Text = objEmpresaModel.xIE;
-            txtxIm.Text = objEmpresaModel.xIM;
-            txtxSuframa.Text = objEmpresaModel.xSuframa;
-            txtxTelefone.Text = objEmpresaModel.xTelefone;
-            txtxFax.Text = objEmpresaModel.xFax;
-            txtxEmail.Text = objEmpresaModel.xEmail;
-            txtxHttp.Text = objEmpresaModel.xHttp;
-            hlP_PesquisaidRamoAtividade.Value = objEmpresaModel.idRamoAtividade;
-            cbostCodigoRegimeTributario.SelectedIndex = objEmpresaModel.stCodigoRegimeTributario;
-            cboAtivo.SelectedIndex = Convert.ToInt32(objEmpresaModel.Ativo);
-            txtxLinkLogoEmpresa.Text = objEmpresaModel.xLinkLogoEmpresa;
-            txtxLinkPastas.Text = objEmpresaModel.xLinkPastas;       
+            base.CarregaPropriedades(objEmpresaModel, true);
+            base.CarregaForm();
         }
 
         void PopulaTabela()
         {
-            objEmpresaModel.xNome = txtxNome.Text;
-            objEmpresaModel.xFantasia = txtxFantasia.Text;
-            objEmpresaModel.xCNPJ = masktxtxCnpj.Text;
-            objEmpresaModel.xIE = txtxIe.Text;
-            objEmpresaModel.xIM = txtxIm.Text;
-            objEmpresaModel.idRamoAtividade = hlP_PesquisaidRamoAtividade.Value;
-            objEmpresaModel.xSuframa = txtxSuframa.Text;
-            objEmpresaModel.xTelefone = txtxTelefone.Text;
-            objEmpresaModel.xFax = txtxFax.Text;
-            objEmpresaModel.xEmail = txtxEmail.Text;
-            objEmpresaModel.xHttp = txtxHttp.Text;
-            objEmpresaModel.xLinkLogoEmpresa = txtxLinkLogoEmpresa.Text;
-            objEmpresaModel.xLinkPastas = txtxLinkPastas.Text;
+            base.CarregaClasse(objEmpresaModel);
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

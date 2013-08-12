@@ -246,23 +246,8 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                txtCodigo.Text = classificacao_fiscalModel.idClassificacaoFiscal.ToString();
-                txtxCassificacaoFiscal.Text = classificacao_fiscalModel.xClassificacaoFiscal;
-                txtcNCM.Text = classificacao_fiscalModel.cNCM;
-                txtcClassifcacaoFiscal.Text = classificacao_fiscalModel.cClassifcacaoFiscal;
-                txtxFundamentoLegal.Text = classificacao_fiscalModel.xFundamentoLegal;
-                nudpIPI.Value = classificacao_fiscalModel.pIPI;
-                nudpII.Value = classificacao_fiscalModel.pII;
-                cbostCalculaPisCofins.SelectedIndex = classificacao_fiscalModel.stCalculaPisCofins;
-                cbostRegimeTributacaoPisCofins.SelectedIndex = classificacao_fiscalModel.stRegimeTributacaoPisCofins;
-                nudvCoeficienteSubstituicaoPis.Value = classificacao_fiscalModel.vCoeficienteSubstituicaoPis;
-                nudvCoeficienteSubstituicaoCofins.Value = classificacao_fiscalModel.vCoeficienteSubstituicaoCofins;
-                nudpPis.Value = classificacao_fiscalModel.pPis;
-                nudpCofins.Value = classificacao_fiscalModel.pCofins;
-                cbostCompoeBaseNormalPisCofins.SelectedIndex = classificacao_fiscalModel.stCompoeBaseNormalPisCofins;
-                cbostCompoeBaseSubstPis.SelectedIndex = classificacao_fiscalModel.stCompoeBaseSubstPis;
-                cbostCompoeBaseSubstCofins.SelectedIndex = classificacao_fiscalModel.stCompoeBaseSubstCofins;
-                cboAtivo.SelectedIndex = classificacao_fiscalModel.Ativo == true ? 1 : 0;
+                base.CarregaPropriedades(classificacao_fiscalModel, true);
+                base.CarregaForm();
 
             }
             catch (Exception ex)
@@ -275,23 +260,8 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
+                base.CarregaClasse(classificacao_fiscalModel);
                 classificacao_fiscalModel.idEmpresa = CompanyData.idEmpresa;
-                classificacao_fiscalModel.xClassificacaoFiscal = txtxCassificacaoFiscal.Text;
-                classificacao_fiscalModel.cNCM = txtcNCM.Text;
-                classificacao_fiscalModel.cClassifcacaoFiscal = txtcClassifcacaoFiscal.Text;
-                classificacao_fiscalModel.xFundamentoLegal = txtxFundamentoLegal.Text;
-                classificacao_fiscalModel.pIPI = nudpIPI.Value;
-                classificacao_fiscalModel.pII = nudpII.Value;
-                classificacao_fiscalModel.stCalculaPisCofins = cbostCalculaPisCofins.SelectedIndexByte;
-                classificacao_fiscalModel.stRegimeTributacaoPisCofins = cbostRegimeTributacaoPisCofins.SelectedIndexByte;
-                classificacao_fiscalModel.vCoeficienteSubstituicaoPis = nudvCoeficienteSubstituicaoPis.Value;
-                classificacao_fiscalModel.vCoeficienteSubstituicaoCofins = nudvCoeficienteSubstituicaoCofins.Value;
-                classificacao_fiscalModel.pPis = nudpPis.Value;
-                classificacao_fiscalModel.pCofins = nudpCofins.Value;
-                classificacao_fiscalModel.stCompoeBaseNormalPisCofins = cbostCompoeBaseNormalPisCofins.SelectedIndexByte;
-                classificacao_fiscalModel.stCompoeBaseSubstPis = cbostCompoeBaseSubstPis.SelectedIndexByte;
-                classificacao_fiscalModel.stCompoeBaseSubstCofins = cbostCompoeBaseSubstCofins.SelectedIndexByte;
-                classificacao_fiscalModel.Ativo = cboAtivo.SelectedIndex == 1 ? true : false;
             }
             catch (Exception ex)
             {

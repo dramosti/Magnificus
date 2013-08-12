@@ -242,10 +242,8 @@ namespace HLP.UI.Entries.RecursosHumanos
         {
             try
             {
-                setorModel.xDescricao = txtxDescricao.Text;
-                setorModel.xSetor = txtxSetor.Text;
-                setorModel.xEmail = txtxEmail.Text;
                 setorModel.idEmpresa = CompanyData.idEmpresa;
+                base.CarregaClasse(setorModel);
 
             }
             catch (Exception ex)
@@ -257,10 +255,8 @@ namespace HLP.UI.Entries.RecursosHumanos
         {
             try
             {
-                txtCodigo.Text = setorModel.idSetor.ToString();
-                txtxSetor.Text = setorModel.xSetor;
-                txtxDescricao.Text = setorModel.xDescricao;
-                txtxEmail.Text = setorModel.xEmail;
+                base.CarregaPropriedades(setorModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

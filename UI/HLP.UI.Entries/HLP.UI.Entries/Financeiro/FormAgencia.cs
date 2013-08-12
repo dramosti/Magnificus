@@ -73,7 +73,7 @@ namespace HLP.UI.Entries.Financeiro
         {
             if (objMetodosForm != null)
             {
-                clidCidade.DataSource = pesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember( clidCidade), true);
+                clidCidade.DataSource = pesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember(clidCidade), true);
                 idContato.DataSource = pesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember(idContato), true);
                 Thread.CurrentThread.Abort();
             }
@@ -290,12 +290,8 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
-                txtCodigo.Text = objAgencia.idAgencia.ToString();
-                campoPesquisaidBanco.Value = objAgencia.idBanco;
-                txtcAgencia.Text = objAgencia.cAgencia;
-                txtxAgencia.Text = objAgencia.xAgencia;
-                mskxTelefone.Text = objAgencia.xTelefone;
-                txtxFax.Text = objAgencia.xFax;
+                base.CarregaPropriedades(objAgencia, true);
+                base.CarregaForm();
 
                 bsEndereco.DataSource = objAgencia.lAgencia_Endereco;
                 bsContato.DataSource = objAgencia.lAgencia_Contato;
@@ -309,11 +305,7 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
-                objAgencia.idBanco = campoPesquisaidBanco.Value;
-                objAgencia.cAgencia = txtcAgencia.Text;
-                objAgencia.xAgencia = txtxAgencia.Text;
-                objAgencia.xTelefone = mskxTelefone.Text;
-                objAgencia.xFax = txtxFax.Text;
+                base.CarregaClasse(objAgencia);
             }
             catch (Exception ex)
             {
@@ -435,7 +427,7 @@ namespace HLP.UI.Entries.Financeiro
                             (sender as KryptonDataGridView)["clidCidade", e.RowIndex].Value = cidade.idCidade;
                         }
                     }
-                }    
+                }
             }
         }
     }

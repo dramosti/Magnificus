@@ -35,6 +35,7 @@ namespace Magnificus
         object[] mParam = null;
         bool bLoad = true;
         private int _cacheWidth;
+        private bool bTxtPesquisaFocado = false;
 
 
 
@@ -1200,6 +1201,30 @@ namespace Magnificus
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+        }
+
+        private void FormModuloMagnificus_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(txtPesquisaForm.Focused)
+            {
+                return;
+            }
+            if (bTxtPesquisaFocado)
+            {
+                if (e.KeyCode == Keys.Tab)
+                {
+                    if (treeViewPesquisa.Nodes.Count > 0)
+                    {
+                        treeViewPesquisa.Focus();
+                        bTxtPesquisaFocado = false;
+                    }
+                }
+            }
+        }
+
+        private void txtPesquisaForm_Enter(object sender, EventArgs e)
+        {
+            bTxtPesquisaFocado = true;
         }
     }
 }

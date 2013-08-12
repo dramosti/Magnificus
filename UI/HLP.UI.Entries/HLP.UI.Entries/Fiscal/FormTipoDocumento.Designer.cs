@@ -75,12 +75,12 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(1370, 453);
+            this.panel1.Size = new System.Drawing.Size(1362, 453);
             // 
             // panelPadrao
             // 
             this.panelPadrao.Controls.Add(this.kryptonTabControl1);
-            this.panelPadrao.Size = new System.Drawing.Size(1368, 429);
+            this.panelPadrao.Size = new System.Drawing.Size(1360, 429);
             // 
             // Principal
             // 
@@ -119,7 +119,7 @@
             this.Principal.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Principal.Location = new System.Drawing.Point(0, 0);
             this.Principal.Name = "Principal";
-            this.Principal.Size = new System.Drawing.Size(1354, 394);
+            this.Principal.Size = new System.Drawing.Size(1346, 394);
             this.Principal.TabIndex = 1;
             this.Principal.Tag = "Principal";
             // 
@@ -130,7 +130,7 @@
             this.hlP_LabelSeparator1_Geral.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparator1_Geral.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparator1_Geral.Name = "hlP_LabelSeparator1_Geral";
-            this.hlP_LabelSeparator1_Geral.Size = new System.Drawing.Size(300, 18);
+            this.hlP_LabelSeparator1_Geral.Size = new System.Drawing.Size(300, 19);
             this.hlP_LabelSeparator1_Geral.TabIndex = 29;
             this.hlP_LabelSeparator1_Geral.TabStop = false;
             // 
@@ -146,15 +146,16 @@
             this.txtCodigo._Table = "Tipo_documento";
             this.txtCodigo._TamanhoComponente = 107;
             this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = true;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(158, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(158, 28);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(158, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(152, 21);
             this.txtCodigo.TabIndex = 0;
@@ -171,22 +172,23 @@
             this.txtxTpdoc._Table = "Tipo_documento";
             this.txtxTpdoc._TamanhoComponente = 312;
             this.txtxTpdoc._TamanhoMaiorLabel = 200;
-            this.txtxTpdoc._Visible = true;
             this.txtxTpdoc.BackColor = System.Drawing.Color.Transparent;
             this.txtxTpdoc.Base = null;
+            this.txtxTpdoc.bConfiguracao = false;
             this.txtxTpdoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxTpdoc.Color = System.Drawing.Color.White;
-            this.txtxTpdoc.Location = new System.Drawing.Point(166, 54);
+            this.txtxTpdoc.Location = new System.Drawing.Point(166, 55);
             this.txtxTpdoc.Margin = new System.Windows.Forms.Padding(166, 3, 15, 3);
             this.txtxTpdoc.MaxLength = 32767;
             this.txtxTpdoc.Name = "txtxTpdoc";
+            this.txtxTpdoc.objConfigComponenteModel = null;
             this.txtxTpdoc.ReadOnly = false;
             this.txtxTpdoc.Size = new System.Drawing.Size(349, 21);
             this.txtxTpdoc.TabIndex = 1;
             // 
             // cbotpDocumento
             // 
-            this.cbotpDocumento._Field = "tpDocumento";
+            this.cbotpDocumento._Field = "stDocumento";
             this.cbotpDocumento._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbotpDocumento._Itens")));
             this.cbotpDocumento._LabelGroup = this.hlP_LabelSeparator1_Geral;
             this.cbotpDocumento._LabelText = "Tipo de documento";
@@ -196,15 +198,16 @@
             this.cbotpDocumento._Table = "Tipo_documento";
             this.cbotpDocumento._TamanhoComponente = 197;
             this.cbotpDocumento._TamanhoMaiorLabel = 200;
-            this.cbotpDocumento._Visible = true;
             this.cbotpDocumento.BackColor = System.Drawing.Color.Transparent;
             this.cbotpDocumento.Base = null;
+            this.cbotpDocumento.bConfiguracao = false;
             this.cbotpDocumento.Color = System.Drawing.Color.White;
             this.cbotpDocumento.DataSource = null;
             this.cbotpDocumento.DisplayMember = "DisplayMember";
-            this.cbotpDocumento.Location = new System.Drawing.Point(96, 81);
+            this.cbotpDocumento.Location = new System.Drawing.Point(96, 82);
             this.cbotpDocumento.Margin = new System.Windows.Forms.Padding(96, 3, 15, 3);
             this.cbotpDocumento.Name = "cbotpDocumento";
+            this.cbotpDocumento.objConfigComponenteModel = null;
             this.cbotpDocumento.SelectedIndex = -1;
             this.cbotpDocumento.SelectedValue = 0;
             this.cbotpDocumento.Size = new System.Drawing.Size(304, 21);
@@ -218,17 +221,18 @@
             this.lsOperacoesValidas._LabelText = "Operações válidas";
             this.lsOperacoesValidas._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.lsOperacoesValidas._Regex = null;
-            this.lsOperacoesValidas._TamanhoComponente = 291;
+            this.lsOperacoesValidas._TamanhoComponente = 316;
             this.lsOperacoesValidas._TamanhoMaiorLabel = 200;
-            this.lsOperacoesValidas._Visible = true;
             this.lsOperacoesValidas.BackColor = System.Drawing.Color.Transparent;
             this.lsOperacoesValidas.Base = null;
+            this.lsOperacoesValidas.bConfiguracao = false;
             this.lsOperacoesValidas.Color = System.Drawing.Color.White;
             this.lsOperacoesValidas.DataSource = null;
             this.lsOperacoesValidas.DisplayMember = "DisplayMember";
-            this.lsOperacoesValidas.Location = new System.Drawing.Point(103, 108);
+            this.lsOperacoesValidas.Location = new System.Drawing.Point(103, 109);
             this.lsOperacoesValidas.Margin = new System.Windows.Forms.Padding(103, 3, 15, 3);
             this.lsOperacoesValidas.Name = "lsOperacoesValidas";
+            this.lsOperacoesValidas.objConfigComponenteModel = null;
             this.lsOperacoesValidas.Size = new System.Drawing.Size(416, 102);
             this.lsOperacoesValidas.TabIndex = 9;
             this.lsOperacoesValidas.ValueMember = "ValueMember";
@@ -245,15 +249,16 @@
             this.cbostRelacaoPedidoxorcamento._Table = "Tipo_documento";
             this.cbostRelacaoPedidoxorcamento._TamanhoComponente = 240;
             this.cbostRelacaoPedidoxorcamento._TamanhoMaiorLabel = 200;
-            this.cbostRelacaoPedidoxorcamento._Visible = true;
             this.cbostRelacaoPedidoxorcamento.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoPedidoxorcamento.Base = null;
+            this.cbostRelacaoPedidoxorcamento.bConfiguracao = false;
             this.cbostRelacaoPedidoxorcamento.Color = System.Drawing.Color.White;
             this.cbostRelacaoPedidoxorcamento.DataSource = null;
             this.cbostRelacaoPedidoxorcamento.DisplayMember = "DisplayMember";
-            this.cbostRelacaoPedidoxorcamento.Location = new System.Drawing.Point(17, 216);
+            this.cbostRelacaoPedidoxorcamento.Location = new System.Drawing.Point(17, 217);
             this.cbostRelacaoPedidoxorcamento.Margin = new System.Windows.Forms.Padding(17, 3, 15, 3);
             this.cbostRelacaoPedidoxorcamento.Name = "cbostRelacaoPedidoxorcamento";
+            this.cbostRelacaoPedidoxorcamento.objConfigComponenteModel = null;
             this.cbostRelacaoPedidoxorcamento.SelectedIndex = -1;
             this.cbostRelacaoPedidoxorcamento.SelectedValue = 0;
             this.cbostRelacaoPedidoxorcamento.Size = new System.Drawing.Size(426, 21);
@@ -272,15 +277,16 @@
             this.cbostRelacaoPedidoxnf._Table = "Tipo_documento";
             this.cbostRelacaoPedidoxnf._TamanhoComponente = 312;
             this.cbostRelacaoPedidoxnf._TamanhoMaiorLabel = 200;
-            this.cbostRelacaoPedidoxnf._Visible = true;
             this.cbostRelacaoPedidoxnf.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoPedidoxnf.Base = null;
+            this.cbostRelacaoPedidoxnf.bConfiguracao = false;
             this.cbostRelacaoPedidoxnf.Color = System.Drawing.Color.White;
             this.cbostRelacaoPedidoxnf.DataSource = null;
             this.cbostRelacaoPedidoxnf.DisplayMember = "DisplayMember";
-            this.cbostRelacaoPedidoxnf.Location = new System.Drawing.Point(8, 243);
+            this.cbostRelacaoPedidoxnf.Location = new System.Drawing.Point(8, 244);
             this.cbostRelacaoPedidoxnf.Margin = new System.Windows.Forms.Padding(8, 3, 15, 3);
             this.cbostRelacaoPedidoxnf.Name = "cbostRelacaoPedidoxnf";
+            this.cbostRelacaoPedidoxnf.objConfigComponenteModel = null;
             this.cbostRelacaoPedidoxnf.SelectedIndex = -1;
             this.cbostRelacaoPedidoxnf.SelectedValue = 0;
             this.cbostRelacaoPedidoxnf.Size = new System.Drawing.Size(507, 21);
@@ -299,15 +305,16 @@
             this.cbostRelacaoPedidoxproducao._Table = "Tipo_documento";
             this.cbostRelacaoPedidoxproducao._TamanhoComponente = 254;
             this.cbostRelacaoPedidoxproducao._TamanhoMaiorLabel = 200;
-            this.cbostRelacaoPedidoxproducao._Visible = true;
             this.cbostRelacaoPedidoxproducao.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoPedidoxproducao.Base = null;
+            this.cbostRelacaoPedidoxproducao.bConfiguracao = false;
             this.cbostRelacaoPedidoxproducao.Color = System.Drawing.Color.White;
             this.cbostRelacaoPedidoxproducao.DataSource = null;
             this.cbostRelacaoPedidoxproducao.DisplayMember = "DisplayMember";
-            this.cbostRelacaoPedidoxproducao.Location = new System.Drawing.Point(22, 270);
+            this.cbostRelacaoPedidoxproducao.Location = new System.Drawing.Point(22, 271);
             this.cbostRelacaoPedidoxproducao.Margin = new System.Windows.Forms.Padding(22, 3, 15, 3);
             this.cbostRelacaoPedidoxproducao.Name = "cbostRelacaoPedidoxproducao";
+            this.cbostRelacaoPedidoxproducao.objConfigComponenteModel = null;
             this.cbostRelacaoPedidoxproducao.SelectedIndex = -1;
             this.cbostRelacaoPedidoxproducao.SelectedValue = 0;
             this.cbostRelacaoPedidoxproducao.Size = new System.Drawing.Size(435, 21);
@@ -326,15 +333,16 @@
             this.cbostGrupoFaturamento._Table = "Tipo_documento";
             this.cbostGrupoFaturamento._TamanhoComponente = 39;
             this.cbostGrupoFaturamento._TamanhoMaiorLabel = 200;
-            this.cbostGrupoFaturamento._Visible = true;
             this.cbostGrupoFaturamento.BackColor = System.Drawing.Color.Transparent;
             this.cbostGrupoFaturamento.Base = null;
+            this.cbostGrupoFaturamento.bConfiguracao = false;
             this.cbostGrupoFaturamento.Color = System.Drawing.Color.White;
             this.cbostGrupoFaturamento.DataSource = null;
             this.cbostGrupoFaturamento.DisplayMember = "DisplayMember";
-            this.cbostGrupoFaturamento.Location = new System.Drawing.Point(80, 297);
+            this.cbostGrupoFaturamento.Location = new System.Drawing.Point(80, 298);
             this.cbostGrupoFaturamento.Margin = new System.Windows.Forms.Padding(80, 3, 15, 3);
             this.cbostGrupoFaturamento.Name = "cbostGrupoFaturamento";
+            this.cbostGrupoFaturamento.objConfigComponenteModel = null;
             this.cbostGrupoFaturamento.SelectedIndex = -1;
             this.cbostGrupoFaturamento.SelectedValue = 0;
             this.cbostGrupoFaturamento.Size = new System.Drawing.Size(162, 21);
@@ -353,22 +361,23 @@
             this.txtxSerieNf._Table = "Tipo_documento";
             this.txtxSerieNf._TamanhoComponente = 137;
             this.txtxSerieNf._TamanhoMaiorLabel = 200;
-            this.txtxSerieNf._Visible = true;
             this.txtxSerieNf.BackColor = System.Drawing.Color.Transparent;
             this.txtxSerieNf.Base = null;
+            this.txtxSerieNf.bConfiguracao = false;
             this.txtxSerieNf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxSerieNf.Color = System.Drawing.Color.White;
-            this.txtxSerieNf.Location = new System.Drawing.Point(141, 324);
+            this.txtxSerieNf.Location = new System.Drawing.Point(141, 325);
             this.txtxSerieNf.Margin = new System.Windows.Forms.Padding(141, 3, 15, 3);
             this.txtxSerieNf.MaxLength = 32767;
             this.txtxSerieNf.Name = "txtxSerieNf";
+            this.txtxSerieNf.objConfigComponenteModel = null;
             this.txtxSerieNf.ReadOnly = false;
             this.txtxSerieNf.Size = new System.Drawing.Size(199, 21);
             this.txtxSerieNf.TabIndex = 4;
             // 
             // txtxEspecieVolNf
             // 
-            this.txtxEspecieVolNf._Field = "xEspecieVolNf";
+            this.txtxEspecieVolNf._Field = "xEspecieVolumeNf";
             this.txtxEspecieVolNf._LabelGroup = this.hlP_LabelSeparator1_Geral;
             this.txtxEspecieVolNf._LabelText = "Espécie de volume da nf";
             this.txtxEspecieVolNf._Multiline = false;
@@ -378,22 +387,23 @@
             this.txtxEspecieVolNf._Table = "Tipo_documento";
             this.txtxEspecieVolNf._TamanhoComponente = 146;
             this.txtxEspecieVolNf._TamanhoMaiorLabel = 200;
-            this.txtxEspecieVolNf._Visible = true;
             this.txtxEspecieVolNf.BackColor = System.Drawing.Color.Transparent;
             this.txtxEspecieVolNf.Base = null;
+            this.txtxEspecieVolNf.bConfiguracao = false;
             this.txtxEspecieVolNf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxEspecieVolNf.Color = System.Drawing.Color.White;
-            this.txtxEspecieVolNf.Location = new System.Drawing.Point(72, 351);
+            this.txtxEspecieVolNf.Location = new System.Drawing.Point(72, 352);
             this.txtxEspecieVolNf.Margin = new System.Windows.Forms.Padding(72, 3, 15, 3);
             this.txtxEspecieVolNf.MaxLength = 32767;
             this.txtxEspecieVolNf.Name = "txtxEspecieVolNf";
+            this.txtxEspecieVolNf.objConfigComponenteModel = null;
             this.txtxEspecieVolNf.ReadOnly = false;
             this.txtxEspecieVolNf.Size = new System.Drawing.Size(277, 21);
             this.txtxEspecieVolNf.TabIndex = 4;
             // 
             // txtxMarcaVolNf
             // 
-            this.txtxMarcaVolNf._Field = "xMarcaVolNf";
+            this.txtxMarcaVolNf._Field = "xMarcaVolumeNf";
             this.txtxMarcaVolNf._LabelGroup = this.hlP_LabelSeparator1_Geral;
             this.txtxMarcaVolNf._LabelText = "Marca do volume da nf";
             this.txtxMarcaVolNf._Multiline = false;
@@ -403,15 +413,16 @@
             this.txtxMarcaVolNf._Table = "Tipo_documento";
             this.txtxMarcaVolNf._TamanhoComponente = 146;
             this.txtxMarcaVolNf._TamanhoMaiorLabel = 300;
-            this.txtxMarcaVolNf._Visible = true;
             this.txtxMarcaVolNf.BackColor = System.Drawing.Color.Transparent;
             this.txtxMarcaVolNf.Base = null;
+            this.txtxMarcaVolNf.bConfiguracao = false;
             this.txtxMarcaVolNf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxMarcaVolNf.Color = System.Drawing.Color.White;
             this.txtxMarcaVolNf.Location = new System.Drawing.Point(712, 3);
             this.txtxMarcaVolNf.Margin = new System.Windows.Forms.Padding(178, 3, 15, 3);
             this.txtxMarcaVolNf.MaxLength = 32767;
             this.txtxMarcaVolNf.Name = "txtxMarcaVolNf";
+            this.txtxMarcaVolNf.objConfigComponenteModel = null;
             this.txtxMarcaVolNf.ReadOnly = false;
             this.txtxMarcaVolNf.Size = new System.Drawing.Size(271, 21);
             this.txtxMarcaVolNf.TabIndex = 4;
@@ -426,20 +437,21 @@
             this.cbostSomaIpi1Dup._Regex = null;
             this.cbostSomaIpi1Dup._situacao = true;
             this.cbostSomaIpi1Dup._Table = "Tipo_documento";
-            this.cbostSomaIpi1Dup._TamanhoComponente = 79;
+            this.cbostSomaIpi1Dup._TamanhoComponente = 80;
             this.cbostSomaIpi1Dup._TamanhoMaiorLabel = 300;
-            this.cbostSomaIpi1Dup._Visible = true;
             this.cbostSomaIpi1Dup.BackColor = System.Drawing.Color.Transparent;
             this.cbostSomaIpi1Dup.Base = null;
+            this.cbostSomaIpi1Dup.bConfiguracao = false;
             this.cbostSomaIpi1Dup.Color = System.Drawing.Color.White;
             this.cbostSomaIpi1Dup.DataSource = null;
             this.cbostSomaIpi1Dup.DisplayMember = "DisplayMember";
             this.cbostSomaIpi1Dup.Location = new System.Drawing.Point(609, 30);
             this.cbostSomaIpi1Dup.Margin = new System.Windows.Forms.Padding(75, 3, 15, 3);
             this.cbostSomaIpi1Dup.Name = "cbostSomaIpi1Dup";
+            this.cbostSomaIpi1Dup.objConfigComponenteModel = null;
             this.cbostSomaIpi1Dup.SelectedIndex = -1;
             this.cbostSomaIpi1Dup.SelectedValue = 0;
-            this.cbostSomaIpi1Dup.Size = new System.Drawing.Size(307, 21);
+            this.cbostSomaIpi1Dup.Size = new System.Drawing.Size(308, 21);
             this.cbostSomaIpi1Dup.TabIndex = 5;
             this.cbostSomaIpi1Dup.ValueMember = "ValueMember";
             // 
@@ -455,15 +467,16 @@
             this.cbostSomaSt1Dup._Table = "Tipo_documento";
             this.cbostSomaSt1Dup._TamanhoComponente = 80;
             this.cbostSomaSt1Dup._TamanhoMaiorLabel = 300;
-            this.cbostSomaSt1Dup._Visible = true;
             this.cbostSomaSt1Dup.BackColor = System.Drawing.Color.Transparent;
             this.cbostSomaSt1Dup.Base = null;
+            this.cbostSomaSt1Dup.bConfiguracao = false;
             this.cbostSomaSt1Dup.Color = System.Drawing.Color.White;
             this.cbostSomaSt1Dup.DataSource = null;
             this.cbostSomaSt1Dup.DisplayMember = "DisplayMember";
             this.cbostSomaSt1Dup.Location = new System.Drawing.Point(545, 57);
             this.cbostSomaSt1Dup.Margin = new System.Windows.Forms.Padding(11, 3, 15, 3);
             this.cbostSomaSt1Dup.Name = "cbostSomaSt1Dup";
+            this.cbostSomaSt1Dup.objConfigComponenteModel = null;
             this.cbostSomaSt1Dup.SelectedIndex = -1;
             this.cbostSomaSt1Dup.SelectedValue = 0;
             this.cbostSomaSt1Dup.Size = new System.Drawing.Size(372, 21);
@@ -480,20 +493,21 @@
             this.cbostNfComplementar._Regex = null;
             this.cbostNfComplementar._situacao = true;
             this.cbostNfComplementar._Table = "Tipo_documento";
-            this.cbostNfComplementar._TamanhoComponente = 83;
+            this.cbostNfComplementar._TamanhoComponente = 80;
             this.cbostNfComplementar._TamanhoMaiorLabel = 300;
-            this.cbostNfComplementar._Visible = true;
             this.cbostNfComplementar.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfComplementar.Base = null;
+            this.cbostNfComplementar.bConfiguracao = false;
             this.cbostNfComplementar.Color = System.Drawing.Color.White;
             this.cbostNfComplementar.DataSource = null;
             this.cbostNfComplementar.DisplayMember = "DisplayMember";
             this.cbostNfComplementar.Location = new System.Drawing.Point(729, 84);
             this.cbostNfComplementar.Margin = new System.Windows.Forms.Padding(195, 3, 15, 3);
             this.cbostNfComplementar.Name = "cbostNfComplementar";
+            this.cbostNfComplementar.objConfigComponenteModel = null;
             this.cbostNfComplementar.SelectedIndex = -1;
             this.cbostNfComplementar.SelectedValue = 0;
-            this.cbostNfComplementar.Size = new System.Drawing.Size(191, 21);
+            this.cbostNfComplementar.Size = new System.Drawing.Size(188, 21);
             this.cbostNfComplementar.TabIndex = 5;
             this.cbostNfComplementar.ValueMember = "ValueMember";
             // 
@@ -507,20 +521,21 @@
             this.cbostNfImportacao._Regex = null;
             this.cbostNfImportacao._situacao = true;
             this.cbostNfImportacao._Table = "Tipo_documento";
-            this.cbostNfImportacao._TamanhoComponente = 83;
+            this.cbostNfImportacao._TamanhoComponente = 80;
             this.cbostNfImportacao._TamanhoMaiorLabel = 300;
-            this.cbostNfImportacao._Visible = true;
             this.cbostNfImportacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfImportacao.Base = null;
+            this.cbostNfImportacao.bConfiguracao = false;
             this.cbostNfImportacao.Color = System.Drawing.Color.White;
             this.cbostNfImportacao.DataSource = null;
             this.cbostNfImportacao.DisplayMember = "DisplayMember";
             this.cbostNfImportacao.Location = new System.Drawing.Point(728, 111);
             this.cbostNfImportacao.Margin = new System.Windows.Forms.Padding(194, 3, 15, 3);
             this.cbostNfImportacao.Name = "cbostNfImportacao";
+            this.cbostNfImportacao.objConfigComponenteModel = null;
             this.cbostNfImportacao.SelectedIndex = -1;
             this.cbostNfImportacao.SelectedValue = 0;
-            this.cbostNfImportacao.Size = new System.Drawing.Size(192, 21);
+            this.cbostNfImportacao.Size = new System.Drawing.Size(189, 21);
             this.cbostNfImportacao.TabIndex = 5;
             this.cbostNfImportacao.ValueMember = "ValueMember";
             // 
@@ -534,20 +549,21 @@
             this.cbostNfExportacao._Regex = null;
             this.cbostNfExportacao._situacao = false;
             this.cbostNfExportacao._Table = "Tipo_documento";
-            this.cbostNfExportacao._TamanhoComponente = 181;
+            this.cbostNfExportacao._TamanhoComponente = 178;
             this.cbostNfExportacao._TamanhoMaiorLabel = 300;
-            this.cbostNfExportacao._Visible = true;
             this.cbostNfExportacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfExportacao.Base = null;
+            this.cbostNfExportacao.bConfiguracao = false;
             this.cbostNfExportacao.Color = System.Drawing.Color.White;
             this.cbostNfExportacao.DataSource = null;
             this.cbostNfExportacao.DisplayMember = "DisplayMember";
             this.cbostNfExportacao.Location = new System.Drawing.Point(729, 138);
             this.cbostNfExportacao.Margin = new System.Windows.Forms.Padding(195, 3, 15, 3);
             this.cbostNfExportacao.Name = "cbostNfExportacao";
+            this.cbostNfExportacao.objConfigComponenteModel = null;
             this.cbostNfExportacao.SelectedIndex = -1;
             this.cbostNfExportacao.SelectedValue = 0;
-            this.cbostNfExportacao.Size = new System.Drawing.Size(289, 21);
+            this.cbostNfExportacao.Size = new System.Drawing.Size(286, 21);
             this.cbostNfExportacao.TabIndex = 5;
             this.cbostNfExportacao.ValueMember = "ValueMember";
             // 
@@ -561,20 +577,21 @@
             this.cbostNfIndustrializacao._Regex = null;
             this.cbostNfIndustrializacao._situacao = true;
             this.cbostNfIndustrializacao._Table = "Tipo_documento";
-            this.cbostNfIndustrializacao._TamanhoComponente = 83;
+            this.cbostNfIndustrializacao._TamanhoComponente = 80;
             this.cbostNfIndustrializacao._TamanhoMaiorLabel = 300;
-            this.cbostNfIndustrializacao._Visible = true;
             this.cbostNfIndustrializacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfIndustrializacao.Base = null;
+            this.cbostNfIndustrializacao.bConfiguracao = false;
             this.cbostNfIndustrializacao.Color = System.Drawing.Color.White;
             this.cbostNfIndustrializacao.DataSource = null;
             this.cbostNfIndustrializacao.DisplayMember = "DisplayMember";
             this.cbostNfIndustrializacao.Location = new System.Drawing.Point(705, 165);
             this.cbostNfIndustrializacao.Margin = new System.Windows.Forms.Padding(171, 3, 15, 3);
             this.cbostNfIndustrializacao.Name = "cbostNfIndustrializacao";
+            this.cbostNfIndustrializacao.objConfigComponenteModel = null;
             this.cbostNfIndustrializacao.SelectedIndex = -1;
             this.cbostNfIndustrializacao.SelectedValue = 0;
-            this.cbostNfIndustrializacao.Size = new System.Drawing.Size(215, 21);
+            this.cbostNfIndustrializacao.Size = new System.Drawing.Size(212, 21);
             this.cbostNfIndustrializacao.TabIndex = 5;
             this.cbostNfIndustrializacao.ValueMember = "ValueMember";
             // 
@@ -588,20 +605,21 @@
             this.cbostNfSuframa._Regex = null;
             this.cbostNfSuframa._situacao = true;
             this.cbostNfSuframa._Table = "Tipo_documento";
-            this.cbostNfSuframa._TamanhoComponente = 83;
+            this.cbostNfSuframa._TamanhoComponente = 80;
             this.cbostNfSuframa._TamanhoMaiorLabel = 300;
-            this.cbostNfSuframa._Visible = true;
             this.cbostNfSuframa.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfSuframa.Base = null;
+            this.cbostNfSuframa.bConfiguracao = false;
             this.cbostNfSuframa.Color = System.Drawing.Color.White;
             this.cbostNfSuframa.DataSource = null;
             this.cbostNfSuframa.DisplayMember = "DisplayMember";
             this.cbostNfSuframa.Location = new System.Drawing.Point(745, 192);
             this.cbostNfSuframa.Margin = new System.Windows.Forms.Padding(211, 3, 15, 3);
             this.cbostNfSuframa.Name = "cbostNfSuframa";
+            this.cbostNfSuframa.objConfigComponenteModel = null;
             this.cbostNfSuframa.SelectedIndex = -1;
             this.cbostNfSuframa.SelectedValue = 0;
-            this.cbostNfSuframa.Size = new System.Drawing.Size(175, 21);
+            this.cbostNfSuframa.Size = new System.Drawing.Size(172, 21);
             this.cbostNfSuframa.TabIndex = 5;
             this.cbostNfSuframa.ValueMember = "ValueMember";
             // 
@@ -615,20 +633,21 @@
             this.cbostNfAtivo._Regex = null;
             this.cbostNfAtivo._situacao = true;
             this.cbostNfAtivo._Table = "Tipo_documento";
-            this.cbostNfAtivo._TamanhoComponente = 83;
+            this.cbostNfAtivo._TamanhoComponente = 80;
             this.cbostNfAtivo._TamanhoMaiorLabel = 300;
-            this.cbostNfAtivo._Visible = true;
             this.cbostNfAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cbostNfAtivo.Base = null;
+            this.cbostNfAtivo.bConfiguracao = false;
             this.cbostNfAtivo.Color = System.Drawing.Color.White;
             this.cbostNfAtivo.DataSource = null;
             this.cbostNfAtivo.DisplayMember = "DisplayMember";
             this.cbostNfAtivo.Location = new System.Drawing.Point(761, 219);
             this.cbostNfAtivo.Margin = new System.Windows.Forms.Padding(227, 3, 15, 3);
             this.cbostNfAtivo.Name = "cbostNfAtivo";
+            this.cbostNfAtivo.objConfigComponenteModel = null;
             this.cbostNfAtivo.SelectedIndex = -1;
             this.cbostNfAtivo.SelectedValue = 0;
-            this.cbostNfAtivo.Size = new System.Drawing.Size(159, 21);
+            this.cbostNfAtivo.Size = new System.Drawing.Size(156, 21);
             this.cbostNfAtivo.TabIndex = 5;
             this.cbostNfAtivo.ValueMember = "ValueMember";
             // 
@@ -642,20 +661,21 @@
             this.cbostNFdevolucao._Regex = null;
             this.cbostNFdevolucao._situacao = true;
             this.cbostNFdevolucao._Table = "Tipo_documento";
-            this.cbostNFdevolucao._TamanhoComponente = 83;
+            this.cbostNFdevolucao._TamanhoComponente = 80;
             this.cbostNFdevolucao._TamanhoMaiorLabel = 300;
-            this.cbostNFdevolucao._Visible = true;
             this.cbostNFdevolucao.BackColor = System.Drawing.Color.Transparent;
             this.cbostNFdevolucao.Base = null;
+            this.cbostNFdevolucao.bConfiguracao = false;
             this.cbostNFdevolucao.Color = System.Drawing.Color.White;
             this.cbostNFdevolucao.DataSource = null;
             this.cbostNFdevolucao.DisplayMember = "DisplayMember";
             this.cbostNFdevolucao.Location = new System.Drawing.Point(733, 246);
             this.cbostNFdevolucao.Margin = new System.Windows.Forms.Padding(199, 3, 15, 3);
             this.cbostNFdevolucao.Name = "cbostNFdevolucao";
+            this.cbostNFdevolucao.objConfigComponenteModel = null;
             this.cbostNFdevolucao.SelectedIndex = -1;
             this.cbostNFdevolucao.SelectedValue = 0;
-            this.cbostNFdevolucao.Size = new System.Drawing.Size(187, 21);
+            this.cbostNFdevolucao.Size = new System.Drawing.Size(184, 21);
             this.cbostNFdevolucao.TabIndex = 5;
             this.cbostNFdevolucao.ValueMember = "ValueMember";
             // 
@@ -671,15 +691,16 @@
             this.cbostCompoeVlTotalProdutos._Table = "Tipo_documento";
             this.cbostCompoeVlTotalProdutos._TamanhoComponente = 134;
             this.cbostCompoeVlTotalProdutos._TamanhoMaiorLabel = 300;
-            this.cbostCompoeVlTotalProdutos._Visible = true;
             this.cbostCompoeVlTotalProdutos.BackColor = System.Drawing.Color.Transparent;
             this.cbostCompoeVlTotalProdutos.Base = null;
+            this.cbostCompoeVlTotalProdutos.bConfiguracao = false;
             this.cbostCompoeVlTotalProdutos.Color = System.Drawing.Color.White;
             this.cbostCompoeVlTotalProdutos.DataSource = null;
             this.cbostCompoeVlTotalProdutos.DisplayMember = "DisplayMember";
             this.cbostCompoeVlTotalProdutos.Location = new System.Drawing.Point(644, 273);
             this.cbostCompoeVlTotalProdutos.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
             this.cbostCompoeVlTotalProdutos.Name = "cbostCompoeVlTotalProdutos";
+            this.cbostCompoeVlTotalProdutos.objConfigComponenteModel = null;
             this.cbostCompoeVlTotalProdutos.SelectedIndex = -1;
             this.cbostCompoeVlTotalProdutos.SelectedValue = 0;
             this.cbostCompoeVlTotalProdutos.Size = new System.Drawing.Size(327, 21);
@@ -696,20 +717,21 @@
             this.cbostSomaDevolucaoVlTotalNf._Regex = null;
             this.cbostSomaDevolucaoVlTotalNf._situacao = true;
             this.cbostSomaDevolucaoVlTotalNf._Table = "Tipo_documento";
-            this.cbostSomaDevolucaoVlTotalNf._TamanhoComponente = 83;
+            this.cbostSomaDevolucaoVlTotalNf._TamanhoComponente = 80;
             this.cbostSomaDevolucaoVlTotalNf._TamanhoMaiorLabel = 300;
-            this.cbostSomaDevolucaoVlTotalNf._Visible = true;
             this.cbostSomaDevolucaoVlTotalNf.BackColor = System.Drawing.Color.Transparent;
             this.cbostSomaDevolucaoVlTotalNf.Base = null;
+            this.cbostSomaDevolucaoVlTotalNf.bConfiguracao = false;
             this.cbostSomaDevolucaoVlTotalNf.Color = System.Drawing.Color.White;
             this.cbostSomaDevolucaoVlTotalNf.DataSource = null;
             this.cbostSomaDevolucaoVlTotalNf.DisplayMember = "DisplayMember";
             this.cbostSomaDevolucaoVlTotalNf.Location = new System.Drawing.Point(658, 300);
             this.cbostSomaDevolucaoVlTotalNf.Margin = new System.Windows.Forms.Padding(124, 3, 15, 3);
             this.cbostSomaDevolucaoVlTotalNf.Name = "cbostSomaDevolucaoVlTotalNf";
+            this.cbostSomaDevolucaoVlTotalNf.objConfigComponenteModel = null;
             this.cbostSomaDevolucaoVlTotalNf.SelectedIndex = -1;
             this.cbostSomaDevolucaoVlTotalNf.SelectedValue = 0;
-            this.cbostSomaDevolucaoVlTotalNf.Size = new System.Drawing.Size(262, 21);
+            this.cbostSomaDevolucaoVlTotalNf.Size = new System.Drawing.Size(259, 21);
             this.cbostSomaDevolucaoVlTotalNf.TabIndex = 5;
             this.cbostSomaDevolucaoVlTotalNf.ValueMember = "ValueMember";
             // 
@@ -723,20 +745,21 @@
             this.cbostImprimeIcmsProprioComNormal._Regex = null;
             this.cbostImprimeIcmsProprioComNormal._situacao = true;
             this.cbostImprimeIcmsProprioComNormal._Table = "Tipo_documento";
-            this.cbostImprimeIcmsProprioComNormal._TamanhoComponente = 87;
+            this.cbostImprimeIcmsProprioComNormal._TamanhoComponente = 80;
             this.cbostImprimeIcmsProprioComNormal._TamanhoMaiorLabel = 300;
-            this.cbostImprimeIcmsProprioComNormal._Visible = true;
             this.cbostImprimeIcmsProprioComNormal.BackColor = System.Drawing.Color.Transparent;
             this.cbostImprimeIcmsProprioComNormal.Base = null;
+            this.cbostImprimeIcmsProprioComNormal.bConfiguracao = false;
             this.cbostImprimeIcmsProprioComNormal.Color = System.Drawing.Color.White;
             this.cbostImprimeIcmsProprioComNormal.DataSource = null;
             this.cbostImprimeIcmsProprioComNormal.DisplayMember = "DisplayMember";
             this.cbostImprimeIcmsProprioComNormal.Location = new System.Drawing.Point(624, 327);
             this.cbostImprimeIcmsProprioComNormal.Margin = new System.Windows.Forms.Padding(90, 3, 15, 3);
             this.cbostImprimeIcmsProprioComNormal.Name = "cbostImprimeIcmsProprioComNormal";
+            this.cbostImprimeIcmsProprioComNormal.objConfigComponenteModel = null;
             this.cbostImprimeIcmsProprioComNormal.SelectedIndex = -1;
             this.cbostImprimeIcmsProprioComNormal.SelectedValue = 0;
-            this.cbostImprimeIcmsProprioComNormal.Size = new System.Drawing.Size(300, 21);
+            this.cbostImprimeIcmsProprioComNormal.Size = new System.Drawing.Size(293, 21);
             this.cbostImprimeIcmsProprioComNormal.TabIndex = 5;
             this.cbostImprimeIcmsProprioComNormal.ValueMember = "ValueMember";
             // 
@@ -752,15 +775,16 @@
             this.cbostRelacaoRecebimentoPedidocpa._Table = "Tipo_documento";
             this.cbostRelacaoRecebimentoPedidocpa._TamanhoComponente = 80;
             this.cbostRelacaoRecebimentoPedidocpa._TamanhoMaiorLabel = 300;
-            this.cbostRelacaoRecebimentoPedidocpa._Visible = true;
             this.cbostRelacaoRecebimentoPedidocpa.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoRecebimentoPedidocpa.Base = null;
+            this.cbostRelacaoRecebimentoPedidocpa.bConfiguracao = false;
             this.cbostRelacaoRecebimentoPedidocpa.Color = System.Drawing.Color.White;
             this.cbostRelacaoRecebimentoPedidocpa.DataSource = null;
             this.cbostRelacaoRecebimentoPedidocpa.DisplayMember = "DisplayMember";
             this.cbostRelacaoRecebimentoPedidocpa.Location = new System.Drawing.Point(585, 354);
             this.cbostRelacaoRecebimentoPedidocpa.Margin = new System.Windows.Forms.Padding(51, 3, 15, 3);
             this.cbostRelacaoRecebimentoPedidocpa.Name = "cbostRelacaoRecebimentoPedidocpa";
+            this.cbostRelacaoRecebimentoPedidocpa.objConfigComponenteModel = null;
             this.cbostRelacaoRecebimentoPedidocpa.SelectedIndex = -1;
             this.cbostRelacaoRecebimentoPedidocpa.SelectedValue = 0;
             this.cbostRelacaoRecebimentoPedidocpa.Size = new System.Drawing.Size(332, 21);
@@ -779,15 +803,16 @@
             this.cbostRelacaoPedidocpaCotacao._Table = "Tipo_documento";
             this.cbostRelacaoPedidocpaCotacao._TamanhoComponente = 80;
             this.cbostRelacaoPedidocpaCotacao._TamanhoMaiorLabel = 300;
-            this.cbostRelacaoPedidocpaCotacao._Visible = true;
             this.cbostRelacaoPedidocpaCotacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostRelacaoPedidocpaCotacao.Base = null;
+            this.cbostRelacaoPedidocpaCotacao.bConfiguracao = false;
             this.cbostRelacaoPedidocpaCotacao.Color = System.Drawing.Color.White;
             this.cbostRelacaoPedidocpaCotacao.DataSource = null;
             this.cbostRelacaoPedidocpaCotacao.DisplayMember = "DisplayMember";
-            this.cbostRelacaoPedidocpaCotacao.Location = new System.Drawing.Point(1051, 3);
+            this.cbostRelacaoPedidocpaCotacao.Location = new System.Drawing.Point(1048, 3);
             this.cbostRelacaoPedidocpaCotacao.Margin = new System.Windows.Forms.Padding(18, 3, 15, 3);
             this.cbostRelacaoPedidocpaCotacao.Name = "cbostRelacaoPedidocpaCotacao";
+            this.cbostRelacaoPedidocpaCotacao.objConfigComponenteModel = null;
             this.cbostRelacaoPedidocpaCotacao.SelectedIndex = -1;
             this.cbostRelacaoPedidocpaCotacao.SelectedValue = 0;
             this.cbostRelacaoPedidocpaCotacao.Size = new System.Drawing.Size(365, 21);
@@ -807,18 +832,19 @@
             this.campoPesquisaidModeloDocFiscal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.campoPesquisaidModeloDocFiscal._Regex = null;
             this.campoPesquisaidModeloDocFiscal._Table = "Tipo_documento";
-            this.campoPesquisaidModeloDocFiscal._TamanhoComponente = 200;
+            this.campoPesquisaidModeloDocFiscal._TamanhoComponente = 300;
             this.campoPesquisaidModeloDocFiscal._TamanhoMaiorLabel = 300;
             this.campoPesquisaidModeloDocFiscal._Vinculado = false;
-            this.campoPesquisaidModeloDocFiscal._Visible = true;
             this.campoPesquisaidModeloDocFiscal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.campoPesquisaidModeloDocFiscal.BackColor = System.Drawing.Color.Transparent;
             this.campoPesquisaidModeloDocFiscal.Base = null;
-            this.campoPesquisaidModeloDocFiscal.Location = new System.Drawing.Point(1181, 30);
+            this.campoPesquisaidModeloDocFiscal.bConfiguracao = false;
+            this.campoPesquisaidModeloDocFiscal.Location = new System.Drawing.Point(1178, 30);
             this.campoPesquisaidModeloDocFiscal.Margin = new System.Windows.Forms.Padding(148, 3, 15, 3);
             this.campoPesquisaidModeloDocFiscal.Name = "campoPesquisaidModeloDocFiscal";
+            this.campoPesquisaidModeloDocFiscal.objConfigComponenteModel = null;
             this.campoPesquisaidModeloDocFiscal.ReadOnly = false;
-            this.campoPesquisaidModeloDocFiscal.Size = new System.Drawing.Size(445, 21);
+            this.campoPesquisaidModeloDocFiscal.Size = new System.Drawing.Size(455, 21);
             this.campoPesquisaidModeloDocFiscal.TabIndex = 6;
             this.campoPesquisaidModeloDocFiscal.Value = 0;
             // 
@@ -832,12 +858,14 @@
             this.campoxObs._Table = "Tipo_documento";
             this.campoxObs._TamanhoComponente = 109;
             this.campoxObs._TamanhoMaiorLabel = 300;
-            this.campoxObs._Visible = true;
             this.campoxObs.BackColor = System.Drawing.Color.Transparent;
             this.campoxObs.Base = null;
-            this.campoxObs.Location = new System.Drawing.Point(1269, 57);
+            this.campoxObs.bConfiguracao = false;
+            this.campoxObs.Location = new System.Drawing.Point(1266, 57);
             this.campoxObs.Margin = new System.Windows.Forms.Padding(236, 3, 15, 3);
             this.campoxObs.Name = "campoxObs";
+            this.campoxObs.objConfigComponenteModel = null;
+            this.campoxObs.ReadOnly = false;
             this.campoxObs.Size = new System.Drawing.Size(176, 26);
             this.campoxObs.TabIndex = 7;
             // 
@@ -853,15 +881,16 @@
             this.cboAtivo._Table = "Tipo_documento";
             this.cboAtivo._TamanhoComponente = 80;
             this.cboAtivo._TamanhoMaiorLabel = 300;
-            this.cboAtivo._Visible = true;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
+            this.cboAtivo.bConfiguracao = false;
             this.cboAtivo.Color = System.Drawing.Color.White;
             this.cboAtivo.DataSource = null;
             this.cboAtivo.DisplayMember = "DisplayMember";
-            this.cboAtivo.Location = new System.Drawing.Point(1250, 89);
+            this.cboAtivo.Location = new System.Drawing.Point(1247, 89);
             this.cboAtivo.Margin = new System.Windows.Forms.Padding(217, 3, 15, 3);
             this.cboAtivo.Name = "cboAtivo";
+            this.cboAtivo.objConfigComponenteModel = null;
             this.cboAtivo.SelectedIndex = -1;
             this.cboAtivo.SelectedValue = 0;
             this.cboAtivo.Size = new System.Drawing.Size(166, 21);
@@ -888,7 +917,7 @@
             this.kryptonTabControl1.Name = "kryptonTabControl1";
             this.kryptonTabControl1.PreserveTabColor = false;
             this.kryptonTabControl1.SelectedIndex = 0;
-            this.kryptonTabControl1.Size = new System.Drawing.Size(1362, 423);
+            this.kryptonTabControl1.Size = new System.Drawing.Size(1354, 423);
             this.kryptonTabControl1.TabIndex = 4;
             this.kryptonTabControl1.UseExtendedLayout = false;
             // 
@@ -899,7 +928,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1354, 394);
+            this.tabPage1.Size = new System.Drawing.Size(1346, 394);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "Principal";
@@ -916,14 +945,14 @@
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PersistentColors = false;
-            this.kryptonPanel1.Size = new System.Drawing.Size(1354, 394);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1346, 394);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // FormTipoDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 480);
+            this.ClientSize = new System.Drawing.Size(1362, 480);
             this.Name = "FormTipoDocumento";
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 

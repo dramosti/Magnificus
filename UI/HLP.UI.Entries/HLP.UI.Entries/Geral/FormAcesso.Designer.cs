@@ -223,13 +223,13 @@
             this.hlP_LabelSeparatorPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorPrincipal.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorPrincipal.Name = "hlP_LabelSeparatorPrincipal";
-            this.hlP_LabelSeparatorPrincipal.Size = new System.Drawing.Size(505, 18);
+            this.hlP_LabelSeparatorPrincipal.Size = new System.Drawing.Size(505, 19);
             this.hlP_LabelSeparatorPrincipal.TabIndex = 2;
             this.hlP_LabelSeparatorPrincipal.TabStop = false;
             // 
             // txtIdFuncionario
             // 
-            this.txtIdFuncionario._Field = "IdFuncionario";
+            this.txtIdFuncionario._Field = "idFuncionario";
             this.txtIdFuncionario._LabelGroup = this.hlP_LabelSeparatorPrincipal;
             this.txtIdFuncionario._LabelText = "Id funcionário";
             this.txtIdFuncionario._Multiline = false;
@@ -241,9 +241,10 @@
             this.txtIdFuncionario._TamanhoMaiorLabel = 100;
             this.txtIdFuncionario.BackColor = System.Drawing.Color.Transparent;
             this.txtIdFuncionario.Base = null;
+            this.txtIdFuncionario.bConfiguracao = false;
             this.txtIdFuncionario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtIdFuncionario.Color = System.Drawing.Color.White;
-            this.txtIdFuncionario.Location = new System.Drawing.Point(23, 27);
+            this.txtIdFuncionario.Location = new System.Drawing.Point(23, 28);
             this.txtIdFuncionario.Margin = new System.Windows.Forms.Padding(23, 3, 15, 3);
             this.txtIdFuncionario.MaxLength = 32767;
             this.txtIdFuncionario.Name = "txtIdFuncionario";
@@ -267,9 +268,10 @@
             this.txtxCodigoAlternativo._TamanhoMaiorLabel = 100;
             this.txtxCodigoAlternativo.BackColor = System.Drawing.Color.Transparent;
             this.txtxCodigoAlternativo.Base = null;
+            this.txtxCodigoAlternativo.bConfiguracao = false;
             this.txtxCodigoAlternativo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxCodigoAlternativo.Color = System.Drawing.Color.White;
-            this.txtxCodigoAlternativo.Location = new System.Drawing.Point(0, 56);
+            this.txtxCodigoAlternativo.Location = new System.Drawing.Point(0, 57);
             this.txtxCodigoAlternativo.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.txtxCodigoAlternativo.MaxLength = 32767;
             this.txtxCodigoAlternativo.Name = "txtxCodigoAlternativo";
@@ -292,9 +294,10 @@
             this.txtxNome._TamanhoMaiorLabel = 100;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
+            this.txtxNome.bConfiguracao = false;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxNome.Color = System.Drawing.Color.White;
-            this.txtxNome.Location = new System.Drawing.Point(66, 83);
+            this.txtxNome.Location = new System.Drawing.Point(66, 84);
             this.txtxNome.Margin = new System.Windows.Forms.Padding(66, 3, 15, 3);
             this.txtxNome.MaxLength = 32767;
             this.txtxNome.Name = "txtxNome";
@@ -308,9 +311,9 @@
             this.hlP_LabelSeparatorLogin._LabelText = "Login";
             this.hlP_LabelSeparatorLogin._TamanhoMaiorLabel = 0;
             this.hlP_LabelSeparatorLogin.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorLogin.Location = new System.Drawing.Point(3, 110);
+            this.hlP_LabelSeparatorLogin.Location = new System.Drawing.Point(3, 111);
             this.hlP_LabelSeparatorLogin.Name = "hlP_LabelSeparatorLogin";
-            this.hlP_LabelSeparatorLogin.Size = new System.Drawing.Size(505, 18);
+            this.hlP_LabelSeparatorLogin.Size = new System.Drawing.Size(505, 19);
             this.hlP_LabelSeparatorLogin.TabIndex = 6;
             this.hlP_LabelSeparatorLogin.TabStop = false;
             // 
@@ -326,8 +329,9 @@
             this.chkstUsuarioAtivo._TamanhoMaiorLabel = 100;
             this.chkstUsuarioAtivo.BackColor = System.Drawing.Color.Transparent;
             this.chkstUsuarioAtivo.Base = null;
+            this.chkstUsuarioAtivo.bConfiguracao = false;
             this.chkstUsuarioAtivo.Checked = false;
-            this.chkstUsuarioAtivo.Location = new System.Drawing.Point(23, 134);
+            this.chkstUsuarioAtivo.Location = new System.Drawing.Point(23, 136);
             this.chkstUsuarioAtivo.Margin = new System.Windows.Forms.Padding(23, 3, 15, 3);
             this.chkstUsuarioAtivo.Name = "chkstUsuarioAtivo";
             this.chkstUsuarioAtivo.objConfigComponenteModel = null;
@@ -338,7 +342,7 @@
             // 
             // txtxId
             // 
-            this.txtxId._Field = "xId";
+            this.txtxId._Field = "xID";
             this.txtxId._LabelGroup = this.hlP_LabelSeparatorLogin;
             this.txtxId._LabelText = "Login";
             this.txtxId._Multiline = false;
@@ -350,9 +354,10 @@
             this.txtxId._TamanhoMaiorLabel = 100;
             this.txtxId.BackColor = System.Drawing.Color.Transparent;
             this.txtxId.Base = null;
+            this.txtxId.bConfiguracao = false;
             this.txtxId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtxId.Color = System.Drawing.Color.White;
-            this.txtxId.Location = new System.Drawing.Point(67, 161);
+            this.txtxId.Location = new System.Drawing.Point(67, 163);
             this.txtxId.Margin = new System.Windows.Forms.Padding(67, 3, 15, 3);
             this.txtxId.MaxLength = 32767;
             this.txtxId.Name = "txtxId";
@@ -376,9 +381,10 @@
             this.txtxSenha._TamanhoMaiorLabel = 100;
             this.txtxSenha.BackColor = System.Drawing.Color.Transparent;
             this.txtxSenha.Base = null;
+            this.txtxSenha.bConfiguracao = false;
             this.txtxSenha.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxSenha.Color = System.Drawing.Color.White;
-            this.txtxSenha.Location = new System.Drawing.Point(64, 188);
+            this.txtxSenha.Location = new System.Drawing.Point(64, 190);
             this.txtxSenha.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.txtxSenha.MaxLength = 32767;
             this.txtxSenha.Name = "txtxSenha";
@@ -402,10 +408,11 @@
             this.cbxstUsuario._TamanhoMaiorLabel = 100;
             this.cbxstUsuario.BackColor = System.Drawing.Color.Transparent;
             this.cbxstUsuario.Base = null;
+            this.cbxstUsuario.bConfiguracao = false;
             this.cbxstUsuario.Color = System.Drawing.Color.White;
             this.cbxstUsuario.DataSource = null;
             this.cbxstUsuario.DisplayMember = "DisplayMember";
-            this.cbxstUsuario.Location = new System.Drawing.Point(32, 215);
+            this.cbxstUsuario.Location = new System.Drawing.Point(32, 217);
             this.cbxstUsuario.Margin = new System.Windows.Forms.Padding(32, 3, 15, 3);
             this.cbxstUsuario.Name = "cbxstUsuario";
             this.cbxstUsuario.objConfigComponenteModel = null;
@@ -425,7 +432,8 @@
             this.btnVerificar._TamanhoComponente = 164;
             this.btnVerificar._TamanhoMaiorLabel = 0;
             this.btnVerificar.Base = null;
-            this.btnVerificar.Location = new System.Drawing.Point(3, 242);
+            this.btnVerificar.bConfiguracao = false;
+            this.btnVerificar.Location = new System.Drawing.Point(3, 244);
             this.btnVerificar.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.objConfigComponenteModel = null;

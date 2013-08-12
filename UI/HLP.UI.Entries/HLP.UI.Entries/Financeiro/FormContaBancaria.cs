@@ -257,26 +257,8 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
-                txtCodigo.Text = contaModel.idContaBancaria.ToString();
-                txtxNumeroConta.Text = contaModel.xNumeroConta;
-                cbostConta.SelectedIndex = contaModel.stConta;
-                txtxTitular.Text = contaModel.xTitular;
-                mskxCNPJouCPFTitular.Text = contaModel.xCNPJouCPFTitular;
-                campoPesquisaidAgencia.Value = contaModel.idAgencia;
-                txtxNumeroContaHomeBanking.Text = contaModel.xNumeroContaHomeBanking;
-                cbostBloquete.SelectedIndex = contaModel.stBloquete;
-                nudnDiasProtesto.Value = contaModel.nDiasProtesto;
-                nudnSequenciaNossoNumero.Value = contaModel.nSequenciaNossoNumero;
-                cbostZeraNossoNumero.SelectedIndex = contaModel.stZeraNossoNumero;
-                nudnCarteira.Value = contaModel.nCarteira;
-                nudnVariacaoCarteira.Value = contaModel.nVariacaoCarteira;
-                cbostAceite.SelectedIndex = contaModel.stAceite;
-                nudnConvenio.Value = contaModel.nConvenio;
-                txtxCodigoEmpresaHomeBanking.Text = contaModel.xCodigoEmpresaHomeBanking;
-                nudnDigitosConvenio.Value = contaModel.nDigitosConvenio;
-                txtxEspecie.Text = contaModel.xEspecie;
-                nudnRemessaHomeBanking.Value = contaModel.nRemessaHomeBanking;
-                txtxDescricao.Text = contaModel.xDescricao;
+                base.CarregaPropriedades(contaModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {
@@ -287,26 +269,8 @@ namespace HLP.UI.Entries.Financeiro
         {
             try
             {
+                base.CarregaClasse(contaModel);
                 contaModel.idEmpresa = CompanyData.idEmpresa;
-                contaModel.xNumeroConta = txtxNumeroConta.Text;
-                contaModel.stConta = cbostConta.SelectedIndexByte;
-                contaModel.xTitular = txtxTitular.Text;
-                contaModel.xCNPJouCPFTitular = mskxCNPJouCPFTitular.Text;
-                contaModel.idAgencia = campoPesquisaidAgencia.Value;
-                contaModel.xNumeroContaHomeBanking = txtxNumeroContaHomeBanking.Text;
-                contaModel.stBloquete = cbostBloquete.SelectedIndexByte;
-                contaModel.nDiasProtesto = nudnDiasProtesto.ValueInt;
-                contaModel.nSequenciaNossoNumero = nudnSequenciaNossoNumero.ValueInt;
-                contaModel.stZeraNossoNumero = cbostZeraNossoNumero.SelectedIndexByte;
-                contaModel.nCarteira = nudnCarteira.ValueInt;
-                contaModel.nVariacaoCarteira = nudnVariacaoCarteira.ValueInt;
-                contaModel.stAceite = cbostAceite.SelectedIndexByte;
-                contaModel.nConvenio = nudnConvenio.ValueInt;
-                contaModel.xCodigoEmpresaHomeBanking = txtxCodigoEmpresaHomeBanking.Text;
-                contaModel.nDigitosConvenio = nudnDigitosConvenio.ValueInt;
-                contaModel.xEspecie = txtxEspecie.Text;
-                contaModel.nRemessaHomeBanking = nudnRemessaHomeBanking.ValueInt;
-                contaModel.xDescricao = txtxDescricao.Text;
             }
             catch (Exception ex)
             {
@@ -382,7 +346,7 @@ namespace HLP.UI.Entries.Financeiro
                         treeHierarquia.Nodes.Clear();
                         foreach (TreeNode n in tNode.Nodes)
                         {
-                            treeHierarquia.Nodes.Add(n); 
+                            treeHierarquia.Nodes.Add(n);
                         }
                         treeHierarquia.Focus();
                         treeHierarquia.SelectedNode = treeHierarquia.Nodes[0];
@@ -423,6 +387,6 @@ namespace HLP.UI.Entries.Financeiro
             flowLayoutPanel1.Enabled = ((btnSalvar.Enabled) && !(cbostConta.Text.Contains("CAIXA")));
         }
 
-        
+
     }
 }

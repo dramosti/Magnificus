@@ -242,11 +242,7 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                multasModel.xNome = txtxNome.Text;
-                multasModel.xDescricao = txtxDescricao.Text;
-                multasModel.pPercentual = nudpPercentual.Value;
-                multasModel.nDias = nudnDias.ValueInt;
-
+                CarregaClasse(multasModel);
             }
             catch (Exception ex)
             {
@@ -257,11 +253,8 @@ namespace HLP.UI.Entries.Comercial
         {
             try
             {
-                txtCodigo.Text = multasModel.idMultas.ToString();
-                txtxNome.Text = multasModel.xNome;
-                txtxDescricao.Text = multasModel.xDescricao;
-                nudpPercentual.Value = multasModel.pPercentual;
-                nudnDias.Value = multasModel.nDias;
+                CarregaPropriedades(multasModel, true);
+                CarregaForm();
             }
             catch (Exception ex)
             {

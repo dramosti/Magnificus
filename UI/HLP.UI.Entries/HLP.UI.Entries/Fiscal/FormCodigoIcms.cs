@@ -278,8 +278,8 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
+                base.CarregaClasse(objCodigoTribPaiModel);
                 objCodigoTribPaiModel.idEmpresa = CompanyData.idEmpresa;
-                objCodigoTribPaiModel.cIcms = nudcIcms.ValueInt;
             }
             catch (Exception ex)
             {
@@ -290,8 +290,8 @@ namespace HLP.UI.Entries.Fiscal
         {
             try
             {
-                txtCodigo.Text = objCodigoTribPaiModel.idCodigoIcmsPai.ToString();
-                nudcIcms.Value = objCodigoTribPaiModel.cIcms;
+                base.CarregaPropriedades(objCodigoTribPaiModel, true);
+                base.CarregaForm();
                 bsCodigotributario.DataSource = objCodigoTribPaiModel.lCodigo_Icms;
             }
             catch (Exception ex)

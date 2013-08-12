@@ -52,7 +52,7 @@ namespace HLP.UI.Entries.Geral
             if (Sistema.contatoStatico.idFkContato != 0 && this.Modal)
             {
                 objContatoModel = contatoService.GetContato(Sistema.contatoStatico.idFkContato, true);
-                PopulaForm();             
+                PopulaForm();
             }
         }
 
@@ -67,7 +67,7 @@ namespace HLP.UI.Entries.Geral
                 sQuery.Append("where tab.{1} = {2} ");
                 cbxidContatoGerente.DataSource = pesquisaPadraoService.GetData(string.Format(sQuery.ToString(), Sistema.contatoStatico.nmTable,
                                                                                                                Sistema.contatoStatico.fkTableReferencia,
-                                                                                                               Sistema.contatoStatico.idFkReferencia));               
+                                                                                                               Sistema.contatoStatico.idFkReferencia));
             }
 
             verifBw += (() =>
@@ -277,7 +277,7 @@ namespace HLP.UI.Entries.Geral
                         pbProgresso.PerformStep();
                         lblProgresso.Text = (i + 1) + " de " + bsRetPesquisa.List.Count;
                     }));
-                    objContatoModel = contatoService.GetContato((int)lParaExcluir[i],true);
+                    objContatoModel = contatoService.GetContato((int)lParaExcluir[i], true);
                     contatoService.Delete(objContatoModel);
                     lExcluido.Add(lParaExcluir[i]);
                 }
@@ -302,139 +302,15 @@ namespace HLP.UI.Entries.Geral
 
         void PopulaTabela()
         {
-
-            #region Geral
-            objContatoModel.xTitulo = txtxTitulo.Text;
-            objContatoModel.xNome = txtxNome.Text;
-            objContatoModel.xFuncao = txtxFuncao.Text;
-            objContatoModel.xProfissao = txtxFuncao.Text;
-            objContatoModel.xDepartamento = txtxDepartamento.Text;
-            objContatoModel.xApelido = txtxApelido.Text;
-            objContatoModel.Ativo = cbxAtivo.SelectedIndex == 0 ? false : true;
-            objContatoModel.xCPF = mskxCPF.Text;
-            objContatoModel.stSexo = cbxstSexo.SelectedIndexByte;
-            objContatoModel.stSensibilidade = cbxstSensibilidade.SelectedIndexByte;
-            if (cbxidContatoGerente.SelectedIndex > -1)
-                objContatoModel.idContatoGerente = (int)cbxidContatoGerente.SelectedValue;
-            if (cbxidFuncionario.cbx.SelectedIndex > -1)
-                objContatoModel.idFuncionario = Convert.ToInt32(cbxidFuncionario.SelectedValue.ToString());
-            objContatoModel.dDisponivelaPartir = dtdDisponivelaPartir.Value.TimeOfDay;
-            objContatoModel.dDisponivelAte = dtdDisponivelAte.Value.TimeOfDay;
-            #endregion
-
-            #region Configuracao
-            if (hlP_PesquisaidFidelidade.Value > 0)
-                objContatoModel.idFidelidade = hlP_PesquisaidFidelidade.Value;
-            if (hlP_PesquisaidDecisao.Value > 0)
-                objContatoModel.idDecisao = hlP_PesquisaidDecisao.Value;
-            if (hlP_PesquisaidPersonalidade.Value > 0)
-                objContatoModel.idPersonalidade = hlP_PesquisaidPersonalidade.Value;
-            objContatoModel.stVip = cbxstMalaDireta.SelectedIndexByte;
-            objContatoModel.stMalaDireta = cbxstMalaDireta.SelectedIndexByte;
-            objContatoModel.xMemorando = txtxMemorando.Text;
-            #endregion
-
-            #region Inf. de Contato
-            objContatoModel.xTelefoneComercial = mskxTelefoneComercial.Text;
-            objContatoModel.xRamalComercial = txtxRamalComercial.Text;
-            objContatoModel.xCelularComercial = mskxCelularComercial.Text;
-            objContatoModel.xRadioFoneComercial = txtxRadioFoneComercial.Text;
-            objContatoModel.xPagerComercial = txtxPagerComercial.Text;
-            objContatoModel.xFaxComercial = mskxFaxComercial.Text;
-            objContatoModel.xEmailComercial = txtxEmailComercial.Text;
-            objContatoModel.xSkypeComercial = txtxSkypeComercial.Text;
-            objContatoModel.xMSNComercial = txtxMSNComercial.Text;
-            objContatoModel.xhttpComercial = txtxhttpComercial.Text;
-            objContatoModel.xTelefoneResidencial = mskxTelefoneResidencial.Text;
-            objContatoModel.xCelularResidencial = mskxTelefoneResidencial.Text;
-            objContatoModel.xRadioFoneResidencial = txtxRadioFoneResidencial.Text;
-            objContatoModel.xEmailResidencial = txtxEmailResidencial.Text;
-            objContatoModel.xSkypeResidencial = txtxSkypeResidencial.Text;
-            objContatoModel.xMsnResidencial = txtxMsnResidencial.Text;
-            objContatoModel.XhttpPessoal = txtXhttpPessoal.Text;
-
-
-            #endregion
-
-            #region Pessoal
-            objContatoModel.xFilhos = txtxFilhos.Text;
-            objContatoModel.dAniversario = dtdDataAniversario.Value;
-            objContatoModel.xConjuge = txtxConjuge.Text;
-            objContatoModel.stEstadoCivil = cbxstEstadoCivil.SelectedIndexByte;
-            objContatoModel.xHobbies = txtxHobbies.Text;
-            objContatoModel.dAniversarioTempoServico = dtdAniversarioTempoServico.Value;
-            #endregion
-
+            base.CarregaClasse(objContatoModel);
         }
 
         void PopulaForm()
         {
             InitializaComboBox();
             bsContatoEndereco.DataSource = objContatoModel.lContato_Endereco;
-
-            #region Geral
-            txtCodigo.Text = objContatoModel.idContato.ToString();
-            txtxTitulo.Text = objContatoModel.xTitulo;
-            txtxNome.Text = objContatoModel.xNome;
-            txtxFuncao.Text = objContatoModel.xFuncao;
-            txtxFuncao.Text = objContatoModel.xProfissao;
-            txtxDepartamento.Text = objContatoModel.xDepartamento;
-            txtxApelido.Text = objContatoModel.xApelido;
-            cbxAtivo.SelectedIndex = objContatoModel.Ativo == false ? 0 : 1;
-            mskxCPF.Text = objContatoModel.xCPF;
-            cbxstSexo.SelectedIndex = objContatoModel.stSexo;
-            cbxstSensibilidade.SelectedIndex = objContatoModel.stSensibilidade;
-            if (objContatoModel.idContatoGerente != null)
-                cbxidContatoGerente.SelectedValue = objContatoModel.idContatoGerente;
-            if (objContatoModel.idFuncionario != null)
-                cbxidFuncionario.SelectedValue = objContatoModel.idFuncionario;
-            dtdDisponivelaPartir.Value = (DateTime.Today + objContatoModel.dDisponivelaPartir);
-            dtdDisponivelAte.Value = (DateTime.Today + objContatoModel.dDisponivelAte);
-            #endregion
-
-            #region Configuracao
-            if (objContatoModel.idFidelidade != null)
-                hlP_PesquisaidFidelidade.Value = (int)objContatoModel.idFidelidade;
-            if (objContatoModel.idDecisao != null)
-                hlP_PesquisaidDecisao.Value = (int)objContatoModel.idDecisao;
-            if (objContatoModel.idPersonalidade != null)
-                hlP_PesquisaidPersonalidade.Value = (int)objContatoModel.idPersonalidade;
-            cbxstVip.SelectedIndex = objContatoModel.stVip;
-            cbxstMalaDireta.SelectedIndex = objContatoModel.stMalaDireta;
-            txtxMemorando.Text = objContatoModel.xMemorando;
-            #endregion
-
-            #region Inf. de Contato
-            mskxTelefoneComercial.Text = objContatoModel.xTelefoneComercial;
-            txtxRamalComercial.Text = objContatoModel.xRamalComercial;
-            mskxCelularComercial.Text = objContatoModel.xCelularComercial;
-            txtxRadioFoneComercial.Text = objContatoModel.xRadioFoneComercial;
-            txtxPagerComercial.Text = objContatoModel.xPagerComercial;
-            mskxFaxComercial.Text = objContatoModel.xFaxComercial;
-            txtxEmailComercial.Text = objContatoModel.xEmailComercial;
-            txtxSkypeComercial.Text = objContatoModel.xSkypeComercial;
-            txtxMSNComercial.Text = objContatoModel.xMSNComercial;
-            txtxhttpComercial.Text = objContatoModel.xhttpComercial;
-            mskxCelularResidencial.Text = objContatoModel.xCelularResidencial;
-            mskxTelefoneResidencial.Text = objContatoModel.xTelefoneResidencial;
-            mskxTelefoneResidencial.Text = objContatoModel.xCelularResidencial;
-            txtxRadioFoneResidencial.Text = objContatoModel.xRadioFoneResidencial;
-            txtxEmailResidencial.Text = objContatoModel.xEmailResidencial;
-            txtxSkypeResidencial.Text = objContatoModel.xSkypeResidencial;
-            txtxMsnResidencial.Text = objContatoModel.xMsnResidencial;
-            txtXhttpPessoal.Text = objContatoModel.XhttpPessoal;
-
-
-            #endregion
-
-            #region Pessoal
-            txtxFilhos.Text = objContatoModel.xFilhos;
-            dtdDataAniversario.Value = objContatoModel.dAniversario;
-            txtxConjuge.Text = objContatoModel.xConjuge;
-            cbxstEstadoCivil.SelectedIndex = objContatoModel.stEstadoCivil;
-            txtxHobbies.Text = objContatoModel.xHobbies;
-            dtdAniversarioTempoServico.Value = objContatoModel.dAniversarioTempoServico;
-            #endregion
+            base.CarregaPropriedades(objContatoModel, true);
+            base.CarregaForm();
         }
 
         private void FormContato_FormClosing(object sender, FormClosingEventArgs e)

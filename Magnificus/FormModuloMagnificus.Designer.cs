@@ -48,6 +48,7 @@ namespace Magnificus
             this.tsLocal = new System.Windows.Forms.ToolStripMenuItem();
             this.statusPrincipal = new System.Windows.Forms.StatusStrip();
             this.lblHlp = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tslblAtualizacao = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblVersao = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblLembrete = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblBase = new System.Windows.Forms.ToolStripStatusLabel();
@@ -82,7 +83,6 @@ namespace Magnificus
             this.kryptonPanel2 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
             this.kryptonBreadCrumb1 = new ComponentFactory.Krypton.Toolkit.KryptonBreadCrumb();
             this.cachedHLP_Lista_de_Banco1 = new Magnificus.Relatorios.CachedHLP_Lista_de_Banco();
-            this.tslblAtualizacao = new System.Windows.Forms.ToolStripStatusLabel();
             this.cmRemover.SuspendLayout();
             this.menuPrincipal.SuspendLayout();
             this.statusPrincipal.SuspendLayout();
@@ -276,10 +276,17 @@ namespace Magnificus
             // 
             this.lblHlp.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHlp.Name = "lblHlp";
-            this.lblHlp.Size = new System.Drawing.Size(557, 17);
+            this.lblHlp.Size = new System.Drawing.Size(588, 17);
             this.lblHlp.Spring = true;
             this.lblHlp.Text = "© 2012 - HLP Informática Ltda";
             this.lblHlp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tslblAtualizacao
+            // 
+            this.tslblAtualizacao.Name = "tslblAtualizacao";
+            this.tslblAtualizacao.Size = new System.Drawing.Size(68, 17);
+            this.tslblAtualizacao.Text = "Atualização";
+            this.tslblAtualizacao.Click += new System.EventHandler(this.tslblAtualizacao_Click);
             // 
             // lblVersao
             // 
@@ -561,8 +568,9 @@ namespace Magnificus
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPesquisaForm.StateNormal.Border.Width = 1;
             this.txtPesquisaForm.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisaForm.TabIndex = 2;
+            this.txtPesquisaForm.TabIndex = 1;
             this.txtPesquisaForm.TextChanged += new System.EventHandler(this.txtPesquisaForm_TextChanged);
+            this.txtPesquisaForm.Enter += new System.EventHandler(this.txtPesquisaForm_Enter);
             // 
             // btnLimpaPesquisa
             // 
@@ -598,7 +606,7 @@ namespace Magnificus
             this.btnFavoritos.StateCommon.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnFavoritos.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFavoritos.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnFavoritos.TabIndex = 60;
+            this.btnFavoritos.TabIndex = 3;
             this.btnFavoritos.Values.Text = "Favoritos";
             this.btnFavoritos.Click += new System.EventHandler(this.BotaoModulo_Click);
             // 
@@ -678,13 +686,6 @@ namespace Magnificus
             this.kryptonBreadCrumb1.TabIndex = 0;
             this.kryptonBreadCrumb1.SelectedItemChanged += new System.EventHandler(this.kryptonBreadCrumb1_SelectedItemChanged);
             // 
-            // tslblAtualizacao
-            // 
-            this.tslblAtualizacao.Name = "tslblAtualizacao";
-            this.tslblAtualizacao.Size = new System.Drawing.Size(68, 17);
-            this.tslblAtualizacao.Text = "Atualização";
-            this.tslblAtualizacao.Click += new System.EventHandler(this.tslblAtualizacao_Click);
-            // 
             // FormModuloMagnificus
             // 
             this.AllowFormChrome = false;
@@ -695,6 +696,7 @@ namespace Magnificus
             this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.statusPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "FormModuloMagnificus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -707,6 +709,7 @@ namespace Magnificus
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormModuloMagnificus_FormClosed);
             this.Load += new System.EventHandler(this.FormModuloMagnificus_Load);
             this.Shown += new System.EventHandler(this.FormModuloMagnificus_Shown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormModuloMagnificus_KeyUp);
             this.cmRemover.ResumeLayout(false);
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();

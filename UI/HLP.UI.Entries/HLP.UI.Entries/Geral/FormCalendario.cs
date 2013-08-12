@@ -286,17 +286,7 @@ namespace HLP.UI.Entries.Geral
             try
             {
                 objCalendarioModel.idEmpresa = CompanyData.idEmpresa;
-                objCalendarioModel.xNome = txtxNome.Text;
-                objCalendarioModel.xDescricao = txtxDescricao.Text;
-
-                if (hlP_Pesquisa1idCalendarioBase.Value != 0)
-                {
-                    objCalendarioModel.idCalendarioBase = Convert.ToInt32(hlP_Pesquisa1idCalendarioBase.Value);
-                }
-                else
-                {
-                    objCalendarioModel.idCalendarioBase = null;
-                }
+                base.CarregaClasse(objCalendarioModel);
 
             }
             catch (Exception ex)
@@ -308,14 +298,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = objCalendarioModel.idCalendario.ToString();
-                txtxNome.Text = objCalendarioModel.xNome;
-                txtxDescricao.Text = objCalendarioModel.xDescricao;
-
-                if (objCalendarioModel.idCalendarioBase != null)
-                {
-                    hlP_Pesquisa1idCalendarioBase.Value = (int)objCalendarioModel.idCalendarioBase;
-                }
+                base.CarregaPropriedades(objCalendarioModel, true);
+                base.CarregaForm();
                 bsDetalhe.DataSource = objCalendarioModel.lCalendario_Detalhe;
             }
             catch (Exception ex)

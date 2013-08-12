@@ -240,9 +240,7 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                unidadeModel.xSiglaPadrao = txtxSiglaPadrao.Text;
-                unidadeModel.xUnidadeMedida = txtxUnidadeMedida.Text;
-                unidadeModel.nCasasDecimais = nudnCasasDecimais.ValueInt;
+                base.CarregaClasse(unidadeModel);
             }
             catch (Exception ex)
             {
@@ -253,10 +251,8 @@ namespace HLP.UI.Entries.Geral
         {
             try
             {
-                txtCodigo.Text = unidadeModel.idUnidadeMedida.ToString();
-                txtxSiglaPadrao.Text = unidadeModel.xSiglaPadrao;
-                txtxUnidadeMedida.Text = unidadeModel.xUnidadeMedida;
-                nudnCasasDecimais.ValueInt = unidadeModel.nCasasDecimais;
+                base.CarregaPropriedades(unidadeModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

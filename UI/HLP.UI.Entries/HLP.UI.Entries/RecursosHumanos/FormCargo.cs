@@ -245,10 +245,8 @@ namespace HLP.UI.Entries.RecursosHumanos
         {
             try
             {
-                cargoModel.xCargo = txtxCargo.Text;
-                cargoModel.xDescricao = txtxDescricao.Text;
                 cargoModel.idEmpresa = CompanyData.idEmpresa;
-
+                base.CarregaClasse(cargoModel);
             }
             catch (Exception ex)
             {
@@ -259,9 +257,8 @@ namespace HLP.UI.Entries.RecursosHumanos
         {
             try
             {
-                txtCodigo.Text = cargoModel.idCargo.ToString();
-                txtxCargo.Text = cargoModel.xCargo;
-                txtxDescricao.Text = cargoModel.xDescricao;
+                base.CarregaPropriedades(cargoModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {

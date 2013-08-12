@@ -243,18 +243,7 @@ namespace HLP.UI.Entries.RecursosHumanos
         {
             try
             {
-                departamentoModel.xDepartamento = txtxDepartamento.Text;
-                departamentoModel.xDescricao = txtxDescricao.Text;
-                if (hlP_PesquisaidSetor.Value != 0)
-                {
-                    departamentoModel.idSetor = hlP_PesquisaidSetor.Value;
-                }
-                else
-                {
-                    departamentoModel.idSetor = null;
-                }
-                departamentoModel.xEmail = txtxEmail.Text;
-
+                base.CarregaClasse(departamentoModel);
             }
             catch (Exception ex)
             {
@@ -265,14 +254,8 @@ namespace HLP.UI.Entries.RecursosHumanos
         {
             try
             {
-                txtCodigo.Text = departamentoModel.idDepartamento.ToString();
-                txtxDepartamento.Text = departamentoModel.xDepartamento;
-                txtxDescricao.Text = departamentoModel.xDescricao;
-                if (departamentoModel.idSetor != null)
-                {
-                    hlP_PesquisaidSetor.Value = Convert.ToInt32(departamentoModel.idSetor);
-                }
-                txtxEmail.Text = departamentoModel.xEmail;
+                base.CarregaPropriedades(departamentoModel, true);
+                base.CarregaForm();
             }
             catch (Exception ex)
             {
@@ -305,7 +288,7 @@ namespace HLP.UI.Entries.RecursosHumanos
                 objDepart = departamentoService.GetBySetor((int)itemSetor.idSetor);
                 foreach (DepartamentoModel itemDepart in objDepart)
                 {
-                    node = new TreeNode("Departamento - " + itemDepart.xDescricao, 1, 1);                                        
+                    node = new TreeNode("Departamento - " + itemDepart.xDescricao, 1, 1);
                     nodeRaiz.Nodes[iCountSetor].Nodes.Add(node);
                 }
                 iCountSetor++;

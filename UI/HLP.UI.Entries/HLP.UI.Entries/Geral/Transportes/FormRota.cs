@@ -57,7 +57,7 @@ namespace HLP.UI.Entries.Geral.Transportes
         {
             if (objMetodosForm != null)
             {
-                clidCidade.DataSource = pesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember(clidCidade), true);                
+                clidCidade.DataSource = pesquisaPadraoService.GetData(objMetodosForm.GetDisplayMember(clidCidade), true);
                 Thread.CurrentThread.Abort();
             }
             else
@@ -275,10 +275,7 @@ namespace HLP.UI.Entries.Geral.Transportes
         {
             try
             {
-                objRotaModel.xRota = txtxRota.Text;
-                objRotaModel.idListaPrecoPai = campoPesquisaListaPreco.Value;
-                objRotaModel.Ativo = cboAtivo.SelectedIndex == 1 ? true : false;
-
+                base.CarregaClasse(objRotaModel);
             }
             catch (Exception ex)
             {
@@ -289,10 +286,8 @@ namespace HLP.UI.Entries.Geral.Transportes
         {
             try
             {
-                txtCodigo.Text = objRotaModel.idRota.ToString();
-                txtxRota.Text = objRotaModel.xRota;
-                campoPesquisaListaPreco.Value = objRotaModel.idListaPrecoPai;
-                cboAtivo.SelectedIndex = objRotaModel.Ativo == true ? 1 : 0;
+                base.CarregaPropriedades(objRotaModel, true);
+                base.CarregaForm();
                 objRotaModel.lRota_Praca = objRotaModel.lRota_Praca.AsEnumerable().OrderBy(c => c.nOrdem).ToList();
                 bsRotaPraca.DataSource = objRotaModel.lRota_Praca;
 
@@ -311,9 +306,9 @@ namespace HLP.UI.Entries.Geral.Transportes
         }
 
         private void dgvRotaPraca_DragDrop(object sender, DragEventArgs e)
-        {            
+        {
             if (btnSalvar.Enabled)
-                ordenaNumRota();   
+                ordenaNumRota();
         }
 
         private void ordenaNumRota()
@@ -323,13 +318,13 @@ namespace HLP.UI.Entries.Geral.Transportes
             dgvRotaPraca.Columns[clnOrdem.Name].ReadOnly = false;
             while (cont < dgvRotaPraca.Rows.Count)
             {
-                if(dgvRotaPraca[clidCidade.Name, cont].Value != null)
+                if (dgvRotaPraca[clidCidade.Name, cont].Value != null)
                 {
                     dgvRotaPraca.CurrentCell = dgvRotaPraca.Rows[cont].Cells[clnOrdem.Name];
                     dgvRotaPraca.BeginEdit(true);
                     dgvRotaPraca[clnOrdem.Name, cont].Value = (cont + 1).ToString();
                     dgvRotaPraca.BeginEdit(false);
-                }                
+                }
                 cont++;
             }
             dgvRotaPraca.Columns[clnOrdem.Name].ReadOnly = true;
