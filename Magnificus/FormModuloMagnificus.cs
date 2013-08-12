@@ -138,7 +138,6 @@ namespace Magnificus
             {
                 Util.TextBoxEx.SetWatermark(this.txtPesquisaForm.TextBox, "Pesquisar Telas");
                 this.Text = "Magnificus - " + CompanyData.xFantasia;
-                this.txtPesquisaForm.TextBox.Focus();
 
                 Favoritos.NodeMouseDoubleClick += new TreeNodeMouseClickEventHandler(modulo.nodeItem_Click);
                 treeViewPesquisa.NodeMouseDoubleClick += new TreeNodeMouseClickEventHandler(modulo.nodeItem_Click);
@@ -1074,6 +1073,7 @@ namespace Magnificus
         private void FormModuloMagnificus_Shown(object sender, EventArgs e)
         {
             BuscaLembrete();
+            this.txtPesquisaForm.TextBox.Focus();
         }
         private void btnLimpaPesquisa_Click(object sender, EventArgs e)
         {
@@ -1192,7 +1192,11 @@ namespace Magnificus
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    if (ex.Message == "A operação foi cancelada pelo usuário")
+                        MessageBox.Show("Operação cancelada pelo usuário", "Atenção",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        throw ex;
                 }
             }
             else
@@ -1205,10 +1209,11 @@ namespace Magnificus
 
         private void FormModuloMagnificus_KeyUp(object sender, KeyEventArgs e)
         {
-            if(txtPesquisaForm.Focused)
+            if (txtPesquisaForm.Focused)
             {
                 return;
             }
+
             if (bTxtPesquisaFocado)
             {
                 if (e.KeyCode == Keys.Tab)
@@ -1216,6 +1221,11 @@ namespace Magnificus
                     if (treeViewPesquisa.Nodes.Count > 0)
                     {
                         treeViewPesquisa.Focus();
+                        bTxtPesquisaFocado = false;
+                    }
+                    else if (Favoritos.Nodes.Count > 0)
+                    {
+                        Favoritos.Focus();
                         bTxtPesquisaFocado = false;
                     }
                 }

@@ -93,6 +93,8 @@ namespace HLP.UI.Entries.Geral
             {
                 objValidaCampos.Validar();
                 PopulaTabela();
+                objFuncionarioModel.xSenha = objFuncionarioModel.xSenha != null ? Criptografia.Encripta(objFuncionarioModel.xSenha)
+                    : null;
 
                 funcionarioService.Save(objFuncionarioModel);
 
@@ -297,6 +299,7 @@ namespace HLP.UI.Entries.Geral
             base.CarregaPropriedades(objFuncionarioModel, true);
             base.CarregaForm();
 
+            txtxSenha.Text = txtxSenha.Text != "" ? Criptografia.Decripta(txtxSenha.Text) : "";
             bsAcesso.DataSource = objFuncionarioModel.lFuncionario_Acesso;
         }
 

@@ -71,7 +71,6 @@ namespace Magnificus
             this.btnMinimiza = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.panelHeader = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.Favoritos = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.treeViewPesquisa = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.txtPesquisaForm = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnLimpaPesquisa = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
@@ -83,6 +82,7 @@ namespace Magnificus
             this.kryptonPanel2 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
             this.kryptonBreadCrumb1 = new ComponentFactory.Krypton.Toolkit.KryptonBreadCrumb();
             this.cachedHLP_Lista_de_Banco1 = new Magnificus.Relatorios.CachedHLP_Lista_de_Banco();
+            this.Favoritos = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.cmRemover.SuspendLayout();
             this.menuPrincipal.SuspendLayout();
             this.statusPrincipal.SuspendLayout();
@@ -514,24 +514,6 @@ namespace Magnificus
             this.panelHeader.Size = new System.Drawing.Size(226, 227);
             this.panelHeader.TabIndex = 2;
             // 
-            // Favoritos
-            // 
-            this.Favoritos.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelCustom1;
-            this.Favoritos.BorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ContextMenuInner;
-            this.Favoritos.ContextMenuStrip = this.cmRemover;
-            this.Favoritos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Favoritos.FullRowSelect = true;
-            this.Favoritos.ItemHeight = 21;
-            this.Favoritos.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
-            this.Favoritos.Location = new System.Drawing.Point(3, 3);
-            this.Favoritos.Name = "Favoritos";
-            this.Favoritos.OverrideFocus.Node.Content.DrawFocus = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this.Favoritos.Size = new System.Drawing.Size(220, 221);
-            this.Favoritos.StateCommon.Node.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.Favoritos.StateCommon.Node.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Favoritos.StateCommon.Node.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.Favoritos.TabIndex = 2;
-            // 
             // treeViewPesquisa
             // 
             this.treeViewPesquisa.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelCustom1;
@@ -547,7 +529,8 @@ namespace Magnificus
             this.treeViewPesquisa.StateCommon.Node.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.treeViewPesquisa.StateCommon.Node.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewPesquisa.StateCommon.Node.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.treeViewPesquisa.TabIndex = 1;
+            this.treeViewPesquisa.TabIndex = 10;
+            this.treeViewPesquisa.TabStop = false;
             // 
             // txtPesquisaForm
             // 
@@ -606,7 +589,7 @@ namespace Magnificus
             this.btnFavoritos.StateCommon.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnFavoritos.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFavoritos.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnFavoritos.TabIndex = 3;
+            this.btnFavoritos.TabIndex = 2;
             this.btnFavoritos.Values.Text = "Favoritos";
             this.btnFavoritos.Click += new System.EventHandler(this.BotaoModulo_Click);
             // 
@@ -685,6 +668,25 @@ namespace Magnificus
             this.kryptonBreadCrumb1.StateTracking.BreadCrumb.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonBreadCrumb1.TabIndex = 0;
             this.kryptonBreadCrumb1.SelectedItemChanged += new System.EventHandler(this.kryptonBreadCrumb1_SelectedItemChanged);
+            // 
+            // Favoritos
+            // 
+            this.Favoritos.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelCustom1;
+            this.Favoritos.BorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ContextMenuInner;
+            this.Favoritos.ContextMenuStrip = this.cmRemover;
+            this.Favoritos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Favoritos.FullRowSelect = true;
+            this.Favoritos.ItemHeight = 21;
+            this.Favoritos.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
+            this.Favoritos.Location = new System.Drawing.Point(3, 3);
+            this.Favoritos.Name = "Favoritos";
+            this.Favoritos.OverrideFocus.Node.Content.DrawFocus = ComponentFactory.Krypton.Toolkit.InheritBool.False;
+            this.Favoritos.Size = new System.Drawing.Size(220, 221);
+            this.Favoritos.StateCommon.Node.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.Favoritos.StateCommon.Node.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Favoritos.StateCommon.Node.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.Favoritos.TabIndex = 10;
+            this.Favoritos.TabStop = false;
             // 
             // FormModuloMagnificus
             // 
@@ -792,10 +794,10 @@ namespace Magnificus
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny buttonSpecAny2;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny buttonSpecAny5;
         private AC.ExtendedRenderer.Toolkit.KryptonPanel kryptonPanel2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTreeView Favoritos;
         private System.Windows.Forms.ToolStripMenuItem tsLocal;
         private Relatorios.CachedHLP_Lista_de_Banco cachedHLP_Lista_de_Banco1;
         private System.Windows.Forms.ToolStripStatusLabel tslblAtualizacao;
+        private ComponentFactory.Krypton.Toolkit.KryptonTreeView Favoritos;
 
     }
 }
