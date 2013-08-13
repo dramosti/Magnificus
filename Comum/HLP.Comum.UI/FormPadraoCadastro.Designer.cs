@@ -55,12 +55,17 @@
             this.sepDuplicar = new System.Windows.Forms.ToolStripSeparator();
             this.lblCount = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.panelPadrao = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.panelAtalhos = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonHeader1 = new ComponentFactory.Krypton.Toolkit.KryptonHeader();
+            this.btnMinimiza = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             this.cmsOpcoesGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exportarConteudoPExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarTamanhoDasColunasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bwWorkerInicializa = new System.ComponentModel.BackgroundWorker();
             this.bwWorkerRecarregaForm = new System.ComponentModel.BackgroundWorker();
+            this.flowPainelBotoes = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.tsConfigComp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsConsistForm = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +88,15 @@
             this.menuStrip1.SuspendLayout();
             this.ctxConfiguracao.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
+            this.kryptonSplitContainer1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).BeginInit();
+            this.kryptonSplitContainer1.Panel2.SuspendLayout();
+            this.kryptonSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).BeginInit();
+            this.panelAtalhos.SuspendLayout();
             this.cmsOpcoesGrid.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,6 +269,7 @@
             this.tsDesabilitar,
             this.tsCamposVisiveis});
             this.ctxConfiguracao.Name = "cmsOpcoesGrid";
+            this.ctxConfiguracao.OwnerItem = this.tsConfigurar;
             this.ctxConfiguracao.Size = new System.Drawing.Size(211, 70);
             // 
             // tsHabilitar
@@ -300,7 +314,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panelPadrao);
+            this.panel1.Controls.Add(this.kryptonSplitContainer1);
             this.panel1.Controls.Add(this.stripPadrao);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 27);
@@ -308,14 +322,76 @@
             this.panel1.Size = new System.Drawing.Size(1160, 284);
             this.panel1.TabIndex = 117;
             // 
+            // kryptonSplitContainer1
+            // 
+            this.kryptonSplitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kryptonSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonSplitContainer1.Name = "kryptonSplitContainer1";
+            // 
+            // kryptonSplitContainer1.Panel1
+            // 
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.panelPadrao);
+            // 
+            // kryptonSplitContainer1.Panel2
+            // 
+            this.kryptonSplitContainer1.Panel2.Controls.Add(this.panelAtalhos);
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1158, 260);
+            this.kryptonSplitContainer1.SplitterDistance = 1017;
+            this.kryptonSplitContainer1.SplitterWidth = 2;
+            this.kryptonSplitContainer1.TabIndex = 119;
+            // 
             // panelPadrao
             // 
             this.panelPadrao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPadrao.Location = new System.Drawing.Point(0, 0);
             this.panelPadrao.Name = "panelPadrao";
             this.panelPadrao.Padding = new System.Windows.Forms.Padding(3);
-            this.panelPadrao.Size = new System.Drawing.Size(1158, 260);
-            this.panelPadrao.TabIndex = 117;
+            this.panelPadrao.Size = new System.Drawing.Size(1017, 260);
+            this.panelPadrao.TabIndex = 118;
+            // 
+            // panelAtalhos
+            // 
+            this.panelAtalhos.Controls.Add(this.flowPainelBotoes);
+            this.panelAtalhos.Controls.Add(this.kryptonHeader1);
+            this.panelAtalhos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAtalhos.Location = new System.Drawing.Point(0, 0);
+            this.panelAtalhos.Name = "panelAtalhos";
+            this.panelAtalhos.Size = new System.Drawing.Size(139, 260);
+            this.panelAtalhos.TabIndex = 119;
+            // 
+            // kryptonHeader1
+            // 
+            this.kryptonHeader1.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecAny[] {
+            this.btnMinimiza});
+            this.kryptonHeader1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonHeader1.HeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Form;
+            this.kryptonHeader1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonHeader1.Name = "kryptonHeader1";
+            this.kryptonHeader1.Size = new System.Drawing.Size(139, 28);
+            this.kryptonHeader1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonHeader1.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonHeader1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonHeader1.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonHeader1.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonHeader1.StateNormal.Border.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonHeader1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonHeader1.TabIndex = 1;
+            this.kryptonHeader1.Values.Description = "";
+            this.kryptonHeader1.Values.Heading = "Atalhos";
+            this.kryptonHeader1.Values.Image = global::HLP.Comum.UI.Properties.Resources._1376435704_flash;
+            // 
+            // btnMinimiza
+            // 
+            this.btnMinimiza.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.ArrowRight;
+            this.btnMinimiza.UniqueName = "B64FF2A4BCDF49C59895AB8FFFB715A7";
+            this.btnMinimiza.Click += new System.EventHandler(this.btnMinimiza_Click);
             // 
             // cmsOpcoesGrid
             // 
@@ -349,6 +425,16 @@
             // bwWorkerRecarregaForm
             // 
             this.bwWorkerRecarregaForm.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwWorkerRecarregaForm_DoWork);
+            // 
+            // flowPainelBotoes
+            // 
+            this.flowPainelBotoes.BackColor = System.Drawing.Color.Transparent;
+            this.flowPainelBotoes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowPainelBotoes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowPainelBotoes.Location = new System.Drawing.Point(0, 28);
+            this.flowPainelBotoes.Name = "flowPainelBotoes";
+            this.flowPainelBotoes.Size = new System.Drawing.Size(139, 232);
+            this.flowPainelBotoes.TabIndex = 2;
             // 
             // toolStripSplitButton1
             // 
@@ -556,7 +642,16 @@
             this.ctxConfiguracao.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
+            this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
+            this.kryptonSplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
+            this.kryptonSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).EndInit();
+            this.panelAtalhos.ResumeLayout(false);
+            this.panelAtalhos.PerformLayout();
             this.cmsOpcoesGrid.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -587,7 +682,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsRestaurarPadrao;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         public System.Windows.Forms.Panel panel1;
-        public ComponentFactory.Krypton.Toolkit.KryptonPanel panelPadrao;
         private System.Windows.Forms.ContextMenuStrip cmsOpcoesGrid;
         private System.Windows.Forms.ToolStripMenuItem exportarConteudoPExcelToolStripMenuItem;
         public System.Windows.Forms.ToolStripButton btnNovo;
@@ -614,5 +708,11 @@
         private System.Windows.Forms.ToolStripMenuItem tsHabilitar;
         private System.Windows.Forms.ToolStripMenuItem tsDesabilitar;
         private System.Windows.Forms.ToolStripMenuItem tsCamposVisiveis;
+        private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
+        public ComponentFactory.Krypton.Toolkit.KryptonPanel panelPadrao;
+        public ComponentFactory.Krypton.Toolkit.KryptonPanel panelAtalhos;
+        private ComponentFactory.Krypton.Toolkit.KryptonHeader kryptonHeader1;
+        private ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnMinimiza;
+        private System.Windows.Forms.FlowLayoutPanel flowPainelBotoes;
     }
 }

@@ -18,7 +18,6 @@ using HLP.Comum.Infrastructure;
 using HLP.Comum.Infrastructure.Static;
 using System.Reflection;
 
-
 namespace HLP.Comum.UI
 {
     public partial class FormPadraoCadastro : KryptonForm
@@ -47,6 +46,8 @@ namespace HLP.Comum.UI
 
         public List<int> lParaExcluir = new List<int>();
         public List<int> lExcluido = new List<int>();
+        bool bLoad = true;
+        private int _cacheWidth;
 
         private struct Propriedades
         {
@@ -1300,6 +1301,98 @@ namespace HLP.Comum.UI
         }
         #endregion
 
+        #region Eventos Painel de atalho
+
+        public void AddAtalhosPanel(params KryptonButton[] botoes)
+        {
+            ConfiguraBotoes(botoes);
+        }
+
+        private void ConfiguraBotoes(params KryptonButton[] botoes)
+        {
+            foreach (KryptonButton b in botoes.OrderBy(but => but.Text))
+            {
+                flowPainelBotoes.Controls.Add(b);
+                b.ButtonStyle = ButtonStyle.Form;
+                b.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+                b.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Near;
+                b.StateCommon.Content.Image.ImageH = PaletteRelativeAlign.Near;
+                b.Height = 25;
+                b.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            }
+            AjustarBotoesFlow();
+        }
+
+        private void AjustarBotoesFlow()
+        {
+            foreach (KryptonButton b in flowPainelBotoes.Controls)
+            {
+                if (b.GetType() == typeof(KryptonButton))
+                {
+                    b.Width = flowPainelBotoes.Width;
+                }
+
+            }
+        }
+
+        private void btnMinimiza_Click(object sender, EventArgs e)
+        {
+            if (bLoad)
+            {
+                kryptonSplitContainer1.FixedPanel = FixedPanel.None;
+                bLoad = false;
+            }
+            kryptonSplitContainer1.SuspendLayout();
+            if (kryptonSplitContainer1.FixedPanel == FixedPanel.None)
+            {
+                kryptonSplitContainer1.FixedPanel = FixedPanel.Panel2;
+                kryptonSplitContainer1.IsSplitterFixed = true;
+
+                _cacheWidth = kryptonSplitContainer1.Panel2.Width;
+                int newWidth = kryptonHeader1.PreferredSize.Height;
+
+                kryptonSplitContainer1.Panel2MinSize = newWidth;
+                kryptonSplitContainer1.SplitterDistance = kryptonSplitContainer1.Width - newWidth;
+
+                kryptonHeader1.Orientation = VisualOrientation.Right;
+                kryptonHeader1.ButtonSpecs[0].Edge = PaletteRelativeEdgeAlign.Near;
+                kryptonHeader1.ButtonSpecs[0].Type = PaletteButtonSpecStyle.ArrowLeft;
+
+
+                OcultaMostraCompon(panelAtalhos, false);
+            }
+            else
+            {
+                kryptonSplitContainer1.FixedPanel = FixedPanel.None;
+                kryptonSplitContainer1.IsSplitterFixed = false;
+                kryptonSplitContainer1.Panel2MinSize = 25;
+                kryptonSplitContainer1.SplitterDistance = kryptonSplitContainer1.Width - _cacheWidth;
+
+                kryptonHeader1.Orientation = VisualOrientation.Top;
+                kryptonHeader1.ButtonSpecs[0].Edge = PaletteRelativeEdgeAlign.Far;
+                kryptonHeader1.ButtonSpecs[0].Type = PaletteButtonSpecStyle.ArrowRight;
+
+
+                OcultaMostraCompon(panelAtalhos, true);
+                //AjustarBotoesFlow();
+            }
+            kryptonSplitContainer1.ResumeLayout();
+        }
+
+        private void OcultaMostraCompon(Control controle, bool bVisible)
+        {
+            foreach (Control c in controle.Controls)
+            {
+                if (c.Controls.Count > 0)
+                    OcultaMostraCompon(c, bVisible);
+
+                if (c.GetType() != typeof(KryptonHeader))
+                    c.Visible = bVisible;
+            }
+        }
+
+
+        #endregion
 
     }
 }

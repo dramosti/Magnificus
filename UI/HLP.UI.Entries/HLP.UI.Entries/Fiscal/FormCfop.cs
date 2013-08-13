@@ -17,6 +17,7 @@ using HLP.Comum.Messages;
 using HLP.Comum.Models;
 using HLP.Comum.UI.Exception;
 using System.Threading;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace HLP.UI.Entries.Fiscal
 {
@@ -38,6 +39,16 @@ namespace HLP.UI.Entries.Fiscal
         private void FormCfop_Load(object sender, EventArgs e)
         {
             InicializaFormPadrao("vwCfop");
+            KryptonButton b1 = new KryptonButton();
+            b1.Name = "botaoTeste";
+            b1.Text = "Botão para teste";
+            b1.Values.Image = Properties.Resources.botao_calendar_22;
+            b1.Click += new EventHandler(this.b1_Click);
+            KryptonButton b2 = new KryptonButton();
+            b2.Name = "botaoTeste2";
+            b2.Text = "Botão para teste 2";
+            b2.Click += new EventHandler(this.b1_Click);
+            base.AddAtalhosPanel(b1, b2);
         }
 
 
@@ -267,6 +278,11 @@ namespace HLP.UI.Entries.Fiscal
                 new HLPexception(ex);
             }
 
+        }
+
+        private void b1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vem ni mim");
         }
     }
 }

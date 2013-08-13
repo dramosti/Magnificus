@@ -13,5 +13,6 @@ namespace HLP.Comum.Modules.Interface
         void EscondeMenuIcones(ToolStrip menuIcones);
 
         StatusStrip BarraStatus { get; }
+
     }
 }

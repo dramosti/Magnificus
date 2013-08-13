@@ -39,9 +39,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.kryptonPanel1 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.panelPadrao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).BeginInit();
             this.Principal.SuspendLayout();
             this.kryptonTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -50,12 +50,16 @@
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(623, 284);
+            this.panel1.Size = new System.Drawing.Size(608, 284);
             // 
             // panelPadrao
             // 
             this.panelPadrao.Controls.Add(this.kryptonTabControl1);
-            this.panelPadrao.Size = new System.Drawing.Size(621, 260);
+            this.panelPadrao.Size = new System.Drawing.Size(532, 260);
+            // 
+            // panelAtalhos
+            // 
+            this.panelAtalhos.Size = new System.Drawing.Size(69, 260);
             // 
             // Principal
             // 
@@ -70,7 +74,7 @@
             this.Principal.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Principal.Location = new System.Drawing.Point(0, 0);
             this.Principal.Name = "Principal";
-            this.Principal.Size = new System.Drawing.Size(607, 225);
+            this.Principal.Size = new System.Drawing.Size(518, 225);
             this.Principal.TabIndex = 0;
             this.Principal.Tag = "Principal";
             // 
@@ -81,7 +85,7 @@
             this.hlP_LabelSeparator1_Geral.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparator1_Geral.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparator1_Geral.Name = "hlP_LabelSeparator1_Geral";
-            this.hlP_LabelSeparator1_Geral.Size = new System.Drawing.Size(300, 18);
+            this.hlP_LabelSeparator1_Geral.Size = new System.Drawing.Size(328, 19);
             this.hlP_LabelSeparator1_Geral.TabIndex = 28;
             this.hlP_LabelSeparator1_Geral.TabStop = false;
             // 
@@ -97,16 +101,17 @@
             this.txtCodigo._Regex = null;
             this.txtCodigo._Table = "Cfop";
             this.txtCodigo._TamanhoComponente = 107;
-            this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = true;
+            this.txtCodigo._TamanhoMaiorLabel = 106;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(108, 27);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(108, 3, 15, 3);
+            this.txtCodigo.Location = new System.Drawing.Point(64, 28);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(152, 21);
             this.txtCodigo.TabIndex = 0;
@@ -121,14 +126,14 @@
             this.nudcCodCfop._Regex = null;
             this.nudcCodCfop._Table = "Cfop";
             this.nudcCodCfop._TamanhoComponente = 107;
-            this.nudcCodCfop._TamanhoMaiorLabel = 150;
-            this.nudcCodCfop._Visible = true;
+            this.nudcCodCfop._TamanhoMaiorLabel = 106;
             this.nudcCodCfop.BackColor = System.Drawing.Color.Transparent;
             this.nudcCodCfop.Base = null;
+            this.nudcCodCfop.bConfiguracao = false;
             this.nudcCodCfop.Color = System.Drawing.Color.White;
             this.nudcCodCfop.DecimalPlaces = 2;
-            this.nudcCodCfop.Location = new System.Drawing.Point(121, 54);
-            this.nudcCodCfop.Margin = new System.Windows.Forms.Padding(121, 3, 15, 3);
+            this.nudcCodCfop.Location = new System.Drawing.Point(77, 55);
+            this.nudcCodCfop.Margin = new System.Windows.Forms.Padding(77, 3, 15, 3);
             this.nudcCodCfop.Maximum = new decimal(new int[] {
             9,
             0,
@@ -140,6 +145,7 @@
             0,
             0});
             this.nudcCodCfop.Name = "nudcCodCfop";
+            this.nudcCodCfop.objConfigComponenteModel = null;
             this.nudcCodCfop.ReadOnly = false;
             this.nudcCodCfop.Size = new System.Drawing.Size(139, 22);
             this.nudcCodCfop.TabIndex = 4;
@@ -163,16 +169,17 @@
             this.txtxCfopResumida._Regex = null;
             this.txtxCfopResumida._Table = "Cfop";
             this.txtxCfopResumida._TamanhoComponente = 222;
-            this.txtxCfopResumida._TamanhoMaiorLabel = 150;
-            this.txtxCfopResumida._Visible = true;
+            this.txtxCfopResumida._TamanhoMaiorLabel = 106;
             this.txtxCfopResumida.BackColor = System.Drawing.Color.Transparent;
             this.txtxCfopResumida.Base = null;
+            this.txtxCfopResumida.bConfiguracao = false;
             this.txtxCfopResumida.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxCfopResumida.Color = System.Drawing.Color.White;
-            this.txtxCfopResumida.Location = new System.Drawing.Point(47, 82);
-            this.txtxCfopResumida.Margin = new System.Windows.Forms.Padding(47, 3, 15, 3);
+            this.txtxCfopResumida.Location = new System.Drawing.Point(3, 83);
+            this.txtxCfopResumida.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.txtxCfopResumida.MaxLength = 32767;
             this.txtxCfopResumida.Name = "txtxCfopResumida";
+            this.txtxCfopResumida.objConfigComponenteModel = null;
             this.txtxCfopResumida.ReadOnly = false;
             this.txtxCfopResumida.Size = new System.Drawing.Size(328, 21);
             this.txtxCfopResumida.TabIndex = 3;
@@ -190,15 +197,16 @@
             this.txtxCfop._Table = "Cfop";
             this.txtxCfop._TamanhoComponente = 222;
             this.txtxCfop._TamanhoMaiorLabel = 150;
-            this.txtxCfop._Visible = true;
             this.txtxCfop.BackColor = System.Drawing.Color.Transparent;
             this.txtxCfop.Base = null;
+            this.txtxCfop.bConfiguracao = false;
             this.txtxCfop.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxCfop.Color = System.Drawing.Color.White;
-            this.txtxCfop.Location = new System.Drawing.Point(97, 109);
+            this.txtxCfop.Location = new System.Drawing.Point(97, 110);
             this.txtxCfop.Margin = new System.Windows.Forms.Padding(97, 3, 15, 3);
             this.txtxCfop.MaxLength = 10;
             this.txtxCfop.Name = "txtxCfop";
+            this.txtxCfop.objConfigComponenteModel = null;
             this.txtxCfop.ReadOnly = false;
             this.txtxCfop.Size = new System.Drawing.Size(278, 21);
             this.txtxCfop.TabIndex = 2;
@@ -223,7 +231,7 @@
             this.kryptonTabControl1.Name = "kryptonTabControl1";
             this.kryptonTabControl1.PreserveTabColor = false;
             this.kryptonTabControl1.SelectedIndex = 0;
-            this.kryptonTabControl1.Size = new System.Drawing.Size(615, 254);
+            this.kryptonTabControl1.Size = new System.Drawing.Size(526, 254);
             this.kryptonTabControl1.TabIndex = 4;
             this.kryptonTabControl1.UseExtendedLayout = false;
             // 
@@ -234,7 +242,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(607, 225);
+            this.tabPage1.Size = new System.Drawing.Size(518, 225);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "Principal";
@@ -251,14 +259,14 @@
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PersistentColors = false;
-            this.kryptonPanel1.Size = new System.Drawing.Size(607, 225);
+            this.kryptonPanel1.Size = new System.Drawing.Size(518, 225);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // FormCfop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 311);
+            this.ClientSize = new System.Drawing.Size(608, 311);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCfop";
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -269,10 +277,9 @@
             this.Text = "CFOP - Código Fiscais de Operação e Prestações";
             this.Load += new System.EventHandler(this.FormCfop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).EndInit();
             this.panelPadrao.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).EndInit();
             this.Principal.ResumeLayout(false);
             this.kryptonTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

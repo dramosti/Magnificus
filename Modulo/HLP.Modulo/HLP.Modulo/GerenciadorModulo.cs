@@ -102,7 +102,7 @@ namespace HLP.Comum.Modules
             if (form == null) { return; }
             if (exibeForm == TipoExibeForm.Modal)
             {
-                System.Drawing.Size size = form.Size;                
+                System.Drawing.Size size = form.Size;
                 form.FormBorderStyle = FormBorderStyle.Sizable;
                 if (form.GetType().BaseType.BaseType.Name == "KryptonForm")
                 {

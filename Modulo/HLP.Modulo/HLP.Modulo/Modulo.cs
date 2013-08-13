@@ -16,14 +16,14 @@ namespace HLP.Comum.Modules
     public class Modulo : IModulo
     {
         private bool _bCarregaComponentes = true;
-              
+
         public Modulo(string arquivoConfiguracao)
         {
             this.ArquivoConfiguracao = arquivoConfiguracao;
             this.NomeModulo = System.IO.Path.GetFileNameWithoutExtension(arquivoConfiguracao);
         }
         public Modulo()
-        { }
+        {}
 
         #region [Propriedades]
 
@@ -46,7 +46,7 @@ namespace HLP.Comum.Modules
                 foreach (ToolStripMenuItem item in this.FormModulo.MenuPrincipal.Items)
                 {
                     PercorreMenu(item);
-                }                
+                }
                 IntegrarMenuModulo();
                 intergrarMenuIcones();
             }
@@ -58,12 +58,12 @@ namespace HLP.Comum.Modules
 
         private void PercorreMenu(ToolStripMenuItem itemMenu)
         {
-            if(itemMenu.DropDownItems.Count > 0)
+            if (itemMenu.DropDownItems.Count > 0)
             {
                 foreach (ToolStripMenuItem item in itemMenu.DropDownItems)
                 {
                     PercorreMenu(item);
-                }                
+                }
             }
             OrdenaMenu(itemMenu);
         }
@@ -260,7 +260,7 @@ namespace HLP.Comum.Modules
         private void MontaTreviewModulo(ToolStripMenuItem menuItem, TreeNode node)
         {
             //ordenação de menus do toolstripmenu
-            
+
             node.Text = menuItem.Text;
             node.Name = menuItem.Name;
             //if (menuItem.Image != null)
@@ -281,7 +281,7 @@ namespace HLP.Comum.Modules
                 }
                 return;
             }
-            
+
             foreach (ToolStripMenuItem item in menuItem.DropDownItems.OfType<ToolStripMenuItem>().ToList())
             {
                 if (item.Text != "FormNotificacao")
@@ -403,7 +403,7 @@ namespace HLP.Comum.Modules
                 index = node.Name.ToLower().IndexOf("toolstrip");
                 if (index > -1)
                 {
-                    node.Name = node.Name.Substring(0, index);                    
+                    node.Name = node.Name.Substring(0, index);
                 }
             }
 
@@ -422,8 +422,8 @@ namespace HLP.Comum.Modules
             }
         }
 
-              
-        
+
+
 
         public List<string> MontaListFormularios() // Criado por mário 19/10 - Lista de Nome de todos os formulários...
         {

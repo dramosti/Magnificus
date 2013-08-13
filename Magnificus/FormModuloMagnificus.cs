@@ -35,7 +35,7 @@ namespace Magnificus
         object[] mParam = null;
         bool bLoad = true;
         private int _cacheWidth;
-        private bool bTxtPesquisaFocado = false;
+        protected bool bTxtPesquisaFocado = false;
 
 
 
@@ -121,7 +121,6 @@ namespace Magnificus
             : base()
         {
             InitializeComponent();
-
             this.IsMdiContainer = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -140,9 +139,14 @@ namespace Magnificus
                 this.Text = "Magnificus - " + CompanyData.xFantasia;
 
                 Favoritos.NodeMouseDoubleClick += new TreeNodeMouseClickEventHandler(modulo.nodeItem_Click);
+                Favoritos.NodeMouseDoubleClick += new TreeNodeMouseClickEventHandler(this.nodeItem_Click);
                 treeViewPesquisa.NodeMouseDoubleClick += new TreeNodeMouseClickEventHandler(modulo.nodeItem_Click);
+                treeViewPesquisa.NodeMouseDoubleClick += new TreeNodeMouseClickEventHandler(this.nodeItem_Click);
+
                 Favoritos.KeyDown += new KeyEventHandler(modulo.NodeEnter_KeyDown);
                 treeViewPesquisa.KeyDown += new KeyEventHandler(modulo.NodeEnter_KeyDown);
+                Favoritos.KeyDown += new KeyEventHandler(this.NodeEnter_KeyDown);
+                treeViewPesquisa.KeyDown += new KeyEventHandler(this.NodeEnter_KeyDown);
 
                 AdicionaContextMenuTreeView(panelHeader.Controls);
                 AdicionaCrumbTreeView(panelHeader.Controls);
@@ -195,6 +199,18 @@ namespace Magnificus
             }
         }
 
+        public void nodeItem_Click(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            this.bTxtPesquisaFocado = false;
+        }
+
+        public void NodeEnter_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.bTxtPesquisaFocado = false;
+            }
+        }
 
         #region Atualizacao
         private void popup_MouseClick(object sender, MouseEventArgs e)
@@ -1213,6 +1229,7 @@ namespace Magnificus
             {
                 return;
             }
+
 
             if (bTxtPesquisaFocado)
             {
