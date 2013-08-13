@@ -435,6 +435,7 @@
             this.flowPainelBotoes.Name = "flowPainelBotoes";
             this.flowPainelBotoes.Size = new System.Drawing.Size(139, 232);
             this.flowPainelBotoes.TabIndex = 2;
+            this.flowPainelBotoes.SizeChanged += new System.EventHandler(this.flowPainelBotoes_SizeChanged);
             // 
             // toolStripSplitButton1
             // 

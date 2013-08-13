@@ -1374,7 +1374,6 @@ namespace HLP.Comum.UI
 
 
                 OcultaMostraCompon(panelAtalhos, true);
-                //AjustarBotoesFlow();
             }
             kryptonSplitContainer1.ResumeLayout();
         }
@@ -1393,6 +1392,11 @@ namespace HLP.Comum.UI
 
 
         #endregion
+
+        private void flowPainelBotoes_SizeChanged(object sender, EventArgs e)
+        {
+            AjustarBotoesFlow();
+        }
 
     }
 }
