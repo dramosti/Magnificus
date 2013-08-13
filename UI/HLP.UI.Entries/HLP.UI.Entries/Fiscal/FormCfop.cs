@@ -282,7 +282,7 @@ namespace HLP.UI.Entries.Fiscal
 
         private void b1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Vem ni mim");
+            MessageBox.Show("Evento de teste para menu de atalhos!!");
         }
     }
 }

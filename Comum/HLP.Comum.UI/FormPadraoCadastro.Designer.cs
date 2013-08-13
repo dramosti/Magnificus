@@ -633,6 +633,7 @@
             this.StateCommon.Border.Rounding = -10;
             this.StateCommon.Header.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPadraoCadastro_FormClosing);
+            this.Load += new System.EventHandler(this.FormPadraoCadastro_Load);
             this.ResizeBegin += new System.EventHandler(this.FormPadraoCadastro_ResizeBegin);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPadraoCadastro_KeyDown);
             this.Resize += new System.EventHandler(this.FormPadraoCadastro_Resize);
