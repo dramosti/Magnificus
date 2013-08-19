@@ -294,14 +294,21 @@ namespace HLP.Comum.UI.Eventos
 
 
         #region ContextMenuStrip
-        void SavePositionsComponent(ContextMenuStrip ctx)
+        void SavePositionsComponent(List<Control> lComponentes)
         {
-            foreach (UserControlBase ctr in (ctx.Tag as UserControlBase)._LabelGroup.lComponentesBySerparador)
+
+            for (int i = 0; i < lComponentes.Count(); i++)
             {
-                if (ctr.objConfigComponenteModel != null)
+                if (lComponentes[i].GetType().BaseType == typeof(UserControlBase))
                 {
-                    ctr.objConfigComponenteModel.objConfigCompUsu.nOrder = (ctr.Parent as FlowLayoutPanel).Controls.GetChildIndex(ctr);
-                    iConfigComponenteService.Save(ctr.objConfigComponenteModel);
+                    UserControlBase ctr = lComponentes[i] as UserControlBase;
+
+                    if (ctr.objConfigComponenteModel != null)
+                    {
+                        ctr.objConfigComponenteModel.objConfigCompUsu.nOrder = i;
+                        ctr.objConfigComponenteModel.objConfigCompUsu.xLabelGroup = ctr._LabelGroup.Name;
+                        iConfigComponenteService.Save(ctr.objConfigComponenteModel);
+                    }
                 }
             }
         }
@@ -360,7 +367,7 @@ namespace HLP.Comum.UI.Eventos
             {
                 ContextMenuStrip ctx = (sender as ToolStripMenuItem).GetContextMenuStrip();
                 (ctx.Tag as UserControlBase).MoveUp();
-                this.SavePositionsComponent(ctx);
+                this.SavePositionsComponent((ctx.Tag as UserControlBase)._LabelGroup.lComponentesBySerparador);
             }
             catch (System.Exception ex)
             {
@@ -373,7 +380,7 @@ namespace HLP.Comum.UI.Eventos
             {
                 ContextMenuStrip ctx = (sender as ToolStripMenuItem).GetContextMenuStrip();
                 (ctx.Tag as UserControlBase).MoveDown();
-                this.SavePositionsComponent(ctx);
+                this.SavePositionsComponent((ctx.Tag as UserControlBase)._LabelGroup.lComponentesBySerparador);
 
             }
             catch (System.Exception ex)
@@ -392,13 +399,43 @@ namespace HLP.Comum.UI.Eventos
                 UserControlBase controle = (sender as ToolStripMenuItem).GetContextMenuStrip().Tag as UserControlBase;
                 //Remove primeiro o componente do grupo atual dele no separador
                 //controle._LabelGroup.lComponentesBySerparador.Remove(controle);
+                //string sParent = controle.Parent.Name;
+                // Remove do Container
+                //(controle.Parent as FlowLayoutPanel).Controls.Remove(controle);
+                //Salva a posição do Grupo do separador que o componente pertencia.
+
 
                 //Busca a primeira posição do novo grupo do separador escolhido
-                int iPosicao = (sepSelect.lComponentesBySerparador.Min(c => c.TabIndex) - 1);
+                int iPosicao = (controle.Parent as FlowLayoutPanel).Controls.GetChildIndex(sepSelect);// (sepSelect.lComponentesBySerparador.Min(c => c.TabIndex) - 1);
+
+                //List<Control> lteste = (controle.Parent as FlowLayoutPanel).Controls.OfType<Control>().Where(c => 
+                //                (controle.Parent as FlowLayoutPanel).Controls.GetChildIndex(c)  >= iPosicao).ToList();
+                //int icount = iPosicao +1;
+                //foreach (Control ctr in lteste)
+                //{
+                //    (controle.Parent as FlowLayoutPanel).Controls.SetChildIndex(ctr, icount);
+                //    ctr.TabIndex = icount;
+                //    icount++;
+                //}
+
                 (controle.Parent as FlowLayoutPanel).Controls.SetChildIndex(controle, iPosicao);
                 controle.TabIndex = iPosicao;
-                controle._LabelGroup = sepSelect;              
-                this.SavePositionsComponent((sender as ToolStripMenuItem).GetContextMenuStrip());
+                controle._LabelGroup = sepSelect;
+
+                List<Control> lteste = (controle.Parent as FlowLayoutPanel).Controls.OfType<Control>().ToList();
+                int icount = 1;
+                foreach (Control ctr in lteste)
+                {
+                    (controle.Parent as FlowLayoutPanel).Controls.SetChildIndex(ctr, icount);
+                    ctr.TabIndex = icount;
+                    icount++;
+                }
+
+                //(controle.Parent as FlowLayoutPanel).Controls.SetChildIndex(controle, iPosicao);
+                //controle.TabIndex = iPosicao;
+                //controle._LabelGroup = sepSelect;
+                //lteste = iConfigFormulario.lControl.Where(c => (c.Parent != null ? c.Parent.Name : "") == controle.Parent.Name).ToList();
+                this.SavePositionsComponent(lteste);//controle._LabelGroup.lComponentesBySerparador);
 
             }
             catch (System.Exception ex)

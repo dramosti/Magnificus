@@ -281,9 +281,7 @@ namespace HLP.Comum.Models
         [ParameterOrder(Order = 5)]
         public string xTypeComp { get; set; }
         [ParameterOrder(Order = 6)]
-        public int? idTabPage { get; set; }
-        [ParameterOrder(Order = 7)]
-        public string xLabelGroup { get; set; }
+        public int? idTabPage { get; set; }      
 
 
         /// <summary>
@@ -337,6 +335,10 @@ namespace HLP.Comum.Models
         public string xDisplayMember { get; set; }
         [ParameterOrder(Order = 17)]
         public int iTamanhoComponente { get; set; }
+        [ParameterOrder(Order = 18)]
+        public string xLabelGroup { get; set; }
+        [ParameterOrder(Order = 19)]
+        public int idTabPageUsuario { get; set; }
     }
 
     public class ConfigCompGridViewUsuModel

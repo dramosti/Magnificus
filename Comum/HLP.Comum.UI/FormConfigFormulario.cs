@@ -87,14 +87,14 @@ namespace HLP.Comum.UI
             TreeNode nSeparador;
             TreeNode nComponente;
 
-            foreach (string separador in tab.lConfigComponente.Select(c => c.xLabelGroup).Distinct())
+            foreach (string separador in tab.lConfigComponente.Select(c => c.objConfigCompUsu.xLabelGroup).Distinct())
             {
                 nSeparador = new TreeNode();
                 nSeparador.ImageIndex = 2;
                 nSeparador.SelectedImageIndex = 2;
                 nSeparador.Text = separador;
                 nSeparador.Tag = "SEPARADOR";
-                foreach (var comp in tab.lConfigComponente.Where(c => (c.xTypeComp != "HLP_DataGridView") && (c.xLabelGroup == separador)).OrderBy(C => C.objConfigCompUsu.nOrder))
+                foreach (var comp in tab.lConfigComponente.Where(c => (c.xTypeComp != "HLP_DataGridView") && (c.objConfigCompUsu.xLabelGroup == separador)).OrderBy(C => C.objConfigCompUsu.nOrder))
                 {
                     nComponente = new TreeNode();
                     nComponente.ImageIndex = 3;
@@ -448,7 +448,7 @@ namespace HLP.Comum.UI
                         foreach (TreeNode node in DestinationNode.Nodes)
                         {
                             (node.Tag as ConfigComponenteModel).objConfigCompUsu.nOrder = node.Index;
-                            (node.Tag as ConfigComponenteModel).xLabelGroup = DestinationNode.Text; // Verificar para mudar quando mudar o text do separador.
+                            (node.Tag as ConfigComponenteModel).objConfigCompUsu.xLabelGroup = DestinationNode.Text; // Verificar para mudar quando mudar o text do separador.
 
                         }
                     }
