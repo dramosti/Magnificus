@@ -1398,5 +1398,11 @@ namespace HLP.Comum.UI
             AjustarBotoesFlow();
         }
 
+        private void FormPadraoCadastro_Load(object sender, EventArgs e)
+        {
+            bLoad = true;
+            btnMinimiza_Click(this, null);
+        }
+
     }
 }
