@@ -178,7 +178,7 @@ namespace Magnificus
                             ))
                             {
                                 item.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C1FFC1"); //cor do tom verde;
-                                objLogScript.idUsuario = UserData.idUser.ToString();
+                                objLogScript.idFuncionario = UserData.idUser.ToString();
                                 objLogScript.dtExec = DateTime.Now.ToString();
                             }
                         }

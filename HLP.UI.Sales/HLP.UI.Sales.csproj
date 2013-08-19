@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8858D98-127A-499C-A5EE-6FE15C666106}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.UI.Sales</RootNamespace>
+    <AssemblyName>HLP.UI.Sales</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit, Version=4.4.0.2, Culture=neutral, PublicKeyToken=2f7c2ef04fde3964, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Comum\HLP.Comum.Infrastructure\KryptonLibrary\AC.ExtendedRenderer.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.3.2.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\ComponentFactory.Krypton.Toolkit\4.4.0.0__a87e673e9ecb6e8e\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HLP.Comum.Components, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\HLP.Comum.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="HLP.Comum.Messages, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\HLP.Comum.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="HLP.Comum.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\HLP.Comum.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="HLP.Comum.Modules, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\HLP.Comum.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Ninject, Version=2.1.0.91, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Comum\HLP.Comum.Infrastructure\NInject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comercial\formOrcamentoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\formOrcamentoVenda.Designer.cs">
+      <DependentUpon>formOrcamentoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Comercial\formOrcamentoVenda.resx">
+      <DependentUpon>formOrcamentoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\DataSources\HLP.Models.Sales.Comercial.Orcamento_ItemModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Sales.Comercial.Orcamento_Item_ImpostosModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comum\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{cd60f2d5-6e51-417a-b50e-c4eb01eb7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comum\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface\HLP.Comum.Services.Interface.csproj">
+      <Project>{c82a94bf-eec8-483e-bad1-be729947b611}</Project>
+      <Name>HLP.Comum.Services.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comum\HLP.Comum.UI\HLP.Comum.UI.csproj">
+      <Project>{39ead670-55a5-4aab-885c-a163bf21e04b}</Project>
+      <Name>HLP.Comum.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dependencies\HLP.Dependencies\HLP.Dependencies.csproj">
+      <Project>{6c138179-2c79-4535-9c3c-e78c529d3598}</Project>
+      <Name>HLP.Dependencies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Models.Sales\HLP.Models.Sales.csproj">
+      <Project>{cf547176-8d54-4faf-b6f3-28baae17c1ed}</Project>
+      <Name>HLP.Models.Sales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Services.Interfaces.Sales\HLP.Services.Interfaces.Sales.csproj">
+      <Project>{0238ed42-7ea8-492e-a656-a6d0f2f3ba1a}</Project>
+      <Name>HLP.Services.Interfaces.Sales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997e026a-b1f2-45ab-ae1c-0ec6ad2e034d}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

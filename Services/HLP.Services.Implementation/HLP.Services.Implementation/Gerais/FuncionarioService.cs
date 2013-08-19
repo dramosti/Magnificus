@@ -178,7 +178,6 @@ namespace HLP.Services.Implementation.Entries.Gerais
         {
             try
             {
-
                 _FuncionarioRepository.BeginTransaction();
 
                 //Deleta Filho

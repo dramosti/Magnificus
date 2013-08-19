@@ -1,0 +1,21 @@
+﻿using HLP.Models.Sales.Comercial;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HLP.Repository.Interfaces.Sales.Comercial
+{
+    public interface IOrcamento_ideRepository
+    {
+        void Save(Orcamento_ideModel objOrcamento_ide);
+        void Delete(int idOrcamento);
+        int Copy(int idOrcamento);
+        Orcamento_ideModel GetOrcamento_ide(int idOrcamento);
+        List<Orcamento_ideModel> GetAllOrcamento_ide();
+        void BeginTransaction();
+        void CommitTransaction();
+        void RollackTransaction();
+    }
+}

@@ -344,6 +344,10 @@
       <Project>{799b4d10-77a7-44dd-8cd8-20a36f7e393a}</Project>
       <Name>HLP.Comum.Ws</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HLP.UI.Sales\HLP.UI.Sales.csproj">
+      <Project>{f8858d98-127a-499c-a5ee-6fe15c666106}</Project>
+      <Name>HLP.UI.Sales</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\HLP.Models\HLP.Models.Entries.csproj">
       <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
       <Name>HLP.Models.Entries</Name>

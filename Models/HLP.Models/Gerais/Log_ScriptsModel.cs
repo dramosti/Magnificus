@@ -25,7 +25,7 @@ namespace HLP.Models.Entries.Gerais
         [ParameterOrder(Order = 3)]
         public string dtExec { get; set; }
         [ParameterOrder(Order = 4)]
-        public string idUsuario { get; set; }
+        public string idFuncionario { get; set; }
         [ParameterOrder(Order = 5)]
         public string script { get; set; }
 
