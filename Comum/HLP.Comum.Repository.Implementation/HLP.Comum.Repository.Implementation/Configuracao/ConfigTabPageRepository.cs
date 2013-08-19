@@ -40,6 +40,10 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
             {
                 try
                 {
+                    if (comp.xTypeComp != "HLP_DataGridView")
+                    {
+                        comp.objConfigCompUsu.idTabPageUsuario = Convert.ToInt32(comp.idTabPage);    
+                    }
                     iConfigComponenteRepository.Save(comp);
 
                 }

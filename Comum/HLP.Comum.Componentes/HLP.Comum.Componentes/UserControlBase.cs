@@ -539,7 +539,7 @@ namespace HLP.Comum.Components
                     this._help = objConfigComponenteModel.objConfigCompUsu.xHelp;
                     this._Visible = objConfigComponenteModel.objConfigCompUsu.stVisible.ToBoolean();
                     this._TamanhoComponente = objConfigComponenteModel.objConfigCompUsu.iTamanhoComponente.ToInt32();
-                    this.SetSeparador = objConfigComponenteModel.xLabelGroup;
+                    this.SetSeparador = objConfigComponenteModel.objConfigCompUsu.xLabelGroup;
                     this.TabIndex = objConfigComponenteModel.objConfigCompUsu.nOrder;
                     (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, this.TabIndex);
 

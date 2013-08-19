@@ -30,6 +30,8 @@ namespace HLP.UI.Entries.Comercial
             IKernel kernel = new StandardKernel(new MagnificusDependenciesModule());
             kernel.Settings.ActivationCacheDisabled = false;
             kernel.Inject(this);
+           
+
         }
 
         private void FormJuros_Load(object sender, EventArgs e)
