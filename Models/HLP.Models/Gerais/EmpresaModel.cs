@@ -81,6 +81,8 @@ namespace HLP.Models.Entries.Gerais
         public string xCxPostal { get; set; }
         [ParameterOrder(Order = 10)]
         public int idCidade { get; set; }
+        [ParameterOrder(Order = 11)]
+        public byte? stPrincipal { get; set; }
     }
 
     public class EmpresaParametrosModel

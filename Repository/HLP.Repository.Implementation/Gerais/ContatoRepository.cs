@@ -72,6 +72,17 @@ namespace HLP.Repository.Implementation.Entries.Gerais
             return regContatoAccessor.Execute(idContato).FirstOrDefault();
         }
 
+        public List<ContatoModel> GetContato_ByClienteFornec(int idContato)
+        {
+            DataAccessor<ContatoModel> reg = UndTrabalho.dbPrincipal.CreateSqlStringAccessor
+            ("select c.* from Contato c " +
+             "inner join Cliente_fornecedor_contato cc " +
+             "on c.idContato = cc.idContato and cc.idClienteFornecedor = @idContato",
+            new Parameters(UndTrabalho.dbPrincipal).AddParameter<int>("idContato"),
+            MapBuilder<ContatoModel>.MapAllProperties().Build());
+            return reg.Execute(idContato).ToList();
+        }
+
         public void BeginTransaction()
         {
             UndTrabalho.BeginTransaction();

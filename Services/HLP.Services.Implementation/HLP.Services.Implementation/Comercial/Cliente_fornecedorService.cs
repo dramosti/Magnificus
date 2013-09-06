@@ -282,7 +282,7 @@ namespace HLP.Services.Implementation.Entries.Comercial
         {
             Cliente_fornecedorModel objCliente_fornecedor = _Cliente_fornecedorRepository.GetCliente_fornecedor(idClienteFornecedor);
 
-            if (bChildren)
+            if (bChildren && objCliente_fornecedor != null)
             {
                 objCliente_fornecedor.lCliente_fornecedor_representante = _Cliente_fornecedor_representanteRepository.GetAllCliente_fornecedor_representante(idClienteFornecedor);
                 objCliente_fornecedor.lCliente_fornecedor_produto = _Cliente_fornecedor_produtoRepository.GetAllCliente_fornecedor_produto(idClienteFornecedor);
@@ -294,6 +294,16 @@ namespace HLP.Services.Implementation.Entries.Comercial
             }
 
             return objCliente_fornecedor;
+        }
+
+        public Cliente_fornecedor_EnderecoModel GetCliente_enderecoPrincipal(int idClienteFornecedor)
+        {
+            return _Cliente_fornecedorRepository.GetCliente_fornecedor_EnderecoPrincipal(idCliente_fornecedor: idClienteFornecedor);
+        }
+
+        public List<Cliente_fornecedor_representanteModel> GetCliente_fornecedor_Representante(int idCliente_fornecedor)
+        {
+            return _Cliente_fornecedorRepository.GetCliente_fornecedor_Representante(idCliente_fornecedor: idCliente_fornecedor);
         }
     }
 }

@@ -285,7 +285,8 @@ namespace HLP.UI.Entries.Comercial
         private void PopulaTabela()
         {
             base.CarregaClasse(objCliForModel);
-            base.CarregaClasse(objCliForModel.cliforFiscalModel);
+            base.CarregaClasse(objCliForModel.cliforFiscalModel == null ? objCliForModel.cliforFiscalModel =
+                new Cliente_fornecedor_fiscalModel() : objCliForModel.cliforFiscalModel);
         }
 
         private void PopulaForm()

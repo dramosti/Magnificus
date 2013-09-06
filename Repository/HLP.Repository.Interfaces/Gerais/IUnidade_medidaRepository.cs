@@ -13,5 +13,6 @@ namespace HLP.Repository.Interfaces.Entries.Gerais
         void Delete(int idUnidadeMedida);
         int Copy(int idUnidadeMedida);
         bool IsNew(string xSiglaPadrao);
+        List<Unidade_medidaModel> GetUnidadeByConversaoProduto(int idParaUnidadeMedida, int idProduto);
     }
 }

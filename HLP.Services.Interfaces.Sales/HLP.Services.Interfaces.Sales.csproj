@@ -43,9 +43,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Comum\HLP.Comum.Infrastructure\HLP.Comum.Infrastructure.csproj">
+      <Project>{cd60f2d5-6e51-417a-b50e-c4eb01eb7565}</Project>
+      <Name>HLP.Comum.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HLP.Models.Sales\HLP.Models.Sales.csproj">
       <Project>{cf547176-8d54-4faf-b6f3-28baae17c1ed}</Project>
       <Name>HLP.Models.Sales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\HLP.Models\HLP.Models.Entries.csproj">
+      <Project>{71ca573c-dbb1-426f-b975-9cc418fc55a0}</Project>
+      <Name>HLP.Models.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997e026a-b1f2-45ab-ae1c-0ec6ad2e034d}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

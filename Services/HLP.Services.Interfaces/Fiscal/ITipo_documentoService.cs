@@ -1,4 +1,5 @@
 ﻿using HLP.Models.Entries.Fiscal;
+using System.Collections.Generic;
 
 namespace HLP.Services.Interfaces.Entries.Fiscal
 {
@@ -11,5 +12,6 @@ namespace HLP.Services.Interfaces.Entries.Fiscal
         void Commit();
         void RollBack();
         int Copy(int idTipoDocumento);
+        List<Tipo_documentoModel> GetTipo_documentoAll();
     }
 }

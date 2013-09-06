@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLP_Pesquisa));
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtPesquisa = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.btnPesquisa = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.txtDisplay = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider();
-            this.btnPesquisa = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +85,14 @@
             this.txtPesquisa.StateDisabled.Content.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.txtPesquisa.TabIndex = 3;
             this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
+            // 
+            // btnPesquisa
+            // 
+            this.btnPesquisa.Image = global::HLP.Comum.Components.Properties.Resources.filtro;
+            this.btnPesquisa.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.InputControl;
+            this.btnPesquisa.Tag = "";
+            this.btnPesquisa.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Context;
+            this.btnPesquisa.UniqueName = "5E20914B52404B8A07B1D788A0D293E2";
             // 
             // contextMenuStrip1
             // 
@@ -137,14 +146,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
-            // 
-            // btnPesquisa
-            // 
-            this.btnPesquisa.Image = global::HLP.Comum.Components.Properties.Resources.filtro;
-            this.btnPesquisa.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.InputControl;
-            this.btnPesquisa.Tag = "";
-            this.btnPesquisa.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Context;
-            this.btnPesquisa.UniqueName = "5E20914B52404B8A07B1D788A0D293E2";
             // 
             // HLP_Pesquisa
             // 

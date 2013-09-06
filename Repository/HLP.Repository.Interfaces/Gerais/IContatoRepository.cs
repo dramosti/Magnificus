@@ -12,6 +12,7 @@ namespace HLP.Repository.Interfaces.Entries.Gerais
         void Delete(ContatoModel objContato);
         void Copy(ContatoModel objContato);
         ContatoModel GetContato(int idContato);
+        List<ContatoModel> GetContato_ByClienteFornec(int idContato);
 
         void BeginTransaction();
         void CommitTransaction();

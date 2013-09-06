@@ -27,8 +27,16 @@ namespace HLP.Models.Entries.Gerais
         public decimal? nQuantidadeAdicional { get; set; }
         [ParameterOrder(Order = 5)]
         public decimal nFator { get; set; }
+        private byte? _stArrendondar;
+
         [ParameterOrder(Order = 6)]
-        public byte? stArrendondar { get; set; }
+        public byte? stArrendondar
+        {
+            get { return _stArrendondar; }
+            set { _stArrendondar = value; }
+        }
+
+
         [ParameterOrder(Order = 7)]
         public int idDeUnidadeMedida { get; set; }
         [ParameterOrder(Order = 8)]

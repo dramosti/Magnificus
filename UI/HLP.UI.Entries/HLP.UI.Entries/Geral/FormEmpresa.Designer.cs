@@ -54,7 +54,9 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dgvEnderecoEmpresa = new HLP.Comum.Components.HLP_DataGridView();
+            this.bsEmpresaEndereco = new System.Windows.Forms.BindingSource(this.components);
             this.stTipoEndDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.stPrincipal = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.xLgrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xCplDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,11 +64,10 @@
             this.cepDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewMaskedTextBoxColumn();
             this.xCxPostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCidade = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.bsEmpresaEndereco = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.panelPadrao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).BeginInit();
             this.kryptonTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -86,7 +87,11 @@
             // panelPadrao
             // 
             this.panelPadrao.Controls.Add(this.kryptonTabControl1);
-            this.panelPadrao.Size = new System.Drawing.Size(1002, 383);
+            this.panelPadrao.Size = new System.Drawing.Size(972, 383);
+            // 
+            // panelAtalhos
+            // 
+            this.panelAtalhos.Size = new System.Drawing.Size(28, 383);
             // 
             // kryptonTabControl1
             // 
@@ -108,7 +113,7 @@
             this.kryptonTabControl1.Name = "kryptonTabControl1";
             this.kryptonTabControl1.PreserveTabColor = false;
             this.kryptonTabControl1.SelectedIndex = 0;
-            this.kryptonTabControl1.Size = new System.Drawing.Size(996, 377);
+            this.kryptonTabControl1.Size = new System.Drawing.Size(966, 377);
             this.kryptonTabControl1.TabIndex = 0;
             this.kryptonTabControl1.UseExtendedLayout = false;
             // 
@@ -118,7 +123,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(988, 348);
+            this.tabPage1.Size = new System.Drawing.Size(958, 348);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "Principal";
@@ -130,7 +135,7 @@
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(988, 348);
+            this.kryptonPanel1.Size = new System.Drawing.Size(958, 348);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -156,7 +161,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(988, 348);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(958, 348);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -167,7 +172,7 @@
             this.hlP_LabelSeparatorGeral.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorGeral.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorGeral.Name = "hlP_LabelSeparatorGeral";
-            this.hlP_LabelSeparatorGeral.Size = new System.Drawing.Size(415, 19);
+            this.hlP_LabelSeparatorGeral.Size = new System.Drawing.Size(433, 19);
             this.hlP_LabelSeparatorGeral.TabIndex = 0;
             this.hlP_LabelSeparatorGeral.TabStop = false;
             // 
@@ -182,14 +187,15 @@
             this.txtCodigo._Regex = null;
             this.txtCodigo._Table = "Empresa";
             this.txtCodigo._TamanhoComponente = 72;
-            this.txtCodigo._TamanhoMaiorLabel = 140;
+            this.txtCodigo._TamanhoMaiorLabel = 86;
+            this.txtCodigo._Visible = false;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
             this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(98, 28);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(98, 3, 15, 3);
+            this.txtCodigo.Location = new System.Drawing.Point(44, 28);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(44, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.objConfigComponenteModel = null;
@@ -208,14 +214,15 @@
             this.txtxNome._Regex = null;
             this.txtxNome._Table = "Empresa";
             this.txtxNome._TamanhoComponente = 263;
-            this.txtxNome._TamanhoMaiorLabel = 140;
+            this.txtxNome._TamanhoMaiorLabel = 86;
+            this.txtxNome._Visible = false;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
             this.txtxNome.bConfiguracao = false;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxNome.Color = System.Drawing.Color.White;
-            this.txtxNome.Location = new System.Drawing.Point(106, 55);
-            this.txtxNome.Margin = new System.Windows.Forms.Padding(106, 3, 15, 3);
+            this.txtxNome.Location = new System.Drawing.Point(52, 55);
+            this.txtxNome.Margin = new System.Windows.Forms.Padding(52, 3, 15, 3);
             this.txtxNome.MaxLength = 32767;
             this.txtxNome.Name = "txtxNome";
             this.txtxNome.objConfigComponenteModel = null;
@@ -234,14 +241,15 @@
             this.txtxFantasia._Regex = null;
             this.txtxFantasia._Table = "Empresa";
             this.txtxFantasia._TamanhoComponente = 263;
-            this.txtxFantasia._TamanhoMaiorLabel = 140;
+            this.txtxFantasia._TamanhoMaiorLabel = 86;
+            this.txtxFantasia._Visible = false;
             this.txtxFantasia.BackColor = System.Drawing.Color.Transparent;
             this.txtxFantasia.Base = null;
             this.txtxFantasia.bConfiguracao = false;
             this.txtxFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxFantasia.Color = System.Drawing.Color.White;
-            this.txtxFantasia.Location = new System.Drawing.Point(93, 82);
-            this.txtxFantasia.Margin = new System.Windows.Forms.Padding(93, 3, 15, 3);
+            this.txtxFantasia.Location = new System.Drawing.Point(39, 82);
+            this.txtxFantasia.Margin = new System.Windows.Forms.Padding(39, 3, 15, 3);
             this.txtxFantasia.MaxLength = 32767;
             this.txtxFantasia.Name = "txtxFantasia";
             this.txtxFantasia.objConfigComponenteModel = null;
@@ -258,15 +266,16 @@
             this.masktxtxCnpj._Regex = null;
             this.masktxtxCnpj._Table = "Empresa";
             this.masktxtxCnpj._TamanhoComponente = 146;
-            this.masktxtxCnpj._TamanhoMaiorLabel = 140;
+            this.masktxtxCnpj._TamanhoMaiorLabel = 86;
             this.masktxtxCnpj._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.masktxtxCnpj._UF = null;
+            this.masktxtxCnpj._Visible = false;
             this.masktxtxCnpj.BackColor = System.Drawing.Color.Transparent;
             this.masktxtxCnpj.Base = null;
             this.masktxtxCnpj.bConfiguracao = false;
             this.masktxtxCnpj.Color = System.Drawing.Color.White;
-            this.masktxtxCnpj.Location = new System.Drawing.Point(112, 109);
-            this.masktxtxCnpj.Margin = new System.Windows.Forms.Padding(112, 3, 15, 3);
+            this.masktxtxCnpj.Location = new System.Drawing.Point(58, 109);
+            this.masktxtxCnpj.Margin = new System.Windows.Forms.Padding(58, 3, 15, 3);
             this.masktxtxCnpj.Mask = "00.000.000/0000-00";
             this.masktxtxCnpj.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.masktxtxCnpj.MaxLength = 32767;
@@ -287,14 +296,15 @@
             this.txtxIe._Regex = null;
             this.txtxIe._Table = "Empresa";
             this.txtxIe._TamanhoComponente = 146;
-            this.txtxIe._TamanhoMaiorLabel = 140;
+            this.txtxIe._TamanhoMaiorLabel = 86;
+            this.txtxIe._Visible = false;
             this.txtxIe.BackColor = System.Drawing.Color.Transparent;
             this.txtxIe.Base = null;
             this.txtxIe.bConfiguracao = false;
             this.txtxIe.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxIe.Color = System.Drawing.Color.White;
-            this.txtxIe.Location = new System.Drawing.Point(118, 136);
-            this.txtxIe.Margin = new System.Windows.Forms.Padding(118, 3, 15, 3);
+            this.txtxIe.Location = new System.Drawing.Point(64, 136);
+            this.txtxIe.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
             this.txtxIe.MaxLength = 32767;
             this.txtxIe.Name = "txtxIe";
             this.txtxIe.objConfigComponenteModel = null;
@@ -313,14 +323,15 @@
             this.txtxIm._Regex = null;
             this.txtxIm._Table = "Empresa";
             this.txtxIm._TamanhoComponente = 146;
-            this.txtxIm._TamanhoMaiorLabel = 140;
+            this.txtxIm._TamanhoMaiorLabel = 86;
+            this.txtxIm._Visible = false;
             this.txtxIm.BackColor = System.Drawing.Color.Transparent;
             this.txtxIm.Base = null;
             this.txtxIm.bConfiguracao = false;
             this.txtxIm.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxIm.Color = System.Drawing.Color.White;
-            this.txtxIm.Location = new System.Drawing.Point(115, 163);
-            this.txtxIm.Margin = new System.Windows.Forms.Padding(115, 3, 15, 3);
+            this.txtxIm.Location = new System.Drawing.Point(61, 163);
+            this.txtxIm.Margin = new System.Windows.Forms.Padding(61, 3, 15, 3);
             this.txtxIm.MaxLength = 32767;
             this.txtxIm.Name = "txtxIm";
             this.txtxIm.objConfigComponenteModel = null;
@@ -339,14 +350,15 @@
             this.txtxSuframa._Regex = null;
             this.txtxSuframa._Table = "Empresa";
             this.txtxSuframa._TamanhoComponente = 146;
-            this.txtxSuframa._TamanhoMaiorLabel = 140;
+            this.txtxSuframa._TamanhoMaiorLabel = 86;
+            this.txtxSuframa._Visible = false;
             this.txtxSuframa.BackColor = System.Drawing.Color.Transparent;
             this.txtxSuframa.Base = null;
             this.txtxSuframa.bConfiguracao = false;
             this.txtxSuframa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxSuframa.Color = System.Drawing.Color.White;
-            this.txtxSuframa.Location = new System.Drawing.Point(94, 190);
-            this.txtxSuframa.Margin = new System.Windows.Forms.Padding(94, 3, 15, 3);
+            this.txtxSuframa.Location = new System.Drawing.Point(40, 190);
+            this.txtxSuframa.Margin = new System.Windows.Forms.Padding(40, 3, 15, 3);
             this.txtxSuframa.MaxLength = 32767;
             this.txtxSuframa.Name = "txtxSuframa";
             this.txtxSuframa.objConfigComponenteModel = null;
@@ -363,15 +375,16 @@
             this.txtxTelefone._Regex = null;
             this.txtxTelefone._Table = "Empresa";
             this.txtxTelefone._TamanhoComponente = 146;
-            this.txtxTelefone._TamanhoMaiorLabel = 140;
+            this.txtxTelefone._TamanhoMaiorLabel = 86;
             this.txtxTelefone._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.txtxTelefone._UF = null;
+            this.txtxTelefone._Visible = false;
             this.txtxTelefone.BackColor = System.Drawing.Color.Transparent;
             this.txtxTelefone.Base = null;
             this.txtxTelefone.bConfiguracao = false;
             this.txtxTelefone.Color = System.Drawing.Color.White;
-            this.txtxTelefone.Location = new System.Drawing.Point(92, 217);
-            this.txtxTelefone.Margin = new System.Windows.Forms.Padding(92, 3, 15, 3);
+            this.txtxTelefone.Location = new System.Drawing.Point(38, 217);
+            this.txtxTelefone.Margin = new System.Windows.Forms.Padding(38, 3, 15, 3);
             this.txtxTelefone.Mask = "(00)0000-0000";
             this.txtxTelefone.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtxTelefone.MaxLength = 32767;
@@ -390,15 +403,16 @@
             this.txtxFax._Regex = null;
             this.txtxFax._Table = "Empresa";
             this.txtxFax._TamanhoComponente = 146;
-            this.txtxFax._TamanhoMaiorLabel = 140;
+            this.txtxFax._TamanhoMaiorLabel = 86;
             this.txtxFax._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.txtxFax._UF = null;
+            this.txtxFax._Visible = false;
             this.txtxFax.BackColor = System.Drawing.Color.Transparent;
             this.txtxFax.Base = null;
             this.txtxFax.bConfiguracao = false;
             this.txtxFax.Color = System.Drawing.Color.White;
-            this.txtxFax.Location = new System.Drawing.Point(119, 244);
-            this.txtxFax.Margin = new System.Windows.Forms.Padding(119, 3, 15, 3);
+            this.txtxFax.Location = new System.Drawing.Point(65, 244);
+            this.txtxFax.Margin = new System.Windows.Forms.Padding(65, 3, 15, 3);
             this.txtxFax.Mask = "(00)90000-0000";
             this.txtxFax.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtxFax.MaxLength = 32767;
@@ -419,14 +433,15 @@
             this.txtxEmail._Regex = null;
             this.txtxEmail._Table = "Empresa";
             this.txtxEmail._TamanhoComponente = 263;
-            this.txtxEmail._TamanhoMaiorLabel = 140;
+            this.txtxEmail._TamanhoMaiorLabel = 86;
+            this.txtxEmail._Visible = false;
             this.txtxEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtxEmail.Base = null;
             this.txtxEmail.bConfiguracao = false;
             this.txtxEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxEmail.Color = System.Drawing.Color.White;
-            this.txtxEmail.Location = new System.Drawing.Point(109, 271);
-            this.txtxEmail.Margin = new System.Windows.Forms.Padding(109, 3, 15, 3);
+            this.txtxEmail.Location = new System.Drawing.Point(55, 271);
+            this.txtxEmail.Margin = new System.Windows.Forms.Padding(55, 3, 15, 3);
             this.txtxEmail.MaxLength = 32767;
             this.txtxEmail.Name = "txtxEmail";
             this.txtxEmail.objConfigComponenteModel = null;
@@ -445,14 +460,15 @@
             this.txtxHttp._Regex = null;
             this.txtxHttp._Table = "Empresa";
             this.txtxHttp._TamanhoComponente = 263;
-            this.txtxHttp._TamanhoMaiorLabel = 140;
+            this.txtxHttp._TamanhoMaiorLabel = 86;
+            this.txtxHttp._Visible = false;
             this.txtxHttp.BackColor = System.Drawing.Color.Transparent;
             this.txtxHttp.Base = null;
             this.txtxHttp.bConfiguracao = false;
             this.txtxHttp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxHttp.Color = System.Drawing.Color.White;
-            this.txtxHttp.Location = new System.Drawing.Point(113, 298);
-            this.txtxHttp.Margin = new System.Windows.Forms.Padding(113, 3, 15, 3);
+            this.txtxHttp.Location = new System.Drawing.Point(59, 298);
+            this.txtxHttp.Margin = new System.Windows.Forms.Padding(59, 3, 15, 3);
             this.txtxHttp.MaxLength = 32767;
             this.txtxHttp.Name = "txtxHttp";
             this.txtxHttp.objConfigComponenteModel = null;
@@ -471,14 +487,15 @@
             this.txtxLinkLogoEmpresa._Regex = null;
             this.txtxLinkLogoEmpresa._Table = "Empresa";
             this.txtxLinkLogoEmpresa._TamanhoComponente = 347;
-            this.txtxLinkLogoEmpresa._TamanhoMaiorLabel = 140;
+            this.txtxLinkLogoEmpresa._TamanhoMaiorLabel = 86;
+            this.txtxLinkLogoEmpresa._Visible = false;
             this.txtxLinkLogoEmpresa.BackColor = System.Drawing.Color.Transparent;
             this.txtxLinkLogoEmpresa.Base = null;
             this.txtxLinkLogoEmpresa.bConfiguracao = false;
             this.txtxLinkLogoEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxLinkLogoEmpresa.Color = System.Drawing.Color.White;
-            this.txtxLinkLogoEmpresa.Location = new System.Drawing.Point(485, 3);
-            this.txtxLinkLogoEmpresa.Margin = new System.Windows.Forms.Padding(64, 3, 15, 3);
+            this.txtxLinkLogoEmpresa.Location = new System.Drawing.Point(449, 3);
+            this.txtxLinkLogoEmpresa.Margin = new System.Windows.Forms.Padding(10, 3, 15, 3);
             this.txtxLinkLogoEmpresa.MaxLength = 32767;
             this.txtxLinkLogoEmpresa.Name = "txtxLinkLogoEmpresa";
             this.txtxLinkLogoEmpresa.objConfigComponenteModel = null;
@@ -497,14 +514,15 @@
             this.txtxLinkPastas._Regex = null;
             this.txtxLinkPastas._Table = "Empresa";
             this.txtxLinkPastas._TamanhoComponente = 347;
-            this.txtxLinkPastas._TamanhoMaiorLabel = 140;
+            this.txtxLinkPastas._TamanhoMaiorLabel = 86;
+            this.txtxLinkPastas._Visible = false;
             this.txtxLinkPastas.BackColor = System.Drawing.Color.Transparent;
             this.txtxLinkPastas.Base = null;
             this.txtxLinkPastas.bConfiguracao = false;
             this.txtxLinkPastas.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxLinkPastas.Color = System.Drawing.Color.White;
-            this.txtxLinkPastas.Location = new System.Drawing.Point(499, 30);
-            this.txtxLinkPastas.Margin = new System.Windows.Forms.Padding(78, 3, 15, 3);
+            this.txtxLinkPastas.Location = new System.Drawing.Point(463, 30);
+            this.txtxLinkPastas.Margin = new System.Windows.Forms.Padding(24, 3, 15, 3);
             this.txtxLinkPastas.MaxLength = 32767;
             this.txtxLinkPastas.Name = "txtxLinkPastas";
             this.txtxLinkPastas.objConfigComponenteModel = null;
@@ -523,15 +541,16 @@
             this.cboAtivo._situacao = true;
             this.cboAtivo._Table = "Empresa";
             this.cboAtivo._TamanhoComponente = 80;
-            this.cboAtivo._TamanhoMaiorLabel = 140;
+            this.cboAtivo._TamanhoMaiorLabel = 86;
+            this.cboAtivo._Visible = false;
             this.cboAtivo.BackColor = System.Drawing.Color.Transparent;
             this.cboAtivo.Base = null;
             this.cboAtivo.bConfiguracao = false;
             this.cboAtivo.Color = System.Drawing.Color.White;
             this.cboAtivo.DataSource = null;
             this.cboAtivo.DisplayMember = "DisplayMember";
-            this.cboAtivo.Location = new System.Drawing.Point(531, 57);
-            this.cboAtivo.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
+            this.cboAtivo.Location = new System.Drawing.Point(495, 57);
+            this.cboAtivo.Margin = new System.Windows.Forms.Padding(56, 3, 15, 3);
             this.cboAtivo.Name = "cboAtivo";
             this.cboAtivo.objConfigComponenteModel = null;
             this.cboAtivo.SelectedIndex = -1;
@@ -554,14 +573,15 @@
             this.hlP_PesquisaidRamoAtividade._Regex = null;
             this.hlP_PesquisaidRamoAtividade._Table = "Empresa";
             this.hlP_PesquisaidRamoAtividade._TamanhoComponente = 300;
-            this.hlP_PesquisaidRamoAtividade._TamanhoMaiorLabel = 140;
+            this.hlP_PesquisaidRamoAtividade._TamanhoMaiorLabel = 86;
             this.hlP_PesquisaidRamoAtividade._Vinculado = false;
+            this.hlP_PesquisaidRamoAtividade._Visible = false;
             this.hlP_PesquisaidRamoAtividade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidRamoAtividade.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidRamoAtividade.Base = null;
             this.hlP_PesquisaidRamoAtividade.bConfiguracao = false;
-            this.hlP_PesquisaidRamoAtividade.Location = new System.Drawing.Point(478, 84);
-            this.hlP_PesquisaidRamoAtividade.Margin = new System.Windows.Forms.Padding(57, 3, 15, 3);
+            this.hlP_PesquisaidRamoAtividade.Location = new System.Drawing.Point(442, 84);
+            this.hlP_PesquisaidRamoAtividade.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.hlP_PesquisaidRamoAtividade.Name = "hlP_PesquisaidRamoAtividade";
             this.hlP_PesquisaidRamoAtividade.objConfigComponenteModel = null;
             this.hlP_PesquisaidRamoAtividade.ReadOnly = false;
@@ -581,13 +601,14 @@
             this.cbostCodigoRegimeTributario._Table = "Empresa";
             this.cbostCodigoRegimeTributario._TamanhoComponente = 80;
             this.cbostCodigoRegimeTributario._TamanhoMaiorLabel = 140;
+            this.cbostCodigoRegimeTributario._Visible = false;
             this.cbostCodigoRegimeTributario.BackColor = System.Drawing.Color.Transparent;
             this.cbostCodigoRegimeTributario.Base = null;
             this.cbostCodigoRegimeTributario.bConfiguracao = false;
             this.cbostCodigoRegimeTributario.Color = System.Drawing.Color.White;
             this.cbostCodigoRegimeTributario.DataSource = null;
             this.cbostCodigoRegimeTributario.DisplayMember = "DisplayMember";
-            this.cbostCodigoRegimeTributario.Location = new System.Drawing.Point(467, 111);
+            this.cbostCodigoRegimeTributario.Location = new System.Drawing.Point(485, 111);
             this.cbostCodigoRegimeTributario.Margin = new System.Windows.Forms.Padding(46, 3, 15, 3);
             this.cbostCodigoRegimeTributario.Name = "cbostCodigoRegimeTributario";
             this.cbostCodigoRegimeTributario.objConfigComponenteModel = null;
@@ -603,7 +624,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1144, 225);
+            this.tabPage2.Size = new System.Drawing.Size(958, 348);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Tag = false;
             this.tabPage2.Text = "Endereço";
@@ -615,7 +636,7 @@
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(1144, 225);
+            this.kryptonPanel2.Size = new System.Drawing.Size(958, 348);
             this.kryptonPanel2.TabIndex = 0;
             // 
             // dgvEnderecoEmpresa
@@ -626,6 +647,7 @@
             this.dgvEnderecoEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEnderecoEmpresa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stTipoEndDataGridViewTextBoxColumn,
+            this.stPrincipal,
             this.xLgrDataGridViewTextBoxColumn,
             this.nroDataGridViewTextBoxColumn,
             this.xCplDataGridViewTextBoxColumn,
@@ -640,9 +662,13 @@
             this.dgvEnderecoEmpresa.Inclui = false;
             this.dgvEnderecoEmpresa.Location = new System.Drawing.Point(0, 0);
             this.dgvEnderecoEmpresa.Name = "dgvEnderecoEmpresa";
-            this.dgvEnderecoEmpresa.Size = new System.Drawing.Size(1144, 225);
+            this.dgvEnderecoEmpresa.Size = new System.Drawing.Size(958, 348);
             this.dgvEnderecoEmpresa.TabIndex = 0;
             this.dgvEnderecoEmpresa.Tag = "Empresa_endereco";
+            // 
+            // bsEmpresaEndereco
+            // 
+            this.bsEmpresaEndereco.DataSource = typeof(HLP.Models.Entries.Gerais.Empresa_EnderecoModel);
             // 
             // stTipoEndDataGridViewTextBoxColumn
             // 
@@ -661,6 +687,15 @@
             this.stTipoEndDataGridViewTextBoxColumn.Name = "stTipoEndDataGridViewTextBoxColumn";
             this.stTipoEndDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.stTipoEndDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // stPrincipal
+            // 
+            this.stPrincipal.DataPropertyName = "stPrincipal";
+            this.stPrincipal.HeaderText = "Principal";
+            this.stPrincipal.Items.AddRange(new object[] {
+            "0-NÃO",
+            "1-SIM"});
+            this.stPrincipal.Name = "stPrincipal";
             // 
             // xLgrDataGridViewTextBoxColumn
             // 
@@ -710,10 +745,6 @@
             this.idCidade.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idCidade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // bsEmpresaEndereco
-            // 
-            this.bsEmpresaEndereco.DataSource = typeof(HLP.Models.Entries.Gerais.Empresa_EnderecoModel);
-            // 
             // FormEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -728,10 +759,9 @@
             this.Text = "Empresa";
             this.Load += new System.EventHandler(this.FormEmpresa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).EndInit();
             this.panelPadrao.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).EndInit();
             this.kryptonTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
@@ -772,7 +802,10 @@
         private System.Windows.Forms.TabPage tabPage2;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private Comum.Components.HLP_DataGridView dgvEnderecoEmpresa;
+        private Comum.Components.HLP_TextBox txtxLinkLogoEmpresa;
+        private Comum.Components.HLP_TextBox txtxLinkPastas;
         private System.Windows.Forms.DataGridViewComboBoxColumn stTipoEndDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn stPrincipal;
         private System.Windows.Forms.DataGridViewTextBoxColumn xLgrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn xCplDataGridViewTextBoxColumn;
@@ -780,7 +813,5 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewMaskedTextBoxColumn cepDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn xCxPostalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn idCidade;
-        private Comum.Components.HLP_TextBox txtxLinkLogoEmpresa;
-        private Comum.Components.HLP_TextBox txtxLinkPastas;
     }
 }

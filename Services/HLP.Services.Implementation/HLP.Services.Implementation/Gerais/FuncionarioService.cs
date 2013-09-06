@@ -259,12 +259,15 @@ namespace HLP.Services.Implementation.Entries.Gerais
 
             if (bChildren)
             {
-                objFuncionario.lFuncionario_Margem_Lucro_Comissao = _Funcionario_Margem_Lucro_ComissaoRepository.GetAllFuncionario_Margem_Lucro_Comissao(idFuncionario);
-                objFuncionario.lFuncionario_Endereco = _Funcionario_EnderecoRepository.GetAllFuncionario_Endereco(idFuncionario);
-                objFuncionario.lFuncionario_Comissao_Produto = _Funcionario_Comissao_ProdutoRepository.GetAllFuncionario_Comissao_Produto(idFuncionario);
-                objFuncionario.lFuncionario_Arquivo = _Funcionario_ArquivoRepository.GetAllFuncionario_Arquivo(idFuncionario);
-                objFuncionario.lFuncionario_Certificacao = _Funcionario_CertificacaoRepository.GetAllFuncionario_Certificacao(idFuncionario);
-                objFuncionario.lFuncionario_Acesso = _Acesso_Funcionario.GetAllAcesso_Funcionario(idFuncionario);
+                if (objFuncionario != null)
+                {
+                    objFuncionario.lFuncionario_Margem_Lucro_Comissao = _Funcionario_Margem_Lucro_ComissaoRepository.GetAllFuncionario_Margem_Lucro_Comissao(idFuncionario);
+                    objFuncionario.lFuncionario_Endereco = _Funcionario_EnderecoRepository.GetAllFuncionario_Endereco(idFuncionario);
+                    objFuncionario.lFuncionario_Comissao_Produto = _Funcionario_Comissao_ProdutoRepository.GetAllFuncionario_Comissao_Produto(idFuncionario);
+                    objFuncionario.lFuncionario_Arquivo = _Funcionario_ArquivoRepository.GetAllFuncionario_Arquivo(idFuncionario);
+                    objFuncionario.lFuncionario_Certificacao = _Funcionario_CertificacaoRepository.GetAllFuncionario_Certificacao(idFuncionario);
+                    objFuncionario.lFuncionario_Acesso = _Acesso_Funcionario.GetAllAcesso_Funcionario(idFuncionario);
+                }
             }
 
             return objFuncionario;

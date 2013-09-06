@@ -83,5 +83,16 @@ namespace HLP.Repository.Implementation.Entries.Gerais
                 return true;
             }
         }
+
+        public List<Unidade_medidaModel> GetUnidadeByConversaoProduto(int idParaUnidadeMedida, int idProduto)
+        {
+            DataAccessor<Unidade_medidaModel> reg = UndTrabalho.dbPrincipal.CreateSqlStringAccessor
+            ("select u.* from Unidade_medida u " +
+             "inner join Conversao c on c.idDeUnidadeMedida = u.idUnidadeMedida " +
+             "where c.idParaUnidadeMedida = @idParaUnidadeMedida and c.idProduto = @idProduto",
+            new Parameters(UndTrabalho.dbPrincipal).AddParameter<int>("idParaUnidadeMedida").AddParameter<int>("idProduto"),
+            MapBuilder<Unidade_medidaModel>.MapAllProperties().Build());
+            return reg.Execute(idParaUnidadeMedida, idProduto).ToList();
+        }
     }
 }

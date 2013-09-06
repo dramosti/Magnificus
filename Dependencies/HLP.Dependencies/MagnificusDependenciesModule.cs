@@ -84,6 +84,7 @@ namespace HLP.Dependencies
             Bind<ICodigo_IcmsRepository>().To<Codigo_IcmsRepository>();
             Bind<IClassificacao_fiscalRepository>().To<Classificacao_fiscalRepository>();
             Bind<IRamo_atividadeRepository>().To<Ramo_atividadeRepository>();
+            Bind<ICarga_trib_media_st_icmsRepository>().To<Carga_trib_media_st_icmsRepository>();
 
             #endregion
 
@@ -153,7 +154,11 @@ namespace HLP.Dependencies
             Bind<IEmpresa_EnderecoRepository>().To<Empresa_EnderecoRepository>();
             Bind<IAcessoRepository>().To<AcessoRepository>();
             Bind<ILog_ScriptsRepository>().To<Log_ScriptsRepository>();
-            Bind<IOrcamento_ideService>().To<Orcamento_ideService>();
+            Bind<IOrcamento_ideRepository>().To<Orcamento_ideRepository>();
+            Bind<IOrcamento_Item_ImpostosRepository>().To<Orcamento_Item_ImpostosRepository>();
+            Bind<IOrcamento_ItemRepository>().To<Orcamento_ItemRepository>();
+            Bind<IOrcamento_retTranspRepository>().To<Orcamento_retTranspRepository>();
+            Bind<IOrcamento_Total_ImpostosRepository>().To<Orcamento_Total_ImpostosRepository>();
 
             #endregion
 
@@ -223,6 +228,7 @@ namespace HLP.Dependencies
             Bind<ICodigo_IcmsService>().To<Codigo_IcmsService>();
             Bind<IClassificacao_fiscalService>().To<Classificacao_fiscalService>();
             Bind<IRamo_atividadeService>().To<Ramo_atividadeService>();
+            Bind<ICarga_trib_media_st_icmsService>().To<Carga_trib_media_st_icmsService>();
 
             #endregion
 
@@ -287,17 +293,12 @@ namespace HLP.Dependencies
             Bind<IFuncionario_CertificacaoService>().To<Funcionario_CertificacaoService>();
             Bind<IAcessoService>().To<AcessoService>();
             Bind<ILog_ScriptsService>().To<Log_ScriptsService>();
-
+            Bind<IOrcamento_ideService>().To<Orcamento_ideService>();
             Bind<ITransportador_VeiculosService>().To<Transportador_VeiculosService>();
             Bind<ITransportador_MotoristaService>().To<Transportador_MotoristaService>();
             Bind<ITransportador_ContatoService>().To<Transportador_ContatoService>();
             Bind<ITransportador_EnderecoService>().To<Transportador_EnderecoService>();
             Bind<IEmpresa_EnderecoService>().To<Empresa_enderecoService>();
-            Bind<IOrcamento_ideRepository>().To<Orcamento_ideRepository>();
-            Bind<IOrcamento_Item_ImpostosRepository>().To<Orcamento_Item_ImpostosRepository>();
-            Bind<IOrcamento_ItemRepository>().To<Orcamento_ItemRepository>();
-            Bind<IOrcamento_retTranspRepository>().To<Orcamento_retTranspRepository>();
-            Bind<IOrcamento_Total_ImpostosRepository>().To<Orcamento_Total_ImpostosRepository>();
 
             #endregion
 

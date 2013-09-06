@@ -2,6 +2,7 @@
 using HLP.Repository.Interfaces.Entries.Fiscal;
 using HLP.Services.Interfaces.Entries.Fiscal;
 using Ninject;
+using System.Collections.Generic;
 
 namespace HLP.Services.Implementation.Entries.Fiscal
 {
@@ -44,6 +45,11 @@ namespace HLP.Services.Implementation.Entries.Fiscal
         public int Copy(int idTipoDocumento)
         {
             return documentoRepository.Copy(idTipoDocumento);
+        }
+
+        public List<Tipo_documentoModel> GetTipo_documentoAll()
+        {
+            return documentoRepository.GetTipo_documentoAll();
         }
     }
 }

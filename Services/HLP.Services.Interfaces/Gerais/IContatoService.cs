@@ -12,5 +12,6 @@ namespace HLP.Services.Interfaces.Entries.Gerais
         void Delete(ContatoModel objContato);
         void Copy(ContatoModel objContato);
         ContatoModel GetContato(int idContato, bool bChildren = false);
+        List<ContatoModel> GetContato_ByClienteFornec(int idContato);
     }
 }

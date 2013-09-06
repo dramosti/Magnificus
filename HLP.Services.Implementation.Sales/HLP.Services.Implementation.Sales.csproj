@@ -62,6 +62,14 @@
       <Project>{0238ed42-7ea8-492e-a656-a6d0f2f3ba1a}</Project>
       <Name>HLP.Services.Interfaces.Sales</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Models\HLP.Models\HLP.Models.Entries.csproj">
+      <Project>{71ca573c-dbb1-426f-b975-9cc418fc55a0}</Project>
+      <Name>HLP.Models.Entries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\HLP.Services.Interfaces\HLP.Services.Interfaces.Entries.csproj">
+      <Project>{997e026a-b1f2-45ab-ae1c-0ec6ad2e034d}</Project>
+      <Name>HLP.Services.Interfaces.Entries</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

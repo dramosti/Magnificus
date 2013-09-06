@@ -72,6 +72,7 @@
     <Compile Include="Comercial\Produto_RevisaoRepository.cs" />
     <Compile Include="Financeiro\Dia_PagamentoRepository.cs" />
     <Compile Include="Financeiro\Dia_Pagamento_LinhaRepository.cs" />
+    <Compile Include="Fiscal\Carga_trib_media_st_icmsRepository.cs" />
     <Compile Include="Gerais\AcessoRepository.cs" />
     <Compile Include="Gerais\Condicao_pagamentoRepository.cs" />
     <Compile Include="Gerais\Condicoes_entregaRepository.cs" />

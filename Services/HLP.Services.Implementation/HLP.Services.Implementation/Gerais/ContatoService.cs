@@ -18,6 +18,18 @@ namespace HLP.Services.Implementation.Entries.Gerais
         [Inject]
         public IContato_EnderecoRepository _Contato_EnderecoRepository { get; set; }
 
+        public ContatoModel GetContato(int idContato, bool bChildren = false)
+        {
+            ContatoModel objContato = _ContatoRepository.GetContato(idContato);
+
+            if (bChildren)
+            {
+                objContato.lContato_Endereco = _Contato_EnderecoRepository.GetAllContato_Endereco(idContato);
+            }
+
+            return objContato;
+        }
+
         public void Save(ContatoModel objContato)
         {
             try
@@ -99,16 +111,9 @@ namespace HLP.Services.Implementation.Entries.Gerais
             }
         }
 
-        public ContatoModel GetContato(int idContato, bool bChildren = false)
+        public List<ContatoModel> GetContato_ByClienteFornec(int idContato)
         {
-            ContatoModel objContato = _ContatoRepository.GetContato(idContato);
-
-            if (bChildren)
-            {
-                objContato.lContato_Endereco = _Contato_EnderecoRepository.GetAllContato_Endereco(idContato);
-            }
-
-            return objContato;
+            return _ContatoRepository.GetContato_ByClienteFornec(idContato);
         }
     }
 }

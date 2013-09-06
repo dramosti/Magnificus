@@ -289,7 +289,7 @@ namespace HLP.Comum.UI.Eventos
 
         private void grid_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            new HLPexception(e.Exception);
+            //new HLPexception(e.Exception);
         }
 
 

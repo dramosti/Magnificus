@@ -64,7 +64,7 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 27)]
         public int idMoeda { get; set; }
         [ParameterOrder(Order = 28)]
-        public int idFuncionario { get; set; }
+        public int idFuncionarioRepresentante { get; set; }
         [ParameterOrder(Order = 29)]
         public string cIdentificacao { get; set; }
         [ParameterOrder(Order = 30)]
@@ -85,18 +85,84 @@ namespace HLP.Models.Sales.Comercial
         public int? idOrcamentoOrigem { get; set; }
         [ParameterOrder(Order = 38)]
         public string xVersaoOrcamento { get; set; }
+        [ParameterOrder(Order = 39)]
+        public int? idSite { get; set; }
+        [ParameterOrder(Order = 40)]
+        public int? idFuncionario { get; set; }
+        [ParameterOrder(Order = 41)]
+        public int? idFuncionarioResponsavel { get; set; }
+        [ParameterOrder(Order = 42)]
+        public byte? stWeb { get; set; }
 
-        public List<Orcamento_ItemModel> lOrcamento_Itens { get; set; }
-        public List<Orcamento_ItemModel> lOrcamento_ItensVendidos { get; set; }
-        public List<Orcamento_ItemModel> lOrcamento_ItensCancelPerd { get; set; }
+        private List<Orcamento_ItemModel> lOrcamento_Itens;
 
-        public Orcamento_Total_ImpostosModel orcamento_Total_Impostos { get; set; }
-        public Orcamento_retTranspModel orcamento_retTransp { get; set; }
+        public List<Orcamento_ItemModel> LOrcamento_Itens
+        {
+            get
+            {
+                return lOrcamento_Itens == null ?
+                lOrcamento_Itens = new List<Orcamento_ItemModel>() : lOrcamento_Itens;
+            }
+            set { lOrcamento_Itens = value; }
+        }
+
+        private List<Orcamento_ItemModel> lOrcamento_ItensVendidos;
+
+        public List<Orcamento_ItemModel> LOrcamento_ItensVendidos
+        {
+            get
+            {
+                return lOrcamento_ItensVendidos == null ?
+                    lOrcamento_ItensVendidos = new List<Orcamento_ItemModel>() : lOrcamento_ItensVendidos;
+            }
+            set { lOrcamento_ItensVendidos = value; }
+        }
+
+        private List<Orcamento_ItemModel> lOrcamento_ItensCancelPerd;
+
+        public List<Orcamento_ItemModel> LOrcamento_ItensCancelPerd
+        {
+            get
+            {
+                return lOrcamento_ItensCancelPerd == null ?
+                    lOrcamento_ItensCancelPerd = new List<Orcamento_ItemModel>() : lOrcamento_ItensCancelPerd;
+            }
+            set { lOrcamento_ItensCancelPerd = value; }
+        }
+
+        private Orcamento_Total_ImpostosModel orcamento_Total_Impostos;
+
+        public Orcamento_Total_ImpostosModel Orcamento_Total_Impostos
+        {
+            get
+            {
+                return orcamento_Total_Impostos == null ?
+                    orcamento_Total_Impostos = new Orcamento_Total_ImpostosModel() : orcamento_Total_Impostos;
+            }
+            set { orcamento_Total_Impostos = value; }
+        }
+
+        private Orcamento_retTranspModel orcamento_retTransp;
+
+        public Orcamento_retTranspModel Orcamento_retTransp
+        {
+            get
+            {
+                return orcamento_retTransp == null ?
+                    orcamento_retTransp = new Orcamento_retTranspModel() : orcamento_retTransp;
+            }
+            set { orcamento_retTransp = value; }
+        }
 
     }
 
     public class Orcamento_ItemModel : BaseModelFilhos
     {
+        public Orcamento_ItemModel()
+        {
+            this.orcamento_Item_Impostos = new Orcamento_Item_ImpostosModel();
+        }
+
         private int? _idOrcamentoItem;
         [ParameterOrder(Order = 1)]
         public int? idOrcamentoItem
@@ -174,13 +240,24 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 33)]
         public int? idCfop { get; set; }
         [ParameterOrder(Order = 34)]
-        public int? idFuncionario { get; set; }
+        public int? idFuncionarioRepresentante { get; set; }
         [ParameterOrder(Order = 35)]
         public decimal? pComissao { get; set; }
         [ParameterOrder(Order = 36)]
         public decimal? vDescontoSuframa { get; set; }
 
-        public Orcamento_Item_ImpostosModel orcamento_Item_Impostos { get; set; }
+        private Orcamento_Item_ImpostosModel orcamento_Item_Impostos;
+
+        public Orcamento_Item_ImpostosModel Orcamento_Item_Impostos
+        {
+            get
+            {
+                return orcamento_Item_Impostos;
+                //return orcamento_Item_Impostos == null ?
+                //    orcamento_Item_Impostos = new Orcamento_Item_ImpostosModel() : orcamento_Item_Impostos;
+            }
+            set { orcamento_Item_Impostos = value; }
+        }
     }
 
     public class Orcamento_Item_ImpostosModel
@@ -302,7 +379,7 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 3)]
         public decimal vICMSTotal { get; set; }
         [ParameterOrder(Order = 4)]
-        public decimal vBaseCalculoIcmsSubstituicaoTotal { get; set; }
+        public decimal vBaseCalculoICmsSubstituicaoTributariaTotal { get; set; }
         [ParameterOrder(Order = 5)]
         public decimal vIcmsSubstituicaoTributariaTotal { get; set; }
         [ParameterOrder(Order = 6)]
@@ -349,6 +426,8 @@ namespace HLP.Models.Sales.Comercial
         public decimal vIssTotal { get; set; }
         [ParameterOrder(Order = 27)]
         public int idOrcamento { get; set; }
+        [ParameterOrder(Order = 28)]
+        public decimal? vServicoTotal { get; set; }
     }
 
     public class Orcamento_retTranspModel
