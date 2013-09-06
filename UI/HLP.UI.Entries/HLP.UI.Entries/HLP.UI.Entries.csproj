@@ -92,6 +92,12 @@
     <Compile Include="Financeiro\FormDiaPagamento.Designer.cs">
       <DependentUpon>FormDiaPagamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fiscal\FormCarga_trib_media_st_icms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiscal\FormCarga_trib_media_st_icms.Designer.cs">
+      <DependentUpon>FormCarga_trib_media_st_icms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Geral\FormAcesso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -485,6 +491,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Financeiro\FormDiaPagamento.resx">
       <DependentUpon>FormDiaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiscal\FormCarga_trib_media_st_icms.resx">
+      <DependentUpon>FormCarga_trib_media_st_icms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Geral\FormAcesso.resx">
       <DependentUpon>FormAcesso.cs</DependentUpon>

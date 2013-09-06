@@ -230,6 +230,7 @@ namespace HLP.Models.Entries.Comercial
         public List<Cliente_fornecedor_contatoModel> lCliente_fornecedor_contato = new List<Cliente_fornecedor_contatoModel>();
         public List<Cliente_fornecedor_arquivoModel> lCliente_fornecedor_arquivo = new List<Cliente_fornecedor_arquivoModel>();
         public List<Cliente_fornecedor_produtoModel> lCliente_fornecedor_produto = new List<Cliente_fornecedor_produtoModel>();
+
         public Cliente_fornecedor_fiscalModel cliforFiscalModel = new Cliente_fornecedor_fiscalModel();
     }
 
@@ -364,8 +365,8 @@ namespace HLP.Models.Entries.Comercial
         public byte stCalculaIcms { get; set; }
         [ParameterOrder(Order = 25)]
         public byte stCalculaIpi { get; set; }
-
-
+        [ParameterOrder(Order = 26)]
+        public byte? stZeraIcms { get; set; }
     }
 
     public class Cliente_fornecedor_EnderecoModel : BaseModelFilhos

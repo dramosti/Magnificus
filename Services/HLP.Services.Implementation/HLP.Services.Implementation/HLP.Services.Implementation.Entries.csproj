@@ -56,6 +56,7 @@
     <Compile Include="Comercial\Produto_RevisaoService.cs" />
     <Compile Include="Financeiro\Dia_PagamentoService.cs" />
     <Compile Include="Financeiro\Dia_Pagamento_LinhasService.cs" />
+    <Compile Include="Fiscal\Carga_trib_media_st_icmsService.cs" />
     <Compile Include="Gerais\AcessoService.cs" />
     <Compile Include="Gerais\ArquivoService.cs" />
     <Compile Include="Gerais\Condicao_pagamentoService.cs" />

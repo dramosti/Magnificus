@@ -146,13 +146,16 @@ type="HLP.UI.Entries.Geral.FormConversao, HLP.UI.Entries">
   <object id="FormProduto" name="FormProduto" singleton="false" scope="request"
 type="HLP.UI.Entries.Comercial.FormProduto, HLP.UI.Entries">
   </object>
+  <object id="FormCarga_trib_media_st_icms" name="FormCarga_trib_media_st_icms" singleton="false" scope="request"
+type="HLP.UI.Entries.Fiscal.FormCarga_trib_media_st_icms, HLP.UI.Entries">
+  </object>
   <object id="FormEmpresa" name="FormEmpresa" singleton="false" scope="request"
 type="HLP.UI.Entries.Geral.FormEmpresa, HLP.UI.Entries">
   </object>
   <object id="formParametrizacao" name="formParametrizacao" singleton="false" scope="request"
 type="HLP.UI.Entries.Parametrizacao.formParametrizacao, HLP.UI.Entries">
   </object>
-  
+
   <object id="formOrcamentoVenda" name="formOrcamentoVenda" singleton="false" scope="request"
 type="HLP.UI.Sales.Comercial.formOrcamentoVenda, HLP.UI.Sales">
   </object>

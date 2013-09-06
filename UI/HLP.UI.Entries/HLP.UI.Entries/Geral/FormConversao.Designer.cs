@@ -38,11 +38,6 @@ namespace HLP.UI.Entries.Geral
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.kryptonPanel1 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
             this.dgvConversao = new HLP.Comum.Components.HLP_DataGridView();
-            this.idDeUnidadeMedida = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.idParaUnidadeMedida = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.stArrendondar = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.nFator = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
-            this.nQuantidadeAdicional = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.bsConversao = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.hlP_LabelSeparator1 = new HLP.Comum.Components.HLP_LabelSeparator();
@@ -53,10 +48,15 @@ namespace HLP.UI.Entries.Geral
             this.kryptonDataGridViewNumericUpDownColumn2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.kryptonDataGridViewNumericUpDownColumn3 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.kryptonDataGridViewNumericUpDownColumn4 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
+            this.idDeUnidadeMedida = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idParaUnidadeMedida = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.stArrendondar = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.nFator = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
+            this.nQuantidadeAdicional = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.panelPadrao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).BeginInit();
             this.kryptonTabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.kryptonPanel3.SuspendLayout();
@@ -75,7 +75,11 @@ namespace HLP.UI.Entries.Geral
             // panelPadrao
             // 
             this.panelPadrao.Controls.Add(this.kryptonTabControl2);
-            this.panelPadrao.Size = new System.Drawing.Size(854, 368);
+            this.panelPadrao.Size = new System.Drawing.Size(824, 368);
+            // 
+            // panelAtalhos
+            // 
+            this.panelAtalhos.Size = new System.Drawing.Size(28, 368);
             // 
             // kryptonTabControl2
             // 
@@ -97,7 +101,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonTabControl2.Name = "kryptonTabControl2";
             this.kryptonTabControl2.PreserveTabColor = false;
             this.kryptonTabControl2.SelectedIndex = 0;
-            this.kryptonTabControl2.Size = new System.Drawing.Size(848, 362);
+            this.kryptonTabControl2.Size = new System.Drawing.Size(818, 362);
             this.kryptonTabControl2.TabIndex = 3;
             this.kryptonTabControl2.UseExtendedLayout = false;
             // 
@@ -108,7 +112,7 @@ namespace HLP.UI.Entries.Geral
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(840, 333);
+            this.tabPage3.Size = new System.Drawing.Size(810, 333);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Tag = false;
             this.tabPage3.Text = "Principal";
@@ -126,7 +130,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.PersistentColors = false;
-            this.kryptonPanel3.Size = new System.Drawing.Size(840, 333);
+            this.kryptonPanel3.Size = new System.Drawing.Size(810, 333);
             this.kryptonPanel3.TabIndex = 0;
             // 
             // kryptonTabControl1
@@ -149,7 +153,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonTabControl1.Name = "kryptonTabControl1";
             this.kryptonTabControl1.PreserveTabColor = false;
             this.kryptonTabControl1.SelectedIndex = 0;
-            this.kryptonTabControl1.Size = new System.Drawing.Size(840, 226);
+            this.kryptonTabControl1.Size = new System.Drawing.Size(810, 226);
             this.kryptonTabControl1.TabIndex = 26;
             this.kryptonTabControl1.UseExtendedLayout = false;
             // 
@@ -160,7 +164,7 @@ namespace HLP.UI.Entries.Geral
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(832, 197);
+            this.tabPage1.Size = new System.Drawing.Size(802, 197);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "Grade";
@@ -177,7 +181,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PersistentColors = false;
-            this.kryptonPanel1.Size = new System.Drawing.Size(832, 197);
+            this.kryptonPanel1.Size = new System.Drawing.Size(802, 197);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // dgvConversao
@@ -199,93 +203,11 @@ namespace HLP.UI.Entries.Geral
             this.dgvConversao.Inclui = false;
             this.dgvConversao.Location = new System.Drawing.Point(0, 0);
             this.dgvConversao.Name = "dgvConversao";
-            this.dgvConversao.Size = new System.Drawing.Size(832, 197);
+            this.dgvConversao.Size = new System.Drawing.Size(802, 197);
             this.dgvConversao.TabIndex = 27;
             this.dgvConversao.Tag = "Conversao";
+            this.dgvConversao.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvConversao_CellValidating);
             this.dgvConversao.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvConversao_DefaultValuesNeeded);
-            // 
-            // idDeUnidadeMedida
-            // 
-            this.idDeUnidadeMedida.DataPropertyName = "idDeUnidadeMedida";
-            this.idDeUnidadeMedida.HeaderText = "Da Unidade";
-            this.idDeUnidadeMedida.Name = "idDeUnidadeMedida";
-            this.idDeUnidadeMedida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idDeUnidadeMedida.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idDeUnidadeMedida.ToolTipText = "Unidade de origem da conversão";
-            this.idDeUnidadeMedida.Width = 130;
-            // 
-            // idParaUnidadeMedida
-            // 
-            this.idParaUnidadeMedida.DataPropertyName = "idParaUnidadeMedida";
-            this.idParaUnidadeMedida.HeaderText = "Para Unidade";
-            this.idParaUnidadeMedida.Name = "idParaUnidadeMedida";
-            this.idParaUnidadeMedida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idParaUnidadeMedida.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idParaUnidadeMedida.ToolTipText = "Unidade de destino da conversão";
-            this.idParaUnidadeMedida.Width = 130;
-            // 
-            // stArrendondar
-            // 
-            this.stArrendondar.DataPropertyName = "stArrendondar";
-            this.stArrendondar.HeaderText = "Arrendondar";
-            this.stArrendondar.Items.AddRange(new object[] {
-            "0-PARA BAIXO",
-            "1-PARA CIMA"});
-            this.stArrendondar.Name = "stArrendondar";
-            this.stArrendondar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.stArrendondar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.stArrendondar.ToolTipText = "Utilize se o sistema irá arredondar a conversão para cima ou para baixo";
-            this.stArrendondar.Width = 130;
-            // 
-            // nFator
-            // 
-            this.nFator.DataPropertyName = "nFator";
-            this.nFator.HeaderText = "Fator de Conversão";
-            this.nFator.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nFator.Maximum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.nFator.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.nFator.Name = "nFator";
-            this.nFator.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.nFator.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.nFator.ToolTipText = "Fator de conversão entre a \"unidade de origem\" e a \"unidade de destino";
-            this.nFator.Width = 150;
-            // 
-            // nQuantidadeAdicional
-            // 
-            this.nQuantidadeAdicional.DataPropertyName = "nQuantidadeAdicional";
-            this.nQuantidadeAdicional.HeaderText = "Quantidade Adicional";
-            this.nQuantidadeAdicional.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nQuantidadeAdicional.Maximum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.nQuantidadeAdicional.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.nQuantidadeAdicional.Name = "nQuantidadeAdicional";
-            this.nQuantidadeAdicional.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.nQuantidadeAdicional.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.nQuantidadeAdicional.ToolTipText = "Especifique a quantidade adicionada à unidade mediante a conversão";
-            this.nQuantidadeAdicional.Width = 200;
             // 
             // bsConversao
             // 
@@ -302,7 +224,7 @@ namespace HLP.UI.Entries.Geral
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(840, 107);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(810, 107);
             this.flowLayoutPanel1.TabIndex = 25;
             // 
             // hlP_LabelSeparator1
@@ -312,7 +234,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_LabelSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparator1.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparator1.Name = "hlP_LabelSeparator1";
-            this.hlP_LabelSeparator1.Size = new System.Drawing.Size(568, 18);
+            this.hlP_LabelSeparator1.Size = new System.Drawing.Size(420, 19);
             this.hlP_LabelSeparator1.TabIndex = 2;
             this.hlP_LabelSeparator1.TabStop = false;
             // 
@@ -330,24 +252,25 @@ namespace HLP.UI.Entries.Geral
             this.hlP_PesquisaidProduto._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.SIM;
             this.hlP_PesquisaidProduto._Regex = null;
             this.hlP_PesquisaidProduto._Table = "Conversao";
-            this.hlP_PesquisaidProduto._TamanhoComponente = 429;
+            this.hlP_PesquisaidProduto._TamanhoComponente = 300;
             this.hlP_PesquisaidProduto._TamanhoMaiorLabel = 0;
             this.hlP_PesquisaidProduto._Vinculado = false;
-            this.hlP_PesquisaidProduto._Visible = true;
             this.hlP_PesquisaidProduto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidProduto.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidProduto.Base = null;
-            this.hlP_PesquisaidProduto.Location = new System.Drawing.Point(3, 27);
+            this.hlP_PesquisaidProduto.bConfiguracao = false;
+            this.hlP_PesquisaidProduto.Location = new System.Drawing.Point(3, 28);
             this.hlP_PesquisaidProduto.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.hlP_PesquisaidProduto.Name = "hlP_PesquisaidProduto";
+            this.hlP_PesquisaidProduto.objConfigComponenteModel = null;
             this.hlP_PesquisaidProduto.ReadOnly = false;
-            this.hlP_PesquisaidProduto.Size = new System.Drawing.Size(568, 21);
+            this.hlP_PesquisaidProduto.Size = new System.Drawing.Size(349, 21);
             this.hlP_PesquisaidProduto.TabIndex = 0;
             this.hlP_PesquisaidProduto.Value = 0;
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(3, 54);
+            this.btnInserir.Location = new System.Drawing.Point(3, 55);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(127, 25);
             this.btnInserir.TabIndex = 1;
@@ -358,7 +281,7 @@ namespace HLP.UI.Entries.Geral
             // 
             this.lblConversao.AutoSize = true;
             this.lblConversao.BackColor = System.Drawing.Color.Transparent;
-            this.lblConversao.Location = new System.Drawing.Point(3, 82);
+            this.lblConversao.Location = new System.Drawing.Point(3, 83);
             this.lblConversao.Name = "lblConversao";
             this.lblConversao.Size = new System.Drawing.Size(0, 13);
             this.lblConversao.TabIndex = 0;
@@ -463,6 +386,89 @@ namespace HLP.UI.Entries.Geral
             this.kryptonDataGridViewNumericUpDownColumn4.ToolTipText = "Especifique a quantidade adicionada à unidade mediante a conversão";
             this.kryptonDataGridViewNumericUpDownColumn4.Width = 100;
             // 
+            // idDeUnidadeMedida
+            // 
+            this.idDeUnidadeMedida.DataPropertyName = "idDeUnidadeMedida";
+            this.idDeUnidadeMedida.HeaderText = "Da Unidade";
+            this.idDeUnidadeMedida.Name = "idDeUnidadeMedida";
+            this.idDeUnidadeMedida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idDeUnidadeMedida.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idDeUnidadeMedida.ToolTipText = "Unidade de origem da conversão";
+            this.idDeUnidadeMedida.Width = 130;
+            // 
+            // idParaUnidadeMedida
+            // 
+            this.idParaUnidadeMedida.DataPropertyName = "idParaUnidadeMedida";
+            this.idParaUnidadeMedida.HeaderText = "Para Unidade";
+            this.idParaUnidadeMedida.Name = "idParaUnidadeMedida";
+            this.idParaUnidadeMedida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idParaUnidadeMedida.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idParaUnidadeMedida.ToolTipText = "Unidade de destino da conversão";
+            this.idParaUnidadeMedida.Width = 130;
+            // 
+            // stArrendondar
+            // 
+            this.stArrendondar.DataPropertyName = "stArrendondar";
+            this.stArrendondar.HeaderText = "Arrendondar";
+            this.stArrendondar.Items.AddRange(new object[] {
+            "0-PARA BAIXO",
+            "1-PARA CIMA"});
+            this.stArrendondar.Name = "stArrendondar";
+            this.stArrendondar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.stArrendondar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.stArrendondar.ToolTipText = "Utilize se o sistema irá arredondar a conversão para cima ou para baixo";
+            this.stArrendondar.Width = 130;
+            // 
+            // nFator
+            // 
+            this.nFator.DataPropertyName = "nFator";
+            this.nFator.HeaderText = "Fator de Conversão";
+            this.nFator.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nFator.Maximum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nFator.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.nFator.Name = "nFator";
+            this.nFator.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.nFator.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.nFator.ToolTipText = "Fator de conversão entre a \"unidade de origem\" e a \"unidade de destino";
+            this.nFator.Width = 150;
+            // 
+            // nQuantidadeAdicional
+            // 
+            this.nQuantidadeAdicional.DataPropertyName = "nQuantidadeAdicional";
+            this.nQuantidadeAdicional.HeaderText = "Quantidade Adicional";
+            this.nQuantidadeAdicional.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nQuantidadeAdicional.Maximum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nQuantidadeAdicional.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.nQuantidadeAdicional.Name = "nQuantidadeAdicional";
+            this.nQuantidadeAdicional.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.nQuantidadeAdicional.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.nQuantidadeAdicional.ToolTipText = "Especifique a quantidade adicionada à unidade mediante a conversão";
+            this.nQuantidadeAdicional.Width = 200;
+            // 
             // FormConversao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,10 +484,9 @@ namespace HLP.UI.Entries.Geral
             this.Text = "Conversões";
             this.Load += new System.EventHandler(this.FormConversao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).EndInit();
             this.panelPadrao.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).EndInit();
             this.kryptonTabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.kryptonPanel3.ResumeLayout(false);
@@ -511,15 +516,15 @@ namespace HLP.UI.Entries.Geral
         private System.Windows.Forms.Label lblConversao;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnInserir;
         private HLP_DataGridView dgvConversao;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idDeUnidadeMedida;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idParaUnidadeMedida;
-        private System.Windows.Forms.DataGridViewComboBoxColumn stArrendondar;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nFator;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nQuantidadeAdicional;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private HLP_LabelSeparator hlP_LabelSeparator1;
         private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private AC.ExtendedRenderer.Toolkit.KryptonPanel kryptonPanel1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idDeUnidadeMedida;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idParaUnidadeMedida;
+        private System.Windows.Forms.DataGridViewComboBoxColumn stArrendondar;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nFator;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nQuantidadeAdicional;
     }
 }

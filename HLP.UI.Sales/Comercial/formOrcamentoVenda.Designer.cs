@@ -39,11 +39,11 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.hlP_LabelSeparatorPrincipal = new HLP.Comum.Components.HLP_LabelSeparator();
             this.txtidOrcamentoOrigem = new HLP.Comum.Components.HLP_TextBox();
-            this.hlP_PesquisaidContato = new HLP.Comum.Components.HLP_Pesquisa();
-            this.hlP_PesquisaxDepartamento = new HLP.Comum.Components.HLP_Pesquisa();
+            this.txtxDepartamento = new HLP.Comum.Components.HLP_TextBox();
+            this.cbxidContato = new HLP.Comum.Components.HLP_ComboBox();
             this.cbxstContribuienteIcms = new HLP.Comum.Components.HLP_ComboBox();
             this.hlP_PesquisaidTipoDocumento = new HLP.Comum.Components.HLP_Pesquisa();
-            this.hlP_PesquisaidFuncionario = new HLP.Comum.Components.HLP_Pesquisa();
+            this.hlP_PesquisaidFuncionarioRepresentante = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_PesquisaidCondicaoPagamento = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_LabelSeparatorStatus = new HLP.Comum.Components.HLP_LabelSeparator();
             this.cbxstOrcamento = new HLP.Comum.Components.HLP_ComboBox();
@@ -57,6 +57,8 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.hlP_LabelSeparatorGeral = new HLP.Comum.Components.HLP_LabelSeparator();
             this.maskTelefoneCliente = new HLP.Comum.Components.HLP_MaskedTextBox();
+            this.txtCidade = new HLP.Comum.Components.HLP_TextBox();
+            this.txtUF = new HLP.Comum.Components.HLP_TextBox();
             this.hlP_PesquisaidRamoAtividade = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_LabelSeparatorReferencia = new HLP.Comum.Components.HLP_LabelSeparator();
             this.txtxCotacaoComprasCliente = new HLP.Comum.Components.HLP_TextBox();
@@ -65,6 +67,8 @@
             this.hlP_PesquisaidSite = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_PesquisaidDeposito = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_LabelSeparatorInfVendas = new HLP.Comum.Components.HLP_LabelSeparator();
+            this.hlP_PesquisaidFuncionario = new HLP.Comum.Components.HLP_Pesquisa();
+            this.hlP_PesquisaidFuncionarioResponsavel = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_PesquisaidUnidadeVenda = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_PesquisaxCanalVenda = new HLP.Comum.Components.HLP_Pesquisa();
             this.hlP_PesquisaidMoeda = new HLP.Comum.Components.HLP_Pesquisa();
@@ -81,13 +85,13 @@
             this.tabPageItens = new System.Windows.Forms.TabPage();
             this.kryptonTabControl4 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPageFiscal = new System.Windows.Forms.TabPage();
-            this.hlP_DataGridView4 = new HLP.Comum.Components.HLP_DataGridView();
+            this.dgvFiscal = new HLP.Comum.Components.HLP_DataGridView();
             this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.iPIstCalculaIpiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.idClassificacaoFiscalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.iPIpIPIDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.idCSTIpiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idCSTIpi = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.iPIvBaseCalculoDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.iPIvIPIDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -139,17 +143,17 @@
             this.kryptonTabControl3 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPageItensOrcamento = new System.Windows.Forms.TabPage();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.hlP_DataGridView1 = new HLP.Comum.Components.HLP_DataGridView();
-            this.idTipoOperacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.stConsumidorFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.xPedidoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvItens = new HLP.Comum.Components.HLP_DataGridView();
+            this.idOperacaoItens = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.stConsumidorFinal = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.xPedidoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nItemClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.xComercialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUnidadeMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clidProduto = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.xComercial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUnidadeMedida = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.qProdutoDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
-            this.idListaPrecoPaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idListaPrecoPai = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.pDescontoDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.vDescontoDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.vVendaDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
@@ -161,12 +165,12 @@
             this.dPrevisaoEntregaDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
             this.nPesoLiquidoDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.nPesoBrutoDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
-            this.stOrcamentoItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.stOrcamentoItem = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nPedidoClienteItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xObservacaoItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vSegurosItemDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.vOutrasDespesasItemDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
-            this.idFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idFuncionarioRepresentante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pComissaoDataGridViewTextBoxColumn = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.idOrcamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idOrcamentoItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -175,8 +179,7 @@
             this.idEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dConfirmacaoItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMotivoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCfopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCfop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bsItensOrcamento = new System.Windows.Forms.BindingSource(this.components);
             this.tabPageItensVendidos = new System.Windows.Forms.TabPage();
             this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -202,7 +205,7 @@
             this.xObservacaoItemDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vSegurosItemDataGridViewTextBoxColumn1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.vOutrasDespesasItemDataGridViewTextBoxColumn1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
-            this.idFuncionarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pComissaoDataGridViewTextBoxColumn1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.nPedidoClienteItemDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dConfirmacaoItemDataGridViewTextBoxColumn1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
@@ -217,7 +220,6 @@
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMotivoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCfopDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsItensVendidos = new System.Windows.Forms.BindingSource(this.components);
             this.tabPageItensCancelPerdidos = new System.Windows.Forms.TabPage();
             this.kryptonPanel6 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -243,7 +245,7 @@
             this.xObservacaoItemDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vSegurosItemDataGridViewTextBoxColumn2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.vOutrasDespesasItemDataGridViewTextBoxColumn2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
-            this.idFuncionarioDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pComissaoDataGridViewTextBoxColumn2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.nPedidoClienteItemDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dConfirmacaoItemDataGridViewTextBoxColumn2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
@@ -258,7 +260,6 @@
             this.nItemClienteDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCfopDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsItensCancelados = new System.Windows.Forms.BindingSource(this.components);
             this.tabPageBaseCalculo = new System.Windows.Forms.TabPage();
             this.kryptonPanel7 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -275,6 +276,7 @@
             this.nudvBaseCalculoIcmsTotal = new HLP.Comum.Components.HLP_NumericUpDown();
             this.nudvIcmsTotal = new HLP.Comum.Components.HLP_NumericUpDown();
             this.nudvBaseCalculoIcmsProprioTotal = new HLP.Comum.Components.HLP_NumericUpDown();
+            this.nudvIcmsProprioTotal = new HLP.Comum.Components.HLP_NumericUpDown();
             this.nudvBaseCalculoIpiTotal = new HLP.Comum.Components.HLP_NumericUpDown();
             this.nudvIPITotal = new HLP.Comum.Components.HLP_NumericUpDown();
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal = new HLP.Comum.Components.HLP_NumericUpDown();
@@ -304,7 +306,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.hlP_LabelSeparatorInformacoes = new HLP.Comum.Components.HLP_LabelSeparator();
             this.txtCodigo = new HLP.Comum.Components.HLP_TextBox();
-            this.txtdDataHora = new HLP.Comum.Components.HLP_TextBox();
+            this.dtpdDataHora = new HLP.Comum.Components.HLP_DateTimePicker();
             this.hlP_PesquisaidClienteFornecedor = new HLP.Comum.Components.HLP_Pesquisa();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
@@ -326,13 +328,13 @@
             this.tabPageItens.SuspendLayout();
             this.kryptonTabControl4.SuspendLayout();
             this.tabPageFiscal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hlP_DataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFiscal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFiscal)).BeginInit();
             this.kryptonTabControl3.SuspendLayout();
             this.tabPageItensOrcamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).BeginInit();
             this.kryptonPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hlP_DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsItensOrcamento)).BeginInit();
             this.tabPageItensVendidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).BeginInit();
@@ -465,11 +467,11 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.hlP_LabelSeparatorPrincipal);
             this.flowLayoutPanel2.Controls.Add(this.txtidOrcamentoOrigem);
-            this.flowLayoutPanel2.Controls.Add(this.hlP_PesquisaidContato);
-            this.flowLayoutPanel2.Controls.Add(this.hlP_PesquisaxDepartamento);
+            this.flowLayoutPanel2.Controls.Add(this.txtxDepartamento);
+            this.flowLayoutPanel2.Controls.Add(this.cbxidContato);
             this.flowLayoutPanel2.Controls.Add(this.cbxstContribuienteIcms);
             this.flowLayoutPanel2.Controls.Add(this.hlP_PesquisaidTipoDocumento);
-            this.flowLayoutPanel2.Controls.Add(this.hlP_PesquisaidFuncionario);
+            this.flowLayoutPanel2.Controls.Add(this.hlP_PesquisaidFuncionarioRepresentante);
             this.flowLayoutPanel2.Controls.Add(this.hlP_PesquisaidCondicaoPagamento);
             this.flowLayoutPanel2.Controls.Add(this.hlP_LabelSeparatorStatus);
             this.flowLayoutPanel2.Controls.Add(this.cbxstOrcamento);
@@ -492,7 +494,7 @@
             this.hlP_LabelSeparatorPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorPrincipal.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorPrincipal.Name = "hlP_LabelSeparatorPrincipal";
-            this.hlP_LabelSeparatorPrincipal.Size = new System.Drawing.Size(459, 19);
+            this.hlP_LabelSeparatorPrincipal.Size = new System.Drawing.Size(527, 19);
             this.hlP_LabelSeparatorPrincipal.TabIndex = 0;
             this.hlP_LabelSeparatorPrincipal.TabStop = false;
             // 
@@ -511,7 +513,7 @@
             this.txtidOrcamentoOrigem._Table = "Orcamento_ide";
             this.txtidOrcamentoOrigem._TamanhoComponente = 138;
             this.txtidOrcamentoOrigem._TamanhoMaiorLabel = 159;
-            this.txtidOrcamentoOrigem._Visible = false;
+            this.txtidOrcamentoOrigem._Visible = true;
             this.txtidOrcamentoOrigem.BackColor = System.Drawing.Color.Transparent;
             this.txtidOrcamentoOrigem.Base = null;
             this.txtidOrcamentoOrigem.bConfiguracao = false;
@@ -526,67 +528,64 @@
             this.txtidOrcamentoOrigem.Size = new System.Drawing.Size(297, 22);
             this.txtidOrcamentoOrigem.TabIndex = 7;
             // 
-            // hlP_PesquisaidContato
+            // txtxDepartamento
             // 
-            this.hlP_PesquisaidContato._Field = "idContato";
-            this.hlP_PesquisaidContato._Help = "Informar a pessoa de contato externo para quem o orçamento é emitido. busca da ta" +
-    "bela de contatos no cadastro de clientes.";
-            this.hlP_PesquisaidContato._LabelGroup = this.hlP_LabelSeparatorPrincipal;
-            this.hlP_PesquisaidContato._LabelText = "Contato";
-            this.hlP_PesquisaidContato._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidContato._ListaCamposDisplay")));
-            this.hlP_PesquisaidContato._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidContato._ListaValoresDisplay")));
-            this.hlP_PesquisaidContato._NomeCampoPK = "ID";
-            this.hlP_PesquisaidContato._NomeFormCadastroOriginal = "";
-            this.hlP_PesquisaidContato._NomeView = "vwContato";
-            this.hlP_PesquisaidContato._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.hlP_PesquisaidContato._Regex = null;
-            this.hlP_PesquisaidContato._Table = "Orcamento_ide";
-            this.hlP_PesquisaidContato._TamanhoComponente = 300;
-            this.hlP_PesquisaidContato._TamanhoMaiorLabel = 159;
-            this.hlP_PesquisaidContato._Vinculado = false;
-            this.hlP_PesquisaidContato._Visible = false;
-            this.hlP_PesquisaidContato.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hlP_PesquisaidContato.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_PesquisaidContato.Base = null;
-            this.hlP_PesquisaidContato.bConfiguracao = false;
-            this.hlP_PesquisaidContato.Location = new System.Drawing.Point(113, 56);
-            this.hlP_PesquisaidContato.Margin = new System.Windows.Forms.Padding(113, 3, 15, 3);
-            this.hlP_PesquisaidContato.Name = "hlP_PesquisaidContato";
-            this.hlP_PesquisaidContato.objConfigComponenteModel = null;
-            this.hlP_PesquisaidContato.ReadOnly = false;
-            this.hlP_PesquisaidContato.Size = new System.Drawing.Size(349, 21);
-            this.hlP_PesquisaidContato.TabIndex = 2;
-            this.hlP_PesquisaidContato.Value = 0;
-            // 
-            // hlP_PesquisaxDepartamento
-            // 
-            this.hlP_PesquisaxDepartamento._Help = "Departamento do contato do orçamento de vendas, o software busca da tabela de con" +
+            this.txtxDepartamento._Help = "Departamento do contato do orçamento de vendas, o software busca da tabela de con" +
     "tatos no cadastro de clientes";
-            this.hlP_PesquisaxDepartamento._LabelGroup = this.hlP_LabelSeparatorPrincipal;
-            this.hlP_PesquisaxDepartamento._LabelText = "Departamento";
-            this.hlP_PesquisaxDepartamento._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaxDepartamento._ListaCamposDisplay")));
-            this.hlP_PesquisaxDepartamento._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaxDepartamento._ListaValoresDisplay")));
-            this.hlP_PesquisaxDepartamento._NomeCampoPK = "ID";
-            this.hlP_PesquisaxDepartamento._NomeFormCadastroOriginal = "";
-            this.hlP_PesquisaxDepartamento._NomeView = "vwDepartamento";
-            this.hlP_PesquisaxDepartamento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.hlP_PesquisaxDepartamento._Regex = null;
-            this.hlP_PesquisaxDepartamento._TamanhoComponente = 300;
-            this.hlP_PesquisaxDepartamento._TamanhoMaiorLabel = 159;
-            this.hlP_PesquisaxDepartamento._Vinculado = false;
-            this.hlP_PesquisaxDepartamento._Visible = false;
-            this.hlP_PesquisaxDepartamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hlP_PesquisaxDepartamento.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_PesquisaxDepartamento.Base = null;
-            this.hlP_PesquisaxDepartamento.bConfiguracao = false;
-            this.hlP_PesquisaxDepartamento.Location = new System.Drawing.Point(81, 83);
-            this.hlP_PesquisaxDepartamento.Margin = new System.Windows.Forms.Padding(81, 3, 15, 3);
-            this.hlP_PesquisaxDepartamento.Name = "hlP_PesquisaxDepartamento";
-            this.hlP_PesquisaxDepartamento.objConfigComponenteModel = null;
-            this.hlP_PesquisaxDepartamento.ReadOnly = false;
-            this.hlP_PesquisaxDepartamento.Size = new System.Drawing.Size(381, 21);
-            this.hlP_PesquisaxDepartamento.TabIndex = 3;
-            this.hlP_PesquisaxDepartamento.Value = 0;
+            this.txtxDepartamento._LabelGroup = this.hlP_LabelSeparatorPrincipal;
+            this.txtxDepartamento._LabelText = "Departamento";
+            this.txtxDepartamento._Multiline = false;
+            this.txtxDepartamento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.txtxDepartamento._Password = false;
+            this.txtxDepartamento._Regex = null;
+            this.txtxDepartamento._TamanhoComponente = 138;
+            this.txtxDepartamento._TamanhoMaiorLabel = 159;
+            this.txtxDepartamento._Visible = true;
+            this.txtxDepartamento.BackColor = System.Drawing.Color.Transparent;
+            this.txtxDepartamento.Base = null;
+            this.txtxDepartamento.bConfiguracao = false;
+            this.txtxDepartamento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtxDepartamento.Color = System.Drawing.Color.White;
+            this.txtxDepartamento.Location = new System.Drawing.Point(81, 56);
+            this.txtxDepartamento.Margin = new System.Windows.Forms.Padding(81, 3, 15, 3);
+            this.txtxDepartamento.MaxLength = 32767;
+            this.txtxDepartamento.Name = "txtxDepartamento";
+            this.txtxDepartamento.objConfigComponenteModel = null;
+            this.txtxDepartamento.ReadOnly = false;
+            this.txtxDepartamento.Size = new System.Drawing.Size(219, 22);
+            this.txtxDepartamento.TabIndex = 18;
+            // 
+            // cbxidContato
+            // 
+            this.cbxidContato._Field = "idContato";
+            this.cbxidContato._Help = "Informar a pessoa de contato externo para quem o orçamento é emitido. busca da ta" +
+    "bela de contatos no cadastro de clientes.";
+            this.cbxidContato._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbxidContato._Itens")));
+            this.cbxidContato._LabelGroup = this.hlP_LabelSeparatorPrincipal;
+            this.cbxidContato._LabelText = "Contato";
+            this.cbxidContato._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.cbxidContato._Regex = null;
+            this.cbxidContato._situacao = false;
+            this.cbxidContato._Table = "Orcamento_ide";
+            this.cbxidContato._TamanhoComponente = 138;
+            this.cbxidContato._TamanhoMaiorLabel = 159;
+            this.cbxidContato._Visible = true;
+            this.cbxidContato.BackColor = System.Drawing.Color.Transparent;
+            this.cbxidContato.Base = null;
+            this.cbxidContato.bConfiguracao = false;
+            this.cbxidContato.Color = System.Drawing.Color.White;
+            this.cbxidContato.DataSource = null;
+            this.cbxidContato.DisplayMember = "DisplayMember";
+            this.cbxidContato.Location = new System.Drawing.Point(113, 84);
+            this.cbxidContato.Margin = new System.Windows.Forms.Padding(113, 3, 15, 3);
+            this.cbxidContato.Name = "cbxidContato";
+            this.cbxidContato.objConfigComponenteModel = null;
+            this.cbxidContato.SelectedIndex = -1;
+            this.cbxidContato.SelectedValue = 0;
+            this.cbxidContato.Size = new System.Drawing.Size(187, 21);
+            this.cbxidContato.TabIndex = 16;
+            this.cbxidContato.ValueMember = "ValueMember";
+            this.cbxidContato._SelectedIndexChanged += new System.EventHandler(this.cbxidContato__SelectedIndexChanged);
             // 
             // cbxstContribuienteIcms
             // 
@@ -600,14 +599,14 @@
             this.cbxstContribuienteIcms._situacao = true;
             this.cbxstContribuienteIcms._TamanhoComponente = 80;
             this.cbxstContribuienteIcms._TamanhoMaiorLabel = 159;
-            this.cbxstContribuienteIcms._Visible = false;
+            this.cbxstContribuienteIcms._Visible = true;
             this.cbxstContribuienteIcms.BackColor = System.Drawing.Color.Transparent;
             this.cbxstContribuienteIcms.Base = null;
             this.cbxstContribuienteIcms.bConfiguracao = false;
             this.cbxstContribuienteIcms.Color = System.Drawing.Color.White;
             this.cbxstContribuienteIcms.DataSource = null;
             this.cbxstContribuienteIcms.DisplayMember = "DisplayMember";
-            this.cbxstContribuienteIcms.Location = new System.Drawing.Point(48, 110);
+            this.cbxstContribuienteIcms.Location = new System.Drawing.Point(48, 111);
             this.cbxstContribuienteIcms.Margin = new System.Windows.Forms.Padding(48, 3, 15, 3);
             this.cbxstContribuienteIcms.Name = "cbxstContribuienteIcms";
             this.cbxstContribuienteIcms.objConfigComponenteModel = null;
@@ -626,7 +625,7 @@
             this.hlP_PesquisaidTipoDocumento._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidTipoDocumento._ListaCamposDisplay")));
             this.hlP_PesquisaidTipoDocumento._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidTipoDocumento._ListaValoresDisplay")));
             this.hlP_PesquisaidTipoDocumento._NomeCampoPK = "ID";
-            this.hlP_PesquisaidTipoDocumento._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidTipoDocumento._NomeFormCadastroOriginal = "FormTipoDocumento";
             this.hlP_PesquisaidTipoDocumento._NomeView = "vwTipoDocumento";
             this.hlP_PesquisaidTipoDocumento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidTipoDocumento._Regex = null;
@@ -634,51 +633,51 @@
             this.hlP_PesquisaidTipoDocumento._TamanhoComponente = 300;
             this.hlP_PesquisaidTipoDocumento._TamanhoMaiorLabel = 159;
             this.hlP_PesquisaidTipoDocumento._Vinculado = false;
-            this.hlP_PesquisaidTipoDocumento._Visible = false;
+            this.hlP_PesquisaidTipoDocumento._Visible = true;
             this.hlP_PesquisaidTipoDocumento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoDocumento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoDocumento.Base = null;
             this.hlP_PesquisaidTipoDocumento.bConfiguracao = false;
-            this.hlP_PesquisaidTipoDocumento.Location = new System.Drawing.Point(55, 137);
+            this.hlP_PesquisaidTipoDocumento.Location = new System.Drawing.Point(55, 138);
             this.hlP_PesquisaidTipoDocumento.Margin = new System.Windows.Forms.Padding(55, 3, 15, 3);
             this.hlP_PesquisaidTipoDocumento.Name = "hlP_PesquisaidTipoDocumento";
             this.hlP_PesquisaidTipoDocumento.objConfigComponenteModel = null;
             this.hlP_PesquisaidTipoDocumento.ReadOnly = false;
             this.hlP_PesquisaidTipoDocumento.Size = new System.Drawing.Size(407, 21);
-            this.hlP_PesquisaidTipoDocumento.TabIndex = 6;
+            this.hlP_PesquisaidTipoDocumento.TabIndex = 20;
             this.hlP_PesquisaidTipoDocumento.Value = 0;
             // 
-            // hlP_PesquisaidFuncionario
+            // hlP_PesquisaidFuncionarioRepresentante
             // 
-            this.hlP_PesquisaidFuncionario._Field = "idFuncionario";
-            this.hlP_PesquisaidFuncionario._Help = "Informar o representante do orçamento de vendas, o sistema traz automaticamente o" +
+            this.hlP_PesquisaidFuncionarioRepresentante._Field = "idFuncionarioRepresentante";
+            this.hlP_PesquisaidFuncionarioRepresentante._Help = "Informar o representante do orçamento de vendas, o sistema traz automaticamente o" +
     " representante cadastrado no cliente, mas nada impede a sua alteração.";
-            this.hlP_PesquisaidFuncionario._LabelGroup = this.hlP_LabelSeparatorPrincipal;
-            this.hlP_PesquisaidFuncionario._LabelText = "Representante";
-            this.hlP_PesquisaidFuncionario._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidFuncionario._ListaCamposDisplay")));
-            this.hlP_PesquisaidFuncionario._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidFuncionario._ListaValoresDisplay")));
-            this.hlP_PesquisaidFuncionario._NomeCampoPK = null;
-            this.hlP_PesquisaidFuncionario._NomeFormCadastroOriginal = "";
-            this.hlP_PesquisaidFuncionario._NomeView = "";
-            this.hlP_PesquisaidFuncionario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.hlP_PesquisaidFuncionario._Regex = null;
-            this.hlP_PesquisaidFuncionario._Table = "Orcamento_ide";
-            this.hlP_PesquisaidFuncionario._TamanhoComponente = 300;
-            this.hlP_PesquisaidFuncionario._TamanhoMaiorLabel = 159;
-            this.hlP_PesquisaidFuncionario._Vinculado = false;
-            this.hlP_PesquisaidFuncionario._Visible = false;
-            this.hlP_PesquisaidFuncionario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hlP_PesquisaidFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_PesquisaidFuncionario.Base = null;
-            this.hlP_PesquisaidFuncionario.bConfiguracao = false;
-            this.hlP_PesquisaidFuncionario.Location = new System.Drawing.Point(80, 164);
-            this.hlP_PesquisaidFuncionario.Margin = new System.Windows.Forms.Padding(80, 3, 15, 3);
-            this.hlP_PesquisaidFuncionario.Name = "hlP_PesquisaidFuncionario";
-            this.hlP_PesquisaidFuncionario.objConfigComponenteModel = null;
-            this.hlP_PesquisaidFuncionario.ReadOnly = false;
-            this.hlP_PesquisaidFuncionario.Size = new System.Drawing.Size(382, 21);
-            this.hlP_PesquisaidFuncionario.TabIndex = 8;
-            this.hlP_PesquisaidFuncionario.Value = 0;
+            this.hlP_PesquisaidFuncionarioRepresentante._LabelGroup = this.hlP_LabelSeparatorPrincipal;
+            this.hlP_PesquisaidFuncionarioRepresentante._LabelText = "Representante";
+            this.hlP_PesquisaidFuncionarioRepresentante._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidFuncionarioRepresentante._ListaCamposDisplay")));
+            this.hlP_PesquisaidFuncionarioRepresentante._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidFuncionarioRepresentante._ListaValoresDisplay")));
+            this.hlP_PesquisaidFuncionarioRepresentante._NomeCampoPK = "ID";
+            this.hlP_PesquisaidFuncionarioRepresentante._NomeFormCadastroOriginal = "FormFuncionario";
+            this.hlP_PesquisaidFuncionarioRepresentante._NomeView = "vwFuncionario";
+            this.hlP_PesquisaidFuncionarioRepresentante._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.hlP_PesquisaidFuncionarioRepresentante._Regex = null;
+            this.hlP_PesquisaidFuncionarioRepresentante._Table = "Orcamento_ide";
+            this.hlP_PesquisaidFuncionarioRepresentante._TamanhoComponente = 300;
+            this.hlP_PesquisaidFuncionarioRepresentante._TamanhoMaiorLabel = 159;
+            this.hlP_PesquisaidFuncionarioRepresentante._Vinculado = false;
+            this.hlP_PesquisaidFuncionarioRepresentante._Visible = true;
+            this.hlP_PesquisaidFuncionarioRepresentante.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hlP_PesquisaidFuncionarioRepresentante.BackColor = System.Drawing.Color.Transparent;
+            this.hlP_PesquisaidFuncionarioRepresentante.Base = null;
+            this.hlP_PesquisaidFuncionarioRepresentante.bConfiguracao = false;
+            this.hlP_PesquisaidFuncionarioRepresentante.Location = new System.Drawing.Point(80, 165);
+            this.hlP_PesquisaidFuncionarioRepresentante.Margin = new System.Windows.Forms.Padding(80, 3, 15, 3);
+            this.hlP_PesquisaidFuncionarioRepresentante.Name = "hlP_PesquisaidFuncionarioRepresentante";
+            this.hlP_PesquisaidFuncionarioRepresentante.objConfigComponenteModel = null;
+            this.hlP_PesquisaidFuncionarioRepresentante.ReadOnly = false;
+            this.hlP_PesquisaidFuncionarioRepresentante.Size = new System.Drawing.Size(382, 21);
+            this.hlP_PesquisaidFuncionarioRepresentante.TabIndex = 8;
+            this.hlP_PesquisaidFuncionarioRepresentante.Value = 0;
             // 
             // hlP_PesquisaidCondicaoPagamento
             // 
@@ -699,12 +698,12 @@
             this.hlP_PesquisaidCondicaoPagamento._TamanhoComponente = 300;
             this.hlP_PesquisaidCondicaoPagamento._TamanhoMaiorLabel = 159;
             this.hlP_PesquisaidCondicaoPagamento._Vinculado = false;
-            this.hlP_PesquisaidCondicaoPagamento._Visible = false;
+            this.hlP_PesquisaidCondicaoPagamento._Visible = true;
             this.hlP_PesquisaidCondicaoPagamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCondicaoPagamento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCondicaoPagamento.Base = null;
             this.hlP_PesquisaidCondicaoPagamento.bConfiguracao = false;
-            this.hlP_PesquisaidCondicaoPagamento.Location = new System.Drawing.Point(28, 191);
+            this.hlP_PesquisaidCondicaoPagamento.Location = new System.Drawing.Point(28, 192);
             this.hlP_PesquisaidCondicaoPagamento.Margin = new System.Windows.Forms.Padding(28, 3, 15, 3);
             this.hlP_PesquisaidCondicaoPagamento.Name = "hlP_PesquisaidCondicaoPagamento";
             this.hlP_PesquisaidCondicaoPagamento.objConfigComponenteModel = null;
@@ -718,9 +717,9 @@
             this.hlP_LabelSeparatorStatus._LabelText = "Status";
             this.hlP_LabelSeparatorStatus._TamanhoMaiorLabel = 0;
             this.hlP_LabelSeparatorStatus.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorStatus.Location = new System.Drawing.Point(3, 218);
+            this.hlP_LabelSeparatorStatus.Location = new System.Drawing.Point(3, 28);
             this.hlP_LabelSeparatorStatus.Name = "hlP_LabelSeparatorStatus";
-            this.hlP_LabelSeparatorStatus.Size = new System.Drawing.Size(443, 19);
+            this.hlP_LabelSeparatorStatus.Size = new System.Drawing.Size(511, 19);
             this.hlP_LabelSeparatorStatus.TabIndex = 10;
             this.hlP_LabelSeparatorStatus.TabStop = false;
             // 
@@ -736,14 +735,14 @@
             this.cbxstOrcamento._Table = "Orcamento_ide";
             this.cbxstOrcamento._TamanhoComponente = 171;
             this.cbxstOrcamento._TamanhoMaiorLabel = 143;
-            this.cbxstOrcamento._Visible = false;
+            this.cbxstOrcamento._Visible = true;
             this.cbxstOrcamento.BackColor = System.Drawing.Color.Transparent;
             this.cbxstOrcamento.Base = null;
             this.cbxstOrcamento.bConfiguracao = false;
             this.cbxstOrcamento.Color = System.Drawing.Color.White;
             this.cbxstOrcamento.DataSource = null;
             this.cbxstOrcamento.DisplayMember = "DisplayMember";
-            this.cbxstOrcamento.Location = new System.Drawing.Point(32, 243);
+            this.cbxstOrcamento.Location = new System.Drawing.Point(32, 244);
             this.cbxstOrcamento.Margin = new System.Windows.Forms.Padding(32, 3, 15, 3);
             this.cbxstOrcamento.Name = "cbxstOrcamento";
             this.cbxstOrcamento.objConfigComponenteModel = null;
@@ -752,6 +751,7 @@
             this.cbxstOrcamento.Size = new System.Drawing.Size(285, 21);
             this.cbxstOrcamento.TabIndex = 4;
             this.cbxstOrcamento.ValueMember = "ValueMember";
+            this.cbxstOrcamento._SelectedIndexChanged += new System.EventHandler(this.cbxstOrcamento__SelectedIndexChanged);
             // 
             // hlP_PesquisaidTipoOrcamento
             // 
@@ -763,21 +763,21 @@
             this.hlP_PesquisaidTipoOrcamento._LabelText = "Tipo do orçamento";
             this.hlP_PesquisaidTipoOrcamento._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidTipoOrcamento._ListaCamposDisplay")));
             this.hlP_PesquisaidTipoOrcamento._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidTipoOrcamento._ListaValoresDisplay")));
-            this.hlP_PesquisaidTipoOrcamento._NomeCampoPK = null;
+            this.hlP_PesquisaidTipoOrcamento._NomeCampoPK = "ID";
             this.hlP_PesquisaidTipoOrcamento._NomeFormCadastroOriginal = "";
-            this.hlP_PesquisaidTipoOrcamento._NomeView = "vwOrcamento";
+            this.hlP_PesquisaidTipoOrcamento._NomeView = "vwTipoOrcamento";
             this.hlP_PesquisaidTipoOrcamento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidTipoOrcamento._Regex = null;
             this.hlP_PesquisaidTipoOrcamento._Table = "Orcamento_ide";
             this.hlP_PesquisaidTipoOrcamento._TamanhoComponente = 300;
             this.hlP_PesquisaidTipoOrcamento._TamanhoMaiorLabel = 143;
             this.hlP_PesquisaidTipoOrcamento._Vinculado = false;
-            this.hlP_PesquisaidTipoOrcamento._Visible = false;
+            this.hlP_PesquisaidTipoOrcamento._Visible = true;
             this.hlP_PesquisaidTipoOrcamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTipoOrcamento.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTipoOrcamento.Base = null;
             this.hlP_PesquisaidTipoOrcamento.bConfiguracao = false;
-            this.hlP_PesquisaidTipoOrcamento.Location = new System.Drawing.Point(42, 270);
+            this.hlP_PesquisaidTipoOrcamento.Location = new System.Drawing.Point(42, 271);
             this.hlP_PesquisaidTipoOrcamento.Margin = new System.Windows.Forms.Padding(42, 3, 15, 3);
             this.hlP_PesquisaidTipoOrcamento.Name = "hlP_PesquisaidTipoOrcamento";
             this.hlP_PesquisaidTipoOrcamento.objConfigComponenteModel = null;
@@ -797,14 +797,14 @@
             this.dtpdVencimento._Table = "Orcamento_ide";
             this.dtpdVencimento._TamanhoComponente = 122;
             this.dtpdVencimento._TamanhoMaiorLabel = 143;
-            this.dtpdVencimento._Visible = false;
+            this.dtpdVencimento._Visible = true;
             this.dtpdVencimento.BackColor = System.Drawing.Color.Transparent;
             this.dtpdVencimento.Base = null;
             this.dtpdVencimento.bConfiguracao = false;
             this.dtpdVencimento.Color = System.Drawing.Color.Empty;
             this.dtpdVencimento.CustomFormat = "";
             this.dtpdVencimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpdVencimento.Location = new System.Drawing.Point(37, 297);
+            this.dtpdVencimento.Location = new System.Drawing.Point(37, 298);
             this.dtpdVencimento.Margin = new System.Windows.Forms.Padding(37, 3, 15, 3);
             this.dtpdVencimento.Name = "dtpdVencimento";
             this.dtpdVencimento.objConfigComponenteModel = null;
@@ -823,14 +823,14 @@
             this.dtpdAcompanhamento._Table = "Orcamento_ide";
             this.dtpdAcompanhamento._TamanhoComponente = 122;
             this.dtpdAcompanhamento._TamanhoMaiorLabel = 143;
-            this.dtpdAcompanhamento._Visible = false;
+            this.dtpdAcompanhamento._Visible = true;
             this.dtpdAcompanhamento.BackColor = System.Drawing.Color.Transparent;
             this.dtpdAcompanhamento.Base = null;
             this.dtpdAcompanhamento.bConfiguracao = false;
             this.dtpdAcompanhamento.Color = System.Drawing.Color.Empty;
             this.dtpdAcompanhamento.CustomFormat = "";
             this.dtpdAcompanhamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpdAcompanhamento.Location = new System.Drawing.Point(480, 3);
+            this.dtpdAcompanhamento.Location = new System.Drawing.Point(536, 3);
             this.dtpdAcompanhamento.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.dtpdAcompanhamento.Name = "dtpdAcompanhamento";
             this.dtpdAcompanhamento.objConfigComponenteModel = null;
@@ -849,14 +849,14 @@
             this.dtpdConfirmacao._Table = "Orcamento_ide";
             this.dtpdConfirmacao._TamanhoComponente = 122;
             this.dtpdConfirmacao._TamanhoMaiorLabel = 143;
-            this.dtpdConfirmacao._Visible = false;
+            this.dtpdConfirmacao._Visible = true;
             this.dtpdConfirmacao.BackColor = System.Drawing.Color.Transparent;
             this.dtpdConfirmacao.Base = null;
             this.dtpdConfirmacao.bConfiguracao = false;
             this.dtpdConfirmacao.Color = System.Drawing.Color.Empty;
             this.dtpdConfirmacao.CustomFormat = "";
             this.dtpdConfirmacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpdConfirmacao.Location = new System.Drawing.Point(510, 30);
+            this.dtpdConfirmacao.Location = new System.Drawing.Point(566, 30);
             this.dtpdConfirmacao.Margin = new System.Windows.Forms.Padding(33, 3, 15, 3);
             this.dtpdConfirmacao.Name = "dtpdConfirmacao";
             this.dtpdConfirmacao.objConfigComponenteModel = null;
@@ -873,7 +873,7 @@
             this.hlP_PesquisaidMotivo._LabelText = "Motivo da perda";
             this.hlP_PesquisaidMotivo._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidMotivo._ListaCamposDisplay")));
             this.hlP_PesquisaidMotivo._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidMotivo._ListaValoresDisplay")));
-            this.hlP_PesquisaidMotivo._NomeCampoPK = null;
+            this.hlP_PesquisaidMotivo._NomeCampoPK = "ID";
             this.hlP_PesquisaidMotivo._NomeFormCadastroOriginal = "";
             this.hlP_PesquisaidMotivo._NomeView = "vwMotivoPerdaOrcam";
             this.hlP_PesquisaidMotivo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -882,12 +882,12 @@
             this.hlP_PesquisaidMotivo._TamanhoComponente = 300;
             this.hlP_PesquisaidMotivo._TamanhoMaiorLabel = 143;
             this.hlP_PesquisaidMotivo._Vinculado = false;
-            this.hlP_PesquisaidMotivo._Visible = false;
+            this.hlP_PesquisaidMotivo._Visible = true;
             this.hlP_PesquisaidMotivo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidMotivo.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidMotivo.Base = null;
             this.hlP_PesquisaidMotivo.bConfiguracao = false;
-            this.hlP_PesquisaidMotivo.Location = new System.Drawing.Point(531, 57);
+            this.hlP_PesquisaidMotivo.Location = new System.Drawing.Point(587, 57);
             this.hlP_PesquisaidMotivo.Margin = new System.Windows.Forms.Padding(54, 3, 15, 3);
             this.hlP_PesquisaidMotivo.Name = "hlP_PesquisaidMotivo";
             this.hlP_PesquisaidMotivo.objConfigComponenteModel = null;
@@ -902,7 +902,7 @@
             this.tabPageAdicionais.Location = new System.Drawing.Point(4, 25);
             this.tabPageAdicionais.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageAdicionais.Name = "tabPageAdicionais";
-            this.tabPageAdicionais.Size = new System.Drawing.Size(1300, 322);
+            this.tabPageAdicionais.Size = new System.Drawing.Size(1106, 113);
             this.tabPageAdicionais.TabIndex = 1;
             this.tabPageAdicionais.Tag = false;
             this.tabPageAdicionais.Text = "Dados Adicionais";
@@ -914,13 +914,15 @@
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(1300, 322);
+            this.kryptonPanel3.Size = new System.Drawing.Size(1106, 113);
             this.kryptonPanel3.TabIndex = 0;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.hlP_LabelSeparatorGeral);
             this.flowLayoutPanel3.Controls.Add(this.maskTelefoneCliente);
+            this.flowLayoutPanel3.Controls.Add(this.txtCidade);
+            this.flowLayoutPanel3.Controls.Add(this.txtUF);
             this.flowLayoutPanel3.Controls.Add(this.hlP_PesquisaidRamoAtividade);
             this.flowLayoutPanel3.Controls.Add(this.hlP_LabelSeparatorReferencia);
             this.flowLayoutPanel3.Controls.Add(this.txtxCotacaoComprasCliente);
@@ -929,6 +931,8 @@
             this.flowLayoutPanel3.Controls.Add(this.hlP_PesquisaidSite);
             this.flowLayoutPanel3.Controls.Add(this.hlP_PesquisaidDeposito);
             this.flowLayoutPanel3.Controls.Add(this.hlP_LabelSeparatorInfVendas);
+            this.flowLayoutPanel3.Controls.Add(this.hlP_PesquisaidFuncionario);
+            this.flowLayoutPanel3.Controls.Add(this.hlP_PesquisaidFuncionarioResponsavel);
             this.flowLayoutPanel3.Controls.Add(this.hlP_PesquisaidUnidadeVenda);
             this.flowLayoutPanel3.Controls.Add(this.hlP_PesquisaxCanalVenda);
             this.flowLayoutPanel3.Controls.Add(this.hlP_PesquisaidMoeda);
@@ -946,7 +950,7 @@
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1300, 322);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1106, 113);
             this.flowLayoutPanel3.TabIndex = 0;
             // 
             // hlP_LabelSeparatorGeral
@@ -956,7 +960,7 @@
             this.hlP_LabelSeparatorGeral.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorGeral.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorGeral.Name = "hlP_LabelSeparatorGeral";
-            this.hlP_LabelSeparatorGeral.Size = new System.Drawing.Size(402, 19);
+            this.hlP_LabelSeparatorGeral.Size = new System.Drawing.Size(420, 19);
             this.hlP_LabelSeparatorGeral.TabIndex = 0;
             this.hlP_LabelSeparatorGeral.TabStop = false;
             // 
@@ -967,15 +971,16 @@
             this.maskTelefoneCliente._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.maskTelefoneCliente._Regex = null;
             this.maskTelefoneCliente._TamanhoComponente = 76;
-            this.maskTelefoneCliente._TamanhoMaiorLabel = 102;
+            this.maskTelefoneCliente._TamanhoMaiorLabel = 52;
             this.maskTelefoneCliente._TpValidacao = HLP.Comum.Components.HLP_MaskedTextBox.TipoValidacao.DEFAULT;
             this.maskTelefoneCliente._UF = null;
+            this.maskTelefoneCliente._Visible = true;
             this.maskTelefoneCliente.BackColor = System.Drawing.Color.Transparent;
             this.maskTelefoneCliente.Base = null;
             this.maskTelefoneCliente.bConfiguracao = false;
             this.maskTelefoneCliente.Color = System.Drawing.Color.White;
-            this.maskTelefoneCliente.Location = new System.Drawing.Point(54, 28);
-            this.maskTelefoneCliente.Margin = new System.Windows.Forms.Padding(54, 3, 15, 3);
+            this.maskTelefoneCliente.Location = new System.Drawing.Point(4, 28);
+            this.maskTelefoneCliente.Margin = new System.Windows.Forms.Padding(4, 3, 15, 3);
             this.maskTelefoneCliente.Mask = "(99)9999-9999";
             this.maskTelefoneCliente.MaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.maskTelefoneCliente.MaxLength = 32767;
@@ -985,6 +990,58 @@
             this.maskTelefoneCliente.Size = new System.Drawing.Size(127, 21);
             this.maskTelefoneCliente.TabIndex = 1;
             // 
+            // txtCidade
+            // 
+            this.txtCidade._Help = "Cidade do cliente";
+            this.txtCidade._LabelGroup = this.hlP_LabelSeparatorGeral;
+            this.txtCidade._LabelText = "Cidade";
+            this.txtCidade._Multiline = false;
+            this.txtCidade._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.txtCidade._Password = false;
+            this.txtCidade._Regex = null;
+            this.txtCidade._TamanhoComponente = 150;
+            this.txtCidade._TamanhoMaiorLabel = 52;
+            this.txtCidade._Visible = true;
+            this.txtCidade.BackColor = System.Drawing.Color.Transparent;
+            this.txtCidade.Base = null;
+            this.txtCidade.bConfiguracao = false;
+            this.txtCidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtCidade.Color = System.Drawing.Color.White;
+            this.txtCidade.Location = new System.Drawing.Point(12, 55);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(12, 3, 15, 3);
+            this.txtCidade.MaxLength = 32767;
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.objConfigComponenteModel = null;
+            this.txtCidade.ReadOnly = false;
+            this.txtCidade.Size = new System.Drawing.Size(193, 22);
+            this.txtCidade.TabIndex = 33;
+            // 
+            // txtUF
+            // 
+            this.txtUF._Help = "Estado";
+            this.txtUF._LabelGroup = this.hlP_LabelSeparatorGeral;
+            this.txtUF._LabelText = "Uf";
+            this.txtUF._Multiline = false;
+            this.txtUF._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.txtUF._Password = false;
+            this.txtUF._Regex = null;
+            this.txtUF._TamanhoComponente = 150;
+            this.txtUF._TamanhoMaiorLabel = 52;
+            this.txtUF._Visible = true;
+            this.txtUF.BackColor = System.Drawing.Color.Transparent;
+            this.txtUF.Base = null;
+            this.txtUF.bConfiguracao = false;
+            this.txtUF.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtUF.Color = System.Drawing.Color.White;
+            this.txtUF.Location = new System.Drawing.Point(36, 83);
+            this.txtUF.Margin = new System.Windows.Forms.Padding(36, 3, 15, 3);
+            this.txtUF.MaxLength = 32767;
+            this.txtUF.Name = "txtUF";
+            this.txtUF.objConfigComponenteModel = null;
+            this.txtUF.ReadOnly = false;
+            this.txtUF.Size = new System.Drawing.Size(169, 22);
+            this.txtUF.TabIndex = 32;
+            // 
             // hlP_PesquisaidRamoAtividade
             // 
             this.hlP_PesquisaidRamoAtividade._Help = "O sistema informará automaticamente qual é o ramo de atividade do cliente";
@@ -993,18 +1050,19 @@
             this.hlP_PesquisaidRamoAtividade._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidRamoAtividade._ListaCamposDisplay")));
             this.hlP_PesquisaidRamoAtividade._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidRamoAtividade._ListaValoresDisplay")));
             this.hlP_PesquisaidRamoAtividade._NomeCampoPK = "ID";
-            this.hlP_PesquisaidRamoAtividade._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidRamoAtividade._NomeFormCadastroOriginal = "FormRamoAtividade";
             this.hlP_PesquisaidRamoAtividade._NomeView = "vwRamoAtividade";
             this.hlP_PesquisaidRamoAtividade._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidRamoAtividade._Regex = null;
             this.hlP_PesquisaidRamoAtividade._TamanhoComponente = 300;
             this.hlP_PesquisaidRamoAtividade._TamanhoMaiorLabel = 102;
             this.hlP_PesquisaidRamoAtividade._Vinculado = false;
+            this.hlP_PesquisaidRamoAtividade._Visible = true;
             this.hlP_PesquisaidRamoAtividade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidRamoAtividade.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidRamoAtividade.Base = null;
             this.hlP_PesquisaidRamoAtividade.bConfiguracao = false;
-            this.hlP_PesquisaidRamoAtividade.Location = new System.Drawing.Point(3, 55);
+            this.hlP_PesquisaidRamoAtividade.Location = new System.Drawing.Point(429, 3);
             this.hlP_PesquisaidRamoAtividade.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.hlP_PesquisaidRamoAtividade.Name = "hlP_PesquisaidRamoAtividade";
             this.hlP_PesquisaidRamoAtividade.objConfigComponenteModel = null;
@@ -1018,9 +1076,9 @@
             this.hlP_LabelSeparatorReferencia._LabelText = "Referência";
             this.hlP_LabelSeparatorReferencia._TamanhoMaiorLabel = 0;
             this.hlP_LabelSeparatorReferencia.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorReferencia.Location = new System.Drawing.Point(3, 82);
+            this.hlP_LabelSeparatorReferencia.Location = new System.Drawing.Point(3, 28);
             this.hlP_LabelSeparatorReferencia.Name = "hlP_LabelSeparatorReferencia";
-            this.hlP_LabelSeparatorReferencia.Size = new System.Drawing.Size(334, 19);
+            this.hlP_LabelSeparatorReferencia.Size = new System.Drawing.Size(265, 19);
             this.hlP_LabelSeparatorReferencia.TabIndex = 7;
             this.hlP_LabelSeparatorReferencia.TabStop = false;
             // 
@@ -1036,14 +1094,15 @@
             this.txtxCotacaoComprasCliente._Regex = null;
             this.txtxCotacaoComprasCliente._Table = "Orcamento_ide";
             this.txtxCotacaoComprasCliente._TamanhoComponente = 100;
-            this.txtxCotacaoComprasCliente._TamanhoMaiorLabel = 234;
+            this.txtxCotacaoComprasCliente._TamanhoMaiorLabel = 165;
+            this.txtxCotacaoComprasCliente._Visible = true;
             this.txtxCotacaoComprasCliente.BackColor = System.Drawing.Color.Transparent;
             this.txtxCotacaoComprasCliente.Base = null;
             this.txtxCotacaoComprasCliente.bConfiguracao = false;
             this.txtxCotacaoComprasCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxCotacaoComprasCliente.Color = System.Drawing.Color.White;
-            this.txtxCotacaoComprasCliente.Location = new System.Drawing.Point(72, 107);
-            this.txtxCotacaoComprasCliente.Margin = new System.Windows.Forms.Padding(72, 3, 15, 3);
+            this.txtxCotacaoComprasCliente.Location = new System.Drawing.Point(429, 55);
+            this.txtxCotacaoComprasCliente.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.txtxCotacaoComprasCliente.MaxLength = 32767;
             this.txtxCotacaoComprasCliente.Name = "txtxCotacaoComprasCliente";
             this.txtxCotacaoComprasCliente.objConfigComponenteModel = null;
@@ -1064,12 +1123,13 @@
             this.txtxPedidoCliente._Table = "Orcamento_ide";
             this.txtxPedidoCliente._TamanhoComponente = 100;
             this.txtxPedidoCliente._TamanhoMaiorLabel = 234;
+            this.txtxPedidoCliente._Visible = true;
             this.txtxPedidoCliente.BackColor = System.Drawing.Color.Transparent;
             this.txtxPedidoCliente.Base = null;
             this.txtxPedidoCliente.bConfiguracao = false;
             this.txtxPedidoCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxPedidoCliente.Color = System.Drawing.Color.White;
-            this.txtxPedidoCliente.Location = new System.Drawing.Point(3, 135);
+            this.txtxPedidoCliente.Location = new System.Drawing.Point(429, 83);
             this.txtxPedidoCliente.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.txtxPedidoCliente.MaxLength = 32767;
             this.txtxPedidoCliente.Name = "txtxPedidoCliente";
@@ -1083,9 +1143,9 @@
             this.hlP_LabelSeparatorEstoque._LabelText = "Estoque";
             this.hlP_LabelSeparatorEstoque._TamanhoMaiorLabel = 0;
             this.hlP_LabelSeparatorEstoque.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorEstoque.Location = new System.Drawing.Point(3, 163);
+            this.hlP_LabelSeparatorEstoque.Location = new System.Drawing.Point(3, 53);
             this.hlP_LabelSeparatorEstoque.Name = "hlP_LabelSeparatorEstoque";
-            this.hlP_LabelSeparatorEstoque.Size = new System.Drawing.Size(354, 19);
+            this.hlP_LabelSeparatorEstoque.Size = new System.Drawing.Size(420, 19);
             this.hlP_LabelSeparatorEstoque.TabIndex = 10;
             this.hlP_LabelSeparatorEstoque.TabStop = false;
             // 
@@ -1099,20 +1159,21 @@
             this.hlP_PesquisaidSite._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidSite._ListaCamposDisplay")));
             this.hlP_PesquisaidSite._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidSite._ListaValoresDisplay")));
             this.hlP_PesquisaidSite._NomeCampoPK = "ID";
-            this.hlP_PesquisaidSite._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidSite._NomeFormCadastroOriginal = "FormSite";
             this.hlP_PesquisaidSite._NomeView = "vwSite";
             this.hlP_PesquisaidSite._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidSite._Regex = null;
             this.hlP_PesquisaidSite._Table = "Orcamento_ide";
             this.hlP_PesquisaidSite._TamanhoComponente = 300;
-            this.hlP_PesquisaidSite._TamanhoMaiorLabel = 54;
+            this.hlP_PesquisaidSite._TamanhoMaiorLabel = 52;
             this.hlP_PesquisaidSite._Vinculado = false;
+            this.hlP_PesquisaidSite._Visible = true;
             this.hlP_PesquisaidSite.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidSite.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidSite.Base = null;
             this.hlP_PesquisaidSite.bConfiguracao = false;
-            this.hlP_PesquisaidSite.Location = new System.Drawing.Point(31, 188);
-            this.hlP_PesquisaidSite.Margin = new System.Windows.Forms.Padding(31, 3, 15, 3);
+            this.hlP_PesquisaidSite.Location = new System.Drawing.Point(875, 28);
+            this.hlP_PesquisaidSite.Margin = new System.Windows.Forms.Padding(29, 3, 15, 3);
             this.hlP_PesquisaidSite.Name = "hlP_PesquisaidSite";
             this.hlP_PesquisaidSite.objConfigComponenteModel = null;
             this.hlP_PesquisaidSite.ReadOnly = false;
@@ -1130,8 +1191,8 @@
             this.hlP_PesquisaidDeposito._LabelText = "Depósito";
             this.hlP_PesquisaidDeposito._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidDeposito._ListaCamposDisplay")));
             this.hlP_PesquisaidDeposito._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidDeposito._ListaValoresDisplay")));
-            this.hlP_PesquisaidDeposito._NomeCampoPK = null;
-            this.hlP_PesquisaidDeposito._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidDeposito._NomeCampoPK = "ID";
+            this.hlP_PesquisaidDeposito._NomeFormCadastroOriginal = "FormDeposito";
             this.hlP_PesquisaidDeposito._NomeView = "vwDeposito";
             this.hlP_PesquisaidDeposito._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidDeposito._Regex = null;
@@ -1139,11 +1200,12 @@
             this.hlP_PesquisaidDeposito._TamanhoComponente = 300;
             this.hlP_PesquisaidDeposito._TamanhoMaiorLabel = 54;
             this.hlP_PesquisaidDeposito._Vinculado = false;
+            this.hlP_PesquisaidDeposito._Visible = true;
             this.hlP_PesquisaidDeposito.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDeposito.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDeposito.Base = null;
             this.hlP_PesquisaidDeposito.bConfiguracao = false;
-            this.hlP_PesquisaidDeposito.Location = new System.Drawing.Point(3, 215);
+            this.hlP_PesquisaidDeposito.Location = new System.Drawing.Point(849, 55);
             this.hlP_PesquisaidDeposito.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.hlP_PesquisaidDeposito.Name = "hlP_PesquisaidDeposito";
             this.hlP_PesquisaidDeposito.objConfigComponenteModel = null;
@@ -1157,11 +1219,75 @@
             this.hlP_LabelSeparatorInfVendas._LabelText = "Informações de venda";
             this.hlP_LabelSeparatorInfVendas._TamanhoMaiorLabel = 0;
             this.hlP_LabelSeparatorInfVendas.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorInfVendas.Location = new System.Drawing.Point(3, 242);
+            this.hlP_LabelSeparatorInfVendas.Location = new System.Drawing.Point(3, 78);
             this.hlP_LabelSeparatorInfVendas.Name = "hlP_LabelSeparatorInfVendas";
-            this.hlP_LabelSeparatorInfVendas.Size = new System.Drawing.Size(510, 19);
+            this.hlP_LabelSeparatorInfVendas.Size = new System.Drawing.Size(502, 19);
             this.hlP_LabelSeparatorInfVendas.TabIndex = 13;
             this.hlP_LabelSeparatorInfVendas.TabStop = false;
+            // 
+            // hlP_PesquisaidFuncionario
+            // 
+            this.hlP_PesquisaidFuncionario._Field = "idFuncionario";
+            this.hlP_PesquisaidFuncionario._Help = "Identifica quem é responsável  pelo orçamento.";
+            this.hlP_PesquisaidFuncionario._LabelGroup = this.hlP_LabelSeparatorInfVendas;
+            this.hlP_PesquisaidFuncionario._LabelText = "Funcionário do  orçamento de vendas";
+            this.hlP_PesquisaidFuncionario._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidFuncionario._ListaCamposDisplay")));
+            this.hlP_PesquisaidFuncionario._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidFuncionario._ListaValoresDisplay")));
+            this.hlP_PesquisaidFuncionario._NomeCampoPK = "ID";
+            this.hlP_PesquisaidFuncionario._NomeFormCadastroOriginal = "FormFuncionario";
+            this.hlP_PesquisaidFuncionario._NomeView = "vwFuncionario";
+            this.hlP_PesquisaidFuncionario._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.hlP_PesquisaidFuncionario._Regex = null;
+            this.hlP_PesquisaidFuncionario._Table = "Orcamento_ide";
+            this.hlP_PesquisaidFuncionario._TamanhoComponente = 300;
+            this.hlP_PesquisaidFuncionario._TamanhoMaiorLabel = 202;
+            this.hlP_PesquisaidFuncionario._Vinculado = false;
+            this.hlP_PesquisaidFuncionario._Visible = true;
+            this.hlP_PesquisaidFuncionario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hlP_PesquisaidFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.hlP_PesquisaidFuncionario.Base = null;
+            this.hlP_PesquisaidFuncionario.bConfiguracao = false;
+            this.hlP_PesquisaidFuncionario.Location = new System.Drawing.Point(1357, 3);
+            this.hlP_PesquisaidFuncionario.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.hlP_PesquisaidFuncionario.Name = "hlP_PesquisaidFuncionario";
+            this.hlP_PesquisaidFuncionario.objConfigComponenteModel = null;
+            this.hlP_PesquisaidFuncionario.ReadOnly = false;
+            this.hlP_PesquisaidFuncionario.Size = new System.Drawing.Size(502, 21);
+            this.hlP_PesquisaidFuncionario.TabIndex = 30;
+            this.hlP_PesquisaidFuncionario.Value = 0;
+            this.hlP_PesquisaidFuncionario.Validated += new System.EventHandler(this.hlP_PesquisaidFuncionario_Validated);
+            // 
+            // hlP_PesquisaidFuncionarioResponsavel
+            // 
+            this.hlP_PesquisaidFuncionarioResponsavel._Field = "idFuncionarioResponsavel";
+            this.hlP_PesquisaidFuncionarioResponsavel._Help = "Trazer automaticamente o responsável pelo funcionário do orçamento. informado no " +
+    "cadastro do funcionário.";
+            this.hlP_PesquisaidFuncionarioResponsavel._LabelGroup = this.hlP_LabelSeparatorInfVendas;
+            this.hlP_PesquisaidFuncionarioResponsavel._LabelText = "Responsável de vendas";
+            this.hlP_PesquisaidFuncionarioResponsavel._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidFuncionarioResponsavel._ListaCamposDisplay")));
+            this.hlP_PesquisaidFuncionarioResponsavel._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidFuncionarioResponsavel._ListaValoresDisplay")));
+            this.hlP_PesquisaidFuncionarioResponsavel._NomeCampoPK = "ID";
+            this.hlP_PesquisaidFuncionarioResponsavel._NomeFormCadastroOriginal = "FormFuncionario";
+            this.hlP_PesquisaidFuncionarioResponsavel._NomeView = "vwFuncionario";
+            this.hlP_PesquisaidFuncionarioResponsavel._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.hlP_PesquisaidFuncionarioResponsavel._Regex = null;
+            this.hlP_PesquisaidFuncionarioResponsavel._Table = "Orcamento_ide";
+            this.hlP_PesquisaidFuncionarioResponsavel._TamanhoComponente = 300;
+            this.hlP_PesquisaidFuncionarioResponsavel._TamanhoMaiorLabel = 202;
+            this.hlP_PesquisaidFuncionarioResponsavel._Vinculado = false;
+            this.hlP_PesquisaidFuncionarioResponsavel._Visible = true;
+            this.hlP_PesquisaidFuncionarioResponsavel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hlP_PesquisaidFuncionarioResponsavel.BackColor = System.Drawing.Color.Transparent;
+            this.hlP_PesquisaidFuncionarioResponsavel.Base = null;
+            this.hlP_PesquisaidFuncionarioResponsavel.bConfiguracao = false;
+            this.hlP_PesquisaidFuncionarioResponsavel.Location = new System.Drawing.Point(1433, 30);
+            this.hlP_PesquisaidFuncionarioResponsavel.Margin = new System.Windows.Forms.Padding(79, 3, 15, 3);
+            this.hlP_PesquisaidFuncionarioResponsavel.Name = "hlP_PesquisaidFuncionarioResponsavel";
+            this.hlP_PesquisaidFuncionarioResponsavel.objConfigComponenteModel = null;
+            this.hlP_PesquisaidFuncionarioResponsavel.ReadOnly = false;
+            this.hlP_PesquisaidFuncionarioResponsavel.Size = new System.Drawing.Size(426, 21);
+            this.hlP_PesquisaidFuncionarioResponsavel.TabIndex = 31;
+            this.hlP_PesquisaidFuncionarioResponsavel.Value = 0;
             // 
             // hlP_PesquisaidUnidadeVenda
             // 
@@ -1171,21 +1297,22 @@
             this.hlP_PesquisaidUnidadeVenda._LabelText = "Unidade de vendas";
             this.hlP_PesquisaidUnidadeVenda._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidUnidadeVenda._ListaCamposDisplay")));
             this.hlP_PesquisaidUnidadeVenda._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidUnidadeVenda._ListaValoresDisplay")));
-            this.hlP_PesquisaidUnidadeVenda._NomeCampoPK = null;
+            this.hlP_PesquisaidUnidadeVenda._NomeCampoPK = "ID";
             this.hlP_PesquisaidUnidadeVenda._NomeFormCadastroOriginal = "";
             this.hlP_PesquisaidUnidadeVenda._NomeView = "vwUnidadeVenda";
             this.hlP_PesquisaidUnidadeVenda._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidUnidadeVenda._Regex = null;
             this.hlP_PesquisaidUnidadeVenda._Table = "Orcamento_ide";
             this.hlP_PesquisaidUnidadeVenda._TamanhoComponente = 300;
-            this.hlP_PesquisaidUnidadeVenda._TamanhoMaiorLabel = 210;
+            this.hlP_PesquisaidUnidadeVenda._TamanhoMaiorLabel = 202;
             this.hlP_PesquisaidUnidadeVenda._Vinculado = false;
+            this.hlP_PesquisaidUnidadeVenda._Visible = true;
             this.hlP_PesquisaidUnidadeVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidUnidadeVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidUnidadeVenda.Base = null;
             this.hlP_PesquisaidUnidadeVenda.bConfiguracao = false;
-            this.hlP_PesquisaidUnidadeVenda.Location = new System.Drawing.Point(107, 267);
-            this.hlP_PesquisaidUnidadeVenda.Margin = new System.Windows.Forms.Padding(107, 3, 15, 3);
+            this.hlP_PesquisaidUnidadeVenda.Location = new System.Drawing.Point(1453, 57);
+            this.hlP_PesquisaidUnidadeVenda.Margin = new System.Windows.Forms.Padding(99, 3, 15, 3);
             this.hlP_PesquisaidUnidadeVenda.Name = "hlP_PesquisaidUnidadeVenda";
             this.hlP_PesquisaidUnidadeVenda.objConfigComponenteModel = null;
             this.hlP_PesquisaidUnidadeVenda.ReadOnly = false;
@@ -1200,21 +1327,21 @@
             this.hlP_PesquisaxCanalVenda._LabelText = "Canal de vendas";
             this.hlP_PesquisaxCanalVenda._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaxCanalVenda._ListaCamposDisplay")));
             this.hlP_PesquisaxCanalVenda._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaxCanalVenda._ListaValoresDisplay")));
-            this.hlP_PesquisaxCanalVenda._NomeCampoPK = null;
-            this.hlP_PesquisaxCanalVenda._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaxCanalVenda._NomeCampoPK = "ID";
+            this.hlP_PesquisaxCanalVenda._NomeFormCadastroOriginal = "FormCanalVenda";
             this.hlP_PesquisaxCanalVenda._NomeView = "vwCanalVenda";
             this.hlP_PesquisaxCanalVenda._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaxCanalVenda._Regex = null;
-            this.hlP_PesquisaxCanalVenda._Table = "Orcamento_ide";
             this.hlP_PesquisaxCanalVenda._TamanhoComponente = 300;
-            this.hlP_PesquisaxCanalVenda._TamanhoMaiorLabel = 210;
+            this.hlP_PesquisaxCanalVenda._TamanhoMaiorLabel = 202;
             this.hlP_PesquisaxCanalVenda._Vinculado = false;
+            this.hlP_PesquisaxCanalVenda._Visible = true;
             this.hlP_PesquisaxCanalVenda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaxCanalVenda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaxCanalVenda.Base = null;
             this.hlP_PesquisaxCanalVenda.bConfiguracao = false;
-            this.hlP_PesquisaxCanalVenda.Location = new System.Drawing.Point(122, 294);
-            this.hlP_PesquisaxCanalVenda.Margin = new System.Windows.Forms.Padding(122, 3, 15, 3);
+            this.hlP_PesquisaxCanalVenda.Location = new System.Drawing.Point(1468, 84);
+            this.hlP_PesquisaxCanalVenda.Margin = new System.Windows.Forms.Padding(114, 3, 15, 3);
             this.hlP_PesquisaxCanalVenda.Name = "hlP_PesquisaxCanalVenda";
             this.hlP_PesquisaxCanalVenda.objConfigComponenteModel = null;
             this.hlP_PesquisaxCanalVenda.ReadOnly = false;
@@ -1231,20 +1358,21 @@
             this.hlP_PesquisaidMoeda._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidMoeda._ListaCamposDisplay")));
             this.hlP_PesquisaidMoeda._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidMoeda._ListaValoresDisplay")));
             this.hlP_PesquisaidMoeda._NomeCampoPK = "ID";
-            this.hlP_PesquisaidMoeda._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidMoeda._NomeFormCadastroOriginal = "FormMoeda";
             this.hlP_PesquisaidMoeda._NomeView = "vwMoeda";
             this.hlP_PesquisaidMoeda._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidMoeda._Regex = null;
             this.hlP_PesquisaidMoeda._Table = "Orcamento_ide";
             this.hlP_PesquisaidMoeda._TamanhoComponente = 300;
-            this.hlP_PesquisaidMoeda._TamanhoMaiorLabel = 210;
+            this.hlP_PesquisaidMoeda._TamanhoMaiorLabel = 202;
             this.hlP_PesquisaidMoeda._Vinculado = false;
+            this.hlP_PesquisaidMoeda._Visible = true;
             this.hlP_PesquisaidMoeda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidMoeda.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidMoeda.Base = null;
             this.hlP_PesquisaidMoeda.bConfiguracao = false;
-            this.hlP_PesquisaidMoeda.Location = new System.Drawing.Point(698, 3);
-            this.hlP_PesquisaidMoeda.Margin = new System.Windows.Forms.Padding(170, 3, 15, 3);
+            this.hlP_PesquisaidMoeda.Location = new System.Drawing.Point(2036, 3);
+            this.hlP_PesquisaidMoeda.Margin = new System.Windows.Forms.Padding(162, 3, 15, 3);
             this.hlP_PesquisaidMoeda.Name = "hlP_PesquisaidMoeda";
             this.hlP_PesquisaidMoeda.objConfigComponenteModel = null;
             this.hlP_PesquisaidMoeda.ReadOnly = false;
@@ -1262,12 +1390,13 @@
             this.hlP_ObservacaoxObservacao._Regex = null;
             this.hlP_ObservacaoxObservacao._Table = "Orcamento_ide";
             this.hlP_ObservacaoxObservacao._TamanhoComponente = 113;
-            this.hlP_ObservacaoxObservacao._TamanhoMaiorLabel = 210;
+            this.hlP_ObservacaoxObservacao._TamanhoMaiorLabel = 202;
+            this.hlP_ObservacaoxObservacao._Visible = true;
             this.hlP_ObservacaoxObservacao.BackColor = System.Drawing.Color.Transparent;
             this.hlP_ObservacaoxObservacao.Base = null;
             this.hlP_ObservacaoxObservacao.bConfiguracao = false;
-            this.hlP_ObservacaoxObservacao.Location = new System.Drawing.Point(674, 30);
-            this.hlP_ObservacaoxObservacao.Margin = new System.Windows.Forms.Padding(146, 3, 15, 3);
+            this.hlP_ObservacaoxObservacao.Location = new System.Drawing.Point(2012, 30);
+            this.hlP_ObservacaoxObservacao.Margin = new System.Windows.Forms.Padding(138, 3, 15, 3);
             this.hlP_ObservacaoxObservacao.Name = "hlP_ObservacaoxObservacao";
             this.hlP_ObservacaoxObservacao.objConfigComponenteModel = null;
             this.hlP_ObservacaoxObservacao.ReadOnly = false;
@@ -1286,15 +1415,16 @@
             this.cbxstWeb._situacao = true;
             this.cbxstWeb._Table = "Orcamento_ide";
             this.cbxstWeb._TamanhoComponente = 80;
-            this.cbxstWeb._TamanhoMaiorLabel = 210;
+            this.cbxstWeb._TamanhoMaiorLabel = 202;
+            this.cbxstWeb._Visible = true;
             this.cbxstWeb.BackColor = System.Drawing.Color.Transparent;
             this.cbxstWeb.Base = null;
             this.cbxstWeb.bConfiguracao = false;
             this.cbxstWeb.Color = System.Drawing.Color.White;
             this.cbxstWeb.DataSource = null;
             this.cbxstWeb.DisplayMember = "DisplayMember";
-            this.cbxstWeb.Location = new System.Drawing.Point(612, 62);
-            this.cbxstWeb.Margin = new System.Windows.Forms.Padding(84, 3, 15, 3);
+            this.cbxstWeb.Location = new System.Drawing.Point(1950, 62);
+            this.cbxstWeb.Margin = new System.Windows.Forms.Padding(76, 3, 15, 3);
             this.cbxstWeb.Name = "cbxstWeb";
             this.cbxstWeb.objConfigComponenteModel = null;
             this.cbxstWeb.SelectedIndex = -1;
@@ -1308,9 +1438,9 @@
             this.hlP_LabelSeparatorTransportes._LabelText = "Transportes";
             this.hlP_LabelSeparatorTransportes._TamanhoMaiorLabel = 0;
             this.hlP_LabelSeparatorTransportes.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorTransportes.Location = new System.Drawing.Point(531, 89);
+            this.hlP_LabelSeparatorTransportes.Location = new System.Drawing.Point(511, 3);
             this.hlP_LabelSeparatorTransportes.Name = "hlP_LabelSeparatorTransportes";
-            this.hlP_LabelSeparatorTransportes.Size = new System.Drawing.Size(415, 19);
+            this.hlP_LabelSeparatorTransportes.Size = new System.Drawing.Size(483, 19);
             this.hlP_LabelSeparatorTransportes.TabIndex = 21;
             this.hlP_LabelSeparatorTransportes.TabStop = false;
             // 
@@ -1323,7 +1453,7 @@
             this.hlP_PesquisaidCondicaoEntrega._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidCondicaoEntrega._ListaCamposDisplay")));
             this.hlP_PesquisaidCondicaoEntrega._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidCondicaoEntrega._ListaValoresDisplay")));
             this.hlP_PesquisaidCondicaoEntrega._NomeCampoPK = "ID";
-            this.hlP_PesquisaidCondicaoEntrega._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidCondicaoEntrega._NomeFormCadastroOriginal = "FormCondicaoEntrega";
             this.hlP_PesquisaidCondicaoEntrega._NomeView = "vwCondicaoEntrega";
             this.hlP_PesquisaidCondicaoEntrega._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidCondicaoEntrega._Regex = null;
@@ -1331,11 +1461,12 @@
             this.hlP_PesquisaidCondicaoEntrega._TamanhoComponente = 300;
             this.hlP_PesquisaidCondicaoEntrega._TamanhoMaiorLabel = 115;
             this.hlP_PesquisaidCondicaoEntrega._Vinculado = false;
+            this.hlP_PesquisaidCondicaoEntrega._Visible = true;
             this.hlP_PesquisaidCondicaoEntrega.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidCondicaoEntrega.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidCondicaoEntrega.Base = null;
             this.hlP_PesquisaidCondicaoEntrega.bConfiguracao = false;
-            this.hlP_PesquisaidCondicaoEntrega.Location = new System.Drawing.Point(531, 114);
+            this.hlP_PesquisaidCondicaoEntrega.Location = new System.Drawing.Point(2397, 3);
             this.hlP_PesquisaidCondicaoEntrega.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.hlP_PesquisaidCondicaoEntrega.Name = "hlP_PesquisaidCondicaoEntrega";
             this.hlP_PesquisaidCondicaoEntrega.objConfigComponenteModel = null;
@@ -1355,7 +1486,7 @@
             this.hlP_PesquisaidModosentrega._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidModosentrega._ListaCamposDisplay")));
             this.hlP_PesquisaidModosentrega._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidModosentrega._ListaValoresDisplay")));
             this.hlP_PesquisaidModosentrega._NomeCampoPK = "ID";
-            this.hlP_PesquisaidModosentrega._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidModosentrega._NomeFormCadastroOriginal = "FormModoEntrega";
             this.hlP_PesquisaidModosentrega._NomeView = "vwModoEntrega";
             this.hlP_PesquisaidModosentrega._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidModosentrega._Regex = null;
@@ -1363,11 +1494,12 @@
             this.hlP_PesquisaidModosentrega._TamanhoComponente = 300;
             this.hlP_PesquisaidModosentrega._TamanhoMaiorLabel = 115;
             this.hlP_PesquisaidModosentrega._Vinculado = false;
+            this.hlP_PesquisaidModosentrega._Visible = true;
             this.hlP_PesquisaidModosentrega.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidModosentrega.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidModosentrega.Base = null;
             this.hlP_PesquisaidModosentrega.bConfiguracao = false;
-            this.hlP_PesquisaidModosentrega.Location = new System.Drawing.Point(544, 141);
+            this.hlP_PesquisaidModosentrega.Location = new System.Drawing.Point(2410, 30);
             this.hlP_PesquisaidModosentrega.Margin = new System.Windows.Forms.Padding(16, 3, 15, 3);
             this.hlP_PesquisaidModosentrega.Name = "hlP_PesquisaidModosentrega";
             this.hlP_PesquisaidModosentrega.objConfigComponenteModel = null;
@@ -1385,19 +1517,20 @@
             this.hlP_PesquisaidTransportador._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidTransportador._ListaCamposDisplay")));
             this.hlP_PesquisaidTransportador._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidTransportador._ListaValoresDisplay")));
             this.hlP_PesquisaidTransportador._NomeCampoPK = "ID";
-            this.hlP_PesquisaidTransportador._NomeFormCadastroOriginal = "";
-            this.hlP_PesquisaidTransportador._NomeView = "";
+            this.hlP_PesquisaidTransportador._NomeFormCadastroOriginal = "FormTransportadora";
+            this.hlP_PesquisaidTransportador._NomeView = "vwTransportador";
             this.hlP_PesquisaidTransportador._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidTransportador._Regex = null;
             this.hlP_PesquisaidTransportador._Table = "Orcamento_ide";
             this.hlP_PesquisaidTransportador._TamanhoComponente = 300;
             this.hlP_PesquisaidTransportador._TamanhoMaiorLabel = 115;
             this.hlP_PesquisaidTransportador._Vinculado = false;
+            this.hlP_PesquisaidTransportador._Visible = true;
             this.hlP_PesquisaidTransportador.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidTransportador.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidTransportador.Base = null;
             this.hlP_PesquisaidTransportador.bConfiguracao = false;
-            this.hlP_PesquisaidTransportador.Location = new System.Drawing.Point(560, 168);
+            this.hlP_PesquisaidTransportador.Location = new System.Drawing.Point(2426, 57);
             this.hlP_PesquisaidTransportador.Margin = new System.Windows.Forms.Padding(32, 3, 15, 3);
             this.hlP_PesquisaidTransportador.Name = "hlP_PesquisaidTransportador";
             this.hlP_PesquisaidTransportador.objConfigComponenteModel = null;
@@ -1411,22 +1544,22 @@
             this.hlP_LabelSeparatorFinanceiro._LabelText = "Financeiro";
             this.hlP_LabelSeparatorFinanceiro._TamanhoMaiorLabel = 0;
             this.hlP_LabelSeparatorFinanceiro.BackColor = System.Drawing.Color.Transparent;
-            this.hlP_LabelSeparatorFinanceiro.Location = new System.Drawing.Point(531, 195);
+            this.hlP_LabelSeparatorFinanceiro.Location = new System.Drawing.Point(511, 28);
             this.hlP_LabelSeparatorFinanceiro.Name = "hlP_LabelSeparatorFinanceiro";
-            this.hlP_LabelSeparatorFinanceiro.Size = new System.Drawing.Size(361, 19);
+            this.hlP_LabelSeparatorFinanceiro.Size = new System.Drawing.Size(429, 19);
             this.hlP_LabelSeparatorFinanceiro.TabIndex = 26;
             this.hlP_LabelSeparatorFinanceiro.TabStop = false;
             // 
             // hlP_PesquisaidDescontosAvista
             // 
-            this.hlP_PesquisaidDescontosAvista._Field = "idDescontosAvista";
+            this.hlP_PesquisaidDescontosAvista._Field = "idDescontos";
             this.hlP_PesquisaidDescontosAvista._Help = "Informar os tipos de descontos.";
             this.hlP_PesquisaidDescontosAvista._LabelGroup = this.hlP_LabelSeparatorFinanceiro;
             this.hlP_PesquisaidDescontosAvista._LabelText = "Descontos";
             this.hlP_PesquisaidDescontosAvista._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidDescontosAvista._ListaCamposDisplay")));
             this.hlP_PesquisaidDescontosAvista._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidDescontosAvista._ListaValoresDisplay")));
             this.hlP_PesquisaidDescontosAvista._NomeCampoPK = "ID";
-            this.hlP_PesquisaidDescontosAvista._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidDescontosAvista._NomeFormCadastroOriginal = "FormDesconto";
             this.hlP_PesquisaidDescontosAvista._NomeView = "vwDescontosAvista";
             this.hlP_PesquisaidDescontosAvista._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidDescontosAvista._Regex = null;
@@ -1434,11 +1567,12 @@
             this.hlP_PesquisaidDescontosAvista._TamanhoComponente = 300;
             this.hlP_PesquisaidDescontosAvista._TamanhoMaiorLabel = 61;
             this.hlP_PesquisaidDescontosAvista._Vinculado = false;
+            this.hlP_PesquisaidDescontosAvista._Visible = true;
             this.hlP_PesquisaidDescontosAvista.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidDescontosAvista.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidDescontosAvista.Base = null;
             this.hlP_PesquisaidDescontosAvista.bConfiguracao = false;
-            this.hlP_PesquisaidDescontosAvista.Location = new System.Drawing.Point(531, 220);
+            this.hlP_PesquisaidDescontosAvista.Location = new System.Drawing.Point(2832, 3);
             this.hlP_PesquisaidDescontosAvista.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.hlP_PesquisaidDescontosAvista.Name = "hlP_PesquisaidDescontosAvista";
             this.hlP_PesquisaidDescontosAvista.objConfigComponenteModel = null;
@@ -1449,14 +1583,14 @@
             // 
             // hlP_PesquisaidMultas
             // 
-            this.hlP_PesquisaidMultas._Field = "idMultas";
+            this.hlP_PesquisaidMultas._Field = "idMulta";
             this.hlP_PesquisaidMultas._Help = "Informar o código da multa quando houver.";
             this.hlP_PesquisaidMultas._LabelGroup = this.hlP_LabelSeparatorFinanceiro;
             this.hlP_PesquisaidMultas._LabelText = "Multa";
             this.hlP_PesquisaidMultas._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidMultas._ListaCamposDisplay")));
             this.hlP_PesquisaidMultas._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidMultas._ListaValoresDisplay")));
             this.hlP_PesquisaidMultas._NomeCampoPK = "ID";
-            this.hlP_PesquisaidMultas._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidMultas._NomeFormCadastroOriginal = "FormMulta";
             this.hlP_PesquisaidMultas._NomeView = "vwMultas";
             this.hlP_PesquisaidMultas._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidMultas._Regex = null;
@@ -1464,11 +1598,12 @@
             this.hlP_PesquisaidMultas._TamanhoComponente = 300;
             this.hlP_PesquisaidMultas._TamanhoMaiorLabel = 61;
             this.hlP_PesquisaidMultas._Vinculado = false;
+            this.hlP_PesquisaidMultas._Visible = true;
             this.hlP_PesquisaidMultas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidMultas.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidMultas.Base = null;
             this.hlP_PesquisaidMultas.bConfiguracao = false;
-            this.hlP_PesquisaidMultas.Location = new System.Drawing.Point(555, 247);
+            this.hlP_PesquisaidMultas.Location = new System.Drawing.Point(2856, 30);
             this.hlP_PesquisaidMultas.Margin = new System.Windows.Forms.Padding(27, 3, 15, 3);
             this.hlP_PesquisaidMultas.Name = "hlP_PesquisaidMultas";
             this.hlP_PesquisaidMultas.objConfigComponenteModel = null;
@@ -1486,7 +1621,7 @@
             this.hlP_PesquisaidJuros._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidJuros._ListaCamposDisplay")));
             this.hlP_PesquisaidJuros._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidJuros._ListaValoresDisplay")));
             this.hlP_PesquisaidJuros._NomeCampoPK = "ID";
-            this.hlP_PesquisaidJuros._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidJuros._NomeFormCadastroOriginal = "FormJuros";
             this.hlP_PesquisaidJuros._NomeView = "vwJuros";
             this.hlP_PesquisaidJuros._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidJuros._Regex = null;
@@ -1494,11 +1629,12 @@
             this.hlP_PesquisaidJuros._TamanhoComponente = 300;
             this.hlP_PesquisaidJuros._TamanhoMaiorLabel = 61;
             this.hlP_PesquisaidJuros._Vinculado = false;
+            this.hlP_PesquisaidJuros._Visible = true;
             this.hlP_PesquisaidJuros.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidJuros.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidJuros.Base = null;
             this.hlP_PesquisaidJuros.bConfiguracao = false;
-            this.hlP_PesquisaidJuros.Location = new System.Drawing.Point(558, 274);
+            this.hlP_PesquisaidJuros.Location = new System.Drawing.Point(2859, 57);
             this.hlP_PesquisaidJuros.Margin = new System.Windows.Forms.Padding(30, 3, 15, 3);
             this.hlP_PesquisaidJuros.Name = "hlP_PesquisaidJuros";
             this.hlP_PesquisaidJuros.objConfigComponenteModel = null;
@@ -1545,7 +1681,7 @@
             // 
             // tabPageFiscal
             // 
-            this.tabPageFiscal.Controls.Add(this.hlP_DataGridView4);
+            this.tabPageFiscal.Controls.Add(this.dgvFiscal);
             this.tabPageFiscal.Location = new System.Drawing.Point(4, 25);
             this.tabPageFiscal.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageFiscal.Name = "tabPageFiscal";
@@ -1555,19 +1691,19 @@
             this.tabPageFiscal.Text = "Fiscal";
             this.tabPageFiscal.UseVisualStyleBackColor = true;
             // 
-            // hlP_DataGridView4
+            // dgvFiscal
             // 
-            this.hlP_DataGridView4.Altera = false;
-            this.hlP_DataGridView4.AutoGenerateColumns = false;
-            this.hlP_DataGridView4.cm = null;
-            this.hlP_DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.hlP_DataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFiscal.Altera = false;
+            this.dgvFiscal.AutoGenerateColumns = false;
+            this.dgvFiscal.cm = null;
+            this.dgvFiscal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFiscal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn,
             this.iPIstCalculaIpiDataGridViewTextBoxColumn,
             this.idClassificacaoFiscalDataGridViewTextBoxColumn,
             this.iPIpIPIDataGridViewTextBoxColumn,
             this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn,
-            this.idCSTIpiDataGridViewTextBoxColumn,
+            this.idCSTIpi,
             this.iPIvBaseCalculoDataGridViewTextBoxColumn,
             this.iPIvIPIDataGridViewTextBoxColumn,
             this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn,
@@ -1615,30 +1751,45 @@
             this.iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn,
             this.idOrcamentoItemDataGridViewTextBoxColumn3,
             this.idCSTIssDataGridViewTextBoxColumn});
-            this.hlP_DataGridView4.DataSource = this.bsFiscal;
-            this.hlP_DataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hlP_DataGridView4.DragDropLinha = false;
-            this.hlP_DataGridView4.Exclui = false;
-            this.hlP_DataGridView4.Inclui = false;
-            this.hlP_DataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.hlP_DataGridView4.Name = "hlP_DataGridView4";
-            this.hlP_DataGridView4.Size = new System.Drawing.Size(1292, 100);
-            this.hlP_DataGridView4.TabIndex = 0;
+            this.dgvFiscal.DataSource = this.bsFiscal;
+            this.dgvFiscal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFiscal.DragDropLinha = false;
+            this.dgvFiscal.Exclui = false;
+            this.dgvFiscal.Inclui = false;
+            this.dgvFiscal.Location = new System.Drawing.Point(0, 0);
+            this.dgvFiscal.Name = "dgvFiscal";
+            this.dgvFiscal.Size = new System.Drawing.Size(1292, 100);
+            this.dgvFiscal.TabIndex = 0;
+            this.dgvFiscal.Tag = "Orcamento_Item_Impostos";
             // 
             // iCMSstOrigemMercadoriaDataGridViewTextBoxColumn
             // 
+            this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_stOrigemMercadoria";
             this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn.HeaderText = "Origem da Mercadoria";
             this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn.Items.AddRange(new object[] {
             "0- NACIONAL",
             "1- ESTRANGEIRA – IMPORTAÇÃO DIRETA",
-            "2- ESTRANGEIRA – ADQUIRIDA NO MERCADO INTERNO"});
+            "2- ESTRANGEIRA – ADQUIRIDA NO MERCADO INTERNO",
+            "3- NACIONAL, MERCADORIA OU BEM COM CONTEÚDO DE IMPORTAÇÃO SUPERIOR A 40% (QUARENT" +
+                "A POR CENTO)",
+            "4- NACIONAL, CUJA PRODUÇÃO TENHA SIDO FEITA EM CONFORMIDADE COM OS PROCESSOS PROD" +
+                "UTIVOS BÁSICOS DE QUE TRATAM O DECRETO-LEI Nº 288/67, E AS LEIS NºS 8.248/91, 8." +
+                "387/91, 10.176/01 E 11 . 4 8 4 / 0 7",
+            "5- NACIONAL, MERCADORIA OU BEM COM CONTEÚDO DE IMPORTAÇÃO INFERIOR OU IGUAL A 40%" +
+                " (QUARENTA POR CENTO)",
+            "6- ESTRANGEIRA - IMPORTAÇÃO DIRETA, SEM SIMILAR NACIONAL, CONSTANTE EM LISTA DE R" +
+                "ESOLUÇÃO CAMEX",
+            "7- ESTRANGEIRA - ADQUIRIDA NO MERCADO INTERNO, SEM SIMILAR NACIONAL, CONSTANTE EM" +
+                " LISTA DE RESOLUÇÃO CAMEX”"});
             this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn.Name = "iCMSstOrigemMercadoriaDataGridViewTextBoxColumn";
             this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iCMSstOrigemMercadoriaDataGridViewTextBoxColumn.Width = 142;
             // 
             // iPIstCalculaIpiDataGridViewTextBoxColumn
             // 
+            this.iPIstCalculaIpiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iPIstCalculaIpiDataGridViewTextBoxColumn.DataPropertyName = "IPI_stCalculaIpi";
             this.iPIstCalculaIpiDataGridViewTextBoxColumn.HeaderText = "Calcula IPI?";
             this.iPIstCalculaIpiDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -1647,17 +1798,21 @@
             this.iPIstCalculaIpiDataGridViewTextBoxColumn.Name = "iPIstCalculaIpiDataGridViewTextBoxColumn";
             this.iPIstCalculaIpiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iPIstCalculaIpiDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iPIstCalculaIpiDataGridViewTextBoxColumn.Width = 89;
             // 
             // idClassificacaoFiscalDataGridViewTextBoxColumn
             // 
+            this.idClassificacaoFiscalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idClassificacaoFiscalDataGridViewTextBoxColumn.DataPropertyName = "idClassificacaoFiscal";
             this.idClassificacaoFiscalDataGridViewTextBoxColumn.HeaderText = "Classificação Fiscal";
             this.idClassificacaoFiscalDataGridViewTextBoxColumn.Name = "idClassificacaoFiscalDataGridViewTextBoxColumn";
             this.idClassificacaoFiscalDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idClassificacaoFiscalDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idClassificacaoFiscalDataGridViewTextBoxColumn.Width = 125;
             // 
             // iPIpIPIDataGridViewTextBoxColumn
             // 
+            this.iPIpIPIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iPIpIPIDataGridViewTextBoxColumn.DataPropertyName = "IPI_pIPI";
             this.iPIpIPIDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.iPIpIPIDataGridViewTextBoxColumn.HeaderText = "% IPI";
@@ -1679,10 +1834,11 @@
             this.iPIpIPIDataGridViewTextBoxColumn.Name = "iPIpIPIDataGridViewTextBoxColumn";
             this.iPIpIPIDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iPIpIPIDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iPIpIPIDataGridViewTextBoxColumn.Width = 100;
+            this.iPIpIPIDataGridViewTextBoxColumn.Width = 58;
             // 
             // iPIstCompoeBaseCalculoDataGridViewTextBoxColumn
             // 
+            this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn.DataPropertyName = "IPI_stCompoeBaseCalculo";
             this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn.HeaderText = "Compões a Base do IPI";
             this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -1693,17 +1849,21 @@
             this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn.Name = "iPIstCompoeBaseCalculoDataGridViewTextBoxColumn";
             this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iPIstCompoeBaseCalculoDataGridViewTextBoxColumn.Width = 91;
             // 
-            // idCSTIpiDataGridViewTextBoxColumn
+            // idCSTIpi
             // 
-            this.idCSTIpiDataGridViewTextBoxColumn.DataPropertyName = "idCSTIpi";
-            this.idCSTIpiDataGridViewTextBoxColumn.HeaderText = "Código da Situação Tributária";
-            this.idCSTIpiDataGridViewTextBoxColumn.Name = "idCSTIpiDataGridViewTextBoxColumn";
-            this.idCSTIpiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idCSTIpiDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idCSTIpi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.idCSTIpi.DataPropertyName = "idCSTIpi";
+            this.idCSTIpi.HeaderText = "Código da Situação Tributária";
+            this.idCSTIpi.Name = "idCSTIpi";
+            this.idCSTIpi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idCSTIpi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idCSTIpi.Width = 130;
             // 
             // iPIvBaseCalculoDataGridViewTextBoxColumn
             // 
+            this.iPIvBaseCalculoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iPIvBaseCalculoDataGridViewTextBoxColumn.DataPropertyName = "IPI_vBaseCalculo";
             this.iPIvBaseCalculoDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iPIvBaseCalculoDataGridViewTextBoxColumn.HeaderText = "Valor da Base do IPI";
@@ -1725,10 +1885,11 @@
             this.iPIvBaseCalculoDataGridViewTextBoxColumn.Name = "iPIvBaseCalculoDataGridViewTextBoxColumn";
             this.iPIvBaseCalculoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iPIvBaseCalculoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iPIvBaseCalculoDataGridViewTextBoxColumn.Width = 100;
+            this.iPIvBaseCalculoDataGridViewTextBoxColumn.Width = 76;
             // 
             // iPIvIPIDataGridViewTextBoxColumn
             // 
+            this.iPIvIPIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iPIvIPIDataGridViewTextBoxColumn.DataPropertyName = "IPI_vIPI";
             this.iPIvIPIDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iPIvIPIDataGridViewTextBoxColumn.HeaderText = "Valor do IPI";
@@ -1750,10 +1911,11 @@
             this.iPIvIPIDataGridViewTextBoxColumn.Name = "iPIvIPIDataGridViewTextBoxColumn";
             this.iPIvIPIDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iPIvIPIDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iPIvIPIDataGridViewTextBoxColumn.Width = 100;
+            this.iPIvIPIDataGridViewTextBoxColumn.Width = 77;
             // 
             // iCMSstReduzBaseCalculoDataGridViewTextBoxColumn
             // 
+            this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn.DataPropertyName = "ICMS_stReduzBaseCalculo";
             this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn.HeaderText = "Reduz Base de Calculo do ICMS?";
             this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -1764,9 +1926,11 @@
             this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn.Name = "iCMSstReduzBaseCalculoDataGridViewTextBoxColumn";
             this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iCMSstReduzBaseCalculoDataGridViewTextBoxColumn.Width = 105;
             // 
             // ICMS_stNaoReduzBase
             // 
+            this.ICMS_stNaoReduzBase.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.ICMS_stNaoReduzBase.DataPropertyName = "ICMS_stNaoReduzBase";
             this.ICMS_stNaoReduzBase.HeaderText = "Não reduz a base de Calculo do ICMS?";
             this.ICMS_stNaoReduzBase.Items.AddRange(new object[] {
@@ -1775,9 +1939,11 @@
             this.ICMS_stNaoReduzBase.Name = "ICMS_stNaoReduzBase";
             this.ICMS_stNaoReduzBase.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ICMS_stNaoReduzBase.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ICMS_stNaoReduzBase.Width = 133;
             // 
             // iCMSstCalculaIcmsDataGridViewTextBoxColumn
             // 
+            this.iCMSstCalculaIcmsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSstCalculaIcmsDataGridViewTextBoxColumn.DataPropertyName = "ICMS_stCalculaIcms";
             this.iCMSstCalculaIcmsDataGridViewTextBoxColumn.HeaderText = "Calcula ICMS?";
             this.iCMSstCalculaIcmsDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -1786,25 +1952,31 @@
             this.iCMSstCalculaIcmsDataGridViewTextBoxColumn.Name = "iCMSstCalculaIcmsDataGridViewTextBoxColumn";
             this.iCMSstCalculaIcmsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSstCalculaIcmsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iCMSstCalculaIcmsDataGridViewTextBoxColumn.Width = 102;
             // 
             // idCodigoIcmsPaiDataGridViewTextBoxColumn
             // 
+            this.idCodigoIcmsPaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idCodigoIcmsPaiDataGridViewTextBoxColumn.DataPropertyName = "idCodigoIcmsPai";
             this.idCodigoIcmsPaiDataGridViewTextBoxColumn.HeaderText = "Código de ICMS";
             this.idCodigoIcmsPaiDataGridViewTextBoxColumn.Name = "idCodigoIcmsPaiDataGridViewTextBoxColumn";
             this.idCodigoIcmsPaiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idCodigoIcmsPaiDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idCodigoIcmsPaiDataGridViewTextBoxColumn.Width = 87;
             // 
             // idCSTIcmsDataGridViewTextBoxColumn
             // 
+            this.idCSTIcmsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idCSTIcmsDataGridViewTextBoxColumn.DataPropertyName = "idCSTIcms";
             this.idCSTIcmsDataGridViewTextBoxColumn.HeaderText = "Código da Situação Tributária";
             this.idCSTIcmsDataGridViewTextBoxColumn.Name = "idCSTIcmsDataGridViewTextBoxColumn";
             this.idCSTIcmsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idCSTIcmsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idCSTIcmsDataGridViewTextBoxColumn.Width = 130;
             // 
             // iCMSpICMSDataGridViewTextBoxColumn
             // 
+            this.iCMSpICMSDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSpICMSDataGridViewTextBoxColumn.DataPropertyName = "ICMS_pICMS";
             this.iCMSpICMSDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.iCMSpICMSDataGridViewTextBoxColumn.HeaderText = "% ICMS";
@@ -1826,10 +1998,11 @@
             this.iCMSpICMSDataGridViewTextBoxColumn.Name = "iCMSpICMSDataGridViewTextBoxColumn";
             this.iCMSpICMSDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSpICMSDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSpICMSDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSpICMSDataGridViewTextBoxColumn.Width = 72;
             // 
             // iCMSpReduzBaseDataGridViewTextBoxColumn
             // 
+            this.iCMSpReduzBaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSpReduzBaseDataGridViewTextBoxColumn.DataPropertyName = "ICMS_pReduzBase";
             this.iCMSpReduzBaseDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.iCMSpReduzBaseDataGridViewTextBoxColumn.HeaderText = "% Redução da Base de Calculo do ICMS ";
@@ -1851,10 +2024,11 @@
             this.iCMSpReduzBaseDataGridViewTextBoxColumn.Name = "iCMSpReduzBaseDataGridViewTextBoxColumn";
             this.iCMSpReduzBaseDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSpReduzBaseDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSpReduzBaseDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSpReduzBaseDataGridViewTextBoxColumn.Width = 131;
             // 
             // iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn
             // 
+            this.iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn.DataPropertyName = "ICMS_stCompoeBaseCalculo";
             this.iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn.HeaderText = "Compõe a base do ICMS!";
             this.iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -1866,9 +2040,11 @@
             this.iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn.Name = "iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn";
             this.iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iCMSstCompoeBaseCalculoDataGridViewTextBoxColumn.Width = 87;
             // 
             // iCMSvBaseCalculoDataGridViewTextBoxColumn
             // 
+            this.iCMSvBaseCalculoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSvBaseCalculoDataGridViewTextBoxColumn.DataPropertyName = "ICMS_vBaseCalculo";
             this.iCMSvBaseCalculoDataGridViewTextBoxColumn.HeaderText = "Valor da Base de Calculo do ICMS";
             this.iCMSvBaseCalculoDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -1880,9 +2056,11 @@
             this.iCMSvBaseCalculoDataGridViewTextBoxColumn.Name = "iCMSvBaseCalculoDataGridViewTextBoxColumn";
             this.iCMSvBaseCalculoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSvBaseCalculoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iCMSvBaseCalculoDataGridViewTextBoxColumn.Width = 115;
             // 
             // iCMSvICMSDataGridViewTextBoxColumn
             // 
+            this.iCMSvICMSDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSvICMSDataGridViewTextBoxColumn.DataPropertyName = "ICMS_vICMS";
             this.iCMSvICMSDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iCMSvICMSDataGridViewTextBoxColumn.HeaderText = "Valor do ICMS";
@@ -1904,10 +2082,11 @@
             this.iCMSvICMSDataGridViewTextBoxColumn.Name = "iCMSvICMSDataGridViewTextBoxColumn";
             this.iCMSvICMSDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSvICMSDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSvICMSDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSvICMSDataGridViewTextBoxColumn.Width = 77;
             // 
             // iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn
             // 
+            this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.DataPropertyName = "ICMS_vBaseCalculoIcmsProprio";
             this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.HeaderText = "Valor da Base de Calculo ICMS Próprio";
@@ -1929,10 +2108,11 @@
             this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.Name = "iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn";
             this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSvBaseCalculoIcmsProprioDataGridViewTextBoxColumn.Width = 115;
             // 
             // iCMSvIcmsProprioDataGridViewTextBoxColumn
             // 
+            this.iCMSvIcmsProprioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSvIcmsProprioDataGridViewTextBoxColumn.DataPropertyName = "ICMS_vIcmsProprio";
             this.iCMSvIcmsProprioDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iCMSvIcmsProprioDataGridViewTextBoxColumn.HeaderText = "Valor do ICMS Próprio";
@@ -1954,10 +2134,11 @@
             this.iCMSvIcmsProprioDataGridViewTextBoxColumn.Name = "iCMSvIcmsProprioDataGridViewTextBoxColumn";
             this.iCMSvIcmsProprioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSvIcmsProprioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSvIcmsProprioDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSvIcmsProprioDataGridViewTextBoxColumn.Width = 105;
             // 
             // iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_stCalculaSubstituicaoTributaria";
             this.iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "Calcula ICMS de Substituição Tributária?";
             this.iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -1966,9 +2147,11 @@
             this.iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iCMSstCalculaSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 146;
             // 
             // iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_pReduzBaseSubstituicaoTributaria";
             this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "% de Redução da Base de Cálculo da Substituição Tributária";
@@ -1990,10 +2173,11 @@
             this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSpReduzBaseSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 158;
             // 
             // iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_vBaseCalculoSubstituicaoTributaria";
             this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "Valor da Redução da Base de Cálculo da Substituição Tributária";
@@ -2015,10 +2199,11 @@
             this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSvBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 156;
             // 
             // iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_pSubstituicaoTributaria";
             this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "% da Substituição Tributária";
@@ -2040,10 +2225,11 @@
             this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSpSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 122;
             // 
             // iCMSpIcmsInternoDataGridViewTextBoxColumn
             // 
+            this.iCMSpIcmsInternoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSpIcmsInternoDataGridViewTextBoxColumn.DataPropertyName = "ICMS_pIcmsInterno";
             this.iCMSpIcmsInternoDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.iCMSpIcmsInternoDataGridViewTextBoxColumn.HeaderText = "% ICMS Interna destino";
@@ -2065,10 +2251,11 @@
             this.iCMSpIcmsInternoDataGridViewTextBoxColumn.Name = "iCMSpIcmsInternoDataGridViewTextBoxColumn";
             this.iCMSpIcmsInternoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSpIcmsInternoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSpIcmsInternoDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSpIcmsInternoDataGridViewTextBoxColumn.Width = 110;
             // 
             // iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_pMvaSubstituicaoTributaria";
             this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "% MVA ST";
@@ -2090,10 +2277,11 @@
             this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSpMvaSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 73;
             // 
             // iCMSpCargaTributariaMediaDataGridViewTextBoxColumn
             // 
+            this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_pCargaTributariaMedia";
             this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.HeaderText = "% Carga Tributária Média";
@@ -2115,10 +2303,11 @@
             this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.Name = "iCMSpCargaTributariaMediaDataGridViewTextBoxColumn";
             this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSpCargaTributariaMediaDataGridViewTextBoxColumn.Width = 113;
             // 
             // iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_stCompoeBaseCalculoSubstituicaoTributaria";
             this.iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "Compõe a base do ICMS de Substituição Tributária";
             this.iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -2131,9 +2320,11 @@
             this.iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iCMSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 154;
             // 
             // iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn
             // 
+            this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.DataPropertyName = "ICMS_vBaseCalculoSubstituicaoTributariaRetido";
             this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.HeaderText = "Valor de Base de Calculo do ICMS Substituição Tributária";
@@ -2155,10 +2346,11 @@
             this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.Name = "iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn";
             this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSvBaseCalculoSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.Width = 170;
             // 
             // iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "ICMS_vSubstituicaoTributaria";
             this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "Valor do ICMS Substituição Tributária";
@@ -2180,10 +2372,11 @@
             this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 100;
+            this.iCMSvSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 142;
             // 
             // stCalculaPisCofinsDataGridViewTextBoxColumn
             // 
+            this.stCalculaPisCofinsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.stCalculaPisCofinsDataGridViewTextBoxColumn.DataPropertyName = "stCalculaPisCofins";
             this.stCalculaPisCofinsDataGridViewTextBoxColumn.HeaderText = "Calcula Pis/Cofins?";
             this.stCalculaPisCofinsDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -2193,9 +2386,11 @@
             this.stCalculaPisCofinsDataGridViewTextBoxColumn.Name = "stCalculaPisCofinsDataGridViewTextBoxColumn";
             this.stCalculaPisCofinsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.stCalculaPisCofinsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.stCalculaPisCofinsDataGridViewTextBoxColumn.Width = 126;
             // 
             // stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn
             // 
+            this.stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn.DataPropertyName = "stRegimeTributacaoPisCofins";
             this.stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn.HeaderText = "Regime Tributação PIS/COFINS?";
             this.stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -2205,9 +2400,11 @@
             this.stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn.Name = "stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn";
             this.stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.stRegimeTributacaoPisCofinsDataGridViewTextBoxColumn.Width = 127;
             // 
             // pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "PIS_nCoeficienteSubstituicaoTributaria";
             this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "Coeficiente de Substituição Tributária do PIS";
@@ -2229,10 +2426,11 @@
             this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 100;
+            this.pISnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 145;
             // 
             // cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "COFINS_nCoeficienteSubstituicaoTributaria";
             this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "Coeficiente de Substituição Tributária do COFINS";
@@ -2254,10 +2452,11 @@
             this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 100;
+            this.cOFINSnCoeficienteSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 167;
             // 
             // pISpPISDataGridViewTextBoxColumn
             // 
+            this.pISpPISDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.pISpPISDataGridViewTextBoxColumn.DataPropertyName = "PIS_pPIS";
             this.pISpPISDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.pISpPISDataGridViewTextBoxColumn.HeaderText = "% PIS";
@@ -2279,10 +2478,11 @@
             this.pISpPISDataGridViewTextBoxColumn.Name = "pISpPISDataGridViewTextBoxColumn";
             this.pISpPISDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.pISpPISDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.pISpPISDataGridViewTextBoxColumn.Width = 100;
+            this.pISpPISDataGridViewTextBoxColumn.Width = 61;
             // 
             // cOFINSpCOFINSDataGridViewTextBoxColumn
             // 
+            this.cOFINSpCOFINSDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.cOFINSpCOFINSDataGridViewTextBoxColumn.DataPropertyName = "COFINS_pCOFINS";
             this.cOFINSpCOFINSDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.cOFINSpCOFINSDataGridViewTextBoxColumn.HeaderText = "% COFINS";
@@ -2304,26 +2504,31 @@
             this.cOFINSpCOFINSDataGridViewTextBoxColumn.Name = "cOFINSpCOFINSDataGridViewTextBoxColumn";
             this.cOFINSpCOFINSDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.cOFINSpCOFINSDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cOFINSpCOFINSDataGridViewTextBoxColumn.Width = 100;
+            this.cOFINSpCOFINSDataGridViewTextBoxColumn.Width = 83;
             // 
             // idCSTPisDataGridViewTextBoxColumn
             // 
+            this.idCSTPisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idCSTPisDataGridViewTextBoxColumn.DataPropertyName = "idCSTPis";
             this.idCSTPisDataGridViewTextBoxColumn.HeaderText = "Código da Situação Tributária do PIS";
             this.idCSTPisDataGridViewTextBoxColumn.Name = "idCSTPisDataGridViewTextBoxColumn";
             this.idCSTPisDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idCSTPisDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idCSTPisDataGridViewTextBoxColumn.Width = 130;
             // 
             // idCSTCofinsDataGridViewTextBoxColumn
             // 
+            this.idCSTCofinsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idCSTCofinsDataGridViewTextBoxColumn.DataPropertyName = "idCSTCofins";
             this.idCSTCofinsDataGridViewTextBoxColumn.HeaderText = "Código da Situação Tributária do COFINS";
             this.idCSTCofinsDataGridViewTextBoxColumn.Name = "idCSTCofinsDataGridViewTextBoxColumn";
             this.idCSTCofinsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idCSTCofinsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idCSTCofinsDataGridViewTextBoxColumn.Width = 136;
             // 
             // stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn
             // 
+            this.stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn.DataPropertyName = "stCompoeBaseCalculoPisCofins";
             this.stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn.HeaderText = "Compõe a base de cálculo do PIS/COFINS?";
             this.stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -2332,9 +2537,11 @@
             this.stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn.Name = "stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn";
             this.stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.stCompoeBaseCalculoPisCofinsDataGridViewTextBoxColumn.Width = 126;
             // 
             // pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "PIS_stCompoeBaseCalculoSubstituicaoTributaria";
             this.pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "Compõe a base de cálculo da substituição tributária do PIS?";
             this.pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -2343,9 +2550,11 @@
             this.pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.pISstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 160;
             // 
             // cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn
             // 
+            this.cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.DataPropertyName = "COFINS_stCompoeBaseCalculoSubstituicaoTributaria";
             this.cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.HeaderText = "Compõe a base de cálculo da substituição tributária do COFINS?";
             this.cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -2354,9 +2563,11 @@
             this.cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Name = "cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn";
             this.cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cOFINSstCompoeBaseCalculoSubstituicaoTributariaDataGridViewTextBoxColumn.Width = 160;
             // 
             // pISvBaseCalculoDataGridViewTextBoxColumn
             // 
+            this.pISvBaseCalculoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.pISvBaseCalculoDataGridViewTextBoxColumn.DataPropertyName = "PIS_vBaseCalculo";
             this.pISvBaseCalculoDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.pISvBaseCalculoDataGridViewTextBoxColumn.HeaderText = "Base de cálculo PIS";
@@ -2378,10 +2589,11 @@
             this.pISvBaseCalculoDataGridViewTextBoxColumn.Name = "pISvBaseCalculoDataGridViewTextBoxColumn";
             this.pISvBaseCalculoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.pISvBaseCalculoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.pISvBaseCalculoDataGridViewTextBoxColumn.Width = 100;
+            this.pISvBaseCalculoDataGridViewTextBoxColumn.Width = 86;
             // 
             // pISvPISDataGridViewTextBoxColumn
             // 
+            this.pISvPISDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.pISvPISDataGridViewTextBoxColumn.DataPropertyName = "PIS_vPIS";
             this.pISvPISDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.pISvPISDataGridViewTextBoxColumn.HeaderText = "Valor do PIS";
@@ -2403,10 +2615,11 @@
             this.pISvPISDataGridViewTextBoxColumn.Name = "pISvPISDataGridViewTextBoxColumn";
             this.pISvPISDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.pISvPISDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.pISvPISDataGridViewTextBoxColumn.Width = 100;
+            this.pISvPISDataGridViewTextBoxColumn.Width = 64;
             // 
             // cOFINSvBaseCalculoDataGridViewTextBoxColumn
             // 
+            this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.DataPropertyName = "COFINS_vBaseCalculo";
             this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.HeaderText = "Base de cálculo COFINS";
@@ -2428,10 +2641,11 @@
             this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.Name = "cOFINSvBaseCalculoDataGridViewTextBoxColumn";
             this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.Width = 100;
+            this.cOFINSvBaseCalculoDataGridViewTextBoxColumn.Width = 110;
             // 
             // cOFINSvCOFINSDataGridViewTextBoxColumn
             // 
+            this.cOFINSvCOFINSDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.cOFINSvCOFINSDataGridViewTextBoxColumn.DataPropertyName = "COFINS_vCOFINS";
             this.cOFINSvCOFINSDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.cOFINSvCOFINSDataGridViewTextBoxColumn.HeaderText = "Valor do COFINS";
@@ -2453,10 +2667,11 @@
             this.cOFINSvCOFINSDataGridViewTextBoxColumn.Name = "cOFINSvCOFINSDataGridViewTextBoxColumn";
             this.cOFINSvCOFINSDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.cOFINSvCOFINSDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cOFINSvCOFINSDataGridViewTextBoxColumn.Width = 100;
+            this.cOFINSvCOFINSDataGridViewTextBoxColumn.Width = 77;
             // 
             // iSSstCalculaIssDataGridViewTextBoxColumn
             // 
+            this.iSSstCalculaIssDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iSSstCalculaIssDataGridViewTextBoxColumn.DataPropertyName = "ISS_stCalculaIss";
             this.iSSstCalculaIssDataGridViewTextBoxColumn.HeaderText = "Calcula ISS?";
             this.iSSstCalculaIssDataGridViewTextBoxColumn.Items.AddRange(new object[] {
@@ -2465,9 +2680,11 @@
             this.iSSstCalculaIssDataGridViewTextBoxColumn.Name = "iSSstCalculaIssDataGridViewTextBoxColumn";
             this.iSSstCalculaIssDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iSSstCalculaIssDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iSSstCalculaIssDataGridViewTextBoxColumn.Width = 91;
             // 
             // iSSpIssDataGridViewTextBoxColumn
             // 
+            this.iSSpIssDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iSSpIssDataGridViewTextBoxColumn.DataPropertyName = "ISS_pIss";
             this.iSSpIssDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.iSSpIssDataGridViewTextBoxColumn.HeaderText = "% ISS";
@@ -2489,10 +2706,11 @@
             this.iSSpIssDataGridViewTextBoxColumn.Name = "iSSpIssDataGridViewTextBoxColumn";
             this.iSSpIssDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iSSpIssDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iSSpIssDataGridViewTextBoxColumn.Width = 100;
+            this.iSSpIssDataGridViewTextBoxColumn.Width = 60;
             // 
             // iSSvBaseCalculoDataGridViewTextBoxColumn
             // 
+            this.iSSvBaseCalculoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iSSvBaseCalculoDataGridViewTextBoxColumn.DataPropertyName = "ISS_vBaseCalculo";
             this.iSSvBaseCalculoDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iSSvBaseCalculoDataGridViewTextBoxColumn.HeaderText = "Base de cálculo ISS";
@@ -2514,10 +2732,11 @@
             this.iSSvBaseCalculoDataGridViewTextBoxColumn.Name = "iSSvBaseCalculoDataGridViewTextBoxColumn";
             this.iSSvBaseCalculoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iSSvBaseCalculoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iSSvBaseCalculoDataGridViewTextBoxColumn.Width = 100;
+            this.iSSvBaseCalculoDataGridViewTextBoxColumn.Width = 85;
             // 
             // iSSvIssDataGridViewTextBoxColumn
             // 
+            this.iSSvIssDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iSSvIssDataGridViewTextBoxColumn.DataPropertyName = "ISS_vIss";
             this.iSSvIssDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.iSSvIssDataGridViewTextBoxColumn.HeaderText = "Valor do ISS";
@@ -2539,31 +2758,39 @@
             this.iSSvIssDataGridViewTextBoxColumn.Name = "iSSvIssDataGridViewTextBoxColumn";
             this.iSSvIssDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.iSSvIssDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iSSvIssDataGridViewTextBoxColumn.Width = 100;
+            this.iSSvIssDataGridViewTextBoxColumn.Width = 64;
             // 
             // idOrcamentoTotalizadorImpostosDataGridViewTextBoxColumn
             // 
+            this.idOrcamentoTotalizadorImpostosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idOrcamentoTotalizadorImpostosDataGridViewTextBoxColumn.DataPropertyName = "idOrcamentoTotalizadorImpostos";
             this.idOrcamentoTotalizadorImpostosDataGridViewTextBoxColumn.HeaderText = "idOrcamentoTotalizadorImpostos";
             this.idOrcamentoTotalizadorImpostosDataGridViewTextBoxColumn.Name = "idOrcamentoTotalizadorImpostosDataGridViewTextBoxColumn";
+            this.idOrcamentoTotalizadorImpostosDataGridViewTextBoxColumn.Width = 214;
             // 
             // iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn
             // 
+            this.iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.DataPropertyName = "ICMS_vSubstituicaoTributariaRetido";
             this.iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.HeaderText = "ICMS_vSubstituicaoTributariaRetido";
             this.iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.Name = "iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn";
+            this.iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn.Width = 225;
             // 
             // idOrcamentoItemDataGridViewTextBoxColumn3
             // 
+            this.idOrcamentoItemDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idOrcamentoItemDataGridViewTextBoxColumn3.DataPropertyName = "idOrcamentoItem";
             this.idOrcamentoItemDataGridViewTextBoxColumn3.HeaderText = "idOrcamentoItem";
             this.idOrcamentoItemDataGridViewTextBoxColumn3.Name = "idOrcamentoItemDataGridViewTextBoxColumn3";
+            this.idOrcamentoItemDataGridViewTextBoxColumn3.Width = 130;
             // 
             // idCSTIssDataGridViewTextBoxColumn
             // 
+            this.idCSTIssDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idCSTIssDataGridViewTextBoxColumn.DataPropertyName = "idCSTIss";
             this.idCSTIssDataGridViewTextBoxColumn.HeaderText = "idCSTIss";
             this.idCSTIssDataGridViewTextBoxColumn.Name = "idCSTIssDataGridViewTextBoxColumn";
+            this.idCSTIssDataGridViewTextBoxColumn.Width = 80;
             // 
             // bsFiscal
             // 
@@ -2608,30 +2835,30 @@
             // 
             // kryptonPanel4
             // 
-            this.kryptonPanel4.Controls.Add(this.hlP_DataGridView1);
+            this.kryptonPanel4.Controls.Add(this.dgvItens);
             this.kryptonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel4.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel4.Name = "kryptonPanel4";
             this.kryptonPanel4.Size = new System.Drawing.Size(1292, 293);
             this.kryptonPanel4.TabIndex = 0;
             // 
-            // hlP_DataGridView1
+            // dgvItens
             // 
-            this.hlP_DataGridView1.Altera = false;
-            this.hlP_DataGridView1.AutoGenerateColumns = false;
-            this.hlP_DataGridView1.cm = null;
-            this.hlP_DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.hlP_DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idTipoOperacaoDataGridViewTextBoxColumn,
-            this.stConsumidorFinalDataGridViewTextBoxColumn,
-            this.xPedidoClienteDataGridViewTextBoxColumn,
+            this.dgvItens.Altera = false;
+            this.dgvItens.AutoGenerateColumns = false;
+            this.dgvItens.cm = null;
+            this.dgvItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idOperacaoItens,
+            this.stConsumidorFinal,
+            this.xPedidoCliente,
             this.nItemClienteDataGridViewTextBoxColumn,
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn,
-            this.idProdutoDataGridViewTextBoxColumn,
-            this.xComercialDataGridViewTextBoxColumn,
-            this.idUnidadeMedidaDataGridViewTextBoxColumn,
+            this.clidProduto,
+            this.xComercial,
+            this.idUnidadeMedida,
             this.qProdutoDataGridViewTextBoxColumn,
-            this.idListaPrecoPaiDataGridViewTextBoxColumn,
+            this.idListaPrecoPai,
             this.pDescontoDataGridViewTextBoxColumn,
             this.vDescontoDataGridViewTextBoxColumn,
             this.vVendaDataGridViewTextBoxColumn,
@@ -2643,12 +2870,12 @@
             this.dPrevisaoEntregaDataGridViewTextBoxColumn,
             this.nPesoLiquidoDataGridViewTextBoxColumn,
             this.nPesoBrutoDataGridViewTextBoxColumn,
-            this.stOrcamentoItemDataGridViewTextBoxColumn,
+            this.stOrcamentoItem,
             this.nPedidoClienteItemDataGridViewTextBoxColumn,
             this.xObservacaoItemDataGridViewTextBoxColumn,
             this.vSegurosItemDataGridViewTextBoxColumn,
             this.vOutrasDespesasItemDataGridViewTextBoxColumn,
-            this.idFuncionarioDataGridViewTextBoxColumn,
+            this.idFuncionarioRepresentante,
             this.pComissaoDataGridViewTextBoxColumn,
             this.idOrcamentoDataGridViewTextBoxColumn,
             this.idOrcamentoItemDataGridViewTextBoxColumn,
@@ -2657,83 +2884,104 @@
             this.idEmpresaDataGridViewTextBoxColumn,
             this.dConfirmacaoItemDataGridViewTextBoxColumn,
             this.idMotivoDataGridViewTextBoxColumn,
-            this.idCfopDataGridViewTextBoxColumn,
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn});
-            this.hlP_DataGridView1.DataSource = this.bsItensOrcamento;
-            this.hlP_DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hlP_DataGridView1.DragDropLinha = false;
-            this.hlP_DataGridView1.Exclui = false;
-            this.hlP_DataGridView1.Inclui = false;
-            this.hlP_DataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.hlP_DataGridView1.Name = "hlP_DataGridView1";
-            this.hlP_DataGridView1.Size = new System.Drawing.Size(1292, 293);
-            this.hlP_DataGridView1.TabIndex = 1;
+            this.idCfop});
+            this.dgvItens.DataSource = this.bsItensOrcamento;
+            this.dgvItens.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvItens.DragDropLinha = false;
+            this.dgvItens.Exclui = false;
+            this.dgvItens.Inclui = false;
+            this.dgvItens.Location = new System.Drawing.Point(0, 0);
+            this.dgvItens.Name = "dgvItens";
+            this.dgvItens.Size = new System.Drawing.Size(1292, 293);
+            this.dgvItens.TabIndex = 1;
+            this.dgvItens.Tag = "Orcamento_Item";
+            this.dgvItens.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.hlP_DataGridView1_CellValidated);
+            this.dgvItens.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvItens_CellValidating_1);
+            this.dgvItens.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.hlP_DataGridView1_CellValueChanged);
+            this.dgvItens.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItens_RowEnter);
+            this.dgvItens.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.hlP_DataGridView1_RowsAdded);
+            this.dgvItens.SelectionChanged += new System.EventHandler(this.dgvItens_SelectionChanged);
             // 
-            // idTipoOperacaoDataGridViewTextBoxColumn
+            // idOperacaoItens
             // 
-            this.idTipoOperacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.idTipoOperacaoDataGridViewTextBoxColumn.DataPropertyName = "idTipoOperacao";
-            this.idTipoOperacaoDataGridViewTextBoxColumn.HeaderText = "Operação";
-            this.idTipoOperacaoDataGridViewTextBoxColumn.Name = "idTipoOperacaoDataGridViewTextBoxColumn";
-            this.idTipoOperacaoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idTipoOperacaoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idTipoOperacaoDataGridViewTextBoxColumn.Width = 87;
+            this.idOperacaoItens.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.idOperacaoItens.DataPropertyName = "idTipoOperacao";
+            this.idOperacaoItens.HeaderText = "Operação";
+            this.idOperacaoItens.Name = "idOperacaoItens";
+            this.idOperacaoItens.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idOperacaoItens.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idOperacaoItens.Width = 87;
             // 
-            // stConsumidorFinalDataGridViewTextBoxColumn
+            // stConsumidorFinal
             // 
-            this.stConsumidorFinalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.stConsumidorFinalDataGridViewTextBoxColumn.DataPropertyName = "stConsumidorFinal";
-            this.stConsumidorFinalDataGridViewTextBoxColumn.HeaderText = "Consumidor Final";
-            this.stConsumidorFinalDataGridViewTextBoxColumn.Name = "stConsumidorFinalDataGridViewTextBoxColumn";
-            this.stConsumidorFinalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.stConsumidorFinalDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.stConsumidorFinalDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.stConsumidorFinalDataGridViewTextBoxColumn.Width = 119;
+            this.stConsumidorFinal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.stConsumidorFinal.DataPropertyName = "stConsumidorFinal";
+            this.stConsumidorFinal.HeaderText = "Consumidor Final";
+            this.stConsumidorFinal.Items.AddRange(new object[] {
+            "0-NÃO",
+            "1-SIM"});
+            this.stConsumidorFinal.Name = "stConsumidorFinal";
+            this.stConsumidorFinal.ReadOnly = true;
+            this.stConsumidorFinal.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.stConsumidorFinal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.stConsumidorFinal.Width = 119;
             // 
-            // xPedidoClienteDataGridViewTextBoxColumn
+            // xPedidoCliente
             // 
-            this.xPedidoClienteDataGridViewTextBoxColumn.DataPropertyName = "xPedidoCliente";
-            this.xPedidoClienteDataGridViewTextBoxColumn.HeaderText = "Pedido do Cliente";
-            this.xPedidoClienteDataGridViewTextBoxColumn.Name = "xPedidoClienteDataGridViewTextBoxColumn";
+            this.xPedidoCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.xPedidoCliente.DataPropertyName = "xPedidoCliente";
+            this.xPedidoCliente.HeaderText = "Pedido do Cliente";
+            this.xPedidoCliente.Name = "xPedidoCliente";
+            this.xPedidoCliente.ReadOnly = true;
+            this.xPedidoCliente.Width = 119;
             // 
             // nItemClienteDataGridViewTextBoxColumn
             // 
+            this.nItemClienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.nItemClienteDataGridViewTextBoxColumn.DataPropertyName = "nItemCliente";
             this.nItemClienteDataGridViewTextBoxColumn.HeaderText = "Numero do Item do Cliente";
             this.nItemClienteDataGridViewTextBoxColumn.Name = "nItemClienteDataGridViewTextBoxColumn";
+            this.nItemClienteDataGridViewTextBoxColumn.Width = 117;
             // 
             // xCodigoProdutoClienteDataGridViewTextBoxColumn
             // 
+            this.xCodigoProdutoClienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn.DataPropertyName = "xCodigoProdutoCliente";
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn.HeaderText = "Código do produto no cliente";
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn.Name = "xCodigoProdutoClienteDataGridViewTextBoxColumn";
+            this.xCodigoProdutoClienteDataGridViewTextBoxColumn.Width = 145;
             // 
-            // idProdutoDataGridViewTextBoxColumn
+            // clidProduto
             // 
-            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "idProduto";
-            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "Código do produto";
-            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
-            this.idProdutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idProdutoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idProdutoDataGridViewTextBoxColumn.Width = 200;
+            this.clidProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.clidProduto.DataPropertyName = "idProduto";
+            this.clidProduto.HeaderText = "Produto";
+            this.clidProduto.Name = "clidProduto";
+            this.clidProduto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clidProduto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clidProduto.Width = 79;
             // 
-            // xComercialDataGridViewTextBoxColumn
+            // xComercial
             // 
-            this.xComercialDataGridViewTextBoxColumn.DataPropertyName = "xComercial";
-            this.xComercialDataGridViewTextBoxColumn.HeaderText = "Descrição comercial do produto";
-            this.xComercialDataGridViewTextBoxColumn.Name = "xComercialDataGridViewTextBoxColumn";
-            this.xComercialDataGridViewTextBoxColumn.Width = 200;
+            this.xComercial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.xComercial.DataPropertyName = "xComercial";
+            this.xComercial.HeaderText = "Descrição comercial do produto";
+            this.xComercial.Name = "xComercial";
+            this.xComercial.Width = 148;
             // 
-            // idUnidadeMedidaDataGridViewTextBoxColumn
+            // idUnidadeMedida
             // 
-            this.idUnidadeMedidaDataGridViewTextBoxColumn.DataPropertyName = "idUnidadeMedida";
-            this.idUnidadeMedidaDataGridViewTextBoxColumn.HeaderText = "Un.";
-            this.idUnidadeMedidaDataGridViewTextBoxColumn.Name = "idUnidadeMedidaDataGridViewTextBoxColumn";
-            this.idUnidadeMedidaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idUnidadeMedidaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idUnidadeMedida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.idUnidadeMedida.DataPropertyName = "idUnidadeMedida";
+            this.idUnidadeMedida.HeaderText = "Un.";
+            this.idUnidadeMedida.Name = "idUnidadeMedida";
+            this.idUnidadeMedida.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idUnidadeMedida.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idUnidadeMedida.Width = 54;
             // 
             // qProdutoDataGridViewTextBoxColumn
             // 
+            this.qProdutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.qProdutoDataGridViewTextBoxColumn.DataPropertyName = "qProduto";
             this.qProdutoDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.qProdutoDataGridViewTextBoxColumn.HeaderText = "Quantidade";
@@ -2755,18 +3003,20 @@
             this.qProdutoDataGridViewTextBoxColumn.Name = "qProdutoDataGridViewTextBoxColumn";
             this.qProdutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.qProdutoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.qProdutoDataGridViewTextBoxColumn.Width = 100;
+            this.qProdutoDataGridViewTextBoxColumn.Width = 98;
             // 
-            // idListaPrecoPaiDataGridViewTextBoxColumn
+            // idListaPrecoPai
             // 
-            this.idListaPrecoPaiDataGridViewTextBoxColumn.DataPropertyName = "idListaPrecoPai";
-            this.idListaPrecoPaiDataGridViewTextBoxColumn.HeaderText = "Lista de Preço";
-            this.idListaPrecoPaiDataGridViewTextBoxColumn.Name = "idListaPrecoPaiDataGridViewTextBoxColumn";
-            this.idListaPrecoPaiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idListaPrecoPaiDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idListaPrecoPai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.idListaPrecoPai.DataPropertyName = "idListaPrecoPai";
+            this.idListaPrecoPai.HeaderText = "Lista de Preço";
+            this.idListaPrecoPai.Name = "idListaPrecoPai";
+            this.idListaPrecoPai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idListaPrecoPai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // pDescontoDataGridViewTextBoxColumn
             // 
+            this.pDescontoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.pDescontoDataGridViewTextBoxColumn.DataPropertyName = "pDesconto";
             this.pDescontoDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.pDescontoDataGridViewTextBoxColumn.HeaderText = "% Desconto";
@@ -2788,10 +3038,11 @@
             this.pDescontoDataGridViewTextBoxColumn.Name = "pDescontoDataGridViewTextBoxColumn";
             this.pDescontoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.pDescontoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.pDescontoDataGridViewTextBoxColumn.Width = 100;
+            this.pDescontoDataGridViewTextBoxColumn.Width = 91;
             // 
             // vDescontoDataGridViewTextBoxColumn
             // 
+            this.vDescontoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vDescontoDataGridViewTextBoxColumn.DataPropertyName = "vDesconto";
             this.vDescontoDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vDescontoDataGridViewTextBoxColumn.HeaderText = "Desconto";
@@ -2813,10 +3064,11 @@
             this.vDescontoDataGridViewTextBoxColumn.Name = "vDescontoDataGridViewTextBoxColumn";
             this.vDescontoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vDescontoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vDescontoDataGridViewTextBoxColumn.Width = 100;
+            this.vDescontoDataGridViewTextBoxColumn.Width = 86;
             // 
             // vVendaDataGridViewTextBoxColumn
             // 
+            this.vVendaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vVendaDataGridViewTextBoxColumn.DataPropertyName = "vVenda";
             this.vVendaDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vVendaDataGridViewTextBoxColumn.HeaderText = "Valor de Venda";
@@ -2838,10 +3090,11 @@
             this.vVendaDataGridViewTextBoxColumn.Name = "vVendaDataGridViewTextBoxColumn";
             this.vVendaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vVendaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vVendaDataGridViewTextBoxColumn.Width = 100;
+            this.vVendaDataGridViewTextBoxColumn.Width = 106;
             // 
             // vVendaSemDescontoDataGridViewTextBoxColumn
             // 
+            this.vVendaSemDescontoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vVendaSemDescontoDataGridViewTextBoxColumn.DataPropertyName = "vVendaSemDesconto";
             this.vVendaSemDescontoDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vVendaSemDescontoDataGridViewTextBoxColumn.HeaderText = "Valor de Venda sem Desconto";
@@ -2861,12 +3114,14 @@
             0,
             0});
             this.vVendaSemDescontoDataGridViewTextBoxColumn.Name = "vVendaSemDescontoDataGridViewTextBoxColumn";
+            this.vVendaSemDescontoDataGridViewTextBoxColumn.ReadOnly = true;
             this.vVendaSemDescontoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vVendaSemDescontoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vVendaSemDescontoDataGridViewTextBoxColumn.Width = 100;
+            this.vVendaSemDescontoDataGridViewTextBoxColumn.Width = 131;
             // 
             // vTotalSemDescontoItemDataGridViewTextBoxColumn
             // 
+            this.vTotalSemDescontoItemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vTotalSemDescontoItemDataGridViewTextBoxColumn.DataPropertyName = "vTotalSemDescontoItem";
             this.vTotalSemDescontoItemDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vTotalSemDescontoItemDataGridViewTextBoxColumn.HeaderText = "Total sem desconto";
@@ -2886,12 +3141,14 @@
             0,
             0});
             this.vTotalSemDescontoItemDataGridViewTextBoxColumn.Name = "vTotalSemDescontoItemDataGridViewTextBoxColumn";
+            this.vTotalSemDescontoItemDataGridViewTextBoxColumn.ReadOnly = true;
             this.vTotalSemDescontoItemDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vTotalSemDescontoItemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vTotalSemDescontoItemDataGridViewTextBoxColumn.Width = 100;
+            this.vTotalSemDescontoItemDataGridViewTextBoxColumn.Width = 128;
             // 
             // vTotalItemDataGridViewTextBoxColumn
             // 
+            this.vTotalItemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vTotalItemDataGridViewTextBoxColumn.DataPropertyName = "vTotalItem";
             this.vTotalItemDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vTotalItemDataGridViewTextBoxColumn.HeaderText = "Total";
@@ -2911,12 +3168,14 @@
             0,
             0});
             this.vTotalItemDataGridViewTextBoxColumn.Name = "vTotalItemDataGridViewTextBoxColumn";
+            this.vTotalItemDataGridViewTextBoxColumn.ReadOnly = true;
             this.vTotalItemDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vTotalItemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vTotalItemDataGridViewTextBoxColumn.Width = 100;
+            this.vTotalItemDataGridViewTextBoxColumn.Width = 63;
             // 
             // vDescontoSuframaDataGridViewTextBoxColumn
             // 
+            this.vDescontoSuframaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vDescontoSuframaDataGridViewTextBoxColumn.DataPropertyName = "vDescontoSuframa";
             this.vDescontoSuframaDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vDescontoSuframaDataGridViewTextBoxColumn.HeaderText = "Desconto Suframa";
@@ -2938,10 +3197,11 @@
             this.vDescontoSuframaDataGridViewTextBoxColumn.Name = "vDescontoSuframaDataGridViewTextBoxColumn";
             this.vDescontoSuframaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vDescontoSuframaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vDescontoSuframaDataGridViewTextBoxColumn.Width = 100;
+            this.vDescontoSuframaDataGridViewTextBoxColumn.Width = 122;
             // 
             // vFreteItemDataGridViewTextBoxColumn
             // 
+            this.vFreteItemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vFreteItemDataGridViewTextBoxColumn.DataPropertyName = "vFreteItem";
             this.vFreteItemDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vFreteItemDataGridViewTextBoxColumn.HeaderText = "Frete";
@@ -2963,10 +3223,11 @@
             this.vFreteItemDataGridViewTextBoxColumn.Name = "vFreteItemDataGridViewTextBoxColumn";
             this.vFreteItemDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vFreteItemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vFreteItemDataGridViewTextBoxColumn.Width = 100;
+            this.vFreteItemDataGridViewTextBoxColumn.Width = 62;
             // 
             // dPrevisaoEntregaDataGridViewTextBoxColumn
             // 
+            this.dPrevisaoEntregaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dPrevisaoEntregaDataGridViewTextBoxColumn.CalendarTodayDate = new System.DateTime(2013, 8, 15, 0, 0, 0, 0);
             this.dPrevisaoEntregaDataGridViewTextBoxColumn.Checked = false;
             this.dPrevisaoEntregaDataGridViewTextBoxColumn.DataPropertyName = "dPrevisaoEntrega";
@@ -2975,10 +3236,11 @@
             this.dPrevisaoEntregaDataGridViewTextBoxColumn.Name = "dPrevisaoEntregaDataGridViewTextBoxColumn";
             this.dPrevisaoEntregaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dPrevisaoEntregaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dPrevisaoEntregaDataGridViewTextBoxColumn.Width = 100;
+            this.dPrevisaoEntregaDataGridViewTextBoxColumn.Width = 127;
             // 
             // nPesoLiquidoDataGridViewTextBoxColumn
             // 
+            this.nPesoLiquidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.nPesoLiquidoDataGridViewTextBoxColumn.DataPropertyName = "nPesoLiquido";
             this.nPesoLiquidoDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.nPesoLiquidoDataGridViewTextBoxColumn.HeaderText = "Peso Líquido";
@@ -3000,10 +3262,11 @@
             this.nPesoLiquidoDataGridViewTextBoxColumn.Name = "nPesoLiquidoDataGridViewTextBoxColumn";
             this.nPesoLiquidoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.nPesoLiquidoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.nPesoLiquidoDataGridViewTextBoxColumn.Width = 100;
+            this.nPesoLiquidoDataGridViewTextBoxColumn.Width = 96;
             // 
             // nPesoBrutoDataGridViewTextBoxColumn
             // 
+            this.nPesoBrutoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.nPesoBrutoDataGridViewTextBoxColumn.DataPropertyName = "nPesoBruto";
             this.nPesoBrutoDataGridViewTextBoxColumn.DecimalPlaces = 2;
             this.nPesoBrutoDataGridViewTextBoxColumn.HeaderText = "Peso Bruto";
@@ -3025,31 +3288,43 @@
             this.nPesoBrutoDataGridViewTextBoxColumn.Name = "nPesoBrutoDataGridViewTextBoxColumn";
             this.nPesoBrutoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.nPesoBrutoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.nPesoBrutoDataGridViewTextBoxColumn.Width = 100;
+            this.nPesoBrutoDataGridViewTextBoxColumn.Width = 86;
             // 
-            // stOrcamentoItemDataGridViewTextBoxColumn
+            // stOrcamentoItem
             // 
-            this.stOrcamentoItemDataGridViewTextBoxColumn.DataPropertyName = "stOrcamentoItem";
-            this.stOrcamentoItemDataGridViewTextBoxColumn.HeaderText = "Situação do Item";
-            this.stOrcamentoItemDataGridViewTextBoxColumn.Name = "stOrcamentoItemDataGridViewTextBoxColumn";
-            this.stOrcamentoItemDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.stOrcamentoItemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.stOrcamentoItem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.stOrcamentoItem.DataPropertyName = "stOrcamentoItem";
+            this.stOrcamentoItem.HeaderText = "Situação do Item";
+            this.stOrcamentoItem.Items.AddRange(new object[] {
+            "0-Criado",
+            "1-Enviado",
+            "2-Confirmado",
+            "3-Perdido",
+            "4-Cancelado"});
+            this.stOrcamentoItem.Name = "stOrcamentoItem";
+            this.stOrcamentoItem.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.stOrcamentoItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.stOrcamentoItem.Width = 93;
             // 
             // nPedidoClienteItemDataGridViewTextBoxColumn
             // 
+            this.nPedidoClienteItemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.nPedidoClienteItemDataGridViewTextBoxColumn.DataPropertyName = "nPedidoClienteItem";
             this.nPedidoClienteItemDataGridViewTextBoxColumn.HeaderText = "Pedido do Cliente";
             this.nPedidoClienteItemDataGridViewTextBoxColumn.Name = "nPedidoClienteItemDataGridViewTextBoxColumn";
+            this.nPedidoClienteItemDataGridViewTextBoxColumn.Width = 119;
             // 
             // xObservacaoItemDataGridViewTextBoxColumn
             // 
+            this.xObservacaoItemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.xObservacaoItemDataGridViewTextBoxColumn.DataPropertyName = "xObservacaoItem";
             this.xObservacaoItemDataGridViewTextBoxColumn.HeaderText = "Observação";
             this.xObservacaoItemDataGridViewTextBoxColumn.Name = "xObservacaoItemDataGridViewTextBoxColumn";
-            this.xObservacaoItemDataGridViewTextBoxColumn.Width = 300;
+            this.xObservacaoItemDataGridViewTextBoxColumn.Width = 98;
             // 
             // vSegurosItemDataGridViewTextBoxColumn
             // 
+            this.vSegurosItemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vSegurosItemDataGridViewTextBoxColumn.DataPropertyName = "vSegurosItem";
             this.vSegurosItemDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vSegurosItemDataGridViewTextBoxColumn.HeaderText = "Seguros";
@@ -3071,10 +3346,11 @@
             this.vSegurosItemDataGridViewTextBoxColumn.Name = "vSegurosItemDataGridViewTextBoxColumn";
             this.vSegurosItemDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vSegurosItemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vSegurosItemDataGridViewTextBoxColumn.Width = 100;
+            this.vSegurosItemDataGridViewTextBoxColumn.Width = 78;
             // 
             // vOutrasDespesasItemDataGridViewTextBoxColumn
             // 
+            this.vOutrasDespesasItemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.vOutrasDespesasItemDataGridViewTextBoxColumn.DataPropertyName = "vOutrasDespesasItem";
             this.vOutrasDespesasItemDataGridViewTextBoxColumn.DecimalPlaces = 4;
             this.vOutrasDespesasItemDataGridViewTextBoxColumn.HeaderText = "Outras Despesas";
@@ -3096,15 +3372,15 @@
             this.vOutrasDespesasItemDataGridViewTextBoxColumn.Name = "vOutrasDespesasItemDataGridViewTextBoxColumn";
             this.vOutrasDespesasItemDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.vOutrasDespesasItemDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.vOutrasDespesasItemDataGridViewTextBoxColumn.Width = 100;
+            this.vOutrasDespesasItemDataGridViewTextBoxColumn.Width = 112;
             // 
-            // idFuncionarioDataGridViewTextBoxColumn
+            // idFuncionarioRepresentante
             // 
-            this.idFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "idFuncionario";
-            this.idFuncionarioDataGridViewTextBoxColumn.HeaderText = "Representante";
-            this.idFuncionarioDataGridViewTextBoxColumn.Name = "idFuncionarioDataGridViewTextBoxColumn";
-            this.idFuncionarioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idFuncionarioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idFuncionarioRepresentante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.idFuncionarioRepresentante.DataPropertyName = "idFuncionarioRepresentante";
+            this.idFuncionarioRepresentante.HeaderText = "Representante";
+            this.idFuncionarioRepresentante.Name = "idFuncionarioRepresentante";
+            this.idFuncionarioRepresentante.Width = 111;
             // 
             // pComissaoDataGridViewTextBoxColumn
             // 
@@ -3174,17 +3450,15 @@
             this.idMotivoDataGridViewTextBoxColumn.HeaderText = "idMotivo";
             this.idMotivoDataGridViewTextBoxColumn.Name = "idMotivoDataGridViewTextBoxColumn";
             // 
-            // idCfopDataGridViewTextBoxColumn
+            // idCfop
             // 
-            this.idCfopDataGridViewTextBoxColumn.DataPropertyName = "idCfop";
-            this.idCfopDataGridViewTextBoxColumn.HeaderText = "idCfop";
-            this.idCfopDataGridViewTextBoxColumn.Name = "idCfopDataGridViewTextBoxColumn";
-            // 
-            // orcamentoItemImpostosDataGridViewTextBoxColumn
-            // 
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn.DataPropertyName = "orcamento_Item_Impostos";
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn.HeaderText = "orcamento_Item_Impostos";
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn.Name = "orcamentoItemImpostosDataGridViewTextBoxColumn";
+            this.idCfop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.idCfop.DataPropertyName = "idCfop";
+            this.idCfop.HeaderText = "idCfop";
+            this.idCfop.Name = "idCfop";
+            this.idCfop.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idCfop.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idCfop.Width = 72;
             // 
             // bsItensOrcamento
             // 
@@ -3239,7 +3513,7 @@
             this.xObservacaoItemDataGridViewTextBoxColumn1,
             this.vSegurosItemDataGridViewTextBoxColumn1,
             this.vOutrasDespesasItemDataGridViewTextBoxColumn1,
-            this.idFuncionarioDataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn1,
             this.pComissaoDataGridViewTextBoxColumn1,
             this.nPedidoClienteItemDataGridViewTextBoxColumn1,
             this.dConfirmacaoItemDataGridViewTextBoxColumn1,
@@ -3253,8 +3527,7 @@
             this.nItemClienteDataGridViewTextBoxColumn1,
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn1,
             this.idMotivoDataGridViewTextBoxColumn1,
-            this.idCfopDataGridViewTextBoxColumn1,
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn1});
+            this.idCfopDataGridViewTextBoxColumn1});
             this.hlP_DataGridView2.DataSource = this.bsItensVendidos;
             this.hlP_DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hlP_DataGridView2.DragDropLinha = false;
@@ -3264,6 +3537,7 @@
             this.hlP_DataGridView2.Name = "hlP_DataGridView2";
             this.hlP_DataGridView2.Size = new System.Drawing.Size(1292, 293);
             this.hlP_DataGridView2.TabIndex = 0;
+            this.hlP_DataGridView2.Tag = "Orcamento_Item";
             // 
             // idOrcamentoDataGridViewTextBoxColumn1
             // 
@@ -3669,15 +3943,11 @@
             this.vOutrasDespesasItemDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.vOutrasDespesasItemDataGridViewTextBoxColumn1.Width = 100;
             // 
-            // idFuncionarioDataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn1
             // 
-            this.idFuncionarioDataGridViewTextBoxColumn1.DataPropertyName = "idFuncionario";
-            this.idFuncionarioDataGridViewTextBoxColumn1.HeaderText = "Representante";
-            this.idFuncionarioDataGridViewTextBoxColumn1.Name = "idFuncionarioDataGridViewTextBoxColumn1";
-            this.idFuncionarioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idFuncionarioDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idFuncionarioDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idFuncionarioDataGridViewTextBoxColumn1.Width = 200;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idFuncionarioRepresentante";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Representante";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // pComissaoDataGridViewTextBoxColumn1
             // 
@@ -3799,12 +4069,6 @@
             this.idCfopDataGridViewTextBoxColumn1.HeaderText = "idCfop";
             this.idCfopDataGridViewTextBoxColumn1.Name = "idCfopDataGridViewTextBoxColumn1";
             // 
-            // orcamentoItemImpostosDataGridViewTextBoxColumn1
-            // 
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn1.DataPropertyName = "orcamento_Item_Impostos";
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn1.HeaderText = "orcamento_Item_Impostos";
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn1.Name = "orcamentoItemImpostosDataGridViewTextBoxColumn1";
-            // 
             // bsItensVendidos
             // 
             this.bsItensVendidos.DataSource = typeof(HLP.Models.Sales.Comercial.Orcamento_ItemModel);
@@ -3858,7 +4122,7 @@
             this.xObservacaoItemDataGridViewTextBoxColumn2,
             this.vSegurosItemDataGridViewTextBoxColumn2,
             this.vOutrasDespesasItemDataGridViewTextBoxColumn2,
-            this.idFuncionarioDataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn2,
             this.pComissaoDataGridViewTextBoxColumn2,
             this.nPedidoClienteItemDataGridViewTextBoxColumn2,
             this.dConfirmacaoItemDataGridViewTextBoxColumn2,
@@ -3872,8 +4136,7 @@
             this.xPedidoClienteDataGridViewTextBoxColumn2,
             this.nItemClienteDataGridViewTextBoxColumn2,
             this.xCodigoProdutoClienteDataGridViewTextBoxColumn2,
-            this.idCfopDataGridViewTextBoxColumn2,
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn2});
+            this.idCfopDataGridViewTextBoxColumn2});
             this.hlP_DataGridView3.DataSource = this.bsItensCancelados;
             this.hlP_DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hlP_DataGridView3.DragDropLinha = false;
@@ -3883,6 +4146,7 @@
             this.hlP_DataGridView3.Name = "hlP_DataGridView3";
             this.hlP_DataGridView3.Size = new System.Drawing.Size(1292, 293);
             this.hlP_DataGridView3.TabIndex = 0;
+            this.hlP_DataGridView3.Tag = "Orcamento_Item";
             // 
             // idOrcamentoDataGridViewTextBoxColumn2
             // 
@@ -4288,15 +4552,11 @@
             this.vOutrasDespesasItemDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.vOutrasDespesasItemDataGridViewTextBoxColumn2.Width = 100;
             // 
-            // idFuncionarioDataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn2
             // 
-            this.idFuncionarioDataGridViewTextBoxColumn2.DataPropertyName = "idFuncionario";
-            this.idFuncionarioDataGridViewTextBoxColumn2.HeaderText = "Representante";
-            this.idFuncionarioDataGridViewTextBoxColumn2.Name = "idFuncionarioDataGridViewTextBoxColumn2";
-            this.idFuncionarioDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.idFuncionarioDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idFuncionarioDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idFuncionarioDataGridViewTextBoxColumn2.Width = 200;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "idFuncionarioRepresentante";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Representante";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // pComissaoDataGridViewTextBoxColumn2
             // 
@@ -4418,12 +4678,6 @@
             this.idCfopDataGridViewTextBoxColumn2.HeaderText = "idCfop";
             this.idCfopDataGridViewTextBoxColumn2.Name = "idCfopDataGridViewTextBoxColumn2";
             // 
-            // orcamentoItemImpostosDataGridViewTextBoxColumn2
-            // 
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn2.DataPropertyName = "orcamento_Item_Impostos";
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn2.HeaderText = "orcamento_Item_Impostos";
-            this.orcamentoItemImpostosDataGridViewTextBoxColumn2.Name = "orcamentoItemImpostosDataGridViewTextBoxColumn2";
-            // 
             // bsItensCancelados
             // 
             this.bsItensCancelados.DataSource = typeof(HLP.Models.Sales.Comercial.Orcamento_ItemModel);
@@ -4434,11 +4688,12 @@
             this.tabPageBaseCalculo.Location = new System.Drawing.Point(4, 25);
             this.tabPageBaseCalculo.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageBaseCalculo.Name = "tabPageBaseCalculo";
-            this.tabPageBaseCalculo.Size = new System.Drawing.Size(1300, 322);
+            this.tabPageBaseCalculo.Size = new System.Drawing.Size(1106, 113);
             this.tabPageBaseCalculo.TabIndex = 3;
             this.tabPageBaseCalculo.Tag = false;
             this.tabPageBaseCalculo.Text = "Base de Cálculo";
             this.tabPageBaseCalculo.UseVisualStyleBackColor = true;
+            this.tabPageBaseCalculo.Enter += new System.EventHandler(this.tabPageBaseCalculo_Enter);
             // 
             // kryptonPanel7
             // 
@@ -4446,7 +4701,7 @@
             this.kryptonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel7.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel7.Name = "kryptonPanel7";
-            this.kryptonPanel7.Size = new System.Drawing.Size(1300, 322);
+            this.kryptonPanel7.Size = new System.Drawing.Size(1106, 113);
             this.kryptonPanel7.TabIndex = 0;
             // 
             // flowLayoutPanel4
@@ -4463,6 +4718,7 @@
             this.flowLayoutPanel4.Controls.Add(this.nudvBaseCalculoIcmsTotal);
             this.flowLayoutPanel4.Controls.Add(this.nudvIcmsTotal);
             this.flowLayoutPanel4.Controls.Add(this.nudvBaseCalculoIcmsProprioTotal);
+            this.flowLayoutPanel4.Controls.Add(this.nudvIcmsProprioTotal);
             this.flowLayoutPanel4.Controls.Add(this.nudvBaseCalculoIpiTotal);
             this.flowLayoutPanel4.Controls.Add(this.nudvIPITotal);
             this.flowLayoutPanel4.Controls.Add(this.nudvBaseCalculoICmsSubstituicaoTributariaTotal);
@@ -4480,7 +4736,7 @@
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1300, 322);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1106, 113);
             this.flowLayoutPanel4.TabIndex = 0;
             // 
             // hlP_LabelSeparatorBaseGeral
@@ -4490,7 +4746,7 @@
             this.hlP_LabelSeparatorBaseGeral.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparatorBaseGeral.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparatorBaseGeral.Name = "hlP_LabelSeparatorBaseGeral";
-            this.hlP_LabelSeparatorBaseGeral.Size = new System.Drawing.Size(417, 19);
+            this.hlP_LabelSeparatorBaseGeral.Size = new System.Drawing.Size(377, 19);
             this.hlP_LabelSeparatorBaseGeral.TabIndex = 0;
             this.hlP_LabelSeparatorBaseGeral.TabStop = false;
             // 
@@ -4503,9 +4759,9 @@
             this.nudvProdutoTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvProdutoTotal._Regex = null;
             this.nudvProdutoTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvProdutoTotal._TamanhoComponente = 100;
+            this.nudvProdutoTotal._TamanhoComponente = 60;
             this.nudvProdutoTotal._TamanhoMaiorLabel = 317;
-            this.nudvProdutoTotal._Visible = false;
+            this.nudvProdutoTotal._Visible = true;
             this.nudvProdutoTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvProdutoTotal.Base = null;
             this.nudvProdutoTotal.bConfiguracao = false;
@@ -4514,7 +4770,7 @@
             this.nudvProdutoTotal.Location = new System.Drawing.Point(215, 28);
             this.nudvProdutoTotal.Margin = new System.Windows.Forms.Padding(215, 3, 15, 3);
             this.nudvProdutoTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4526,7 +4782,7 @@
             this.nudvProdutoTotal.Name = "nudvProdutoTotal";
             this.nudvProdutoTotal.objConfigComponenteModel = null;
             this.nudvProdutoTotal.ReadOnly = false;
-            this.nudvProdutoTotal.Size = new System.Drawing.Size(205, 22);
+            this.nudvProdutoTotal.Size = new System.Drawing.Size(165, 22);
             this.nudvProdutoTotal.TabIndex = 1;
             this.nudvProdutoTotal.Value = new decimal(new int[] {
             0,
@@ -4544,9 +4800,9 @@
             this.nudvServicoTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvServicoTotal._Regex = null;
             this.nudvServicoTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvServicoTotal._TamanhoComponente = 100;
+            this.nudvServicoTotal._TamanhoComponente = 60;
             this.nudvServicoTotal._TamanhoMaiorLabel = 317;
-            this.nudvServicoTotal._Visible = false;
+            this.nudvServicoTotal._Visible = true;
             this.nudvServicoTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvServicoTotal.Base = null;
             this.nudvServicoTotal.bConfiguracao = false;
@@ -4555,7 +4811,7 @@
             this.nudvServicoTotal.Location = new System.Drawing.Point(229, 56);
             this.nudvServicoTotal.Margin = new System.Windows.Forms.Padding(229, 3, 15, 3);
             this.nudvServicoTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4567,7 +4823,7 @@
             this.nudvServicoTotal.Name = "nudvServicoTotal";
             this.nudvServicoTotal.objConfigComponenteModel = null;
             this.nudvServicoTotal.ReadOnly = false;
-            this.nudvServicoTotal.Size = new System.Drawing.Size(191, 22);
+            this.nudvServicoTotal.Size = new System.Drawing.Size(151, 22);
             this.nudvServicoTotal.TabIndex = 2;
             this.nudvServicoTotal.Value = new decimal(new int[] {
             0,
@@ -4585,9 +4841,9 @@
             this.nudvDescontoTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvDescontoTotal._Regex = null;
             this.nudvDescontoTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvDescontoTotal._TamanhoComponente = 100;
+            this.nudvDescontoTotal._TamanhoComponente = 60;
             this.nudvDescontoTotal._TamanhoMaiorLabel = 317;
-            this.nudvDescontoTotal._Visible = false;
+            this.nudvDescontoTotal._Visible = true;
             this.nudvDescontoTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvDescontoTotal.Base = null;
             this.nudvDescontoTotal.bConfiguracao = false;
@@ -4596,7 +4852,7 @@
             this.nudvDescontoTotal.Location = new System.Drawing.Point(219, 84);
             this.nudvDescontoTotal.Margin = new System.Windows.Forms.Padding(219, 3, 15, 3);
             this.nudvDescontoTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4608,7 +4864,7 @@
             this.nudvDescontoTotal.Name = "nudvDescontoTotal";
             this.nudvDescontoTotal.objConfigComponenteModel = null;
             this.nudvDescontoTotal.ReadOnly = false;
-            this.nudvDescontoTotal.Size = new System.Drawing.Size(201, 22);
+            this.nudvDescontoTotal.Size = new System.Drawing.Size(161, 22);
             this.nudvDescontoTotal.TabIndex = 3;
             this.nudvDescontoTotal.Value = new decimal(new int[] {
             0,
@@ -4616,6 +4872,7 @@
             0,
             131072});
             this.nudvDescontoTotal.ValueInt = 0;
+            this.nudvDescontoTotal.Leave += new System.EventHandler(this.nudvDescontoTotal_Leave);
             // 
             // nudpDescontoTotal
             // 
@@ -4627,18 +4884,18 @@
             this.nudpDescontoTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudpDescontoTotal._Regex = null;
             this.nudpDescontoTotal._Table = "Orcamento_Total_Impostos";
-            this.nudpDescontoTotal._TamanhoComponente = 100;
+            this.nudpDescontoTotal._TamanhoComponente = 60;
             this.nudpDescontoTotal._TamanhoMaiorLabel = 317;
-            this.nudpDescontoTotal._Visible = false;
+            this.nudpDescontoTotal._Visible = true;
             this.nudpDescontoTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudpDescontoTotal.Base = null;
             this.nudpDescontoTotal.bConfiguracao = false;
             this.nudpDescontoTotal.Color = System.Drawing.Color.White;
             this.nudpDescontoTotal.DecimalPlaces = 2;
-            this.nudpDescontoTotal.Location = new System.Drawing.Point(237, 112);
+            this.nudpDescontoTotal.Location = new System.Drawing.Point(632, 3);
             this.nudpDescontoTotal.Margin = new System.Windows.Forms.Padding(237, 3, 15, 3);
             this.nudpDescontoTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4650,7 +4907,7 @@
             this.nudpDescontoTotal.Name = "nudpDescontoTotal";
             this.nudpDescontoTotal.objConfigComponenteModel = null;
             this.nudpDescontoTotal.ReadOnly = false;
-            this.nudpDescontoTotal.Size = new System.Drawing.Size(183, 22);
+            this.nudpDescontoTotal.Size = new System.Drawing.Size(143, 22);
             this.nudpDescontoTotal.TabIndex = 4;
             this.nudpDescontoTotal.Value = new decimal(new int[] {
             0,
@@ -4658,6 +4915,7 @@
             0,
             131072});
             this.nudpDescontoTotal.ValueInt = 0;
+            this.nudpDescontoTotal.Leave += new System.EventHandler(this.nudpDescontoTotal_Leave);
             // 
             // nudvDescontoSuframaTotal
             // 
@@ -4668,18 +4926,18 @@
             this.nudvDescontoSuframaTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvDescontoSuframaTotal._Regex = null;
             this.nudvDescontoSuframaTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvDescontoSuframaTotal._TamanhoComponente = 100;
+            this.nudvDescontoSuframaTotal._TamanhoComponente = 60;
             this.nudvDescontoSuframaTotal._TamanhoMaiorLabel = 317;
-            this.nudvDescontoSuframaTotal._Visible = false;
+            this.nudvDescontoSuframaTotal._Visible = true;
             this.nudvDescontoSuframaTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvDescontoSuframaTotal.Base = null;
             this.nudvDescontoSuframaTotal.bConfiguracao = false;
             this.nudvDescontoSuframaTotal.Color = System.Drawing.Color.White;
             this.nudvDescontoSuframaTotal.DecimalPlaces = 2;
-            this.nudvDescontoSuframaTotal.Location = new System.Drawing.Point(131, 140);
+            this.nudvDescontoSuframaTotal.Location = new System.Drawing.Point(526, 31);
             this.nudvDescontoSuframaTotal.Margin = new System.Windows.Forms.Padding(131, 3, 15, 3);
             this.nudvDescontoSuframaTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4691,7 +4949,7 @@
             this.nudvDescontoSuframaTotal.Name = "nudvDescontoSuframaTotal";
             this.nudvDescontoSuframaTotal.objConfigComponenteModel = null;
             this.nudvDescontoSuframaTotal.ReadOnly = false;
-            this.nudvDescontoSuframaTotal.Size = new System.Drawing.Size(289, 22);
+            this.nudvDescontoSuframaTotal.Size = new System.Drawing.Size(249, 22);
             this.nudvDescontoSuframaTotal.TabIndex = 5;
             this.nudvDescontoSuframaTotal.Value = new decimal(new int[] {
             0,
@@ -4699,6 +4957,7 @@
             0,
             131072});
             this.nudvDescontoSuframaTotal.ValueInt = 0;
+            this.nudvDescontoSuframaTotal.Leave += new System.EventHandler(this.nudvDescontoSuframaTotal_Leave);
             // 
             // nudvFreteTotal
             // 
@@ -4708,18 +4967,18 @@
             this.nudvFreteTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvFreteTotal._Regex = null;
             this.nudvFreteTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvFreteTotal._TamanhoComponente = 100;
+            this.nudvFreteTotal._TamanhoComponente = 60;
             this.nudvFreteTotal._TamanhoMaiorLabel = 317;
-            this.nudvFreteTotal._Visible = false;
+            this.nudvFreteTotal._Visible = true;
             this.nudvFreteTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvFreteTotal.Base = null;
             this.nudvFreteTotal.bConfiguracao = false;
             this.nudvFreteTotal.Color = System.Drawing.Color.White;
             this.nudvFreteTotal.DecimalPlaces = 2;
-            this.nudvFreteTotal.Location = new System.Drawing.Point(215, 168);
+            this.nudvFreteTotal.Location = new System.Drawing.Point(610, 59);
             this.nudvFreteTotal.Margin = new System.Windows.Forms.Padding(215, 3, 15, 3);
             this.nudvFreteTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4731,7 +4990,7 @@
             this.nudvFreteTotal.Name = "nudvFreteTotal";
             this.nudvFreteTotal.objConfigComponenteModel = null;
             this.nudvFreteTotal.ReadOnly = false;
-            this.nudvFreteTotal.Size = new System.Drawing.Size(205, 22);
+            this.nudvFreteTotal.Size = new System.Drawing.Size(165, 22);
             this.nudvFreteTotal.TabIndex = 8;
             this.nudvFreteTotal.Value = new decimal(new int[] {
             0,
@@ -4739,6 +4998,7 @@
             0,
             131072});
             this.nudvFreteTotal.ValueInt = 0;
+            this.nudvFreteTotal.Leave += new System.EventHandler(this.nudvFreteTotal_Leave);
             // 
             // nudvSeguroTotal
             // 
@@ -4748,18 +5008,18 @@
             this.nudvSeguroTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvSeguroTotal._Regex = null;
             this.nudvSeguroTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvSeguroTotal._TamanhoComponente = 100;
+            this.nudvSeguroTotal._TamanhoComponente = 60;
             this.nudvSeguroTotal._TamanhoMaiorLabel = 317;
-            this.nudvSeguroTotal._Visible = false;
+            this.nudvSeguroTotal._Visible = true;
             this.nudvSeguroTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvSeguroTotal.Base = null;
             this.nudvSeguroTotal.bConfiguracao = false;
             this.nudvSeguroTotal.Color = System.Drawing.Color.White;
             this.nudvSeguroTotal.DecimalPlaces = 2;
-            this.nudvSeguroTotal.Location = new System.Drawing.Point(203, 196);
+            this.nudvSeguroTotal.Location = new System.Drawing.Point(598, 87);
             this.nudvSeguroTotal.Margin = new System.Windows.Forms.Padding(203, 3, 15, 3);
             this.nudvSeguroTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4771,7 +5031,7 @@
             this.nudvSeguroTotal.Name = "nudvSeguroTotal";
             this.nudvSeguroTotal.objConfigComponenteModel = null;
             this.nudvSeguroTotal.ReadOnly = false;
-            this.nudvSeguroTotal.Size = new System.Drawing.Size(217, 22);
+            this.nudvSeguroTotal.Size = new System.Drawing.Size(177, 22);
             this.nudvSeguroTotal.TabIndex = 9;
             this.nudvSeguroTotal.Value = new decimal(new int[] {
             0,
@@ -4779,6 +5039,7 @@
             0,
             131072});
             this.nudvSeguroTotal.ValueInt = 0;
+            this.nudvSeguroTotal.Leave += new System.EventHandler(this.nudvSeguroTotal_Leave);
             // 
             // nudvOutrasDespesasTotal
             // 
@@ -4788,18 +5049,18 @@
             this.nudvOutrasDespesasTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvOutrasDespesasTotal._Regex = null;
             this.nudvOutrasDespesasTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvOutrasDespesasTotal._TamanhoComponente = 100;
+            this.nudvOutrasDespesasTotal._TamanhoComponente = 60;
             this.nudvOutrasDespesasTotal._TamanhoMaiorLabel = 317;
-            this.nudvOutrasDespesasTotal._Visible = false;
+            this.nudvOutrasDespesasTotal._Visible = true;
             this.nudvOutrasDespesasTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvOutrasDespesasTotal.Base = null;
             this.nudvOutrasDespesasTotal.bConfiguracao = false;
             this.nudvOutrasDespesasTotal.Color = System.Drawing.Color.White;
             this.nudvOutrasDespesasTotal.DecimalPlaces = 2;
-            this.nudvOutrasDespesasTotal.Location = new System.Drawing.Point(157, 224);
+            this.nudvOutrasDespesasTotal.Location = new System.Drawing.Point(947, 3);
             this.nudvOutrasDespesasTotal.Margin = new System.Windows.Forms.Padding(157, 3, 15, 3);
             this.nudvOutrasDespesasTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4811,7 +5072,7 @@
             this.nudvOutrasDespesasTotal.Name = "nudvOutrasDespesasTotal";
             this.nudvOutrasDespesasTotal.objConfigComponenteModel = null;
             this.nudvOutrasDespesasTotal.ReadOnly = false;
-            this.nudvOutrasDespesasTotal.Size = new System.Drawing.Size(263, 22);
+            this.nudvOutrasDespesasTotal.Size = new System.Drawing.Size(223, 22);
             this.nudvOutrasDespesasTotal.TabIndex = 10;
             this.nudvOutrasDespesasTotal.Value = new decimal(new int[] {
             0,
@@ -4819,6 +5080,7 @@
             0,
             131072});
             this.nudvOutrasDespesasTotal.ValueInt = 0;
+            this.nudvOutrasDespesasTotal.Leave += new System.EventHandler(this.nudvOutrasDespesasTotal_Leave);
             // 
             // nudvBaseCalculoIcmsTotal
             // 
@@ -4830,18 +5092,18 @@
             this.nudvBaseCalculoIcmsTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvBaseCalculoIcmsTotal._Regex = null;
             this.nudvBaseCalculoIcmsTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvBaseCalculoIcmsTotal._TamanhoComponente = 100;
+            this.nudvBaseCalculoIcmsTotal._TamanhoComponente = 60;
             this.nudvBaseCalculoIcmsTotal._TamanhoMaiorLabel = 317;
-            this.nudvBaseCalculoIcmsTotal._Visible = false;
+            this.nudvBaseCalculoIcmsTotal._Visible = true;
             this.nudvBaseCalculoIcmsTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvBaseCalculoIcmsTotal.Base = null;
             this.nudvBaseCalculoIcmsTotal.bConfiguracao = false;
             this.nudvBaseCalculoIcmsTotal.Color = System.Drawing.Color.White;
             this.nudvBaseCalculoIcmsTotal.DecimalPlaces = 2;
-            this.nudvBaseCalculoIcmsTotal.Location = new System.Drawing.Point(119, 252);
+            this.nudvBaseCalculoIcmsTotal.Location = new System.Drawing.Point(909, 31);
             this.nudvBaseCalculoIcmsTotal.Margin = new System.Windows.Forms.Padding(119, 3, 15, 3);
             this.nudvBaseCalculoIcmsTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4853,7 +5115,7 @@
             this.nudvBaseCalculoIcmsTotal.Name = "nudvBaseCalculoIcmsTotal";
             this.nudvBaseCalculoIcmsTotal.objConfigComponenteModel = null;
             this.nudvBaseCalculoIcmsTotal.ReadOnly = false;
-            this.nudvBaseCalculoIcmsTotal.Size = new System.Drawing.Size(301, 22);
+            this.nudvBaseCalculoIcmsTotal.Size = new System.Drawing.Size(261, 22);
             this.nudvBaseCalculoIcmsTotal.TabIndex = 11;
             this.nudvBaseCalculoIcmsTotal.Value = new decimal(new int[] {
             0,
@@ -4872,18 +5134,18 @@
             this.nudvIcmsTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvIcmsTotal._Regex = null;
             this.nudvIcmsTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvIcmsTotal._TamanhoComponente = 100;
+            this.nudvIcmsTotal._TamanhoComponente = 60;
             this.nudvIcmsTotal._TamanhoMaiorLabel = 317;
-            this.nudvIcmsTotal._Visible = false;
+            this.nudvIcmsTotal._Visible = true;
             this.nudvIcmsTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvIcmsTotal.Base = null;
             this.nudvIcmsTotal.bConfiguracao = false;
             this.nudvIcmsTotal.Color = System.Drawing.Color.White;
             this.nudvIcmsTotal.DecimalPlaces = 2;
-            this.nudvIcmsTotal.Location = new System.Drawing.Point(217, 280);
+            this.nudvIcmsTotal.Location = new System.Drawing.Point(1007, 59);
             this.nudvIcmsTotal.Margin = new System.Windows.Forms.Padding(217, 3, 15, 3);
             this.nudvIcmsTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4895,7 +5157,7 @@
             this.nudvIcmsTotal.Name = "nudvIcmsTotal";
             this.nudvIcmsTotal.objConfigComponenteModel = null;
             this.nudvIcmsTotal.ReadOnly = false;
-            this.nudvIcmsTotal.Size = new System.Drawing.Size(203, 22);
+            this.nudvIcmsTotal.Size = new System.Drawing.Size(163, 22);
             this.nudvIcmsTotal.TabIndex = 12;
             this.nudvIcmsTotal.Value = new decimal(new int[] {
             0,
@@ -4914,18 +5176,18 @@
             this.nudvBaseCalculoIcmsProprioTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvBaseCalculoIcmsProprioTotal._Regex = null;
             this.nudvBaseCalculoIcmsProprioTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvBaseCalculoIcmsProprioTotal._TamanhoComponente = 100;
+            this.nudvBaseCalculoIcmsProprioTotal._TamanhoComponente = 60;
             this.nudvBaseCalculoIcmsProprioTotal._TamanhoMaiorLabel = 317;
-            this.nudvBaseCalculoIcmsProprioTotal._Visible = false;
+            this.nudvBaseCalculoIcmsProprioTotal._Visible = true;
             this.nudvBaseCalculoIcmsProprioTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvBaseCalculoIcmsProprioTotal.Base = null;
             this.nudvBaseCalculoIcmsProprioTotal.bConfiguracao = false;
             this.nudvBaseCalculoIcmsProprioTotal.Color = System.Drawing.Color.White;
             this.nudvBaseCalculoIcmsProprioTotal.DecimalPlaces = 2;
-            this.nudvBaseCalculoIcmsProprioTotal.Location = new System.Drawing.Point(512, 3);
+            this.nudvBaseCalculoIcmsProprioTotal.Location = new System.Drawing.Point(867, 87);
             this.nudvBaseCalculoIcmsProprioTotal.Margin = new System.Windows.Forms.Padding(77, 3, 15, 3);
             this.nudvBaseCalculoIcmsProprioTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4937,7 +5199,7 @@
             this.nudvBaseCalculoIcmsProprioTotal.Name = "nudvBaseCalculoIcmsProprioTotal";
             this.nudvBaseCalculoIcmsProprioTotal.objConfigComponenteModel = null;
             this.nudvBaseCalculoIcmsProprioTotal.ReadOnly = false;
-            this.nudvBaseCalculoIcmsProprioTotal.Size = new System.Drawing.Size(343, 22);
+            this.nudvBaseCalculoIcmsProprioTotal.Size = new System.Drawing.Size(303, 22);
             this.nudvBaseCalculoIcmsProprioTotal.TabIndex = 13;
             this.nudvBaseCalculoIcmsProprioTotal.Value = new decimal(new int[] {
             0,
@@ -4945,6 +5207,48 @@
             0,
             131072});
             this.nudvBaseCalculoIcmsProprioTotal.ValueInt = 0;
+            // 
+            // nudvIcmsProprioTotal
+            // 
+            this.nudvIcmsProprioTotal._Field = "vIcmsProprioTotal";
+            this.nudvIcmsProprioTotal._Help = "O sistema informará o valor total do icms próprio conforme os cálculos mencionado" +
+    "s nos itens do orçamento";
+            this.nudvIcmsProprioTotal._LabelGroup = this.hlP_LabelSeparatorBaseGeral;
+            this.nudvIcmsProprioTotal._LabelText = "Valor total do icms próprio";
+            this.nudvIcmsProprioTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.nudvIcmsProprioTotal._Regex = null;
+            this.nudvIcmsProprioTotal._Table = "Orcamento_Total_Impostos";
+            this.nudvIcmsProprioTotal._TamanhoComponente = 60;
+            this.nudvIcmsProprioTotal._TamanhoMaiorLabel = 317;
+            this.nudvIcmsProprioTotal._Visible = true;
+            this.nudvIcmsProprioTotal.BackColor = System.Drawing.Color.Transparent;
+            this.nudvIcmsProprioTotal.Base = null;
+            this.nudvIcmsProprioTotal.bConfiguracao = false;
+            this.nudvIcmsProprioTotal.Color = System.Drawing.Color.White;
+            this.nudvIcmsProprioTotal.DecimalPlaces = 2;
+            this.nudvIcmsProprioTotal.Location = new System.Drawing.Point(1360, 3);
+            this.nudvIcmsProprioTotal.Margin = new System.Windows.Forms.Padding(175, 3, 15, 3);
+            this.nudvIcmsProprioTotal.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.nudvIcmsProprioTotal.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.nudvIcmsProprioTotal.Name = "nudvIcmsProprioTotal";
+            this.nudvIcmsProprioTotal.objConfigComponenteModel = null;
+            this.nudvIcmsProprioTotal.ReadOnly = false;
+            this.nudvIcmsProprioTotal.Size = new System.Drawing.Size(205, 22);
+            this.nudvIcmsProprioTotal.TabIndex = 25;
+            this.nudvIcmsProprioTotal.Value = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.nudvIcmsProprioTotal.ValueInt = 0;
             // 
             // nudvBaseCalculoIpiTotal
             // 
@@ -4956,18 +5260,18 @@
             this.nudvBaseCalculoIpiTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvBaseCalculoIpiTotal._Regex = null;
             this.nudvBaseCalculoIpiTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvBaseCalculoIpiTotal._TamanhoComponente = 100;
+            this.nudvBaseCalculoIpiTotal._TamanhoComponente = 60;
             this.nudvBaseCalculoIpiTotal._TamanhoMaiorLabel = 317;
-            this.nudvBaseCalculoIpiTotal._Visible = false;
+            this.nudvBaseCalculoIpiTotal._Visible = true;
             this.nudvBaseCalculoIpiTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvBaseCalculoIpiTotal.Base = null;
             this.nudvBaseCalculoIpiTotal.bConfiguracao = false;
             this.nudvBaseCalculoIpiTotal.Color = System.Drawing.Color.White;
             this.nudvBaseCalculoIpiTotal.DecimalPlaces = 2;
-            this.nudvBaseCalculoIpiTotal.Location = new System.Drawing.Point(563, 31);
+            this.nudvBaseCalculoIpiTotal.Location = new System.Drawing.Point(1313, 31);
             this.nudvBaseCalculoIpiTotal.Margin = new System.Windows.Forms.Padding(128, 3, 15, 3);
             this.nudvBaseCalculoIpiTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -4979,7 +5283,7 @@
             this.nudvBaseCalculoIpiTotal.Name = "nudvBaseCalculoIpiTotal";
             this.nudvBaseCalculoIpiTotal.objConfigComponenteModel = null;
             this.nudvBaseCalculoIpiTotal.ReadOnly = false;
-            this.nudvBaseCalculoIpiTotal.Size = new System.Drawing.Size(292, 22);
+            this.nudvBaseCalculoIpiTotal.Size = new System.Drawing.Size(252, 22);
             this.nudvBaseCalculoIpiTotal.TabIndex = 14;
             this.nudvBaseCalculoIpiTotal.Value = new decimal(new int[] {
             0,
@@ -4998,18 +5302,18 @@
             this.nudvIPITotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvIPITotal._Regex = null;
             this.nudvIPITotal._Table = "Orcamento_Total_Impostos";
-            this.nudvIPITotal._TamanhoComponente = 100;
+            this.nudvIPITotal._TamanhoComponente = 60;
             this.nudvIPITotal._TamanhoMaiorLabel = 317;
-            this.nudvIPITotal._Visible = false;
+            this.nudvIPITotal._Visible = true;
             this.nudvIPITotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvIPITotal.Base = null;
             this.nudvIPITotal.bConfiguracao = false;
             this.nudvIPITotal.Color = System.Drawing.Color.White;
             this.nudvIPITotal.DecimalPlaces = 2;
-            this.nudvIPITotal.Location = new System.Drawing.Point(661, 59);
+            this.nudvIPITotal.Location = new System.Drawing.Point(1411, 59);
             this.nudvIPITotal.Margin = new System.Windows.Forms.Padding(226, 3, 15, 3);
             this.nudvIPITotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5021,7 +5325,7 @@
             this.nudvIPITotal.Name = "nudvIPITotal";
             this.nudvIPITotal.objConfigComponenteModel = null;
             this.nudvIPITotal.ReadOnly = false;
-            this.nudvIPITotal.Size = new System.Drawing.Size(194, 22);
+            this.nudvIPITotal.Size = new System.Drawing.Size(154, 22);
             this.nudvIPITotal.TabIndex = 15;
             this.nudvIPITotal.Value = new decimal(new int[] {
             0,
@@ -5040,18 +5344,18 @@
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal._Regex = null;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvBaseCalculoICmsSubstituicaoTributariaTotal._TamanhoComponente = 100;
+            this.nudvBaseCalculoICmsSubstituicaoTributariaTotal._TamanhoComponente = 60;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal._TamanhoMaiorLabel = 317;
-            this.nudvBaseCalculoICmsSubstituicaoTributariaTotal._Visible = false;
+            this.nudvBaseCalculoICmsSubstituicaoTributariaTotal._Visible = true;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Base = null;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.bConfiguracao = false;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Color = System.Drawing.Color.White;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.DecimalPlaces = 2;
-            this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Location = new System.Drawing.Point(438, 87);
+            this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Location = new System.Drawing.Point(1188, 87);
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5063,7 +5367,7 @@
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Name = "nudvBaseCalculoICmsSubstituicaoTributariaTotal";
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.objConfigComponenteModel = null;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.ReadOnly = false;
-            this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Size = new System.Drawing.Size(417, 22);
+            this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Size = new System.Drawing.Size(377, 22);
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.TabIndex = 16;
             this.nudvBaseCalculoICmsSubstituicaoTributariaTotal.Value = new decimal(new int[] {
             0,
@@ -5082,18 +5386,18 @@
             this.nudvIcmsSubstituicaoTributariaTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvIcmsSubstituicaoTributariaTotal._Regex = null;
             this.nudvIcmsSubstituicaoTributariaTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvIcmsSubstituicaoTributariaTotal._TamanhoComponente = 100;
+            this.nudvIcmsSubstituicaoTributariaTotal._TamanhoComponente = 60;
             this.nudvIcmsSubstituicaoTributariaTotal._TamanhoMaiorLabel = 317;
-            this.nudvIcmsSubstituicaoTributariaTotal._Visible = false;
+            this.nudvIcmsSubstituicaoTributariaTotal._Visible = true;
             this.nudvIcmsSubstituicaoTributariaTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvIcmsSubstituicaoTributariaTotal.Base = null;
             this.nudvIcmsSubstituicaoTributariaTotal.bConfiguracao = false;
             this.nudvIcmsSubstituicaoTributariaTotal.Color = System.Drawing.Color.White;
             this.nudvIcmsSubstituicaoTributariaTotal.DecimalPlaces = 2;
-            this.nudvIcmsSubstituicaoTributariaTotal.Location = new System.Drawing.Point(519, 115);
+            this.nudvIcmsSubstituicaoTributariaTotal.Location = new System.Drawing.Point(1664, 3);
             this.nudvIcmsSubstituicaoTributariaTotal.Margin = new System.Windows.Forms.Padding(84, 3, 15, 3);
             this.nudvIcmsSubstituicaoTributariaTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5105,7 +5409,7 @@
             this.nudvIcmsSubstituicaoTributariaTotal.Name = "nudvIcmsSubstituicaoTributariaTotal";
             this.nudvIcmsSubstituicaoTributariaTotal.objConfigComponenteModel = null;
             this.nudvIcmsSubstituicaoTributariaTotal.ReadOnly = false;
-            this.nudvIcmsSubstituicaoTributariaTotal.Size = new System.Drawing.Size(336, 22);
+            this.nudvIcmsSubstituicaoTributariaTotal.Size = new System.Drawing.Size(296, 22);
             this.nudvIcmsSubstituicaoTributariaTotal.TabIndex = 17;
             this.nudvIcmsSubstituicaoTributariaTotal.Value = new decimal(new int[] {
             0,
@@ -5123,18 +5427,18 @@
             this.nudvTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvTotal._Regex = null;
             this.nudvTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvTotal._TamanhoComponente = 100;
+            this.nudvTotal._TamanhoComponente = 60;
             this.nudvTotal._TamanhoMaiorLabel = 317;
-            this.nudvTotal._Visible = false;
+            this.nudvTotal._Visible = true;
             this.nudvTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvTotal.Base = null;
             this.nudvTotal.bConfiguracao = false;
             this.nudvTotal.Color = System.Drawing.Color.White;
             this.nudvTotal.DecimalPlaces = 2;
-            this.nudvTotal.Location = new System.Drawing.Point(694, 143);
+            this.nudvTotal.Location = new System.Drawing.Point(1839, 31);
             this.nudvTotal.Margin = new System.Windows.Forms.Padding(259, 3, 15, 3);
             this.nudvTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5146,7 +5450,7 @@
             this.nudvTotal.Name = "nudvTotal";
             this.nudvTotal.objConfigComponenteModel = null;
             this.nudvTotal.ReadOnly = false;
-            this.nudvTotal.Size = new System.Drawing.Size(161, 22);
+            this.nudvTotal.Size = new System.Drawing.Size(121, 22);
             this.nudvTotal.TabIndex = 18;
             this.nudvTotal.Value = new decimal(new int[] {
             0,
@@ -5165,18 +5469,18 @@
             this.nudvBaseCalculoPisTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvBaseCalculoPisTotal._Regex = null;
             this.nudvBaseCalculoPisTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvBaseCalculoPisTotal._TamanhoComponente = 100;
+            this.nudvBaseCalculoPisTotal._TamanhoComponente = 60;
             this.nudvBaseCalculoPisTotal._TamanhoMaiorLabel = 317;
-            this.nudvBaseCalculoPisTotal._Visible = false;
+            this.nudvBaseCalculoPisTotal._Visible = true;
             this.nudvBaseCalculoPisTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvBaseCalculoPisTotal.Base = null;
             this.nudvBaseCalculoPisTotal.bConfiguracao = false;
             this.nudvBaseCalculoPisTotal.Color = System.Drawing.Color.White;
             this.nudvBaseCalculoPisTotal.DecimalPlaces = 2;
-            this.nudvBaseCalculoPisTotal.Location = new System.Drawing.Point(561, 171);
+            this.nudvBaseCalculoPisTotal.Location = new System.Drawing.Point(1706, 59);
             this.nudvBaseCalculoPisTotal.Margin = new System.Windows.Forms.Padding(126, 3, 15, 3);
             this.nudvBaseCalculoPisTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5188,7 +5492,7 @@
             this.nudvBaseCalculoPisTotal.Name = "nudvBaseCalculoPisTotal";
             this.nudvBaseCalculoPisTotal.objConfigComponenteModel = null;
             this.nudvBaseCalculoPisTotal.ReadOnly = false;
-            this.nudvBaseCalculoPisTotal.Size = new System.Drawing.Size(294, 22);
+            this.nudvBaseCalculoPisTotal.Size = new System.Drawing.Size(254, 22);
             this.nudvBaseCalculoPisTotal.TabIndex = 19;
             this.nudvBaseCalculoPisTotal.Value = new decimal(new int[] {
             0,
@@ -5207,18 +5511,18 @@
             this.nudvPisTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvPisTotal._Regex = null;
             this.nudvPisTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvPisTotal._TamanhoComponente = 100;
+            this.nudvPisTotal._TamanhoComponente = 60;
             this.nudvPisTotal._TamanhoMaiorLabel = 317;
-            this.nudvPisTotal._Visible = false;
+            this.nudvPisTotal._Visible = true;
             this.nudvPisTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvPisTotal.Base = null;
             this.nudvPisTotal.bConfiguracao = false;
             this.nudvPisTotal.Color = System.Drawing.Color.White;
             this.nudvPisTotal.DecimalPlaces = 2;
-            this.nudvPisTotal.Location = new System.Drawing.Point(663, 199);
+            this.nudvPisTotal.Location = new System.Drawing.Point(1808, 87);
             this.nudvPisTotal.Margin = new System.Windows.Forms.Padding(228, 3, 15, 3);
             this.nudvPisTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5230,7 +5534,7 @@
             this.nudvPisTotal.Name = "nudvPisTotal";
             this.nudvPisTotal.objConfigComponenteModel = null;
             this.nudvPisTotal.ReadOnly = false;
-            this.nudvPisTotal.Size = new System.Drawing.Size(192, 22);
+            this.nudvPisTotal.Size = new System.Drawing.Size(152, 22);
             this.nudvPisTotal.TabIndex = 20;
             this.nudvPisTotal.Value = new decimal(new int[] {
             0,
@@ -5250,18 +5554,18 @@
             this.nudvBaseCalculoCofinsTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvBaseCalculoCofinsTotal._Regex = null;
             this.nudvBaseCalculoCofinsTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvBaseCalculoCofinsTotal._TamanhoComponente = 100;
+            this.nudvBaseCalculoCofinsTotal._TamanhoComponente = 60;
             this.nudvBaseCalculoCofinsTotal._TamanhoMaiorLabel = 317;
-            this.nudvBaseCalculoCofinsTotal._Visible = false;
+            this.nudvBaseCalculoCofinsTotal._Visible = true;
             this.nudvBaseCalculoCofinsTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvBaseCalculoCofinsTotal.Base = null;
             this.nudvBaseCalculoCofinsTotal.bConfiguracao = false;
             this.nudvBaseCalculoCofinsTotal.Color = System.Drawing.Color.White;
             this.nudvBaseCalculoCofinsTotal.DecimalPlaces = 2;
-            this.nudvBaseCalculoCofinsTotal.Location = new System.Drawing.Point(545, 227);
+            this.nudvBaseCalculoCofinsTotal.Location = new System.Drawing.Point(2085, 3);
             this.nudvBaseCalculoCofinsTotal.Margin = new System.Windows.Forms.Padding(110, 3, 15, 3);
             this.nudvBaseCalculoCofinsTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5273,7 +5577,7 @@
             this.nudvBaseCalculoCofinsTotal.Name = "nudvBaseCalculoCofinsTotal";
             this.nudvBaseCalculoCofinsTotal.objConfigComponenteModel = null;
             this.nudvBaseCalculoCofinsTotal.ReadOnly = false;
-            this.nudvBaseCalculoCofinsTotal.Size = new System.Drawing.Size(310, 22);
+            this.nudvBaseCalculoCofinsTotal.Size = new System.Drawing.Size(270, 22);
             this.nudvBaseCalculoCofinsTotal.TabIndex = 21;
             this.nudvBaseCalculoCofinsTotal.Value = new decimal(new int[] {
             0,
@@ -5292,18 +5596,18 @@
             this.nudvCofinsTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvCofinsTotal._Regex = null;
             this.nudvCofinsTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvCofinsTotal._TamanhoComponente = 100;
+            this.nudvCofinsTotal._TamanhoComponente = 60;
             this.nudvCofinsTotal._TamanhoMaiorLabel = 317;
-            this.nudvCofinsTotal._Visible = false;
+            this.nudvCofinsTotal._Visible = true;
             this.nudvCofinsTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvCofinsTotal.Base = null;
             this.nudvCofinsTotal.bConfiguracao = false;
             this.nudvCofinsTotal.Color = System.Drawing.Color.White;
             this.nudvCofinsTotal.DecimalPlaces = 2;
-            this.nudvCofinsTotal.Location = new System.Drawing.Point(643, 255);
+            this.nudvCofinsTotal.Location = new System.Drawing.Point(2183, 31);
             this.nudvCofinsTotal.Margin = new System.Windows.Forms.Padding(208, 3, 15, 3);
             this.nudvCofinsTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5315,7 +5619,7 @@
             this.nudvCofinsTotal.Name = "nudvCofinsTotal";
             this.nudvCofinsTotal.objConfigComponenteModel = null;
             this.nudvCofinsTotal.ReadOnly = false;
-            this.nudvCofinsTotal.Size = new System.Drawing.Size(212, 22);
+            this.nudvCofinsTotal.Size = new System.Drawing.Size(172, 22);
             this.nudvCofinsTotal.TabIndex = 22;
             this.nudvCofinsTotal.Value = new decimal(new int[] {
             0,
@@ -5334,18 +5638,18 @@
             this.nudvBaseCalculoIssTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvBaseCalculoIssTotal._Regex = null;
             this.nudvBaseCalculoIssTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvBaseCalculoIssTotal._TamanhoComponente = 125;
+            this.nudvBaseCalculoIssTotal._TamanhoComponente = 60;
             this.nudvBaseCalculoIssTotal._TamanhoMaiorLabel = 317;
-            this.nudvBaseCalculoIssTotal._Visible = false;
+            this.nudvBaseCalculoIssTotal._Visible = true;
             this.nudvBaseCalculoIssTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvBaseCalculoIssTotal.Base = null;
             this.nudvBaseCalculoIssTotal.bConfiguracao = false;
             this.nudvBaseCalculoIssTotal.Color = System.Drawing.Color.White;
             this.nudvBaseCalculoIssTotal.DecimalPlaces = 2;
-            this.nudvBaseCalculoIssTotal.Location = new System.Drawing.Point(563, 283);
+            this.nudvBaseCalculoIssTotal.Location = new System.Drawing.Point(2103, 59);
             this.nudvBaseCalculoIssTotal.Margin = new System.Windows.Forms.Padding(128, 3, 15, 3);
             this.nudvBaseCalculoIssTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5357,7 +5661,7 @@
             this.nudvBaseCalculoIssTotal.Name = "nudvBaseCalculoIssTotal";
             this.nudvBaseCalculoIssTotal.objConfigComponenteModel = null;
             this.nudvBaseCalculoIssTotal.ReadOnly = false;
-            this.nudvBaseCalculoIssTotal.Size = new System.Drawing.Size(317, 22);
+            this.nudvBaseCalculoIssTotal.Size = new System.Drawing.Size(252, 22);
             this.nudvBaseCalculoIssTotal.TabIndex = 23;
             this.nudvBaseCalculoIssTotal.Value = new decimal(new int[] {
             0,
@@ -5376,18 +5680,18 @@
             this.nudvIssTotal._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudvIssTotal._Regex = null;
             this.nudvIssTotal._Table = "Orcamento_Total_Impostos";
-            this.nudvIssTotal._TamanhoComponente = 125;
+            this.nudvIssTotal._TamanhoComponente = 60;
             this.nudvIssTotal._TamanhoMaiorLabel = 317;
-            this.nudvIssTotal._Visible = false;
+            this.nudvIssTotal._Visible = true;
             this.nudvIssTotal.BackColor = System.Drawing.Color.Transparent;
             this.nudvIssTotal.Base = null;
             this.nudvIssTotal.bConfiguracao = false;
             this.nudvIssTotal.Color = System.Drawing.Color.White;
             this.nudvIssTotal.DecimalPlaces = 2;
-            this.nudvIssTotal.Location = new System.Drawing.Point(1121, 3);
+            this.nudvIssTotal.Location = new System.Drawing.Point(2201, 87);
             this.nudvIssTotal.Margin = new System.Windows.Forms.Padding(226, 3, 15, 3);
             this.nudvIssTotal.Maximum = new decimal(new int[] {
-            9,
+            1000,
             0,
             0,
             0});
@@ -5399,7 +5703,7 @@
             this.nudvIssTotal.Name = "nudvIssTotal";
             this.nudvIssTotal.objConfigComponenteModel = null;
             this.nudvIssTotal.ReadOnly = false;
-            this.nudvIssTotal.Size = new System.Drawing.Size(219, 22);
+            this.nudvIssTotal.Size = new System.Drawing.Size(154, 22);
             this.nudvIssTotal.TabIndex = 24;
             this.nudvIssTotal.Value = new decimal(new int[] {
             0,
@@ -5421,14 +5725,14 @@
             this.cbxstFrete._Table = "Orcamento_Total_Impostos";
             this.cbxstFrete._TamanhoComponente = 133;
             this.cbxstFrete._TamanhoMaiorLabel = 317;
-            this.cbxstFrete._Visible = false;
+            this.cbxstFrete._Visible = true;
             this.cbxstFrete.BackColor = System.Drawing.Color.Transparent;
             this.cbxstFrete.Base = null;
             this.cbxstFrete.bConfiguracao = false;
             this.cbxstFrete.Color = System.Drawing.Color.White;
             this.cbxstFrete.DataSource = null;
             this.cbxstFrete.DisplayMember = "DisplayMember";
-            this.cbxstFrete.Location = new System.Drawing.Point(1120, 31);
+            this.cbxstFrete.Location = new System.Drawing.Point(2595, 3);
             this.cbxstFrete.Margin = new System.Windows.Forms.Padding(225, 3, 15, 3);
             this.cbxstFrete.Name = "cbxstFrete";
             this.cbxstFrete.objConfigComponenteModel = null;
@@ -5450,14 +5754,14 @@
             this.cbxstRateioFrete._Table = "Orcamento_Total_Impostos";
             this.cbxstRateioFrete._TamanhoComponente = 80;
             this.cbxstRateioFrete._TamanhoMaiorLabel = 317;
-            this.cbxstRateioFrete._Visible = false;
+            this.cbxstRateioFrete._Visible = true;
             this.cbxstRateioFrete.BackColor = System.Drawing.Color.Transparent;
             this.cbxstRateioFrete.Base = null;
             this.cbxstRateioFrete.bConfiguracao = false;
             this.cbxstRateioFrete.Color = System.Drawing.Color.White;
             this.cbxstRateioFrete.DataSource = null;
             this.cbxstRateioFrete.DisplayMember = "DisplayMember";
-            this.cbxstRateioFrete.Location = new System.Drawing.Point(1093, 58);
+            this.cbxstRateioFrete.Location = new System.Drawing.Point(2568, 30);
             this.cbxstRateioFrete.Margin = new System.Windows.Forms.Padding(198, 3, 15, 3);
             this.cbxstRateioFrete.Name = "cbxstRateioFrete";
             this.cbxstRateioFrete.objConfigComponenteModel = null;
@@ -5473,11 +5777,12 @@
             this.tabPageTransportes.Location = new System.Drawing.Point(4, 25);
             this.tabPageTransportes.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageTransportes.Name = "tabPageTransportes";
-            this.tabPageTransportes.Size = new System.Drawing.Size(1300, 322);
+            this.tabPageTransportes.Size = new System.Drawing.Size(1106, 113);
             this.tabPageTransportes.TabIndex = 4;
             this.tabPageTransportes.Tag = false;
             this.tabPageTransportes.Text = "Transportes";
             this.tabPageTransportes.UseVisualStyleBackColor = true;
+            this.tabPageTransportes.Enter += new System.EventHandler(this.tabPageTransportes_Enter);
             // 
             // kryptonPanel8
             // 
@@ -5485,7 +5790,7 @@
             this.kryptonPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel8.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel8.Name = "kryptonPanel8";
-            this.kryptonPanel8.Size = new System.Drawing.Size(1300, 322);
+            this.kryptonPanel8.Size = new System.Drawing.Size(1106, 113);
             this.kryptonPanel8.TabIndex = 0;
             // 
             // flowLayoutPanel5
@@ -5504,7 +5809,7 @@
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(1300, 322);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(1106, 113);
             this.flowLayoutPanel5.TabIndex = 0;
             // 
             // hlP_LabelSeparatorTransportesGeral
@@ -5530,7 +5835,7 @@
             this.nudvPesoLiquido._Table = "Orcamento_retTransp";
             this.nudvPesoLiquido._TamanhoComponente = 100;
             this.nudvPesoLiquido._TamanhoMaiorLabel = 124;
-            this.nudvPesoLiquido._Visible = false;
+            this.nudvPesoLiquido._Visible = true;
             this.nudvPesoLiquido.BackColor = System.Drawing.Color.Transparent;
             this.nudvPesoLiquido.Base = null;
             this.nudvPesoLiquido.bConfiguracao = false;
@@ -5572,7 +5877,7 @@
             this.nudvPesoBruto._Table = "Orcamento_retTransp";
             this.nudvPesoBruto._TamanhoComponente = 100;
             this.nudvPesoBruto._TamanhoMaiorLabel = 124;
-            this.nudvPesoBruto._Visible = false;
+            this.nudvPesoBruto._Visible = true;
             this.nudvPesoBruto.BackColor = System.Drawing.Color.Transparent;
             this.nudvPesoBruto.Base = null;
             this.nudvPesoBruto.bConfiguracao = false;
@@ -5613,7 +5918,7 @@
             this.nudvVolume._Table = "Orcamento_retTransp";
             this.nudvVolume._TamanhoComponente = 100;
             this.nudvVolume._TamanhoMaiorLabel = 124;
-            this.nudvVolume._Visible = false;
+            this.nudvVolume._Visible = true;
             this.nudvVolume.BackColor = System.Drawing.Color.Transparent;
             this.nudvVolume.Base = null;
             this.nudvVolume.bConfiguracao = false;
@@ -5656,13 +5961,13 @@
             this.txtxEspecieVolumeNf._Table = "Orcamento_retTransp";
             this.txtxEspecieVolumeNf._TamanhoComponente = 150;
             this.txtxEspecieVolumeNf._TamanhoMaiorLabel = 124;
-            this.txtxEspecieVolumeNf._Visible = false;
+            this.txtxEspecieVolumeNf._Visible = true;
             this.txtxEspecieVolumeNf.BackColor = System.Drawing.Color.Transparent;
             this.txtxEspecieVolumeNf.Base = null;
             this.txtxEspecieVolumeNf.bConfiguracao = false;
             this.txtxEspecieVolumeNf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxEspecieVolumeNf.Color = System.Drawing.Color.White;
-            this.txtxEspecieVolumeNf.Location = new System.Drawing.Point(81, 112);
+            this.txtxEspecieVolumeNf.Location = new System.Drawing.Point(511, 3);
             this.txtxEspecieVolumeNf.Margin = new System.Windows.Forms.Padding(81, 3, 15, 3);
             this.txtxEspecieVolumeNf.MaxLength = 32767;
             this.txtxEspecieVolumeNf.Name = "txtxEspecieVolumeNf";
@@ -5684,13 +5989,13 @@
             this.txtxMarcaVolumeNf._Table = "Orcamento_retTransp";
             this.txtxMarcaVolumeNf._TamanhoComponente = 150;
             this.txtxMarcaVolumeNf._TamanhoMaiorLabel = 124;
-            this.txtxMarcaVolumeNf._Visible = false;
+            this.txtxMarcaVolumeNf._Visible = true;
             this.txtxMarcaVolumeNf.BackColor = System.Drawing.Color.Transparent;
             this.txtxMarcaVolumeNf.Base = null;
             this.txtxMarcaVolumeNf.bConfiguracao = false;
             this.txtxMarcaVolumeNf.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxMarcaVolumeNf.Color = System.Drawing.Color.White;
-            this.txtxMarcaVolumeNf.Location = new System.Drawing.Point(89, 140);
+            this.txtxMarcaVolumeNf.Location = new System.Drawing.Point(519, 31);
             this.txtxMarcaVolumeNf.Margin = new System.Windows.Forms.Padding(89, 3, 15, 3);
             this.txtxMarcaVolumeNf.MaxLength = 32767;
             this.txtxMarcaVolumeNf.Name = "txtxMarcaVolumeNf";
@@ -5707,8 +6012,8 @@
             this.hlP_PesquisaTransportesidTransportador._LabelText = "Transportadora";
             this.hlP_PesquisaTransportesidTransportador._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaTransportesidTransportador._ListaCamposDisplay")));
             this.hlP_PesquisaTransportesidTransportador._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaTransportesidTransportador._ListaValoresDisplay")));
-            this.hlP_PesquisaTransportesidTransportador._NomeCampoPK = null;
-            this.hlP_PesquisaTransportesidTransportador._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaTransportesidTransportador._NomeCampoPK = "ID";
+            this.hlP_PesquisaTransportesidTransportador._NomeFormCadastroOriginal = "FormTransportadora";
             this.hlP_PesquisaTransportesidTransportador._NomeView = "vwTransportador";
             this.hlP_PesquisaTransportesidTransportador._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaTransportesidTransportador._Regex = null;
@@ -5716,12 +6021,12 @@
             this.hlP_PesquisaTransportesidTransportador._TamanhoComponente = 300;
             this.hlP_PesquisaTransportesidTransportador._TamanhoMaiorLabel = 124;
             this.hlP_PesquisaTransportesidTransportador._Vinculado = false;
-            this.hlP_PesquisaTransportesidTransportador._Visible = false;
+            this.hlP_PesquisaTransportesidTransportador._Visible = true;
             this.hlP_PesquisaTransportesidTransportador.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaTransportesidTransportador.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaTransportesidTransportador.Base = null;
             this.hlP_PesquisaTransportesidTransportador.bConfiguracao = false;
-            this.hlP_PesquisaTransportesidTransportador.Location = new System.Drawing.Point(41, 168);
+            this.hlP_PesquisaTransportesidTransportador.Location = new System.Drawing.Point(471, 59);
             this.hlP_PesquisaTransportesidTransportador.Margin = new System.Windows.Forms.Padding(41, 3, 15, 3);
             this.hlP_PesquisaTransportesidTransportador.Name = "hlP_PesquisaTransportesidTransportador";
             this.hlP_PesquisaTransportesidTransportador.objConfigComponenteModel = null;
@@ -5739,7 +6044,7 @@
             this.hlP_PesquisaidRedespacho._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidRedespacho._ListaCamposDisplay")));
             this.hlP_PesquisaidRedespacho._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidRedespacho._ListaValoresDisplay")));
             this.hlP_PesquisaidRedespacho._NomeCampoPK = "ID";
-            this.hlP_PesquisaidRedespacho._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidRedespacho._NomeFormCadastroOriginal = "FormTransportadora";
             this.hlP_PesquisaidRedespacho._NomeView = "vwTransportador";
             this.hlP_PesquisaidRedespacho._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidRedespacho._Regex = null;
@@ -5747,12 +6052,12 @@
             this.hlP_PesquisaidRedespacho._TamanhoComponente = 300;
             this.hlP_PesquisaidRedespacho._TamanhoMaiorLabel = 124;
             this.hlP_PesquisaidRedespacho._Vinculado = false;
-            this.hlP_PesquisaidRedespacho._Visible = false;
+            this.hlP_PesquisaidRedespacho._Visible = true;
             this.hlP_PesquisaidRedespacho.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hlP_PesquisaidRedespacho.BackColor = System.Drawing.Color.Transparent;
             this.hlP_PesquisaidRedespacho.Base = null;
             this.hlP_PesquisaidRedespacho.bConfiguracao = false;
-            this.hlP_PesquisaidRedespacho.Location = new System.Drawing.Point(57, 195);
+            this.hlP_PesquisaidRedespacho.Location = new System.Drawing.Point(487, 86);
             this.hlP_PesquisaidRedespacho.Margin = new System.Windows.Forms.Padding(57, 3, 15, 3);
             this.hlP_PesquisaidRedespacho.Name = "hlP_PesquisaidRedespacho";
             this.hlP_PesquisaidRedespacho.objConfigComponenteModel = null;
@@ -5774,14 +6079,14 @@
             this.cbxTransportestFrete._Table = "Orcamento_retTransp";
             this.cbxTransportestFrete._TamanhoComponente = 127;
             this.cbxTransportestFrete._TamanhoMaiorLabel = 124;
-            this.cbxTransportestFrete._Visible = false;
+            this.cbxTransportestFrete._Visible = true;
             this.cbxTransportestFrete.BackColor = System.Drawing.Color.Transparent;
             this.cbxTransportestFrete.Base = null;
             this.cbxTransportestFrete.bConfiguracao = false;
             this.cbxTransportestFrete.Color = System.Drawing.Color.White;
             this.cbxTransportestFrete.DataSource = null;
             this.cbxTransportestFrete.DisplayMember = "DisplayMember";
-            this.cbxTransportestFrete.Location = new System.Drawing.Point(27, 222);
+            this.cbxTransportestFrete.Location = new System.Drawing.Point(899, 3);
             this.cbxTransportestFrete.Margin = new System.Windows.Forms.Padding(27, 3, 15, 3);
             this.cbxTransportestFrete.Name = "cbxTransportestFrete";
             this.cbxTransportestFrete.objConfigComponenteModel = null;
@@ -5804,14 +6109,14 @@
             this.cbxstTransporte._Table = "Orcamento_retTransp";
             this.cbxstTransporte._TamanhoComponente = 162;
             this.cbxstTransporte._TamanhoMaiorLabel = 124;
-            this.cbxstTransporte._Visible = false;
+            this.cbxstTransporte._Visible = true;
             this.cbxstTransporte.BackColor = System.Drawing.Color.Transparent;
             this.cbxstTransporte.Base = null;
             this.cbxstTransporte.bConfiguracao = false;
             this.cbxstTransporte.Color = System.Drawing.Color.White;
             this.cbxstTransporte.DataSource = null;
             this.cbxstTransporte.DisplayMember = "DisplayMember";
-            this.cbxstTransporte.Location = new System.Drawing.Point(25, 249);
+            this.cbxstTransporte.Location = new System.Drawing.Point(897, 30);
             this.cbxstTransporte.Margin = new System.Windows.Forms.Padding(25, 3, 15, 3);
             this.cbxstTransporte.Name = "cbxstTransporte";
             this.cbxstTransporte.objConfigComponenteModel = null;
@@ -5825,7 +6130,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.hlP_LabelSeparatorInformacoes);
             this.flowLayoutPanel1.Controls.Add(this.txtCodigo);
-            this.flowLayoutPanel1.Controls.Add(this.txtdDataHora);
+            this.flowLayoutPanel1.Controls.Add(this.dtpdDataHora);
             this.flowLayoutPanel1.Controls.Add(this.hlP_PesquisaidClienteFornecedor);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -5872,33 +6177,31 @@
             this.txtCodigo.Size = new System.Drawing.Size(187, 22);
             this.txtCodigo.TabIndex = 0;
             // 
-            // txtdDataHora
+            // dtpdDataHora
             // 
-            this.txtdDataHora._Field = "dDataHora";
-            this.txtdDataHora._Help = "O sistema preenche automaticamente com a data e hora (dd/mm/aaaa - hh:mm) em que " +
+            this.dtpdDataHora._Field = "dDataHora";
+            this.dtpdDataHora._Help = "O sistema preenche automaticamente com a data e hora (dd/mm/aaaa - hh:mm) em que " +
     "foi criado o orçamento.";
-            this.txtdDataHora._LabelGroup = this.hlP_LabelSeparatorInformacoes;
-            this.txtdDataHora._LabelText = "Data e hora criado";
-            this.txtdDataHora._Multiline = false;
-            this.txtdDataHora._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.txtdDataHora._Password = false;
-            this.txtdDataHora._Regex = null;
-            this.txtdDataHora._Table = "Orcamento_ide";
-            this.txtdDataHora._TamanhoComponente = 138;
-            this.txtdDataHora._TamanhoMaiorLabel = 102;
-            this.txtdDataHora.BackColor = System.Drawing.Color.Transparent;
-            this.txtdDataHora.Base = null;
-            this.txtdDataHora.bConfiguracao = false;
-            this.txtdDataHora.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtdDataHora.Color = System.Drawing.Color.White;
-            this.txtdDataHora.Location = new System.Drawing.Point(3, 56);
-            this.txtdDataHora.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
-            this.txtdDataHora.MaxLength = 32767;
-            this.txtdDataHora.Name = "txtdDataHora";
-            this.txtdDataHora.objConfigComponenteModel = null;
-            this.txtdDataHora.ReadOnly = false;
-            this.txtdDataHora.Size = new System.Drawing.Size(240, 22);
-            this.txtdDataHora.TabIndex = 2;
+            this.dtpdDataHora._LabelGroup = this.hlP_LabelSeparatorInformacoes;
+            this.dtpdDataHora._LabelText = "Data e hora criado";
+            this.dtpdDataHora._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.dtpdDataHora._Regex = null;
+            this.dtpdDataHora._Table = "Orcamento_ide";
+            this.dtpdDataHora._TamanhoComponente = 122;
+            this.dtpdDataHora._TamanhoMaiorLabel = 102;
+            this.dtpdDataHora.BackColor = System.Drawing.Color.Transparent;
+            this.dtpdDataHora.Base = null;
+            this.dtpdDataHora.bConfiguracao = false;
+            this.dtpdDataHora.Color = System.Drawing.Color.Empty;
+            this.dtpdDataHora.CustomFormat = "";
+            this.dtpdDataHora.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpdDataHora.Location = new System.Drawing.Point(3, 56);
+            this.dtpdDataHora.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.dtpdDataHora.Name = "dtpdDataHora";
+            this.dtpdDataHora.objConfigComponenteModel = null;
+            this.dtpdDataHora.Size = new System.Drawing.Size(224, 21);
+            this.dtpdDataHora.TabIndex = 4;
+            this.dtpdDataHora.Value = new System.DateTime(2013, 8, 22, 8, 19, 58, 592);
             // 
             // hlP_PesquisaidClienteFornecedor
             // 
@@ -5909,7 +6212,7 @@
             this.hlP_PesquisaidClienteFornecedor._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidClienteFornecedor._ListaCamposDisplay")));
             this.hlP_PesquisaidClienteFornecedor._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidClienteFornecedor._ListaValoresDisplay")));
             this.hlP_PesquisaidClienteFornecedor._NomeCampoPK = "ID";
-            this.hlP_PesquisaidClienteFornecedor._NomeFormCadastroOriginal = "";
+            this.hlP_PesquisaidClienteFornecedor._NomeFormCadastroOriginal = "FormCliente";
             this.hlP_PesquisaidClienteFornecedor._NomeView = "vwCliente";
             this.hlP_PesquisaidClienteFornecedor._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidClienteFornecedor._Regex = null;
@@ -5929,6 +6232,7 @@
             this.hlP_PesquisaidClienteFornecedor.Size = new System.Drawing.Size(343, 21);
             this.hlP_PesquisaidClienteFornecedor.TabIndex = 3;
             this.hlP_PesquisaidClienteFornecedor.Value = 0;
+            this.hlP_PesquisaidClienteFornecedor.Validated += new System.EventHandler(this.hlP_PesquisaidClienteFornecedor_Validated);
             // 
             // formOrcamentoVenda
             // 
@@ -5963,13 +6267,13 @@
             this.tabPageItens.ResumeLayout(false);
             this.kryptonTabControl4.ResumeLayout(false);
             this.tabPageFiscal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hlP_DataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFiscal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFiscal)).EndInit();
             this.kryptonTabControl3.ResumeLayout(false);
             this.tabPageItensOrcamento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).EndInit();
             this.kryptonPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hlP_DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsItensOrcamento)).EndInit();
             this.tabPageItensVendidos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).EndInit();
@@ -6004,24 +6308,19 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPageAdicionais;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorInformacoes;
         private Comum.Components.HLP_TextBox txtCodigo;
-        private Comum.Components.HLP_TextBox txtdDataHora;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidClienteFornecedor;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorPrincipal;
-        private Comum.Components.HLP_Pesquisa hlP_PesquisaidContato;
-        private Comum.Components.HLP_Pesquisa hlP_PesquisaxDepartamento;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private Comum.Components.HLP_ComboBox cbxstContribuienteIcms;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorGeral;
         private Comum.Components.HLP_MaskedTextBox maskTelefoneCliente;
         private Comum.Components.HLP_TextBox txtidOrcamentoOrigem;
-        private Comum.Components.HLP_Pesquisa hlP_PesquisaidTipoDocumento;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidRamoAtividade;
-        private Comum.Components.HLP_Pesquisa hlP_PesquisaidFuncionario;
+        private Comum.Components.HLP_Pesquisa hlP_PesquisaidFuncionarioRepresentante;
         private Comum.Components.HLP_Pesquisa hlP_PesquisaidCondicaoPagamento;
         private Comum.Components.HLP_ComboBox cbxstOrcamento;
         private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorStatus;
@@ -6054,127 +6353,19 @@
         private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl3;
         private System.Windows.Forms.TabPage tabPageItensOrcamento;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel4;
-        private Comum.Components.HLP_DataGridView hlP_DataGridView1;
+        private Comum.Components.HLP_DataGridView dgvItens;
         private System.Windows.Forms.BindingSource bsItensOrcamento;
         private System.Windows.Forms.TabPage tabPageItensVendidos;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel5;
         private Comum.Components.HLP_DataGridView hlP_DataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoItemDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idProdutoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xComercialDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idUnidadeMedidaDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn qProdutoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idListaPrecoPaiDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pDescontoDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaSemDescontoDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalSemDescontoItemDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalItemDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoSuframaDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vFreteItemDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoLiquidoDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoBrutoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn stOrcamentoItemDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xObservacaoItemDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vSegurosItemDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vOutrasDespesasItemDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn idFuncionarioDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nPedidoClienteItemDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dConfirmacaoItemDataGridViewTextBoxColumn1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dPrevisaoEntregaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDepositoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpresaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idTipoOperacaoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stConsumidorFinalDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xPedidoClienteDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nItemClienteDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xCodigoProdutoClienteDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMotivoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCfopDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orcamentoItemImpostosDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource bsItensVendidos;
         private System.Windows.Forms.TabPage tabPageItensCancelPerdidos;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel6;
         private Comum.Components.HLP_DataGridView hlP_DataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoItemDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idProdutoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xComercialDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idUnidadeMedidaDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn qProdutoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idListaPrecoPaiDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pDescontoDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaSemDescontoDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalSemDescontoItemDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalItemDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoSuframaDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vFreteItemDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoLiquidoDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoBrutoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn stOrcamentoItemDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xObservacaoItemDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vSegurosItemDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vOutrasDespesasItemDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn idFuncionarioDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nPedidoClienteItemDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dConfirmacaoItemDataGridViewTextBoxColumn2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dPrevisaoEntregaDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMotivoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDepositoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpresaDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idTipoOperacaoDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stConsumidorFinalDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xPedidoClienteDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nItemClienteDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xCodigoProdutoClienteDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCfopDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orcamentoItemImpostosDataGridViewTextBoxColumn2;
         private System.Windows.Forms.BindingSource bsItensCancelados;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idTipoOperacaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn stConsumidorFinalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xPedidoClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nItemClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xCodigoProdutoClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idProdutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xComercialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idUnidadeMedidaDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn qProdutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idListaPrecoPaiDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pDescontoDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaSemDescontoDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalSemDescontoItemDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalItemDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoSuframaDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vFreteItemDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dPrevisaoEntregaDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoLiquidoDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoBrutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn stOrcamentoItemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nPedidoClienteItemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xObservacaoItemDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vSegurosItemDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vOutrasDespesasItemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn idFuncionarioDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoItemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDepositoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpresaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dConfirmacaoItemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMotivoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCfopDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orcamentoItemImpostosDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage tabPageBaseCalculo;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
@@ -6218,14 +6409,96 @@
         private Comum.Components.HLP_ComboBox cbxstTransporte;
         private AC.ExtendedRenderer.Navigator.KryptonTabControl kryptonTabControl4;
         private System.Windows.Forms.TabPage tabPageFiscal;
-        private Comum.Components.HLP_DataGridView hlP_DataGridView4;
+        private Comum.Components.HLP_DataGridView dgvFiscal;
         private System.Windows.Forms.BindingSource bsFiscal;
+        private Comum.Components.HLP_Pesquisa hlP_PesquisaidFuncionario;
+        private Comum.Components.HLP_Pesquisa hlP_PesquisaidFuncionarioResponsavel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoItemDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idProdutoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xComercialDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idUnidadeMedidaDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn qProdutoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idListaPrecoPaiDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pDescontoDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaSemDescontoDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalSemDescontoItemDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalItemDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoSuframaDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vFreteItemDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoLiquidoDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoBrutoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn stOrcamentoItemDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xObservacaoItemDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vSegurosItemDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vOutrasDespesasItemDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nPedidoClienteItemDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dConfirmacaoItemDataGridViewTextBoxColumn1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dPrevisaoEntregaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDepositoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpresaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTipoOperacaoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stConsumidorFinalDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xPedidoClienteDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nItemClienteDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xCodigoProdutoClienteDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMotivoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCfopDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoItemDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idProdutoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xComercialDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idUnidadeMedidaDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn qProdutoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idListaPrecoPaiDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pDescontoDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaSemDescontoDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalSemDescontoItemDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalItemDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoSuframaDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vFreteItemDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoLiquidoDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoBrutoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn stOrcamentoItemDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xObservacaoItemDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vSegurosItemDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vOutrasDespesasItemDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nPedidoClienteItemDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dConfirmacaoItemDataGridViewTextBoxColumn2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dPrevisaoEntregaDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMotivoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDepositoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpresaDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTipoOperacaoDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stConsumidorFinalDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xPedidoClienteDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nItemClienteDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xCodigoProdutoClienteDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCfopDataGridViewTextBoxColumn2;
+        private Comum.Components.HLP_LabelSeparator hlP_LabelSeparatorInformacoes;
+        private Comum.Components.HLP_ComboBox cbxidContato;
+        private Comum.Components.HLP_TextBox txtxDepartamento;
+        private Comum.Components.HLP_TextBox txtCidade;
+        private Comum.Components.HLP_TextBox txtUF;
+        private Comum.Components.HLP_Pesquisa hlP_PesquisaidTipoDocumento;
+        private Comum.Components.HLP_DateTimePicker dtpdDataHora;
+        private Comum.Components.HLP_NumericUpDown nudvIcmsProprioTotal;
         private System.Windows.Forms.DataGridViewComboBoxColumn iCMSstOrigemMercadoriaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn iPIstCalculaIpiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn idClassificacaoFiscalDataGridViewTextBoxColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn iPIpIPIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn iPIstCompoeBaseCalculoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idCSTIpiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idCSTIpi;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn iPIvBaseCalculoDataGridViewTextBoxColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn iPIvIPIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn iCMSstReduzBaseCalculoDataGridViewTextBoxColumn;
@@ -6273,5 +6546,41 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iCMSvSubstituicaoTributariaRetidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoItemDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCSTIssDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idOperacaoItens;
+        private System.Windows.Forms.DataGridViewComboBoxColumn stConsumidorFinal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xPedidoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nItemClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xCodigoProdutoClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn clidProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xComercial;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idUnidadeMedida;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn qProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idListaPrecoPai;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pDescontoDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vVendaSemDescontoDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalSemDescontoItemDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vTotalItemDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vDescontoSuframaDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vFreteItemDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn dPrevisaoEntregaDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoLiquidoDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn nPesoBrutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn stOrcamentoItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nPedidoClienteItemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xObservacaoItemDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vSegurosItemDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn vOutrasDespesasItemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idFuncionarioRepresentante;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn pComissaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrcamentoItemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDepositoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpresaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dConfirmacaoItemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMotivoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idCfop;
     }
 }

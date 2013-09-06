@@ -39,5 +39,11 @@ namespace HLP.Services.Implementation.Entries.Gerais
         {
             return unidadeRepository.IsNew(xSiglaPadrao);
         }
+
+        public List<Unidade_medidaModel> GetUnidadeByConversaoProduto(int idParaUnidadeMedida, int idProduto)
+        {
+            return unidadeRepository.GetUnidadeByConversaoProduto(idParaUnidadeMedida: idParaUnidadeMedida,
+                idProduto: idProduto);
+        }
     }
 }

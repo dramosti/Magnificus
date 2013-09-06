@@ -6,6 +6,7 @@ using HLP.Repository.Interfaces.Entries.Fiscal;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Ninject;
 using HLP.Comum.Infrastructure.Static;
+using System.Collections.Generic;
 
 namespace HLP.Repository.Implementation.Entries.Fiscal
 {
@@ -78,6 +79,15 @@ namespace HLP.Repository.Implementation.Entries.Fiscal
             return (int)UndTrabalho.dbPrincipal.ExecuteScalar(
                          "dbo.Proc_copy_tipo_documento",
                           idTipoDocumento);
+        }
+
+        public List<Tipo_documentoModel> GetTipo_documentoAll()
+        {
+            DataAccessor<Tipo_documentoModel> reg = UndTrabalho.dbPrincipal.CreateSqlStringAccessor
+            ("select * from Tipo_documento where idEmpresa = @idEmpresa",
+            new Parameters(UndTrabalho.dbPrincipal).AddParameter<int>("idEmpresa"),
+            MapBuilder<Tipo_documentoModel>.MapAllProperties().Build());
+            return reg.Execute(CompanyData.idEmpresa).ToList();
         }
     }
 }

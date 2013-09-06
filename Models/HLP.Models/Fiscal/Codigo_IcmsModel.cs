@@ -35,5 +35,9 @@ namespace HLP.Models.Entries.Fiscal
         public string xFundamLegalCodTrib { get; set; }
         [ParameterOrder(Order = 9)]
         public int idCodigoIcmsPai { get; set; }
+        [ParameterOrder(Order = 10)]
+        public decimal? pMvaSubstituicaoTributaria { get; set; }
+        [ParameterOrder(Order = 11)]
+        public int? idCSTIcms { get; set; }
     }
 }

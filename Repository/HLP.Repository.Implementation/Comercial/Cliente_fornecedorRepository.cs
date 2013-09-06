@@ -70,6 +70,26 @@ namespace HLP.Repository.Implementation.Entries.Comercial
             return regCliente_fornecedorAccessor.Execute(idClienteFornecedor).FirstOrDefault();
         }
 
+        public Cliente_fornecedor_EnderecoModel GetCliente_fornecedor_EnderecoPrincipal(int idCliente_fornecedor)
+        {
+            DataAccessor<Cliente_fornecedor_EnderecoModel> reg = UndTrabalho.dbPrincipal.CreateSqlStringAccessor
+            ("SELECT * FROM Cliente_Fornecedor_Endereco WHERE idClienteFornecedor = @idCliente_fornecedor",
+            new Parameters(UndTrabalho.dbPrincipal).AddParameter<int>("idCliente_fornecedor"),
+            MapBuilder<Cliente_fornecedor_EnderecoModel>.MapAllProperties().Build());
+            return reg.Execute(idCliente_fornecedor).FirstOrDefault();
+        }
+
+        public List<Cliente_fornecedor_representanteModel> GetCliente_fornecedor_Representante(int idCliente_fornecedor)
+        {
+            DataAccessor<Cliente_fornecedor_representanteModel> reg = UndTrabalho.dbPrincipal.CreateSqlStringAccessor
+            ("select * from Cliente_fornecedor_representante r " +
+             "inner join Cliente_fornecedor c on r.idClienteFornecedor = c.idClienteFornecedor " +
+             "where r.idClienteFornecedor = @idClienteFornecedor and c.idEmpresa = @idEmpresa",
+            new Parameters(UndTrabalho.dbPrincipal).AddParameter<int>("idClienteFornecedor").AddParameter<int>("idEmpresa"),
+            MapBuilder<Cliente_fornecedor_representanteModel>.MapAllProperties().Build());
+            return reg.Execute(idCliente_fornecedor, CompanyData.idEmpresa).ToList();
+        }
+
         public void BeginTransaction()
         {
             UndTrabalho.BeginTransaction();

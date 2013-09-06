@@ -57,6 +57,7 @@
     <Compile Include="Comercial\IProduto_RevisaoRepository.cs" />
     <Compile Include="Financeiro\IDia_PagamentoRepository.cs" />
     <Compile Include="Financeiro\IDia_pagamento_linhasRepository.cs" />
+    <Compile Include="Fiscal\ICarga_trib_media_st_icmsRepository.cs" />
     <Compile Include="Gerais\IAcessoRepository.cs" />
     <Compile Include="Gerais\ICondicao_pagamentoRepository.cs" />
     <Compile Include="Gerais\ICondicoes_entregaRepository.cs" />

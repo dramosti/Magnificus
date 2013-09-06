@@ -359,6 +359,10 @@ namespace HLP.UI.Entries.Geral
             }
         }
 
+        private void dgvConversao_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+        }
+
 
 
     }

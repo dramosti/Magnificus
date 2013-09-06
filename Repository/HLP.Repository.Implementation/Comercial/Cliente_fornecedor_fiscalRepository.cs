@@ -23,7 +23,7 @@ namespace HLP.Repository.Implementation.Entries.Comercial
             if (regAcessor == null)
             {
                 regAcessor = UndTrabalho.dbPrincipal.CreateSqlStringAccessor
-                ("SELECT * FROM Cliente_fornecedor_fiscal WHERE idClienteFornecedor = @idClienteFornecedor", 
+                ("SELECT * FROM Cliente_fornecedor_fiscal WHERE idClienteFornecedor = @idClienteFornecedor",
                 new Parameters(UndTrabalho.dbPrincipal).AddParameter<int>("idClienteFornecedor"),
                 MapBuilder<Cliente_fornecedor_fiscalModel>.MapAllProperties().Build());
             }
@@ -32,7 +32,7 @@ namespace HLP.Repository.Implementation.Entries.Comercial
 
         public void Save(Cliente_fornecedor_fiscalModel objCliente_fornecedor_fiscal)
         {
-            if (objCliente_fornecedor_fiscal.idClienteFornecedorFiscal == 0)
+            if (objCliente_fornecedor_fiscal.idClienteFornecedorFiscal == null)
             {
                 objCliente_fornecedor_fiscal.idClienteFornecedorFiscal = (int)UndTrabalho.dbPrincipal.ExecuteScalar(
                 "[dbo].[Proc_save_Cliente_fornecedor_fiscal]",

@@ -329,7 +329,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                                     controle.SetPropertyValue("_Help", objCompModel.objConfigCompUsu.xHelp);
 
                                     if (objCompModel.objConfigCompUsu.stAtivo == 0)
-                                        controle.Visible = false;
+                                        controle.Visible = true;
 
                                     if (objCompModel.objConfigCompUsu.stAtivo == 0)
                                         controle.Enabled = false;
@@ -399,7 +399,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                                     dgvCol.Visible = Convert.ToBoolean(objColModel.objColunasGridUsu.stVisible);
 
                                     if (objColModel.objColunasGridUsu.stAtivo == 0)
-                                        dgvCol.Visible = false;
+                                        dgvCol.Visible = true;
 
                                     if (objColModel.objColunasGridUsu.stAcesso == 0)
                                         dgvCol.ReadOnly = true;

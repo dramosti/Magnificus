@@ -36,6 +36,7 @@
             this.FormProdutoLocalizacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormTipoProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formOrcamentoVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cRMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormDecisaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FormFidelidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,7 +89,7 @@
             this.FormModoEntregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formParametrizacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formOrcamentoVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FormCarga_trib_media_st_icmsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,6 +166,12 @@
             this.FormProdutoToolStripMenuItem.Name = "FormProdutoToolStripMenuItem";
             this.FormProdutoToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.FormProdutoToolStripMenuItem.Text = "Produto";
+            // 
+            // formOrcamentoVendaToolStripMenuItem
+            // 
+            this.formOrcamentoVendaToolStripMenuItem.Name = "formOrcamentoVendaToolStripMenuItem";
+            this.formOrcamentoVendaToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.formOrcamentoVendaToolStripMenuItem.Text = "Orçamento";
             // 
             // cRMToolStripMenuItem
             // 
@@ -272,7 +279,8 @@
             this.FormStIPIToolStripMenuItem,
             this.FormStPISToolStripMenuItem,
             this.FormTipoDocumentoToolStripMenuItem,
-            this.FormTipoOperacaoToolStripMenuItem});
+            this.FormTipoOperacaoToolStripMenuItem,
+            this.FormCarga_trib_media_st_icmsToolStripMenuItem});
             this.fiscaisToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fiscaisToolStripMenuItem.Name = "fiscaisToolStripMenuItem";
             this.fiscaisToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
@@ -282,63 +290,63 @@
             // 
             this.FormCfopToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormCfopToolStripMenuItem.Name = "FormCfopToolStripMenuItem";
-            this.FormCfopToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormCfopToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormCfopToolStripMenuItem.Text = "Cfop";
             // 
             // FormClassificacaoFiscalToolStripMenuItem
             // 
             this.FormClassificacaoFiscalToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormClassificacaoFiscalToolStripMenuItem.Name = "FormClassificacaoFiscalToolStripMenuItem";
-            this.FormClassificacaoFiscalToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormClassificacaoFiscalToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormClassificacaoFiscalToolStripMenuItem.Text = "Classificações Fiscais";
             // 
             // FormCodigoIcmsToolStripMenuItem
             // 
             this.FormCodigoIcmsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormCodigoIcmsToolStripMenuItem.Name = "FormCodigoIcmsToolStripMenuItem";
-            this.FormCodigoIcmsToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormCodigoIcmsToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormCodigoIcmsToolStripMenuItem.Text = "Código de Icms";
             // 
             // FormStCOFINSToolStripMenuItem
             // 
             this.FormStCOFINSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormStCOFINSToolStripMenuItem.Name = "FormStCOFINSToolStripMenuItem";
-            this.FormStCOFINSToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormStCOFINSToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormStCOFINSToolStripMenuItem.Text = "Situação Tributária de Cofins";
             // 
             // FormStICMSToolStripMenuItem
             // 
             this.FormStICMSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormStICMSToolStripMenuItem.Name = "FormStICMSToolStripMenuItem";
-            this.FormStICMSToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormStICMSToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormStICMSToolStripMenuItem.Text = "Situação Tributária de Icms";
             // 
             // FormStIPIToolStripMenuItem
             // 
             this.FormStIPIToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormStIPIToolStripMenuItem.Name = "FormStIPIToolStripMenuItem";
-            this.FormStIPIToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormStIPIToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormStIPIToolStripMenuItem.Text = "Situação Tributária de Ipi";
             // 
             // FormStPISToolStripMenuItem
             // 
             this.FormStPISToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormStPISToolStripMenuItem.Name = "FormStPISToolStripMenuItem";
-            this.FormStPISToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormStPISToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormStPISToolStripMenuItem.Text = "Situação Tributária de Pis";
             // 
             // FormTipoDocumentoToolStripMenuItem
             // 
             this.FormTipoDocumentoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormTipoDocumentoToolStripMenuItem.Name = "FormTipoDocumentoToolStripMenuItem";
-            this.FormTipoDocumentoToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormTipoDocumentoToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormTipoDocumentoToolStripMenuItem.Text = "Tipos de Documento";
             // 
             // FormTipoOperacaoToolStripMenuItem
             // 
             this.FormTipoOperacaoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormTipoOperacaoToolStripMenuItem.Name = "FormTipoOperacaoToolStripMenuItem";
-            this.FormTipoOperacaoToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.FormTipoOperacaoToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.FormTipoOperacaoToolStripMenuItem.Text = "Tipos de Operação";
             // 
             // geralToolStripMenuItem
@@ -562,11 +570,11 @@
             this.formParametrizacaoToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.formParametrizacaoToolStripMenuItem.Text = "Parâmetros";
             // 
-            // formOrcamentoVendaToolStripMenuItem
+            // FormCarga_trib_media_st_icmsToolStripMenuItem
             // 
-            this.formOrcamentoVendaToolStripMenuItem.Name = "formOrcamentoVendaToolStripMenuItem";
-            this.formOrcamentoVendaToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.formOrcamentoVendaToolStripMenuItem.Text = "Orçamento";
+            this.FormCarga_trib_media_st_icmsToolStripMenuItem.Name = "FormCarga_trib_media_st_icmsToolStripMenuItem";
+            this.FormCarga_trib_media_st_icmsToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.FormCarga_trib_media_st_icmsToolStripMenuItem.Text = "Carga Tributária Média St Icms";
             // 
             // FormModuloCadastro
             // 
@@ -648,5 +656,6 @@
         private System.Windows.Forms.ToolStripMenuItem parametrizaçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formParametrizacaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formOrcamentoVendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FormCarga_trib_media_st_icmsToolStripMenuItem;
     }
 }
