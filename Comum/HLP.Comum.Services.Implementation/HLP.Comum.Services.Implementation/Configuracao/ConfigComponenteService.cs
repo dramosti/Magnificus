@@ -263,16 +263,16 @@ namespace HLP.Comum.Services.Implementation.Configuracao
         {
             bool Upper = CompanyData.stMaiusculo;
             HLP_Group groupSeparador = null;
-            foreach (ConfigComponenteModel objCompModel in lCompModel.Where(c => c.xTypeComp != "HLP_DataGridView"))
+            foreach (ConfigComponenteModel objCompModel in lCompModel)
             {
                 try
                 {
                     Control controle = lControl.FirstOrDefault(c => c.Name == objCompModel.xName);
-                    groupSeparador = null;
                     if (controle != null)
                     {
                         if (controle.GetType().BaseType == typeof(UserControlBase))
                         {
+                            groupSeparador = null;
                             try
                             {
                                 groupSeparador = (HLP_Group)lControl.FirstOrDefault(c => c.Name == objCompModel.objConfigCompUsu.xLabelGroup);

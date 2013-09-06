@@ -20,6 +20,7 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
         public ConfigColunasGridRepository colunasGridRepository { get; set; }
 
         private DataAccessor<ConfigComponenteModel> lComponentesAcessor;
+        private DataAccessor<ConfigComponenteModel> lComponentesGridAcessor;
 
 
 
@@ -89,6 +90,17 @@ namespace HLP.Comum.Repository.Implementation.Configuracao
                                              .Build());
             }
             List<ConfigComponenteModel> lComp = lComponentesAcessor.Execute(idTabPage).ToList();
+
+            if (lComponentesGridAcessor == null)
+            {
+                lComponentesGridAcessor = UndTrabalho.dbPrincipal.CreateSprocAccessor("[dbo].[Proc_sel_CONFIG_Componentes_Grid]",
+                      new Parameters(UndTrabalho.dbPrincipal).AddParameter<int>("idTabPage"),
+                                             MapBuilder<ConfigComponenteModel>.MapAllProperties()
+                                             .DoNotMap(c => c.Base)
+                                             .Build());
+            }
+            lComp.AddRange(lComponentesGridAcessor.Execute(idTabPage).ToList());
+
             foreach (ConfigComponenteModel comp in lComp)
             {
                 comp.Base = this.GetInfoField(comp.xTable, comp.xField);
