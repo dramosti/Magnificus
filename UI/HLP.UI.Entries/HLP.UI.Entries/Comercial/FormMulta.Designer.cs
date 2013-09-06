@@ -40,9 +40,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.kryptonPanel1 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.panelPadrao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).BeginInit();
             this.Principal.SuspendLayout();
             this.kryptonTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -56,7 +56,11 @@
             // panelPadrao
             // 
             this.panelPadrao.Controls.Add(this.kryptonTabControl1);
-            this.panelPadrao.Size = new System.Drawing.Size(621, 260);
+            this.panelPadrao.Size = new System.Drawing.Size(591, 260);
+            // 
+            // panelAtalhos
+            // 
+            this.panelAtalhos.Size = new System.Drawing.Size(28, 260);
             // 
             // Principal
             // 
@@ -72,7 +76,7 @@
             this.Principal.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Principal.Location = new System.Drawing.Point(0, 0);
             this.Principal.Name = "Principal";
-            this.Principal.Size = new System.Drawing.Size(607, 225);
+            this.Principal.Size = new System.Drawing.Size(577, 225);
             this.Principal.TabIndex = 1;
             this.Principal.Tag = "Principal";
             // 
@@ -83,7 +87,7 @@
             this.hlP_LabelSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.hlP_LabelSeparator1.Location = new System.Drawing.Point(3, 3);
             this.hlP_LabelSeparator1.Name = "hlP_LabelSeparator1";
-            this.hlP_LabelSeparator1.Size = new System.Drawing.Size(395, 18);
+            this.hlP_LabelSeparator1.Size = new System.Drawing.Size(365, 19);
             this.hlP_LabelSeparator1.TabIndex = 5;
             this.hlP_LabelSeparator1.TabStop = false;
             // 
@@ -99,16 +103,17 @@
             this.txtCodigo._Regex = null;
             this.txtCodigo._Table = "Multas";
             this.txtCodigo._TamanhoComponente = 107;
-            this.txtCodigo._TamanhoMaiorLabel = 150;
-            this.txtCodigo._Visible = true;
+            this.txtCodigo._TamanhoMaiorLabel = 120;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(108, 27);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(108, 3, 15, 3);
+            this.txtCodigo.Location = new System.Drawing.Point(78, 28);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(78, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(152, 21);
             this.txtCodigo.TabIndex = 0;
@@ -125,16 +130,17 @@
             this.txtxNome._Regex = null;
             this.txtxNome._Table = "Multas";
             this.txtxNome._TamanhoComponente = 217;
-            this.txtxNome._TamanhoMaiorLabel = 150;
-            this.txtxNome._Visible = true;
+            this.txtxNome._TamanhoMaiorLabel = 120;
             this.txtxNome.BackColor = System.Drawing.Color.Transparent;
             this.txtxNome.Base = null;
+            this.txtxNome.bConfiguracao = false;
             this.txtxNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxNome.Color = System.Drawing.Color.White;
-            this.txtxNome.Location = new System.Drawing.Point(116, 54);
-            this.txtxNome.Margin = new System.Windows.Forms.Padding(116, 3, 15, 3);
+            this.txtxNome.Location = new System.Drawing.Point(86, 55);
+            this.txtxNome.Margin = new System.Windows.Forms.Padding(86, 3, 15, 3);
             this.txtxNome.MaxLength = 32767;
             this.txtxNome.Name = "txtxNome";
+            this.txtxNome.objConfigComponenteModel = null;
             this.txtxNome.ReadOnly = false;
             this.txtxNome.Size = new System.Drawing.Size(254, 21);
             this.txtxNome.TabIndex = 3;
@@ -151,16 +157,17 @@
             this.txtxDescricao._Regex = null;
             this.txtxDescricao._Table = "Multas";
             this.txtxDescricao._TamanhoComponente = 245;
-            this.txtxDescricao._TamanhoMaiorLabel = 150;
-            this.txtxDescricao._Visible = true;
+            this.txtxDescricao._TamanhoMaiorLabel = 120;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
+            this.txtxDescricao.bConfiguracao = false;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxDescricao.Color = System.Drawing.Color.White;
-            this.txtxDescricao.Location = new System.Drawing.Point(97, 81);
-            this.txtxDescricao.Margin = new System.Windows.Forms.Padding(97, 3, 15, 3);
+            this.txtxDescricao.Location = new System.Drawing.Point(67, 82);
+            this.txtxDescricao.Margin = new System.Windows.Forms.Padding(67, 3, 15, 3);
             this.txtxDescricao.MaxLength = 10;
             this.txtxDescricao.Name = "txtxDescricao";
+            this.txtxDescricao.objConfigComponenteModel = null;
             this.txtxDescricao.ReadOnly = false;
             this.txtxDescricao.Size = new System.Drawing.Size(301, 21);
             this.txtxDescricao.TabIndex = 2;
@@ -175,14 +182,14 @@
             this.nudpPercentual._Regex = null;
             this.nudpPercentual._Table = "Multas";
             this.nudpPercentual._TamanhoComponente = 118;
-            this.nudpPercentual._TamanhoMaiorLabel = 150;
-            this.nudpPercentual._Visible = true;
+            this.nudpPercentual._TamanhoMaiorLabel = 120;
             this.nudpPercentual.BackColor = System.Drawing.Color.Transparent;
             this.nudpPercentual.Base = null;
+            this.nudpPercentual.bConfiguracao = false;
             this.nudpPercentual.Color = System.Drawing.Color.White;
             this.nudpPercentual.DecimalPlaces = 2;
-            this.nudpPercentual.Location = new System.Drawing.Point(41, 108);
-            this.nudpPercentual.Margin = new System.Windows.Forms.Padding(41, 3, 15, 3);
+            this.nudpPercentual.Location = new System.Drawing.Point(11, 109);
+            this.nudpPercentual.Margin = new System.Windows.Forms.Padding(11, 3, 15, 3);
             this.nudpPercentual.Maximum = new decimal(new int[] {
             9,
             0,
@@ -194,6 +201,7 @@
             0,
             0});
             this.nudpPercentual.Name = "nudpPercentual";
+            this.nudpPercentual.objConfigComponenteModel = null;
             this.nudpPercentual.ReadOnly = false;
             this.nudpPercentual.Size = new System.Drawing.Size(230, 22);
             this.nudpPercentual.TabIndex = 4;
@@ -215,14 +223,14 @@
             this.nudnDias._Regex = null;
             this.nudnDias._Table = "Multas";
             this.nudnDias._TamanhoComponente = 117;
-            this.nudnDias._TamanhoMaiorLabel = 150;
-            this.nudnDias._Visible = true;
+            this.nudnDias._TamanhoMaiorLabel = 120;
             this.nudnDias.BackColor = System.Drawing.Color.Transparent;
             this.nudnDias.Base = null;
+            this.nudnDias.bConfiguracao = false;
             this.nudnDias.Color = System.Drawing.Color.White;
             this.nudnDias.DecimalPlaces = 2;
-            this.nudnDias.Location = new System.Drawing.Point(63, 136);
-            this.nudnDias.Margin = new System.Windows.Forms.Padding(63, 3, 15, 3);
+            this.nudnDias.Location = new System.Drawing.Point(33, 137);
+            this.nudnDias.Margin = new System.Windows.Forms.Padding(33, 3, 15, 3);
             this.nudnDias.Maximum = new decimal(new int[] {
             9,
             0,
@@ -234,6 +242,7 @@
             0,
             0});
             this.nudnDias.Name = "nudnDias";
+            this.nudnDias.objConfigComponenteModel = null;
             this.nudnDias.ReadOnly = false;
             this.nudnDias.Size = new System.Drawing.Size(207, 22);
             this.nudnDias.TabIndex = 4;
@@ -264,7 +273,7 @@
             this.kryptonTabControl1.Name = "kryptonTabControl1";
             this.kryptonTabControl1.PreserveTabColor = false;
             this.kryptonTabControl1.SelectedIndex = 0;
-            this.kryptonTabControl1.Size = new System.Drawing.Size(615, 254);
+            this.kryptonTabControl1.Size = new System.Drawing.Size(585, 254);
             this.kryptonTabControl1.TabIndex = 4;
             this.kryptonTabControl1.UseExtendedLayout = false;
             // 
@@ -275,7 +284,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(607, 225);
+            this.tabPage1.Size = new System.Drawing.Size(577, 225);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "Principal";
@@ -292,7 +301,7 @@
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PersistentColors = false;
-            this.kryptonPanel1.Size = new System.Drawing.Size(607, 225);
+            this.kryptonPanel1.Size = new System.Drawing.Size(577, 225);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // FormMulta
@@ -310,10 +319,9 @@
             this.Text = "Multas";
             this.Load += new System.EventHandler(this.FormMulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).EndInit();
             this.panelPadrao.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).EndInit();
             this.Principal.ResumeLayout(false);
             this.kryptonTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

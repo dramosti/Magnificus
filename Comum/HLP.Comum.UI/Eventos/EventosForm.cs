@@ -101,17 +101,40 @@ namespace HLP.Comum.UI.Eventos
                 grid.KeyDown += new KeyEventHandler(grid_KeyDown);
             }
 
-            foreach (Control flp in iConfigFormulario.lFlowLayoutPanel)
-            {
-                int iTabMax = flp.Controls.OfType<UserControl>().Where(c => c.GetType() != typeof(HLP_LabelSeparator)).Max(c => c.TabIndex);
-                var dados = flp.Controls.OfType<UserControl>().Where(c => c.GetType() != typeof(HLP_LabelSeparator)).FirstOrDefault(c => c.TabIndex == iTabMax);
+            // Muda TabPage apos sair do foco do último componente.  **VERIFICAR**
 
-                if (dados != null)
+
+            List<Control> lGroups;
+            foreach (TabPage tab in iConfigFormulario.GetTabPages())
+            {
+                lGroups = iConfigFormulario.lControl.Where(c => c.GetType() == typeof(HLP_Group)).Where(c => (c as HLP_Group)._sNameTabPage == tab.Name).ToList();
+
+                if (lGroups != null)
                 {
-                    dados.Leave -= new EventHandler(dados_Leave);
-                    dados.Leave += new EventHandler(dados_Leave);
+                    if (lGroups.Count() > 0)
+                    {
+                        int iMaxTabindex = lGroups.Select(c => c.TabIndex).Max();
+                        HLP_Group group = lGroups.FirstOrDefault(c => c.TabIndex == iMaxTabindex) as HLP_Group;
+                        iMaxTabindex = group.lControl.Select(c => c.TabIndex).Max();
+                        UserControlBase ctr = group.lControl.FirstOrDefault(c => c.TabIndex == iMaxTabindex);
+                        ctr.Leave -= new EventHandler(dados_Leave);
+                        ctr.Leave += new EventHandler(dados_Leave);
+                    }
                 }
             }
+
+
+            //foreach (Control flp in iConfigFormulario.lFlowLayoutPanel)
+            //{
+            //    int iTabMax = flp.Controls.OfType<UserControl>().Where(c => c.GetType() != typeof(HLP_LabelSeparator)).Max(c => c.TabIndex);
+            //    var dados = flp.Controls.OfType<UserControl>().Where(c => c.GetType() != typeof(HLP_LabelSeparator)).FirstOrDefault(c => c.TabIndex == iTabMax);
+
+            //    if (dados != null)
+            //    {
+            //        dados.Leave -= new EventHandler(dados_Leave);
+            //        dados.Leave += new EventHandler(dados_Leave);
+            //    }
+            //}
         }
 
 
@@ -119,9 +142,11 @@ namespace HLP.Comum.UI.Eventos
         {
             try
             {
-                AC.ExtendedRenderer.Navigator.KryptonTabControl tabControl = (sender as UserControl).Parent.Parent.Parent.Parent as AC.ExtendedRenderer.Navigator.KryptonTabControl;
+                TabPage tab = iConfigFormulario.GetTabPages().FirstOrDefault(c => c.Name == (sender as UserControlBase)._sNameTabPage);
 
-                int iPosicaoPage = tabControl.TabPages.IndexOf((sender as UserControl).Parent.Parent.Parent as TabPage);
+                AC.ExtendedRenderer.Navigator.KryptonTabControl tabControl = tab.Parent as AC.ExtendedRenderer.Navigator.KryptonTabControl;
+
+                int iPosicaoPage = tabControl.TabPages.IndexOf(tab);
                 if ((tabControl.TabPages.Count - 1) > iPosicaoPage)
                 {
                     tabControl.SelectedTab = tabControl.TabPages[iPosicaoPage + 1];
@@ -294,21 +319,18 @@ namespace HLP.Comum.UI.Eventos
 
 
         #region ContextMenuStrip
-        void SavePositionsComponent(List<Control> lComponentes)
+        void SavePositionsComponent(List<UserControlBase> lComponentes)
         {
-
+            UserControlBase ctr;
             for (int i = 0; i < lComponentes.Count(); i++)
             {
-                if (lComponentes[i].GetType().BaseType == typeof(UserControlBase))
-                {
-                    UserControlBase ctr = lComponentes[i] as UserControlBase;
+                ctr = lComponentes[i];
 
-                    if (ctr.objConfigComponenteModel != null)
-                    {
-                        ctr.objConfigComponenteModel.objConfigCompUsu.nOrder = i;
-                        ctr.objConfigComponenteModel.objConfigCompUsu.xLabelGroup = ctr._LabelGroup.Name;
-                        iConfigComponenteService.Save(ctr.objConfigComponenteModel);
-                    }
+                if (ctr.objConfigComponenteModel != null)
+                {
+                    ctr.objConfigComponenteModel.objConfigCompUsu.nOrder = i;
+                    ctr.objConfigComponenteModel.objConfigCompUsu.xLabelGroup = ctr._HlpGroup.Name;
+                    iConfigComponenteService.Save(ctr.objConfigComponenteModel);
                 }
             }
         }
@@ -355,9 +377,7 @@ namespace HLP.Comum.UI.Eventos
             if (objFrm.bAlterou)
             {
                 iConfigComponenteService.Save(((ctx.Tag as UserControlBase).objConfigComponenteModel));
-                ((ctx.Tag as UserControlBase))._LabelGroup.ConfigMaiorLabel();
-
-
+                ((ctx.Tag as UserControlBase))._HlpGroup.ConfigMaiorLabel();
             }
             (ctx.Tag as UserControlBase).bConfiguracao = false;
         }
@@ -367,7 +387,7 @@ namespace HLP.Comum.UI.Eventos
             {
                 ContextMenuStrip ctx = (sender as ToolStripMenuItem).GetContextMenuStrip();
                 (ctx.Tag as UserControlBase).MoveUp();
-                this.SavePositionsComponent((ctx.Tag as UserControlBase)._LabelGroup.lComponentesBySerparador);
+                this.SavePositionsComponent((ctx.Tag as UserControlBase)._HlpGroup.lControl);
             }
             catch (System.Exception ex)
             {
@@ -380,7 +400,7 @@ namespace HLP.Comum.UI.Eventos
             {
                 ContextMenuStrip ctx = (sender as ToolStripMenuItem).GetContextMenuStrip();
                 (ctx.Tag as UserControlBase).MoveDown();
-                this.SavePositionsComponent((ctx.Tag as UserControlBase)._LabelGroup.lComponentesBySerparador);
+                this.SavePositionsComponent((ctx.Tag as UserControlBase)._HlpGroup.lControl);
 
             }
             catch (System.Exception ex)
@@ -435,7 +455,7 @@ namespace HLP.Comum.UI.Eventos
                 //controle.TabIndex = iPosicao;
                 //controle._LabelGroup = sepSelect;
                 //lteste = iConfigFormulario.lControl.Where(c => (c.Parent != null ? c.Parent.Name : "") == controle.Parent.Name).ToList();
-                this.SavePositionsComponent(lteste);//controle._LabelGroup.lComponentesBySerparador);
+                //this.SavePositionsComponent(lteste);//controle._LabelGroup.lComponentesBySerparador);
 
             }
             catch (System.Exception ex)

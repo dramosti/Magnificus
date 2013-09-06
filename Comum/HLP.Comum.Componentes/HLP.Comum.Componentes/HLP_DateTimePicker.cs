@@ -15,14 +15,13 @@ namespace HLP.Comum.Components
     [ToolboxBitmap(typeof(DateTimePicker))]
     public partial class HLP_DateTimePicker : UserControlBase
     {
-
         public HLP_DateTimePicker()
         {
             InitializeComponent();
+            base.Initialize();
             controleBase = this.dtp;
             lblBase = this.lblDescricao;
         }
-
         public enum CampoObrigatorio
         {
             SIM,
@@ -56,8 +55,66 @@ namespace HLP.Comum.Components
         public string CustomFormat { get { return dtp.CustomFormat; } set { dtp.CustomFormat = value; } }
         [Category("HLP")]
         public DateTime Value { get { return dtp.Value; } set { dtp.Value = value; } }
+        [Category("HLP")]
+        [Description("Label no modo superior ?")]
+        public bool _LabelSuperior
+        {
+            get { return _labelSuperior; }
+            set
+            {
+                _labelSuperior = value;
+                if (value)
+                {
+                    this.InitializeComponentModoLeftToRight();
+                }
+                else
+                {
+                    this.InitializeComponentModoTopDown();
 
-      
+                }
+            }
+        }
+
+
+        private void InitializeComponentModoTopDown()
+        {
+            int iTamanhoTxt = this.dtp.Width;
+            this.dtp.Dock = System.Windows.Forms.DockStyle.Fill;
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+            // 
+            // HLP_ComboBox
+            // 
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.Size = new System.Drawing.Size((lblBase.Width + iTamanhoTxt), 22); ;
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        private void InitializeComponentModoLeftToRight()
+        {
+            this.dtp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dtp.Location = new System.Drawing.Point(0, 13);
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+
+            this.Height = 35;
+            this.Width = dtp.Width;
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
 
 
 
@@ -116,5 +173,7 @@ namespace HLP.Comum.Components
         {
             this.Height = 21;
         }
+
+       
     }
 }

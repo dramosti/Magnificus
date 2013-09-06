@@ -5,10 +5,8 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
-using System.Xml.Linq;
-using HLP.Comum.Models;
 
 namespace HLP.Comum.Components
 {
@@ -18,14 +16,13 @@ namespace HLP.Comum.Components
         public HLP_ComboBox()
         {
             InitializeComponent();
+            base.Initialize();
             controleBase = this.cbx;
             lblBase = this.lblDescricao;
         }
-
-
         [Editor(@"System.Windows.Forms.Design.StringCollectionEditor," +
-        "System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
-       typeof(System.Drawing.Design.UITypeEditor))]
+      "System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+     typeof(System.Drawing.Design.UITypeEditor))]
         [TypeConverter(typeof(CsvConverter))]
         [Category("HLP")]
         public List<String> _Itens
@@ -186,7 +183,25 @@ namespace HLP.Comum.Components
         [Category("HLP")]
         public object SelectedValue { get { return (cbx.SelectedValue != null ? Convert.ToInt32(cbx.SelectedValue) : 0); } set { cbx.SelectedValue = value; } }
 
-  
+        [Category("HLP")]
+        [Description("Label no modo superior ?")]
+        public bool _LabelSuperior
+        {
+            get { return _labelSuperior; }
+            set
+            {
+                _labelSuperior = value;
+                if (value)
+                {
+                    this.InitializeComponentModoLeftToRight();
+                }
+                else
+                {
+                    this.InitializeComponentModoTopDown();
+
+                }
+            }
+        }
 
         private void cbx_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -262,6 +277,54 @@ namespace HLP.Comum.Components
                 _TamanhoComponente = 80;
             }
         }
+
+
+
+        private void InitializeComponentModoTopDown()
+        {
+            int iTamanhoCbx = this.cbx.Width;
+
+            this.cbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+            // 
+            // HLP_ComboBox
+            // 
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.Size = new System.Drawing.Size((lblBase.Width + iTamanhoCbx), 21);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        private void InitializeComponentModoLeftToRight()
+        {
+            int iWidth = this.cbx.Width;
+            this.cbx.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbx.Location = new System.Drawing.Point(0, 13);
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+
+            if (lblBase.Width > iWidth)
+                iWidth = lblBase.Width;
+            cbx.Width = iWidth;
+            this.Size = new Size(iWidth, 35);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
+
+       
 
 
     }

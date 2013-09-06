@@ -138,7 +138,7 @@ namespace HLP.Comum.UI.Metodos
                     #region Controles Componentes
                     if ((ctr.GetType() == typeof(HLP_TextBox)))
                     {
-                        (ctr as UserControlBase).CarregaComponente();
+                        (ctr as UserControlBase).CarregaComponente(); //**VERIFICAR**
                     }
                     else
                     {
@@ -257,9 +257,8 @@ namespace HLP.Comum.UI.Metodos
             {
                 (ltabs[0].Parent as AC.ExtendedRenderer.Navigator.KryptonTabControl).SelectedTab = ltabs[0];
             }
-
-            List<Control> lctr = lControles.Where(C => C.Visible == true && C.GetType() != typeof(HLP_LabelSeparator)).ToList();
-
+            List<Control> lctr = lControles.Where(c => c.GetType().BaseType == typeof(UserControlBase)).ToList();//.Where(c => c.GetPropertyValue("_sNameTabPage").ToString() == ltabs[0].Name).OrderBy(c => c.TabIndex).ToList();
+            lctr = lctr.Where(c => c.GetPropertyValue("_sNameTabPage").ToString() == ltabs[0].Name).OrderBy(c => c.TabIndex).ToList();
             if (lctr.Count > 1)
             {
                 lctr[1].Focus();

@@ -21,6 +21,7 @@ namespace HLP.Comum.Components
         public HLP_MaskedTextBox()
         {
             InitializeComponent();
+            base.Initialize();
             controleBase = this.msk;
             lblBase = this.lblDescricao;
         }
@@ -30,6 +31,28 @@ namespace HLP.Comum.Components
             CNPJ,
             CPF,
             IE
+        }
+
+        [Category("HLP")]
+        [Description("Label no modo superior ?")]
+        public bool _LabelSuperior
+        {
+            get { return _labelSuperior; }
+            set
+            {
+                _labelSuperior = value;
+                if (value)
+                {
+                    this.InitializeComponentModoLeftToRigth();
+                }
+                else
+                {
+                    this.InitializeComponentModoTopToDown();
+
+                }
+
+
+            }
         }
         [Category("HLP")]
         public override string Text { get { return msk.Text; } set { msk.Text = value; } }
@@ -181,6 +204,61 @@ namespace HLP.Comum.Components
                 bValida = Convert.ToBoolean(Util.ValidarInscricaoEstadual(this.Text, this._UF));
             }
             return bValida;
+        }
+
+
+        void InitializeComponentModoTopToDown()
+        {
+            int iTamanhoTxt = this.msk.Width;
+
+            this.msk.Dock = System.Windows.Forms.DockStyle.Fill;
+
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.Size = new System.Drawing.Size((lblBase.Width + iTamanhoTxt), 22);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+
+
+
+        }
+        void InitializeComponentModoLeftToRigth()
+        {
+            int iWidth = this.msk.Width;
+            // 
+            // txt
+            //            
+            this.msk.Dock = System.Windows.Forms.DockStyle.Left;
+            this.msk.Location = new System.Drawing.Point(0, 13);
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+            // 
+            // HLP_MASKTEXTBOX
+            // 
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+
+            if (lblBase.Width > iWidth)
+                iWidth = lblBase.Width;
+            this.msk.Width = iWidth;
+            this.Size = new Size(iWidth, 35);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+
+
         }
     }
 }

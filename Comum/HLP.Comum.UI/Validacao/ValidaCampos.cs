@@ -66,10 +66,13 @@ namespace HLP.Comum.UI.Validacao
 
                             if (ctr.GetType() == typeof(HLP_ComboBox))
                             {
-                                ((HLP_ComboBox)ctr).errorProvider1.Dispose();
+                                //((HLP_ComboBox)ctr).errorProvider1.Dispose();
+                                (ctr as UserControlBase).ChangeColorLabel(false);
                                 if (((HLP_ComboBox)ctr)._Obrigatorio == HLP_ComboBox.CampoObrigatorio.SIM && ((HLP_ComboBox)ctr).SelectedIndex == -1)
                                 {
-                                    ((HLP_ComboBox)ctr).errorProvider1.SetError(((HLP_ComboBox)ctr), CAMPO_OBRIGATORIO);
+                                    //((HLP_ComboBox)ctr).errorProvider1.SetError(((HLP_ComboBox)ctr), CAMPO_OBRIGATORIO);
+
+                                    (ctr as UserControlBase).ChangeColorLabel(true);
                                     iErros++;
                                     if (firstControl == null) { firstControl = ctr; }
                                 }
@@ -81,10 +84,12 @@ namespace HLP.Comum.UI.Validacao
 
                             else if (ctr.GetType() == typeof(HLP_DateTimePicker))
                             {
-                                ((HLP_DateTimePicker)ctr).errorProvider1.Dispose();
+                                //((HLP_DateTimePicker)ctr).errorProvider1.Dispose();
+                                (ctr as UserControlBase).ChangeColorLabel(false);
                                 if (((HLP_DateTimePicker)ctr)._Obrigatorio == UserControlBase.CampoObrigatorio.SIM && ((HLP_DateTimePicker)ctr).Value == null)
                                 {
-                                    ((HLP_DateTimePicker)ctr).errorProvider1.SetError(((HLP_DateTimePicker)ctr), CAMPO_OBRIGATORIO);
+                                    //((HLP_DateTimePicker)ctr).errorProvider1.SetError(((HLP_DateTimePicker)ctr), CAMPO_OBRIGATORIO);
+                                    (ctr as UserControlBase).ChangeColorLabel(true);
                                     iErros++;
                                     if (firstControl == null) { firstControl = ctr; }
                                 }
@@ -102,7 +107,8 @@ namespace HLP.Comum.UI.Validacao
                                 ((HLP_MaskedTextBox)ctr).MaskFormat = MaskFormat.IncludeLiterals;
                                 bool MaskValido = true;
 
-                                ((HLP_MaskedTextBox)ctr).errorProvider1.Dispose();
+                                //((HLP_MaskedTextBox)ctr).errorProvider1.Dispose();
+                                (ctr as UserControlBase).ChangeColorLabel(false);
                                 if (((HLP_MaskedTextBox)ctr)._Obrigatorio == HLP_MaskedTextBox.CampoObrigatorio.SIM && ((HLP_MaskedTextBox)ctr)._TpValidacao != HLP_MaskedTextBox.TipoValidacao.DEFAULT)
                                 {
                                     MaskValido = ((HLP_MaskedTextBox)ctr).Valida();
@@ -113,13 +119,15 @@ namespace HLP.Comum.UI.Validacao
                                     }
                                     else if (!MaskValido)
                                     {
-                                        ((HLP_MaskedTextBox)ctr).errorProvider1.SetError(((HLP_MaskedTextBox)ctr), CAMPO_INVALIDO);
+                                        //((HLP_MaskedTextBox)ctr).errorProvider1.SetError(((HLP_MaskedTextBox)ctr), CAMPO_INVALIDO);
+                                        (ctr as UserControlBase).ChangeColorLabel(true);
                                         iErros++;
                                     }
                                 }
                                 else if (((HLP_MaskedTextBox)ctr)._Obrigatorio == HLP_MaskedTextBox.CampoObrigatorio.SIM && sText.Equals(""))
                                 {
-                                    ((HLP_MaskedTextBox)ctr).errorProvider1.SetError(((HLP_MaskedTextBox)ctr), CAMPO_OBRIGATORIO);
+                                    //((HLP_MaskedTextBox)ctr).errorProvider1.SetError(((HLP_MaskedTextBox)ctr), CAMPO_OBRIGATORIO);
+                                    (ctr as UserControlBase).ChangeColorLabel(true);
                                     iErros++;
                                     if (firstControl == null) { firstControl = ctr; }
                                     MaskValido = false;
@@ -131,7 +139,8 @@ namespace HLP.Comum.UI.Validacao
                                     {
                                         if (((HLP_MaskedTextBox)ctr).Mask.Length != ((HLP_MaskedTextBox)ctr).Text.Length)
                                         {
-                                            ((HLP_MaskedTextBox)ctr).errorProvider1.SetError(((HLP_MaskedTextBox)ctr), CAMPO_INVALIDO);
+                                            //((HLP_MaskedTextBox)ctr).errorProvider1.SetError(((HLP_MaskedTextBox)ctr), CAMPO_INVALIDO);
+                                            (ctr as UserControlBase).ChangeColorLabel(true);
                                             iErros++;
                                             if (firstControl == null) { firstControl = ctr; }
                                         }
@@ -143,7 +152,8 @@ namespace HLP.Comum.UI.Validacao
 
                                             if (((HLP_MaskedTextBox)ctr).Mask.Length != ((HLP_MaskedTextBox)ctr).Text.Length)
                                             {
-                                                ((HLP_MaskedTextBox)ctr).errorProvider1.SetError(((HLP_MaskedTextBox)ctr), CAMPO_INVALIDO);
+                                                //((HLP_MaskedTextBox)ctr).errorProvider1.SetError(((HLP_MaskedTextBox)ctr), CAMPO_INVALIDO);
+                                                (ctr as UserControlBase).ChangeColorLabel(true);
                                                 iErros++;
                                                 if (firstControl == null) { firstControl = ctr; }
                                             }
@@ -159,10 +169,12 @@ namespace HLP.Comum.UI.Validacao
 
                             else if (ctr.GetType() == typeof(HLP_NumericUpDown))
                             {
-                                ((HLP_NumericUpDown)ctr).errorProvider1.Dispose();
+                                //((HLP_NumericUpDown)ctr).errorProvider1.Dispose();
+                                (ctr as UserControlBase).ChangeColorLabel(false);
                                 if (((HLP_NumericUpDown)ctr)._Obrigatorio == HLP_NumericUpDown.CampoObrigatorio.SIM && ((HLP_NumericUpDown)ctr).Text.Equals(""))
                                 {
-                                    ((HLP_NumericUpDown)ctr).errorProvider1.SetError(((HLP_NumericUpDown)ctr), CAMPO_OBRIGATORIO);
+                                    //((HLP_NumericUpDown)ctr).errorProvider1.SetError(((HLP_NumericUpDown)ctr), CAMPO_OBRIGATORIO);
+                                    (ctr as UserControlBase).ChangeColorLabel(true);
                                     iErros++;
                                     if (firstControl == null) { firstControl = ctr; }
                                 }
@@ -175,10 +187,12 @@ namespace HLP.Comum.UI.Validacao
                             else if (ctr.GetType() == typeof(HLP_TextBox))
                             {
                                 bool TextValido = true;
-                                ((HLP_TextBox)ctr).errorProvider1.Dispose();
+                                //((HLP_TextBox)ctr).errorProvider1.Dispose();
+                                (ctr as UserControlBase).ChangeColorLabel(false);
                                 if (((HLP_TextBox)ctr)._Obrigatorio == HLP_TextBox.CampoObrigatorio.SIM && ((HLP_TextBox)ctr).Text.Equals(""))
                                 {
-                                    ((HLP_TextBox)ctr).errorProvider1.SetError(((HLP_TextBox)ctr), CAMPO_OBRIGATORIO);
+                                    //((HLP_TextBox)ctr).errorProvider1.SetError(((HLP_TextBox)ctr), CAMPO_OBRIGATORIO);
+                                    (ctr as UserControlBase).ChangeColorLabel(true);
                                     iErros++;
                                     if (firstControl == null) { firstControl = ctr; }
                                     TextValido = false;
@@ -192,7 +206,8 @@ namespace HLP.Comum.UI.Validacao
                                             reg = new Regex(((HLP_TextBox)ctr)._Regex);
                                             if (!reg.IsMatch(((HLP_TextBox)ctr).Text))
                                             {
-                                                ((HLP_TextBox)ctr).errorProvider1.SetError(((HLP_TextBox)ctr), CAMPO_INVALIDO);
+                                                //((HLP_TextBox)ctr).errorProvider1.SetError(((HLP_TextBox)ctr), CAMPO_INVALIDO);
+                                                (ctr as UserControlBase).ChangeColorLabel(true);
                                                 iErros++;
                                                 if (firstControl == null) { firstControl = ctr; }
                                             }
@@ -202,7 +217,8 @@ namespace HLP.Comum.UI.Validacao
                                             reg = new Regex(((HLP_TextBox)ctr)._Regex);
                                             if (!reg.IsMatch(((HLP_TextBox)ctr).Text))
                                             {
-                                                ((HLP_TextBox)ctr).errorProvider1.SetError(((HLP_TextBox)ctr), CAMPO_INVALIDO);
+                                                //((HLP_TextBox)ctr).errorProvider1.SetError(((HLP_TextBox)ctr), CAMPO_INVALIDO);
+                                                (ctr as UserControlBase).ChangeColorLabel(true);
                                                 iErros++;
                                                 if (firstControl == null) { firstControl = ctr; }
                                             }
@@ -217,10 +233,12 @@ namespace HLP.Comum.UI.Validacao
 
                             else if (ctr.GetType() == typeof(HLP_Pesquisa))
                             {
-                                ((HLP_Pesquisa)ctr).errorProvider1.Dispose();
+                                //((HLP_Pesquisa)ctr).errorProvider1.Dispose();
+                                (ctr as UserControlBase).ChangeColorLabel(false);
                                 if (((HLP_Pesquisa)ctr)._Obrigatorio == HLP_Pesquisa.CampoObrigatorio.SIM && ((HLP_Pesquisa)ctr).Value == 0)
                                 {
-                                    ((HLP_Pesquisa)ctr).errorProvider1.SetError(((HLP_Pesquisa)ctr), CAMPO_OBRIGATORIO);
+                                    //((HLP_Pesquisa)ctr).errorProvider1.SetError(((HLP_Pesquisa)ctr), CAMPO_OBRIGATORIO);
+                                    (ctr as UserControlBase).ChangeColorLabel(true);
                                     iErros++;
                                     if (firstControl == null) { firstControl = ctr; }
                                 }
@@ -313,7 +331,8 @@ namespace HLP.Comum.UI.Validacao
                     if (KryptonMessageBox.Show(null, sMessage + "\ndeseja assim mesmo confirmar o cadastro?", "A V I S O", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                     {
                         iErros++;
-                        maskIE.errorProvider1.SetError(maskIE, CAMPO_INVALIDO);
+                        //maskIE.errorProvider1.SetError(maskIE, CAMPO_INVALIDO);
+                        (maskIE as UserControlBase).ChangeColorLabel(true);
                     }
 
                 }
@@ -340,32 +359,41 @@ namespace HLP.Comum.UI.Validacao
 
         public void LimpaErros()
         {
-            foreach (Control ctr in iConfigFormulario.lControl)
+            try
             {
-                if (ctr.GetType() == typeof(HLP_ComboBox))
+                foreach (Control ctr in iConfigFormulario.lControl.Where(c=>c.GetType().BaseType == typeof(UserControlBase)))
                 {
-                    ((HLP_ComboBox)ctr).errorProvider1.Dispose();
+                    //if (ctr.GetType() == typeof(HLP_ComboBox))
+                    //{
+                    //    ((HLP_ComboBox)ctr).errorProvider1.Dispose();
+                    //}
+                    //else if (ctr.GetType() == typeof(HLP_DateTimePicker))
+                    //{
+                    //    ((HLP_DateTimePicker)ctr).errorProvider1.Dispose();
+                    //}
+                    //else if (ctr.GetType() == typeof(HLP_MaskedTextBox))
+                    //{
+                    //    ((HLP_MaskedTextBox)ctr).errorProvider1.Dispose();
+                    //}
+                    //else if (ctr.GetType() == typeof(HLP_NumericUpDown))
+                    //{
+                    //    ((HLP_NumericUpDown)ctr).errorProvider1.Dispose();
+                    //}
+                    //else if (ctr.GetType() == typeof(HLP_TextBox))
+                    //{
+                    //    ((HLP_TextBox)ctr).errorProvider1.Dispose();
+                    //}
+                    //else if (ctr.GetType() == typeof(HLP_Pesquisa))
+                    //{
+                    //    ((HLP_Pesquisa)ctr).errorProvider1.Dispose();
+                    //}
+                    (ctr as UserControlBase).ChangeColorLabel(false);
                 }
-                else if (ctr.GetType() == typeof(HLP_DateTimePicker))
-                {
-                    ((HLP_DateTimePicker)ctr).errorProvider1.Dispose();
-                }
-                else if (ctr.GetType() == typeof(HLP_MaskedTextBox))
-                {
-                    ((HLP_MaskedTextBox)ctr).errorProvider1.Dispose();
-                }
-                else if (ctr.GetType() == typeof(HLP_NumericUpDown))
-                {
-                    ((HLP_NumericUpDown)ctr).errorProvider1.Dispose();
-                }
-                else if (ctr.GetType() == typeof(HLP_TextBox))
-                {
-                    ((HLP_TextBox)ctr).errorProvider1.Dispose();
-                }
-                else if (ctr.GetType() == typeof(HLP_Pesquisa))
-                {
-                    ((HLP_Pesquisa)ctr).errorProvider1.Dispose();
-                }
+            }
+            catch (System.Exception)
+            {
+
+                throw;
             }
 
         }

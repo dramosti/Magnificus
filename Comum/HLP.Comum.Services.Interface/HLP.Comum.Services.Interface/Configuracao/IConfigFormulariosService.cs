@@ -12,7 +12,6 @@ namespace HLP.Comum.Services.Interface.Configuracao
     {
 
         List<Control> lControl { get; set; }
-        List<Control> lFlowLayoutPanel { get; set; }
         ConfigFormulariosModel objConfigFormularioModel { get; set; }
         bool bEndSincronizacao { get; set; }
 
@@ -20,8 +19,7 @@ namespace HLP.Comum.Services.Interface.Configuracao
         void Save(ConfigFormulariosModel formulario);
         void Delete(string sNameFormulario, int idUsuario);
         ConfigFormulariosModel GetFormulario(string xNameFormulario, int idUser);
-        ConfigFormulariosModel GetFormulario(int idFormulario, bool bChildren = false, int idUser = 0);
-        void MudaPosicaoScrollFlowPanelTabControl();
+        ConfigFormulariosModel GetFormulario(int idFormulario, bool bChildren = false, int idUser = 0);        
         void SicnronizaRelatorios();
         void BeginTransaction();
         void CommitTransaction();

@@ -54,17 +54,17 @@
             this.tsmConfigurar,
             this.tsmMoverPara});
             this.ctxConfig.Name = "contextMenuStrip1";
-            this.ctxConfig.Size = new System.Drawing.Size(153, 76);
+            this.ctxConfig.Size = new System.Drawing.Size(144, 54);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(140, 6);
             // 
             // tsmConfigurar
             // 
             this.tsmConfigurar.Name = "tsmConfigurar";
-            this.tsmConfigurar.Size = new System.Drawing.Size(152, 22);
+            this.tsmConfigurar.Size = new System.Drawing.Size(143, 22);
             this.tsmConfigurar.Text = "Propriedades";
             // 
             // tsmMoverPara
@@ -75,7 +75,7 @@
             this.tsmSeparador,
             this.tsmTabPage});
             this.tsmMoverPara.Name = "tsmMoverPara";
-            this.tsmMoverPara.Size = new System.Drawing.Size(152, 22);
+            this.tsmMoverPara.Size = new System.Drawing.Size(143, 22);
             this.tsmMoverPara.Text = "Mover para";
             // 
             // tsmMoveUp
@@ -106,8 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControlBase";
-            this.Size = new System.Drawing.Size(143, 24);
+            this.Validated += new System.EventHandler(this.UserControlBase_Validated);
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
             this.ctxConfig.ResumeLayout(false);
             this.ResumeLayout(false);

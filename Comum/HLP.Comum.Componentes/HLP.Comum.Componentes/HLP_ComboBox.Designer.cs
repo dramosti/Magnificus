@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLP_ComboBox));
             this.cbx = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.cbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // controleBase
+            // 
+            this.controleBase.Size = new System.Drawing.Size(100, 0);
             // 
             // cbx
             // 
@@ -49,7 +51,7 @@
             this.cbx.DropDownWidth = 116;
             this.cbx.Location = new System.Drawing.Point(63, 0);
             this.cbx.Name = "cbx";
-            this.cbx.Size = new System.Drawing.Size(118, 20);
+            this.cbx.Size = new System.Drawing.Size(137, 20);
             this.cbx.StateActive.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.cbx.StateActive.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -71,13 +73,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbx.StateDisabled.ComboBox.Border.Width = 1;
             this.cbx.StateDisabled.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.cbx.TabIndex = 5;
+            this.cbx.TabIndex = 7;
             this.cbx.ValueMember = "ValueMember";
-            this.cbx.SelectedIndexChanged += new System.EventHandler(this.cbx_SelectedIndexChanged);
-            this.cbx.SelectedValueChanged += new System.EventHandler(this.cbx_SelectedValueChanged);
-            this.cbx.Enter += new System.EventHandler(this.cbx_Enter);
-            this.cbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbx_KeyPress);
-            this.cbx.Leave += new System.EventHandler(this.cbx_Leave);
             // 
             // lblDescricao
             // 
@@ -87,33 +84,24 @@
             this.lblDescricao.Location = new System.Drawing.Point(0, 0);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(63, 13);
-            this.lblDescricao.TabIndex = 1;
+            this.lblDescricao.TabIndex = 6;
             this.lblDescricao.Text = "ComboBox";
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "HLP - Info";
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkRate = 0;
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
             // HLP_ComboBox
             // 
-            this._TamanhoComponente = 81;
+            this._TamanhoComponente = 100;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.cbx);
             this.Controls.Add(this.lblDescricao);
-            this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.Name = "HLP_ComboBox";
-            this.Size = new System.Drawing.Size(181, 21);
-            this.Load += new System.EventHandler(this.HLP_ComboBox_Load);
+            this.Size = new System.Drawing.Size(200, 21);
             ((System.ComponentModel.ISupportInitialize)(this.cbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -125,7 +113,6 @@
 
         public ComponentFactory.Krypton.Toolkit.KryptonComboBox cbx;
         public System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.ToolTip toolTip1;
         public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
