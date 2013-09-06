@@ -152,7 +152,10 @@ type="HLP.UI.Entries.Geral.FormEmpresa, HLP.UI.Entries">
   <object id="formParametrizacao" name="formParametrizacao" singleton="false" scope="request"
 type="HLP.UI.Entries.Parametrizacao.formParametrizacao, HLP.UI.Entries">
   </object>
-
+  
+  <object id="formOrcamentoVenda" name="formOrcamentoVenda" singleton="false" scope="request"
+type="HLP.UI.Sales.Comercial.formOrcamentoVenda, HLP.UI.Sales">
+  </object>
 
   <object id="FormDiaPagamento" name="FormDiaPagamento" singleton="false" scope="request"
     type="HLP.UI.Entries.Financeiro.FormDiaPagamento, HLP.UI.Entries">

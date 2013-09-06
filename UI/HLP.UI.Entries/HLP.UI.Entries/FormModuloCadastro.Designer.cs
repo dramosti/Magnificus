@@ -88,6 +88,7 @@
             this.FormModoEntregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formParametrizacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formOrcamentoVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,7 +118,8 @@
             this.FormListaPrecoToolStripMenuItem1,
             this.FormProdutoLocalizacaoToolStripMenuItem,
             this.FormTipoProdutoToolStripMenuItem,
-            this.FormProdutoToolStripMenuItem});
+            this.FormProdutoToolStripMenuItem,
+            this.formOrcamentoVendaToolStripMenuItem});
             this.comercialToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comercialToolStripMenuItem.Name = "comercialToolStripMenuItem";
             this.comercialToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
@@ -557,8 +559,14 @@
             // formParametrizacaoToolStripMenuItem
             // 
             this.formParametrizacaoToolStripMenuItem.Name = "formParametrizacaoToolStripMenuItem";
-            this.formParametrizacaoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.formParametrizacaoToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.formParametrizacaoToolStripMenuItem.Text = "Parâmetros";
+            // 
+            // formOrcamentoVendaToolStripMenuItem
+            // 
+            this.formOrcamentoVendaToolStripMenuItem.Name = "formOrcamentoVendaToolStripMenuItem";
+            this.formOrcamentoVendaToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.formOrcamentoVendaToolStripMenuItem.Text = "Orçamento";
             // 
             // FormModuloCadastro
             // 
@@ -639,5 +647,6 @@
         private System.Windows.Forms.ToolStripMenuItem FormAcessoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parametrizaçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formParametrizacaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formOrcamentoVendaToolStripMenuItem;
     }
 }

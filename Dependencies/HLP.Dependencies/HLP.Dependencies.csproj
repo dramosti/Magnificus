@@ -71,6 +71,22 @@
       <Project>{C82A94BF-EEC8-483E-BAD1-BE729947B611}</Project>
       <Name>HLP.Comum.Services.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Repository.Implementation.Sales\HLP.Repository.Implementation.Sales.csproj">
+      <Project>{ad58eb1d-bdaf-47f8-95be-9e818d005723}</Project>
+      <Name>HLP.Repository.Implementation.Sales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Repository.Interfaces.Sales\HLP.Repository.Interfaces.Sales.csproj">
+      <Project>{53c9cb41-a523-4110-b629-0c12aabd7511}</Project>
+      <Name>HLP.Repository.Interfaces.Sales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Services.Implementation.Sales\HLP.Services.Implementation.Sales.csproj">
+      <Project>{5347b9b4-3fa0-4fa8-8aeb-b719c8f5d869}</Project>
+      <Name>HLP.Services.Implementation.Sales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HLP.Services.Interfaces.Sales\HLP.Services.Interfaces.Sales.csproj">
+      <Project>{0238ed42-7ea8-492e-a656-a6d0f2f3ba1a}</Project>
+      <Name>HLP.Services.Interfaces.Sales</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Models\HLP.Models\HLP.Models.Entries.csproj">
       <Project>{71CA573C-DBB1-426F-B975-9CC418FC55A0}</Project>
       <Name>HLP.Models.Entries</Name>
