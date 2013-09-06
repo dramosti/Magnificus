@@ -29,6 +29,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
         private List<ConfigComponenteModel> lobjConfigComponente { get; set; }
 
+
         /// <summary>
         /// Busca as Configurações dos componentes salvos na base de dados.
         /// </summary>
@@ -92,20 +93,9 @@ namespace HLP.Comum.Services.Implementation.Configuracao
         /// <param name="tab"></param>
         public void GetInfoCompByTabePage(ConfigTabPageModel tab, List<Control> lControl)
         {
-            List<Control> lControlsContainer = new List<Control>();
-            List<Control> lPesquisa = lControl.Where(c => c.GetType().BaseType == typeof(UserControlBase)).ToList();
-            foreach (Control item in lControl.Where(c => c.GetType() == typeof(HLP_DataGridView)))
-            {
-                lPesquisa.Add(item);
-            }
+            List<Control> lControlsContainer = lControl.Where(c => (c.GetType().BaseType == typeof(UserControlBase)) || (c.GetType() == typeof(HLP_DataGridView))).ToList()
+                .Where(c => c.GetPropertyValue("_sNameTabPage").ToString() == tab.xNameTab).ToList();
 
-            lControlsContainer = lPesquisa.Where(c => (c.Parent.Parent.Parent.Name == tab.xNameTab) && c.GetType() != typeof(HLP_DataGridView)).ToList();
-            if (lControlsContainer.Count() == 0)
-                lControlsContainer = lPesquisa.Where(c => (c.Parent.Parent.Name == tab.xNameTab)).ToList();
-            if (lControlsContainer.Count == 0)
-                lControlsContainer = lPesquisa.Where(c => c.Parent.Name == tab.xNameTab).ToList();
-
-            //this.GetControlsContainerRecursivo(ctr.Controls, lControlsContainer);
             ConfigComponenteModel comp;
             foreach (Control controle in lControlsContainer.Where(c => c.GetType() != typeof(HLP_LabelSeparator)))
             {
@@ -121,28 +111,32 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                         try
                         {
                             #region Component Info
+
+                            UserControlBase objUserControl = controle as UserControlBase;
+
                             //Base Info
-                            comp.xField = controle.ToObject().GetPropertyValue("_Field").ToString();
-                            comp.xTable = controle.ToObject().GetPropertyValue("_Table").ToString();
+                            comp.xField = objUserControl._Field;
+                            comp.xTable = objUserControl._Table;
 
                             // User Info                        
-                            comp.objConfigCompUsu.nOrder = controle.Parent.Controls.IndexOf(controle);
-                            comp.objConfigCompUsu.xLabelText = controle.ToObject().GetPropertyValue("_LabelText").ToString();
-                            comp.objConfigCompUsu.xText = "";// controle.ToObject().GetPropertyValue("_LabelText").ToString(); --Verificar
-                            comp.objConfigCompUsu.stVisible = 1; // Convert.ToBoolean(controle.ToObject().GetPropertyValue("Visible")).ToByte();
+                            comp.objConfigCompUsu.nOrder = controle.Parent.Controls.IndexOf(controle) ;
+                            comp.objConfigCompUsu.xLabelText = objUserControl._LabelText;
+                            comp.objConfigCompUsu.xText = "";//Verificar
+                            comp.objConfigCompUsu.stVisible = 1;
                             comp.objConfigCompUsu.stEnabled = controle.Enabled.ToByte();
-                            if (controle.ToObject().GetPropertyValue("_LabelGroup") != null)
-                                comp.objConfigCompUsu.xLabelGroup = (controle.ToObject().GetPropertyValue("_LabelGroup") as HLP_LabelSeparator).Name;
+                            if (objUserControl._HlpGroup != null)
+                                comp.objConfigCompUsu.xLabelGroup = objUserControl._HlpGroup.Name;
 
                             // the property color is not common for all components.
-                            if (controle.GetType().GetProperties().Where(c => c.Name == "Color").Count() > 0)
+                            try
                             {
                                 Color cor = (Color)controle.ToObject().GetPropertyValue("Color");
                                 comp.objConfigCompUsu.xColor = cor.ToArgb().ToString();
                             }
+                            catch (Exception) { }
 
-                            comp.objConfigCompUsu.xParent = controle.Parent.Parent.Parent != null ? controle.Parent.Parent.Parent.Name : "HLP_Verificar";
-                            comp.objConfigCompUsu.xHelp = controle.ToObject().GetPropertyValue("_Help").ToString();
+                            comp.objConfigCompUsu.xParent = objUserControl._sNameTabPage;
+                            comp.objConfigCompUsu.xHelp = objUserControl._Help;
                             comp.objConfigCompUsu.stAtivo = true.ToByte();//Dafault
                             comp.objConfigCompUsu.stAcesso = true.ToByte(); //Dafault
                             comp.objConfigCompUsu.iTamanhoComponente = controle.Width;
@@ -268,38 +262,23 @@ namespace HLP.Comum.Services.Implementation.Configuracao
         public void SetConfigToComp(List<ConfigComponenteModel> lCompModel, List<Control> lControl)
         {
             bool Upper = CompanyData.stMaiusculo;
-            string sSeparador = "";
-            foreach (ConfigComponenteModel objCompModel in lCompModel)
+            HLP_Group groupSeparador = null;
+            foreach (ConfigComponenteModel objCompModel in lCompModel.Where(c => c.xTypeComp != "HLP_DataGridView"))
             {
                 try
                 {
                     Control controle = lControl.FirstOrDefault(c => c.Name == objCompModel.xName);
-
+                    groupSeparador = null;
                     if (controle != null)
                     {
                         if (controle.GetType().BaseType == typeof(UserControlBase))
                         {
                             try
                             {
+                                groupSeparador = (HLP_Group)lControl.FirstOrDefault(c => c.Name == objCompModel.objConfigCompUsu.xLabelGroup);
                                 (controle as UserControlBase).objConfigComponenteModel = objCompModel;
+                                groupSeparador.Add(controle, (controle as UserControlBase).objConfigComponenteModel.objConfigCompUsu.nOrder);
 
-                                if (sSeparador == "")
-                                {
-                                    if ((controle as UserControlBase)._LabelGroup != null)
-                                    {
-                                        sSeparador = (controle as UserControlBase)._LabelGroup.Name;
-                                        (controle.Parent as FlowLayoutPanel).Controls.SetChildIndex((controle as UserControlBase)._LabelGroup, (controle as UserControlBase).objConfigComponenteModel.objConfigCompUsu.nOrder);
-                                    }
-                                }
-                                if ((controle as UserControlBase)._LabelGroup != null)
-                                {
-                                    if (sSeparador != (controle as UserControlBase)._LabelGroup.Name)
-                                    {
-
-                                        sSeparador = (controle as UserControlBase)._LabelGroup.Name;
-                                        (controle.Parent as FlowLayoutPanel).Controls.SetChildIndex((controle as UserControlBase)._LabelGroup, (controle as UserControlBase).objConfigComponenteModel.objConfigCompUsu.nOrder - 1);
-                                    }
-                                }
                                 if (controle.GetType() == typeof(HLP_TextBox))
                                 {
                                     (controle as UserControlBase).CarregaComponente();
@@ -308,8 +287,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                                 {
                                     #region Component Info
 
-                                    // achar o flowlayoutPanel do componente;
-                                    //flp.Controls.SetChildIndex(control, control.Parent.Controls.IndexOf(control));
                                     controle.TabIndex = objCompModel.objConfigCompUsu.nOrder;
                                     (controle.Parent as FlowLayoutPanel).Controls.SetChildIndex(controle, controle.TabIndex);
                                     controle.SetPropertyValue("_LabelText", objCompModel.objConfigCompUsu.xLabelText);

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Globalization;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 using HLP.Comum.Modules;
-using HLP.Comum.Models;
 
 namespace HLP.Comum.Components
 {
@@ -15,10 +18,12 @@ namespace HLP.Comum.Components
         public HLP_Pesquisa()
         {
             InitializeComponent();
+            base.Initialize();
             controleBase = this.txtDisplay;
             lblBase = this.lblDescricao;
+            //this.Height = 35;
         }
-       
+
 
         private List<string> _listaValoresDisplay = new List<string>();
         [Category("HLP")]
@@ -134,6 +139,25 @@ namespace HLP.Comum.Components
             set;
         }
 
+        [Category("HLP")]
+        [Description("Label no modo superior ?")]
+        public bool _LabelSuperior
+        {
+            get { return _labelSuperior; }
+            set
+            {
+                _labelSuperior = value;
+                if (value)
+                {
+                    this.InitializeComponentModoLeftToRigth();
+                }
+                else
+                {
+                    this.InitializeComponentModoTopToDown();
+                }
+            }
+        }
+
 
         private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -153,9 +177,10 @@ namespace HLP.Comum.Components
 
         private void HLP_Pesquisa_Load(object sender, EventArgs e)
         {
-            this.Height = 21;
+            //this.Height = 35;
             txtDisplay.Height = 20;
-            _TamanhoComponente = 300;
+            _LabelSuperior = _LabelSuperior;
+
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -175,6 +200,57 @@ namespace HLP.Comum.Components
             }
         }
 
+
+        void InitializeComponentModoTopToDown()
+        {
+            int iTamanhoComp = this.txtDisplay.Width + txtPesquisa.Width;
+
+            this.txtDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.Size = new System.Drawing.Size((lblBase.Width + iTamanhoComp), 22);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
+        void InitializeComponentModoLeftToRigth()
+        {
+
+            int iWidth = this.txtDisplay.Width;
+            // 
+            // txt
+            //            
+            this.txtDisplay.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtDisplay.Location = new System.Drawing.Point(0, 13);
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+            // 
+            // HLP_PESQUISA
+            // 
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+
+            if (lblBase.Width > iWidth)
+                iWidth = lblBase.Width;
+            txtDisplay.Width = iWidth;
+            this.Size = new Size((iWidth + txtPesquisa.Width), 35);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+
+
+        }
 
     }
 }

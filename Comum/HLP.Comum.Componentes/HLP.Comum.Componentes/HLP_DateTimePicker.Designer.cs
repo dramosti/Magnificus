@@ -29,24 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLP_DateTimePicker));
-            this.lblDescricao = new System.Windows.Forms.Label();
             this.dtp = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblDescricao = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblDescricao.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(54, 13);
-            this.lblDescricao.TabIndex = 1;
-            this.lblDescricao.Text = "DateTime";
             // 
             // dtp
             // 
@@ -77,34 +64,33 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.dtp.StateDisabled.Border.Width = 1;
             this.dtp.StateDisabled.Content.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.dtp.TabIndex = 3;
-            this.dtp.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
-            this.dtp.Enter += new System.EventHandler(this.dtp_Enter);
-            this.dtp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_KeyPress);
-            this.dtp.Leave += new System.EventHandler(this.dtp_Leave);
+            this.dtp.TabIndex = 5;
             // 
-            // toolTip1
+            // lblDescricao
             // 
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "HLP - Info";
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDescricao.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(54, 13);
+            this.lblDescricao.TabIndex = 4;
+            this.lblDescricao.Text = "DateTime";
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkRate = 0;
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
             // HLP_DateTimePicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.dtp);
             this.Controls.Add(this.lblDescricao);
-            this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.Name = "HLP_DateTimePicker";
             this.Size = new System.Drawing.Size(172, 21);
-            this.Load += new System.EventHandler(this.HLP_DateTimePicker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,9 +99,8 @@
 
         #endregion
 
-        public System.Windows.Forms.Label lblDescricao;
         public ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtp;
-        private System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.Label lblDescricao;
         public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

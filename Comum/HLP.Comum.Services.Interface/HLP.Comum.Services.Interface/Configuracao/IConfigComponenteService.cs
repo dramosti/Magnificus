@@ -5,12 +5,12 @@ using System.Text;
 using HLP.Comum.Infrastructure;
 using HLP.Comum.Models;
 using System.Windows.Forms;
+using HLP.Comum.Components;
 
 namespace HLP.Comum.Services.Interface.Configuracao
 {
     public interface IConfigComponenteService
     {
-
         List<ConfigComponenteModel> GetListaControlesConfigComponenteModel();
         List<ConfigComponenteModel> GetAllCompByTabPage(int idTabPage, int idUsuario);
         InfoFieldModel GetInfoField(string table_name, string column_name);

@@ -14,9 +14,10 @@ namespace HLP.Comum.Components
         public HLP_Button()
         {
             InitializeComponent();
+            base.Initialize();
             base.controleBase = this.btn;
             base.lblBase = this.lblDescricao;
-           
+
         }
 
         [Description("Habilita e desabilita o componente")]
@@ -40,6 +41,11 @@ namespace HLP.Comum.Components
             }
 
         }
+
+        [Category("HLP")]
+        [Description("Label no modo superior ?")]
+        public bool _LabelSuperior { get; set; }
+
 
 
 

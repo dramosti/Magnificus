@@ -23,17 +23,38 @@ namespace HLP.Comum.Components
 
         public HLP_TextBox()
         {
-            base.Initialize();
             InitializeComponent();
             base.controleBase = this.txt;
             base.lblBase = this.lblDescricao;
-            this.ctxConfig.Tag = this;
-            //tsmMoveUp.Click += tsmMoveUp_Click;
-            //tsmMoveDown.Click += tsmMoveDown_Click;
-            lblBase.Click += lblBase_Click;
+            base.Initialize();
+            this.ctxConfig.Tag = this;         // NEWCONFIG    
+            lblBase.Click += lblBase_Click;    // NEWCONFIG        
         }
 
-       
+
+
+        [Category("HLP")]
+        [Description("Label no modo superior ?")]
+        public bool _LabelSuperior
+        {
+            get { return _labelSuperior; }
+            set
+            {
+                _labelSuperior = value;
+                if (value)
+                {
+                    this.InitializeComponentModoLeftToRigth();
+                }
+                else
+                {
+                    this.InitializeComponentModoTopToDown();
+
+                }
+
+
+            }
+        }
+
         [Category("HLP")]
         [Description("Tamanho Máximo")]
         public new int MaxLength
@@ -57,7 +78,19 @@ namespace HLP.Comum.Components
                 }
                 string str = "".PadLeft(value, 'Z');
                 int iSize = (int)CreateGraphics().MeasureString(str, txt.Font).Width;
-                _TamanhoComponente = iSize > 600 ? 600 : (iSize < 50 ? 50 : iSize);
+                iSize = iSize > 600 ? 600 : (iSize < 50 ? 50 : iSize);
+
+                int iDiferenca = controleBase.Width - iSize;
+
+                if (iDiferenca < 0)
+                {
+                    this.Width = this.Width + (iDiferenca * -1);
+                }
+                else if (iDiferenca > 0)
+                {
+                    this.Width = this.Width - iDiferenca;
+                }
+                this._TamanhoComponente = this._TamanhoComponente;
             }
         }
         [Category("HLP")]
@@ -222,8 +255,8 @@ namespace HLP.Comum.Components
             else
             {
                 this.Height = 70;
-            }         
-            
+            }
+
         }
 
         public override void CarregaobjConfigComponenteModelByControle()
@@ -273,6 +306,61 @@ namespace HLP.Comum.Components
         private void btnConfig_Click(object sender, EventArgs e)
         {
             //contextMenuStrip1.Show(MousePosition.X, MousePosition.Y);
+        }
+
+
+        void InitializeComponentModoTopToDown()
+        {
+            int iTamanhoTxt = this.txt.Width;
+
+            this.txt.Dock = System.Windows.Forms.DockStyle.Fill;
+
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.Size = new Size((lblBase.Width + iTamanhoTxt), 22);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+
+
+
+        }
+        void InitializeComponentModoLeftToRigth()
+        {
+
+            int iWidth = this.txt.Width;
+            // 
+            // txt
+            //            
+            this.txt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txt.Location = new System.Drawing.Point(0, 13);
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+            // 
+            // HLP_TextBox
+            // 
+            //this._TamanhoComponente = 80;
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            //this.Size = new System.Drawing.Size(180, 35);
+
+            if (lblBase.Width > iWidth)
+                iWidth = lblBase.Width;
+            txt.Width = iWidth;
+            this.Size = new Size(iWidth, 35);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+
+
         }
 
     }

@@ -36,7 +36,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
         public bool bEndSincronizacao { get; set; }
         public List<Control> lControl { get; set; }
-        public List<Control> lFlowLayoutPanel { get; set; }
 
         /// <summary>
         /// Objeto principal onde contera todas as configurações do Formulario
@@ -55,10 +54,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                 objConfigFormularioModel = new ConfigFormulariosModel();
                 //this.GetTabControlRecursivo(pnPrincipal.Controls);
                 this.GetControlsContainerRecursivo(pnPrincipal.Controls, lControl);
-
-                lFlowLayoutPanel = lControl.Where(c => c.GetType() == typeof(FlowLayoutPanel)).ToList();
-
-                lControl.RemoveAll(c => c.GetType() == typeof(FlowLayoutPanel));
 
                 CarregaDadosFormulario(pnPrincipal, sViewForm);
                 // Se estiver sendo debugado, ira salvar a configuração da Tela na Base de Dados com o usuario HLP
@@ -101,13 +96,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                 pnPrincipal.FindForm().Enabled = Convert.ToBoolean(objConfigFormularioModel.objConfigFormUsu.stAtivo);
 
                 itabPageService.SetConfigToTabPagesRecursivo(objConfigFormularioModel.lConfigTabPage, lControl);
-                foreach (FlowLayoutPanel flp in lFlowLayoutPanel)
-                {
-                    foreach (HLP_LabelSeparator sep in flp.Controls.OfType<HLP_LabelSeparator>())
-                    {
-                        sep.ConfigMaiorLabel();
-                    }
-                }
                 objConfigFormularioModel.lobjConfigComponente = itabPageService.GetListaControlesConfigComponenteModel();
 
 
@@ -162,15 +150,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             #endregion
         }
 
-        public void MudaPosicaoScrollFlowPanelTabControl()
-        {
-            foreach (Control ctr in lFlowLayoutPanel)
-            {
-                (ctr as FlowLayoutPanel).AutoScroll = true;
-                (ctr as FlowLayoutPanel).VerticalScroll.Value = 0;
-                (ctr as FlowLayoutPanel).HorizontalScroll.Value = 0;
-            }
-        }
+
 
         public List<TabPage> GetTabPages()
         {
@@ -194,6 +174,11 @@ namespace HLP.Comum.Services.Implementation.Configuracao
         {
             foreach (Control ctr in lControles)
             {
+                if (ctr.GetType() == typeof(HLP_Group))
+                {
+                    lctr.Add(ctr);
+                    GetControlsContainerRecursivo((ctr as HLP_Group).Panel.Controls, lctr);
+                }
                 if (ctr.GetType().BaseType == typeof(UserControlBase))
                 {
                     if (!lctr.Contains(ctr))
@@ -246,10 +231,17 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                     }
                     else if (ctr.HasChildren == true && ctr.GetType().BaseType != typeof(UserControl))
                     {
-                        if (ctr.GetType() == typeof(FlowLayoutPanel))
+                        if (ctr.GetType() == typeof(AC.ExtendedRenderer.Navigator.KryptonTabControl))
                         {
-                            lctr.Add(ctr);
+                            (ctr as AC.ExtendedRenderer.Navigator.KryptonTabControl).CornerType = AC.ExtendedRenderer.Toolkit.Drawing.DrawingMethods.CornerType.Squared;
+                            (ctr as AC.ExtendedRenderer.Navigator.KryptonTabControl).CornerWidth = AC.ExtendedRenderer.Navigator.KryptonTabControl.CornWidth.Null;
+                            (ctr as AC.ExtendedRenderer.Navigator.KryptonTabControl).AllowContextButton = false;
+
+
+                            
                         }
+
+
                         GetControlsContainerRecursivo(ctr.Controls, lctr);
                     }
                     #endregion
@@ -258,27 +250,6 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             return lctr;
         }
 
-        /// <summary>
-        /// Método que carrega todos os TabControls do Formulario
-        /// </summary>
-        /// <param name="lControles"></param>
-        //private void GetTabControlRecursivo(Control.ControlCollection lControles)
-        //{
-        //    foreach (Control ctr in lControles)
-        //    {
-        //        if (ctr.GetType() == typeof(AC.ExtendedRenderer.Navigator.KryptonTabControl))
-        //        {
-        //            if (!lTabControl.Contains(ctr))
-        //            {
-        //                lTabControl.Add((AC.ExtendedRenderer.Navigator.KryptonTabControl)ctr);
-        //            }
-        //        }
-        //        else if (ctr.HasChildren)
-        //        {
-        //            GetTabControlRecursivo(ctr.Controls);
-        //        }
-        //    }
-        //}
         #endregion
 
         #endregion
@@ -406,6 +377,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
             }
         }
         #endregion
+
 
     }
 }

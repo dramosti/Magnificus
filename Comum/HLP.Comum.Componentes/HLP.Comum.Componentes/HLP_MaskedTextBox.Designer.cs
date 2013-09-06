@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLP_MaskedTextBox));
             this.msk = new ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox();
             this.btnPesquisaCampo = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -37,6 +36,10 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // controleBase
+            // 
+            this.controleBase.Size = new System.Drawing.Size(97, 0);
             // 
             // msk
             // 
@@ -99,8 +102,9 @@
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkRate = 0;
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
             // HLP_MaskedTextBox
             // 

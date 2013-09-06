@@ -22,10 +22,6 @@ namespace HLP.Comum.UI
 {
     public partial class FormPadraoCadastro : KryptonForm
     {
-        //[Inject]
-        //public ILayoutService layoutService { get; set; }
-        //[Inject]
-        //public IInitializeConfigService initializeConfig { get; set; }
         [Inject]
         public IConfigFormulariosService iConfigFormularioService { get; set; }
         [Inject]
@@ -107,7 +103,7 @@ namespace HLP.Comum.UI
             lblCount.Text = "0 de 0";
             iRetPesquisa = null;
             objMetodosForm.HabilitaButtonSpecPesquisa(false);
-            iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
+            //iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl(); **VERIFICAR**
             objMetodosForm.JogarFocoSegundoComponente();
         }
 
@@ -160,7 +156,7 @@ namespace HLP.Comum.UI
                 lblCount.Text = "0 de 0";
                 HabilitaBotoesNavegacao(false);
             }
-            iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
+            //iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();**VERIFICAR**
             objMetodosForm.JogarFocoPrimeiroComponente();
         }
         public virtual void IniciaExcluirTodos()
@@ -198,8 +194,8 @@ namespace HLP.Comum.UI
             Invoke(new MethodInvoker(delegate
             {
                 lblProgresso.Text = "";
-                lblProgresso.Visible = true;
-                pbProgresso.Visible = true;
+                lblProgresso.Visible = false;
+                pbProgresso.Visible = false;
                 lblCount.Text = "0 de " + bsRetPesquisa.List.Count;
             }));
         }
@@ -213,7 +209,7 @@ namespace HLP.Comum.UI
             HabilitaBotoes(3);
             objMetodosForm.HabilitaCampos(true);
             objMetodosForm.HabilitaButtonSpecPesquisa(false);
-            iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
+            //iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();**VERIFICAR**
             objMetodosForm.JogarFocoSegundoComponente();
         }
 
@@ -225,7 +221,7 @@ namespace HLP.Comum.UI
         public virtual void Salvar()
         {
             HabilitaBotoes(1);
-            iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
+            //iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();**VERIFICAR**
             objMetodosForm.HabilitaCampos(false);
             objMetodosForm.HabilitaButtonSpecPesquisa(true);
             objMetodosForm.JogarFocoPrimeiroComponente();
@@ -240,7 +236,7 @@ namespace HLP.Comum.UI
             objValidaCampos.LimpaErros();
             objMetodosForm.HabilitaCampos(false);
             objMetodosForm.HabilitaButtonSpecPesquisa(true);
-            iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();
+            //iConfigFormularioService.MudaPosicaoScrollFlowPanelTabControl();**VERIFICAR**
             objMetodosForm.JogarFocoPrimeiroComponente();
         }
 
@@ -572,28 +568,28 @@ namespace HLP.Comum.UI
             //{
             //    if (!layoutService.AcessoFormulario.Inclusao)
             //    {
-            //        btnNovo.Visible = true;
-            //        sepNovo.Visible = true;
+            //        btnNovo.Visible = false;
+            //        sepNovo.Visible = false;
             //    }
             //    if (!layoutService.AcessoFormulario.Alteracao)
             //    {
-            //        btnAtualizar.Visible = true;
-            //        sepAtualizar.Visible = true;
+            //        btnAtualizar.Visible = false;
+            //        sepAtualizar.Visible = false;
             //    }
             //    if (!layoutService.AcessoFormulario.Exclusao)
             //    {
-            //        btnExcluir.Visible = true;
-            //        sepExcluir.Visible = true;
+            //        btnExcluir.Visible = false;
+            //        sepExcluir.Visible = false;
             //    }
             //    if (!layoutService.AcessoFormulario.Pesquisar)
             //    {
-            //        btnPesquisar.Visible = true;
-            //        sepPesquisar.Visible = true;
+            //        btnPesquisar.Visible = false;
+            //        sepPesquisar.Visible = false;
             //    }
             //    if (!layoutService.AcessoFormulario.Duplicar)
             //    {
-            //        btnDuplicar.Visible = true;
-            //        sepDuplicar.Visible = true;
+            //        btnDuplicar.Visible = false;
+            //        sepDuplicar.Visible = false;
             //    }
             //}
 
@@ -1064,7 +1060,7 @@ namespace HLP.Comum.UI
                 if (this.InvokeRequired)
                     this.BeginInvoke((MethodInvoker)delegate
                     {
-                        iConfigFormularioService.InitializeFormulario(this.panelPadrao, sView);
+                        // iConfigFormularioService.InitializeFormulario(this.panelPadrao, sView);
                         ConfiguraAcoesPermitidas();
                         HabilitaBotoesNavegacao(false);
                         objMetodosForm.HabilitaCampos(false);
@@ -1146,13 +1142,11 @@ namespace HLP.Comum.UI
         #region CarregaValores
         protected void CarregaPropriedades<T>(T model, bool inicio = false) where T : class
         {
-            if (model == null)
-                return;
             if (inicio)
             {
                 lPropriedades = new List<Propriedades>();
             }
-            Type tipo = typeof(T);
+            Type tipo = model.GetType();
             Propriedades objPropriedades;
             foreach (PropertyInfo property in tipo.GetProperties())
             {
@@ -1169,7 +1163,7 @@ namespace HLP.Comum.UI
         {
             string nomeProp = null;
             Type tipo = null;
-            foreach (Control c in iConfigFormularioService.lControl)
+            foreach (Control c in iConfigFormularioService.lControl.Where(c => c.GetType().BaseType == typeof(UserControlBase)))
             {
                 tipo = c.GetType();
                 if (c.GetType() != typeof(HLP.Comum.Components.HLP_DataGridView) &&
@@ -1193,15 +1187,15 @@ namespace HLP.Comum.UI
                             ((HLP.Comum.Components.HLP_MaskedTextBox)c).Text = valor != null ? valor.ToString() : "";
                         else if (c.GetType() == typeof(HLP.Comum.Components.HLP_ComboBox))
                         {
-                            if (((HLP.Comum.Components.HLP_ComboBox)c).DataSource == null)
+                            if (valor.GetType().Name == "Boolean")
                             {
-                                if (valor.GetType() == typeof(Boolean))
-                                    ((HLP.Comum.Components.HLP_ComboBox)c).SelectedIndex = (bool)valor == true ? 1 : 0;
-                                else
-                                    ((HLP.Comum.Components.HLP_ComboBox)c).SelectedIndex = valor != null ? valor.ToInt32() : -1;
+                                ((HLP.Comum.Components.HLP_ComboBox)c).SelectedIndex = Convert.ToBoolean(valor) ? 1 : 0;
                             }
                             else
-                                ((HLP.Comum.Components.HLP_ComboBox)c).SelectedValue = valor != null ? valor.ToInt32() : -1;
+                                if (((HLP.Comum.Components.HLP_ComboBox)c).DataSource == null)
+                                    ((HLP.Comum.Components.HLP_ComboBox)c).SelectedIndex = valor != null ? valor.ToInt32() : -1;
+                                else
+                                    ((HLP.Comum.Components.HLP_ComboBox)c).SelectedValue = valor != null ? valor.ToInt32() : -1;
                         }
                         else if (c.GetType() == typeof(HLP.Comum.Components.HLP_NumericUpDown))
                         {
@@ -1228,16 +1222,17 @@ namespace HLP.Comum.UI
 
         protected object CarregaClasse<T>(T model) where T : class
         {
-            Type tipo = typeof(T);
-            string sTabela = typeof(T).Name.ToString().Replace("Model", "");
-
+            string sTabela = model.GetType().Name.ToString().Replace("Model", "");
+            Type tipo = model.GetType();
             Control controle = null;
             List<Control> lControles = new List<Control>();
             lControles = iConfigFormularioService.lControl.Where(c => c.GetType() !=
                 typeof(HLP.Comum.Components.HLP_DataGridView)).ToList();
+            //List<Control> lControlsTemp = new List<Control>();
+            //lControlsTemp = iConfigFormularioService.lControl.Where(i => ((UserControlBase)i)._Table == sTabela).ToList();
             foreach (PropertyInfo item in tipo.GetProperties())
             {
-                controle = (lControles.Where(c => c.GetType() != typeof(DataGridView))).
+                controle = (lControles.Where(c => c.GetType().BaseType == typeof(UserControlBase))).
                     FirstOrDefault(c =>
                    ((UserControlBase)c)._Table == sTabela
                      && ((UserControlBase)c)._Field == item.Name);

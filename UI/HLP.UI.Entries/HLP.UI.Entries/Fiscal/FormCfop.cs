@@ -58,7 +58,7 @@ namespace HLP.UI.Entries.Fiscal
             base.Novo();
             cfopModel = new CfopModel();
 
-            nudcCodCfop.Text = "";
+            nudcCfop.Text = "";
         }
         public override void Atualizar()
         {
@@ -69,14 +69,10 @@ namespace HLP.UI.Entries.Fiscal
             try
             {
                 objValidaCampos.Validar();
-
                 PopulaTabela();
                 cfopService.Save(cfopModel);
-
                 txtCodigo.Text = cfopModel.idCfop.ToString();
-
                 base.Salvar();
-
             }
             catch (Exception ex)
             {

@@ -321,6 +321,30 @@ namespace HLP.Comum.Components
         [Description("Habilita DragDrop nas linhas da DataGridView")]
         public bool DragDropLinha { get; set; }
 
+        private void GetNameTabPage(Control value)
+        {
+            if (value.GetType() == typeof(TabPage))
+            {
+                sNameTabPage = value.Name;
+            }
+            else if (value.Parent != null)
+            {
+                GetNameTabPage(value.Parent);
+            }
+        }
+        private string sNameTabPage = "";
+        [Category("HLP")]
+        [Description("TabPage em que o Componente se encontra.")]
+        public string _sNameTabPage
+        {
+            get
+            {
+                sNameTabPage = "";
+                GetNameTabPage(this);
+                return sNameTabPage;
+            }
+        }
+
         #region métodos Drag and Drop Linhas
         private void dataGridView1_MouseMove(object sender, MouseEventArgs e)
         {

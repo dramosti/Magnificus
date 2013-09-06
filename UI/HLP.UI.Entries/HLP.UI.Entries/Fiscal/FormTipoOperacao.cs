@@ -481,5 +481,10 @@ namespace HLP.UI.Entries.Fiscal
         {
 
         }
+
+        private void hlP_Group7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

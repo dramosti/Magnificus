@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLP_TextBox));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnPesquisaCampo = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
@@ -37,6 +36,10 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // controleBase
+            // 
+            this.controleBase.Size = new System.Drawing.Size(50, 0);
             // 
             // toolTip1
             // 
@@ -52,7 +55,7 @@
             this.txt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt.Location = new System.Drawing.Point(46, 0);
             this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(134, 20);
+            this.txt.Size = new System.Drawing.Size(141, 20);
             this.txt.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.txt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -104,21 +107,22 @@
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkRate = 0;
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
             // HLP_TextBox
             // 
-            this._TamanhoComponente = 80;
+            this._TamanhoComponente = 50;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.txt);
             this.Controls.Add(this.lblDescricao);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.Name = "HLP_TextBox";
-            this.Size = new System.Drawing.Size(180, 22);
+            this.Size = new System.Drawing.Size(187, 22);
             this.Load += new System.EventHandler(this.HLP_TextBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -129,10 +133,10 @@
         #endregion
 
         private System.Windows.Forms.ToolTip toolTip1;
-        public System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label lblDescricao;
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox txt;
         public ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnPesquisaCampo;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
 
     }
 }

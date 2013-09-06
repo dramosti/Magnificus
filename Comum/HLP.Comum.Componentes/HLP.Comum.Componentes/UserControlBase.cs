@@ -20,6 +20,8 @@ namespace HLP.Comum.Components
         const string CAMPO_OBRIGATORIO = "Campo Obrigatório";
         const string CAMPO_INVALIDO = "Valor do Campo Inválido";
 
+        [Browsable(false)]
+        public bool _labelSuperior = false;
 
         [Browsable(false)]
         public ConfigComponenteModel objConfigComponenteModel { get; set; }
@@ -30,6 +32,32 @@ namespace HLP.Comum.Components
         [Browsable(false)]
         public bool _bConfiguracao;
 
+        private void GetHLPGroup(Control value)
+        {
+            if (value.GetType() == typeof(HLP_Group))
+            {
+                this._hlpGroup = value as HLP_Group;
+            }
+            else if (value.Parent != null)
+            {
+                GetHLPGroup(value.Parent);
+            }
+        }
+        private HLP_Group _hlpGroup;
+        [Category("HLP")]
+        [Description("HLP_Group em que o Componente se encontra.")]
+        public HLP_Group _HlpGroup
+        {
+            get
+            {
+                _hlpGroup = null;
+                GetHLPGroup(this);
+                return _hlpGroup;
+            }
+        }
+
+
+        [Browsable(false)]
         public bool bConfiguracao
         {
             get { return _bConfiguracao; }
@@ -43,7 +71,29 @@ namespace HLP.Comum.Components
             }
         }
 
-
+        private void GetNameTabPage(Control value)
+        {
+            if (value.GetType() == typeof(TabPage))
+            {
+                sNameTabPage = value.Name;
+            }
+            else if (value.Parent != null)
+            {
+                GetNameTabPage(value.Parent);
+            }
+        }
+        private string sNameTabPage = "";
+        [Category("HLP")]
+        [Description("TabPage em que o Componente se encontra.")]
+        public string _sNameTabPage
+        {
+            get
+            {
+                sNameTabPage = "";
+                GetNameTabPage(this);
+                return sNameTabPage;
+            }
+        }
 
         private HLP_LabelSeparator _labelGroup;
         [Category("HLP")]
@@ -66,7 +116,7 @@ namespace HLP.Comum.Components
                     if (_labelGroup.lComponentesBySerparador.Where(c => c == this).Count() == 0)
                     {
                         _labelGroup.lComponentesBySerparador.Add(this);
-                    }                    
+                    }
                     _labelGroup.ConfigMaiorLabel();
                 }
             }
@@ -93,10 +143,10 @@ namespace HLP.Comum.Components
         [Description("Tamanho do Componente.")]
         public int _TamanhoComponente
         {
-            get { return this.Width - lblBase.Width; }
+            get { return controleBase.Width; }
             set
-            {
-                this.Width = lblBase.Width + value;
+            {                
+                controleBase.Width = value;
             }
         }
 
@@ -182,14 +232,29 @@ namespace HLP.Comum.Components
             {
                 if (value != "")
                 {
-                    int i = this.Width - lblBase.Width + 4;// controleBase.Width;
-                    controleBase.Dock = DockStyle.None;
-                    if (controleBase.GetType() == typeof(KryptonButton))
-                        controleBase.Text = Util.ToUpperFirstLetter(value);
+                    if (!_labelSuperior)
+                    {
+                        int i = this.Width - lblBase.Width + 4;// controleBase.Width;
+                        controleBase.Dock = DockStyle.None;
+                        if (controleBase.GetType() == typeof(KryptonButton))
+                            controleBase.Text = Util.ToUpperFirstLetter(value);
+                        else
+                            lblBase.Text = Util.ToUpperFirstLetter(value);
+                        controleBase.Dock = DockStyle.Fill;
+                        this.Width = _TamanhoLabel + i;
+                    }
                     else
-                        lblBase.Text = Util.ToUpperFirstLetter(value);
-                    controleBase.Dock = DockStyle.Fill;
-                    this.Width = _TamanhoLabel + i;
+                    {
+                        if (controleBase.GetType() == typeof(KryptonButton))
+                            controleBase.Text = Util.ToUpperFirstLetter(value);
+                        else
+                            lblBase.Text = Util.ToUpperFirstLetter(value);
+
+                        if (lblBase.Width > controleBase.Width)
+                        {
+                            this.Width = lblBase.Width;
+                        }
+                    }
                 }
             }
         }
@@ -631,7 +696,7 @@ namespace HLP.Comum.Components
                     {
                         if ((this.Parent as FlowLayoutPanel).Controls.GetChildIndex(this) > 0)
                         {
-                            if (((this.Parent as FlowLayoutPanel).Controls[(index)]).GetType() != typeof(HLP_LabelSeparator))
+                            //if (((this.Parent as FlowLayoutPanel).Controls[(index)]).GetType() != typeof(HLP_LabelSeparator))
                             {
                                 (this.Parent as FlowLayoutPanel).Controls.SetChildIndex(this, index);
                                 this.TabIndex = index;
@@ -649,7 +714,39 @@ namespace HLP.Comum.Components
         internal void Initialize()
         {
             this.InitializeComponent();
+            this.SizeChanged -= UserControlBase_SizeChanged;
+            this.SizeChanged += UserControlBase_SizeChanged;
+            controleBase.SizeChanged -= UserControlBase_SizeChanged;
+            controleBase.SizeChanged += UserControlBase_SizeChanged;
         }
+
+        private void UserControlBase_SizeChanged(object sender, EventArgs e)
+        {
+            if (_labelSuperior)
+            {
+                if (controleBase.Width > this.Width)
+                {
+                    controleBase.Width = this.Width - 2;
+                }
+            }
+            else
+            {
+                if (this._hlpGroup != null)
+                {
+                    this._hlpGroup.ConfigMaiorLabel();
+                }
+            }
+        }
+
+        private void UserControlBase_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
 
     }
 }

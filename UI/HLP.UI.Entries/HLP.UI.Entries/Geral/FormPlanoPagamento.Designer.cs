@@ -62,9 +62,9 @@ namespace HLP.UI.Entries.Geral
             this.nudNumParcelas = new HLP.Comum.Components.HLP_NumericUpDown();
             this.hlP_Button1 = new HLP.Comum.Components.HLP_Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.panelPadrao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).BeginInit();
             this.tcPlanosPagamento.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.kryptonPanel1.SuspendLayout();
@@ -86,7 +86,11 @@ namespace HLP.UI.Entries.Geral
             // panelPadrao
             // 
             this.panelPadrao.Controls.Add(this.tcPlanosPagamento);
-            this.panelPadrao.Size = new System.Drawing.Size(1124, 571);
+            this.panelPadrao.Size = new System.Drawing.Size(1094, 571);
+            // 
+            // panelAtalhos
+            // 
+            this.panelAtalhos.Size = new System.Drawing.Size(28, 571);
             // 
             // tcPlanosPagamento
             // 
@@ -109,7 +113,7 @@ namespace HLP.UI.Entries.Geral
             this.tcPlanosPagamento.Name = "tcPlanosPagamento";
             this.tcPlanosPagamento.PreserveTabColor = false;
             this.tcPlanosPagamento.SelectedIndex = 0;
-            this.tcPlanosPagamento.Size = new System.Drawing.Size(1118, 565);
+            this.tcPlanosPagamento.Size = new System.Drawing.Size(1088, 565);
             this.tcPlanosPagamento.TabIndex = 1;
             this.tcPlanosPagamento.UseExtendedLayout = false;
             // 
@@ -120,7 +124,7 @@ namespace HLP.UI.Entries.Geral
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1110, 536);
+            this.tabPage1.Size = new System.Drawing.Size(1080, 536);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "Principal";
@@ -137,7 +141,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PersistentColors = false;
-            this.kryptonPanel1.Size = new System.Drawing.Size(1110, 536);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1080, 536);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -159,7 +163,7 @@ namespace HLP.UI.Entries.Geral
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1110, 536);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1080, 536);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Tag = "Principal";
             // 
@@ -171,7 +175,7 @@ namespace HLP.UI.Entries.Geral
             this.hlP_LabelSeparator1_Geral.Location = new System.Drawing.Point(0, 3);
             this.hlP_LabelSeparator1_Geral.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.hlP_LabelSeparator1_Geral.Name = "hlP_LabelSeparator1_Geral";
-            this.hlP_LabelSeparator1_Geral.Size = new System.Drawing.Size(398, 18);
+            this.hlP_LabelSeparator1_Geral.Size = new System.Drawing.Size(380, 19);
             this.hlP_LabelSeparator1_Geral.TabIndex = 30;
             this.hlP_LabelSeparator1_Geral.TabStop = false;
             // 
@@ -180,6 +184,7 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo._Field = "idPlanoPagamento";
             this.txtCodigo._Help = "Chave principal do registro do plano de pagamento";
             this.txtCodigo._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.txtCodigo._LabelSuperior = false;
             this.txtCodigo._LabelText = "Código";
             this.txtCodigo._Multiline = false;
             this.txtCodigo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -187,16 +192,17 @@ namespace HLP.UI.Entries.Geral
             this.txtCodigo._Regex = null;
             this.txtCodigo._Table = "Plano_pagamento";
             this.txtCodigo._TamanhoComponente = 97;
-            this.txtCodigo._TamanhoMaiorLabel = 200;
-            this.txtCodigo._Visible = true;
+            this.txtCodigo._TamanhoMaiorLabel = 185;
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
             this.txtCodigo.Base = null;
+            this.txtCodigo.bConfiguracao = false;
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtCodigo.Color = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(158, 27);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(158, 3, 15, 3);
+            this.txtCodigo.Location = new System.Drawing.Point(143, 28);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(143, 3, 15, 3);
             this.txtCodigo.MaxLength = 32767;
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.objConfigComponenteModel = null;
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(142, 19);
             this.txtCodigo.TabIndex = 3;
@@ -206,6 +212,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxPlanoPagamento._Field = "xPlanoPagamento";
             this.txtxPlanoPagamento._Help = "Insira um código ou uma breve descrição para identificar o plano de pagamento";
             this.txtxPlanoPagamento._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.txtxPlanoPagamento._LabelSuperior = false;
             this.txtxPlanoPagamento._LabelText = "Plano de pagamento ";
             this.txtxPlanoPagamento._Multiline = false;
             this.txtxPlanoPagamento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -213,16 +220,17 @@ namespace HLP.UI.Entries.Geral
             this.txtxPlanoPagamento._Regex = null;
             this.txtxPlanoPagamento._Table = "Plano_pagamento";
             this.txtxPlanoPagamento._TamanhoComponente = 194;
-            this.txtxPlanoPagamento._TamanhoMaiorLabel = 200;
-            this.txtxPlanoPagamento._Visible = true;
+            this.txtxPlanoPagamento._TamanhoMaiorLabel = 185;
             this.txtxPlanoPagamento.BackColor = System.Drawing.Color.Transparent;
             this.txtxPlanoPagamento.Base = null;
+            this.txtxPlanoPagamento.bConfiguracao = false;
             this.txtxPlanoPagamento.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxPlanoPagamento.Color = System.Drawing.Color.White;
-            this.txtxPlanoPagamento.Location = new System.Drawing.Point(86, 52);
-            this.txtxPlanoPagamento.Margin = new System.Windows.Forms.Padding(86, 3, 15, 3);
+            this.txtxPlanoPagamento.Location = new System.Drawing.Point(71, 53);
+            this.txtxPlanoPagamento.Margin = new System.Windows.Forms.Padding(71, 3, 15, 3);
             this.txtxPlanoPagamento.MaxLength = 32767;
             this.txtxPlanoPagamento.Name = "txtxPlanoPagamento";
+            this.txtxPlanoPagamento.objConfigComponenteModel = null;
             this.txtxPlanoPagamento.ReadOnly = false;
             this.txtxPlanoPagamento.Size = new System.Drawing.Size(311, 19);
             this.txtxPlanoPagamento.TabIndex = 4;
@@ -232,6 +240,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxDescricao._Field = "xDescricao";
             this.txtxDescricao._Help = "Insira a descrição do plano de pagamento";
             this.txtxDescricao._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.txtxDescricao._LabelSuperior = false;
             this.txtxDescricao._LabelText = "Descrição ";
             this.txtxDescricao._Multiline = false;
             this.txtxDescricao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -239,16 +248,17 @@ namespace HLP.UI.Entries.Geral
             this.txtxDescricao._Regex = null;
             this.txtxDescricao._Table = "Plano_pagamento";
             this.txtxDescricao._TamanhoComponente = 194;
-            this.txtxDescricao._TamanhoMaiorLabel = 200;
-            this.txtxDescricao._Visible = true;
+            this.txtxDescricao._TamanhoMaiorLabel = 185;
             this.txtxDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtxDescricao.Base = null;
+            this.txtxDescricao.bConfiguracao = false;
             this.txtxDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxDescricao.Color = System.Drawing.Color.White;
-            this.txtxDescricao.Location = new System.Drawing.Point(144, 77);
-            this.txtxDescricao.Margin = new System.Windows.Forms.Padding(144, 3, 15, 3);
+            this.txtxDescricao.Location = new System.Drawing.Point(129, 78);
+            this.txtxDescricao.Margin = new System.Windows.Forms.Padding(129, 3, 15, 3);
             this.txtxDescricao.MaxLength = 32767;
             this.txtxDescricao.Name = "txtxDescricao";
+            this.txtxDescricao.objConfigComponenteModel = null;
             this.txtxDescricao.ReadOnly = false;
             this.txtxDescricao.Size = new System.Drawing.Size(253, 19);
             this.txtxDescricao.TabIndex = 5;
@@ -259,22 +269,24 @@ namespace HLP.UI.Entries.Geral
             this.cbostAlocacao._Help = "Selecione a forma como os pagamentos são alocados dentro do plano de pagamento";
             this.cbostAlocacao._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostAlocacao._Itens")));
             this.cbostAlocacao._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.cbostAlocacao._LabelSuperior = false;
             this.cbostAlocacao._LabelText = "Alocação";
             this.cbostAlocacao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.cbostAlocacao._Regex = null;
             this.cbostAlocacao._situacao = false;
             this.cbostAlocacao._Table = "Plano_pagamento";
             this.cbostAlocacao._TamanhoComponente = 194;
-            this.cbostAlocacao._TamanhoMaiorLabel = 200;
-            this.cbostAlocacao._Visible = true;
+            this.cbostAlocacao._TamanhoMaiorLabel = 185;
             this.cbostAlocacao.BackColor = System.Drawing.Color.Transparent;
             this.cbostAlocacao.Base = null;
+            this.cbostAlocacao.bConfiguracao = false;
             this.cbostAlocacao.Color = System.Drawing.Color.White;
             this.cbostAlocacao.DataSource = null;
             this.cbostAlocacao.DisplayMember = "DisplayMember";
-            this.cbostAlocacao.Location = new System.Drawing.Point(150, 102);
-            this.cbostAlocacao.Margin = new System.Windows.Forms.Padding(150, 3, 15, 3);
+            this.cbostAlocacao.Location = new System.Drawing.Point(135, 103);
+            this.cbostAlocacao.Margin = new System.Windows.Forms.Padding(135, 3, 15, 3);
             this.cbostAlocacao.Name = "cbostAlocacao";
+            this.cbostAlocacao.objConfigComponenteModel = null;
             this.cbostAlocacao.SelectedIndex = -1;
             this.cbostAlocacao.SelectedValue = 0;
             this.cbostAlocacao.Size = new System.Drawing.Size(247, 21);
@@ -289,22 +301,24 @@ namespace HLP.UI.Entries.Geral
     "ata de vencimento de cada prestação";
             this.cbostFormaPagamento._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostFormaPagamento._Itens")));
             this.cbostFormaPagamento._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.cbostFormaPagamento._LabelSuperior = false;
             this.cbostFormaPagamento._LabelText = "Forma de pagamento";
             this.cbostFormaPagamento._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.cbostFormaPagamento._Regex = null;
             this.cbostFormaPagamento._situacao = false;
             this.cbostFormaPagamento._Table = "Plano_pagamento";
             this.cbostFormaPagamento._TamanhoComponente = 194;
-            this.cbostFormaPagamento._TamanhoMaiorLabel = 200;
-            this.cbostFormaPagamento._Visible = true;
+            this.cbostFormaPagamento._TamanhoMaiorLabel = 185;
             this.cbostFormaPagamento.BackColor = System.Drawing.Color.Transparent;
             this.cbostFormaPagamento.Base = null;
+            this.cbostFormaPagamento.bConfiguracao = false;
             this.cbostFormaPagamento.Color = System.Drawing.Color.White;
             this.cbostFormaPagamento.DataSource = null;
             this.cbostFormaPagamento.DisplayMember = "DisplayMember";
-            this.cbostFormaPagamento.Location = new System.Drawing.Point(86, 129);
-            this.cbostFormaPagamento.Margin = new System.Windows.Forms.Padding(86, 3, 15, 3);
+            this.cbostFormaPagamento.Location = new System.Drawing.Point(71, 130);
+            this.cbostFormaPagamento.Margin = new System.Windows.Forms.Padding(71, 3, 15, 3);
             this.cbostFormaPagamento.Name = "cbostFormaPagamento";
+            this.cbostFormaPagamento.objConfigComponenteModel = null;
             this.cbostFormaPagamento.SelectedIndex = -1;
             this.cbostFormaPagamento.SelectedValue = 0;
             this.cbostFormaPagamento.Size = new System.Drawing.Size(311, 21);
@@ -317,19 +331,20 @@ namespace HLP.UI.Entries.Geral
             this.nudnAlterar._Help = "Insira o número de unidades entre as datas de vencimento de cada prestação no cam" +
     "po forma de pagamento";
             this.nudnAlterar._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.nudnAlterar._LabelSuperior = false;
             this.nudnAlterar._LabelText = "Alterar";
             this.nudnAlterar._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudnAlterar._Regex = null;
             this.nudnAlterar._Table = "Plano_pagamento";
             this.nudnAlterar._TamanhoComponente = 119;
-            this.nudnAlterar._TamanhoMaiorLabel = 200;
-            this.nudnAlterar._Visible = true;
+            this.nudnAlterar._TamanhoMaiorLabel = 185;
             this.nudnAlterar.BackColor = System.Drawing.Color.Transparent;
             this.nudnAlterar.Base = null;
+            this.nudnAlterar.bConfiguracao = false;
             this.nudnAlterar.Color = System.Drawing.Color.White;
             this.nudnAlterar.DecimalPlaces = 2;
-            this.nudnAlterar.Location = new System.Drawing.Point(162, 156);
-            this.nudnAlterar.Margin = new System.Windows.Forms.Padding(162, 3, 15, 3);
+            this.nudnAlterar.Location = new System.Drawing.Point(147, 157);
+            this.nudnAlterar.Margin = new System.Windows.Forms.Padding(147, 3, 15, 3);
             this.nudnAlterar.Maximum = new decimal(new int[] {
             9,
             0,
@@ -341,6 +356,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudnAlterar.Name = "nudnAlterar";
+            this.nudnAlterar.objConfigComponenteModel = null;
             this.nudnAlterar.ReadOnly = false;
             this.nudnAlterar.Size = new System.Drawing.Size(160, 21);
             this.nudnAlterar.TabIndex = 8;
@@ -357,19 +373,20 @@ namespace HLP.UI.Entries.Geral
             this.nudnNumerosPagamentos._Help = "Se você selecionou a opção quantidade fixa no campo alocação, especifique o númer" +
     "o de prestações para o plano de pagamento";
             this.nudnNumerosPagamentos._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.nudnNumerosPagamentos._LabelSuperior = false;
             this.nudnNumerosPagamentos._LabelText = "Número de pagamentos";
             this.nudnNumerosPagamentos._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudnNumerosPagamentos._Regex = null;
             this.nudnNumerosPagamentos._Table = "Plano_pagamento";
             this.nudnNumerosPagamentos._TamanhoComponente = 119;
-            this.nudnNumerosPagamentos._TamanhoMaiorLabel = 200;
-            this.nudnNumerosPagamentos._Visible = true;
+            this.nudnNumerosPagamentos._TamanhoMaiorLabel = 185;
             this.nudnNumerosPagamentos.BackColor = System.Drawing.Color.Transparent;
             this.nudnNumerosPagamentos.Base = null;
+            this.nudnNumerosPagamentos.bConfiguracao = false;
             this.nudnNumerosPagamentos.Color = System.Drawing.Color.White;
             this.nudnNumerosPagamentos.DecimalPlaces = 2;
-            this.nudnNumerosPagamentos.Location = new System.Drawing.Point(72, 183);
-            this.nudnNumerosPagamentos.Margin = new System.Windows.Forms.Padding(72, 3, 15, 3);
+            this.nudnNumerosPagamentos.Location = new System.Drawing.Point(57, 184);
+            this.nudnNumerosPagamentos.Margin = new System.Windows.Forms.Padding(57, 3, 15, 3);
             this.nudnNumerosPagamentos.Maximum = new decimal(new int[] {
             9,
             0,
@@ -381,6 +398,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudnNumerosPagamentos.Name = "nudnNumerosPagamentos";
+            this.nudnNumerosPagamentos.objConfigComponenteModel = null;
             this.nudnNumerosPagamentos.ReadOnly = false;
             this.nudnNumerosPagamentos.Size = new System.Drawing.Size(250, 21);
             this.nudnNumerosPagamentos.TabIndex = 9;
@@ -397,19 +415,20 @@ namespace HLP.UI.Entries.Geral
             this.nudnValorMoeda._Help = "Se você selecionou a opção valor fixo no campo alocação , especifique o valor da " +
     "moeda de cada prestação";
             this.nudnValorMoeda._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.nudnValorMoeda._LabelSuperior = false;
             this.nudnValorMoeda._LabelText = "Valor na moeda";
             this.nudnValorMoeda._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudnValorMoeda._Regex = null;
             this.nudnValorMoeda._Table = "Plano_pagamento";
             this.nudnValorMoeda._TamanhoComponente = 119;
-            this.nudnValorMoeda._TamanhoMaiorLabel = 200;
-            this.nudnValorMoeda._Visible = true;
+            this.nudnValorMoeda._TamanhoMaiorLabel = 185;
             this.nudnValorMoeda.BackColor = System.Drawing.Color.Transparent;
             this.nudnValorMoeda.Base = null;
+            this.nudnValorMoeda.bConfiguracao = false;
             this.nudnValorMoeda.Color = System.Drawing.Color.White;
             this.nudnValorMoeda.DecimalPlaces = 2;
-            this.nudnValorMoeda.Location = new System.Drawing.Point(115, 210);
-            this.nudnValorMoeda.Margin = new System.Windows.Forms.Padding(115, 3, 15, 3);
+            this.nudnValorMoeda.Location = new System.Drawing.Point(100, 211);
+            this.nudnValorMoeda.Margin = new System.Windows.Forms.Padding(100, 3, 15, 3);
             this.nudnValorMoeda.Maximum = new decimal(new int[] {
             9,
             0,
@@ -421,6 +440,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudnValorMoeda.Name = "nudnValorMoeda";
+            this.nudnValorMoeda.objConfigComponenteModel = null;
             this.nudnValorMoeda.ReadOnly = false;
             this.nudnValorMoeda.Size = new System.Drawing.Size(207, 22);
             this.nudnValorMoeda.TabIndex = 10;
@@ -436,19 +456,20 @@ namespace HLP.UI.Entries.Geral
             this.nudnValorMinimo._Field = "nValorMinimo";
             this.nudnValorMinimo._Help = "Especifique o menor valor da prestação";
             this.nudnValorMinimo._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.nudnValorMinimo._LabelSuperior = false;
             this.nudnValorMinimo._LabelText = "Valor mínimo";
             this.nudnValorMinimo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudnValorMinimo._Regex = null;
             this.nudnValorMinimo._Table = "Plano_pagamento";
             this.nudnValorMinimo._TamanhoComponente = 119;
-            this.nudnValorMinimo._TamanhoMaiorLabel = 200;
-            this.nudnValorMinimo._Visible = true;
+            this.nudnValorMinimo._TamanhoMaiorLabel = 185;
             this.nudnValorMinimo.BackColor = System.Drawing.Color.Transparent;
             this.nudnValorMinimo.Base = null;
+            this.nudnValorMinimo.bConfiguracao = false;
             this.nudnValorMinimo.Color = System.Drawing.Color.White;
             this.nudnValorMinimo.DecimalPlaces = 2;
-            this.nudnValorMinimo.Location = new System.Drawing.Point(128, 238);
-            this.nudnValorMinimo.Margin = new System.Windows.Forms.Padding(128, 3, 15, 3);
+            this.nudnValorMinimo.Location = new System.Drawing.Point(113, 239);
+            this.nudnValorMinimo.Margin = new System.Windows.Forms.Padding(113, 3, 15, 3);
             this.nudnValorMinimo.Maximum = new decimal(new int[] {
             9,
             0,
@@ -460,6 +481,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudnValorMinimo.Name = "nudnValorMinimo";
+            this.nudnValorMinimo.objConfigComponenteModel = null;
             this.nudnValorMinimo.ReadOnly = false;
             this.nudnValorMinimo.Size = new System.Drawing.Size(194, 22);
             this.nudnValorMinimo.TabIndex = 11;
@@ -477,22 +499,24 @@ namespace HLP.UI.Entries.Geral
     "ões do plano de pagamento";
             this.cbostAlocacaoImpostos._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostAlocacaoImpostos._Itens")));
             this.cbostAlocacaoImpostos._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.cbostAlocacaoImpostos._LabelSuperior = false;
             this.cbostAlocacaoImpostos._LabelText = "Alocação de imposto sobre vendas";
             this.cbostAlocacaoImpostos._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.cbostAlocacaoImpostos._Regex = null;
             this.cbostAlocacaoImpostos._situacao = false;
             this.cbostAlocacaoImpostos._Table = "Plano_pagamento";
             this.cbostAlocacaoImpostos._TamanhoComponente = 195;
-            this.cbostAlocacaoImpostos._TamanhoMaiorLabel = 200;
-            this.cbostAlocacaoImpostos._Visible = true;
+            this.cbostAlocacaoImpostos._TamanhoMaiorLabel = 185;
             this.cbostAlocacaoImpostos.BackColor = System.Drawing.Color.Transparent;
             this.cbostAlocacaoImpostos.Base = null;
+            this.cbostAlocacaoImpostos.bConfiguracao = false;
             this.cbostAlocacaoImpostos.Color = System.Drawing.Color.White;
             this.cbostAlocacaoImpostos.DataSource = null;
             this.cbostAlocacaoImpostos.DisplayMember = "DisplayMember";
-            this.cbostAlocacaoImpostos.Location = new System.Drawing.Point(18, 266);
-            this.cbostAlocacaoImpostos.Margin = new System.Windows.Forms.Padding(18, 3, 15, 3);
+            this.cbostAlocacaoImpostos.Location = new System.Drawing.Point(3, 267);
+            this.cbostAlocacaoImpostos.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.cbostAlocacaoImpostos.Name = "cbostAlocacaoImpostos";
+            this.cbostAlocacaoImpostos.objConfigComponenteModel = null;
             this.cbostAlocacaoImpostos.SelectedIndex = -1;
             this.cbostAlocacaoImpostos.SelectedValue = 0;
             this.cbostAlocacaoImpostos.Size = new System.Drawing.Size(380, 21);
@@ -504,6 +528,7 @@ namespace HLP.UI.Entries.Geral
             this.txtxNota._Field = "xNota";
             this.txtxNota._Help = "Insira uma nota que explica como e quando usar o plano de pagamento";
             this.txtxNota._LabelGroup = this.hlP_LabelSeparator1_Geral;
+            this.txtxNota._LabelSuperior = false;
             this.txtxNota._LabelText = "Nota";
             this.txtxNota._Multiline = false;
             this.txtxNota._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -512,15 +537,16 @@ namespace HLP.UI.Entries.Geral
             this.txtxNota._Table = "Plano_pagamento";
             this.txtxNota._TamanhoComponente = 195;
             this.txtxNota._TamanhoMaiorLabel = 200;
-            this.txtxNota._Visible = true;
             this.txtxNota.BackColor = System.Drawing.Color.Transparent;
             this.txtxNota.Base = null;
+            this.txtxNota.bConfiguracao = false;
             this.txtxNota.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtxNota.Color = System.Drawing.Color.White;
-            this.txtxNota.Location = new System.Drawing.Point(171, 293);
+            this.txtxNota.Location = new System.Drawing.Point(171, 294);
             this.txtxNota.Margin = new System.Windows.Forms.Padding(171, 3, 15, 3);
             this.txtxNota.MaxLength = 32767;
             this.txtxNota.Name = "txtxNota";
+            this.txtxNota.objConfigComponenteModel = null;
             this.txtxNota.ReadOnly = false;
             this.txtxNota.Size = new System.Drawing.Size(227, 22);
             this.txtxNota.TabIndex = 13;
@@ -532,7 +558,7 @@ namespace HLP.UI.Entries.Geral
             this.tabPlanPagamento.Location = new System.Drawing.Point(4, 25);
             this.tabPlanPagamento.Margin = new System.Windows.Forms.Padding(0);
             this.tabPlanPagamento.Name = "tabPlanPagamento";
-            this.tabPlanPagamento.Size = new System.Drawing.Size(1110, 536);
+            this.tabPlanPagamento.Size = new System.Drawing.Size(1080, 536);
             this.tabPlanPagamento.TabIndex = 1;
             this.tabPlanPagamento.Tag = false;
             this.tabPlanPagamento.Text = "Plano de Pagamento";
@@ -550,7 +576,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.PersistentColors = false;
-            this.kryptonPanel2.Size = new System.Drawing.Size(1110, 536);
+            this.kryptonPanel2.Size = new System.Drawing.Size(1080, 536);
             this.kryptonPanel2.TabIndex = 1;
             // 
             // kryptonTabControl1
@@ -573,7 +599,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonTabControl1.Name = "kryptonTabControl1";
             this.kryptonTabControl1.PreserveTabColor = false;
             this.kryptonTabControl1.SelectedIndex = 0;
-            this.kryptonTabControl1.Size = new System.Drawing.Size(1110, 443);
+            this.kryptonTabControl1.Size = new System.Drawing.Size(1080, 443);
             this.kryptonTabControl1.TabIndex = 29;
             this.kryptonTabControl1.UseExtendedLayout = false;
             // 
@@ -584,7 +610,7 @@ namespace HLP.UI.Entries.Geral
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1102, 414);
+            this.tabPage2.Size = new System.Drawing.Size(1072, 414);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Tag = false;
             this.tabPage2.Text = "Grade";
@@ -601,7 +627,7 @@ namespace HLP.UI.Entries.Geral
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.PersistentColors = false;
-            this.kryptonPanel3.Size = new System.Drawing.Size(1102, 414);
+            this.kryptonPanel3.Size = new System.Drawing.Size(1072, 414);
             this.kryptonPanel3.TabIndex = 0;
             // 
             // dgvLinhaPagamento
@@ -621,7 +647,7 @@ namespace HLP.UI.Entries.Geral
             this.dgvLinhaPagamento.Inclui = false;
             this.dgvLinhaPagamento.Location = new System.Drawing.Point(0, 0);
             this.dgvLinhaPagamento.Name = "dgvLinhaPagamento";
-            this.dgvLinhaPagamento.Size = new System.Drawing.Size(1102, 414);
+            this.dgvLinhaPagamento.Size = new System.Drawing.Size(1072, 414);
             this.dgvLinhaPagamento.TabIndex = 2;
             this.dgvLinhaPagamento.Tag = "Plano_pagamento_linhas";
             // 
@@ -704,7 +730,7 @@ namespace HLP.UI.Entries.Geral
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1110, 93);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1080, 93);
             this.flowLayoutPanel2.TabIndex = 28;
             // 
             // sp_PlanoPgto
@@ -714,7 +740,7 @@ namespace HLP.UI.Entries.Geral
             this.sp_PlanoPgto.BackColor = System.Drawing.Color.Transparent;
             this.sp_PlanoPgto.Location = new System.Drawing.Point(3, 3);
             this.sp_PlanoPgto.Name = "sp_PlanoPgto";
-            this.sp_PlanoPgto.Size = new System.Drawing.Size(251, 18);
+            this.sp_PlanoPgto.Size = new System.Drawing.Size(185, 19);
             this.sp_PlanoPgto.TabIndex = 3;
             this.sp_PlanoPgto.TabStop = false;
             // 
@@ -722,18 +748,20 @@ namespace HLP.UI.Entries.Geral
             // 
             this.nudNumParcelas._Help = "Numero de parcelas para gerar a grade";
             this.nudNumParcelas._LabelGroup = this.sp_PlanoPgto;
+            this.nudNumParcelas._LabelSuperior = false;
             this.nudNumParcelas._LabelText = "Quantidade de parcelas";
             this.nudNumParcelas._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudNumParcelas._Regex = null;
             this.nudNumParcelas._TamanhoComponente = 56;
-            this.nudNumParcelas._TamanhoMaiorLabel = 0;
-            this.nudNumParcelas._Visible = true;
+            this.nudNumParcelas._TamanhoMaiorLabel = 129;
+            this.nudNumParcelas._Visible = false;
             this.nudNumParcelas.BackColor = System.Drawing.Color.Transparent;
             this.nudNumParcelas.Base = null;
+            this.nudNumParcelas.bConfiguracao = false;
             this.nudNumParcelas.Color = System.Drawing.Color.White;
             this.nudNumParcelas.DecimalPlaces = 0;
-            this.nudNumParcelas.Location = new System.Drawing.Point(0, 27);
-            this.nudNumParcelas.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
+            this.nudNumParcelas.Location = new System.Drawing.Point(3, 28);
+            this.nudNumParcelas.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.nudNumParcelas.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -745,6 +773,7 @@ namespace HLP.UI.Entries.Geral
             0,
             0});
             this.nudNumParcelas.Name = "nudNumParcelas";
+            this.nudNumParcelas.objConfigComponenteModel = null;
             this.nudNumParcelas.ReadOnly = false;
             this.nudNumParcelas.Size = new System.Drawing.Size(185, 22);
             this.nudNumParcelas.TabIndex = 0;
@@ -763,11 +792,13 @@ namespace HLP.UI.Entries.Geral
             this.hlP_Button1._Regex = null;
             this.hlP_Button1._TamanhoComponente = 111;
             this.hlP_Button1._TamanhoMaiorLabel = 0;
-            this.hlP_Button1._Visible = true;
+            this.hlP_Button1._Visible = false;
             this.hlP_Button1.Base = null;
-            this.hlP_Button1.Location = new System.Drawing.Point(0, 55);
+            this.hlP_Button1.bConfiguracao = false;
+            this.hlP_Button1.Location = new System.Drawing.Point(0, 56);
             this.hlP_Button1.Margin = new System.Windows.Forms.Padding(0, 3, 15, 3);
             this.hlP_Button1.Name = "hlP_Button1";
+            this.hlP_Button1.objConfigComponenteModel = null;
             this.hlP_Button1.Size = new System.Drawing.Size(111, 24);
             this.hlP_Button1.TabIndex = 5;
             this.hlP_Button1._btnHlpClick += new System.EventHandler(this.hlP_Button1__btnHlpClick);
@@ -787,10 +818,9 @@ namespace HLP.UI.Entries.Geral
             this.Text = "Planos de Pagamento";
             this.Load += new System.EventHandler(this.FormPlanoPagamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).EndInit();
             this.panelPadrao.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelAtalhos)).EndInit();
             this.tcPlanosPagamento.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.kryptonPanel1.ResumeLayout(false);

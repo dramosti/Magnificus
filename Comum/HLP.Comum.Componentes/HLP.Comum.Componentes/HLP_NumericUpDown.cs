@@ -19,6 +19,7 @@ namespace HLP.Comum.Components
         public HLP_NumericUpDown()
         {
             InitializeComponent();
+            base.Initialize();
             controleBase = this.nud;
             lblBase = this.lblDescricao;
             this.Height = 22;
@@ -130,7 +131,25 @@ namespace HLP.Comum.Components
                 nud.StateNormal.Back.Color1 = value;
             }
         }
+        [Category("HLP")]
+        [Description("Label no modo superior ?")]
+        public bool _LabelSuperior
+        {
+            get { return _labelSuperior; }
+            set
+            {
+                _labelSuperior = value;
+                if (value)
+                {
+                    this.InitializeComponentModoLeftToRigth();
+                }
+                else
+                {
+                    this.InitializeComponentModoTopToDown();
 
+                }
+            }
+        }
 
         private void nud_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -208,6 +227,61 @@ namespace HLP.Comum.Components
             //this.Height = 22;
         }
 
+        void InitializeComponentModoTopToDown()
+        {
+            int iTamanhoTxt = this.nud.Width;
+
+            this.nud.Dock = System.Windows.Forms.DockStyle.Fill;
+
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.Size = new System.Drawing.Size((lblBase.Width + iTamanhoTxt), 22);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+
+
+
+        }
+        void InitializeComponentModoLeftToRigth()
+        {
+            int iWidth = this.nud.Width;
+      
+            this.nud.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nud.Location = new System.Drawing.Point(0, 13);
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDescricao.Location = new System.Drawing.Point(0, 0);
+            // 
+            // HLP_TextBox
+            // 
+            //this._TamanhoComponente = 80;
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            //this.Size = new System.Drawing.Size(180, 35);
+
+            
+
+            if (lblBase.Width > iWidth)
+                iWidth = lblBase.Width;
+            nud.Width = iWidth;
+            this.Size = new Size(iWidth, 35);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+
+
+        }
 
 
 

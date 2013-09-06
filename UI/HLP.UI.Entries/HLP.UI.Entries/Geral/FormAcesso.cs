@@ -39,6 +39,7 @@ namespace HLP.UI.Entries.Geral
             IKernel kernel = new StandardKernel(new MagnificusDependenciesModule());
             kernel.Settings.ActivationCacheDisabled = false;
             kernel.Inject(this);
+            cbxstUsuarioAtivo.cbx.SelectedIndexChanged+=cbx_SelectedIndexChanged;
         }
 
         private void FormAcesso_Load(object sender, EventArgs e)
@@ -56,6 +57,8 @@ namespace HLP.UI.Entries.Geral
 
             Thread t1 = new Thread(new ThreadStart(verifBw));
             t1.Start();
+
+
         }
 
         private void InitializaComboBox()
@@ -118,11 +121,11 @@ namespace HLP.UI.Entries.Geral
             txtxId.Enabled = txtxSenha.Enabled = cbxstUsuario.Enabled = cbxstUsuario.Text != "0 - HLP";
             dgvAcesso.Enabled = txtxId.Text != "" && txtxSenha.Text != "" && cbxstUsuario.Text != "";
             txtxId.CharacterCasing = CharacterCasing.Upper;
-            chkstUsuarioAtivo__CheckedChanged(this, null);
+            cbx_SelectedIndexChanged(this, null);
             if (cbxstUsuario.Text == "0 - HLP")
             {
-                cbxstUsuario.Enabled = txtxId.Enabled = txtxSenha.Enabled = chkstUsuarioAtivo.Enabled
-                    = false;
+                cbxstUsuario.Enabled = txtxId.Enabled = txtxSenha.Enabled = false;
+                cbxstUsuarioAtivo.SelectedIndex = 0;
             }
             else
             {
@@ -321,48 +324,7 @@ namespace HLP.UI.Entries.Geral
                 CarregaAcesso();
             }
         }
-
-        private void btnVerificar__btnHlpClick(object sender, EventArgs e)
-        {
-            bool contemErros = false;
-            txtxId.errorProvider1.Clear();
-            txtxSenha.errorProvider1.Clear();
-            cbxstUsuario.errorProvider1.Clear();
-
-            if (txtxId.Text == "")
-            {
-                txtxId.errorProvider1.SetError(txtxId, "Campo não pode ser vazio");
-                contemErros = true;
-            }
-            if (txtxSenha.Text == "")
-            {
-                txtxSenha.errorProvider1.SetError(txtxSenha, "Campo não pode ser vazio");
-                contemErros = true;
-            }
-            if (cbxstUsuario.Text == "")
-            {
-                cbxstUsuario.errorProvider1.SetError(cbxstUsuario, "Campo não pode ser vazio");
-                contemErros = true;
-            }
-
-            if (!contemErros)
-            {
-                FuncionarioModel objValidFunc = new FuncionarioModel();
-                objValidFunc = funcionarioService.ValidaUsuario(txtxId.Text, txtxSenha.Text);
-                if (objValidFunc == null
-                    || objValidFunc.idFuncionario == objFuncionarioModel.idFuncionario)
-                {
-                    dgvAcesso.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("Já existe um usuário com mesmo login e senha na base de dados",
-                        "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-        }
-
+              
         private void txtxId__TextChanged(object sender, EventArgs e)
         {
             if (btnSalvar.Enabled)
@@ -371,11 +333,12 @@ namespace HLP.UI.Entries.Geral
             }
         }
 
-        private void chkstUsuarioAtivo__CheckedChanged(object sender, EventArgs e)
+
+        private void cbx_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (btnSalvar.Enabled)
             {
-                if (chkstUsuarioAtivo.Checked)
+                if (cbxstUsuarioAtivo.SelectedIndex == 1)
                 {
                     txtxId.Enabled = txtxSenha.Enabled = cbxstUsuario.Enabled =
                         btnVerificar.Enabled = true;
@@ -390,6 +353,55 @@ namespace HLP.UI.Entries.Geral
                         Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
                 }
             }
+
+        }
+
+        private void btnVerificar__btnHlpClick_1(object sender, EventArgs e)
+        {
+            try
+            {
+                bool contemErros = false;
+                txtxId.errorProvider1.Clear();
+                txtxSenha.errorProvider1.Clear();
+                cbxstUsuario.errorProvider1.Clear();
+
+                if (txtxId.Text == "")
+                {
+                    txtxId.errorProvider1.SetError(txtxId, "Campo não pode ser vazio");
+                    contemErros = true;
+                }
+                if (txtxSenha.Text == "")
+                {
+                    txtxSenha.errorProvider1.SetError(txtxSenha, "Campo não pode ser vazio");
+                    contemErros = true;
+                }
+                if (cbxstUsuario.Text == "")
+                {
+                    cbxstUsuario.errorProvider1.SetError(cbxstUsuario, "Campo não pode ser vazio");
+                    contemErros = true;
+                }
+
+                if (!contemErros)
+                {
+                    FuncionarioModel objValidFunc = new FuncionarioModel();
+                    objValidFunc = funcionarioService.ValidaUsuario(txtxId.Text, txtxSenha.Text);
+                    if (objValidFunc == null
+                        || objValidFunc.idFuncionario == objFuncionarioModel.idFuncionario)
+                    {
+                        dgvAcesso.Enabled = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Já existe um usuário com mesmo login e senha na base de dados",
+                            "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                new HLPexception(ex);
+            }
+
         }
     }
 }
