@@ -40,7 +40,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
 
                     if (colunasGrid.Base != null)
                     {
-                        if (colunasGrid.xType.Equals("decimal"))
+                        if (colunasGrid.xType.Equals("decimal") || (colunasGrid.xType.Equals("numeric")))
                         {
                             colunasGrid.objColunasGridUsu.nMaxLength = colunasGrid.Base.GetMaxLeghtToNumericUpDown();
                             colunasGrid.objColunasGridUsu.nDecimalPlaces = colunasGrid.Base.SCALE.ToInt32();
