@@ -145,7 +145,7 @@ namespace HLP.Comum.Components
         {
             get { return controleBase.Width; }
             set
-            {                
+            {
                 controleBase.Width = value;
             }
         }

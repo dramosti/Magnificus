@@ -16,8 +16,10 @@ namespace HLP.Comum.Components
         public HLP_Observacao()
         {
             InitializeComponent();
-            controleBase = this.btnVisualizar;
-            lblBase = this.lblDescricao;
+            base.Initialize();
+            base.controleBase = this.btnVisualizar;
+            base.lblBase = this.lblDescricao;
+
         }
       
         [Category("HLP")]
@@ -68,5 +70,9 @@ namespace HLP.Comum.Components
                 btnVisualizar.Enabled = !value;
             }
         }
+
+        [Category("HLP")]
+        [Description("Label no modo superior ?")]
+        public bool _LabelSuperior { get; set; }
     }
 }

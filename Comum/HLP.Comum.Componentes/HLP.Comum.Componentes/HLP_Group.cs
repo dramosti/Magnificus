@@ -51,7 +51,7 @@ namespace HLP.Comum.Components
                     if (this.PositionComponente == Posicao.TopDown)
                     {
                         e.Control.SetPropertyValue("_LabelSuperior", false);
-                        if ( e.Control.GetType() == typeof(HLP_Button))
+                        if ((e.Control.GetType() == typeof(HLP_Button)) || ((e.Control.GetType() == typeof(HLP_Observacao))))
                         {
                             e.Control.Height = 24;
                         }

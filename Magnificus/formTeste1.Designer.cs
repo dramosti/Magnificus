@@ -32,6 +32,7 @@
             this.kryptonTabControl1 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.kryptonPanel2 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
+            this.hlP_Observacao1 = new HLP.Comum.Components.HLP_Observacao();
             this.hlP_Group2 = new HLP.Comum.Components.HLP_Group();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtCodigo = new HLP.Comum.Components.HLP_TextBox();
@@ -110,6 +111,26 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(479, 258);
             this.kryptonPanel2.TabIndex = 0;
             // 
+            // hlP_Observacao1
+            // 
+            this.hlP_Observacao1._LabelGroup = null;
+            this.hlP_Observacao1._LabelSuperior = false;
+            this.hlP_Observacao1._LabelText = "Fdsf";
+            this.hlP_Observacao1._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.hlP_Observacao1._Regex = null;
+            this.hlP_Observacao1._TamanhoComponente = 152;
+            this.hlP_Observacao1._TamanhoMaiorLabel = 106;
+            this.hlP_Observacao1.BackColor = System.Drawing.Color.Transparent;
+            this.hlP_Observacao1.Base = null;
+            this.hlP_Observacao1.bConfiguracao = false;
+            this.hlP_Observacao1.Location = new System.Drawing.Point(109, 145);
+            this.hlP_Observacao1.Margin = new System.Windows.Forms.Padding(109, 3, 15, 3);
+            this.hlP_Observacao1.Name = "hlP_Observacao1";
+            this.hlP_Observacao1.objConfigComponenteModel = null;
+            this.hlP_Observacao1.ReadOnly = false;
+            this.hlP_Observacao1.Size = new System.Drawing.Size(152, 24);
+            this.hlP_Observacao1.TabIndex = 6;
+            // 
             // hlP_Group2
             // 
             this.hlP_Group2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -142,6 +163,7 @@
             this.flowLayoutPanel2.Controls.Add(this.nudcCfop);
             this.flowLayoutPanel2.Controls.Add(this.txtxCfop);
             this.flowLayoutPanel2.Controls.Add(this.hlP_Button1);
+            this.flowLayoutPanel2.Controls.Add(this.hlP_Observacao1);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -328,5 +350,6 @@
         private HLP.Comum.Components.HLP_TextBox txtxCfopResumida;
         private HLP.Comum.Components.HLP_TextBox txtxCfop;
         private HLP.Comum.Components.HLP_Button hlP_Button1;
+        private HLP.Comum.Components.HLP_Observacao hlP_Observacao1;
     }
 }
