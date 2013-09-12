@@ -714,10 +714,13 @@ namespace HLP.Comum.Components
         internal void Initialize()
         {
             this.InitializeComponent();
-            this.SizeChanged -= UserControlBase_SizeChanged;
-            this.SizeChanged += UserControlBase_SizeChanged;
-            controleBase.SizeChanged -= UserControlBase_SizeChanged;
-            controleBase.SizeChanged += UserControlBase_SizeChanged;
+            if ((controleBase.GetType() != typeof(KryptonButton)))
+            {
+                this.SizeChanged -= UserControlBase_SizeChanged;
+                this.SizeChanged += UserControlBase_SizeChanged;
+                controleBase.SizeChanged -= UserControlBase_SizeChanged;
+                controleBase.SizeChanged += UserControlBase_SizeChanged;
+            }          
         }
 
         private void UserControlBase_SizeChanged(object sender, EventArgs e)
@@ -737,16 +740,5 @@ namespace HLP.Comum.Components
                 }
             }
         }
-
-        private void UserControlBase_Validated(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-
-
     }
 }

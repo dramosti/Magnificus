@@ -69,6 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblDescricao;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btn;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton btn;
     }
 }

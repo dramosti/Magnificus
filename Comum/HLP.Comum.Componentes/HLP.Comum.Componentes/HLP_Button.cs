@@ -44,10 +44,21 @@ namespace HLP.Comum.Components
 
         [Category("HLP")]
         [Description("Label no modo superior ?")]
-        public bool _LabelSuperior { get; set; }
-
-
-
-
+        public bool _LabelSuperior
+        {
+            get { return _labelSuperior; }
+            set
+            {
+                _labelSuperior = value;
+                if (value)
+                {
+                    this.Height = 36;
+                }
+                else
+                {
+                    this.Height = 24;
+                }
+            }
+        }
     }
 }

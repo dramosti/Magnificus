@@ -108,9 +108,9 @@ namespace HLP.Comum.Components
                 _positionComponente = value;
                 if (value == Posicao.LeftToRigth)
                 {
+                    (this.Panel.Controls[0] as FlowLayoutPanel).FlowDirection = FlowDirection.LeftToRight;
                     if (lControl.Count > 0)
                     {
-                        (this.Panel.Controls[0] as FlowLayoutPanel).FlowDirection = FlowDirection.LeftToRight;
                         foreach (UserControl ctr in lControl)
                         {
                             try
@@ -125,9 +125,9 @@ namespace HLP.Comum.Components
                 }
                 else
                 {
+                    (this.Panel.Controls[0] as FlowLayoutPanel).FlowDirection = FlowDirection.TopDown;
                     if (lControl.Count > 0)
                     {
-                        (this.Panel.Controls[0] as FlowLayoutPanel).FlowDirection = FlowDirection.TopDown;
                         foreach (UserControl ctr in lControl)
                         {
                             try

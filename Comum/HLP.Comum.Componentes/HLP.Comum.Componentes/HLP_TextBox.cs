@@ -50,8 +50,6 @@ namespace HLP.Comum.Components
                     this.InitializeComponentModoTopToDown();
 
                 }
-
-
             }
         }
 
@@ -250,7 +248,14 @@ namespace HLP.Comum.Components
         {
             if (!_Multiline)
             {
-                this.Height = 21;
+                if (this._labelSuperior)
+                {
+                    this.Height = 35;
+                }
+                else
+                {
+                    this.Height = 21;
+                }
             }
             else
             {
@@ -320,7 +325,7 @@ namespace HLP.Comum.Components
             this.lblDescricao.Location = new System.Drawing.Point(0, 0);
 
             this.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
-            this.Size = new Size((lblBase.Width + iTamanhoTxt), 22);
+            this.Size = new Size((lblBase.Width + iTamanhoTxt), 21);
 
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -358,8 +363,6 @@ namespace HLP.Comum.Components
 
             this.ResumeLayout(false);
             this.PerformLayout();
-
-
 
         }
 

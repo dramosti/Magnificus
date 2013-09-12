@@ -21,16 +21,19 @@ namespace HLP.Comum.Components
             base.lblBase = this.lblDescricao;
 
         }
-      
+
         [Category("HLP")]
+        [Description("Habilita e desabilita o componente")]
         public new bool Enabled
         {
             get { return btnVisualizar.Enabled; }
             set
             {
                 btnVisualizar.Enabled = value;
+                this.TabStop = value;
             }
         }
+
         [Category("HLP")]
         public override string Text { get; set; }
         private void btnVisualizar_Click(object sender, EventArgs e)
@@ -48,7 +51,7 @@ namespace HLP.Comum.Components
         }
         private void HLP_Observacao_Load(object sender, EventArgs e)
         {
-            this.Height = 26;
+            //this.Height = 26;
         }
         public event EventHandler _Enter;
         private void HLP_Observacao_Enter(object sender, EventArgs e)
@@ -73,6 +76,21 @@ namespace HLP.Comum.Components
 
         [Category("HLP")]
         [Description("Label no modo superior ?")]
-        public bool _LabelSuperior { get; set; }
+        public bool _LabelSuperior
+        {
+            get { return _labelSuperior; }
+            set
+            {
+                _labelSuperior = value;
+                if (value)
+                {
+                    this.Height = 36;
+                }
+                else
+                {
+                    this.Height = 24;
+                }
+            }
+        }
     }
 }
