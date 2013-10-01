@@ -42,7 +42,7 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 16)]
         public int idCondicaoPagamento { get; set; }
         [ParameterOrder(Order = 17)]
-        public int idMotivo { get; set; }
+        public int? idMotivo { get; set; }
         [ParameterOrder(Order = 18)]
         public DateTime? dConfirmacao { get; set; }
         [ParameterOrder(Order = 19)]
@@ -72,27 +72,27 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 31)]
         public int idTipoDocumento { get; set; }
         [ParameterOrder(Order = 32)]
-        public int idPerfilUsuario { get; set; }
-        [ParameterOrder(Order = 33)]
         public int idEmpresa { get; set; }
-        [ParameterOrder(Order = 34)]
+        [ParameterOrder(Order = 33)]
         public int? idContato { get; set; }
-        [ParameterOrder(Order = 35)]
+        [ParameterOrder(Order = 34)]
         public string nPedidoCliente { get; set; }
-        [ParameterOrder(Order = 36)]
+        [ParameterOrder(Order = 35)]
         public byte stContribuinteIcms { get; set; }
-        [ParameterOrder(Order = 37)]
+        [ParameterOrder(Order = 36)]
         public int? idOrcamentoOrigem { get; set; }
-        [ParameterOrder(Order = 38)]
+        [ParameterOrder(Order = 37)]
         public string xVersaoOrcamento { get; set; }
-        [ParameterOrder(Order = 39)]
+        [ParameterOrder(Order = 38)]
         public int? idSite { get; set; }
-        [ParameterOrder(Order = 40)]
+        [ParameterOrder(Order = 39)]
         public int? idFuncionario { get; set; }
-        [ParameterOrder(Order = 41)]
+        [ParameterOrder(Order = 40)]
         public int? idFuncionarioResponsavel { get; set; }
-        [ParameterOrder(Order = 42)]
+        [ParameterOrder(Order = 41)]
         public byte? stWeb { get; set; }
+        [ParameterOrder(Order = 42)]
+        public int? idTransportador { get; set; }
 
         private List<Orcamento_ItemModel> lOrcamento_Itens;
 
@@ -104,30 +104,6 @@ namespace HLP.Models.Sales.Comercial
                 lOrcamento_Itens = new List<Orcamento_ItemModel>() : lOrcamento_Itens;
             }
             set { lOrcamento_Itens = value; }
-        }
-
-        private List<Orcamento_ItemModel> lOrcamento_ItensVendidos;
-
-        public List<Orcamento_ItemModel> LOrcamento_ItensVendidos
-        {
-            get
-            {
-                return lOrcamento_ItensVendidos == null ?
-                    lOrcamento_ItensVendidos = new List<Orcamento_ItemModel>() : lOrcamento_ItensVendidos;
-            }
-            set { lOrcamento_ItensVendidos = value; }
-        }
-
-        private List<Orcamento_ItemModel> lOrcamento_ItensCancelPerd;
-
-        public List<Orcamento_ItemModel> LOrcamento_ItensCancelPerd
-        {
-            get
-            {
-                return lOrcamento_ItensCancelPerd == null ?
-                    lOrcamento_ItensCancelPerd = new List<Orcamento_ItemModel>() : lOrcamento_ItensCancelPerd;
-            }
-            set { lOrcamento_ItensCancelPerd = value; }
         }
 
         private Orcamento_Total_ImpostosModel orcamento_Total_Impostos;
@@ -158,11 +134,19 @@ namespace HLP.Models.Sales.Comercial
 
     public class Orcamento_ItemModel : BaseModelFilhos
     {
+        static int cont = 0;
+
         public Orcamento_ItemModel()
         {
+            this.idItem = cont + 1;
+            cont++;
             this.orcamento_Item_Impostos = new Orcamento_Item_ImpostosModel();
         }
 
+        public int idItem { get; set; } //Adicionei esta propriedade para controle da manipulação da lista, de acordo com o status
+        //do item no orçamento, para que o item fique gravado na memória e não se perca no momento
+        //da filtragem pelo status de orçamento dos itens e também não se duplique no momento de salva-lo
+        //na lista em memória
         private int? _idOrcamentoItem;
         [ParameterOrder(Order = 1)]
         public int? idOrcamentoItem
@@ -253,8 +237,6 @@ namespace HLP.Models.Sales.Comercial
             get
             {
                 return orcamento_Item_Impostos;
-                //return orcamento_Item_Impostos == null ?
-                //    orcamento_Item_Impostos = new Orcamento_Item_ImpostosModel() : orcamento_Item_Impostos;
             }
             set { orcamento_Item_Impostos = value; }
         }
@@ -311,7 +293,7 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 24)]
         public int idCodigoIcmsPai { get; set; }
         [ParameterOrder(Order = 25)]
-        public int idCSTIcms { get; set; }
+        public int? idCSTIcms { get; set; }
         [ParameterOrder(Order = 26)]
         public decimal? IPI_vBaseCalculo { get; set; }
         [ParameterOrder(Order = 27)]
@@ -323,9 +305,9 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 30)]
         public byte IPI_stCompoeBaseCalculo { get; set; }
         [ParameterOrder(Order = 31)]
-        public int idClassificacaoFiscal { get; set; }
+        public int? idClassificacaoFiscal { get; set; }
         [ParameterOrder(Order = 32)]
-        public int idCSTIpi { get; set; }
+        public int? idCSTIpi { get; set; }
         [ParameterOrder(Order = 33)]
         public decimal? ISS_vBaseCalculo { get; set; }
         [ParameterOrder(Order = 34)]
@@ -335,7 +317,7 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 36)]
         public byte ISS_stCalculaIss { get; set; }
         [ParameterOrder(Order = 37)]
-        public int idCSTIss { get; set; }
+        public int? idCSTIss { get; set; }
         [ParameterOrder(Order = 38)]
         public decimal? PIS_vBaseCalculo { get; set; }
         [ParameterOrder(Order = 39)]
@@ -353,7 +335,7 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 45)]
         public byte PIS_stCompoeBaseCalculoSubstituicaoTributaria { get; set; }
         [ParameterOrder(Order = 46)]
-        public int idCSTPis { get; set; }
+        public int? idCSTPis { get; set; }
         [ParameterOrder(Order = 47)]
         public decimal? COFINS_vBaseCalculo { get; set; }
         [ParameterOrder(Order = 48)]
@@ -365,7 +347,7 @@ namespace HLP.Models.Sales.Comercial
         [ParameterOrder(Order = 51)]
         public byte? COFINS_stCompoeBaseCalculoSubstituicaoTributaria { get; set; }
         [ParameterOrder(Order = 52)]
-        public int idCSTCofins { get; set; }
+        public int? idCSTCofins { get; set; }
         [ParameterOrder(Order = 53)]
         public byte? ICMS_stNaoReduzBase { get; set; }
     }

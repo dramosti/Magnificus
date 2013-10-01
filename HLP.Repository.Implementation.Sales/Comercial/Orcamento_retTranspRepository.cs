@@ -70,5 +70,18 @@ namespace HLP.Repository.Implementation.Sales.Comercial
             }
             return regAllOrcamento_retTranspAccessor.Execute().ToList();
         }
+
+        public Orcamento_retTranspModel GetOrcamento_retTranspByIdOrcamento(int idOrcamento)
+        {
+            if (regOrcamento_retTranspAccessor == null)
+            {
+                regOrcamento_retTranspAccessor = UndTrabalho.dbPrincipal.CreateSqlStringAccessor("select * from Orcamento_retTransp" +
+                " where idOrcamento = @idOrcamento",
+                                 new Parameters(UndTrabalho.dbPrincipal)
+                                 .AddParameter<int>("idOrcamento"),
+                                 MapBuilder<Orcamento_retTranspModel>.MapAllProperties().Build());
+            }
+            return regOrcamento_retTranspAccessor.Execute(idOrcamento).FirstOrDefault();
+        }
     }
 }

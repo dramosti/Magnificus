@@ -70,5 +70,19 @@ namespace HLP.Repository.Implementation.Sales.Comercial
             }
             return regAllOrcamento_Total_ImpostosAccessor.Execute().ToList();
         }
+
+        public Orcamento_Total_ImpostosModel GetOrcamento_Total_ImpostosByIdOrcamento(int idOrcamento)
+        {
+            if (regOrcamento_Total_ImpostosAccessor == null)
+            {
+                regOrcamento_Total_ImpostosAccessor = UndTrabalho.dbPrincipal.CreateSqlStringAccessor("select * from Orcamento_Total_Impostos" +
+                " where idOrcamento = @idOrcamento",
+                                 new Parameters(UndTrabalho.dbPrincipal)
+                                 .AddParameter<int>("idOrcamento"),
+                                 MapBuilder<Orcamento_Total_ImpostosModel>.MapAllProperties().Build());
+            }
+
+            return regOrcamento_Total_ImpostosAccessor.Execute(idOrcamento).FirstOrDefault();
+        }
     }
 }

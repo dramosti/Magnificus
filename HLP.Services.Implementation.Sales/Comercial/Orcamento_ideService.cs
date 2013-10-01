@@ -19,6 +19,8 @@ using HLP.Models.Entries.Fiscal;
 using HLP.Services.Interfaces.Entries.Parametros;
 using HLP.Models.Entries.Parametros;
 using HLP.Models.Entries.Gerais;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace HLP.Services.Implementation.Sales.Comercial
 {
@@ -96,6 +98,12 @@ namespace HLP.Services.Implementation.Sales.Comercial
         [Inject]
         public ITipo_documentoService tipo_documentoService { get; set; }
 
+        private struct InfTreeViewOrcamento
+        {
+            public string idOrcamento;
+            public string dDataCriacaoOrcamento;
+        }
+
         #region operacoes básicas
         public void Save(Orcamento_ideModel objOrcamento_ide)
         {
@@ -103,75 +111,202 @@ namespace HLP.Services.Implementation.Sales.Comercial
             {
                 _Orcamento_ideRepository.BeginTransaction();
                 _Orcamento_ideRepository.Save(objOrcamento_ide);
+                objOrcamento_ide.Orcamento_retTransp.idOrcamento = (int)objOrcamento_ide.idOrcamento;
                 _Orcamento_retTranspRepository.Save(objOrcamento_ide.Orcamento_retTransp);
+                objOrcamento_ide.Orcamento_Total_Impostos.idOrcamento = (int)objOrcamento_ide.idOrcamento;
                 _Orcamento_Total_ImpostosRepository.Save(objOrcamento_ide.Orcamento_Total_Impostos);
-
-                #region Itens orçamento
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_Itens.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Incluido))
-                {
-                    item.idOrcamento = (int)objOrcamento_ide.idOrcamento;
-                    _Orcamento_itemRepository.Save(item);
-                    _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
-                }
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_Itens.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Alterado))
-                {
-                    _Orcamento_itemRepository.Update(item);
-                    _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
-                }
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_Itens.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Excluido))
-                {
-                    _Orcamento_itemRepository.Delete((int)item.idOrcamentoItem);
-                    _Orcamento_Item_ImpostosRepository.Delete((int)item.Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
-                }
-                #endregion
-
-                #region Itens orçamento vendidos
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensVendidos.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Incluido))
-                {
-                    item.idOrcamento = (int)objOrcamento_ide.idOrcamento;
-                    _Orcamento_itemRepository.Save(item);
-                    _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
-                }
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensVendidos.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Alterado))
-                {
-                    _Orcamento_itemRepository.Update(item);
-                    _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
-                }
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensVendidos.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Excluido))
-                {
-                    _Orcamento_itemRepository.Delete((int)item.idOrcamentoItem);
-                    _Orcamento_Item_ImpostosRepository.Delete((int)item.Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
-                }
-                #endregion
-
-                #region Itens orçamento cancelados ou perdidos
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensCancelPerd.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Incluido))
-                {
-                    item.idOrcamento = (int)objOrcamento_ide.idOrcamento;
-                    _Orcamento_itemRepository.Save(item);
-                    _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
-                }
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensCancelPerd.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Alterado))
-                {
-                    _Orcamento_itemRepository.Update(item);
-                    _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
-                }
-                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensCancelPerd.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Excluido))
-                {
-                    _Orcamento_itemRepository.Delete((int)item.idOrcamentoItem);
-                    _Orcamento_Item_ImpostosRepository.Delete((int)item.Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
-                }
-                #endregion
-
                 _Orcamento_ideRepository.CommitTransaction();
+                #region Itens orçamento
+                foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_Itens)
+                {
+                    try
+                    {
+                        _Orcamento_itemRepository.BebingTransaction();
+                        item.idOrcamento = (int)objOrcamento_ide.idOrcamento;
+                        item.idEmpresa = CompanyData.idEmpresa;
+                        switch (item.GetStatusRegistro())
+                        {
+                            case BaseModelFilhos.statusRegistroFilho.Incluido:
+                                {
+                                    _Orcamento_itemRepository.Save(item);
+                                    item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                                    _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
+                                }
+                                break;
+                            case BaseModelFilhos.statusRegistroFilho.Alterado:
+                                {
+                                    _Orcamento_itemRepository.Save(item);
+                                    item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                                    _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
+                                }
+                                break;
+                            case BaseModelFilhos.statusRegistroFilho.Excluido:
+                                {
+                                    _Orcamento_itemRepository.Delete((int)item.idOrcamentoItem);
+                                    _Orcamento_Item_ImpostosRepository.Delete((int)item.Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
+                                }
+                                break;
+                        }
+
+                        _Orcamento_itemRepository.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        _Orcamento_itemRepository.Rollback();
+                        throw;
+                    }
+                #endregion
+                    #region Apos testes, excluir
+
+
+                    //}
+                    //foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_Itens.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Alterado))
+                    //{
+                    //    try
+                    //    {
+                    //        _Orcamento_itemRepository.BebingTransaction();
+                    //        _Orcamento_itemRepository.Update(item);
+                    //        item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                    //        _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
+                    //        _Orcamento_itemRepository.Commit();
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        _Orcamento_itemRepository.Rollback();
+                    //        throw;
+                    //    }
+
+                    //}
+                    //foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_Itens.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Excluido))
+                    //{
+                    //    try
+                    //    {
+                    //        _Orcamento_itemRepository.BebingTransaction();
+                    //        _Orcamento_itemRepository.Delete((int)item.idOrcamentoItem);
+                    //        item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                    //        _Orcamento_Item_ImpostosRepository.Delete((int)item.Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
+                    //        _Orcamento_itemRepository.Commit();
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        _Orcamento_itemRepository.Rollback();
+                    //        throw;
+                    //    }
+
+                    //}
+
+
+                    //#region Itens orçamento vendidos
+                    //foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensVendidos.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Incluido))
+                    //{
+                    //    try
+                    //    {
+                    //        _Orcamento_itemRepository.BebingTransaction();
+                    //        item.idOrcamento = (int)objOrcamento_ide.idOrcamento;
+                    //        _Orcamento_itemRepository.Save(item);
+                    //        item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                    //        _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
+                    //        _Orcamento_itemRepository.Commit();
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        _Orcamento_itemRepository.Rollback();
+                    //        throw;
+                    //    }
+                    //}
+                    //foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensVendidos.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Alterado))
+                    //{
+                    //    try
+                    //    {
+                    //        _Orcamento_itemRepository.BebingTransaction();
+                    //        _Orcamento_itemRepository.Update(item);
+                    //        item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                    //        _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
+                    //        _Orcamento_itemRepository.Commit();
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        _Orcamento_itemRepository.Rollback();
+                    //        throw;
+                    //    }
+                    //}
+                    //foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensVendidos.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Excluido))
+                    //{
+                    //    try
+                    //    {
+                    //        _Orcamento_itemRepository.BebingTransaction();
+                    //        _Orcamento_itemRepository.Delete((int)item.idOrcamentoItem);
+                    //        item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                    //        _Orcamento_Item_ImpostosRepository.Delete((int)item.Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
+                    //        _Orcamento_itemRepository.Commit();
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        _Orcamento_itemRepository.Rollback();
+                    //        throw;
+                    //    }
+                    //}
+                    //#endregion
+
+                    //#region Itens orçamento cancelados ou perdidos
+                    //foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensCancelPerd.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Incluido))
+                    //{
+                    //    try
+                    //    {
+                    //        _Orcamento_itemRepository.BebingTransaction();
+                    //        item.idOrcamento = (int)objOrcamento_ide.idOrcamento;
+                    //        _Orcamento_itemRepository.Save(item);
+                    //        item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                    //        _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
+                    //        _Orcamento_itemRepository.Commit();
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        _Orcamento_itemRepository.Rollback();
+                    //        throw;
+                    //    }
+                    //}
+                    //foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensCancelPerd.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Alterado))
+                    //{
+                    //    try
+                    //    {
+                    //        _Orcamento_itemRepository.BebingTransaction();
+                    //        _Orcamento_itemRepository.Update(item);
+                    //        item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                    //        _Orcamento_Item_ImpostosRepository.Save(item.Orcamento_Item_Impostos);
+                    //        _Orcamento_itemRepository.Commit();
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        _Orcamento_itemRepository.Rollback();
+                    //        throw;
+                    //    }
+                    //}
+                    //foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_ItensCancelPerd.Where(p => p.GetStatusRegistro() == BaseModelFilhos.statusRegistroFilho.Excluido))
+                    //{
+                    //    try
+                    //    {
+                    //        _Orcamento_itemRepository.BebingTransaction();
+                    //        _Orcamento_itemRepository.Delete((int)item.idOrcamentoItem);
+                    //        item.Orcamento_Item_Impostos.idOrcamentoItem = (int)item.idOrcamentoItem;
+                    //        _Orcamento_Item_ImpostosRepository.Delete((int)item.Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
+                    //        _Orcamento_itemRepository.Commit();
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        _Orcamento_itemRepository.Rollback();
+                    //        throw;
+                    //    }
+                    //}
+                    //#endregion
+                    #endregion
+                }
             }
             catch (Exception)
             {
                 _Orcamento_ideRepository.RollackTransaction();
                 throw;
             }
-
-
         }
 
         public void Delete(Orcamento_ideModel objOrcamento_ide)
@@ -181,13 +316,13 @@ namespace HLP.Services.Implementation.Sales.Comercial
                 _Orcamento_ideRepository.BeginTransaction();
                 _Orcamento_Item_ImpostosRepository.Delete(
                     (int)objOrcamento_ide.LOrcamento_Itens[0].Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
-                _Orcamento_Item_ImpostosRepository.Delete(
-                    (int)objOrcamento_ide.LOrcamento_ItensVendidos[0].Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
-                _Orcamento_Item_ImpostosRepository.Delete(
-                    (int)objOrcamento_ide.LOrcamento_ItensCancelPerd[0].Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
+                //_Orcamento_Item_ImpostosRepository.Delete(
+                //    (int)objOrcamento_ide.LOrcamento_ItensVendidos[0].Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
+                //_Orcamento_Item_ImpostosRepository.Delete(
+                //    (int)objOrcamento_ide.LOrcamento_ItensCancelPerd[0].Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
                 _Orcamento_itemRepository.Delete((int)objOrcamento_ide.LOrcamento_Itens[0].idOrcamentoItem);
-                _Orcamento_itemRepository.Delete((int)objOrcamento_ide.LOrcamento_ItensVendidos[0].idOrcamentoItem);
-                _Orcamento_itemRepository.Delete((int)objOrcamento_ide.LOrcamento_ItensCancelPerd[0].idOrcamentoItem);
+                //_Orcamento_itemRepository.Delete((int)objOrcamento_ide.LOrcamento_ItensVendidos[0].idOrcamentoItem);
+                //_Orcamento_itemRepository.Delete((int)objOrcamento_ide.LOrcamento_ItensCancelPerd[0].idOrcamentoItem);
                 _Orcamento_Total_ImpostosRepository.Delete((int)objOrcamento_ide.Orcamento_Total_Impostos.idOrcamentoTotalImpostos);
                 _Orcamento_retTranspRepository.Delete((int)objOrcamento_ide.Orcamento_retTransp.idRetTransp);
                 _Orcamento_ideRepository.Delete((int)objOrcamento_ide.idOrcamento);
@@ -205,14 +340,20 @@ namespace HLP.Services.Implementation.Sales.Comercial
             try
             {
                 _Orcamento_ideRepository.BeginTransaction();
-                _Orcamento_ideRepository.Copy((int)objOrcamento_ide.idOrcamento);
+
+                objOrcamento_ide.idOrcamentoOrigem = objOrcamento_ide.idOrcamento;
+                objOrcamento_ide.idOrcamento = _Orcamento_ideRepository.Copy((int)objOrcamento_ide.idOrcamento);
                 foreach (Orcamento_ItemModel item in objOrcamento_ide.LOrcamento_Itens)
                 {
                     _Orcamento_itemRepository.Copy((int)item.idOrcamentoItem);
                     _Orcamento_Item_ImpostosRepository.Copy((int)item.Orcamento_Item_Impostos.idOrcamentoTotalizadorImpostos);
                 }
-                _Orcamento_retTranspRepository.Copy((int)objOrcamento_ide.Orcamento_retTransp.idRetTransp);
-                _Orcamento_Total_ImpostosRepository.Copy((int)objOrcamento_ide.Orcamento_Total_Impostos.idOrcamentoTotalImpostos);
+
+                if (objOrcamento_ide.Orcamento_retTransp.idRetTransp != null)
+                    _Orcamento_retTranspRepository.Copy((int)objOrcamento_ide.Orcamento_retTransp.idRetTransp);
+
+                if (objOrcamento_ide.Orcamento_Total_Impostos.idOrcamentoTotalImpostos != null)
+                    _Orcamento_Total_ImpostosRepository.Copy((int)objOrcamento_ide.Orcamento_Total_Impostos.idOrcamentoTotalImpostos);
 
                 _Orcamento_ideRepository.CommitTransaction();
             }
@@ -227,7 +368,16 @@ namespace HLP.Services.Implementation.Sales.Comercial
         #region operações de pesquisa
         public Orcamento_ideModel GetOrcamento_ide(int idOrcamento)
         {
-            return _Orcamento_ideRepository.GetOrcamento_ide(idOrcamento);
+            Orcamento_ideModel objOrcamento = _Orcamento_ideRepository.GetOrcamento_ide(idOrcamento);
+            objOrcamento.LOrcamento_Itens = _Orcamento_itemRepository.GetAllOrcamento_Item((int)objOrcamento.idOrcamento);
+
+            foreach (Orcamento_ItemModel orcamento_Item in objOrcamento.LOrcamento_Itens)
+            {
+                orcamento_Item.Orcamento_Item_Impostos = _Orcamento_Item_ImpostosRepository.GetOrcamento_Item_ImpostosByItem(
+                    idOrcamento_Item: (int)orcamento_Item.idOrcamentoItem);
+            }
+
+            return objOrcamento;
         }
 
         public List<Orcamento_ideModel> GetAllOrcamento_ide()
@@ -299,7 +449,7 @@ namespace HLP.Services.Implementation.Sales.Comercial
             return objUf != null ? objUf : objUf = new UFModel();
         }
 
-        public byte GetStatusOrcamento(params List<Orcamento_ItemModel>[] lItens)
+        public byte GetStatusOrcamento(List<Orcamento_ItemModel> lItens)
         {
             //0-Criado
             //1-Enviado
@@ -314,19 +464,13 @@ namespace HLP.Services.Implementation.Sales.Comercial
             int iCancelado = 0;
             int iTotalItens = 0;
 
-            foreach (List<Orcamento_ItemModel> item in lItens)
-            {
-                iTotalItens += item.Count;
-            }
+            iTotalItens = lItens.Count;
 
-            foreach (List<Orcamento_ItemModel> item in lItens)
-            {
-                iCriados += item.Where(i => i.stOrcamentoItem == 0).Count();
-                iEnviado += item.Where(i => i.stOrcamentoItem == 1).Count();
-                iConfirmado += item.Where(i => i.stOrcamentoItem == 2).Count();
-                iPerdido += item.Where(i => i.stOrcamentoItem == 4).Count();
-                iCancelado += item.Where(i => i.stOrcamentoItem == 5).Count();
-            }
+            iCriados = lItens.Count(i => i.stOrcamentoItem == 0);
+            iEnviado = lItens.Count(i => i.stOrcamentoItem == 1);
+            iConfirmado = lItens.Count(i => i.stOrcamentoItem == 2);
+            iPerdido = lItens.Count(i => i.stOrcamentoItem == 4);
+            iCancelado = lItens.Count(i => i.stOrcamentoItem == 5);
 
             if (iCriados == iTotalItens)
                 return 0;
@@ -467,6 +611,30 @@ namespace HLP.Services.Implementation.Sales.Comercial
             return objTipo_documento != null ? objTipo_documento : objTipo_documento = new Tipo_documentoModel();
         }
 
+        public string GetVersaoByOrigem(int idOrcamento)
+        {
+            string xVersao = "";
+            Orcamento_ideModel objOrcamento_ide = _Orcamento_ideRepository.GetOrcamento_ide(
+                idOrcamento: idOrcamento);
+            while (true)
+            {
+                xVersao = xVersao == "" ? objOrcamento_ide.idOrcamento.ToString() :
+                    objOrcamento_ide.idOrcamento.ToString() + "." + xVersao;
+                if (objOrcamento_ide.idOrcamentoOrigem == null)
+                    break;
+                try
+                {
+                    objOrcamento_ide = _Orcamento_ideRepository.GetOrcamentoByOrigem(idOrcamento: (int)(objOrcamento_ide.idOrcamentoOrigem));
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
+            return "V" + (xVersao.Count(c => c == '.') + 1).ToString() + "." + xVersao;
+        }
+
         #endregion
 
         #region operações de validações
@@ -511,7 +679,7 @@ namespace HLP.Services.Implementation.Sales.Comercial
             {
                 objItemPorcAcimaListaModel = new ItemPorcAcimaListaModel();
                 objItemPorcAcimaListaModel.idProduto = objOrcamento_item.idProduto;
-                objItemPorcAcimaListaModel.numProduto = (int)objOrcamento_item.idOrcamentoItem;
+                //objItemPorcAcimaListaModel.numProduto = (int)objOrcamento_item.idOrcamentoItem;
                 objItemPorcAcimaListaModel.porAtual = porDescAcr;
                 objItemPorcAcimaListaModel.porLista = (decimal)(objLista_preco.pDescontoMaximo * -1);
                 lItensPorcAcimaLista.Add(objItemPorcAcimaListaModel);
@@ -539,7 +707,6 @@ namespace HLP.Services.Implementation.Sales.Comercial
                 {
                     objItemPorcAcimaListaModel = new ItemPorcAcimaListaModel();
                     objItemPorcAcimaListaModel.idProduto = item.idProduto;
-                    objItemPorcAcimaListaModel.numProduto = (int)item.idOrcamentoItem;
                     objItemPorcAcimaListaModel.porAtual = porDescAcr;
                     objItemPorcAcimaListaModel.porLista = (decimal)(objLista_preco.pDescontoMaximo * -1);
                     lItensPorcAcimaLista.Add(objItemPorcAcimaListaModel);
@@ -549,6 +716,9 @@ namespace HLP.Services.Implementation.Sales.Comercial
 
         private decimal? VerifPorcItemPorcListaPreco(decimal porDescAcr, Lista_precoModel objLista_preco, List<ItemPorcAcimaListaModel> lItensPorcAcimaLista)
         {
+            if (objLista_preco == null)
+                return null;
+
             if (porDescAcr < 0)
             {
                 if (objLista_preco.pDescontoMaximo < Math.Abs(porDescAcr))
@@ -575,37 +745,6 @@ namespace HLP.Services.Implementation.Sales.Comercial
         #endregion
 
         #region cálculos
-        public void CalculaTotaisOrcamento(Orcamento_ItemModel objItem, Cliente_fornecedorModel objClienteForn, CalculoDescontoPrincipal stCalculoPrincipal)
-        {
-            objItem.vTotalSemDescontoItem = objItem.vVenda * objItem.qProduto;
-            switch (stCalculoPrincipal)
-            {
-                case CalculoDescontoPrincipal.porPorcentagem:
-                    {
-                        if (objItem.pDesconto != 0)
-                            objItem.vDesconto = (objItem.vTotalSemDescontoItem * objItem.pDesconto) / 100;
-                    }
-                    break;
-                case CalculoDescontoPrincipal.porValor:
-                    {
-                        if (objItem.vTotalSemDescontoItem != 0 && objItem.vDesconto != 0)
-                            objItem.pDesconto = (objItem.vDesconto * 100) / objItem.vTotalSemDescontoItem;
-                    }
-                    break;
-            }
-            try
-            {
-                objItem.vTotalItem = objItem.vTotalSemDescontoItem - objItem.vDesconto;
-                if (objClienteForn != null)
-                    objItem.vDescontoSuframa =
-                        objClienteForn.cliforFiscalModel.stDescontaIcmsSuframa == 1 ?
-                        (objItem.vTotalItem * objClienteForn.cliforFiscalModel.pDescontaIcmsSuframa) / 100 : 0;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         public decimal CalculaProdutoTotal(List<Orcamento_ItemModel> lOrcamento_ItemModel)
         {
@@ -640,7 +779,7 @@ namespace HLP.Services.Implementation.Sales.Comercial
 
         public decimal CalculaPorcDescontoTotal(decimal vDescontoTotal, decimal vProdutosTotal)
         {
-            return (vDescontoTotal * 100) / vProdutosTotal;
+            return vProdutosTotal == 0 ? 0 : (vDescontoTotal * 100) / vProdutosTotal;
         }
 
         public void RateiaValorTotalNosItens(decimal vTotal, List<Orcamento_ItemModel> lOrcamento_ItemModel,
@@ -715,14 +854,20 @@ namespace HLP.Services.Implementation.Sales.Comercial
         #endregion
 
         #region Popula Objeto
-        public void PopulaObjetoItem(Orcamento_ItemModel objOrcamento_Item, Orcamento_ideModel objOrcamento_ide)
+        public void PopulaObjetoItem(Orcamento_ItemModel objOrcamento_Item, Orcamento_ideModel objOrcamento_ide, CalculoDescontoPrincipal stCalculoPrincipal)
         {
             try
             {
                 if (objOrcamento_Item.idProduto == 0 && objOrcamento_Item.idTipoOperacao == 0)
                     return;
+                if (objOrcamento_Item.Orcamento_Item_Impostos == null)
+                    objOrcamento_Item.Orcamento_Item_Impostos = new Orcamento_Item_ImpostosModel();
 
                 Cliente_fornecedorModel objClienteForn = clienteService.GetCliente_fornecedor(objOrcamento_ide.idClienteFornecedor, true);
+                List<Cliente_fornecedor_EnderecoModel> lClienteForn_Endereco = objClienteForn != null ?
+                    objClienteForn.lCliente_Fornecedor_Endereco : lClienteForn_Endereco = new List<Cliente_fornecedor_EnderecoModel>();
+                Cliente_fornecedor_fiscalModel objClienteForn_Fiscal = objClienteForn != null ?
+                    objClienteForn.cliforFiscalModel : objClienteForn_Fiscal = new Cliente_fornecedor_fiscalModel();
 
                 #region Produto
                 ProdutoModel objProduto = new ProdutoModel();
@@ -742,6 +887,28 @@ namespace HLP.Services.Implementation.Sales.Comercial
 
                 #endregion
 
+                #region Valores Totais item
+                objOrcamento_Item.vTotalSemDescontoItem = objOrcamento_Item.vVenda * objOrcamento_Item.qProduto;
+                switch (stCalculoPrincipal)
+                {
+                    case CalculoDescontoPrincipal.porPorcentagem:
+                        {
+                            objOrcamento_Item.vDesconto = (objOrcamento_Item.vTotalSemDescontoItem * objOrcamento_Item.pDesconto) / 100;
+                        }
+                        break;
+                    case CalculoDescontoPrincipal.porValor:
+                        {
+                            if (objOrcamento_Item.vTotalSemDescontoItem != 0)
+                                objOrcamento_Item.pDesconto = (objOrcamento_Item.vDesconto * 100) / objOrcamento_Item.vTotalSemDescontoItem;
+                        }
+                        break;
+                }
+                objOrcamento_Item.vTotalItem = objOrcamento_Item.vTotalSemDescontoItem + objOrcamento_Item.vDesconto;
+                objOrcamento_Item.vDescontoSuframa =
+                        objClienteForn_Fiscal.stDescontaIcmsSuframa == 1 ?
+                        (objOrcamento_Item.vTotalItem * objClienteForn.cliforFiscalModel.pDescontaIcmsSuframa) / 100 : 0;
+                #endregion
+
                 #region Tipo Operacao
                 Tipo_operacaoModel objTipo_operacao = null;
                 Classificacao_fiscalModel objClassificacao_fiscal = new Classificacao_fiscalModel();
@@ -751,16 +918,46 @@ namespace HLP.Services.Implementation.Sales.Comercial
                 {
                     #region Ipi
                     objOrcamento_Item.Orcamento_Item_Impostos.IPI_stCalculaIpi = objTipo_operacao.stCalculaIpi;
-                    objOrcamento_Item.Orcamento_Item_Impostos.idClassificacaoFiscal = objTipo_operacao.idClassificacaoFiscal != 0 ? objTipo_operacao.idClassificacaoFiscal : 0;
-                    objOrcamento_Item.Orcamento_Item_Impostos.idClassificacaoFiscal = objOrcamento_Item.Orcamento_Item_Impostos.idClassificacaoFiscal != 0 ?
-                       objOrcamento_Item.Orcamento_Item_Impostos.idClassificacaoFiscal : objProduto.idClassificacaoFiscalVenda != null ?
+                    objOrcamento_Item.Orcamento_Item_Impostos.idClassificacaoFiscal = objTipo_operacao.idClassificacaoFiscal != 0 ? objTipo_operacao.idClassificacaoFiscal :
+                        objProduto.idClassificacaoFiscalVenda != null ?
                        (int)objProduto.idClassificacaoFiscalVenda : 0;
 
-                    objClassificacao_fiscal = classificacao_FiscalService.GetClassificacao(idClassificacaoFiscal: objOrcamento_Item.Orcamento_Item_Impostos.idClassificacaoFiscal);
-                    objOrcamento_Item.Orcamento_Item_Impostos.IPI_pIPI = objClassificacao_fiscal.pIPI != null ? objClassificacao_fiscal.pIPI :
+                    objClassificacao_fiscal = classificacao_FiscalService.GetClassificacao(idClassificacaoFiscal: (int)objOrcamento_Item.Orcamento_Item_Impostos.idClassificacaoFiscal);
+                    objOrcamento_Item.Orcamento_Item_Impostos.IPI_pIPI = objClassificacao_fiscal != null ? objClassificacao_fiscal.pIPI :
                         objTipo_operacao.pIpi;
                     objOrcamento_Item.Orcamento_Item_Impostos.IPI_stCompoeBaseCalculo = objTipo_operacao.stCompoeBaseIpi;
                     objOrcamento_Item.Orcamento_Item_Impostos.idCSTIpi = objTipo_operacao.idCSTIpi;
+
+                    switch (objOrcamento_Item.Orcamento_Item_Impostos.IPI_stCompoeBaseCalculo)
+                    {
+                        case 0:
+                            {
+                                objOrcamento_Item.Orcamento_Item_Impostos.IPI_vBaseCalculo = objOrcamento_Item.vTotalItem;
+                            } break;
+                        case 1:
+                            {
+                                objOrcamento_Item.Orcamento_Item_Impostos.IPI_vBaseCalculo = objOrcamento_Item.vTotalItem
+                                    + objOrcamento_Item.vFreteItem;
+                            } break;
+                        case 2:
+                            {
+                                objOrcamento_Item.Orcamento_Item_Impostos.IPI_vBaseCalculo = objOrcamento_Item.vTotalItem
+                                    + objOrcamento_Item.vFreteItem + objOrcamento_Item.vSegurosItem
+                                    + objOrcamento_Item.vOutrasDespesasItem;
+                            } break;
+                        case 3:
+                            {
+                                //TODO: Verificar com Paulo, ou Hamilto
+                                //4-NENHUM
+                                //Valor “0” caso o campo “Cliente_Fornecedor_Fiscal.stCalculaIpi” seja igual a “0-NÃO” 
+                                //Dúvida, se já é NENHUM, o porque da validação sobre o campo stCalculaIpi
+                                objOrcamento_Item.Orcamento_Item_Impostos.IPI_vBaseCalculo = 0;
+                            } break;
+                    }
+
+                    objOrcamento_Item.Orcamento_Item_Impostos.IPI_vIPI =
+                        objOrcamento_Item.Orcamento_Item_Impostos.IPI_vBaseCalculo *
+                        (objOrcamento_Item.Orcamento_Item_Impostos.IPI_pIPI / 100);
 
                     #endregion
 
@@ -776,9 +973,9 @@ namespace HLP.Services.Implementation.Sales.Comercial
                             Operacao_reducao_baseModel operacao_ReducaoModel = null;
                             lOperacao_reducaoModel = operacao_ReducaoService.GetAll((int)objTipo_operacao.idTipoOperacao);
                             operacao_ReducaoModel = lOperacao_reducaoModel.FirstOrDefault(i => i.idUf ==
-                                this.GetUfByCidadeClienteForn_Orcamento(
-                                objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(
-                                 e => e.stPrincipal == 1).idCidade).idUF);
+                                (lClienteForn_Endereco.Count > 0 ? this.GetUfByCidadeClienteForn_Orcamento(
+                                lClienteForn_Endereco.FirstOrDefault(
+                                 e => e.stPrincipal == 1).idCidade).idUF : 0));
 
                             if (operacao_ReducaoModel != null)
                             {
@@ -792,28 +989,28 @@ namespace HLP.Services.Implementation.Sales.Comercial
                             }
                         }
                     }
-
-                    objOrcamento_Item.Orcamento_Item_Impostos.ICMS_stCalculaIcms = objClienteForn.cliforFiscalModel.stCalculaIcms == ((byte)0) ?
+                    objOrcamento_Item.Orcamento_Item_Impostos.ICMS_stCalculaIcms = objClienteForn_Fiscal.stCalculaIcms == ((byte)0) ?
                         ((byte)0) : objTipo_operacao.stCalculaIcms;
                     objOrcamento_Item.Orcamento_Item_Impostos.idCodigoIcmsPai = objTipo_operacao.idCodigoIcmsPai != 0 ?
                         objTipo_operacao.idCodigoIcmsPai : objProduto.idCodigoIcmsPaiVenda ?? 0;
                     objOrcamento_Item.Orcamento_Item_Impostos.idCSTIcms = objTipo_operacao.idCSTIcms != 0 ? objTipo_operacao.idCSTIcms :
                         objProduto.idCSTIcms ?? 0;
 
-                    if (objClienteForn.cliforFiscalModel.stZeraIcms == 0)
+                    if (objClienteForn_Fiscal.stZeraIcms == 0)
                     {
                         if (objTipo_operacao.stCalculaIcms == 1)
                         {
-                            objOrcamento_Item.Orcamento_Item_Impostos.ICMS_pICMS = (decimal?)this.GetCodigo_Icms(
-                                idCodigoIcmsPai: objOrcamento_Item.Orcamento_Item_Impostos.idCodigoIcmsPai,
-                                idCidade: (int)this.GetUfByCidadeClienteForn_Orcamento(
-                                objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(
-                                 e => e.stPrincipal == 1).idCidade).idUF).pIcmsEstado ??
-                                 this.GetCodigo_Icms(
-                                idCodigoIcmsPai: (int)objProduto.idCodigoIcmsPaiVenda,
-                                idCidade: (int)this.GetUfByCidadeClienteForn_Orcamento(
-                            objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(
-                             e => e.stPrincipal == 1).idCidade).idUF).pIcmsEstado;
+                            if (lClienteForn_Endereco.Count > 0)
+                                objOrcamento_Item.Orcamento_Item_Impostos.ICMS_pICMS = (decimal?)this.GetCodigo_Icms(
+                                    idCodigoIcmsPai: objOrcamento_Item.Orcamento_Item_Impostos.idCodigoIcmsPai,
+                                    idCidade: (int)this.GetUfByCidadeClienteForn_Orcamento(
+                                    lClienteForn_Endereco.FirstOrDefault(
+                                     e => e.stPrincipal == 1).idCidade).idUF).pIcmsEstado ??
+                                     this.GetCodigo_Icms(
+                                    idCodigoIcmsPai: (int)objProduto.idCodigoIcmsPaiVenda,
+                                    idCidade: (int)this.GetUfByCidadeClienteForn_Orcamento(
+                                lClienteForn_Endereco.FirstOrDefault(
+                                 e => e.stPrincipal == 1).idCidade).idUF).pIcmsEstado;
                         }
                     }
 
@@ -913,10 +1110,11 @@ namespace HLP.Services.Implementation.Sales.Comercial
                             break;
                     }
                     objOrcamento_Item.Orcamento_Item_Impostos.ICMS_pIcmsInterno = objOrcamento_Item.Orcamento_Item_Impostos.ICMS_stCalculaSubstituicaoTributaria == 1 ?
-                        this.GetCodigo_Icms(idCodigoIcmsPai: objOrcamento_Item.Orcamento_Item_Impostos.idCodigoIcmsPai,
+                        lClienteForn_Endereco.Count > 0 ?
+                        (this.GetCodigo_Icms(idCodigoIcmsPai: objOrcamento_Item.Orcamento_Item_Impostos.idCodigoIcmsPai,
                         idCidade: (int)this.GetUfByCidadeClienteForn_Orcamento(
-                                objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(
-                                e => e.stPrincipal == 1).idCidade).idUF).pIcmsInterna : 0;
+                                lClienteForn_Endereco.FirstOrDefault(
+                                e => e.stPrincipal == 1).idCidade).idUF).pIcmsInterna) : 0 : 0;
                     //TODO: Implementar Carga Tributária MVA
                     #endregion
 
@@ -924,15 +1122,15 @@ namespace HLP.Services.Implementation.Sales.Comercial
                     objOrcamento_Item.Orcamento_Item_Impostos.ICMS_pMvaSubstituicaoTributaria =
                         objOrcamento_Item.Orcamento_Item_Impostos.ICMS_stCalculaSubstituicaoTributaria == 1 ?
                         this.GetCodigo_Icms(idCodigoIcmsPai: objOrcamento_Item.Orcamento_Item_Impostos.idCodigoIcmsPai,
-                        idCidade: (int)this.GetUfByCidadeClienteForn_Orcamento(
-                                objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(
-                                e => e.stPrincipal == 1).idCidade).idUF).pMvaSubstituicaoTributaria : 0;
+                        idCidade: lClienteForn_Endereco.Count > 0 ? (int)this.GetUfByCidadeClienteForn_Orcamento(
+                                lClienteForn_Endereco.FirstOrDefault(
+                                e => e.stPrincipal == 1).idCidade).idUF : 0).pMvaSubstituicaoTributaria : 0;
                     objOrcamento_Item.Orcamento_Item_Impostos.ICMS_pCargaTributariaMedia = this.GetCarga_trib_mediaByUf(
-                        idUf: (int)this.GetUfByCidadeClienteForn_Orcamento((int)
-                                objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(
-                                e => e.stPrincipal == 1).idCidade).idUF).pCargaTributariaMedia;
+                        idUf: lClienteForn_Endereco.Count > 0 ? (int)this.GetUfByCidadeClienteForn_Orcamento((int)
+                                lClienteForn_Endereco.FirstOrDefault(
+                                e => e.stPrincipal == 1).idCidade).idUF : 0).pCargaTributariaMedia;
                     objOrcamento_Item.Orcamento_Item_Impostos.ICMS_stCompoeBaseCalculoSubstituicaoTributaria =
-                        objClienteForn.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada == 1 ? (byte)4 :
+                        objClienteForn_Fiscal.stSubsticaoTributariaIcmsDiferenciada == 1 ? (byte)4 :
                         objTipo_operacao.stCompoeBaseIcmsSubstituicaoTributaria;
 
                     if (objOrcamento_Item.Orcamento_Item_Impostos.ICMS_stCalculaSubstituicaoTributaria == 1
@@ -1002,7 +1200,7 @@ namespace HLP.Services.Implementation.Sales.Comercial
                     {
                         if (objOrcamento_Item.stConsumidorFinal == 0 &&
                             objOrcamento_ide.stContribuinteIcms == 1 &&
-                            objClienteForn.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada != 0)
+                            objClienteForn_Fiscal.stSubsticaoTributariaIcmsDiferenciada != 0)
                         {
                             // **Cálculo** (((“Orçamento_Item_Impostos.ICMS_vBaseCalculoIcmsSubstituicaoTributaria”
                             //X Orçamento_Item_Impostos.ICMS_pIcmsInterno / 100) - Orcamento_Icms.vIcmsInterno ) 
@@ -1017,9 +1215,10 @@ namespace HLP.Services.Implementation.Sales.Comercial
                         else if (objOrcamento_Item.stConsumidorFinal == 1 &&
                             objOrcamento_ide.stContribuinteIcms == 1 &&
                             this.GetRamo_atividade(idRamo_atividade: objClienteForn.idRamoAtividade).xRamo == "1" &&
-                            this.GetUfByCidadeClienteForn_Orcamento(objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).idUF !=
-                            this.GetUfByCidadeClienteForn_Orcamento(this.GetEmpresa_enderecoPrincipal().idCidade).idUF &&
-                            objClienteForn.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada != 0
+                            (lClienteForn_Endereco.Count > 0 ?
+                            this.GetUfByCidadeClienteForn_Orcamento(lClienteForn_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).idUF : 0)
+                            != this.GetUfByCidadeClienteForn_Orcamento(this.GetEmpresa_enderecoPrincipal().idCidade).idUF &&
+                            objClienteForn_Fiscal.stSubsticaoTributariaIcmsDiferenciada != 0
                             )
                         {
                             objOrcamento_Item.Orcamento_Item_Impostos.ICMS_vSubstituicaoTributaria =
@@ -1029,29 +1228,27 @@ namespace HLP.Services.Implementation.Sales.Comercial
                         }
                         else if (objOrcamento_Item.stConsumidorFinal == 0 &&
                             objOrcamento_ide.stContribuinteIcms == 1 &&
-                            objClienteForn.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada != 1 &&
-                            this.GetUfByCidadeClienteForn_Orcamento(
-                            objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).xSiglaUf == "MT")
+                            objClienteForn_Fiscal.stSubsticaoTributariaIcmsDiferenciada != 1 &&
+                            (lClienteForn_Endereco.Count > 0 ? this.GetUfByCidadeClienteForn_Orcamento(
+                            lClienteForn_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).xSiglaUf : "") == "MT")
                         {
-                            //(((“Orcamento_Item.vTotalItem” –  (“Orçamento_Item_Impostos.ICMS_pReduzBaseSubstituicaoTributaria” / 100)
-                            //    + “Orçamento_Item_Impostos.IPI_vIPI” + “Orcamento_Item.vFreteItem” + “Orcamento_Item.vSegurosItem” 
-                            //        + “Orcamento_Item.vOutrasDespesasItem”) x (“Orçamento_Item_Impostos.aliq_carga_trib_media”))
-
                             objOrcamento_Item.Orcamento_Item_Impostos.ICMS_vSubstituicaoTributaria =
                                 (objOrcamento_Item.vTotalItem - (objOrcamento_Item.Orcamento_Item_Impostos.ICMS_pReduzBaseSubstituicaoTributaria * 100)
                                 + objOrcamento_Item.Orcamento_Item_Impostos.IPI_vIPI + objOrcamento_Item.vFreteItem + objOrcamento_Item.vSegurosItem
                                 + objOrcamento_Item.vOutrasDespesasItem) * this.GetCarga_trib_mediaByUf(
-                                idUf: (int)this.GetUfByCidadeClienteForn_Orcamento(objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(
-                                i => i.stPrincipal == 1).idCidade).idUF).pCargaTributariaMedia;
+                                idUf: lClienteForn_Endereco.Count > 0 ?
+                                (int)this.GetUfByCidadeClienteForn_Orcamento(lClienteForn_Endereco.FirstOrDefault(
+                                i => i.stPrincipal == 1).idCidade).idUF : 0).pCargaTributariaMedia;
                         }
                         else if (objOrcamento_Item.stConsumidorFinal == 1 &&
                             objOrcamento_ide.stContribuinteIcms == 0 &&
                             this.GetParametro_Fiscal().stIcmsSubstDif == 1 &&
                             this.GetRamo_atividade(objClienteForn.idRamoAtividade).xRamo == "1" &&
                             this.GetUfByCidadeClienteForn_Orcamento(
-                            objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).idUF ==
-                            this.GetUfByCidadeClienteForn_Orcamento(this.GetEmpresa_enderecoPrincipal().idCidade).idUF &&
-                                objClienteForn.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada == 0)
+                            lClienteForn_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).idUF ==
+                            (lClienteForn_Endereco.Count > 0 ?
+                            this.GetUfByCidadeClienteForn_Orcamento(this.GetEmpresa_enderecoPrincipal().idCidade).idUF : 0) &&
+                                objClienteForn_Fiscal.stSubsticaoTributariaIcmsDiferenciada == 0)
                         {
                             objOrcamento_Item.Orcamento_Item_Impostos.ICMS_vBaseCalculoSubstituicaoTributaria = 0;
                         }
@@ -1059,10 +1256,10 @@ namespace HLP.Services.Implementation.Sales.Comercial
                             objOrcamento_ide.stContribuinteIcms == 1 &&
                             this.GetParametro_Fiscal().stIcmsSubstDif == 0 &&
                             this.GetRamo_atividade(objClienteForn.idRamoAtividade).xRamo == "1" &&
-                            this.GetUfByCidadeClienteForn_Orcamento(
-                            objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).idUF !=
+                            (lClienteForn_Endereco.Count > 0 ? this.GetUfByCidadeClienteForn_Orcamento(
+                            lClienteForn_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).idUF : 0) !=
                             this.GetUfByCidadeClienteForn_Orcamento(this.GetEmpresa_enderecoPrincipal().idCidade).idUF &&
-                            objClienteForn.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada == 0)
+                            objClienteForn_Fiscal.stSubsticaoTributariaIcmsDiferenciada == 0)
                         {
                             objOrcamento_Item.Orcamento_Item_Impostos.ICMS_vBaseCalculoSubstituicaoTributaria = 0;
                         }
@@ -1070,10 +1267,10 @@ namespace HLP.Services.Implementation.Sales.Comercial
                             objOrcamento_ide.stContribuinteIcms == 1 &&
                             this.GetParametro_Fiscal().stIcmsSubstDif == 1 &&
                             this.GetRamo_atividade(objClienteForn.idRamoAtividade).xRamo == "1" &&
-                            this.GetUfByCidadeClienteForn_Orcamento(
-                            objClienteForn.lCliente_Fornecedor_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).idUF !=
+                            (lClienteForn_Endereco.Count > 0 ? this.GetUfByCidadeClienteForn_Orcamento(
+                            lClienteForn_Endereco.FirstOrDefault(e => e.stTipoEndereco == 1).idCidade).idUF : 0) !=
                             this.GetUfByCidadeClienteForn_Orcamento(this.GetEmpresa_enderecoPrincipal().idCidade).idUF &&
-                            objClienteForn.cliforFiscalModel.stSubsticaoTributariaIcmsDiferenciada != 0)
+                            objClienteForn_Fiscal.stSubsticaoTributariaIcmsDiferenciada != 0)
                         {
                             objOrcamento_Item.Orcamento_Item_Impostos.ICMS_vBaseCalculoSubstituicaoTributaria = 0;
                         }
@@ -1116,8 +1313,8 @@ namespace HLP.Services.Implementation.Sales.Comercial
                         throw new Exception("Ao ser selecionado situação de cálculo pis/cofins com opção 2 - Normal ou 3 - Substituição Tributária, " +
                     "a porcentagem do COFINS deve ser superior a 0");
 
-                    objOrcamento_Item.Orcamento_Item_Impostos.idCSTPis = this.GetSit_Trib_PisByidCstPis(
-                        idCstPis: objTipo_operacao.idCSTPis).cCSTPis.ToInt32();
+                    objOrcamento_Item.Orcamento_Item_Impostos.idCSTPis = objTipo_operacao.idCSTPis;
+                    objOrcamento_Item.Orcamento_Item_Impostos.idCSTCofins = objTipo_operacao.idCSTCofins;
 
                     switch (objOrcamento_Item.Orcamento_Item_Impostos.stCalculaPisCofins)
                     {
@@ -1200,8 +1397,165 @@ namespace HLP.Services.Implementation.Sales.Comercial
             }
             catch (Exception ex)
             {
+                throw new Exception(ex.ToString());
             }
         }
+
+        public void CarregaUnidMedProdutos(int idProduto, DataGridViewComboBoxCell cellDgv)
+        {
+            try
+            {
+                //TODO: Recontinuar os deste ponto:
+                //Descrição: Refazer método para receber idProduto e popular coluna de unidade de medida
+                List<Unidade_medidaModel> lUnidadeMedida = new List<Unidade_medidaModel>();
+                lUnidadeMedida.Add(this.GetInformacoesUnidade(idUnidadeMedida:
+                    this.GetInformacoesProduto(idProduto:
+                    idProduto).idUnidadeMedidaVendas));
+
+                List<Unidade_medidaModel> lUnidadeMedidaProduto = idProduto != 0 ?
+                    this.GetUnidadeByConversaoProduto(
+                    this.GetInformacoesProduto(
+                    idProduto: idProduto).idUnidadeMedidaVendas
+                    , idProduto) : null;
+
+                if (lUnidadeMedidaProduto != null)
+                {
+                    lUnidadeMedida.AddRange(lUnidadeMedidaProduto);
+
+                    if (cellDgv.Items.Count > 0)
+                    {
+                        cellDgv.DataSource = null;
+                        cellDgv.Items.Clear();
+                    }
+                    cellDgv.DataSource =
+                        lUnidadeMedida;
+                    cellDgv.DisplayMember =
+                        "xUnidadeMedida";
+                    cellDgv.ValueMember =
+                        "idUnidadeMedida";
+                }
+                //GetComissao();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void CarregaTreeViewOrcamentos(int idOrcamento, ComponentFactory.Krypton.Toolkit.KryptonTreeView tree)
+        {
+            Stack<InfTreeViewOrcamento> lIdOrcamentos = new Stack<InfTreeViewOrcamento>();
+            InfTreeViewOrcamento infTreeViewOrc;
+            Orcamento_ideModel objOrcamento_ide = _Orcamento_ideRepository.GetOrcamento_ide(
+                idOrcamento: idOrcamento);
+            TreeNode node;
+
+            #region Carrega Nodes Pai
+            while (true)
+            {
+                infTreeViewOrc = new InfTreeViewOrcamento();
+                infTreeViewOrc.idOrcamento = objOrcamento_ide.idOrcamento.ToString();
+                infTreeViewOrc.dDataCriacaoOrcamento = objOrcamento_ide.dDataHora.ToString();
+                lIdOrcamentos.Push(item: infTreeViewOrc);
+
+                if (objOrcamento_ide.idOrcamentoOrigem == null)
+                    break;
+                try
+                {
+                    objOrcamento_ide = _Orcamento_ideRepository.GetOrcamentoByOrigem(idOrcamento: (int)(objOrcamento_ide.idOrcamentoOrigem));
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            TreeNode nodeAnterior = new TreeNode();
+
+            tree.Nodes.Clear();
+
+            while (lIdOrcamentos.Count > 0)
+            {
+                infTreeViewOrc = new InfTreeViewOrcamento();
+                infTreeViewOrc = lIdOrcamentos.Pop();
+                node = new TreeNode(text: infTreeViewOrc.idOrcamento + " - " +
+                    infTreeViewOrc.dDataCriacaoOrcamento);
+                node.Tag = infTreeViewOrc.idOrcamento;
+
+                if (tree.Nodes.Count == 0)
+                    tree.Nodes.Add(node: node);
+                else
+                    nodeAnterior.Nodes.Add(node: node);
+
+                nodeAnterior = node;
+            }
+            #endregion
+
+            #region Carrega Nodes Filho
+
+            objOrcamento_ide = _Orcamento_ideRepository.GetOrcamentoFilho(idOrcamento: idOrcamento);
+            TreeNode ultimoNode = null;
+
+            while (objOrcamento_ide != null)
+            {
+                if (ultimoNode == null)
+                {
+                    ultimoNode = tree.Nodes[0];
+                    while (ultimoNode.LastNode != null)
+                    {
+                        ultimoNode = ultimoNode.LastNode;
+                    }
+                }
+
+                node = new TreeNode();
+                node.Text = objOrcamento_ide.idOrcamento + " - " +
+                    objOrcamento_ide.dDataHora.ToString();
+                node.Tag = objOrcamento_ide.idOrcamento;
+                ultimoNode.Nodes.Add(node: node);
+                ultimoNode = node;
+                try
+                {
+                    objOrcamento_ide = _Orcamento_ideRepository.GetOrcamentoFilho(idOrcamento: (int)objOrcamento_ide.idOrcamento);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+            }
+
+            #endregion
+        }
+
+        public void DestacarNodeTreeView(ComponentFactory.Krypton.Toolkit.KryptonTreeView tree, object valor)
+        {
+            TreeNode node = new TreeNode();
+            node = BuscarNodeTreeView(node: tree.Nodes[0], valor: valor);
+            node.ForeColor = Color.Red;
+        }
+
+        public bool NodeTreeViewPossuiFilho(ComponentFactory.Krypton.Toolkit.KryptonTreeView tree, object valor)
+        {
+            return BuscarNodeTreeView(valor: valor, node: tree.Nodes[0]).LastNode != null ?
+                true : false;
+        }
+
+        private TreeNode BuscarNodeTreeView(object valor, TreeNode node)
+        {
+            TreeNode nodeTemp = node;
+            while (true)
+            {
+                if (nodeTemp.Tag.ToString() == valor.ToString())
+                {
+                    break;
+                }
+                else
+                {
+                    nodeTemp = nodeTemp.LastNode;
+                }
+            }
+            return nodeTemp;
+        }
+
         #endregion
 
     }

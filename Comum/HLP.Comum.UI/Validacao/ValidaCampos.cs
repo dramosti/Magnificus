@@ -262,7 +262,7 @@ namespace HLP.Comum.UI.Validacao
                     ConfigComponenteModel objGrid = iConfigFormulario.objConfigFormularioModel.lobjConfigComponente.FirstOrDefault(c => c.xName == grid.Name);
 
                     grid.CurrentCell = grid.FirstDisplayedCell;
-                    if (grid.AllowUserToAddRows)
+                    if (grid.AllowUserToAddRows && (grid.DataSource as BindingSource) != null)
                     {
                         if ((grid.DataSource as BindingSource).List.Count == grid.RowCount)
                         {
@@ -283,7 +283,13 @@ namespace HLP.Comum.UI.Validacao
                                     {
                                         if (((DataGridViewComboBoxCell)grid[col, row]).DataSource != null)
                                         {
-                                            if (((DataGridViewComboBoxCell)grid[col, row]).Value.GetType() == typeof(Int32))
+                                            if (((DataGridViewComboBoxCell)grid[col, row]).Value == null)
+                                            {
+                                                grid[col, row].Style.BackColor = Color.Red;
+                                                iErros++;
+                                                if (firstControl == null) { firstControl = grid; }
+                                            }
+                                            else if (((DataGridViewComboBoxCell)grid[col, row]).Value.GetType() == typeof(Int32))
                                             {
                                                 if ((int)((DataGridViewComboBoxCell)grid[col, row]).Value == 0)
                                                 {
@@ -307,6 +313,13 @@ namespace HLP.Comum.UI.Validacao
                                         if (firstControl == null) { firstControl = grid; }
                                     }
 
+                                }
+
+                                if (grid[col, row].GetType() == typeof(KryptonDataGridViewNumericUpDownCell))
+                                {
+                                    if (grid[col, row].Value != null)
+                                        grid[col, row].Value = decimal.Round((decimal)grid[col, row].Value,
+                                            (int)(grid[col, row] as KryptonDataGridViewNumericUpDownCell).DecimalPlaces);
                                 }
                             }
                             catch (System.Exception ex)
@@ -361,7 +374,7 @@ namespace HLP.Comum.UI.Validacao
         {
             try
             {
-                foreach (Control ctr in iConfigFormulario.lControl.Where(c=>c.GetType().BaseType == typeof(UserControlBase)))
+                foreach (Control ctr in iConfigFormulario.lControl.Where(c => c.GetType().BaseType == typeof(UserControlBase)))
                 {
                     //if (ctr.GetType() == typeof(HLP_ComboBox))
                     //{

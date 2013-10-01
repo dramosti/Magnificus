@@ -119,7 +119,7 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                             comp.xTable = objUserControl._Table;
 
                             // User Info                        
-                            comp.objConfigCompUsu.nOrder = controle.Parent.Controls.IndexOf(controle) ;
+                            comp.objConfigCompUsu.nOrder = controle.Parent.Controls.IndexOf(controle);
                             comp.objConfigCompUsu.xLabelText = objUserControl._LabelText;
                             comp.objConfigCompUsu.xText = "";//Verificar
                             comp.objConfigCompUsu.stVisible = 1;
@@ -275,10 +275,12 @@ namespace HLP.Comum.Services.Implementation.Configuracao
                             groupSeparador = null;
                             try
                             {
-                                groupSeparador = (HLP_Group)lControl.FirstOrDefault(c => c.Name == objCompModel.objConfigCompUsu.xLabelGroup);
-                                (controle as UserControlBase).objConfigComponenteModel = objCompModel;
-                                groupSeparador.Add(controle, (controle as UserControlBase).objConfigComponenteModel.objConfigCompUsu.nOrder);
-
+                                if (objCompModel.objConfigCompUsu.xLabelGroup != null)
+                                {
+                                    groupSeparador = (HLP_Group)lControl.FirstOrDefault(c => c.Name == objCompModel.objConfigCompUsu.xLabelGroup);
+                                    (controle as UserControlBase).objConfigComponenteModel = objCompModel;
+                                    groupSeparador.Add(controle, (controle as UserControlBase).objConfigComponenteModel.objConfigCompUsu.nOrder);
+                                }
                                 if (controle.GetType() == typeof(HLP_TextBox))
                                 {
                                     (controle as UserControlBase).CarregaComponente();

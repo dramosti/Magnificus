@@ -22,17 +22,19 @@ namespace HLP.Repository.Implementation.Sales.Comercial
 
         public void Save(Orcamento_ItemModel objOrcamento_Item)
         {
-            objOrcamento_Item.idOrcamentoItem = (int)UndTrabalho.dbPrincipal.ExecuteScalar("dbo.Proc_save_Orcamento_Item",
+            if (objOrcamento_Item.idOrcamentoItem == null)
+            {
+                objOrcamento_Item.idOrcamentoItem = (int)UndTrabalho.dbPrincipal.ExecuteScalar("dbo.Proc_save_Orcamento_Item",
+                ParameterBase<Orcamento_ItemModel>.SetParameterValue(objOrcamento_Item));
+                objOrcamento_Item.SetStatusRegistro(BaseModelFilhos.statusRegistroFilho.SemMudanca);
+            }
+            else
+            {
+                UndTrabalho.dbPrincipal.ExecuteScalar(
+            "[dbo].[Proc_update_Orcamento_Item]",
             ParameterBase<Orcamento_ItemModel>.SetParameterValue(objOrcamento_Item));
-        }
-
-        public void Update(Orcamento_ItemModel objOrcamento_Item)
-        {
-            UndTrabalho.dbPrincipal.ExecuteScalar(
-            "[dbo].[Proc_update_Orcamento_ide]",
-            ParameterBase<Orcamento_ItemModel>.SetParameterValue(objOrcamento_Item));
-
-            objOrcamento_Item.SetStatusRegistro(BaseModelFilhos.statusRegistroFilho.SemMudanca);
+                objOrcamento_Item.SetStatusRegistro(BaseModelFilhos.statusRegistroFilho.SemMudanca);
+            }
         }
 
         public void Delete(int idOrcamentoItem)
@@ -62,6 +64,21 @@ namespace HLP.Repository.Implementation.Sales.Comercial
             return regOrcamento_ItemAccessor.Execute(idOrcamentoItem).FirstOrDefault();
         }
 
+        public List<Orcamento_ItemModel> GetAllOrcamento_Item(int idOrcamento)
+        {
+            if (regOrcamento_ItemAccessor == null)
+            {
+                regOrcamento_ItemAccessor = UndTrabalho.dbPrincipal.CreateSqlStringAccessor("select * from Orcamento_Item " +
+                                            "where idOrcamento = @idOrcamento",
+                                 new Parameters(UndTrabalho.dbPrincipal)
+                                 .AddParameter<int>("idOrcamento"),
+                                 MapBuilder<Orcamento_ItemModel>.MapAllProperties().DoNotMap(i => i.Orcamento_Item_Impostos)
+                                 .DoNotMap(i => i.idItem)
+                                 .Build());
+            }
+            return regOrcamento_ItemAccessor.Execute(idOrcamento).ToList();
+        }
+
         public List<Orcamento_ItemModel> GetAllOrcamento_Item()
         {
             if (regAllOrcamento_ItemAccessor == null)
@@ -70,6 +87,22 @@ namespace HLP.Repository.Implementation.Sales.Comercial
                                 MapBuilder<Orcamento_ItemModel>.MapAllProperties().Build());
             }
             return regAllOrcamento_ItemAccessor.Execute().ToList();
+        }
+
+
+        public void BebingTransaction()
+        {
+            UndTrabalho.BeginTransaction();
+        }
+
+        public void Commit()
+        {
+            UndTrabalho.CommitTransaction();
+        }
+
+        public void Rollback()
+        {
+            UndTrabalho.RollBackTransaction();
         }
     }
 }

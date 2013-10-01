@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comercial\formEstoqueItensOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\formEstoqueItensOrcamento.Designer.cs">
+      <DependentUpon>formEstoqueItensOrcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Comercial\formItensPorcAcimaLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,13 +92,25 @@
     <Compile Include="Comercial\formOrcamentoVenda.Designer.cs">
       <DependentUpon>formOrcamentoVenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Comercial\formStItens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\formStItens.Designer.cs">
+      <DependentUpon>formStItens.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Comercial\formEstoqueItensOrcamento.resx">
+      <DependentUpon>formEstoqueItensOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Comercial\formItensPorcAcimaLista.resx">
       <DependentUpon>formItensPorcAcimaLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Comercial\formOrcamentoVenda.resx">
       <DependentUpon>formOrcamentoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\formStItens.resx">
+      <DependentUpon>formStItens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,7 +124,9 @@
     <None Include="Properties\DataSources\HLP.Models.Entries.Gerais.ItemPorcAcimaListaModel.datasource" />
     <None Include="Properties\DataSources\HLP.Models.Sales.Comercial.Orcamento_ItemModel.datasource" />
     <None Include="Properties\DataSources\HLP.Models.Sales.Comercial.Orcamento_Item_ImpostosModel.datasource" />
+    <None Include="Properties\DataSources\HLP.Models.Sales.Comercial.stItensModel.datasource" />
     <None Include="Properties\DataSources\HLP.Services.Interfaces.Sales.Comercial.ItemPorcAcimaLista.datasource" />
+    <None Include="Properties\DataSources\HLP.UI.Sales.Comercial.formStItens.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

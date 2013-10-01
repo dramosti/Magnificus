@@ -54,12 +54,6 @@ namespace HLP.UI.Entries.Comercial
             this.bsListaPreco = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.kryptonPanel3 = new AC.ExtendedRenderer.Toolkit.KryptonPanel();
-            this.kryptonTabControl2 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAtribuicao = new HLP.Comum.Components.HLP_Button();
-            this.btnAumentoPreco = new HLP.Comum.Components.HLP_Button();
-            this.btnInserir = new HLP.Comum.Components.HLP_Button();
             this.dgvItens = new HLP.Comum.Components.HLP_DataGridView();
             this.idProduto = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.idUnidadeMedida = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -74,6 +68,12 @@ namespace HLP.UI.Entries.Comercial
             this.pComissaoAvista = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.pComissaoAprazo = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.dAlteracaoCusto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonTabControl2 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.btnInserir = new HLP.Comum.Components.HLP_Button();
+            this.btnAumentoPreco = new HLP.Comum.Components.HLP_Button();
+            this.btnAtribuicao = new HLP.Comum.Components.HLP_Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsRetPesquisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelPadrao)).BeginInit();
             this.panelPadrao.SuspendLayout();
@@ -85,9 +85,9 @@ namespace HLP.UI.Entries.Comercial
             ((System.ComponentModel.ISupportInitialize)(this.bsListaPreco)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.kryptonPanel3.SuspendLayout();
-            this.kryptonTabControl2.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.kryptonTabControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -191,7 +191,7 @@ namespace HLP.UI.Entries.Comercial
             this.sep_Geral.BackColor = System.Drawing.Color.Transparent;
             this.sep_Geral.Location = new System.Drawing.Point(3, 3);
             this.sep_Geral.Name = "sep_Geral";
-            this.sep_Geral.Size = new System.Drawing.Size(511, 19);
+            this.sep_Geral.Size = new System.Drawing.Size(404, 19);
             this.sep_Geral.TabIndex = 22;
             this.sep_Geral.TabStop = false;
             // 
@@ -200,6 +200,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtCodigo._Field = "idListaPrecoPai";
             this.txtCodigo._Help = "Chave principal do registro da lista de preço";
             this.txtCodigo._LabelGroup = this.sep_Geral;
+            this.txtCodigo._LabelSuperior = false;
             this.txtCodigo._LabelText = "Código";
             this.txtCodigo._Multiline = false;
             this.txtCodigo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -227,6 +228,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxCodigoListaPreco._Field = "xCodigoListaPreco";
             this.txtxCodigoListaPreco._Help = "Digite um código para a recém-criada lista de preço ";
             this.txtxCodigoListaPreco._LabelGroup = this.sep_Geral;
+            this.txtxCodigoListaPreco._LabelSuperior = false;
             this.txtxCodigoListaPreco._LabelText = "Código da lista de preço ";
             this.txtxCodigoListaPreco._Multiline = false;
             this.txtxCodigoListaPreco._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -254,6 +256,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtxLista._Field = "xLista";
             this.txtxLista._Help = "Descrição da lista de preço";
             this.txtxLista._LabelGroup = this.sep_Geral;
+            this.txtxLista._LabelSuperior = false;
             this.txtxLista._LabelText = "Descrição ";
             this.txtxLista._Multiline = false;
             this.txtxLista._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -281,6 +284,7 @@ namespace HLP.UI.Entries.Comercial
             this.txtdListaPreco._Field = "dListaPreco";
             this.txtdListaPreco._Help = "Este campo mostra a data em que a lista de preços foi gerada (criada)";
             this.txtdListaPreco._LabelGroup = this.sep_Geral;
+            this.txtdListaPreco._LabelSuperior = false;
             this.txtdListaPreco._LabelText = "Data de criação da lista de preço";
             this.txtdListaPreco._Multiline = false;
             this.txtdListaPreco._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -310,6 +314,7 @@ namespace HLP.UI.Entries.Comercial
     "ço";
             this.cbostAtualizacao._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostAtualizacao._Itens")));
             this.cbostAtualizacao._LabelGroup = this.sep_Geral;
+            this.cbostAtualizacao._LabelSuperior = false;
             this.cbostAtualizacao._LabelText = "Tipo de atualização";
             this.cbostAtualizacao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.cbostAtualizacao._Regex = null;
@@ -341,6 +346,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidListaPrecoOrigem._Help = "Informar qual é a lista de preço origem quando a lista for automática, o campo só" +
     " é disponibilizado quando a lista for automática";
             this.hlP_PesquisaidListaPrecoOrigem._LabelGroup = this.sep_Geral;
+            this.hlP_PesquisaidListaPrecoOrigem._LabelSuperior = false;
             this.hlP_PesquisaidListaPrecoOrigem._LabelText = "Lista de preço origem";
             this.hlP_PesquisaidListaPrecoOrigem._ListaCamposDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidListaPrecoOrigem._ListaCamposDisplay")));
             this.hlP_PesquisaidListaPrecoOrigem._ListaValoresDisplay = ((System.Collections.Generic.List<string>)(resources.GetObject("hlP_PesquisaidListaPrecoOrigem._ListaValoresDisplay")));
@@ -350,7 +356,7 @@ namespace HLP.UI.Entries.Comercial
             this.hlP_PesquisaidListaPrecoOrigem._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.hlP_PesquisaidListaPrecoOrigem._Regex = null;
             this.hlP_PesquisaidListaPrecoOrigem._Table = "Lista_Preco_Pai";
-            this.hlP_PesquisaidListaPrecoOrigem._TamanhoComponente = 300;
+            this.hlP_PesquisaidListaPrecoOrigem._TamanhoComponente = 210;
             this.hlP_PesquisaidListaPrecoOrigem._TamanhoMaiorLabel = 194;
             this.hlP_PesquisaidListaPrecoOrigem._Vinculado = false;
             this.hlP_PesquisaidListaPrecoOrigem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -373,6 +379,7 @@ namespace HLP.UI.Entries.Comercial
     "to (valor negativo) para a lista que está sendo mostrada na tela e definida como" +
     " automática";
             this.txtpPercentual._LabelGroup = this.sep_Geral;
+            this.txtpPercentual._LabelSuperior = false;
             this.txtpPercentual._LabelText = "Percentual";
             this.txtpPercentual._Multiline = false;
             this.txtpPercentual._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -398,6 +405,7 @@ namespace HLP.UI.Entries.Comercial
             // btnGerar
             // 
             this.btnGerar._LabelGroup = this.sep_Geral;
+            this.btnGerar._LabelSuperior = false;
             this.btnGerar._LabelText = "Gerar lista";
             this.btnGerar._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.btnGerar._Regex = null;
@@ -419,6 +427,7 @@ namespace HLP.UI.Entries.Comercial
             this.nudnDiasSemAtualicao._Help = "Muda a cor para vermelho no registro que não sofrem alteração no preço de custo a" +
     " mais do que o número de dias estabelecido no campo";
             this.nudnDiasSemAtualicao._LabelGroup = this.sep_Geral;
+            this.nudnDiasSemAtualicao._LabelSuperior = false;
             this.nudnDiasSemAtualicao._LabelText = "Dias s/ atualização no valor de custo";
             this.nudnDiasSemAtualicao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudnDiasSemAtualicao._Regex = null;
@@ -459,6 +468,7 @@ namespace HLP.UI.Entries.Comercial
             this.cbostContrato._Field = "stContrato";
             this.cbostContrato._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cbostContrato._Itens")));
             this.cbostContrato._LabelGroup = this.sep_Geral;
+            this.cbostContrato._LabelSuperior = false;
             this.cbostContrato._LabelText = "É contrato?";
             this.cbostContrato._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.cbostContrato._Regex = null;
@@ -486,6 +496,7 @@ namespace HLP.UI.Entries.Comercial
             // 
             this.txtxNrContrato._Field = "xNrContrato";
             this.txtxNrContrato._LabelGroup = this.sep_Geral;
+            this.txtxNrContrato._LabelSuperior = false;
             this.txtxNrContrato._LabelText = "Nº contrato";
             this.txtxNrContrato._Multiline = false;
             this.txtxNrContrato._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
@@ -512,6 +523,7 @@ namespace HLP.UI.Entries.Comercial
             // 
             this.dtpdValidadeContrato._Field = "dValidadeContrato";
             this.dtpdValidadeContrato._LabelGroup = this.sep_Geral;
+            this.dtpdValidadeContrato._LabelSuperior = false;
             this.dtpdValidadeContrato._LabelText = "Data de validade do contrato";
             this.dtpdValidadeContrato._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.dtpdValidadeContrato._Regex = null;
@@ -536,6 +548,7 @@ namespace HLP.UI.Entries.Comercial
             // 
             this.nudpDescontoMaximo._Field = "pDescontoMaximo";
             this.nudpDescontoMaximo._LabelGroup = this.sep_Geral;
+            this.nudpDescontoMaximo._LabelSuperior = false;
             this.nudpDescontoMaximo._LabelText = "Desconto máximo";
             this.nudpDescontoMaximo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudpDescontoMaximo._Regex = null;
@@ -575,6 +588,7 @@ namespace HLP.UI.Entries.Comercial
             // 
             this.nudpAcressimoMaximo._Field = "pAcressimoMaximo";
             this.nudpAcressimoMaximo._LabelGroup = this.sep_Geral;
+            this.nudpAcressimoMaximo._LabelSuperior = false;
             this.nudpAcressimoMaximo._LabelText = "Acréscimo máximo";
             this.nudpAcressimoMaximo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.nudpAcressimoMaximo._Regex = null;
@@ -615,6 +629,7 @@ namespace HLP.UI.Entries.Comercial
             this.cboAtivo._Field = "Ativo";
             this.cboAtivo._Itens = ((System.Collections.Generic.List<string>)(resources.GetObject("cboAtivo._Itens")));
             this.cboAtivo._LabelGroup = this.sep_Geral;
+            this.cboAtivo._LabelSuperior = false;
             this.cboAtivo._LabelText = "Ativo?";
             this.cboAtivo._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
             this.cboAtivo._Regex = null;
@@ -669,103 +684,6 @@ namespace HLP.UI.Entries.Comercial
             this.kryptonPanel3.PersistentColors = false;
             this.kryptonPanel3.Size = new System.Drawing.Size(1055, 217);
             this.kryptonPanel3.TabIndex = 0;
-            // 
-            // kryptonTabControl2
-            // 
-            this.kryptonTabControl2.AllowCloseButton = false;
-            this.kryptonTabControl2.AllowContextButton = false;
-            this.kryptonTabControl2.AllowNavigatorButtons = false;
-            this.kryptonTabControl2.AllowSelectedTabHigh = false;
-            this.kryptonTabControl2.BorderWidth = 1;
-            this.kryptonTabControl2.Controls.Add(this.tabPage3);
-            this.kryptonTabControl2.CornerRoundRadiusWidth = 12;
-            this.kryptonTabControl2.CornerSymmetry = AC.ExtendedRenderer.Navigator.KryptonTabControl.CornSymmetry.Both;
-            this.kryptonTabControl2.CornerType = AC.ExtendedRenderer.Toolkit.Drawing.DrawingMethods.CornerType.Rounded;
-            this.kryptonTabControl2.CornerWidth = AC.ExtendedRenderer.Navigator.KryptonTabControl.CornWidth.Thin;
-            this.kryptonTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonTabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.kryptonTabControl2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.kryptonTabControl2.HotTrack = true;
-            this.kryptonTabControl2.Location = new System.Drawing.Point(3, 288);
-            this.kryptonTabControl2.Name = "kryptonTabControl2";
-            this.kryptonTabControl2.PreserveTabColor = false;
-            this.kryptonTabControl2.SelectedIndex = 0;
-            this.kryptonTabControl2.Size = new System.Drawing.Size(1063, 246);
-            this.kryptonTabControl2.TabIndex = 2;
-            this.kryptonTabControl2.UseExtendedLayout = false;
-            // 
-            // splitter1
-            // 
-            this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(3, 285);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1063, 3);
-            this.splitter1.TabIndex = 2;
-            this.splitter1.TabStop = false;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Controls.Add(this.btnAtribuicao);
-            this.flowLayoutPanel2.Controls.Add(this.btnAumentoPreco);
-            this.flowLayoutPanel2.Controls.Add(this.btnInserir);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1055, 39);
-            this.flowLayoutPanel2.TabIndex = 23;
-            // 
-            // btnAtribuicao
-            // 
-            this.btnAtribuicao._LabelGroup = null;
-            this.btnAtribuicao._LabelText = "Atribuição coletiva";
-            this.btnAtribuicao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.btnAtribuicao._Regex = null;
-            this.btnAtribuicao._TamanhoComponente = 164;
-            this.btnAtribuicao._TamanhoMaiorLabel = 0;
-            this.btnAtribuicao.Base = null;
-            this.btnAtribuicao.bConfiguracao = false;
-            this.btnAtribuicao.Location = new System.Drawing.Point(3, 3);
-            this.btnAtribuicao.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
-            this.btnAtribuicao.Name = "btnAtribuicao";
-            this.btnAtribuicao.objConfigComponenteModel = null;
-            this.btnAtribuicao.Size = new System.Drawing.Size(164, 24);
-            this.btnAtribuicao.TabIndex = 28;
-            // 
-            // btnAumentoPreco
-            // 
-            this.btnAumentoPreco._LabelGroup = null;
-            this.btnAumentoPreco._LabelText = "Alteração no preço de venda/custo do produto";
-            this.btnAumentoPreco._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.btnAumentoPreco._Regex = null;
-            this.btnAumentoPreco._TamanhoComponente = 267;
-            this.btnAumentoPreco._TamanhoMaiorLabel = 0;
-            this.btnAumentoPreco.Base = null;
-            this.btnAumentoPreco.bConfiguracao = false;
-            this.btnAumentoPreco.Location = new System.Drawing.Point(185, 3);
-            this.btnAumentoPreco.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
-            this.btnAumentoPreco.Name = "btnAumentoPreco";
-            this.btnAumentoPreco.objConfigComponenteModel = null;
-            this.btnAumentoPreco.Size = new System.Drawing.Size(267, 24);
-            this.btnAumentoPreco.TabIndex = 27;
-            // 
-            // btnInserir
-            // 
-            this.btnInserir._LabelGroup = null;
-            this.btnInserir._LabelText = "Carregar todos os produtos";
-            this.btnInserir._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
-            this.btnInserir._Regex = null;
-            this.btnInserir._TamanhoComponente = 164;
-            this.btnInserir._TamanhoMaiorLabel = 0;
-            this.btnInserir.Base = null;
-            this.btnInserir.bConfiguracao = false;
-            this.btnInserir.Location = new System.Drawing.Point(470, 3);
-            this.btnInserir.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.objConfigComponenteModel = null;
-            this.btnInserir.Size = new System.Drawing.Size(164, 24);
-            this.btnInserir.TabIndex = 26;
             // 
             // dgvItens
             // 
@@ -1079,6 +997,106 @@ namespace HLP.UI.Entries.Comercial
             this.dAlteracaoCusto.ReadOnly = true;
             this.dAlteracaoCusto.Width = 200;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel2.Controls.Add(this.btnAtribuicao);
+            this.flowLayoutPanel2.Controls.Add(this.btnAumentoPreco);
+            this.flowLayoutPanel2.Controls.Add(this.btnInserir);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1055, 39);
+            this.flowLayoutPanel2.TabIndex = 23;
+            // 
+            // kryptonTabControl2
+            // 
+            this.kryptonTabControl2.AllowCloseButton = false;
+            this.kryptonTabControl2.AllowContextButton = false;
+            this.kryptonTabControl2.AllowNavigatorButtons = false;
+            this.kryptonTabControl2.AllowSelectedTabHigh = false;
+            this.kryptonTabControl2.BorderWidth = 1;
+            this.kryptonTabControl2.Controls.Add(this.tabPage3);
+            this.kryptonTabControl2.CornerRoundRadiusWidth = 12;
+            this.kryptonTabControl2.CornerSymmetry = AC.ExtendedRenderer.Navigator.KryptonTabControl.CornSymmetry.Both;
+            this.kryptonTabControl2.CornerType = AC.ExtendedRenderer.Toolkit.Drawing.DrawingMethods.CornerType.Rounded;
+            this.kryptonTabControl2.CornerWidth = AC.ExtendedRenderer.Navigator.KryptonTabControl.CornWidth.Thin;
+            this.kryptonTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonTabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.kryptonTabControl2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.kryptonTabControl2.HotTrack = true;
+            this.kryptonTabControl2.Location = new System.Drawing.Point(3, 288);
+            this.kryptonTabControl2.Name = "kryptonTabControl2";
+            this.kryptonTabControl2.PreserveTabColor = false;
+            this.kryptonTabControl2.SelectedIndex = 0;
+            this.kryptonTabControl2.Size = new System.Drawing.Size(1063, 246);
+            this.kryptonTabControl2.TabIndex = 2;
+            this.kryptonTabControl2.UseExtendedLayout = false;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(3, 285);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(1063, 3);
+            this.splitter1.TabIndex = 2;
+            this.splitter1.TabStop = false;
+            // 
+            // btnInserir
+            // 
+            this.btnInserir._LabelGroup = null;
+            this.btnInserir._LabelSuperior = false;
+            this.btnInserir._LabelText = "Carregar todos os produtos";
+            this.btnInserir._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.btnInserir._Regex = null;
+            this.btnInserir._TamanhoComponente = 164;
+            this.btnInserir._TamanhoMaiorLabel = 0;
+            this.btnInserir.Base = null;
+            this.btnInserir.bConfiguracao = false;
+            this.btnInserir.Location = new System.Drawing.Point(470, 3);
+            this.btnInserir.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.objConfigComponenteModel = null;
+            this.btnInserir.Size = new System.Drawing.Size(164, 24);
+            this.btnInserir.TabIndex = 26;
+            // 
+            // btnAumentoPreco
+            // 
+            this.btnAumentoPreco._LabelGroup = null;
+            this.btnAumentoPreco._LabelSuperior = false;
+            this.btnAumentoPreco._LabelText = "Alteração no preço de venda/custo do produto";
+            this.btnAumentoPreco._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.btnAumentoPreco._Regex = null;
+            this.btnAumentoPreco._TamanhoComponente = 267;
+            this.btnAumentoPreco._TamanhoMaiorLabel = 0;
+            this.btnAumentoPreco.Base = null;
+            this.btnAumentoPreco.bConfiguracao = false;
+            this.btnAumentoPreco.Location = new System.Drawing.Point(185, 3);
+            this.btnAumentoPreco.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.btnAumentoPreco.Name = "btnAumentoPreco";
+            this.btnAumentoPreco.objConfigComponenteModel = null;
+            this.btnAumentoPreco.Size = new System.Drawing.Size(267, 24);
+            this.btnAumentoPreco.TabIndex = 27;
+            // 
+            // btnAtribuicao
+            // 
+            this.btnAtribuicao._LabelGroup = null;
+            this.btnAtribuicao._LabelSuperior = false;
+            this.btnAtribuicao._LabelText = "Atribuição coletiva";
+            this.btnAtribuicao._Obrigatorio = HLP.Comum.Components.UserControlBase.CampoObrigatorio.NÃO;
+            this.btnAtribuicao._Regex = null;
+            this.btnAtribuicao._TamanhoComponente = 164;
+            this.btnAtribuicao._TamanhoMaiorLabel = 0;
+            this.btnAtribuicao.Base = null;
+            this.btnAtribuicao.bConfiguracao = false;
+            this.btnAtribuicao.Location = new System.Drawing.Point(3, 3);
+            this.btnAtribuicao.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
+            this.btnAtribuicao.Name = "btnAtribuicao";
+            this.btnAtribuicao.objConfigComponenteModel = null;
+            this.btnAtribuicao.Size = new System.Drawing.Size(164, 24);
+            this.btnAtribuicao.TabIndex = 28;
+            // 
             // FormListaPreco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1103,9 +1121,9 @@ namespace HLP.UI.Entries.Comercial
             ((System.ComponentModel.ISupportInitialize)(this.bsListaPreco)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.kryptonPanel3.ResumeLayout(false);
-            this.kryptonTabControl2.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.kryptonTabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

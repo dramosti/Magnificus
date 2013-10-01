@@ -17,5 +17,7 @@ namespace HLP.Repository.Interfaces.Sales.Comercial
         void BeginTransaction();
         void CommitTransaction();
         void RollackTransaction();
+        Orcamento_ideModel GetOrcamentoByOrigem(int idOrcamento);
+        Orcamento_ideModel GetOrcamentoFilho(int idOrcamento);
     }
 }

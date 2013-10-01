@@ -124,7 +124,7 @@ namespace HLP.Comum.UI.Metodos
             var txt = lControles.OfType<HLP_TextBox>().ToList();
             foreach (HLP_TextBox t in txt)
             {
-               // t.btnConfig.Visible = bHabilita;
+                // t.btnConfig.Visible = bHabilita;
                 t.ChangeColorLabel(bHabilita);
             }
         }
@@ -321,7 +321,5 @@ namespace HLP.Comum.UI.Metodos
                 throw ex;
             }
         }
-
-
     }
 }

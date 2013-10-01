@@ -742,8 +742,8 @@ namespace HLP.Comum.UI
 
             foreach (KryptonDataGridView grid in iConfigFormularioService.lControl.Where(c => c.GetType() == typeof(HLP_DataGridView)))
             {
-                grid.CellEnter -= new DataGridViewCellEventHandler(grid_CellEnter);
-                grid.CellEnter += new DataGridViewCellEventHandler(grid_CellEnter);
+                //grid.CellEnter -= new DataGridViewCellEventHandler(grid_CellEnter);
+                //grid.CellEnter += new DataGridViewCellEventHandler(grid_CellEnter);
             }
 
         }
@@ -1258,6 +1258,8 @@ namespace HLP.Comum.UI
                         {
                             if (item.PropertyType == typeof(Int32))
                                 item.SetValue(model, ((HLP.Comum.Components.HLP_NumericUpDown)controle).Value.ToInt32());
+                            else if (item.PropertyType == typeof(decimal?))
+                                item.SetValue(model, ((HLP.Comum.Components.HLP_NumericUpDown)controle).Value);
                             else if (item.PropertyType == typeof(decimal))
                                 item.SetValue(model, ((HLP.Comum.Components.HLP_NumericUpDown)controle).Value);
                             else if (item.PropertyType == typeof(string))

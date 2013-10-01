@@ -36,7 +36,7 @@ namespace HLP.Comum.Infrastructure
 
         private statusRegistroFilho _status = statusRegistroFilho.SemMudanca;
         public statusRegistroFilho GetStatusRegistro()
-        {
+            {
             return _status;
         }
         public void SetStatusRegistro(statusRegistroFilho status)

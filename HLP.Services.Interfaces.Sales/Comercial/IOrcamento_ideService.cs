@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HLP.Services.Interfaces.Sales.Comercial
 {
@@ -28,15 +29,14 @@ namespace HLP.Services.Interfaces.Sales.Comercial
         ProdutoModel GetInformacoesProduto(int idProduto);
         Unidade_medidaModel GetInformacoesUnidade(int idUnidadeMedida);
         List<Unidade_medidaModel> GetUnidadeByConversaoProduto(int idUnidadeMedida, int idProduto);
-        void CalculaTotaisOrcamento(Orcamento_ItemModel objItem, Cliente_fornecedorModel objClienteForn, CalculoDescontoPrincipal stCalculoPrincipal);
         CidadeModel GetCidadeClienteForn_Orcamento(int idCidade);
         UFModel GetUfByCidadeClienteForn_Orcamento(int idCidade);
-        byte GetStatusOrcamento(params List<Orcamento_ItemModel>[] lItens);
+        byte GetStatusOrcamento(List<Orcamento_ItemModel> lItens);
         byte GetTipoComissao(Orcamento_ItemModel orc_itemModel);
         void GetComissao<T>(int idCondicao_Pagamento, Orcamento_ItemModel itemModel, T objeto) where T : class;
         Familia_produtoModel GetFamiliaProduto(int idFamilia_produto);
         int GetCfopByOperacao(int idOperacao, int idCliente);
-        void PopulaObjetoItem(Orcamento_ItemModel objOrcamento_Item, Orcamento_ideModel objOrcamento_ide);
+        void PopulaObjetoItem(Orcamento_ItemModel objOrcamento_Item, Orcamento_ideModel objOrcamento_ide, CalculoDescontoPrincipal stCalculoPrincipal);
         Codigo_IcmsModel GetCodigo_Icms(int idCodigoIcmsPai, int idCidade);
         Carga_trib_media_st_icmsModel GetCarga_trib_mediaByUf(int idUf);
         void ValidaTipoOperacao(Orcamento_ItemModel objOrcamento_item, Cliente_fornecedorModel objClienteForn, int stContribuinteIcms);
@@ -61,6 +61,11 @@ namespace HLP.Services.Interfaces.Sales.Comercial
             decimal vSeguroTotal, decimal vOutrasDespesasTotal, decimal vDescontoTotal, decimal vDescontoSuframaTotal);
         decimal CalculaPesoLiquido(List<Orcamento_ItemModel> lOrcamento_ItemModel);
         decimal CalculaPesoBruto(List<Orcamento_ItemModel> lOrcamento_ItemModel);
+        void CarregaUnidMedProdutos(int idProduto, DataGridViewComboBoxCell cellDgv);
+        string GetVersaoByOrigem(int idOrcamento);
+        void CarregaTreeViewOrcamentos(int idOrcamento, ComponentFactory.Krypton.Toolkit.KryptonTreeView tree);
+        void DestacarNodeTreeView(ComponentFactory.Krypton.Toolkit.KryptonTreeView tree, object valor);
+        bool NodeTreeViewPossuiFilho(ComponentFactory.Krypton.Toolkit.KryptonTreeView tree, object valor);
     }
 
     public enum CalculoDescontoPrincipal //Enumeração criada para definir qual o cálculo de porcentagem será realizado primeiro, por porcentagem, ou por valor

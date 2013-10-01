@@ -16,7 +16,8 @@ namespace HLP.Services.Implementation.Entries.Fiscal
 
         public Tipo_operacaoModel GetOperacao(int idTipoOperacao)
         {
-            return operacaoRepository.GetOperacao(idTipoOperacao);
+            Tipo_operacaoModel objTipo_operacao = operacaoRepository.GetOperacao(idTipoOperacao);
+            return objTipo_operacao == null ? objTipo_operacao = new Tipo_operacaoModel() : objTipo_operacao;
         }
 
         public void Save(Tipo_operacaoModel operacao)

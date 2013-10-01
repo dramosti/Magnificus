@@ -14,5 +14,6 @@ namespace HLP.Repository.Interfaces.Sales.Comercial
         int Copy(int idRetTransp);
         Orcamento_retTranspModel GetOrcamento_retTransp(int idRetTransp);
         List<Orcamento_retTranspModel> GetAllOrcamento_retTransp();
+        Orcamento_retTranspModel GetOrcamento_retTranspByIdOrcamento(int idOrcamento);
     }
 }
